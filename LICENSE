@@ -1,0 +1,42 @@
+MIT License
+
+Copyright (c) 2026 standard_2_md contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+
+DISCLAIMER REGARDING STANDARDS CONTENT / 关于规范内容的免责声明
+
+================================================================================
+
+EN — The Markdown files under mds/ are derivative works of publicly published
+design standards (GB, GB/T, JGJ, EN 1993, AISI, etc.). They are provided for
+reading, searching, citing, and diffing across revisions only. They are NOT a
+substitute for the official published standard. The maintainers make no
+representation as to the accuracy or completeness of any OCR-derived content.
+Always consult the issuing body (SAC, CEN, AISI, …) for the authoritative
+text. Where this Markdown and the official standard differ, the official
+standard prevails.
+
+中文 —— `mds/` 下的 Markdown 文件均为公开发布规范(GB、GB-T、JGJ、EN 1993、
+AISI 等)的衍生作品,仅供阅读、检索、引用、版本对比之用,**不替代官方正式
+发布的纸质或电子版**。维护者不对任何 OCR 转写内容的准确性与完整性作任何
+声明。请始终以发布机构(SAC、CEN、AISI 等)的官方文本为准。如本 Markdown
+与官方标准存在不一致,以官方标准为准。
