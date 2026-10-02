@@ -753,7 +753,7 @@ Seastate
 
 Solve
 
-1502219 - Added a new dense Cholesky solver option for improved accuracy with nearindeterminant systems (Solve, Dynpac, PSI). Enhanced single-value decomposition solver to generate triangularization data necessary for some analysis workflows (PSI, Dynpac, Collapse). Also improved error handling to attempt an alternative fallback solver in the event of errors/non-convergence.
+1502219 - Added a new dense Cholesky solver option for improved accuracy with near-indeterminant systems (Solve, Dynpac, PSI). Enhanced single-value decomposition solver to generate triangularization data necessary for some analysis workflows (PSI, Dynpac, Collapse). Also improved error handling to attempt an alternative fallback solver in the event of errors/non-convergence.
 
 ## 1.2 List of Fixed Defects
 
@@ -764,7 +764,7 @@ Collapse
 Collapse Advanced
 
 1304075 - Fixed an issue with Collapse Advanced base shear reporting where incorrect values were reported when mixed boundary conditions (fixity, pilehead, spring) were used.   
-1398599 - Fixed an issue where Collapse Advanced could not properly process nonsymmetric soil curves with zero stiffness layers.   
+1398599 - Fixed an issue where Collapse Advanced could not properly process non-symmetric soil curves with zero stiffness layers.   
 1468205 - Fixed an issue where the local coordinate system in Collapse Advanced did not match the local coordinate system in SACS pre-processor leading to incorrect internal forces with near vertical members due to a stricter tolerance (sin(theta) < 1.0e-9). Collapse Advanced now uses the same criterion for identifying vertical members (sin(theta) < 0.001).
 
 Documentation
@@ -883,7 +883,7 @@ Joint Can
 
 Post
 
-. 994060 - Fixed an issue where Span elements could cause Post to crash.   
+994060 - Fixed an issue where Span elements could cause Post to crash.   
 1270080 - Fixed an issue where jack-up leg and launch runner shear stresses were incorrectly reported as not a number (NaN).   
 1304860 - Fixed an issue where using concrete cross-sections could cause Post to crash.   
 1332652 - Removed a reference in the listing file to a non-existent span effective moment report.   
@@ -1005,7 +1005,7 @@ SACS 2023.01
 
 ## 1.8 List of Enhancements
 
-#
+Pile
 
 1133904 - Added the ability to plot rotational stiffness, base shear, and base moment soil reaction curves, additional pile deflection, and internal forces for PISA method monopile foundations analyzed in Pile3D.
 
@@ -1064,7 +1064,7 @@ Fixed an issue where joint forces were written without decimal points in the out
 
 SACS 2023
 
-## 1.10List of Enhancements
+## 1.10 List of Enhancements
 
 Dynamic Response
 
@@ -1118,7 +1118,7 @@ Wave Response
 1009292 - Added support for two separate force time-history input files.   
 1009402 - Optimized memory and disk use to significantly improve performance.
 
-## 1.11List of fixed defects
+## 1.11 List of fixed defects
 
 Data Generator
 
@@ -1186,7 +1186,7 @@ Wave Response
 
 SACS CONNECT Edition V16.1 - SES
 
-## 1.12List of Enhancements
+## 1.12 List of Enhancements
 
 Fatigue
 
@@ -1218,7 +1218,7 @@ Wave Response
 
 1141608 - Added the ability to define a wave height for constrained stream waves in conjunction with maximum crest elevation.
 
-## 1.13List of Fixed Defects
+## 1.13 List of Fixed Defects
 
 Dynamic Response
 
@@ -1269,7 +1269,7 @@ A new user interface has been added for managing cloud analysis jobs. Users can 
 
 Optimizations to the Wave Response time integration analysis have been made to further improve analysis run times.
 
-## 1.16Joint Mesher Improvements
+## 1.16 Joint Mesher Improvements
 
 SACS Stiffened Panel Meshing
 
@@ -1283,15 +1283,15 @@ Precede Joint Mesher Integration
 
 Joint Mesher has now been fully integrated into Precede so that joints may be meshed directly in Precede without generating a separate model. Multiple joints may now be meshed sequentially during a single modelling session without having to open a separate meshed model. This enhancement also supports both undo and redo functionality for faster development and modification of the meshed model.
 
-## 1.17Solve - Elastic Modulus Reduction Factor for Direct Analysis Method
+## 1.17 Solve - Elastic Modulus Reduction Factor for Direct Analysis Method
 
 User-defined elastic modulus reduction factors for the stiffness matrix formulation are now available. This enhancement enables analysis of the structure using the direct analysis method according to the latest AISC design codes. The elastic modulus reduction factor may be entered on the CODE AA line when using AISC design codes.
 
 ![](SACS2024_SACS_Documentation/chunk0_ceed4eed8c7953a499791b59d78788a416b9e2f9fd14057df601c3ee460ffa22.jpg)
 
-## 1.18Advanced Solver
+## 1.18 Advanced Solver
 
-The advanced Solver, using iterative Krylov Subspace Solvers and Singular Value Decomposition, allows automatic detection and removal of rigid-body-motion for statically indeterminate structures. Using this new feature, users can perform analyses of floating structures as well as lift and launch analyses without the need to introduce ad-hoc boundary conditions to limit rigidbody-motion. The Advanced Solver needs to be enabled via the Settings in SACS Executive under Analysis Settings. Different iterative solvers and rigid-body-motion removal can then be enabled using the SLVOPT line in the SACS input file. These options can also be accessed through the Linear Solver tab of the Analysis Options dialog in Precede.
+The advanced Solver, using iterative Krylov Subspace Solvers and Singular Value Decomposition, allows automatic detection and removal of rigid-body-motion for statically indeterminate structures. Using this new feature, users can perform analyses of floating structures as well as lift and launch analyses without the need to introduce ad-hoc boundary conditions to limit rigid-body-motion. The Advanced Solver needs to be enabled via the Settings in SACS Executive under Analysis Settings. Different iterative solvers and rigid-body-motion removal can then be enabled using the SLVOPT line in the SACS input file. These options can also be accessed through the Linear Solver tab of the Analysis Options dialog in Precede.
 
 ![](SACS2024_SACS_Documentation/chunk0_6a9de243dc4beb9d2ea71866d9f1f5c8f7f2c1e301f97c10c502d60868198753.jpg)
 
@@ -1309,11 +1309,11 @@ Enhanced MITC4 shell elements have been implemented for the advanced solver with
 
 A full set of verification problems have been provided in the documentation and as a set of sample problems with this release.
 
-## 1.19Post and Joint Can - ISO 19902 2020 Code
+## 1.19 Post and Joint Can - ISO 19902 2020 Code
 
 ISO 19902 - 2020 has been added to the list of available design codes for both member unity checks and joint can punching shear checks in Post and Joint Can respectively.
 
-## 1.20Pile3D Improvements
+## 1.20 Pile3D Improvements
 
 Pile Structure Interaction
 
@@ -1327,7 +1327,7 @@ Pile superelements may now be generated with Pile3D from the loads generated by 
 
 ![](SACS2024_SACS_Documentation/chunk0_fd2f7aad7d1c83cdf4800a7b91ea92404d4781226138aa77a0ee6988e7608e0a.jpg)
 
-## 1.21SACS Suction Bucket
+## 1.21 SACS Suction Bucket
 
 The SACS Suction Bucket program generates a SACS model for the analysis and design of offshore structures with a suction bucket foundation. The bucket model is automatically generated using plate elements and the nonlinear interaction between the suction bucket walls and surrounding soil is modeled by a series of nonlinear springs. The nonlinear springs are automatically generated through the SACS-PLAXIS Suction Bucket Analysis Interoperability functionality.
 
@@ -1372,17 +1372,19 @@ Mode 4
 ![](SACS2024_SACS_Documentation/chunk0_cfaf707260d39b589414180ae589214e0ba8d56b2ebc5762e3add80c5a3d2e42.jpg)  
 Mode5
 
-## 1.22Dynamic Response - Max Allowable Acceleration for Engine Vibration User-defined maxim allowable accelerations may be entered for engine vibration analyses on the ENGVIB line of the Dynamic Response input file. Both unity check reports and allowable acceleration graphs are supported for this new criterion.
+## 1.22 Dynamic Response - Max Allowable Acceleration for Engine Vibration
+
+User-defined maxim allowable accelerations may be entered for engine vibration analyses on the ENGVIB line of the Dynamic Response input file. Both unity check reports and allowable acceleration graphs are supported for this new criterion.
 
 ![](SACS2024_SACS_Documentation/chunk0_ffbab83d57d062aa6976f4a1687203d72a262b922d22781397e956223a0e3dce.jpg)
 
 ![](SACS2024_SACS_Documentation/chunk0_45d670c06230f52ba0c916e0ce81401f3b4380b7cd016571ebb1dd0da9a6efc1.jpg)
 
-## 1.23Fatigue - Damage Reports around Circumference for Inline Tubular Members
+## 1.23 Fatigue - Damage Reports around Circumference for Inline Tubular Members
 
 Fatigue damage reports have been enhanced for inline tubular members to include all analysis points around the circumference of the tubular. This enhancement replaces the previous damage reports for in-line tubular members where only the critical point was reported.
 
-## 1.24Collapse Advanced Improvements
+## 1.24 Collapse Advanced Improvements
 
 Ductility Limits for Plates and Piles
 
@@ -1396,17 +1398,17 @@ New report options have been added to print Von Mises plate stresses and plastic
 
 SACS CONNECT EDITION V15.1 – SES
 
-## 1.25Implement API LRFD 2nd Edition design code
+## 1.25 Implement API LRFD 2nd Edition design code
 
 Unity checks as per API LRFD 2nd edition are now available. These include updated provisions for conical and tubular strength checks. New strength checks for dented tubular sections have been added. Joint strength checks have also been updated as per the revised provisions.
 
 ![](SACS2024_SACS_Documentation/chunk0_b97c466b58d76e8bab894f2cba84f1733fd90d35f7933ad2879e11ef85496dc5.jpg)
 
-## 1.26Extend bottom unbraced length option to aisc codes
+## 1.26 Extend bottom unbraced length option to aisc codes
 
 Bottom unbraced length option (Column 46) on the GRUP line can now be used with AISC codes. SACS Postprocessor will automatically use the specified bottom unbraced length in unity check calculations for AISC codes if the bottom flange is in compression.
 
-## 1.27Introducing SACS Suction Bucket (Technology Preview)
+## 1.27 Introducing SACS Suction Bucket (Technology Preview)
 
 The SACS Suction Bucket program generates a SACS model for the analysis and design of offshore structures with a suction bucket foundation. The bucket model is automatically generated using plate elements and the nonlinear interaction between the suction bucket walls and surrounding soil through a series of nonlinear springs. The nonlinear springs are automatically generated through the SACS-PLAXIS Suction Bucket Analysis Interoperability functionality.
 
@@ -1449,21 +1451,21 @@ Mode 4
 ![](SACS2024_SACS_Documentation/chunk0_3029dd4d0fdead7187c2698c87ae03cdaaa495530b7f83ac47108b9f5e476b07.jpg)  
 Mode 5
 
-## 1.28Pile 3D - Attachment of structure on top (Technical Preview)
+## 1.28 Pile 3D - Attachment of structure on top (Technical Preview)
 
 Pile 3D module has been is extended to read reactions of structure on top and apply them as pilehead loading for unlimited number of load conditions. With this feature, users can perform Monopile analysis using SACS model file which is suitable for Wind turbine analysis. To use this feature, new type of analysis can be chosen via the analysis generator in SACS Executive along with SACS model file and Pile3D input file as shown in the figure.
 
 ![](SACS2024_SACS_Documentation/chunk0_28430dfd6441a3f7303941e8c70736c5d4c8f12b6ea83c0155f4069638179756.jpg)
 
-## 1.29PSI – Distributed Moment, Base Shear and Base Moment calculation using Plaxis type curves (Technical Preview)
+## 1.29 PSI – Distributed Moment, Base Shear and Base Moment calculation using Plaxis type curves (Technical Preview)
 
 PSI module is extended to read M-theta (Soil bending), Base shear and Base moment curves and consider these effects in pile analysis. These curves were recently introduced by PISA project for rigid monopile analysis, i.e. large diameter monopiles. Plaxis Monopile Designer is the only product capable of generating these curves and with this feature PSI can read and utilize those curves. The option to read in the curves is available in SOIL LATERAL HEADER line. As it is shown in the figure, new input lines including SOIL BENDING HEAD, SOIL M-T, SOIL BASESHR HEAD, SOIL BH-V, SOIL BASEMOM, SOIL BM-T are introduced to read the data for curves similar to lateral and axial curves. The same feature has been implemented and released in Pile 3D module.
 
 ![](SACS2024_SACS_Documentation/chunk0_dab006e7e59512257ffae30a3e6f7112f29d5a2b7af34770c618c238a819c05a.jpg)
 
-## 1.30Advanced Solver (Technical Preview)
+## 1.30 Advanced Solver (Technical Preview)
 
-The advanced Solver, using iterative Krylov Subspace Solvers and Singular Value Decomposition, allows automatic detection and removal of rigid-body-motion for statically undetermined structures. Using this new feature, users can perform analysis of floating structures as well as the lift launch analysis without the need to introduce ad-hoc boundary conditions to limit rigidbody-motion. The Advanced Solver needs to be enabled via the Settings in SACS Executive under Analysis Settings. Different iterative solvers and rigid-body-motion removal can then be enabled using the SLVOPT line in the SACS input file.
+The advanced Solver, using iterative Krylov Subspace Solvers and Singular Value Decomposition, allows automatic detection and removal of rigid-body-motion for statically undetermined structures. Using this new feature, users can perform analysis of floating structures as well as the lift launch analysis without the need to introduce ad-hoc boundary conditions to limit rigid-body-motion. The Advanced Solver needs to be enabled via the Settings in SACS Executive under Analysis Settings. Different iterative solvers and rigid-body-motion removal can then be enabled using the SLVOPT line in the SACS input file.
 
 ![](SACS2024_SACS_Documentation/chunk0_7f5f34546ee11f620e35b2d5dbf2ae21290972806d79c5d3e8a0985a20f6b429.jpg)
 
@@ -1471,7 +1473,7 @@ The advanced Solver, using iterative Krylov Subspace Solvers and Singular Value 
 
 ![](SACS2024_SACS_Documentation/chunk0_0781f422aeaffb1be885d11f2eba0adddfc0fb5dae7d7226fe7fe9eb86af23ce.jpg)
 
-## 1.31Explicit Stiffeners in the Joint Mesher (Technical Preview)
+## 1.31 Explicit Stiffeners in the Joint Mesher (Technical Preview)
 
 This new feature allows the user to create explicit stiffeners for tubulars. The stiffeners are automatically added as members (beam elements) inside the Joint Mesher. The explicit stiffeners can be created individually at a general orientation using the new PLTSTF line in the Joint Mesher module. Users can also create ring and longitudinal stiffener groups using RNGSTF and LNGSTF lines, respectively. The stiffener groups can then be added to tubular members using the MEMSTF line in the Joint Mesher input file.
 
@@ -1518,7 +1520,7 @@ In addition to review tools, iTwin Design Review crucially offers the ability to
 
 For more information visit the iTwin Services for Engineering Analysis Wiki.
 
-## 1.34SCF Extraction Nodes for Ring Stiffened Joints (Technical Preview)
+## 1.34 SCF Extraction Nodes for Ring Stiffened Joints (Technical Preview)
 
 The Joint Mesher program now allows for the seamless creation of three-dimensional meshes for most joints in SACS. Joint Mesher also automates the creation of extraction nodes for hot spot SCF calculation.
 
@@ -1543,21 +1545,21 @@ In addition, SACS 15.0 introduces the new Boundary Joints which allow the user t
 ![](SACS2024_SACS_Documentation/chunk0_153729672cb77ea30914573f957b5c04da25cea2ef322794f469b870b1d35835.jpg)  
 Figure 8 : SACS model along with a pre-existing mesh in green (left), meshed model connected to the pre-existing mesh via automatic boundary joint selection
 
-## 1.35Curved Plate Panel Stiffeners Display in Precede
+## 1.35 Curved Plate Panel Stiffeners Display in Precede
 
 • Precede can now display Curved Plate Panels Stiffeners
 
 ![](SACS2024_SACS_Documentation/chunk0_304a66d6164281d930fbd0a4f1a16cf27bf8bc6aecf04fa88790e4496c895194.jpg)  
 Figure 9 : Curved Plate Panel Stiffeners in Precede
 
-## 1.36Load by Volume Improvement
+## 1.36 Load by Volume Improvement
 
 The Load by Volume feature, used for cutting sections of the structure for decommissioning and exporting to FEMAP, now automatically creates two views (see figure 10). The view on the left is the original structure, the view in the middle is the cut section, and the view in the right is the structure with the cut section removed.
 
 ![](SACS2024_SACS_Documentation/chunk0_f9ee1bc5e7ea6f37956e851ad48b70fc6cec0beb053c7ec73c4b42fc579a597f.jpg)  
 Figure 10: Load by Volume created views
 
-## 1.37SACS Model Interop API (Technical Preview)
+## 1.37 SACS Model Interop API (Technical Preview)
 
 The SACS Model Interop API allows users to create customized tools (scripts, macros, or applications) that manipulate SACS Model data and results. The API is exposed in three formats: C++ library, python extension, and COM server. Although the details are format specific, the API is consistent across the formats. All functionality is be available on all formats. The API is object based. With one master object used to access model load/create functions and to provide access to global data.
 
@@ -1569,11 +1571,11 @@ SACS CONNECT EDITION V (14.3) SES
 
 SACS CONNECT Edition V14.3 – SES release includes enhancements including:
 
-## 1.38COLLAPSE ADVANCED UPDATES
+## 1.38 COLLAPSE ADVANCED UPDATES
 
 Torsional Adhesion Soil - Develop a feature to model adhesion soils torsional response in Collapse Advanced.
 
-## 1.39Precede/Results Viewer Enhancements
+## 1.39 Precede/Results Viewer Enhancements
 
 PSI Results - Precede can now graphically display Unity Check and stresses. To include the PSI results in the Results database, check the “SACS Reports Database” option in the “Static Analysis With Pile/Soil Interaction” Runfile.
 
@@ -1587,7 +1589,7 @@ Next open Precede Results Viewer using the created database.
 
 ![](SACS2024_SACS_Documentation/chunk0_2a7a780c73779ec0ff3edf672b431459b93da2fcc229832bbb1a37498b76b34a.jpg)
 
-## 1.40Pile3D - Base Shear and Moment using Plaxis MoDeTo curves (Tech Preview)
+## 1.40 Pile3D - Base Shear and Moment using Plaxis MoDeTo curves (Tech Preview)
 
 This enhancement extends the capability of Pile3D program to apply Base Shear and Base Moment on pile tip to increase accuracy of the pile analysis. This feature has been implemented before using T-Z curves and P-Y curves. This enhancement will use Plaxis MoDeTo curves. This
 
@@ -1607,7 +1609,7 @@ SACS CONNECT EDITION V (14.2) SES
 
 SACS CONNECT Edition V14.2 – SES release includes enhancements including:
 
-## 1.42COLLAPSE ADVANCED UPDATES
+## 1.42 COLLAPSE ADVANCED UPDATES
 
 Soil Liquefaction   
 Axial Adhesion Soil
@@ -1628,7 +1630,7 @@ o Rectangular Tube
 An option to read load time history input from an external file has been added. Previously, time history loads could only be entered using the "LINE" or "PREV" option in the FVIB line. An option has been added to choose "FILE" which will cause the executive to ask for an additional file from which the loads can be read.   
 An option to add multiple winds with same direction and different velocities was implemented. Dynamic Response previously required a unique wind direction for each wind input and required a least 0.2 degrees offset on the direction. Dynamic Response now allows multiple winds for the same direction. The WINSPC line now includes wind speed so the program can match the wind spectrum with the Seastate load case by direction and wind speed. If no wind speed is input, then the match is done by direction only (default behavior).
 
-## 1.44Precede Results View Enhancements
+## 1.44 Precede Results View Enhancements
 
 • Precede now has autosave feature. This feature can be enabled in the Precede setting dialog. The default is NO autosaving. The settings are minutes between saves. For example, if the setting is set to “5”, Precede will autosave every five minutes. The autosave will not execute if Precede is busy with a long running process like deleting joints, members, etc. or because of a manual save by the user.
 
@@ -1642,36 +1644,36 @@ Next open Precede Results Viewer using the created database.
 
 ![](SACS2024_SACS_Documentation/chunk0_b038f55536e9f3179c852e5f43cfc1391f9a03e5b4c41b3ce376f40042d97797.jpg)
 
-## 1.45Pile3D Distributed Moment (Tech Preview)
+## 1.45 Pile3D Distributed Moment (Tech Preview)
 
-This enhancement allows the Pile 3D program to model the soil resistance to the rotation of the pile using a distributed moment along the length of the pile. This effect is significant for gravity type and rigid piles with large diameters and length to diameter ratios between 2 and 6. Adding this distributed moment effect can increase the overall stiffness of the system and lead to a better design. The distributed moment curves are specified with user-defined ?? − ?? curves that model the bending resistance similarly to lateral soil resistance P-Y curves.
+This enhancement allows the Pile 3D program to model the soil resistance to the rotation of the pile using a distributed moment along the length of the pile. This effect is significant for gravity type and rigid piles with large diameters and length to diameter ratios between 2 and 6. Adding this distributed moment effect can increase the overall stiffness of the system and lead to a better design. The distributed moment curves are specified with user-defined $M - \theta$ curves that model the bending resistance similarly to lateral soil resistance P-Y curves.
 
 SACS CONNECT EDITION V(14.1) SES
 
 SACS CONNECT Edition V14.1 – SES release includes enhancements including:
 
-## 1.46Collapse UPDATES
+## 1.46 Collapse UPDATES
 
 Collapse can now supports the SRSS method to compute effective thickness for grouted chord members in joint strength calculation.
 
-## 1.47Collapse Advanced Updates
+## 1.47 Collapse Advanced Updates
 
 Collapse Advanced now supports effective thickness calculation for grouted chord members in joint strength and joint flexibility.   
 Collapse Advanced now supports SRSS method to compute effective thickness for grouted chord members.   
 • Collapse Advanced now supports API 2A-WSD 22nd Edition to generate soil resistance curves.   
 Collapse Advanced now generates strain and plastic strain reports in the listing file. Reports for maximum strain or plastic strain can be also generated by Precede.
 
-## 1.48Dynamic Response UPDATES
+## 1.48 Dynamic Response UPDATES
 
 Dynamic Response can now import time history analysis using displacement input.
 
-## 1.49CHARTVIEW UPDATES
+## 1.49 CHARTVIEW UPDATES
 
 • Chartview now allows PSI input files to be modified and saved.
 
 ![](SACS2024_SACS_Documentation/chunk0_259468667759c884872a3f7fd0f2c3954531a99ee466bdb677f88843f89fa657.jpg)
 
-## 1.50DATAGEN UPDATES
+## 1.50 DATAGEN UPDATES
 
 Datagen can now send PSI soil data to Chartview for visualization and graphical modification. Soil data sent to chartview can be modified and Datagen will automatically reload the modified PSI input file.
 
@@ -1682,7 +1684,7 @@ View/Modify PSI Input file in Chartview:
 
 ![](SACS2024_SACS_Documentation/chunk0_3a643a67aba1b7bb19fe6710b4ebd69ea61501eeec97f95755ec92b2eb8182e4.jpg)
 
-## 1.51PRECEDE UPDATES
+## 1.51 PRECEDE UPDATES
 
 Precede can now import shell elements from FEMAP.
 
@@ -1730,21 +1732,21 @@ Collapse Advanced now supports multilinear elastoplastic plastic materials in ad
 
 ![](SACS2024_SACS_Documentation/chunk1_6358847bb8f673800d6d3f3ebad4224c96897de8f948a4011f2833179aefbe1b.jpg)
 
-## 1.55ABS Panel Checks
+## 1.55 ABS Panel Checks
 
 Stiffened plate panel checks as per the ‘Guide for Buckling and Ultimate Strength Assessment for Offshore Structures’, ABS, Apr 2004 (Upd. Aug 2018) have been implemented. Stiffener types supported are tees, angles and flat bars. Plate panels are checked for buckling and ultimate strength limits. Checks for beam-column buckling, flexural-torsional buckling and local buckling of stiffeners have been added. Panel elements are also checked for compliance with stiffness and proportion requirements.
 
-## 1.56Wave Response can now read in displacement /velocity/ acceleration time history
+## 1.56 Wave Response can now read in displacement /velocity/ acceleration time history
 
 Wave Response can now read in displacement/velocity/acceleration time history input and include in analysis.
 
-## 1.57Chartview modification of Y values
+## 1.57 Chartview modification of Y values
 
 Users can now modify Y values on the chart and save them.
 
 ![](SACS2024_SACS_Documentation/chunk1_49c49878e3175895dd4b8d6345bb44f6143169962fda65b6349cd9af4e93f540.jpg)
 
-## 1.58Precede Enhancements
+## 1.58 Precede Enhancements
 
 Updated Settings Dialog
 
@@ -1784,11 +1786,11 @@ SACS Executive will iterate through a list of registered node machines and commu
 
 SACS CONNECT EDITION V (13.2) CL
 
-## 1.60AISC 15th provisions code check is now available using new options 5A, 5B, and 5L
+## 1.60 AISC 15th provisions code check is now available using new options 5A, 5B, and 5L
 
 Box, Tee, Rectangular Tube, Wide Flange, Plate Girder, Channel, Angle, Unsymmetrical Plate Girder, Double Web Plate Girder, Boxed-in Plate Girder sections have been updated with the latest AISC 15th provisions. Revised section E7 has been implemented, and new checks for lateral torsional buckling and local buckling of Box/RTB and Tee sections have been added.
 
-## 1.61SACS Collapse Advanced Updates
+## 1.61 SACS Collapse Advanced Updates
 
 Joints: The joint calculations have been improved and verified. The Collapse Advanced now supports following joint calculations:
 
@@ -1808,15 +1810,15 @@ Impact:
 ✓ Ship indention, member indentation, and impact energy calculation are verified for both loading and unloading.   
 ✓ A new feature is added to assume ship/member dent as plastic deformation.
 
-## 1.62Wave Response can now read in force time history from FLEX5 and BHAWC input
+## 1.62 Wave Response can now read in force time history from FLEX5 and BHAWC input
 
 Wave Response can now read time history joint loads using FLEX5 and BHAWC file formats.
 
-## 1.63Pile 3D can now apply Base Shear and Base moment at the pile tip
+## 1.63 Pile 3D can now apply Base Shear and Base moment at the pile tip
 
 This enhancement allows Pile 3D program to account for Base Shear and Base Moment applied to the pile tip. This effect is significant for gravity type and rigid piles with large diameter and ratio of length to diameter between 2 and 6 and may increase lateral stiffness and lead to a better design. This enhancement enables the Pile 3D program to calculate Base Shear by interpolating the pile tip T-Z curve using pile tip displacement and calculates Base Moment by interpolating P-Y curve using the corresponding rotation. Both effects are then added to the soil stiffness at pile tip.
 
-## 1.64Import FEMAP model into SACS
+## 1.64 Import FEMAP model into SACS
 
 SACS can now import plates and solid elements created in FEMAP. The import is part of Precede graphic modeler. Currently, only plates, cubes, and tetrahedrons are imported.
 
@@ -1824,7 +1826,7 @@ SACS can now import plates and solid elements created in FEMAP. The import is pa
 
 ![](SACS2024_SACS_Documentation/chunk1_c70c330a76b1dadf14fee587ecc41c6f20c1e46b3d01e188575b2f09f15dc84b.jpg)
 
-## 1.65Chartiview supports user defined Annotations
+## 1.65 Chartiview supports user defined Annotations
 
 Users can now add Annotations to charts data points.
 
@@ -1866,22 +1868,22 @@ contains an example of executing the analysis engine in a simple member redesign
 
 SACS CONNECT EDITION V(13.0) – CL
 
-## 1.68SACS Combined Results Database
+## 1.68 SACS Combined Results Database
 
 SACS combined results database functionality stores analysis results from different design phases into a single database. This allows the engineer to instantly view which design phase governs the design of each member and each joint.
 
 ![](SACS2024_SACS_Documentation/chunk1_c7ef0d7c98dcae34543a5c59eed1e34ecf6057a9dbf2f643118d080b67ae7c70.jpg)  
 See this video for an introduction.
 
-## 1.69Generate SACS Models with corroded sections
+## 1.69 Generate SACS Models with corroded sections
 
 SACS can now generate an output structural data (OCI) file that includes the effects of corrosion on members and plates. New member groups, sections, and plate groups will be created based on the corroded dimensions determined.
 
-## 1.70Added Option to Include Radiation Damping for Monopiles
+## 1.70 Added Option to Include Radiation Damping for Monopiles
 
 Radiation damping can now be accounted for in a time history analysis. The analysis uses formulation by Cook (1978) to calculate the damping which is added to the structural damping entered in the DAMP card. Note: This damping is only computed for the first mode since the formulation does not provide accurate results for higher modes.
 
-## 1.71Added Interactive Graphs to CollapseView
+## 1.71 Added Interactive Graphs to CollapseView
 
 CollapseView can now display interactive graphs. The user can now select a point on the graph and structure will be displayed at the corresponding load step.
 
@@ -1893,15 +1895,15 @@ Added plots for plate stresses
 
 ![](SACS2024_SACS_Documentation/chunk1_0b5539b59e4db3e3c4c21f55e52b56b3edc4378663f7f4c487b99aaacc2f69c6.jpg)
 
-## 1.72Added Plots for Member Plasticity in CollapseView
+## 1.72 Added Plots for Member Plasticity in CollapseView
 
 ![](SACS2024_SACS_Documentation/chunk1_676af756dcc591bd6f94c16b20e0cf4135e5f3c5344093f0cd309bcde761db32.jpg)
 
-## 1.73Postvue can now save a model file
+## 1.73 Postvue can now save a model file
 
 Postvue can now save a model file using the “Save As” command in the File menu.
 
-## 1.74Dynamic Super-Element program now supports four output formats:
+## 1.74 Dynamic Super-Element program now supports four output formats:
 
 o Siemens BhawC (default)   
 o GH Bladed   
@@ -1914,7 +1916,7 @@ Any view that has been created in Precede is now saved in the Postvue database a
 
 ![](SACS2024_SACS_Documentation/chunk1_cfbdf2a444f50dfe802c952815018c809b37ce7d982c5f34feb869d47db06658.jpg)
 
-## 1.76Precede/Postvue views now have the ability to save Results Labels
+## 1.76 Precede/Postvue views now have the ability to save Results Labels
 
 ![](SACS2024_SACS_Documentation/chunk1_05cd074b2f6a3e8c5a6a86a8dbb6d8e1cab1225a485802acd2b9ccf5521f6a00.jpg)
 
@@ -1973,15 +1975,17 @@ ISM (4)
 
 SACS 12.0 CONNECT Edition
 
-## 1.78Collapse Enhancements
+## 1.78 Collapse Enhancements
 
-The Collapse program has been enhanced to include the effects of both large rotations and large deflections. As a result, the program is now able to predict very large deformations. The Arclength Iterative approach has been added to help predict unloading behavior at local and global limit points. An automatic sub incrementation scheme is included to improve the convergence rate and to avoid multiple runs.
+The Collapse program has been enhanced to include the effects of both large rotations and large deflections. As a result, the program is now able to predict very large deformations. The Arc-length Iterative approach has been added to help predict unloading behavior at local and global limit points. An automatic sub incrementation scheme is included to improve the convergence rate and to avoid multiple runs.
 
 ![](SACS2024_SACS_Documentation/chunk1_6a88883ee5eec48f8bf5bb1dc3234e84946379c3f17a49bf7b54482e8088f9f3.jpg)
 
 ![](SACS2024_SACS_Documentation/chunk1_4476983e3c715d41fcfb8dd3d16986e7ef21536b5f6f960357c99abf38abd800.jpg)
 
-## 1.79SCF Determination from Hotspot Stress extraction using FE Analysis Automatic Stress Concentration Factor (SCF) Extraction – The Joint Mesh program has been enhanced to automatically generate a mesh and POST input file to be used to determine SCFs. The meshed joint is automatically inserted into the global SACS model which allows the user to include flexibility of the structure for SCF calculations. The SACS POST program has been enhanced to calculate the ‘Hot Spot Stress’ and SCFs. Precede has been enhanced to display ‘Hot Spot Stress’, nominal stress, and SCF labels.
+## 1.79 SCF Determination from Hotspot Stress extraction using FE Analysis
+
+Automatic Stress Concentration Factor (SCF) Extraction – The Joint Mesh program has been enhanced to automatically generate a mesh and POST input file to be used to determine SCFs. The meshed joint is automatically inserted into the global SACS model which allows the user to include flexibility of the structure for SCF calculations. The SACS POST program has been enhanced to calculate the ‘Hot Spot Stress’ and SCFs. Precede has been enhanced to display ‘Hot Spot Stress’, nominal stress, and SCF labels.
 
 Volume_1 x
 
@@ -1991,41 +1995,45 @@ Volume_1 x
 
 
 
-| HOTSPOT SCF REPORTBRACE 0003-0001IN ,RSI | HOTSPOT SCF REPORTBRACE 0003-0001IN ,RSI | HOTSPOT SCF REPORTBRACE 0003-0001IN ,RSI | HOTSPOT SCF REPORTBRACE 0003-0001IN ,RSI | HOTSPOT SCF REPORTBRACE 0003-0001IN ,RSI | HOTSPOT SCF REPORTBRACE 0003-0001IN ,RSI | HOTSPOT SCF REPORTBRACE 0003-0001IN ,RSI | HOTSPOT SCF REPORTBRACE 0003-0001IN ,RSI | HOTSPOT SCF REPORTBRACE 0003-0001IN ,RSI | HOTSPOT SCF REPORTBRACE 0003-0001IN ,RSI | HOTSPOT SCF REPORTBRACE 0003-0001IN ,RSI | HOTSPOT SCF REPORTBRACE 0003-0001IN ,RSI | HOTSPOT SCF REPORTBRACE 0003-0001IN ,RSI | HOTSPOT SCF REPORTBRACE 0003-0001IN ,RSI | HOTSPOT SCF REPORTBRACE 0003-0001IN ,RSI | HOTSPOT SCF REPORTBRACE 0003-0001IN ,RSI |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| INTJNT | ** DISTANCES ** INT- A | INT- B | LOADLOC | STRCASE | MEMBRANE | MEMBRANE | MEMBRANE | BENDING | BENDING | BENDING | BENDING | BENDING | BENDING | BENDING | BENDING |
-| INTJNT | ** DISTANCES ** INT- A | INT- B | LOADLOC | STRCASE | SX | SY | TXY | SX | UPPER | SURFACE | TXY | TOP SP | SNOM | SCF |  |
-| A00L | 0.600 | 1.289 | C | AX+1 | A00L | 0.0410 | 0.0238 | 0.0000 | 0.0467 | 0.0508 | -0.0114 | 0.0943 | 0.0187 | 5.0373 |  |
-| A00L | 0.600 | 1.289 | C | AX+1 | A00U | 0.0399 | 0.0216 | 0.0000 | 0.0365 | 0.0387 | -0.0058 |  |  |  |  |
-| A00L | 0.600 | 1.289 | C | AX+1 | A018 | 0.0385 | 0.0192 | -0.0001 | 0.0249 | 0.0248 | 0.0006 |  |  |  |  |
-| A00L | 0.600 | 1.289 | C | AX+1 | AX-1 | A00L | -0.0410 | -0.0238 | 0.0000 | -0.0467 | -0.0508 | 0.0114 | -0.0943 | -0.0187 | 5.0373 |
-| A00L | 0.600 | 1.289 | C | AX+1 | A00U | -0.0399 | -0.0216 | 0.0000 | -0.0365 | -0.0387 | 0.0058 |  |  |  |  |
-| A00L | 0.600 | 1.289 | C | AX+1 | A018 | -0.0385 | -0.0192 | 0.0001 | -0.0249 | -0.0248 | -0.0006 |  |  |  |  |
-| A00L | 0.600 | 1.289 | C | AX+1 | IP+1 | A00L | 0.0043 | 0.0045 | 0.0000 | 0.0106 | 0.0114 | -0.0024 | 0.0179 | 0.0044 | 4.0662 |
-| A00L | 0.600 | 1.289 | C | AX+1 | A00U | 0.0042 | 0.0042 | 0.0000 | 0.0082 | 0.0087 | -0.0012 |  |  |  |  |
-| A00L | 0.600 | 1.289 | C | AX+1 | A018 | 0.0040 | 0.0038 | 0.0000 | 0.0055 | 0.0055 | 0.0001 |  |  |  |  |
-| A00L | 0.600 | 1.289 | C | AX+1 | IP-1 | A00L | -0.0043 | -0.0045 | 0.0000 | -0.0106 | -0.0114 | 0.0024 | -0.0179 | -0.0044 | 4.0662 |
-| A00L | 0.600 | 1.289 | C | AX+1 | A00U | -0.0042 | -0.0042 | 0.0000 | -0.0082 | -0.0087 | 0.0012 |  |  |  |  |
-| A00L | 0.600 | 1.289 | C | AX+1 | A018 | -0.0040 | -0.0038 | 0.0000 | -0.0055 | -0.0055 | -0.0001 |  |  |  |  |
-| A00L | 0.600 | 1.289 | C | AX+1 | OP+1 | A00L | 0.0000 | 0.0000 | -0.0023 | -0.0006 | 0.0006 | 0.0001 | -0.0023 | 0.0000 | ----- |
-| A00L | 0.600 | 1.289 | C | AX+1 | A00U | 0.0000 | 0.0000 | -0.0022 | -0.0003 | 0.0003 | 0.0001 |  |  |  |  |
-| A00L | 0.600 | 1.289 | C | AX+1 | A018 | 0.0000 | 0.0000 | -0.0021 | 0.0001 | -0.0001 | 0.0000 |  |  |  |  |
-| A00L | 0.600 | 1.289 | C | AX+1 | OP-1 | A00L | 0.0000 | 0.0000 | 0.0023 | 0.0006 | -0.0006 | -0.0001 | 0.0023 | 0.0000 | ----- |
-| A00L | 0.600 | 1.289 | C | AX+1 | A00U | 0.0000 | 0.0000 | 0.0022 | 0.0003 | -0.0003 | -0.0001 |  |  |  |  |
-| A00L | 0.600 | 1.289 | C | AX+1 | A018 | 0.0000 | 0.0000 | 0.0021 | -0.0001 | 0.0001 | 0.0000 |  |  |  |  |
-| A00L | 0.600 | 1.950 | B | AX+1 | A00L | 0.0100 | 0.0156 | 0.0000 | 0.0287 | 0.0312 | -0.0050 | 0.0492 | 0.0187 | 2.6258 |  |
-| A00L | 0.600 | 1.950 | B | AX+1 | A00M | 0.0104 | 0.0142 | 0.0000 | 0.0215 | 0.0231 | -0.0034 |  |  |  |  |
-| A00L | 0.600 | 1.950 | B | AX+1 | A019 | 0.0114 | 0.0112 | 0.0000 | 0.0054 | 0.0048 | -0.0001 |  |  |  |  |
-| A00L | 0.600 | 1.950 | B | AX+1 | AX-1 | A00L | -0.0100 | -0.0156 | 0.0000 | -0.0287 | -0.0312 | 0.0050 | -0.0492 | -0.0187 | 2.6258 |
-| A00L | 0.600 | 1.950 | B | AX+1 | A00M | -0.0104 | -0.0142 | 0.0000 | -0.0215 | -0.0231 | 0.0034 |  |  |  |  |
+HOTSPOT SCF REPORT
+
+BRACE 0003-0001
+
+IN, KSI
+
+| INT JNT | INT-A | INT-B | LOAD LOC | STR CASE | STR LOC | MEMBRANE SX | MEMBRANE SY | MEMBRANE TXY | BENDING UPPER SURFACE SX | BENDING UPPER SURFACE SY | BENDING UPPER SURFACE TXY | HOTSPOT TOP SP | HOTSPOT SNOM | HOTSPOT SCF |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| A00L | 0.600 | 1.289 | C | AX+1 | A00L | 0.0410 | 0.0238 | 0.0000 | 0.0467 | 0.0508 | -0.0114 | 0.0943 | 0.0187 | 5.0373 |
+|  |  |  |  |  | A00U | 0.0399 | 0.0216 | 0.0000 | 0.0365 | 0.0387 | -0.0058 |  |  |  |
+|  |  |  |  |  | A018 | 0.0385 | 0.0192 | -0.0001 | 0.0249 | 0.0248 | 0.0006 |  |  |  |
+|  |  |  |  | AX-1 | A00L | -0.0410 | -0.0238 | 0.0000 | -0.0467 | -0.0508 | 0.0114 | -0.0943 | -0.0187 | 5.0373 |
+|  |  |  |  |  | A00U | -0.0399 | -0.0216 | 0.0000 | -0.0365 | -0.0387 | 0.0058 |  |  |  |
+|  |  |  |  |  | A018 | -0.0385 | -0.0192 | 0.0001 | -0.0249 | -0.0248 | -0.0006 |  |  |  |
+|  |  |  |  | IP+1 | A00L | 0.0043 | 0.0045 | 0.0000 | 0.0106 | 0.0114 | -0.0024 | 0.0179 | 0.0044 | 4.0662 |
+|  |  |  |  |  | A00U | 0.0042 | 0.0042 | 0.0000 | 0.0082 | 0.0087 | -0.0012 |  |  |  |
+|  |  |  |  |  | A018 | 0.0040 | 0.0038 | 0.0000 | 0.0055 | 0.0055 | 0.0001 |  |  |  |
+|  |  |  |  | IP-1 | A00L | -0.0043 | -0.0045 | 0.0000 | -0.0106 | -0.0114 | 0.0024 | -0.0179 | -0.0044 | 4.0662 |
+|  |  |  |  |  | A00U | -0.0042 | -0.0042 | 0.0000 | -0.0082 | -0.0087 | 0.0012 |  |  |  |
+|  |  |  |  |  | A018 | -0.0040 | -0.0038 | 0.0000 | -0.0055 | -0.0055 | -0.0001 |  |  |  |
+|  |  |  |  | OP+1 | A00L | 0.0000 | 0.0000 | -0.0023 | -0.0006 | 0.0006 | 0.0001 | -0.0023 | 0.0000 | ----- |
+|  |  |  |  |  | A00U | 0.0000 | 0.0000 | -0.0022 | -0.0003 | 0.0003 | 0.0001 |  |  |  |
+|  |  |  |  |  | A018 | 0.0000 | 0.0000 | -0.0021 | 0.0001 | -0.0001 | 0.0000 |  |  |  |
+|  |  |  |  | OP-1 | A00L | 0.0000 | 0.0000 | 0.0023 | 0.0006 | -0.0006 | -0.0001 | 0.0023 | 0.0000 | ----- |
+|  |  |  |  |  | A00U | 0.0000 | 0.0000 | 0.0022 | 0.0003 | -0.0003 | -0.0001 |  |  |  |
+|  |  |  |  |  | A018 | 0.0000 | 0.0000 | 0.0021 | -0.0001 | 0.0001 | 0.0000 |  |  |  |
+| A00L | 0.600 | 1.950 | B | AX+1 | A00L | 0.0100 | 0.0156 | 0.0000 | 0.0287 | 0.0312 | -0.0050 | 0.0492 | 0.0187 | 2.6258 |
+|  |  |  |  |  | A00M | 0.0104 | 0.0142 | 0.0000 | 0.0215 | 0.0231 | -0.0034 |  |  |  |
+|  |  |  |  |  | A019 | 0.0114 | 0.0112 | 0.0000 | 0.0054 | 0.0048 | -0.0001 |  |  |  |
+|  |  |  |  | AX-1 | A00L | -0.0100 | -0.0156 | 0.0000 | -0.0287 | -0.0312 | 0.0050 | -0.0492 | -0.0187 | 2.6258 |
+|  |  |  |  |  | A00M | -0.0104 | -0.0142 | 0.0000 | -0.0215 | -0.0231 | 0.0034 |  |  |  |
 
 
 
-## 1.80Add Eurocode 1993 code check for Circular Hollow Section
+## 1.80 Add Eurocode 1993 code check for Circular Hollow Section
 
 Added Eurocode 3: 2005 code check option for tubulars.
 
-## 1.81Update dynamic response documentation
+## 1.81 Update dynamic response documentation
 
 Update dynamic response documentation to clarify the PRST and PRSC combination method.
 
@@ -2033,13 +2041,13 @@ Current documentation states the modal responses results in all positive stresse
 
 correct. Documentation should state that the stress could either be positive or negative, so the PRST/PRSC combinations are required. Also added documentation for Harris spectrum coherence function calculation as the reference for the equation is not easily obtained.
 
-## 1.82Show results for multiple load sequences in Collapse View
+## 1.82 Show results for multiple load sequences in Collapse View
 
 Collapse View can now show the results for multiple load sequences.
 
 SACS 11.3 CONNECT Edition
 
-## 1.83SACS 11.3 CONNECT Edition Overview
+## 1.83 SACS 11.3 CONNECT Edition Overview
 
 Foundation Design for Large Monopile Structures
 
@@ -2094,7 +2102,7 @@ Precede can now display the moment/shear diagram in the 3D model.
 
 ![](SACS2024_SACS_Documentation/chunk1_6c91a606884ad5aaba9da66d10b1db6e60002c3d8899cc69194d8b98728160ca.jpg)
 
-## 1.84SACS 11.2 CONNECT Edition Overview
+## 1.84 SACS 11.2 CONNECT Edition Overview
 
 Enhancements to SACS Decommissioning tools
 
@@ -2130,7 +2138,7 @@ PSI can now apply torsion on each pile segment based on t-z curve data
 
 This feature adds the nonlinear torsion analysis of the piles in PSI using T-Z curves. Previously, PSI was able to do linear Torsion analysis (not considering effect of soil) or Torsion Adhesion. With this feature, program generates Table Ranges and does full Torsion Analysis using T-Z curves that have been input in soil Axial properties. M - Theta curves will be generated based on following calculation:
 
-Rotation (Theta) would be equal to Z/r (r: radius of the pile) and Torsion Moment (M) on each segment would be equal to $2^{ \ast } \mathsf{ p i }^{ \ast } ( \mathsf{ r }^{ \wedge } 2 )^{ \ast } \mathsf{ T }^{ \ast } \mathsf{ L }$ (L: pile segment length).
+Rotation (Theta) would be equal to Z/r (r: radius of the pile) and Torsion Moment (M) on each segment would be equal to $2\pi r^{2}TL$ (L: pile segment length).
 
 Tow Fatigue Analysis Added to the SACS Executive as an Analysis Sub-Type
 
@@ -2224,14 +2232,14 @@ New precede interface for creating a 3D mesh of a joint connection was added. Us
 
 Details of Program Enhancements and Corrections
 
-## 1.87Chart Viewer
+## 1.87 Chart Viewer
 
 SACS 10.0.0.1 CONNECT Edition Corrections
 
 • Corrected chart view can to display the designated single soil layer t-z, q-z and p-y curve   
 • Corrected chart view can to display the designated single soil layer t-z, q-z and p-y curve
 
-## 1.88Collapse
+## 1.88 Collapse
 
 SACS 13.0 CONNECT Edition - CL
 
@@ -2264,7 +2272,7 @@ Release V8i Select Series 4 v5.7 Enhancements
 
 Inclusion of multi linear stress-strain material behavior
 
-## 1.89Collapse View
+## 1.89 Collapse View
 
 SACS 13.0 CONNECT Edition - CL
 
@@ -2283,7 +2291,7 @@ Added 'Pile Approaching' before the ‘Punch Through’ to clarify the pile hasn
 
 SACS 11.1 CONNECT Edition Release Corrections
 
-Fixed issue drawing angle, box, tee, unsymmetrical plate girder, prismatic and multisegmented members.   
+Fixed issue drawing angle, box, tee, unsymmetrical plate girder, prismatic and multi-segmented members.   
 • Fixed issued with plasticity contours not matching on solid and wireframe modes.   
 • Fixed issue that Ship impact plots could not be generated.   
 • Fixed issue displaying members with local offsets.
@@ -2299,7 +2307,7 @@ SACS 11.0.0.1 CONNECT Edition Release Enhancements
 
 Integrated Collapse results viewing in Precede
 
-## 1.90Combine
+## 1.90 Combine
 
 SACS 11.1 CONNECT Edition Release Corrections
 
@@ -2310,7 +2318,7 @@ SACS 11.0.0.1 CONNECT Edition Release Enhancements
 Added the ability to combine solutions of two Dynamic Response analyses or Wave Response simulations with same time steps into a combined Common Solution File   
 Fixed issue where Combine overrides all OPTION values loaded from Common Solution File. The OPTIONS line is removed from COMBINE program and all values are set to values inside Common Solution File.
 
-## 1.91Data Generator
+## 1.91 Data Generator
 
 SACS 12.0 CONNECT Edition
 
@@ -2397,7 +2405,7 @@ Release V8i Select Series 4 v5.7 Corrections
 10 Corrected a problem where the ENTER key did not have the same function as the 'APPLY' button when the line assistant had focus.   
 11 Corrected problem where a zero fixity was being added on the member line.
 
-## 1.92Dynamic Response
+## 1.92 Dynamic Response
 
 SACS 13.0 CONNECT Edition - CL
 
@@ -2439,11 +2447,11 @@ Release V8i Select Series 4 v5.7 Corrections
 
 Corrected an issue which caused the dynamic response module to crash
 
-## 1.93Dynamic Super Element
+## 1.93 Dynamic Super Element
 
 SACS 13.0 CONNECT Edition – CL
 
-Enhancement: Transient Reduction is added to omit initial transient time for Dynamic Superelement outputs.   
+Enhancement: Transient Reduction is added to omit initial transient time for Dynamic Super-element outputs.   
 • Defect: Fixed a typo in the Wave Load units in additional CSV files.   
 • Enhancement: Dynamic Super-element program now generated outputs in four formats:
 
@@ -2473,7 +2481,7 @@ SACS 10.0.0.1 CONNECT Edition Release Enhancements
 
 • Added new Dynamic Super Element module based upon the Craig-Brampton approach.
 
-## 1.94Dynpac
+## 1.94 Dynpac
 
 SACS 13.0 CONNECT Edition – CL
 
@@ -2492,7 +2500,7 @@ SACS 10.0.0.1 CONNECT Edition Release Enhancements
 
 Added dynamic super element functionality in Dynpac
 
-## 1.95Executive
+## 1.95 Executive
 
 SACS 12.0 CONNECT Edition
 
@@ -2582,7 +2590,7 @@ Corrected a problem where the directory path to demo 12 was incorrect.
 • Corrected a problem with the display of the default license in the settings dialog box.   
 • Corrected a problem where a separate seastate input file could not be used if LDOPT line was included in the model file.
 
-## 1.96Fatigue
+## 1.96 Fatigue
 
 SACS 13.0 CONNECT Edition – CL
 
@@ -2638,7 +2646,7 @@ SACS 11.0.0.1 CONNECT Edition Release Enhancements
 
 ## 1.98Flotation/Upending
 
-## 1.99Gap
+## 1.99 Gap
 
 SACS 10.1.0.1 CONNECT Edition Release Corrections
 
@@ -2653,7 +2661,7 @@ Release V8i Select Series 4 v5.7 Corrections
 
 • Corrected GAP element problems associated with the gap input file.
 
-## 1.100Interactive Fatigue
+## 1.100 Interactive Fatigue
 
 SACS 13.0 CONNECT Edition – CL
 
@@ -2676,7 +2684,7 @@ Release V8i Select Series 4 v5.7 Enhancement
 
 Incorporated Fatigue time history results in Interactive Fatigue
 
-## 1.101Joint Can
+## 1.101 Joint Can
 
 SACS 11.3 CONNECT Edition
 
@@ -2690,7 +2698,7 @@ SACS 11.0.0.1 CONNECT Edition Release Enhancements
 
 Added design of RHS joints in Joint Can based on CIDECT's 'Design Guide for rectangular hollow section (RHS) joints under predominantly static loading'.
 
-## 1.102Joint Mesh Utility
+## 1.102 Joint Mesh Utility
 
 SACS 13.0 CONNECT Edition – CL
 
@@ -2752,7 +2760,7 @@ SACS 11.0.0.1 CONNECT Edition Release Enhancements
 
 • WGTNS line (Non-structural weight) is updated to handle up to 120 distribution joints.
 
-## 1.104Material Take Off
+## 1.104 Material Take Off
 
 SACS 11.0.0.1 CONNECT Edition Release Enhancements
 
@@ -2763,7 +2771,7 @@ Release V8i Select Series 4 v5.7 Corrections
 
 Corrected a surface area conversion problem with metric section library (SECM lines)
 
-## 1.105Pile 3D
+## 1.105 Pile 3D
 
 SACS 11.1 CONNECT Edition Release Enhancement
 
@@ -2779,7 +2787,7 @@ SACS 11.0.0.1 CONNECT Edition Release Enhancements
 
 • WGTNS line (Non-structural weight) is updated to handle up to 120 distribution joints.
 
-## 1.107Post
+## 1.107 Post
 
 SACS 12.0 CONNECT Edition
 
@@ -2823,9 +2831,9 @@ Implemented AISC 14th Edition code check
 Member unity check report file is generated for the ISO code to be subsequently used for ISO Joint Can checks   
 • Implemented the bottom flange unbraced length to be used for AISC 13th code check for WF and PLG sections.
 
-## 1.108Postvue Legacy
+## 1.108 Postvue Legacy
 
-## 1.109Precede
+## 1.109 Precede
 
 SACS 13.0 CONNECT Edition – CL
 
@@ -2936,7 +2944,7 @@ Corrected problem where automatic joint design was deleting existing offsets on 
 Corrected problem where stiffened plane panels were not being displayed.   
 Corrected problem where Precede bug in generating plate space loads.
 
-## 1.110Precede - Post Processing
+## 1.110 Precede - Post Processing
 
 SACS 10.1.0.1 CONNECT Edition Release Corrections
 
@@ -2990,9 +2998,9 @@ Corrected problem where Postvue 3D would crash on member using the member detail
 Corrected problem where the "Improper Argument" error was being produced for the joint can review option directly after a find member operation   
 Corrected problem where Precede could not handle numerous 'AREA' input lines.
 
-## 1.111Precede Legacy
+## 1.111 Precede Legacy
 
-## 1.112Pre-Processor
+## 1.112 Pre-Processor
 
 SACS 11.1 CONNECT Edition Release Corrections
 
@@ -3017,7 +3025,7 @@ Release V8i Select Series 4 v5.7 Corrections
 
 Corrected problem where space loads were not being factored in accordance to the LCFAC input line.
 
-## 1.113PSI (Pile/Structure Interaction)
+## 1.113 PSI (Pile/Structure Interaction)
 
 SACS 13.0 CONNECT Edition – CL
 
@@ -3052,9 +3060,9 @@ SACS 10.0.0.1 CONNECT Edition Release Enhancements
 
 • Update PSI to include API RP 2A WSD 22nd Edition 22nd recommendations
 
-## 1.114RING
-## 1.115SACS IV
-## 1.116SACS Reports Database
+## 1.114 RING
+## 1.115 SACS IV
+## 1.116 SACS Reports Database
 ## 1.117SACS/ANSYS
 ## 1.118SACS/DXF
 ## 1.119SACS/FAST
@@ -3080,7 +3088,7 @@ SACS 10.0.0.1 CONNECT Edition Release Enhancements
 ## 1.123SACS - Hull Modeler
 ## 1.124SACS - Stability
 ## 1.125SACS - Motions
-## 1.126Seastate
+## 1.126 Seastate
 
 SACS 13.0 CONNECT Edition – CL
 
@@ -3128,22 +3136,22 @@ Release V8i Select Series 4 v5.7 Corrections
 • Corrected a tolerance issue associated with the definition of an orientation joint.   
 • Corrected a problem where SEASTATE would crash if the section label was left blank.
 
-## 1.127SESAM to SACS Convertor
+## 1.127 SESAM to SACS Convertor
 
 SACS 11.0.0.1 CONNECT Edition Release Enhancements
 
 • Fixed issue where SACS changes the flange thickness into 100 cm for all channel sections   
 Fixed issue where Member concentrated load is not converting properly
 
-## 1.128StruCAD to SACS Convertor
+## 1.128 StruCAD to SACS Convertor
 
-## 1.129Super Element
+## 1.129 Super Element
 
 ## 1.130Tow
 
 ## 1.131Transportation
 
-## 1.132Wave Response
+## 1.132 Wave Response
 
 SACS 13.0 CONNECT Edition – CL
 
@@ -18559,10 +18567,10 @@ TABLE OF CONTENTS
 
 ## 2.3 EDITING AN INPUT FILE. .. 6
 
-2.3.1 Moving Around the Edit Screen...   
-2.3.2 Editing Data....
+2.3.1 Moving Around the Edit Screen ... 7   
+2.3.2 Editing Data ... 7
 
-## 2.4 EXITING THE DATA GENERATOR SESSION..
+## 2.4 EXITING THE DATA GENERATOR SESSION ... 7
 
 3 FILE MENU FEATURES . . 8
 
@@ -18654,7 +18662,7 @@ TABLE OF CONTENTS
 ## 7.1 GENERAL MENU FEATURES... .22
 7.1.1 CONNECT ADVISOR.. .. 22
 
-1 INTRODUCTION
+# 1 INTRODUCTION
 
 ## 1.1 GENERAL INFORMATION
 
@@ -18664,13 +18672,13 @@ The Data Generator has the ability to recognize individual line images in a SACS
 
 ## 1.2 PROGRAM OVERVIEW
 
-1.2.1 File Naming Conventions
+### 1.2.1 File Naming Conventions
 
 While no file naming convention is required for the Data Generator, the file name filter is used in the Open dialog box depending on the naming convention set in SACS Executive. The default filter is ???inp.* for the naming convention pgmtyp.ver and *.inp for verpgm.typ.
 
 Note: A backup data file named ‘dgninp.bak’ is periodically saved during program operation to prevent data loss due to power or system failure. Therefore, this particular file name should be avoided. This file is automatically deleted through a normal exit from the program.
 
-2 GETTING STARTED
+# 2 GETTING STARTED
 
 ## 2.1 BEGINNING A DATA GENERATOR SESSION
 
@@ -18690,7 +18698,7 @@ The Edit Screen displays the current ASCII SACS Data File and allows the user to
 
 ![](SACS2024_SACS_Documentation/chunk8_c7c9f55b93c2f82d457a4c49dab5cb70572a9244fe453863c73a1df1873bb019.jpg)
 
-2.3.1 Moving Around the Edit Screen
+### 2.3.1 Moving Around the Edit Screen
 
 The scroll bar, or the cursor keys, can be used to move up and down the file. The cursor, may also be positioned by pointing to a location and clicking.
 
@@ -18700,27 +18708,28 @@ The following key functions are available:
 
 
 
-| PAGE UP | - | Moves up one page |
-| --- | --- | --- |
-| PAGE DOWN | - | Moves down one page |
-| HOME | - | Moves to beginning of line or file |
-| END | - | Moves to end of line or file |
-| TAB | - | Moves to next data field on line |
-| SHIFT+TAB | - | Moves to previous data field on line |
+| Key | Function |
+| --- | --- |
+| PAGE UP | Moves up one page |
+| PAGE DOWN | Moves down one page |
+| HOME | Moves to beginning of line or file |
+| END | Moves to end of line or file |
+| TAB | Moves to next data field on line |
+| SHIFT+TAB | Moves to previous data field on line |
 
 
 
-2.3.2 Editing Data
+### 2.3.2 Editing Data
 
 Changes can be made by either selecting an option from the Edit Menu or by typing in the changes directly.
 
 Useful keys for editing a file include:
 
-INSERT Toggles between typeover mode and insert mode
-
-DELETE Deletes character under cursor
-
-BACKSPACE Moves backward and deletes
+| Key | Function |
+| --- | --- |
+| INSERT | Toggles between typeover mode and insert mode |
+| DELETE | Deletes character under cursor |
+| BACKSPACE | Moves backward and deletes |
 
 Highlighting a block of text allows the user to cut, copy, and/or paste several lines at once. ALT+Down Arrow (CTRL+Down Arrow in Unix) highlights a line of text.
 
@@ -18728,7 +18737,7 @@ Highlighting a block of text allows the user to cut, copy, and/or paste several 
 
 Select the File/Exit menu option to exit the Data Generator session. If the current file has been updated, the user is queried whether the file is to be saved.
 
-3 FILE MENU FEATURES
+# 3 FILE MENU FEATURES
 
 File menu features are accessible via the File menu button. Some features are also accessible via the File group on the Home tab.
 
@@ -18742,21 +18751,21 @@ New is used to open a new edit window so that the user can create a new file.
 
 Open is used to open an existing ASCII file in the Data Generator
 
-3.2.1 OPEN FILE
+### 3.2.1 OPEN FILE
 
 Opens a file on the local computer or a network path
 
-3.2.2 OPEN FROM PROJECTWISE
+### 3.2.2 OPEN FROM PROJECTWISE
 
 Opens a file on a ProjectWise server.
 
 ## 3.3 INFO
 
-3.3.1 DEFINE FILE TYPE
+### 3.3.1 DEFINE FILE TYPE
 
 Set the file type for the current input file. See section 4.3.1 for more information.
 
-3.3.2 DEFINE FILE UNITS
+### 3.3.2 DEFINE FILE UNITS
 
 Set the units for the current input file. See section 4.2.1 for more information.
 
@@ -18784,7 +18793,7 @@ Prints the file which is currently selected.
 
 The Exit option is used to exit the Data Generator session.
 
-4 HOME TAB MENU FEATURES
+# 4 HOME TAB MENU FEATURES
 
 ## 4.1 FILE MENU FEATURES
 
@@ -18800,7 +18809,7 @@ Most file types require a general option line which includes a working units opt
 
 ![](SACS2024_SACS_Documentation/chunk9_9829bd348bd12992b46a6c22431c74a3444f7692d6f1281068e8af6a5f160d81.jpg)
 
-4.2.1 DEFINE FILE UNITS
+### 4.2.1 DEFINE FILE UNITS
 
 The define file units feature allows the user to set the units for the current file. Note that this option only affects the display of units in the message line and Line Assistant; it will not be used for analyses.
 
@@ -18812,23 +18821,23 @@ The Tools Menu features allow the user to generate new SACS Input lines and edit
 
 ![](SACS2024_SACS_Documentation/chunk9_3a21f87690ed9dbecff89f66928da9ab31d43d835b33da4cb8421c4b0bb61d73.jpg)
 
-4.3.1 DEFINE FILE TYPE
+### 4.3.1 DEFINE FILE TYPE
 
 The define file type dialog allows the user to manually define the file type for the current file. This controls which input lines are supported in the Line Assistant and which lines can be selected when using the Insert Input Line feature. Most file types will automatically be determined by Datagen by reading the input file when opening existing input files.
 
 ![](SACS2024_SACS_Documentation/chunk9_526ef8afe160562b038056be2f1fb0c48d7336c4d290c1d4d760e31802832f6f.jpg)
 
-4.3.2 INSERT INPUT LINE
+### 4.3.2 INSERT INPUT LINE
 
 The insert input feature allows the user to insert an input line from a list of valid input lines for the current input file. The lines are by default sorted in order of input, but can also be sorted alphabetically using the Sort Alphabetically option.
 
 ![](SACS2024_SACS_Documentation/chunk9_9d03d46e36f8fde7738fd64962cc06c4efa01d4b85e8fa854a8e8901ec7570e3.jpg)
 
-4.3.3 COMMENT BLOCK
+### 4.3.3 COMMENT BLOCK
 
 The comment block feature will comment any lines that are currently selected. A ‘*’ character will be prepended to the selected lines and will not be executed when the input file is read in a SACS analysis
 
-4.3.4 UNCOMMENT BLOCK
+### 4.3.4 UNCOMMENT BLOCK
 
 The uncomment block feature will uncomment any lines that are currently selected. A ‘*’ character will be removed from the beginning of the selected lines. Note that this will not affect lines which are not comments.
 
@@ -18836,19 +18845,19 @@ The uncomment block feature will uncomment any lines that are currently selected
 
 ![](SACS2024_SACS_Documentation/chunk9_1382b64db7fb87242fd523947b12acfc1603addf450defd0a3ead80ec9d69e24.jpg)
 
-4.4.1 PASTE
+### 4.4.1 PASTE
 
 Paste the text in the clipboard to the location selected in the input file. Bound to keyboard shortcut CTRL + V.
 
-4.4.2 CUT
+### 4.4.2 CUT
 
 Delete the selected text and add it to the clipboard. Bound to keyboard shortcut CTRL + X.
 
-4.4.3 COPY
+### 4.4.3 COPY
 
 Copy the selected text to the clipboard. Bound to keyboard shortcut CTRL + C.
 
-4.4.4 FORMAT PAINTER
+### 4.4.4 FORMAT PAINTER
 
 Unused.
 
@@ -18856,7 +18865,7 @@ Unused.
 
 ![](SACS2024_SACS_Documentation/chunk9_c60de052e645fbd670b6878f4f7d55ee31e459a7c22ee9de2d0c6ff02f71331a.jpg)
 
-4.5.1 FIND
+### 4.5.1 FIND
 
 Opens the find dialog. User can search for the selected text in the Find What text box. The drop-down menu contains previous searches performed in Datagen. If the user has text selected when the find features is selected, the selected text will automatically be entered in the text box.
 
@@ -18864,7 +18873,7 @@ Bound to the keyboard shortcut CTRL + F.
 
 ![](SACS2024_SACS_Documentation/chunk9_8bb700a0b2b18edd918df8776509d7b67311e7c1619ae31cdc0f899506e8d91e.jpg)
 
-4.5.2 REPLACE
+### 4.5.2 REPLACE
 
 Opens the replace dialog. User can search for the selected text in the Find Text text box and replace it with the text in the Replace With text box. The drop-down menus contain previous find and replace operations performed in Datagen. If the user has text selected when the find features is selected, the selected text will automatically be entered in the Find Text text box.
 
@@ -18872,21 +18881,21 @@ Bound to the keyboard shortcut CTRL + H.
 
 ![](SACS2024_SACS_Documentation/chunk9_c7ff93a231798a6dd241dbeebbc23559bcbbbf1fbbf9ab2fcf352d47f808551d.jpg)
 
-4.5.3 GO TO
+### 4.5.3 GO TO
 
 Unused.
 
-4.5.4 SELECT
+### 4.5.4 SELECT
 
-4.5.4.1 SELECT ALL
+#### 4.5.4.1 SELECT ALL
 
 Select all text in the input file. Bound to keyboard shortcut CTRL + A.
 
-4.5.5 UNDO
+### 4.5.5 UNDO
 
 Undo the previous operation. Bound to keyboard shortcut CTRL + Z.
 
-4.5.6 REDO
+### 4.5.6 REDO
 
 Redo the previous undo operation. Bound to keyboard shortcut CTRL + Y.
 
@@ -82470,7 +82479,7 @@ TABLE OF CONTENTS
 
 7 INPUT LINES... .66
 
-1 FREEBODY INTRODUCTION
+# 1 FREEBODY INTRODUCTION
 
 This program is designed to calculate loads from members and applied loads, including reactions, at a single joint or set of joints (substructure) in order to:
 
@@ -82505,79 +82514,69 @@ The following describes an example Freebody analysis. Freebody input consists of
 
 The SACS input file follows:
 
-The Freebody input is as follows:   
+```text
+     FREEBODY SAMPLE PROBLEM
+OPTIONS      EN         UC   1 1   DC  CPT      PTPTPTPTPTPT
+GRUP
+GRUP IC1 WT18X17X             29.0011.6036.00 1    1.001.00          N490.00
+MEMBER
+MEMBER    1   2 IC1                  -90.
+MEMBER    1   3 IC1                -31.72
+MEMBER    1   4 IC1                69.095
+MEMBER    1   5 IC1                110.91
+MEMBER    1   6 IC1                -148.3
+MEMBER    2   3 IC1                31.717
+MEMBER    2   6 IC1                148.28
+MEMBER    2   9 IC1                -110.9
+MEMBER    2  10 IC1                -69.09
+MEMBER    3   4 IC1                31.717
+MEMBER    3  10 IC1                -31.72
+MEMBER    3  11 IC1
+MEMBER    4   5 IC1                -148.3
+MEMBER    4   7 IC1                69.095
+MEMBER    4  11 IC1                31.717
+MEMBER    5   6 IC1                -148.3
+MEMBER    5   7 IC1                110.91
+MEMBER    5   8 IC1                148.28
+MEMBER    6   8 IC1                  180.
+MEMBER    6   9 IC1                -148.3
+MEMBER    7   8 IC1                148.28
+MEMBER    7  11 IC1                31.717
+MEMBER    7  12 IC1                   90.
+MEMBER    8   9 IC1                148.28
+MEMBER    8  12 IC1                148.28
+MEMBER    9  10 IC1                -31.72
+MEMBER    9  12 IC1                -110.9
+MEMBER   10  11 IC1                -31.72
+MEMBER   10  12 IC1                -69.09
+MEMBER   11  12 IC1                31.717
+JOINT
+JOINT    1     -9.               -6.089               PINNED
+JOINT    2     -4.     8.        -2.973  6.123
+JOINT    3     -4.     2.     8. -2.973  7.602  1.097
+JOINT    4     -4.    -6.     5. -2.973-10.575
+JOINT    5     -4.    -6.    -5. -2.973-10.575
+JOINT    6     -4.     2.    -8. -2.973  7.602 -0.997
+JOINT    7      4.    -8.         3.061 -6.035        PINNED
+JOINT    8      4.    -2.    -8.  3.061 -7.514 -0.997
+JOINT    9      4.     6.    -5.  3.061 10.663
+JOINT   10      4.     6.     5.  3.061 10.663
+JOINT   11      4.    -2.    -8.  3.061 -7.514 -1.063
+JOINT   12      9.                6.177               PINNED
+LOAD
+LOADCN   1
+LOAD      6     600.0001050.00550.000                       GLOB JOIN
+END
+```
 
+The Freebody input is as follows:
 
-
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 |
-| 1 | FREEBODY SAMPLE PROBLEM | FREEBODY SAMPLE PROBLEM | FREEBODY SAMPLE PROBLEM | FREEBODY SAMPLE PROBLEM | FREEBODY SAMPLE PROBLEM | FREEBODY SAMPLE PROBLEM | FREEBODY SAMPLE PROBLEM | FREEBODY SAMPLE PROBLEM |
-| 2 | OPTIONS | EN | UC | 1 1 | DC | CPT | PTPTPTPTPTPT | PTPTPTPTPTPT |
-| 3 | GRUP |  |  |  |  |  |  |  |
-| 4 | GRUP IC1 | WT18X17X |  | 29.0011.6036.00 | 1 | 1.001.00 |  | N490.00 |
-| 5 | MEMBER |  |  |  |  |  |  |  |
-| 6 | MEMBER | 1 | 2 IC1 |  | -90. |  |  |  |
-| 7 | MEMBER | 1 | 3 IC1 |  | -31.72 |  |  |  |
-| 8 | MEMBER | 1 | 4 IC1 |  | 69.095 |  |  |  |
-| 9 | MEMBER | 1 | 5 IC1 |  | 110.91 |  |  |  |
-| 10 | MEMBER | 1 | 6 IC1 |  | -148.3 |  |  |  |
-| 11 | MEMBER | 2 | 3 IC1 |  | 31.717 |  |  |  |
-| 12 | MEMBER | 2 | 6 IC1 |  | 148.28 |  |  |  |
-| 13 | MEMBER | 2 | 9 IC1 |  | -110.9 |  |  |  |
-| 14 | MEMBER | 2 | 10 IC1 |  | -69.09 |  |  |  |
-| 15 | MEMBER | 3 | 4 IC1 |  | 31.717 |  |  |  |
-| 16 | MEMBER | 3 | 10 IC1 |  | -31.72 |  |  |  |
-| 17 | MEMBER | 3 | 11 IC1 |  |  |  |  |  |
-| 18 | MEMBER | 4 | 5 IC1 |  | -148.3 |  |  |  |
-| 19 | MEMBER | 4 | 7 IC1 |  | 69.095 |  |  |  |
-| 20 | MEMBER | 4 | 11 IC1 |  | 31.717 |  |  |  |
-| 21 | MEMBER | 5 | 6 IC1 |  | -148.3 |  |  |  |
-| 22 | MEMBER | 5 | 7 IC1 |  | 110.91 |  |  |  |
-| 23 | MEMBER | 5 | 8 IC1 |  | 148.28 |  |  |  |
-| 24 | MEMBER | 6 | 8 IC1 |  | 180. |  |  |  |
-| 25 | MEMBER | 6 | 9 IC1 |  | -148.3 |  |  |  |
-| 26 | MEMBER | 7 | 8 IC1 |  | 148.28 |  |  |  |
-| 27 | MEMBER | 7 | 11 IC1 |  | 31.717 |  |  |  |
-| 28 | MEMBER | 7 | 12 IC1 |  | 90. |  |  |  |
-| 29 | MEMBER | 8 | 9 IC1 |  | 148.28 |  |  |  |
-| 30 | MEMBER | 8 | 12 IC1 |  | 148.28 |  |  |  |
-| 31 | MEMBER | 9 | 10 IC1 |  | -31.72 |  |  |  |
-| 32 | MEMBER | 9 | 12 IC1 |  | -110.9 |  |  |  |
-| 33 | MEMBER | 10 | 11 IC1 |  | -31.72 |  |  |  |
-| 34 | MEMBER | 10 | 12 IC1 |  | -69.09 |  |  |  |
-| 35 | MEMBER | 11 | 12 IC1 |  | 31.717 |  |  |  |
-| 36 | JOINT |  |  |  |  |  |  |  |
-| 37 | JOINT | 1 | -9. |  | -6.089 |  | PINNED |  |
-| 38 | JOINT | 2 | -4. | 8. | -2.973 | 6.123 | PINNED |  |
-| 39 | JOINT | 3 | -4. | 2. | 8. | -2.973 | 7.602 | 1.097 |
-| 40 | JOINT | 4 | -4. | -6. | 5. | -2.973-10.575 | 7.602 |  |
-| 41 | JOINT | 5 | -4. | -6. | -5. | -2.973-10.575 | 7.602 |  |
-| 42 | JOINT | 6 | -4. | 2. | -8. | -2.973 | 7.602 | -0.997 |
-| 43 | JOINT | 7 | 4. | -8. |  | 3.061 | -6.035 | PINNED |
-| 44 | JOINT | 8 | 4. | -2. | -8. | 3.061 | -7.514 | -0.997 |
-| 45 | JOINT | 9 | 4. | 6. | -5. | 3.061 | 10.663 | -0.997 |
-| 46 | JOINT | 10 | 4. | 6. | 5. | 3.061 | 10.663 | -0.997 |
-| 47 | JOINT | 11 | 4. | -2. | -8. | 3.061 | -7.514 | -1.063 |
-| 48 | JOINT | 12 | 9. |  | 6.177 |  | PINNED |  |
-| 49 | LOAD |  |  |  |  |  |  |  |
-| 50 | LOADCN | 1 |  |  |  |  |  |  |
-| 51 | LOAD | 6 | 600.0001050.00550.000 |  |  |  |  | GLOB JOIN |
-| 52 | END |  |  |  |  |  |  |  |
-
-
-
-
-
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 1234567890 |
-| 1 | JNTSL 2 | ALL LM | ALL LM | ALL LM | ALL LM | ALL LM | ALL LM | ALL LM |
-| 2 | CONN 3 | 6 | 10 | 10 | 10 | 10 | 10 | 10 |
-| 3 | JNTSL 9 | ALL MB | 10 | 10 | 10 | 10 | 10 | 10 |
-| 4 | END |  |  |  |  |  |  |  |
-
-
+```text
+JNTSL 2    ALL LM
+CONN 3    6    10
+JNTSL 9    ALL MB 10
+END
+```
 
 The first line selects joint 2 for equilibrium checking. All results will be posted in local member coordinates. The local members to be used are 2-3, 2-6 and 2-10. Thus, the results will display the member forces/moments at joint 2 for each member selected. The third line selects joint 9 for
 
@@ -82589,30 +82588,53 @@ With many load cases the ‘MAX’ option displays the maximum load case value f
 
 
 
-| SACS CONNECT Edition (v11.0) | SACS CONNECT Edition (v11.0) | SACS CONNECT Edition (v11.0) | Bentley Systems | Bentley Systems | Bentley Systems | Bentley Systems | ID=Ym5ng2NpaIJxrIF8nIen | ID=Ym5ng2NpaIJxrIF8nIen | ID=Ym5ng2NpaIJxrIF8nIen | ID=Ym5ng2NpaIJxrIF8nIen |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| FREEBODY SAMPLE PROBLEM | FREEBODY SAMPLE PROBLEM | FREEBODY SAMPLE PROBLEM | DATE 20-AUG-2018 TIME 14:05:50 FBY PAGE 1 | DATE 20-AUG-2018 TIME 14:05:50 FBY PAGE 1 | DATE 20-AUG-2018 TIME 14:05:50 FBY PAGE 1 | DATE 20-AUG-2018 TIME 14:05:50 FBY PAGE 1 | DATE 20-AUG-2018 TIME 14:05:50 FBY PAGE 1 | DATE 20-AUG-2018 TIME 14:05:50 FBY PAGE 1 | DATE 20-AUG-2018 TIME 14:05:50 FBY PAGE 1 | DATE 20-AUG-2018 TIME 14:05:50 FBY PAGE 1 |
-|  |  |  |  |  |  |  | FBY VERSION 12.1.0.14 | FBY VERSION 12.1.0.14 | FBY VERSION 12.1.0.14 | FBY VERSION 12.1.0.14 |
-|  |  |  | SELECTED JOINT 2 | SELECTED JOINT 2 | SELECTED JOINT 2 | SELECTED JOINT 2 |  |  |  |  |
-|  |  |  | COORDINATE ........................... LOCAL MEMBER | COORDINATE ........................... LOCAL MEMBER | COORDINATE ........................... LOCAL MEMBER | COORDINATE ........................... LOCAL MEMBER |  |  |  |  |
-|  |  |  | LOAD CASES ........................... ALL | LOAD CASES ........................... ALL | LOAD CASES ........................... ALL | LOAD CASES ........................... ALL |  |  |  |  |
-| JOINT | MEMBER | LOAD CASE | ********** | FORCES ****** | FZ ****** | MOMENTS ****** | MIZ ****** | CRITERIA |  |  |
-|  |  |  | FX KIPS | FY KIPS | KIPS | MX IN-KIP | MY IN-KIP | MZ IN-KIP |  |  |
-| 2 | 2-3 | 1 | -92.27 | -2.87 | -4.49 | -3.1 | -31.4 | -147.1 |  |  |
-| 2 | 2-6 | 1 | -430.64 | -4.39 | -10.09 | 0.0 | 739.7 | -217.8 |  |  |
-| 2 | 2-10 | 1 | -178.33 | 1.69 | -9.02 | 1.4 | 704.9 | 128.9 |  |  |
-| SACS CONNECT Edition (v11.0) | SACS CONNECT Edition (v11.0) | SACS CONNECT Edition (v11.0) | Bentley Systems | Bentley Systems | Bentley Systems | Bentley Systems | ID=Ym5ng2NpaIJxrIF8nIen | ID=Ym5ng2NpaIJxrIF8nIen | ID=Ym5ng2NpaIJxrIF8nIen | ID=Ym5ng2NpaIJxrIF8nIen |
-| FREEBODY SAMPLE PROBLEM | FREEBODY SAMPLE PROBLEM | FREEBODY SAMPLE PROBLEM | DATE 20-AUG-2018 TIME 14:05:50 FBY PAGE 2 | DATE 20-AUG-2018 TIME 14:05:50 FBY PAGE 2 | DATE 20-AUG-2018 TIME 14:05:50 FBY PAGE 2 | DATE 20-AUG-2018 TIME 14:05:50 FBY PAGE 2 | DATE 20-AUG-2018 TIME 14:05:50 FBY PAGE 2 | DATE 20-AUG-2018 TIME 14:05:50 FBY PAGE 2 | DATE 20-AUG-2018 TIME 14:05:50 FBY PAGE 2 | DATE 20-AUG-2018 TIME 14:05:50 FBY PAGE 2 |
-|  |  |  | SELECTED JOINT 9 | SELECTED JOINT 9 | SELECTED JOINT 9 | SELECTED JOINT 9 |  |  |  |  |
-|  |  |  | COORDINATE ........................... MEMBER 9-10 | COORDINATE ........................... MEMBER 9-10 | COORDINATE ........................... MEMBER 9-10 | COORDINATE ........................... MEMBER 9-10 |  |  |  |  |
-|  |  |  | LOAD CASES ........................... ALL | LOAD CASES ........................... ALL | LOAD CASES ........................... ALL | LOAD CASES ........................... ALL |  |  |  |  |
-| JOINT | MEMBER | LOAD CASE | ********** | FORCES ****** | FZ ****** | MOMENTS ****** | MIZ ****** | CRITERIA |  |  |
-|  |  |  | FX KIPS | FY KIPS | KIPS | MX IN-KIP | MY IN-KIP | MZ IN-KIP |  |  |
-| 9 | 2-9 | 1 | 182.08 | -286.48 | -113.63 | 245.7 | 78.1 | 195.5 |  |  |
-| 9 | 6-9 | 1 | 232.51 | 359.61 | 567.74 | 476.3 | -754.5 | 282.2 |  |  |
-| 9 | 8-9 | 1 | -214.57 | 364.86 | -588.15 | -75.6 | -792.3 | -460.3 |  |  |
-| 9 | 9-10 | 1 | 71.18 | -3.52 | -13.18 | -0.4 | 1016.6 | -172.3 |  |  |
-| 9 | 9-12 | 1 | -271.21 | -434.47 | 147.22 | -646.0 | 452.1 | 155.0 |  |  |
+```text
+SACS CONNECT Edition (v11.0)                 Bentley Systems                                           ID=Ym5ng2NpaIJxrIF8nIen
+     FREEBODY SAMPLE PROBLEM                                                      DATE 20-AUG-2018  TIME 14:05:50   FBY PAGE    1
+
+                                                                                                          FBY VERSION 12.1.0.14
+
+                              SELECTED JOINT ......    2
+
+                              COORDINATE .......... LOCAL MEMBER
+
+                              LOAD CASES .......... ALL
+
+  JOINT     MEMBER     LOAD   ************* FORCES **************        ************** MOMENTS ******************      CRITERIA
+                       CASE       FX           FY           FZ                 MX            MY            MZ
+                                 KIPS         KIPS         KIPS              IN-KIP        IN-KIP        IN-KIP
+
+
+    2       2-   3       1      -92.27        -2.87        -4.49               -3.1          -31.4         -147.1
+
+    2       2-   6       1     -430.64        -4.39       -10.09                0.0          739.7         -217.8
+
+    2       2-  10       1     -178.33         1.69        -9.02                1.4          704.9          128.9
+
+SACS CONNECT Edition (v11.0)                 Bentley Systems                                           ID=Ym5ng2NpaIJxrIF8nIen
+     FREEBODY SAMPLE PROBLEM                                                      DATE 20-AUG-2018  TIME 14:05:50   FBY PAGE    2
+
+                              SELECTED JOINT ......    9
+
+                              COORDINATE .......... MEMBER    9-  10
+
+                              LOAD CASES .......... ALL
+
+  JOINT     MEMBER     LOAD   ************* FORCES **************        ************** MOMENTS ******************      CRITERIA
+                       CASE       FX           FY           FZ                 MX            MY            MZ
+                                 KIPS         KIPS         KIPS              IN-KIP        IN-KIP        IN-KIP
+
+
+    9       2-   9       1      182.08      -286.48      -113.63              245.7           78.1          195.5
+
+    9       6-   9       1      232.51       359.61       567.74              476.3         -754.5          282.2
+
+    9       8-   9       1     -214.57       364.86      -588.15              -75.6         -792.3         -460.3
+
+    9       9-  10       1       71.18        -3.52       -13.18               -0.4         1016.6         -172.3
+
+    9       9-  12       1     -271.21      -434.47       147.22             -646.0          452.1          155.0
+```
 
 
 
@@ -83085,7 +83107,7 @@ The following table summarizes the lines currently available in the joint mesh i
 
 
 
-4 SACS REPORT GENERATOR INTRODUCTION
+# 4 SACS REPORT GENERATOR INTRODUCTION
 
 The SACS REPORT generator module allows user control of report content and allows the user to output reports in standard, html, comma delimited or space delimited formats. The module also allows the user to include user defined report titles, page control and page headers and footers, report units selection. Reports can be generated for selected elements, element groups, joints and load cases.
 
@@ -83093,58 +83115,51 @@ The SACS REPORT generator module allows user control of report content and allow
 
 The example below shows a typical input for Report Generator utility. The report generator options line REPOPT designates a standard report format with 100 characters per output line and 1 line is to be skipped between report lines. The page set line PGSET defines manual pagination with the use of ML option in columns 11-12. The page header and footer lines PGHEAD and PGFOOT respectively, define headers and footers and the justification for the headers and footers. The page break line PGBRK designates a header without a page break using option 'H' in column 7. The report titles are defined on the TITLE lines with the title location (justification) and the number of lines to be skipped before and after the title in columns 6, 7 and 8 respectively. The TEXT line defines the text to be inserted into the report. The UNITS line designates the global output units to default to English units. The report name and report comments are defined on the RPNAM and RPCOM input lines respectively. Reports are to be generated for loads selected on the load case select LCSEL line and for selected member groups on the MGRPSL line. Member reports corresponding to the critical internal load and also member details are requested on the RPTMEM input line. Each report is followed by a page break using the PGBRK input line. The member reports are followed by a request for a joint deflection report corresponding to the maximum deflection using the RPTJNT input line. The units for the joint deflection are selected as millimeters using the UNITS input line.
 
-```txt
-1 2 3 4 5 6 7 8  
-1234567890123456789012345678901234567890123456789012345678901234567890  
-1 Report Options  
-REPORT 100 1 STND  
-* Page Settings - Use manual pagination  
-PGSET ML  
-* Page Header and Footer  
-PGHEAD RREPORT HEADER RIGHT JUSTIFIED  
-PGFOOT LREPORT FOOTER LEFT JUSTIFIED  
-PGBRK H  
-* First Report Settings  
-TITLEC12 TEST REPORT TITLE  
-TITLE C CONTINUED  
-* Comment  
-TEXT L01 DEFAULT ENGLISH UNITS ARE USED  
-* Use English Units  
-UNITS EN  
-*  
-* Report Member Details for Three members for All Load Cases  
-*  
-RPNAMC MEMBER DETAILS REPORT  
-RPCOMC JACKET LEG MEMBER 101-201, 103-203, AND 105-205  
-* Select Load Cases  
-LCSEL IN ST?1 ST?2 ST?3 ST?4  
-* Select Member Groups  
-MGRPSL I LG*  
-* Create critical member report 
+```text
+* Report Options
+REPOPT 100 1 STND
+* Page Settings - Use manual pagination
+PGSET     ML
+* Page Header and Footer
+PGHEAD RREPORT HEADER RIGHT JUSTIFIED
+PGFOOT LREPORT FOOTER LEFT JUSTIFIED
+PGBRK H
+* First Report Settings
+TITLEC12   TEST REPORT TITLE
+TITLE   C  CONTINUED
+* Comment
+TEXT L01   DEFAULT ENGLISH UNITS ARE USED
+* Use English Units
+UNITS EN
+*
+* Report Member Details for Three members for All Load Cases
+*
+RPNAMC     MEMBER DETAILS REPORT
+RPCOMC     JACKET LEG MEMBER 101-201, 103-203, AND 105-205
+* Select Load Cases
+LCSEL IN             ST?1 ST?2 ST?3 ST?4
+* Select Member Groups
+MGRPSL I LG*
+* Create critical member report
+RPTMEM   MCIL
+PGBRK
+* Create member detail report
+RPTMEM   DETL
+* Add page break
+PGBRK
+* Second Report Settings
+TITLEC12   JOINT REPORTS
+* Comment
+TEXT L 1   DEFLECTION REPORTS USING METRIC UNITS
+* Use metric unit set with deflection overrident to use mm
+UNITS MN MM
+* Joint maximum deflections
+RPTJNT   DEFL  MAX
+PGBRK
+END
 ```
 
-```txt
-26 RPTMEM MCIL   
-27 PGBRK
-28 \* Create member detail report   
-29 RPTMEM DETL   
-30 \* Add page break   
-31 PGBRK
-32 \* Second Report Settings   
-33 TITLEC12 JOINT REPORTS   
-34 \* Comment
-35 TEXT L 1 DEFLECTION REPORTS USING METRIC UNITS   
-36 \* Use metric unit set with deflection overrident to use mm   
-37 UNITS MN MM   
-38 \* Joint maximum deflections   
-39 RPTJNT DEFL MAX   
-40 PGBRK
-41 END
-42   
-43 
-```
-
-4.1.1 INPUT FILE SETUP
+### 4.1.1 INPUT FILE SETUP
 
 
 
@@ -83941,7 +83956,7 @@ COMMENTARY
 
 LOCATION THIS DATA RECORD IS THE LAST RECORD FOR THE INPUT DATA.
 
-GENERAL THE 'END' LINE TERMINATES THE DATA READ BY THE FREEBODYPROGRAM.
+GENERAL THE 'END' LINE TERMINATES THE DATA READ BY THE FREEBODY PROGRAM.
 
 
 
@@ -83982,7 +83997,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE IS A REPLACEMENT FOR THE LDCASE LINE AND MAY BEUSED TO SPECIFY THE LOAD CASES IN THE SACS IV INPUT FILE THATARE TO BE USED FOR FREEBODY PROCESSING. THIS LINE CAN BEREPEATED AS NECESSARY TO SELECT ANY OR ALL OF THE LOAD CASES.
+GENERAL THIS LINE IS A REPLACEMENT FOR THE LDCASE LINE AND MAY BE USED TO SPECIFY THE LOAD CASES IN THE SACS IV INPUT FILE THAT ARE TO BE USED FOR FREEBODY PROCESSING. THIS LINE CAN BE REPEATED AS NECESSARY TO SELECT ANY OR ALL OF THE LOAD CASES.
 
 ( 7- 8) ENTER THE FUNCTION FOR THE LOAD CASE SELECTION: 'IN' - INCLUDE THESE LOAD CASES IN OUTPUT REPORTS (DEFAULT). 'EX' - EXCLUDE THESE LOAD CASES FROM OUTPUT REPORTS.   
 (17-75) ENTER THE LOAD CASE IDENTIFIERS FOR ALL LOAD CASES TO BE SELECTED. THE LOAD CASES CAN BE IN ANY ORDER.
@@ -84899,7 +84914,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE IS USED TO SPECIFY THE LOAD CASES IN THE SAC RESULTSTO BE USED FOR REPORTING. THIS LINE CAN BE REPEATEDAS OFTEN AS NECESSARY TO SELECT ANY OR ALL OF THE LOAD CASES.
+GENERAL THIS LINE IS USED TO SPECIFY THE LOAD CASES IN THE SAC RESULTS TO BE USED FOR REPORTING. THIS LINE CAN BE REPEATED AS OFTEN AS NECESSARY TO SELECT ANY OR ALL OF THE LOAD CASES.
 
 ( 7- 8) ENTER THE FUNCTION FOR THE LOAD CASE SELECTION: 'IN' - INCLUDE THESE LOAD CASES IN REPORTS. 'EX' - EXCLUDE THESE LOAD CASES IN REPORTS.
 
@@ -84954,12 +84969,12 @@ GENERAL THIS RECORD ALLOWS THE SELECTION OF MEMBER GROUPS TO BE INCLUDED OR EXCL
 
 
 
-| LINE LABEL | SELECTION TYPE | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | SELECTION TYPE | 1ST | 2ND | 3RD | 4TH | 5TH | 6TH | 7TH | 8TH | 9TH | 10TH | 11TH | 12TH | 13TH | 14TH | 15TH |  |  |
-| MGRPSL |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1-- 6 | 8 | 10--12 | 14--16 | 18--20 | 22--24 | 26--28 | 30--32 | 34--36 | 38--40 | 42--44 | 46--48 | 50--52 | 54--56 | 58--60 | 62--64 | 66--68 | 69--80 |  |
-| DEFAULT | 'I' |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| LINE LABEL | SELECTION TYPE | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | MEMBER GROUP IDENTIFIER SELECTION | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | SELECTION TYPE | 1ST | 2ND | 3RD | 4TH | 5TH | 6TH | 7TH | 8TH | 9TH | 10TH | 11TH | 12TH | 13TH | 14TH | 15TH | LEAVE BLANK |
+| MGRPSL |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 6 | 8 | 10--12 | 14--16 | 18--20 | 22--24 | 26--28 | 30--32 | 34--36 | 38--40 | 42--44 | 46--48 | 50--52 | 54--56 | 58--60 | 62--64 | 66--68 | 69--80 |
+| DEFAULT | 'I' |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
 
 
@@ -85002,7 +85017,7 @@ GENERAL THIS LINE IS USED TO WRITE PAGE FOOTERS.
 | LINE LABEL | FOOTER LINE NUMBER | LOCATION | PAGE FOOTER |
 | --- | --- | --- | --- |
 | PGFOOT |  |  |  |
-| 1-- 6 | 7 | 8 | 9- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+| 1-- 6 | 7 | 8 | 9--------99 |
 | DEFAULT | 1 | L |  |
 
 
@@ -85026,7 +85041,7 @@ GENERAL THIS LINE IS USED TO WRITE PAGE HEADINGS.
 | LINE LABEL | HEADER LINE NUMBER | LOCATION | PAGE HEADING |
 | --- | --- | --- | --- |
 | PGHEAD |  |  |  |
-| 1-- 6 | 7 | 8 | 9- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+| 1-- 6 | 7 | 8 | 9--------99 |
 | DEFAULT |  | L |  |
 
 
@@ -85045,12 +85060,12 @@ GENERAL THIS RECORD ALLOWS THE SELECTION OF PLATE GROUPS TO BE INCLUDED OR EXCLU
 
 
 
-| LINE LABEL | SELECTION TYPE | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | SELECTION TYPE | 1ST | 2ND | 3RD | 4TH | 5TH | 6TH | 7TH | 8TH | 9TH | 10TH | 11TH | 12TH | 13TH | 14TH | 15TH |  |  |
-| PGRPSL |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1-- 6 | 8 | 10--12 | 14--16 | 18--20 | 22--24 | 26--28 | 30--32 | 34--36 | 38--40 | 42--44 | 46--48 | 50--52 | 54--56 | 58--60 | 62--64 | 66--68 | 69--80 |  |
-| DEFAULT | 'I' |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| LINE LABEL | SELECTION TYPE | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | PLATE GROUP IDENTIFIER SELECTION | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | SELECTION TYPE | 1ST | 2ND | 3RD | 4TH | 5TH | 6TH | 7TH | 8TH | 9TH | 10TH | 11TH | 12TH | 13TH | 14TH | 15TH | LEAVE BLANK |
+| PGRPSL |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 6 | 8 | 10--12 | 14--16 | 18--20 | 22--24 | 26--28 | 30--32 | 34--36 | 38--40 | 42--44 | 46--48 | 50--52 | 54--56 | 58--60 | 62--64 | 66--68 | 69--80 |
+| DEFAULT | 'I' |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
 
 
@@ -85060,7 +85075,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE IS USED TO SPECIFY PAGE SETTING. THISWILL REMAIN IN EFFECT UNTIL ANOTHER PGSET LINE ISENCOUNTERED.
+GENERAL THIS LINE IS USED TO SPECIFY PAGE SETTING. THIS WILL REMAIN IN EFFECT UNTIL ANOTHER PGSET LINE IS ENCOUNTERED.
 
 ( 8-10) ENTER NUMBER OF LINES ALLOWED PER PAGE.   
 (11-12) SELECT PAGING OPTION 'AT' - BASE ON ALLOWED LINES PER PAGE 'ML' - MANUAL   
@@ -85108,7 +85123,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE IS USED TO SPECIFY OVERALL REPORT FORMATTING. THISWILL REMAIN IN EFFECT UNTIL ANOTHER REPOPT LINE ISENCOUNTERED.
+GENERAL THIS LINE IS USED TO SPECIFY OVERALL REPORT FORMATTING. THIS WILL REMAIN IN EFFECT UNTIL ANOTHER REPOPT LINE IS ENCOUNTERED.
 
 ( 8-10) ENTER NUMBER OF CHARACTERS ALLOWED PER LINE.   
 (11-12) ENTER NUMBER OF LINES TO SKIP BETWEEN REPORT LINES.   
@@ -85152,7 +85167,7 @@ GENERAL THIS LINE IS USED TO PROVIDE A REPORT COMMENT.
 | LINE LABEL | TITLE LOCATION | SKIP LINES | SKIP LINES | CONTINUE INDICATOR | REPORT COMMENT |
 | --- | --- | --- | --- | --- | --- |
 | RPCOM |  |  |  |  |  |
-| 1-- 5 | 6 | 7 | 8 | 9 | 12- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+| 1-- 5 | 6 | 7 | 8 | 9 | 12--------99 |
 | DEFAULT | L | 0 | 0 |  |  |
 
 
@@ -85181,8 +85196,8 @@ GENERAL THIS LINE IS USED TO PROVIDE A REPORT NAME.
 
 | LINE LABEL | TITLE LOCATION | SKIP LINES | SKIP LINES | CONTINUE INDICATOR | REPORT NAME |
 | --- | --- | --- | --- | --- | --- |
-| RPnam |  |  |  |  |  |
-| 1--5 | 6 | 7 | 8 | 9 | 12- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+| RPNAM |  |  |  |  |  |
+| 1--5 | 6 | 7 | 8 | 9 | 12--------99 |
 | DEFAULT | L | 0 | 0 |  |  |
 
 
@@ -85280,7 +85295,7 @@ GENERAL THIS LINE ALLOWS THE SELECTION OF PLATE RELATED REPORTS.
 |  | 'INLD' - PLATE INTERNAL LOADS REPORT |
 |  | 'DETL' - PLATE DETAIL STRESS REPORT |
 |  | 'LCCP' - LOAD CASE CRITICAL PLATE REPORT |
-|  | 'GPST' - PLATE GROUP STATISTICS REPORT (NOTyet AVAILABLE) |
+|  | 'GPST' - PLATE GROUP STATISTICS REPORT (NOT YET AVAILABLE) |
 
 
 
@@ -85311,11 +85326,11 @@ GENERAL THIS LINE ALLOWS THE SELECTION OF SHELL RELATED REPORTS.
 
 
 
-| LINE LABEL | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | 1ST | 2ND | 3RD | 4TH | 5TH | 6TH | 7TH | 8TH | 9TH | 10TH | 11TH | 12TH | 13TH | 14TH | 15TH |  |  |
-| RPTSHL |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1-- 6 | 10--12 | 14--16 | 18--20 | 22--24 | 26--28 | 30--32 | 34--36 | 38--40 | 42--44 | 46--48 | 50--52 | 54--56 | 58--60 | 62--64 | 66--68 | 69--80 |  |
+| LINE LABEL | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | SHELL REPORT SELECTION | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | 1ST | 2ND | 3RD | 4TH | 5TH | 6TH | 7TH | 8TH | 9TH | 10TH | 11TH | 12TH | 13TH | 14TH | 15TH | LEAVE BLANK |
+| RPTSHL |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 6 | 10--12 | 14--16 | 18--20 | 22--24 | 26--28 | 30--32 | 34--36 | 38--40 | 42--44 | 46--48 | 50--52 | 54--56 | 58--60 | 62--64 | 66--68 | 69--80 |
 
 
 
@@ -85333,12 +85348,12 @@ GENERAL THIS RECORD ALLOWS THE SELECTION OF SHELL GROUPS TO BE INCLUDED OR EXCLU
 
 
 
-| LINE LABEL | SELECTION TYPE | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | SELECTION TYPE | 1ST | 2ND | 3RD | 4TH | 5TH | 6TH | 7TH | 8TH | 9TH | 10TH | 11TH | 12TH | 13TH | 14TH | 15TH |  |  |
-| SGRPSL |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1-- 6 | 8 | 10--12 | 14--16 | 18--20 | 22--24 | 26--28 | 30--32 | 34--36 | 38--40 | 42--44 | 46--48 | 50--52 | 54--56 | 58--60 | 62--64 | 66--68 | 69--80 |  |
-| DEFAULT | 'I' |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| LINE LABEL | SELECTION TYPE | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | SHELL GROUP IDENTIFIER SELECTION | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | SELECTION TYPE | 1ST | 2ND | 3RD | 4TH | 5TH | 6TH | 7TH | 8TH | 9TH | 10TH | 11TH | 12TH | 13TH | 14TH | 15TH | LEAVE BLANK |
+| SGRPSL |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 6 | 8 | 10--12 | 14--16 | 18--20 | 22--24 | 26--28 | 30--32 | 34--36 | 38--40 | 42--44 | 46--48 | 50--52 | 54--56 | 58--60 | 62--64 | 66--68 | 69--80 |
+| DEFAULT | 'I' |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
 
 
@@ -85371,7 +85386,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE IS USED TO CREATE REPORT TEXT. ANY NUMBER OFTEXT LINES ARE ALLOWED.
+GENERAL THIS LINE IS USED TO CREATE REPORT TEXT. ANY NUMBER OF TEXT LINES ARE ALLOWED.
 
 ```txt
 (6) SELECT LINE LOCATION 'L' - LEFT JUSTIFIED 'R' - RIGHT JUSTIFIED 'C' - CENTERED 
@@ -85388,7 +85403,7 @@ GENERAL THIS LINE IS USED TO CREATE REPORT TEXT. ANY NUMBER OFTEXT LINES ARE ALL
 | LINE LABEL | TEXT LOCATION | SKIP LINES BEFORE | SKIP LINES AFTER | CONTINUE INDICATOR | TEXT |
 | --- | --- | --- | --- | --- | --- |
 | TEXT |  |  |  |  |  |
-| 1-- 4 | 6 | 7 | 8 | 9 | 12- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+| 1-- 4 | 6 | 7 | 8 | 9 | 12--------99 |
 | DEFAULT | L | 0 | 0 |  |  |
 
 
@@ -85418,7 +85433,7 @@ GENERAL THIS LINE IS USED TO PROVIDE A REPORT TITLE.
 | LINE LABEL | TITLE LOCATION | SKIP LINES | SKIP LINES | CONTINUE INDICATOR | REPORT TITLE |
 | --- | --- | --- | --- | --- | --- |
 | TITLE |  |  |  |  |  |
-| 1-- 5 | 6 | 7 | 8 | 9 | 12- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+| 1-- 5 | 6 | 7 | 8 | 9 | 12--------99 |
 | DEFAULT | L | 0 | 0 |  |  |
 
 
@@ -85453,7 +85468,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE IS USED TO SELECT OUTPUT REPORT UNITS. THISWILL REMAIN IN EFFECT UNTIL ANOTHER UNITS LINE ISENCOUNTERED.
+GENERAL THIS LINE IS USED TO SELECT OUTPUT REPORT UNITS. THIS WILL REMAIN IN EFFECT UNTIL ANOTHER UNITS LINE IS ENCOUNTERED.
 
 ( 7- 8) SELECT GLOBAL UNITS. DEFAULT IS TAKEN FROM COMMON SOLUTION FILE. 'EN' - ENGLISH 'ME' - METRIC WITH KILOGRAMS 'MN' - METRIC WITH KILONEWTONS   
 (10-11) SELECT DEFLECTION UNITS 'FT' - FEET 'IN' - INCHES 'M ' - METERS 'CM' - CENTIMETERS 'MM' - MILLIMETERS   
