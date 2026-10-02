@@ -47,315 +47,254 @@ Generally, API standards are reviewed and revised, reaffirmed, or withdrawn at l
 
 Suggested revisions are invited and should be submitted to the Standards Department, API, 1220 L Street, NW, Washington, DC 20005, standards@api.org.
 
-Contents
+## Contents
 
-Page
+Printed page numbers in the source PDF.
 
-1 Scope . . .   
-2 Normative References . . .   
-3 Terms, Definitions, Acronyms, and Abbreviations . . .   
-## 3.1 Terms and Definitions. . . .
-## 3.2 Acronyms and Abbreviations .
-4 Planning . . . 5   
-## 4.1 General . . . 5
-## 4.2 Operational Considerations. . .
-## 4.3 Environmental Considerations . .
-## 4.4 Site Investigation-Foundations . . . 13
-## 4.5 Selecting the Design Environmental Conditions . 14
-## 4.6 Platform Types. . . . 16
-## 4.7 Exposure Categories . . . 18
-## 4.8 Platform Reuse . . . . 20
-## 4.9 Platform Assessment . . . 20
-## 4.10 Safety Considerations . . . . 20
-## 4.11 Regulations . . . . 21
-5 Design Criteria and Procedures . 22   
-## 5.1 General . . . . 22
-## 5.2 Loading Conditions . 23
-## 5.3 Design Loads. . . . 24
-## 5.4 Fabrication and Installation Forces . 51
-6 Structural Steel Design. . . . . 56   
-## 6.1 General . . . . 56
-## 6.2 Allowable Stresses for Cylindrical Members. . . . 57
-## 6.3 Combined Stresses for Cylindrical Members . . . 63
-## 6.4 Conical Transitions . . . . . 68
-7 Strength of Tubular Joints . . . . 73   
-## 7.1 Application . . . . 73
-## 7.2 Design Considerations. . . . 73
-## 7.3 Simple Joints . . . . . 79
-## 7.4 Overlapping Joints . . . . 83
-## 7.5 Grouted Joints. . . . . 84
-## 7.6 Internally Ring-stiffened Joints . . . . 85
-## 7.7 Cast Joints . . . . . 85
-## 7.8 Other Circular Joint Types . . . . . 85
-## 7.9 Damaged Joints. . . . . . 86
-## 7.10 Noncircular Joints. . . . . 86
-8 Fatigue . . . . . 86   
-## 8.1 Fatigue Design. . . . . . 86
-## 8.2 Fatigue Analysis . . . 86
-## 8.3 Stress Concentration Factors (SCFs). . . . 88
-## 8.4 S-N Curves for All Members and Connections, Except Tubular Connections . . 89
-## 8.5 S-N Curves for Tubular Connections . . . 90
-## 8.6 Fracture Mechanics . . 93
+- 1 Scope — 1
+- 2 Normative References — 1
+- 3 Terms, Definitions, Acronyms, and Abbreviations — 2
+- 3.1 Terms and Definitions — 2
+- 3.2 Acronyms and Abbreviations — 4
+- 4 Planning — 5
+- 4.1 General — 5
+- 4.2 Operational Considerations — 5
+- 4.3 Environmental Considerations — 7
+- 4.4 Site Investigation-Foundations — 13
+- 4.5 Selecting the Design Environmental Conditions — 14
+- 4.6 Platform Types — 16
+- 4.7 Exposure Categories — 18
+- 4.8 Platform Reuse — 20
+- 4.9 Platform Assessment — 20
+- 4.10 Safety Considerations — 20
+- 4.11 Regulations — 21
+- 5 Design Criteria and Procedures — 22
+- 5.1 General — 22
+- 5.2 Loading Conditions — 23
+- 5.3 Design Loads — 24
+- 5.4 Fabrication and Installation Forces — 51
+- 6 Structural Steel Design — 56
+- 6.1 General — 56
+- 6.2 Allowable Stresses for Cylindrical Members — 57
+- 6.3 Combined Stresses for Cylindrical Members — 63
+- 6.4 Conical Transitions — 68
+- 7 Strength of Tubular Joints — 73
+- 7.1 Application — 73
+- 7.2 Design Considerations — 73
+- 7.3 Simple Joints — 79
+- 7.4 Overlapping Joints — 83
+- 7.5 Grouted Joints — 84
+- 7.6 Internally Ring-stiffened Joints — 85
+- 7.7 Cast Joints — 85
+- 7.8 Other Circular Joint Types — 85
+- 7.9 Damaged Joints — 86
+- 7.10 Noncircular Joints — 86
+- 8 Fatigue — 86
+- 8.1 Fatigue Design — 86
+- 8.2 Fatigue Analysis — 86
+- 8.3 Stress Concentration Factors (SCFs) — 88
+- 8.4 S-N Curves for All Members and Connections, Except Tubular Connections — 89
+- 8.5 S-N Curves for Tubular Connections — 90
+- 8.6 Fracture Mechanics — 93
+- 9 Foundation Design — 93
+- 9.1 General — 93
+- 9.2 Pile Foundations — 93
+- 9.3 Pile Design — 95
+- 9.4 Pile Capacity for Axial Compression Loads — 96
+- 9.5 Pile Capacity for Axial Pullout Loads — 97
+- 9.6 Axial Pile Performance — 97
+- 9.7 Soil Reaction for Axially Loaded Piles — 98
+- 9.8 Soil Reaction for Laterally Loaded Piles — 98
+- 9.9 Pile Group Action — 99
+- 9.10 Pile Wall Thickness — 100
+- 9.11 Length of Pile Sections — 103
+- 9.12 Shallow Foundations — 103
+- 10 Other Structural Components and Systems — 104
+- 10.1 Superstructure Design — 104
+- 10.2 Plate Girder Design — 105
+- 10.3 Crane Supporting Structure — 105
+- 10.4 Grouted Pile-to-structure Connections — 106
+- 10.5 Guyline System Design — 110
+- 11 Material — 112
+- 11.1 Structural Steel — 112
+- 11.2 Structural Steel Pipe — 113
+- 11.3 Steel for Tubular Joints — 114
+- 11.4 Cement Grout and Concrete — 118
+- 11.5 Corrosion Protection — 118
+- 12 Drawings and Specifications — 118
+- 12.1 General — 118
+- 12.2 Conceptual Drawings — 119
+- 12.3 Bid Drawings and Specifications — 119
+- 12.4 Design Drawings and Specifications — 119
+- 12.5 Fabrication Drawings and Specifications — 120
+- 12.6 Shop Drawings — 121
+- 12.7 Installation Drawings and Specifications — 121
+- 12.8 As-built Drawings and Specifications — 121
+- 13 Welding — 122
+- 13.1 General — 122
+- 13.2 Qualification — 123
+- 13.3 Welding Details — 124
+- 13.4 Records and Documentation — 125
+- 14 Fabrication — 125
+- 14.1 Assembly — 125
+- 14.2 Corrosion Protection — 131
+- 14.3 Structural Material — 131
+- 14.4 Loadout — 131
+- 14.5 Records and Documentation — 132
+- 15 Installation — 132
+- 15.1 General — 132
+- 15.2 Transportation — 133
+- 15.3 Removal of Jacket from Transport Barge — 135
+- 15.4 Erection — 136
+- 15.5 Pile Installation — 139
+- 15.6 Superstructure Installation — 145
+- 15.7 Grounding of Installation Welding Equipment — 145
+- 16 Inspection — 146
+- 16.1 General — 146
+- 16.2 Scope — 147
+- 16.3 Inspection Personnel — 147
+- 16.4 Fabrication Inspection — 147
+- 16.5 Loadout, Seafastening, and Transportation Inspection — 152
+- 16.6 Installation Inspection — 153
+- 16.7 Inspection Documentation — 154
+- 17 Accidental Loading — 155
+- 17.1 General — 155
+- 17.2 Assessment Process — 156
+- 17.3 Platform Exposure Category — 158
+- 17.4 Probability of Occurrence — 158
+- 17.5 Risk Assessment — 159
+- 17.6 Fire — 160
+- 17.7 Blast — 160
+- 17.8 Fire and Blast Interaction — 160
+- 17.9 Accidental Loading — 160
+- 18 Reuse — 161
+- 18.1 General — 161
+- 18.2 Reuse Considerations — 161
+- 19 Minimum and Special Structures — 166
+- 19.1 General — 166
+- 19.2 Design Loads and Analysis — 167
+- 19.3 Connections — 168
+- 19.4 Material and Welding — 169
+- Annex A (informative) API 2A-WSD, 21st Edition vs 22nd Edition Cross-reference — 170
+- Annex B (informative) Commentary — 184
+- Bibliography — 292
 
-Contents
+## Figures
 
-Page
+- 5.1 Procedure for Calculation of Wave Plus Current Forces for Static Analysis — 25
+- 5.2 Doppler Shift Due to Steady Current — 26
+- 5.3 Regions of Applicability of Stream Function, Stokes V, and Linear Wave Theory (from Atkins, 1990; Modified by API Task Group on Wave Force Commentary) — 28
+- 5.4 Shielding Factor for Wave Loads on Conductor Arrays as a Function of Conductor Spacing — 30
+- 6.1 Example Conical Transition — 69
+- 7.2 In-plane Joint Detailing — 77
+- 7.3 Out-of-plane Joint Detailing — 78
+- 7.4 Terminology and Geometric Parameters, Simple Tubular Joints — 79
+- 7.5 Examples of Chord Length, Lc — 83
+- 8.1 Example Tubular Joint S-N Curve for T = 16 mm (5/8 in.) — 91
+- 10.1 Grouted Pile-to-structure Connection with Shear Keys — 108
+- 10.2 Recommended Shear Key Details — 109
+- 10.1 Connection Design Limitations — 109
+- 14.1 Welded Tubular Connections—Shielded Metal Arc Welding — 127
+- 17.1 Assessment Process — 157
+- B.5.1 Measured Current Field at 60 ft Depth Around and Through the Bullwinkle Platform in a Loop Current Event in 1991 — 189
+- B.5.2 Comparison of Linear and Nonlinear Stretching of Current Profiles — 190
+- B.5.3 Definition of Surface Roughness Height and Thickness — 191
+- B.5.4 Dependence of Steady Flow Drag Coefficient on Relative Surface Roughness — 193
+- B.5.5 Wake Amplification Factor for Drag Coefficient as a Function of K/Cds — 195
+- B.5.6 Wake Amplification Factor for Drag Coefficient as a Function of K — 195
+- B.5.7 Inertia Coefficient as a Function of K — 196
+- B.5.8 Inertia Coefficient as a Function of K/Cds — 196
+- B.5.9 Shielding Factor for Wave Loads on Conductor Arrays as a Function of Conductor Spacing — 198
+- B.5.10 Example Structure — 207
+- B.5.11 Seismic Load Deformation Curve — 209
+- B.6.1 Elastic Coefficients for Local Buckling of Steel Cylinders Under Axial Compression — 213
+- B.6.2 Comparison of Test Data with Design Equation for Fabricated Steel Cylinders Under Axial Compression — 213
+- B.6.3 Design Equation for Fabricated Steel Cylinders Under Bending — 215
+- B.6.4 Comparison of Test Data with Elastic Design Equations for Local Buckling of Cylinders Under Hydrostatic Pressure (M > 0.825D/t) — 217
+- B.6.5 Comparison of Test Data with Elastic Design Equations for Local Buckling of Cylinders Under Hydrostatic Pressure (M < 0.825D/t) — 217
+- B.6.6 Comparison of Test Data with Design Equations for Ring Buckling and Inelastic Local Buckling of Cylinders Under Hydrostatic Pressure — 218
+- B.6.7 Comparison of Test Data with Interaction Equation for Cylinders Under Combined Axial Tension and Hydrostatic Pressure (Fhc Determined from Tests) — 219
+- B.6.8 Comparison of Interaction Equations for Various Stress Conditions for Cylinders Under Combined Axial Compressive Load and Hydrostatic Pressure — 220
+- B.6.9 Comparison of Test Data with Elastic Interaction Curve for Cylinders Under Combined Axial Compressive Load and Hydrostatic Pressure — 221
+- B.6.10 Comparison of Test Data on Fabricated Cylinders with Elastic Interaction Curve for Cylinders Under Combined Axial Load and Hydrostatic Pressure — 221
+- B.6.11 Comparison of Test Data with Interaction Equations for Cylinders Under Combined Axial Compressive Load and Hydrostatic Pressure (Combination Elastic and Yield-type Failures) — 222
+- B.7.1 Adverse Load Patterns with α up to 3.8 — 226
+- B.7.2 Computed α — 226
+- B.7.3 Safety Index Betas, API 2A-WSD, 21st Edition, Supplement 1 — 231
+- B.7.4 Safety Index Betas, API 2A-WSD, 21st Edition, Supplement 2 — 231
+- B.7.5 Comparison of Strength Factors Qu for Axial Loading — 234
+- B.7.6 Comparison of Strength Factors Qu for IPB and OPB — 235
+- B.7.7 Comparison of Chord Load Factors Qf — 237
+- B.7.8 Effect of Chord Axial Load on DT Brace Compression Capacity Comparison of University of Texas Test Data with Chord Load Factor — 238
+- B.7.9 K-joints Under Balanced Axial Loading—Test and FE vs New and Old API — 241
+- B.7.10 T-joints Under Axial Loading—Test and FE vs New and Old API — 242
+- B.7.11 DT-joints Under Axial Compression—Test and FE vs New and Old API — 242
+- B.7.12 All Joints Under BIPB—Test and FE vs New and Old API — 243
+- B.7.13 All Joints Under BOPB—Test and FE vs New and Old API — 243
+- B.8.1 Selection of Frequencies for Detailed Analyses — 251
+- B.8.2 Geometry Definitions for Efthymiou SCFs — 257
+- B.8.3 Basic Air S-N Curve as Applicable to Profiled Welds, Including Size and Toe Correction to the Data — 273
+- B.8.4 S-N Curve and Data for Seawater with CP — 273
+- B.10.1 Measured Bond Strength vs Cube Compressive Strength — 279
+- B.10.2 Histogram of the Safety Factors—Tests with and Without Shear Key Connections — 279
+- B.10.3 Cumulative Histogram of the Safety Factors—Tests with and Without Shear Key Connections — 280
+- B.10.4 Measured Bond Strength vs. Cube Compressive Strength Multiplied by the Height-to-spacing Ratio — 280
+- B.17.1 D/T Ratio vs Reduction in Ultimate Capacity, 1220 mm, 1370 mm, and 1525 mm (48 in., 54 in., and 60 in.) Legs—Straight with L = 18.3 m (60 ft), K = 1.0, and Fy = 240 MPa (35 ksi) — 288
+- B.17.2 D/T Ratio vs Reduction in Ultimate Capacity, 1220 mm, 1370 mm, and 1525 mm (48 in., 54 in., and 60 in.) Legs—Straight with L = 18.3 m (60 ft), K = 1.0, and Fy = 345 MPa (50 ksi) — 288
+- B.17.3 D/T Ratio vs Reduction in Ultimate Capacity, 1220 mm, 1370 mm, and 1525 mm (48 in., 54 in., and 60 in.) Legs—Bent with L = 18.3 m (60 ft), K = 1.0, and Fy = 240 MPa (35 ksi) — 289
+- B.17.4 D/T Ratio vs Reduction in Ultimate Capacity, 1220 mm, 1370 mm, and 1525 mm (48 in., 54 in., and 60 in.) Legs—Bent with L = 18.3 m (60 ft), K = 1.0, and Fy = 345 MPa (50 ksi) — 289
 
-9 Foundation Design . . . . 93   
-## 9.1 General . . . . . 93
-## 9.2 Pile Foundations . . . . . 93
-## 9.3 Pile Design . . . . . . 95
-## 9.4 Pile Capacity for Axial Compression Loads . 96
-## 9.5 Pile Capacity for Axial Pullout Loads . . 97
-## 9.6 Axial Pile Performance . . . 97
-## 9.7 Soil Reaction for Axially Loaded Piles . . . . . 98
-## 9.8 Soil Reaction for Laterally Loaded Piles . . . . 98
-## 9.9 Pile Group Action . . . . . 99
-## 9.10 Pile Wall Thickness. . . . 100
-## 9.11 Length of Pile Sections . 103
-## 9.12 Shallow Foundations . . . 103
-10 Other Structural Components and Systems . . . 104   
-## 10.1 Superstructure Design . . . . 104
-## 10.2 Plate Girder Design. . . . . 105
-## 10.3 Crane Supporting Structure. . . . 105
-## 10.4 Grouted Pile-to-structure Connections . . . 106
-## 10.5 Guyline System Design . . . 110
-11 Material . . . 112   
-## 11.1 Structural Steel . 112
-## 11.2 Structural Steel Pipe . . . . 113
-## 11.3 Steel for Tubular Joints . 114
-## 11.4 Cement Grout and Concrete . . . . 118
-## 11.5 Corrosion Protection . . 118
-12 Drawings and Specifications. . . . 118   
-## 12.1 General 118
-## 12.2 Conceptual Drawings . . . 119
-## 12.3 Bid Drawings and Specifications . . . 119
-## 12.4 Design Drawings and Specifications . . . 119
-## 12.5 Fabrication Drawings and Specifications . . . 120
-## 12.6 Shop Drawings . . . 121
-## 12.7 Installation Drawings and Specifications. . . 121
-## 12.8 As-built Drawings and Specifications . . . 121
-13 Welding. . . . 122   
-## 13.1 General . . . 122
-## 13.2 Qualification. 123
-## 13.3 Welding Details . . 124
-## 13.4 Records and Documentation. . . . 125
-14 Fabrication . . . . 125   
-## 14.1 Assembly . . . . 125
-## 14.2 Corrosion Protection . . . 131
-## 14.3 Structural Material. . . . 131
-## 14.4 Loadout . . . 131
-## 14.5 Records and Documentation. . 132
+## Tables
 
-Contents
-
-Page
-
-15 Installation . . . . 132
-
-## 15.1 General . . . 132
-
-## 15.2 Transportation . . . . 133
-
-## 15.3 Removal of Jacket from Transport Barge . . . 135
-
-## 15.4 Erection 136
-
-## 15.5 Pile Installation . . . 139
-
-## 15.6 Superstructure Installation . . . 145
-
-## 15.7 Grounding of Installation Welding Equipment . . 145
-
-16 Inspection . . . 146
-
-## 16.1 General . . 146
-
-## 16.2 Scope . . . . 147
-
-## 16.3 Inspection Personnel . 147
-
-## 16.4 Fabrication Inspection . . . 147
-
-## 16.5 Loadout, Seafastening, and Transportation Inspection . . . . 152
-
-## 16.6 Installation Inspection . . . . . 153
-
-## 16.7 Inspection Documentation. . . . . 154
-
-17 Accidental Loading . . . . 155
-
-## 17.1 General . . . . . 155
-
-## 17.2 Assessment Process . . . . 156
-
-## 17.3 Platform Exposure Category . . . . . 158
-
-## 17.4 Probability of Occurrence . . 158
-
-## 17.5 Risk Assessment . 159
-
-## 17.6 Fire . . 160
-
-## 17.7 Blast . . . . 160
-
-## 17.8 Fire and Blast Interaction. . . . 160
-
-## 17.9 Accidental Loading . . . . . 160
-
-18 Reuse . . . . 161
-
-## 18.1 General . . . . . 161
-
-## 18.2 Reuse Considerations . . . . 161
-
-19 Minimum and Special Structures . . 166
-
-## 19.1 General . . . 166
-
-## 19.2 Design Loads and Analysis . . 167
-
-## 19.3 Connections. . . . 168
-
-## 19.4 Material and Welding . . 169
-
-Annex A (informative) API 2A-WSD, 21st Edition vs 22nd Edition Cross-reference . . . 170
-
-Annex B (informative) Commentary. . . . . 184
-
-Bibliography . . . 292
-
-Figures
-
-## 5.1 Procedure for Calculation of Wave Plus Current Forces for Static Analysis . . . . 25
-## 5.2 Doppler Shift Due to Steady Current . . . . 26
-## 5.3 Regions of Applicability of Stream Function, Stokes V, and Linear Wave Theory (from Atkins, 1990; Modified by API Task Group on Wave Force Commentary) 28
-## 5.4 Shielding Factor for Wave Loads on Conductor Arrays as a Function of Conductor Spacing . . . . . 30
-## 6.1 Example Conical Transition . . . . 69
-
-Contents
-
-Page
-
-## 7.2 In-plane Joint Detailing . . . . 77
-## 7.3 Out-of-plane Joint Detailing . . . 78
-## 7.4 Terminology and Geometric Parameters, Simple Tubular Joints. . . . 79
-## 7.5 Examples of Chord Length, $\pmb{ L }_{ \pmb{ \nu } }$ . . . . 83
-## 8.1 Example Tubular Joint S-N Curve for T = 16 mm (5/8 in.) . . . 91
-## 10.1 Grouted Pile-to-structure Connection with Shear Keys . . . . 108
-## 10.2 Recommended Shear Key Details . . . . 109
-## 10.1 Connection Design Limitations . . . . 109
-## 14.1 Welded Tubular Connections—Shielded Metal Arc Welding . . . 127
-## 17.1 Assessment Process. . . 157
-B.5.1 Measured Current Field at 60 ft Depth Around and Through the Bullwinkle Platform in a Loop Current Event in 1991 189   
-B.5.2 Comparison of Linear and Nonlinear Stretching of Current Profiles. . . . . 190   
-B.5.3 Definition of Surface Roughness Height and Thickness . . 191   
-B.5.4 Dependence of Steady Flow Drag Coefficient on Relative Surface Roughness . . . 193   
-B.5.5 Wake Amplification Factor for Drag Coefficient as a Function of $K / C_{ \mathsf{ d } \mathsf{ s } }$ . . . . 195   
-B.5.6 Wake Amplification Factor for Drag Coefficient as a Function of $\pmb{ K } .$ . . 195   
-B.5.7 Inertia Coefficient as a Function of K. . . . 196   
-B.5.8 Inertia Coefficient as a Function of K/Cds . . . . 196   
-B.5.9 Shielding Factor for Wave Loads on Conductor Arrays as a Function of Conductor Spacing . . . . 198   
-B.5.10 Example Structure . . . 207   
-B.5.11 Seismic Load Deformation Curve . 209   
-B.6.1 Elastic Coefficients for Local Buckling of Steel Cylinders Under Axial Compression . . . . . 213   
-B.6.2 Comparison of Test Data with Design Equation for Fabricated Steel Cylinders Under Axial Compression . . 213   
-B.6.3 Design Equation for Fabricated Steel Cylinders Under Bending. . . . 215   
-B.6.4 Comparison of Test Data with Elastic Design Equations for Local Buckling of Cylinders Under Hydrostatic Pressure (M > 0.825D/t). . 217   
-B.6.5 Comparison of Test Data with Elastic Design Equations for Local Buckling of Cylinders Under Hydrostatic Pressure (M < 0.825D/t). . 217   
-B.6.6 Comparison of Test Data with Design Equations for Ring Buckling and Inelastic Local Buckling of Cylinders Under Hydrostatic Pressure . 218   
-B.6.7 Comparison of Test Data with Interaction Equation for Cylinders Under Combined Axial Tension and Hydrostatic Pressure （$F_{ \mathbf{ h c } }$ Determined from Tests) . . . 219   
-B.6.8 Comparison of Interaction Equations for Various Stress Conditions for Cylinders Under Combined Axial Compressive Load and Hydrostatic Pressure . 220   
-B.6.9 Comparison of Test Data with Elastic Interaction Curve for Cylinders Under Combined Axial Compressive Load and Hydrostatic Pressure 221   
-B.6.10 Comparison of Test Data on Fabricated Cylinders with Elastic Interaction Curve for Cylinders Under Combined Axial Load and Hydrostatic Pressure . 221   
-B.6.11 Comparison of Test Data with Interaction Equations for Cylinders Under Combined Axial Compressive Load and Hydrostatic Pressure (Combination Elastic and Yield-type Failures) . . . . 222   
-B.7.1 Adverse Load Patterns with α up to 3.8. . 226   
-B.7.2 Computed ${ \pmb \alpha } .$ 226   
-B.7.3 Safety Index Betas, API 2A-WSD, 21st Edition, Supplement 1 . . . . 231   
-B.7.4 Safety Index Betas, API 2A-WSD, 21st Edition, Supplement 2 . . . . 231   
-B.7.5 Comparison of Strength Factors $\varrho_{ \mathrm{ u } }$ for Axial Loading . . . . 234   
-B.7.6 Comparison of Strength Factors $\varrho_{ \mathrm{ u } }$ for IPB and OPB . . . . 235   
-B.7.7 Comparison of Chord Load Factors $\varrho_{ \mathsf{ f } }$ . . . . 237
-
-Contents
-
-Page
-
-B.7.8 Effect of Chord Axial Load on DT Brace Compression Capacity Comparison of University of Texas Test Data with Chord Load Factor. . . 238   
-B.7.9 K-joints Under Balanced Axial Loading—Test and FE vs New and Old API. . . 241   
-B.7.10 T-joints Under Axial Loading—Test and FE vs New and Old API. . 242   
-B.7.11 DT-joints Under Axial Compression—Test and FE vs New and Old API. . 242   
-B.7.12 All Joints Under BIPB—Test and FE vs New and Old API. . 243   
-B.7.13 All Joints Under BOPB—Test and FE vs New and Old API. . . 243   
-B.8.1 Selection of Frequencies for Detailed Analyses. . . . . 251   
-B.8.2 Geometry Definitions for Efthymiou SCFs . . 257   
-B.8.3 Basic Air S-N Curve as Applicable to Profiled Welds, Including Size and Toe Correction to the Data . 273   
-B.8.4 S-N Curve and Data for Seawater with CP 273   
-B.10.1 Measured Bond Strength vs Cube Compressive Strength . . 279   
-B.10.2 Histogram of the Safety Factors—Tests with and Without Shear Key Connections . . . . . 279   
-B.10.3 Cumulative Histogram of the Safety Factors—Tests with and Without Shear Key Connections . . 280   
-B.10.4 Measured Bond Strength vs. Cube Compressive Strength Multiplied by the Height-to-spacing Ratio. . 280   
-B.17.1 D/T Ratio vs Reduction in Ultimate Capacity, 1220 mm, 1370 mm, and 1525 mm (48 in., 54 in., and 60 in.) Legs—Straight with $L = 18 . 3$ m (60 ft), $K = 1 . 0 ,$ , and $F_{ \mathbf{ y } } = 240 \ \mathsf{ M P a }$ (35 ksi) . . . . 288   
-B.17.2 D/T Ratio vs Reduction in Ultimate Capacity, 1220 mm, 1370 mm, and 1525 mm (48 in., 54 in., and 60 in.) Legs—Straight with $L = 18 . 3$ m (60 ft), K = 1.0, and $F_{ \mathbf{ y } } = 345 ~ \mathsf{ M P a }$ (50 ksi) . . . . 288   
-B.17.3 D/T Ratio vs Reduction in Ultimate Capacity, 1220 mm, 1370 mm, and 1525 mm (48 in., 54 in., and 60 in.) Legs—Bent with L = 18.3 m (60 ft), K = 1.0, and $\cal F_{ \checkmark } = 240$ MPa (35 ksi) . . 289   
-B.17.4 D/T Ratio vs Reduction in Ultimate Capacity, 1220 mm, 1370 mm, and 1525 mm (48 in., 54 in., and 60 in.) Legs—Bent with L = 18.3 m (60 ft), K = 1.0, and $F_{ \mathbf{ y } } = 345 ~ \mathsf{ M P a }$ (50 ksi) . . . 289
-
-Tables
-
-## 4.1 Exposure Category Matrix . . . 18
-## 5.1 Design Loading Conditions . . 23
-## 5.2 Approximate Current Blockage Factors for Typical Gulf of Mexico Jacket-type Structures . . . . . . . 27
-## 5.3 Values Coherence Spectrum Coefficients α, p, q, r, and Δ . . . 38
-## 5.4 Wind Shape Coefficients. . . . 39
-## 5.5 Design Level Criteria and Robustness Analysis . . 41
-## 5.6 Cr Factors for Steel Jacket of Fixed Offshore Platforms . . . . 47
-## 5.7 Offshore Design Reference Wind Speed for Drilling Structures . . . 49
-## 5.8 Design Wind Speeds used for Existing Drilling . . . . . 50
-## 5.9 Deck Acceleration During Design Hurricanes . . . 50
-## 6.1 Values of K and $c_{ \mathsf{ m } }$ for Various Member Situations. . . . 66
-## 6.2 Safety Factors. 68
-## 6.3 Limiting Angle α for Conical Transitions. . . . 69
-## 7.1 Examples of Joint Classification . . . . . 76
-## 7.1 Geometric Parameter Validity Range. . . . . 79
-## 7.2 Values for $\varrho_{ \mathsf{ u } }$ . . . . . . 81
-## 7.3 Values for $c_{ 1 } , c_{ 2 } , c_{ 3 }$ . . . . 82
-$\varrho_{ \mathrm{ u } }$ for Grouted Joints. . . . . 84   
-## 8.1 Fatigue Life Safety Factors . . . . . 88
-## 8.2 Basic Design S-N Curves . . . 90
-## 8.3 Factors on Fatigue Life for Weld Improvement Techniques. . . . . . 92
-## 9.1 Pile Factors of Safety for Different Loading Conditions . . . 96
-
-Contents
-
-Page
-
-## 9.2 Minimum Pile Wall Thickness. . . 102
-## 9.3 Shallow Foundation Safety Factors Against Failure . . . 104
-## 10.2 Guyline Factors of Safety . 111
-## 11.1 Structural Steel Plates . 114
-## 11.1 Structural Steel Plates (Continued) . 115
-## 11.2 Structural Steel Shapes. . . 116
-## 11.3 Structural Steel Pipe . 117
-Input Testing Conditions. . 117   
-## 13.1 Impact Testing 123
-## 15.1 Guideline Wall Thickness (in SI Units). . 142
-## 15.2 Guideline Wall Thickness (in USC Units) 143
-## 16.1 Recommended Minimum Extent of NDE Inspection . . . . 150
-## 17.1 Platform Risk Matrix. 158
-## 18.1 Recommended Extent of NDE Inspection-Reused Structure . 164
-## A.1 API 2A-WSD, 21st Edition vs 22nd Edition Cross-reference of Figures 170
-## A.2 API 2A-WSD, 21st Edition vs 22nd Edition Cross-reference of Tables . . . . 175
-## A.3 API 2A-WSD, 21st Edition vs 22nd Edition Cross-reference of Equations . . . . 178
-B.7.1 Mean Bias Factors and Coefficients of Variation for K-joints. . . 240   
-B.7.2 Mean Bias Factors and Coefficients of Variation for Y-joints . . . . 240   
-B.7.3 Mean Bias Factors and Coefficients of Variation for X-joints . . . . 241   
-B.8.1 Equations for SCFs in T/Y-joints . . . . 260   
-B.8.2 Equations for SCFs in X-joints . . . . 261   
-B.8.3 Equations for SCFs in Gap/Overlap K-joints . 262   
-B.8.4 Equations for SCFs in KT-joints . . . . 263   
-B.8.5 Expressions for Lmp. . . . . 265   
-B.13.1 Average Heat Affected Zone (HAZ) Values . . . . 283   
-B.17.1 Required Tubular Thickness to Locally Absorb Vessel Impact . . . . 287
+- 4.1 Exposure Category Matrix — 18
+- 5.1 Design Loading Conditions — 23
+- 5.2 Approximate Current Blockage Factors for Typical Gulf of Mexico Jacket-type Structures — 27
+- 5.3 Values Coherence Spectrum Coefficients α, p, q, r, and Δ — 38
+- 5.4 Wind Shape Coefficients — 39
+- 5.5 Design Level Criteria and Robustness Analysis — 41
+- 5.6 Cr Factors for Steel Jacket of Fixed Offshore Platforms — 47
+- 5.7 Offshore Design Reference Wind Speed for Drilling Structures — 49
+- 5.8 Design Wind Speeds used for Existing Drilling — 50
+- 5.9 Deck Acceleration During Design Hurricanes — 50
+- 6.1 Values of K and Cm for Various Member Situations — 66
+- 6.2 Safety Factors — 68
+- 6.3 Limiting Angle α for Conical Transitions — 69
+- 7.1 Examples of Joint Classification — 76
+- 7.1 Geometric Parameter Validity Range — 79
+- 7.2 Values for Qu — 81
+- 7.3 Values for C1, C2, C3 — 82
+- 7.4 Qu for Grouted Joints — 84
+- 8.1 Fatigue Life Safety Factors — 88
+- 8.2 Basic Design S-N Curves — 90
+- 8.3 Factors on Fatigue Life for Weld Improvement Techniques — 92
+- 9.1 Pile Factors of Safety for Different Loading Conditions — 96
+- 9.2 Minimum Pile Wall Thickness — 102
+- 9.3 Shallow Foundation Safety Factors Against Failure — 104
+- 10.2 Guyline Factors of Safety — 111
+- 11.1 Structural Steel Plates — 114
+- 11.1 Structural Steel Plates (Continued) — 115
+- 11.2 Structural Steel Shapes — 116
+- 11.3 Structural Steel Pipe — 117
+- 11.4 Input Testing Conditions — 117
+- 13.1 Impact Testing — 123
+- 15.1 Guideline Wall Thickness (in SI Units) — 142
+- 15.2 Guideline Wall Thickness (in USC Units) — 143
+- 16.1 Recommended Minimum Extent of NDE Inspection — 150
+- 17.1 Platform Risk Matrix — 158
+- 18.1 Recommended Extent of NDE Inspection-Reused Structure — 164
+- A.1 API 2A-WSD, 21st Edition vs 22nd Edition Cross-reference of Figures — 170
+- A.2 API 2A-WSD, 21st Edition vs 22nd Edition Cross-reference of Tables — 175
+- A.3 API 2A-WSD, 21st Edition vs 22nd Edition Cross-reference of Equations — 178
+- B.7.1 Mean Bias Factors and Coefficients of Variation for K-joints — 240
+- B.7.2 Mean Bias Factors and Coefficients of Variation for Y-joints — 240
+- B.7.3 Mean Bias Factors and Coefficients of Variation for X-joints — 241
+- B.8.1 Equations for SCFs in T/Y-joints — 260
+- B.8.2 Equations for SCFs in X-joints — 261
+- B.8.3 Equations for SCFs in Gap/Overlap K-joints — 262
+- B.8.4 Equations for SCFs in KT-joints — 263
+- B.8.5 Expressions for Lmp — 265
+- B.13.1 Average Heat Affected Zone (HAZ) Values — 283
+- B.17.1 Required Tubular Thickness to Locally Absorb Vessel Impact — 287
 
 Introduction
 
@@ -988,7 +927,8 @@ Table 4.1—Exposure Category Matrix
 | S-1 manned-nonevacuated | L-1a | L-1a | L-1a |
 | S-2 manned-evacuated | L-1 | L-2 | L-2 |
 | S-3 unmanned | L-1 | L-2 | L-3 |
-| aManned-nonevacuated platforms are presently not applicable to the U.S. GoM waters where platforms are normally evacuated ahead of hurricane events. The metocean design criteria in Section 5 have not been verified as adequate for manned-nonevacuated in the U.S. GoM. However, the winter storm, sudden hurricane, and earthquake criteria for the U.S. GoM have been verified as adequate for the manned-nonevacuated situation occurring during those events when platforms in the U.S. GoM waters are not normally evacuated. | aManned-nonevacuated platforms are presently not applicable to the U.S. GoM waters where platforms are normally evacuated ahead of hurricane events. The metocean design criteria in Section 5 have not been verified as adequate for manned-nonevacuated in the U.S. GoM. However, the winter storm, sudden hurricane, and earthquake criteria for the U.S. GoM have been verified as adequate for the manned-nonevacuated situation occurring during those events when platforms in the U.S. GoM waters are not normally evacuated. | aManned-nonevacuated platforms are presently not applicable to the U.S. GoM waters where platforms are normally evacuated ahead of hurricane events. The metocean design criteria in Section 5 have not been verified as adequate for manned-nonevacuated in the U.S. GoM. However, the winter storm, sudden hurricane, and earthquake criteria for the U.S. GoM have been verified as adequate for the manned-nonevacuated situation occurring during those events when platforms in the U.S. GoM waters are not normally evacuated. | aManned-nonevacuated platforms are presently not applicable to the U.S. GoM waters where platforms are normally evacuated ahead of hurricane events. The metocean design criteria in Section 5 have not been verified as adequate for manned-nonevacuated in the U.S. GoM. However, the winter storm, sudden hurricane, and earthquake criteria for the U.S. GoM have been verified as adequate for the manned-nonevacuated situation occurring during those events when platforms in the U.S. GoM waters are not normally evacuated. |
+
+aManned-nonevacuated platforms are presently not applicable to the U.S. GoM waters where platforms are normally evacuated ahead of hurricane events. The metocean design criteria in Section 5 have not been verified as adequate for manned-nonevacuated in the U.S. GoM. However, the winter storm, sudden hurricane, and earthquake criteria for the U.S. GoM have been verified as adequate for the manned-nonevacuated situation occurring during those events when platforms in the U.S. GoM waters are not normally evacuated.
 
 
 
@@ -1187,19 +1127,19 @@ Figure 5.1—Procedure for Calculation of Wave Plus Current Forces for Static An
 
 5.3.1.2.2 Apparent Wave Period
 
-A current in the wave direction tends to stretch the wavelength, while an opposing current shortens it. For the simple case of a wave propagating on a uniform in-line current, the apparent wave period seen by an observer moving with the current can be estimated from Figure 5.2, in which T is the actual wave period (as seen by a stationary observer). $V_{ \mathrm{ i } }$ is the current component in the wave direction, $d ,$ is storm water depth (including storm surge and tide), and $g$ is the acceleration of gravity. This figure provides estimates for d g T 2 > 0.01. For smaller values of d g T 2 , the equation ( ) T T V g d app = +1 i $d / g T^{ 2 } > 0 . 01$ $d / g T^{ 2 }$ $\left( T_{ \mathsf{ a p p } } / T \right) = 1 + V_{ \mathsf{ i } } \sqrt{ g d }$ can be used. While strictly applicable only to a current that is uniform over the full water depth, Figure 5.2 provides acceptable estimates of $T_{ \mathsf{ a p p } }$ for “slab” current profiles that are uniform over the top 50 m (165 ft) or more of the water column. For other current profiles, $T_{ \mathsf{ a p p } }$ (see B.5.3.1.2.2) is generally determined from the iterative solution of a system of simultaneous nonlinear equations. The current used to determine $T_{ \mathsf{ a p p } }$ should be the free-stream current (not reduced by structure blockage).
+A current in the wave direction tends to stretch the wavelength, while an opposing current shortens it. For the simple case of a wave propagating on a uniform in-line current, the apparent wave period seen by an observer moving with the current can be estimated from Figure 5.2, in which T is the actual wave period (as seen by a stationary observer). $V_{\mathrm{i}}$ is the current component in the wave direction, $d$ is storm water depth (including storm surge and tide), and $g$ is the acceleration of gravity. This figure provides estimates for $d/gT^{2} > 0.01$. For smaller values of $d/gT^{2}$, the equation $(T_{\mathrm{app}}/T) = 1 + V_{\mathrm{i}}\sqrt{gd}$ can be used. While strictly applicable only to a current that is uniform over the full water depth, Figure 5.2 provides acceptable estimates of $T_{\mathrm{app}}$ for “slab” current profiles that are uniform over the top 50 m (165 ft) or more of the water column. For other current profiles, $T_{\mathrm{app}}$ (see B.5.3.1.2.2) is generally determined from the iterative solution of a system of simultaneous nonlinear equations. The current used to determine $T_{\mathrm{app}}$ should be the free-stream current (not reduced by structure blockage).
 
 Figure 5.2—Doppler Shift Due to Steady Current   
 ![](API_RP_2A-WSD_22nd/chunk0_61b6f715eb18c6cad6a29b12f5992be5ba0910fe93cb1ea600c6ab708c65fb48.jpg)  
 Key   
-d g T = 2 0.01 $d / g T^{ 2 } = 0 . 01$   
+□ $d/gT^{2} = 0.01$  
 + 0.02   
 ## 0.04
 ∆ 0.10
 
 5.3.1.2.3 Two-dimensional Wave Kinematics
 
-For the apparent wave period $T_{ \mathsf{ a p p } } ,$ specified wave height H, and storm water depth, d, two-dimensional regular wave kinematics can be calculated using the appropriate order of stream function wave theory. In many cases, Stokes V wave theory produces acceptable accuracy. Figure 5.3 shows the regions of applicability of Stokes V and various orders of stream function solutions in the $H / g T_{ \mathsf{ a p p } }^{ 2 } , \ d / g T_{ \mathsf{ a p p } }^{ 2 }$ plane.
+For the apparent wave period $T_{ \mathsf{app} } ,$ specified wave height H, and storm water depth, d, two-dimensional regular wave kinematics can be calculated using the appropriate order of stream function wave theory. In many cases, Stokes V wave theory produces acceptable accuracy. Figure 5.3 shows the regions of applicability of Stokes V and various orders of stream function solutions in the $H / g T_{ \mathsf{app} }^{ 2 } , \ d / g T_{ \mathsf{app} }^{ 2 }$ plane.
 
 Other wave theories, such as extended velocity potential and Chappelear, may be used if an appropriate order of solution is selected.
 
@@ -1253,19 +1193,19 @@ All structural members, conductors, risers, and appurtenances should be increase
 
 Drag and inertia coefficients are discussed in detail in B.5.3.1.2.8. For typical design situations, global platform wave forces can be calculated using the following values for unshielded circular cylinders:
 
-Smooth: $C_{ \mathsf{ d } } = 0 . 65 , C_{ \mathsf{ m } } = 1 . 6$
+Smooth: $C_{ \mathsf{d} } = 0.65 , C_{ \mathsf{m} } = 1.6$
 
 Rough: Cd = 1.05, Cm = 1.2
 
-These values are appropriate for the case of a steady current with negligible waves or the case of large waves with $U_{ \mathsf{ m o } } T_{ \mathsf{ a p p } } / D > 30$ . Here $U_{ \mathsf{ m o } }$ is the maximum horizontal particle velocity at storm mean water level under the wave crest from the two-dimensional wave kinematics theory, $T_{ \mathsf{ a p p } }$ is the apparent wave period, and D is platform leg diameter at storm mean water level.
+These values are appropriate for the case of a steady current with negligible waves or the case of large waves with $U_{ \mathsf{mo} } T_{ \mathsf{app} } / D > 30$ . Here $U_{ \mathsf{mo} }$ is the maximum horizontal particle velocity at storm mean water level under the wave crest from the two-dimensional wave kinematics theory, $T_{ \mathsf{app} }$ is the apparent wave period, and D is platform leg diameter at storm mean water level.
 
-For wave-dominant cases with $U_{ \mathsf{ m o } } T_{ \mathsf{ a p p } } / D < 30$ , guidance on how $C_{ \mathsf{ d } }$ and $C_{ \mathbf{ m } }$ for nearly vertical members are modified by “wake encounter” is provided in B.5.3.1.2.8. Such situations may arise with largediameter caissons in extreme seas or ordinary platform members in lower sea states considered in fatigue analyses.
+For wave-dominant cases with $U_{ \mathsf{mo} } T_{ \mathsf{app} } / D < 30$ , guidance on how $C_{ \mathsf{d} }$ and $C_{ \mathbf{m} }$ for nearly vertical members are modified by “wake encounter” is provided in B.5.3.1.2.8. Such situations may arise with large-diameter caissons in extreme seas or ordinary platform members in lower sea states considered in fatigue analyses.
 
 For members that are not circular cylinders, appropriate coefficients can be found in Reference [39].
 
 5.3.1.2.9 Conductor Shielding Factor
 
-Depending upon the configuration of the structure and the number of well conductors, the wave forces on the conductors can be a significant portion of the total wave forces. If the conductors are closely spaced, the forces on them may be reduced due to hydrodynamic shielding. A wave force reduction factor, to be applied to the drag and inertia coefficients for the conductor array, can be estimated from Figure 5.4, in which S is the center-to-center spacing of the conductors in the wave direction and D is the diameter of the conductors, including marine growth. This shielding factor is appropriate for either steady current with negligible waves or extreme waves, with $U_{ \mathsf{ m o } } T_{ \mathsf{ a p p } } / S > 5 \pi$ . For less extreme waves with $U_{ \mathsf{ m o } } T_{ \mathsf{ a p p } } / S < 5 \pi$ , as in fatigue analyses, there may be less shielding. Section B.5.3.1.2.9 provides some guidance on conductor shielding factors for fatigue analyses.
+Depending upon the configuration of the structure and the number of well conductors, the wave forces on the conductors can be a significant portion of the total wave forces. If the conductors are closely spaced, the forces on them may be reduced due to hydrodynamic shielding. A wave force reduction factor, to be applied to the drag and inertia coefficients for the conductor array, can be estimated from Figure 5.4, in which S is the center-to-center spacing of the conductors in the wave direction and D is the diameter of the conductors, including marine growth. This shielding factor is appropriate for either steady current with negligible waves or extreme waves, with $U_{ \mathsf{mo} } T_{ \mathsf{app} } / S > 5 \pi$ . For less extreme waves with $U_{ \mathsf{mo} } T_{ \mathsf{app} } / S < 5 \pi$ , as in fatigue analyses, there may be less shielding. Section B.5.3.1.2.9 provides some guidance on conductor shielding factors for fatigue analyses.
 
 ![](API_RP_2A-WSD_22nd/chunk0_3809ea3d9cc243bebdeb1207c003ce0636e7e120bbc9f3ede82f2133a37f98be.jpg)  
 Figure 5.4—Shielding Factor for Wave Loads on Conductor Arrays as a Function of Conductor Spacing
@@ -1286,29 +1226,29 @@ where
 
 F is the hydrodynamic force vector per unit length acting normal to the axis of the member, N/m (lb/ft);
 
-$F_{ \mathsf{ D } }$ is the drag force vector per unit length acting to the axis of the member in the plane of the member axis and U, N/m (lb/ft);
+$F_{ \mathsf{D} }$ is the drag force vector per unit length acting to the axis of the member in the plane of the member axis and U, N/m (lb/ft);
 
-$F_{ \parallel }$ is the inertia force vector per unit length acting normal to the axis of the member in the plane of the member axis and ∂U/∂t, N/m (lb/ft);
+$F_{\mathrm{I}}$ is the inertia force vector per unit length acting normal to the axis of the member in the plane of the member axis and ∂U/∂t, N/m (lb/ft);
 
-$C_{ \mathsf{ D } }$ is the drag coefficient;
+$C_{ \mathsf{D} }$ is the drag coefficient;
 
-w is the weight density of water, ${ \mathsf{ N } } / { \mathsf{ m } }^{ 3 } ( \left| { \mathsf{ b } } / { \mathsf{ f } } { \mathsf{ f } }^{ 3 } \right) ;$
+w is the weight density of water, $\mathrm{N}/\mathrm{m}^{3}$ ($\mathrm{lb}/\mathrm{ft}^{3}$);
 
-g is the gravitational acceleration, $\mathsf{ m } / \mathsf{ s }^{ 2 } ( \mathsf{ f t } / \mathsf{ s }^{ 2 } )$ ;
+g is the gravitational acceleration, $\mathsf{m} / \mathsf{s}^{ 2 } ( \mathsf{ft} / \mathsf{s}^{ 2 } )$ ;
 
 A is the projected area normal to the cylinder axis per unit length (= D for circular cylinders), m (ft);
 
-V is the displaced volume of the cylinder per unit length （$= \pi D^{ 2 } / 4$ for circular cylinders), $\mathsf{ m }^{ 2 } ( \mathsf{ f t }^{ 2 } ) ;$
+V is the displaced volume of the cylinder per unit length （$= \pi D^{ 2 } / 4$ for circular cylinders), $\mathsf{m}^{ 2 } ( \mathsf{ft}^{ 2 } ) ;$
 
 D is the effective diameter of circular cylindrical member including marine growth, m (ft);
 
 U is the component of the velocity vector (due to wave and/or current) of the water normal to the axis of the member, m/s (ft/s);
 
-|U | is the absolute value of U, m/s (ft/s);
+$\lvert U\rvert$ is the absolute value of U, m/s (ft/s);
 
-$C_{ \mathbf{ m } }$ is the inertia coefficient;
+$C_{ \mathbf{m} }$ is the inertia coefficient;
 
-$\frac{ \delta{ U } } { \delta t }$ is the component ofthe local acceleration vector of the water normal to the axis of the member, $\mathsf{ m } / \mathsf{ s }^{ 2 } ( \mathsf{ f t } / \mathsf{ s }^{ 2 } )$ .
+$\frac{ \delta{ U } } { \delta t }$ is the component of the local acceleration vector of the water normal to the axis of the member, $\mathsf{m} / \mathsf{s}^{ 2 } ( \mathsf{ft} / \mathsf{s}^{ 2 } )$ .
 
 Note that the Morison equation, as stated here, ignores the convective acceleration component in the inertia force calculation (see B.5.3.1.2.11). It also ignores lift forces, slam forces, and axial Froude-Krylov forces.
 
@@ -1360,11 +1300,11 @@ For compliant towers and tension leg platforms, the analysis should include the 
 
 Equation (5.2) may be used to compute forces on members of template, tower, gravity, or minimum structure platforms. Guidance on selection of drag and inertia coefficients for dynamic analysis is provided in B.5.3.1.2.8. For compliant towers and tension leg platforms, Equation (5.2) should be modified to account for relative velocity by making the following substitution in the drag force term:
 
-replace U and | U | by (U – x ) and | U – x |, respectively
+replace U and $\lvert U\rvert$ by $(U-\dot{x})$ and $\lvert U-\dot{x}\rvert$, respectively
 
 where
 
-x is the component of structural velocity normal to the axis of the member, m/s (ft/s);
+$\dot{x}$ is the component of structural velocity normal to the axis of the member, m/s (ft/s);
 
 U is the component of the velocity vector (due to wave and/or current) of the water normal to the axis of the member, m/s (ft/s) [see Equation (5.2)].
 
@@ -1404,41 +1344,41 @@ durations, there will be shorter durations with higher mean speeds (gusts factor
 
 5.3.2.2.2 Wind Profiles and Gusts
 
-In SI units, for strong wind conditions (near-neutral stratification) the design wind speed u （$z , \ t )$ (m/s) at height z (m) above sea level and corresponding to an averaging time period $t \leq t_{ 0 } = 3600 ~ \mathrm{ s }$ is given by:
+In SI units, for strong wind conditions (near-neutral stratification) the design wind speed $u(z,t)$ (m/s) at height z (m) above sea level and corresponding to an averaging time period $t \leq t_{\mathrm{o}} = 3600 ~ \mathrm{s}$ is given by:
 
-$$u (z, t) = U (z) \times \left[ 1 - 0. 41 \times I_{\mathrm{u}} (z) \times \ln \left(\frac{t}{t_{0}}\right) \right] \tag{5.3}$$
+$$u (z, t) = U (z) \times \left[ 1 - 0.41 \times I_{\mathrm{u}} (z) \times \ln \left(\frac{t}{t_{\mathrm{o}}}\right) \right] \tag{5.3}$$
 
 where the 1-hour mean wind speed U(z) (m/s) at level z (m) is given by:
 
-$$U (z) = U_{0} \times \left[ 1 + C \times \ln \left(\frac{z}{10}\right) \right] \tag{5.4}$$
+$$U (z) = U_{\mathrm{o}} \times \left[ 1 + C \times \ln \left(\frac{z}{10}\right) \right] \tag{5.4}$$
 
 where
 
-$$C = 5. 73 \times 10^{-2} \times \left(1 + 0. 15 U_{0}\right)^{1 / 2}$$
+$$C = 5.73 \times 10^{-2} \times \left(1 + 0.15 U_{\mathrm{o}}\right)^{1 / 2}$$
 
-and where the turbulence intensity $I_{ \mathsf{ u } } ( z )$ at level z (m) is given by:
+and where the turbulence intensity $I_{ \mathsf{u} } ( z )$ at level z (m) is given by:
 
-$$I_{\mathrm{u}} (z) = 0. 06 \times \left(1 + 0. 043 \times U_{\mathrm{o}}\right) \times \left(\frac{z}{10}\right)^{- 0. 22} \tag{5.5}$$
+$$I_{\mathrm{u}} (z) = 0.06 \times \left(1 + 0.043 \times U_{\mathrm{o}}\right) \times \left(\frac{z}{10}\right)^{- 0.22} \tag{5.5}$$
 
-where $U_{ \mathbf{ o } }$ (m/s) is the 1-hour mean wind speed at 10 m above sea level.
+where $U_{ \mathbf{o} }$ (m/s) is the 1-hour mean wind speed at 10 m above sea level.
 
-In USC units, for strong wind conditions the design wind speed $u \left( z , t \right) \left( \mathsf{ f t } / \mathsf{ s } \right)$ at height z (ft) above sea level and corresponding to an averaging time period $t < t_{ 0 } = 3600$ s is given by:
+In USC units, for strong wind conditions the design wind speed $u \left( z , t \right) \left( \mathsf{ft} / \mathsf{s} \right)$ at height z (ft) above sea level and corresponding to an averaging time period $t < t_{\mathrm{o}} = 3600$ s is given by:
 
-$$u (z, t) = U (z) \times \left[ 1 - 0. 41 \times I_{u} (z) \times \ln \left(\frac{t}{t_{o}}\right) \right] \tag{5.6}$$
+$$u (z, t) = U (z) \times \left[ 1 - 0.41 \times I_{u} (z) \times \ln \left(\frac{t}{t_{o}}\right) \right] \tag{5.6}$$
 
 where the 1-hour mean wind speed U(z) (ft/s) at level z (ft) is given by:
 
-$$U (z) = U_{0} \times \left[ 1 + C \times \ln \left(\frac{z}{32 . 8}\right) \right] \tag{5.7}$$
+$$U (z) = U_{\mathrm{o}} \times \left[ 1 + C \times \ln \left(\frac{z}{32.8}\right) \right] \tag{5.7}$$
 
 where
 
-$$C = 5. 73 \times 10^{-2} \times \left(1 + 0. 0457 \times U_{\mathrm{o}}\right)^{1 / 2}$$
+$$C = 5.73 \times 10^{-2} \times \left(1 + 0.0457 \times U_{\mathrm{o}}\right)^{1 / 2}$$
 
-and where the turbulence intensity $I_{ \mathsf{ u } } ( z )$ at level z (ft) is given by:
+and where the turbulence intensity $I_{ \mathsf{u} } ( z )$ at level z (ft) is given by:
 
-$$I_{\mathrm{u}} (z) = 0. 06 \times \left(1 + 0. 0131 \times U_{\mathrm{o}}\right) \times \left(\frac{z}{32 . 8}\right)^{- 0. 22} \tag{5.8}$$
+$$I_{\mathrm{u}} (z) = 0.06 \times \left(1 + 0.0131 \times U_{\mathrm{o}}\right) \times \left(\frac{z}{32.8}\right)^{- 0.22} \tag{5.8}$$
 
-where $U_{ 0 } \left( \mathsf{ f t } / \mathsf{ s } \right)$ is the 1-hour mean wind speed at 32.8 ft above sea level.
+where $U_{\mathrm{o}} \left( \mathsf{ft} / \mathsf{s} \right)$ is the 1-hour mean wind speed at 32.8 ft above sea level.
 
 5.3.2.2.3 Wind Spectra
 
@@ -1446,9 +1386,9 @@ For structures and structural elements for which the dynamic wind behavior is of
 
 In SI units:
 
-$$S (f) = \frac{320 \left(\frac{U_{0}}{10}\right)^{2} \left(\frac{z}{10}\right)^{0 . 45}}{\left(1 + \tilde{f}^{\mathrm{n}}\right)^{\left(\frac{5}{3 \mathrm{n}}\right)}} \tag{5.9}$$
+$$S (f) = \frac{320 \left(\frac{U_{\mathrm{o}}}{10}\right)^{2} \left(\frac{z}{10}\right)^{0.45}}{\left(1 + \tilde{f}^{\mathrm{n}}\right)^{\left(\frac{5}{3 \mathrm{n}}\right)}} \tag{5.9}$$
 
-$$\tilde{f} = 172 f \left(\frac{z}{10}\right)^{2 / 3} \left(\frac{U_{0}}{10}\right)^{- 0. 75} \tag{5.10}$$
+$$\tilde{f} = 172 f \left(\frac{z}{10}\right)^{2 / 3} \left(\frac{U_{\mathrm{o}}}{10}\right)^{- 0.75} \tag{5.10}$$
 
 where
 
@@ -1458,23 +1398,23 @@ S(f) is the spectral energy density at frequency f, in m2/s2/Hz;
 
 z is the height above sea level, in m;
 
-$U_{ \mathbf{ o } }$ is the 1-hour mean wind speed at 10 m above sea level, in m/s.
+$U_{ \mathbf{o} }$ is the 1-hour mean wind speed at 10 m above sea level, in m/s.
 
 In USC units:
 
-$$S (f) = \frac{3444 \left(\frac{U_{\mathrm{o}}}{32 . 8}\right)^{2} \left(\frac{z}{32 . 8}\right)^{0 . 45}}{\left(1 + \tilde{f}^{\mathrm{n}}\right)^{\left(\frac{5}{3 \mathrm{n}}\right)}} \tag{5.11}$$
+$$S (f) = \frac{3444 \left(\frac{U_{\mathrm{o}}}{32.8}\right)^{2} \left(\frac{z}{32.8}\right)^{0.45}}{\left(1 + \tilde{f}^{\mathrm{n}}\right)^{\left(\frac{5}{3 \mathrm{n}}\right)}} \tag{5.11}$$
 
-$$\tilde{f} = 172 f \left(\frac{z}{32 . 8}\right)^{2 / 3} \left(\frac{U_{0}}{32 . 8}\right)^{- 0. 75} \tag{5.12}$$
+$$\tilde{f} = 172 f \left(\frac{z}{32.8}\right)^{2 / 3} \left(\frac{U_{\mathrm{o}}}{32.8}\right)^{- 0.75} \tag{5.12}$$
 
 where
 
 n equals 0.468;
 
-S(f) is the spectral energy density at frequency f, in $\scriptstyle \hbar^{ 2 } / \mathsf{ s }^{ 2 } / \mathsf{ H z } .$ ;
+S(f) is the spectral energy density at frequency f, in $\mathrm{ft}^{2}/\mathrm{s}^{2}/\mathrm{Hz}$;
 
 z is the height above sea level, in ft;
 
-$U_{ \mathbf{ o } }$ is the 1-hour mean wind speed at 32.8 ft above sea level, in ft/s.
+$U_{ \mathbf{o} }$ is the 1-hour mean wind speed at 32.8 ft above sea level, in ft/s.
 
 5.3.2.2.4 Spatial Coherence
 
@@ -1482,7 +1422,7 @@ Wind gusts have three-dimensional spatial scales related to their durations. For
 
 In frequency domain analyses of dynamic wind loading, it can be conservatively assumed that all scales of turbulence are fully coherent over the entire superstructure. For dynamic analysis of some substructures, it may be beneficial to account for the less-than-full coherence at higher frequencies. The squared correlation between the spectral energy densities of the longitudinal wind speed fluctuations of frequency f between two points in space is described in terms of the 2-point coherence spectrum.
 
-Equation (5.13) through Equation (5.15) may be used for the recommended coherence spectrum between two points （$x_{ \mathrm{ i } } , y_{ \mathrm{ j } } , z_{ \mathrm{ i } } )$ .
+Equation (5.13) through Equation (5.15) may be used for the recommended coherence spectrum between two points $(x_{\mathrm{i}},y_{\mathrm{i}},z_{\mathrm{i}})$ .
 
 In SI units:
 
@@ -1492,7 +1432,7 @@ In SI units:
 
 is given by
 
-$$\operatorname{c o h} (f) = \exp \left[ - \frac{1}{U_{0}} \left(\sum_{\mathrm{i} = 1}^{3} A_{\mathrm{i}}^{2}\right)^{\frac{1}{2}} \right] \tag{5.13}$$
+$$\operatorname{coh} (f) = \exp \left[ - \frac{1}{U_{\mathrm{o}}} \left(\sum_{\mathrm{i} = 1}^{3} A_{\mathrm{i}}^{2}\right)^{\frac{1}{2}} \right] \tag{5.13}$$
 
 where
 
@@ -1503,22 +1443,22 @@ $$z_{g} = \sqrt{z_{1} z_{2}} / (10)$$
 In USC units:
 
 — at levels $z_{ 1 }$ and $z_{ 2 }$ above the sea surface, in ft;   
-— with across-wind positions $y_{ 1 }$ and $y_{ 2 } ,$ , in ft;   
+— with across-wind positions $y_{ 1 }$ and $y_{ 2 } ,$ in ft;   
 — with along-wind positions $x_{ 1 }$ and $x_{ 2 } ,$ in ft.
 
 is given by:
 
-$$\operatorname{c o h} (f) = \exp \left[ - \frac{1}{U_{\mathrm{o}} / 3 . 28} \left(\sum_{\mathrm{i} = 1}^{3} A_{\mathrm{i}}^{2}\right)^{\frac{1}{2}} \right] \tag{5.15}$$
+$$\operatorname{coh} (f) = \exp \left[ - \frac{1}{U_{\mathrm{o}} / 3.28} \left(\sum_{\mathrm{i} = 1}^{3} A_{\mathrm{i}}^{2}\right)^{\frac{1}{2}} \right] \tag{5.15}$$
 
 where
 
-$$A_{i} = \alpha_{i} f^{r_{i}} \left(\frac{\Delta_{i}}{3 . 28}\right)^{q_{i}} z_{g}^{- p_{i}} \tag{5.16}$$
+$$A_{i} = \alpha_{i} f^{r_{i}} \left(\frac{\Delta_{i}}{3.28}\right)^{q_{i}} z_{g}^{- p_{i}} \tag{5.16}$$
 
-$$z_{\mathrm{g}} = \frac{\sqrt{z_{1} z_{2}}}{32 . 8}$$
+$$z_{\mathrm{g}} = \frac{\sqrt{z_{1} z_{2}}}{32.8}$$
 
-and where the coefficients $\alpha , \mathsf{ p , q , }$ r and the distances Δ are given in Table 5.3.
+and where the coefficients $\alpha , \mathsf{p,q,}$ r and the distances Δ are given in Table 5.3.
 
-Table 5.3—Values Coherence Spectrum Coefficients ${ \pmb{ a } } ,$ p, q, r, and Δ   
+Table 5.3—Values Coherence Spectrum Coefficients $\alpha$, p, q, r, and Δ   
 
 
 
@@ -1540,11 +1480,11 @@ where
 
 $F$ is the wind force, in N (lb);
 
-$\rho$ is the mass density of air (kg/ $m^{ 3 }$ , 1.22 $\mathsf{ k g } / \mathsf{ m }^{ 3 }$ for standard temperature and pressure) （$\mathsf{ s l u g } / \mathsf{ f } \mathsf{ f }^{ 3 }$ , 0.0023668 slugs $/ \mu^{ 3 }$ for standard temperature and pressure);
+$\rho$ is the mass density of air ($\mathrm{kg}/\mathrm{m}^{3}$, 1.22 $\mathrm{kg}/\mathrm{m}^{3}$ for standard temperature and pressure) ($\mathrm{slug}/\mathrm{ft}^{3}$, 0.0023668 $\mathrm{slugs}/\mathrm{ft}^{3}$ for standard temperature and pressure);
 
 u is the wind speed, in m/s (ft/s);
 
-$C_{ \mathsf{ s } }$ is the shape coefficient;
+$C_{ \mathsf{s} }$ is the shape coefficient;
 
 A is the area of object, in m2 (ft2).
 
@@ -1605,7 +1545,7 @@ A qualified oceanographer should determine the variation of current speed and di
 
 5.3.3.3 Current Force Only
 
-Where current is acting alone (i.e. no waves) the drag force should be determined by Equation (5.2) with $\delta U_{ \delta t } = 0$
+Where current is acting alone (i.e. no waves) the drag force should be determined by Equation (5.2) with $\delta U/\delta t = 0$
 
 5.3.3.4 Current Associated with Waves
 
@@ -1634,9 +1574,10 @@ Table 5.5—Design Level Criteria and Robustness Analysis
 | Exposure Category | Design Level Criteria | Robustness Level Ultimate Strength Analysis |
 | --- | --- | --- |
 | L-1a | Use the 100-year full population and associated conditions from API 2MET or site-specific data developed in accordance with the requirements of API 2MET | Use the 1000-year full population wave and associated conditions from API 2MET or site-specific data developed in accordance with the requirements of API 2MET |
-| L-2 | Use the 50-year full population and associated conditions from API 2MET or site-specific data developed in accordance with the requirements of API 2MET | Not required if L-2 exposure category platform has a robust configurationFor nonrobust configurations—Use the 500-year full population wave and associated conditions from API 2MET or site-specific data developed in accordance with the requirements of API 2MET |
+| L-2 | Use the 50-year full population and associated conditions from API 2MET or site-specific data developed in accordance with the requirements of API 2MET | Not required if L-2 exposure category platform has a robust configuration.<br>For nonrobust configurations—Use the 500-year full population wave and associated conditions from API 2MET or site-specific data developed in accordance with the requirements of API 2MET |
 | L-3 | Use the 25-year full population and associated conditions from API 2MET or site-specific data developed in accordance with the requirements of API 2MET | Not required |
-| aManned-nonevacuated platforms are presently not applicable to the U.S. GoM waters where platforms are normally evacuated ahead of hurricane events. The metocean design criteria in Section 5 have not been verified as adequate for manned-nonevacuated in the U.S. GoM. However, the winter storm, sudden hurricane, and earthquake criteria for the U.S. GoM have been verified as adequate for the manned-nonevacuated situation occurring during those events when platforms in the U.S. GoM waters are not normally evacuated | aManned-nonevacuated platforms are presently not applicable to the U.S. GoM waters where platforms are normally evacuated ahead of hurricane events. The metocean design criteria in Section 5 have not been verified as adequate for manned-nonevacuated in the U.S. GoM. However, the winter storm, sudden hurricane, and earthquake criteria for the U.S. GoM have been verified as adequate for the manned-nonevacuated situation occurring during those events when platforms in the U.S. GoM waters are not normally evacuated | aManned-nonevacuated platforms are presently not applicable to the U.S. GoM waters where platforms are normally evacuated ahead of hurricane events. The metocean design criteria in Section 5 have not been verified as adequate for manned-nonevacuated in the U.S. GoM. However, the winter storm, sudden hurricane, and earthquake criteria for the U.S. GoM have been verified as adequate for the manned-nonevacuated situation occurring during those events when platforms in the U.S. GoM waters are not normally evacuated |
+
+aManned-nonevacuated platforms are presently not applicable to the U.S. GoM waters where platforms are normally evacuated ahead of hurricane events. The metocean design criteria in Section 5 have not been verified as adequate for manned-nonevacuated in the U.S. GoM. However, the winter storm, sudden hurricane, and earthquake criteria for the U.S. GoM have been verified as adequate for the manned-nonevacuated situation occurring during those events when platforms in the U.S. GoM waters are not normally evacuated
 
 
 
@@ -1648,9 +1589,9 @@ c) The piles are founded in competent soils that are not susceptible to mudslide
 d) The nominal sections of any ungrouted legs have a maximum D/t ratio of 50 at the nominal sections between the joint cans. Alternately, piles are grouted to the jacket leg for the full length of the leg.   
 e) The vertical framing transmitting shear forces between horizontal frames consists of X-braces, or single (leg-to-leg) diagonals, arranged such that shear between horizontal frames is carried by braces in both tension and compression. K-bracing cannot be used. See Figure 5.5 and Figure 5.6.   
 f) Horizontal members are provided between all adjacent legs at horizontal framing levels in vertical frames and these horizontal members have sufficient strength in compression to support the redistribution of actions resulting from any buckling of adjacent diagonal braces. See Figure 5.5.   
-g) The slenderness ratio (KL/r) of primary diagonal bracing in vertical frames is limited to no more than 80 and （$F_{ \mathbf{ y } } D ) / ( E t ) \leq 0 . 0 \dot{ 6 } 9$ .   
+g) The slenderness ratio (KL/r) of primary diagonal bracing in vertical frames is limited to no more than 80 and $(F_{\mathrm{y}}D)/(Et)\leq 0.069$ .   
 h) Joints for primary structural members are sized for either the tensile yield load or the compressive buckling load of the members framing into the joint, as appropriate for the ultimate behavior of the structure. This can be accomplished by increasing the 50 % minimum cord capacity requirement of 7.2.3 to 100 % for in-place design conditions.   
-i) All pile-jacket shim connections are complete 360 welded connections with smooth curved crown shims designed to reduce stress concentrations that affect fatigue life and are designed to carry the ultimate capacity of the pile.
+i) All pile-jacket shim connections are complete 360° welded connections with smooth curved crown shims designed to reduce stress concentrations that affect fatigue life and are designed to carry the ultimate capacity of the pile.
 
 Any robustness level analysis shall follow the ultimate strength analysis procedures provided in API 2SIM.
 
@@ -1698,7 +1639,7 @@ To satisfy the strength requirements a new platform shall be designed for ground
 
 The return period and intensity of ground motion that may occur during a rare intense earthquake should also be determined in accordance with API 2EQ. The rare intense earthquake is referred to by API 2EQ as the ALE. This was the ductility level earthquake in API 2A-WSD, 21st Edition and earlier.
 
-In API 2EQ, maps provide the 1000-year earthquake, which is scaled (up) to get the ALE based on a number of site and risk factors. The seismic reserve capacity factor $C_{ \Gamma } ,$ which accounts for structure reserve strength and ductility, is then used to scale down to the ELE for elastic analysis.
+In API 2EQ, maps provide the 1000-year earthquake, which is scaled (up) to get the ALE based on a number of site and risk factors. The seismic reserve capacity factor $C_{\mathrm{r}} ,$ which accounts for structure reserve strength and ductility, is then used to scale down to the ELE for elastic analysis.
 
 5.3.6.2.2 Evaluation for Zones of Low Seismic Activity
 
@@ -1732,9 +1673,9 @@ In the calculation of member stresses, the stresses due to earthquake-induced lo
 
 5.3.6.4 Ductility Requirements (ALE)
 
-5.3.6.4.1 The intent of these requirements is to ensure that platforms to be located in seismically active areas have adequate reserve capacity to prevent collapse under a rare, intense earthquake. Platform ductility is based upon a combination of reserve strength and ductility expressed by the seismic reserve capacity factor, $C_{ \mathsf{ r } }$ (the ratio between the abnormal and extreme level spectral accelerations), as defined in 5.3.6.4.2 and 5.3.6.4.3.
+5.3.6.4.1 The intent of these requirements is to ensure that platforms to be located in seismically active areas have adequate reserve capacity to prevent collapse under a rare, intense earthquake. Platform ductility is based upon a combination of reserve strength and ductility expressed by the seismic reserve capacity factor, $C_{ \mathsf{r} }$ (the ratio between the abnormal and extreme level spectral accelerations), as defined in 5.3.6.4.2 and 5.3.6.4.3.
 
-5.3.6.4.2 The $C_{ \mathsf{ r } }$ factor represents a structure’s ability to sustain ground motions due to earthquakes beyond the strength level event. It is defined as the ratio of spectral acceleration that causes structural collapse or catastrophic system failure to the strength level event spectral acceleration. For fixed steel offshore structures, the representative value of $C_{ \mathsf{ r } }$ may be estimated from the general characteristics of a structure’s design in accordance with Table 5.6.
+5.3.6.4.2 The $C_{ \mathsf{r} }$ factor represents a structure’s ability to sustain ground motions due to earthquakes beyond the strength level event. It is defined as the ratio of spectral acceleration that causes structural collapse or catastrophic system failure to the strength level event spectral acceleration. For fixed steel offshore structures, the representative value of $C_{ \mathsf{r} }$ may be estimated from the general characteristics of a structure’s design in accordance with Table 5.6.
 
 Table 5.6—Cr Factors for Steel Jacket of Fixed Offshore Platforms   
 
@@ -1749,19 +1690,19 @@ Table 5.6—Cr Factors for Steel Jacket of Fixed Offshore Platforms
 
 
 
-Where the values of $C_{ \mathsf{ r } }$ in Table 5.6 are not used, a value may be assumed. In such cases, both of the following conditions shall apply.
+Where the values of $C_{ \mathsf{r} }$ in Table 5.6 are not used, a value may be assumed. In such cases, both of the following conditions shall apply.
 
-a) If the simplified seismic action procedure in API 2EQ is followed, the assumed value of $C_{ \mathsf{ r } }$ shall not exceed 2.8 for L-1 platforms, 2.4 for L-2 platforms, and 2.0 for L-3 platforms.   
-b) A nonlinear time history analysis in accordance with API 2EQ shall be performed to ensure survival in the ductility level event. As an alternative, a static pushover analysis in accordance with API 2EQ may be performed to confirm that $C_{ \mathsf{ r } }$ is equal to or higher than that assumed.
+a) If the simplified seismic action procedure in API 2EQ is followed, the assumed value of $C_{ \mathsf{r} }$ shall not exceed 2.8 for L-1 platforms, 2.4 for L-2 platforms, and 2.0 for L-3 platforms.   
+b) A nonlinear time history analysis in accordance with API 2EQ shall be performed to ensure survival in the ductility level event. As an alternative, a static pushover analysis in accordance with API 2EQ may be performed to confirm that $C_{ \mathsf{r} }$ is equal to or higher than that assumed.
 
-5.3.6.4.3 For a platform to use a $C_{ \mathsf{ r } }$ factor of 2.0 or greater, the structure-foundation system shall be in accordance with the following.
+5.3.6.4.3 For a platform to use a $C_{ \mathsf{r} }$ factor of 2.0 or greater, the structure-foundation system shall be in accordance with the following.
 
 a) The structure has eight or more legs supported by piles.   
 b) The piles are founded in competent soils that are not susceptible to liquefaction during the strength and the ductility level events.   
 c) The legs of the structure, including any enclosed piles, meet the requirements of 5.3.6.3.4 using twice the design load during the strength level event.   
 d) The vertical framing transmitting shear forces between horizontal frames consists of X-braces, or single (leg-to-leg) diagonals, arranged such that shear between horizontal frames is carried by braces in both tension and compression (see Figure 5.6). K-bracing should not be used (see Figure 5.5).   
 e) Horizontal members are provided between all adjacent legs at horizontal framing levels in vertical frames (see Figure 5.6) and these horizontal members have sufficient strength in compression to support the redistribution of actions resulting from any buckling of adjacent diagonal braces.   
-f) The slenderness ratio (KL/r) of primary diagonal bracing in vertical frames is limited to no more than 80 and （$F_{ \mathsf{ y } } D ) / ( E t ) \le 0 . 069$ .
+f) The slenderness ratio (KL/r) of primary diagonal bracing in vertical frames is limited to no more than 80 and $(F_{\mathrm{y}}D)/(Et)\leq 0.069$ .
 
 g) All nontubular members at connections in vertical frames have greater local buckling strength than global buckling strength, can develop fully plastic behavior (i.e. are compact sections) and the requirements of 5.3.6.4.4 and 5.3.6.2 using twice the design loads during the ELE event (see API 2EQ).   
 h) Joints for primary structural members in the structure are all sized to meet the minimum strength requirements given in B.5.3.6.5.1. This requirement may be relaxed if joint strengths are verified by time history analyses simulating the ALE event (see API 2EQ).
@@ -1811,7 +1752,8 @@ Table 5.7—Offshore Design Reference Wind Speed for Drilling Structures
 | Operating | — | 23 m/s (44 knots)a |
 | Wind—expected | 100-year full population hurricanes | See API 2MET or site-specific data |
 | Wind—unexpected | 100-year sudden hurricanes | See API 2MET or site-specific data |
-| aThis operating wind speed in a 1-hour average at 10 m (32.8 ft) elevation. It should be converted to a 3-s gust at the equipment elevation before application (see. 5.3.2.2.2). | aThis operating wind speed in a 1-hour average at 10 m (32.8 ft) elevation. It should be converted to a 3-s gust at the equipment elevation before application (see. 5.3.2.2.2). | aThis operating wind speed in a 1-hour average at 10 m (32.8 ft) elevation. It should be converted to a 3-s gust at the equipment elevation before application (see. 5.3.2.2.2). |
+
+aThis operating wind speed in a 1-hour average at 10 m (32.8 ft) elevation. It should be converted to a 3-s gust at the equipment elevation before application (see. 5.3.2.2.2).
 
 
 
@@ -2033,9 +1975,9 @@ A minimum of 8 directions shall be used for symmetrical, rectangular, and square
 
 6.1.3.3 Platform Orientation
 
-Because of difficulties in orienting the jacket during installation it is not always possible to position the jacket exactly as planned. When platforms are to be installed on a relatively flat bottom with no obstructions and with no more than one existing well conductor, in addition to the directions stated above, the jacket should be designed for wave conditions that would result if the jacket were positioned $5 . 0^{ \circ }$ in either direction from the intended orientation.
+Because of difficulties in orienting the jacket during installation it is not always possible to position the jacket exactly as planned. When platforms are to be installed on a relatively flat bottom with no obstructions and with no more than one existing well conductor, in addition to the directions stated above, the jacket should be designed for wave conditions that would result if the jacket were positioned $5.0^{ \circ }$ in either direction from the intended orientation.
 
-When a jacket is to be installed over two or more existing well conductors or in an area where obstructions on the bottom, such an uneven seafloor resulting from previous drilling by mobile drilling rigs, are likely, the condition of the site shall be determined prior to the design of the platform. The probability of the jacket being installed out of alignment should be considered and the $5 . 0^{ \circ }$ tolerance increased accordingly.
+When a jacket is to be installed over two or more existing well conductors or in an area where obstructions on the bottom, such an uneven seafloor resulting from previous drilling by mobile drilling rigs, are likely, the condition of the site shall be determined prior to the design of the platform. The probability of the jacket being installed out of alignment should be considered and the $5.0^{ \circ }$ tolerance increased accordingly.
 
 6.1.3.4 Pile Design
 
@@ -2045,31 +1987,31 @@ Piling shall be designed in accordance with Section 6 and Section 9 and may be d
 
 6.2.1 Axial Tension
 
-The allowable tensile stress, $F_{ \mathbf{ t } } ,$ , for cylindrical members subjected to axial tensile loads should be determined from:
+The allowable tensile stress, $F_{ \mathbf{t} } ,$ for cylindrical members subjected to axial tensile loads should be determined from:
 
-$$F_{\mathrm{t}} = 0. 6 F_{\mathrm{y}} \tag{6.1}$$
+$$F_{\mathrm{t}} = 0.6 F_{\mathrm{y}} \tag{6.1}$$
 
 where
 
-$F_{ \mathsf{ y } }$ is the yield strength, MPa (ksi).
+$F_{ \mathsf{y} }$ is the yield strength, MPa (ksi).
 
 6.2.2 Axial Compression
 
 6.2.2.1 Column Buckling
 
-The allowable axial compressive stress, $F_{ \mathsf{ a } } ,$ should be determined from the following AISC 335-89 equations for members with a D/t ratio equal to or less than 60:
+The allowable axial compressive stress, $F_{ \mathsf{a} } ,$ should be determined from the following AISC 335-89 equations for members with a D/t ratio equal to or less than 60:
 
 $$F_{\mathrm{a}} = \frac{\left[ 1 - \frac{\left(K l / r\right)^{2}}{2 C_{\mathrm{c}}^{2}} \right] F_{\mathrm{y}}}{5 / 3 + \frac{3 (K l / r)}{8 C_{\mathrm{c}}} - \frac{(K l / r)^{3}}{8 C_{\mathrm{c}}^{3}}} \tag{6.2}$$
 
-for $K l / r < C_{ \mathrm{ c } }$
+for $K l / r < C_{ \mathrm{c} }$
 
 $$F_{\mathrm{a}} = \frac{12 \pi^{2} E}{23 (K l / r)^{2}} \tag{6.3}$$
 
-Kfor $l / r \geq C_{ \mathsf{ c } }$
+for $Kl/r\geq C_{\mathrm{c}}$
 
 where
 
-$$C_{\mathbf{c}} = \left(\frac{2 \pi^{2} E}{F_{\mathrm{y}}}\right)^{0. 5}$$
+$$C_{\mathbf{c}} = \left(\frac{2 \pi^{2} E}{F_{\mathrm{y}}}\right)^{0.5}$$
 
 E is Young’s Modulus of elasticity, MPa (ksi);
 
@@ -2079,17 +2021,17 @@ l is the unbraced length, m (in.);
 
 r is the radius of gyration, m (in.).
 
-For members with a D/t ratio greater than 60, substitute the critical local buckling stress （$F_{ \mathsf{ x e } }$ or $F_{ \mathsf{ x c } } ,$ whichever is smaller) for $F_{ \mathsf{ y } }$ in determining $C_{ \mathsf{ c } }$ and $F_{ \mathsf{ a } }$ .
+For members with a D/t ratio greater than 60, substitute the critical local buckling stress （$F_{ \mathsf{xe} }$ or $F_{ \mathsf{xc} } ,$ whichever is smaller) for $F_{ \mathsf{y} }$ in determining $C_{ \mathsf{c} }$ and $F_{ \mathsf{a} }$ .
 
 6.2.2.2 Local Buckling
 
 6.2.2.2.1 General
 
-Unstiffened cylindrical members fabricated from structural steels should be investigated for local buckling due to axial compression when the D/t ratio is greater than 60. When the D/t ratio is greater than 60 and less than 300, with wall thickness $t > 6$ mm (0.25 in.), both the elastic （$F_{ \mathsf{ x e } } )$ and inelastic local buckling stress （$F_{ \mathsf{ x c } } )$ due to axial compression should be determined from Equation (6.4) and Equation (6.5). Overall column buckling should be determined by substituting the critical local buckling stress $[ F_{ \mathsf{ x e } }$ (see 6.2.2.2.2) or $F_{ \mathsf{ x c } }$ (see 6.2.2.2.3), whichever is smaller] for $F_{ \tt y }$ in Equation (6.2) and in the equation for $C_{ \mathsf{ c } } .$ .
+Unstiffened cylindrical members fabricated from structural steels should be investigated for local buckling due to axial compression when the D/t ratio is greater than 60. When the D/t ratio is greater than 60 and less than 300, with wall thickness $t > 6$ mm (0.25 in.), both the elastic （$F_{ \mathsf{xe} } )$ and inelastic local buckling stress （$F_{ \mathsf{xc} } )$ due to axial compression should be determined from Equation (6.4) and Equation (6.5). Overall column buckling should be determined by substituting the critical local buckling stress $[ F_{ \mathsf{xe} }$ (see 6.2.2.2.2) or $F_{ \mathsf{xc} }$ (see 6.2.2.2.3), whichever is smaller] for $F_{ \tt y }$ in Equation (6.2) and in the equation for $C_{ \mathsf{c} } $.
 
 6.2.2.2.2 Elastic Local Buckling Stress
 
-The elastic local buckling stress, $F_{ \mathsf{ x e } }$ , should be determined from:
+The elastic local buckling stress, $F_{ \mathsf{xe} }$ , should be determined from:
 
 $$F_{\text{x e}} = 2 C E t / D \tag{6.4}$$
 
@@ -2101,29 +2043,29 @@ D is the outside diameter, m (in.);
 
 t is the wall thickness, m (in.).
 
-The theoretical value of $C = 0 . 6$ . However, a reduced value of C = 0.3 is recommended for use in Equation (6.4) to account for the effect of initial geometric imperfections within API 2B tolerance limits.
+The theoretical value of $C = 0.6$ . However, a reduced value of C = 0.3 is recommended for use in Equation (6.4) to account for the effect of initial geometric imperfections within API 2B tolerance limits.
 
 6.2.2.2.3 Inelastic Local Buckling Stress.
 
-The inelastic local buckling stress, $F_{ \mathsf{ x c } } ,$ should be determined from:
+The inelastic local buckling stress, $F_{ \mathsf{xc} } ,$ should be determined from:
 
-$$\left. \begin{array}{l} F_{\mathrm{x c}} = F_{\mathrm{y}} \left[ 1. 64 - 0. 23 (D / t)^{1 / 4} \right] \leq F_{\mathrm{x e}} \\ F_{\mathrm{x c}} = F_{\mathrm{y}} \text{f o r} (D / t) \leq 60 \end{array} \right\} \tag{6.5}$$
+$$\left.\begin{array}{l} F_{\mathrm{xc}} = F_{\mathrm{y}} \left[ 1.64 - 0.23 (D / t)^{1 / 4} \right] \leq F_{\mathrm{xe}} \\ F_{\mathrm{xc}} = F_{\mathrm{y}} \text{for} (D / t) \leq 60 \end{array} \right\} \tag{6.5}$$
 
 6.2.3 Bending
 
-The allowable bending stress, $F_{ \mathsf{ b } } ,$ , should be determined from:
+The allowable bending stress, $F_{ \mathsf{b} } ,$ should be determined from:
 
-$$F_{\mathrm{b}} = 0. 75 F_{\mathrm{y}} \text{f o r} \frac{D}{t} \leq \frac{10 , 340}{F_{\mathrm{y}}} \text{i n S I u n i t s} \tag{6.6}$$
+$$F_{\mathrm{b}} = 0.75 F_{\mathrm{y}} \text{for} \frac{D}{t} \leq \frac{10 , 340}{F_{\mathrm{y}}} \text{in SI units} \tag{6.6}$$
 
-$$F_{\mathrm{b}} = 0. 75 F_{\mathrm{y}} \text{f o r} \frac{D}{t} \leq \frac{1500}{F_{\mathrm{y}}} \text{i n U S C u n i t s}$$
+$$F_{\mathrm{b}} = 0.75 F_{\mathrm{y}} \text{for} \frac{D}{t} \leq \frac{1500}{F_{\mathrm{y}}} \text{in USC units}$$
 
-$$F_{\mathrm{b}} = \left[ 0. 84 - 1. 74 \frac{F_{\mathrm{y}} D}{E t} \right] F_{\mathrm{y}} \text{f o r} \frac{10 , 340}{F_{\mathrm{y}}} \leq \frac{D}{t} \leq \frac{20 , 680}{F_{\mathrm{y}}} \quad \text{i n S I u n i t s} \tag{6.7}$$
+$$F_{\mathrm{b}} = \left[ 0.84 - 1.74 \frac{F_{\mathrm{y}} D}{E t} \right] F_{\mathrm{y}} \text{for} \frac{10 , 340}{F_{\mathrm{y}}} \leq \frac{D}{t} \leq \frac{20 , 680}{F_{\mathrm{y}}} \quad \text{in SI units} \tag{6.7}$$
 
-$$F_{\mathrm{b}} = \left[ 0. 84 - 1. 74 \frac{F_{\mathrm{y}} D}{E t} \right] F_{\mathrm{y}} \text{f o r} \frac{1500}{F_{\mathrm{y}}} \leq \frac{D}{t} \leq \frac{3000}{F_{\mathrm{y}}} \text{i n U S C u n i t s}$$
+$$F_{\mathrm{b}} = \left[ 0.84 - 1.74 \frac{F_{\mathrm{y}} D}{E t} \right] F_{\mathrm{y}} \text{for} \frac{1500}{F_{\mathrm{y}}} \leq \frac{D}{t} \leq \frac{3000}{F_{\mathrm{y}}} \text{in USC units}$$
 
-$$F_{\mathrm{b}} = \left[ 0. 72 - 0. 58 \frac{F_{\mathrm{y}} D}{E t} \right] F_{\mathrm{y}} \text{f o r} \frac{20 , 680}{F_{\mathrm{y}}} <   \frac{D}{t} \leq 300 \text{i n S I u n i t s} \tag{6.8}$$
+$$F_{\mathrm{b}} = \left[ 0.72 - 0.58 \frac{F_{\mathrm{y}} D}{E t} \right] F_{\mathrm{y}} \text{for} \frac{20 , 680}{F_{\mathrm{y}}} <   \frac{D}{t} \leq 300 \text{in SI units} \tag{6.8}$$
 
-$$F_{\mathrm{b}} = \left[ 0. 72 - 0. 58 \frac{F_{\mathrm{y}} D}{E t} \right] F_{\mathrm{y}} \text{f o r} \frac{3000}{F_{\mathrm{y}}} \leq \frac{D}{t} \leq 300 \text{i n U S C u n i t s}$$
+$$F_{\mathrm{b}} = \left[ 0.72 - 0.58 \frac{F_{\mathrm{y}} D}{E t} \right] F_{\mathrm{y}} \text{for} \frac{3000}{F_{\mathrm{y}}} \leq \frac{D}{t} \leq 300 \text{in USC units}$$
 
 For D/t ratios greater than 300, API 2U shall be used.
 
@@ -2131,65 +2073,65 @@ For D/t ratios greater than 300, API 2U shall be used.
 
 6.2.4.1 Beam Shear
 
-The maximum beam shear stress, $f_{ \mathsf{ V } } ,$ for cylindrical members is:
+The maximum beam shear stress, $f_{\mathrm{v}} ,$ for cylindrical members is:
 
-$$f_{V} = \frac{V}{0 . 5 A} \tag{6.9}$$
+$$f_{\mathrm{v}} = \frac{V}{0.5 A} \tag{6.9}$$
 
 where
 
-$f_{ \mathsf{ v } }$ is the maximum shear stress, MPa (ksi);
+$f_{ \mathsf{v} }$ is the maximum shear stress, MPa (ksi);
 
 V is the transverse shear force, MN (kips);
 
 A is the cross sectional area, m2 (in. 2).
 
-The allowable beam shear stress, $F_{ \mathsf{ v } } ,$ should be determined from:
+The allowable beam shear stress, $F_{ \mathsf{v} } ,$ should be determined from:
 
-$$F_{\mathrm{v}} = 0. 4 F_{\mathrm{y}} \tag{6.10}$$
+$$F_{\mathrm{v}} = 0.4 F_{\mathrm{y}} \tag{6.10}$$
 
-NOTE While the shear yield stress of structural steel has been variously estimated as between $1_{ / 2 }$ and $5_{ / 8 }$ of the tension and compression yield stress and is frequently taken as $F_{ \mathtt{ y } } / { \sqrt{ 3 } }$ , its permissible working stress value is given by AISC 335-89 as ${ ^ 2 } / { _ 3 }$ the recommended basic allowable tensile stress. For cylindrical members when local shear deformations may be substantial due to cylinder geometry, a reduced yield stress may need to be substituted for $F_{ \mathsf{ y } }$ in Equation (6.12). Further treatment of this subject appears in Reference [168].
+NOTE While the shear yield stress of structural steel has been variously estimated as between $1/2$ and $5/8$ of the tension and compression yield stress and is frequently taken as $F_{ \mathtt{y} } / { \sqrt{ 3 } }$ , its permissible working stress value is given by AISC 335-89 as $2/3$ the recommended basic allowable tensile stress. For cylindrical members when local shear deformations may be substantial due to cylinder geometry, a reduced yield stress may need to be substituted for $F_{ \mathsf{y} }$ in Equation (6.12). Further treatment of this subject appears in Reference [168].
 
 6.2.4.2 Torsional Shear
 
-The maximum torsional shear stress, $f_{ \mathsf{ v t } } ,$ , for cylindrical members caused by torsion is:
+The maximum torsional shear stress, $f_{ \mathsf{vt} } ,$ for cylindrical members caused by torsion is:
 
 $$f_{\mathrm{v}} = \frac{M_{\mathrm{t}} (D / 2)}{I_{\mathrm{p}}} \tag{6.11}$$
 
 where
 
-$f_{ \mathrm{ v t } }$ is the maximum torsional shear stress, $\mathsf{ M P a }$ (ksi);
+$f_{ \mathrm{vt} }$ is the maximum torsional shear stress, $\mathsf{MPa}$ (ksi);
 
-$M_{ \mathrm{ t } }$ is the torsional moment, MN-m (kips-in.);
+$M_{ \mathrm{t} }$ is the torsional moment, MN-m (kips-in.);
 
-$I_{ \mathsf{ p } }$ is the polar moment of inertia, $\mathsf{ m }^{ 4 } ( \mathsf{ i } \mathsf{ n } . { }^{ 4 } )$ .
+$I_{ \mathsf{p} }$ is the polar moment of inertia, $\mathsf{m}^{ 4 } ( \mathsf{i} \mathsf{n} .{ }^{ 4 } )$ .
 
-and the allowable torsional shear stress, $F_{ \mathrm{ v t } } ,$ should be determined from:
+and the allowable torsional shear stress, $F_{ \mathrm{vt} } ,$ should be determined from:
 
-$$F_{\mathrm{v t}} = 0. 4 F_{\mathrm{y}} \tag{6.12}$$
+$$F_{\mathrm{vt}} = 0.4 F_{\mathrm{y}} \tag{6.12}$$
 
 6.2.5 Hydrostatic Pressure (Stiffened and Unstiffened Cylinders)
 
 6.2.5.1 General
 
-For tubular platform members satisfying API 2B out-of-roundness tolerances, the acting membrane stress, $f_{ \natural } ,$ in MPa (ksi), should not exceed the critical hoop buckling stress, $F_{ \mathsf{ h c } } ,$ divided by the appropriate safety factor:
+For tubular platform members satisfying API 2B out-of-roundness tolerances, the acting membrane stress, $f_{\mathrm{h}} ,$ in MPa (ksi), should not exceed the critical hoop buckling stress, $F_{ \mathsf{hc} } ,$ divided by the appropriate safety factor:
 
-$$f_{\mathrm{h}} \leq F_{\mathrm{h c}} / \mathrm{S F}_{\mathrm{h}} \tag{6.13}$$
+$$f_{\mathrm{h}} \leq F_{\mathrm{hc}} / \mathrm{SF}_{\mathrm{h}} \tag{6.13}$$
 
 $$f_{\mathrm{h}} = p D / 2 t \tag{6.14}$$
 
 where
 
-$f_{ \natural }$ is the hoop stress due to hydrostatic pressure, MPa (ksi);
+$f_{\mathrm{h}}$ is the hoop stress due to hydrostatic pressure, MPa (ksi);
 
 $p$ is the hydrostatic pressure, MPa (ksi);
 
-$\mathrm{ S F }_{ \mathsf{ h } }$ is the safety factor against hydrostatic collapse (see 6.3.5).
+$\mathrm{SF}_{ \mathsf{h} }$ is the safety factor against hydrostatic collapse (see 6.3.5).
 
 NOTE For large diameter cylinders of finite length, a more rigorous analysis may be used to justify fewer or smaller ring stiffeners provided the effects of geometrical imperfections and plasticity are properly considered. API 2U and Reference [168] provides detailed analysis methods.
 
 6.2.5.2 Design Hydrostatic Head
 
-The hydrostatic pressure （$p = \gamma H_{ z } )$ to be used should be determined from the design head, $H_{ z } ,$ defined as follows:
+The hydrostatic pressure $(p=\gamma H_z)$ to be used should be determined from the design head, $H_{ z } ,$ defined as follows:
 
 $$H_{z} = z + \frac{H_{\mathrm{w}}}{2} \left\{\frac{\cosh [ k (d - z) ]}{\cosh k d} \right\} \tag{6.15}$$
 
@@ -2199,9 +2141,9 @@ z is the depth below still water surface including tide, m (ft); z is positive m
 
 NOTE For installation, z should be the maximum submergence during the launch or differential head during the upending sequence, plus a reasonable increase in head to account for structural weight tolerances and for deviations from the planned installation sequence.
 
-$H_{ \mathrm{ w } }$ is the wave height, m (ft);
+$H_{ \mathrm{w} }$ is the wave height, m (ft);
 
-$\begin{array} { r l } { k } & { { } = \frac{ 2 \pi } { L } } \end{array}$ with L equal to wave length, $\mathsf{ m }^{ - 1 } ( \mathsf{ f t }^{ - 1 } )$ ;
+$k=2\pi/L$ with L equal to wave length, $\mathrm{m}^{-1}$ ($\mathrm{ft}^{-1}$);
 
 d is the still water depth, m (ft);
 
@@ -2211,23 +2153,23 @@ d is the still water depth, m (ft);
 
 6.2.5.3.1 General
 
-The elastic hoop buckling stress, $F_{ \mathsf{ h e } } ,$ and the critical hoop buckling stress, $F_{ \mathsf{ h c } } ,$ are determined from Equations (6.16) to (6.18).
+The elastic hoop buckling stress, $F_{ \mathsf{he} } ,$ and the critical hoop buckling stress, $F_{ \mathsf{hc} } ,$ are determined from Equations (6.16) to (6.18).
 
 6.2.5.3.2 Elastic Hoop Buckling Stress
 
 The elastic hoop buckling stress determination is based on a linear stress-strain relationship from:
 
-$$F_{\mathrm{h e}} = 2 C_{\mathrm{h}} E t / D \tag{6.16}$$
+$$F_{\mathrm{he}} = 2 C_{\mathrm{h}} E t / D \tag{6.16}$$
 
 where
 
-The critical hoop buckling coefficient $C_{ \mathsf{ h } }$ includes the effect of initial geometric imperfections within API 2B tolerance limits.
+The critical hoop buckling coefficient $C_{ \mathsf{h} }$ includes the effect of initial geometric imperfections within API 2B tolerance limits.
 
-$$\begin{array}{l} C_{\mathrm{h}} = 0. 44 t / D \quad \text{a t} M > 1. 6 D / t \\ C_{\mathrm{h}} = 0. 44 (t / D) + \frac{0 . 21 (D / t)^{3}}{M^{4}} \quad \text{a t} 0. 825 D / t <   M <   1. 6 D / t \\ C_{\mathrm{h}} = 0. 736 / (M - 0. 636) \quad \text{a t} 3. 5 <   M <   0. 825 D / t \\ C_{\mathrm{h}} = 0. 755 / (M - 0. 559) \quad \text{a t} 1. 5 <   M <   3. 5 \\ C_{\mathrm{h}} = 0. 8 \quad \text{a t} M <   1. 5 \\ \end{array}$$
+$$\begin{array}{l} C_{\mathrm{h}} = 0.44 t / D \quad \text{at} M > 1.6 D / t \\ C_{\mathrm{h}} = 0.44 (t / D) + \frac{0.21 (D / t)^{3}}{M^{4}} \quad \text{at} 0.825 D / t <   M <   1.6 D / t \\ C_{\mathrm{h}} = 0.736 / (M - 0.636) \quad \text{at} 3.5 <   M <   0.825 D / t \\ C_{\mathrm{h}} = 0.755 / (M - 0.559) \quad \text{at} 1.5 <   M <   3.5 \\ C_{\mathrm{h}} = 0.8 \quad \text{at} M <   1.5 \\ \end{array}$$
 
 The geometric parameter, M, is defined as:
 
-$$M = L / D (2 D / t)^{0. 5} \tag{6.17}$$
+$$M = L / D (2 D / t)^{0.5} \tag{6.17}$$
 
 where
 
@@ -2237,38 +2179,38 @@ NOTE For M > 1.6D/t, the elastic buckling stress is approximately equal to that 
 
 6.2.5.3.3 Critical Hoop Buckling Stress
 
-The material yield strength relative to the elastic hoop buckling stress determines whether elastic or inelastic hoop buckling occurs and the critical hoop buckling stress, $F_{ \mathsf{ h c } } ,$ in MPa (ksi) is defined by the appropriate equation.
+The material yield strength relative to the elastic hoop buckling stress determines whether elastic or inelastic hoop buckling occurs and the critical hoop buckling stress, $F_{ \mathsf{hc} } ,$ in MPa (ksi) is defined by the appropriate equation.
 
 Elastic buckling:
 
-$$F_{\mathrm{h c}} = F_{\mathrm{h c}} \quad \text{a t} F_{\mathrm{h e}} \leq 0. 55 F_{\mathrm{y}}$$
+$$F_{\mathrm{hc}} = F_{\mathrm{hc}} \quad \text{at} F_{\mathrm{he}} \leq 0.55 F_{\mathrm{y}}$$
 
-$$\text{I n e l a s t i c b u c k l i n g :} \tag{6.18}$$
+$$\text{Inelastic buckling:} \tag{6.18}$$
 
-$$F_{\mathrm{h c}} = 0. 45 F_{\mathrm{y}} + 0. 18 F_{\mathrm{h e}} \quad \text{a t} 0. 55 F_{\mathrm{y}} <   F_{\mathrm{h e}} \leq 1. 6 F_{\mathrm{y}}$$
+$$F_{\mathrm{hc}} = 0.45 F_{\mathrm{y}} + 0.18 F_{\mathrm{he}} \quad \text{at} 0.55 F_{\mathrm{y}} <   F_{\mathrm{he}} \leq 1.6 F_{\mathrm{y}}$$
 
-$$F_{\mathrm{h c}} = \frac{1 . 31 F_{\mathrm{y}}}{1 . 15 + \left(F_{\mathrm{y}} / F_{\mathrm{h e}}\right)} \quad \text{a t} 1. 6 F_{\mathrm{y}} <   F_{\mathrm{h e}} <   6. 2 F_{\mathrm{y}}$$
+$$F_{\mathrm{hc}} = \frac{1.31 F_{\mathrm{y}}}{1.15 + \left(F_{\mathrm{y}} / F_{\mathrm{he}}\right)} \quad \text{at} 1.6 F_{\mathrm{y}} <   F_{\mathrm{he}} <   6.2 F_{\mathrm{y}}$$
 
-$$F_{\mathrm{h c}} = F_{\mathrm{y}} \quad \text{a t} F_{\mathrm{h e}} > 6. 2$$
+$$F_{\mathrm{hc}} = F_{\mathrm{y}} \quad \text{at} F_{\mathrm{he}} > 6.2$$
 
 6.2.5.4 Ring Design
 
 Circumferential stiffening ring size may be selected on the following approximate basis.
 
-$$I_{\mathrm{c}} = \frac{t L D^{2}}{8 E} F_{\mathrm{h e}} \tag{6.19}$$
+$$I_{\mathrm{c}} = \frac{t L D^{2}}{8 E} F_{\mathrm{he}} \tag{6.19}$$
 
 where
 
-$I_{ \mathsf{ c } }$ is the required moment of inertia for ring composite section, ${ \mathbf{ m } }^{ 4 } ( { \mathbf{ i } } { \mathbf{ n } } .^{ 4 } ) ;$   
+$I_{ \mathsf{c} }$ is the required moment of inertia for ring composite section, ${ \mathbf{m} }^{ 4 } ( { \mathbf{i} } { \mathbf{n} } .^{ 4 } ) ;$   
 L is the ring spacing, m (in.);   
 D is the diameter, m (in.) (see Note 2 for external rings).
 
-NOTE 1 An effective width of shell equal to $1 . 1 ( D t )^{ 0 . 5 }$ may be assumed as the flange for the composite ring section.   
+NOTE 1 An effective width of shell equal to $1.1 ( D t )^{ 0.5 }$ may be assumed as the flange for the composite ring section.   
 NOTE 2 For external rings, D in Equation (6.19) should be taken to the centroid of the composite ring.
 
 NOTE 3 Where out-of-roundness in excess of API 2B is permitted, larger stiffeners may be required. The bending due to out-of-roundness should be specifically investigated.   
 NOTE 4 The width-to-thickness ratios of stiffening rings should be selected in accordance with AISC 335-89 requirements so as to preclude local buckling of the rings.   
-NOTE 5 For flat bar stiffeners, the minimum dimensions should be 10 mm × 76 mm （$^{ 3 } / 8 \ \mathrm{ i n . } \ \times 3 \ \mathrm{ i n . } )$ for internal rings and 13 mm × 102 mm (1/2 in. × 4 in.) for external rings.   
+NOTE 5 For flat bar stiffeners, the minimum dimensions should be 10 mm × 76 mm （$^{ 3 } / 8 \ \mathrm{in.} \ \times 3 \ \mathrm{in.} )$ for internal rings and 13 mm × 102 mm (1/2 in. × 4 in.) for external rings.   
 NOTE 6 Equation (6.19) assumes that the cylinder and stiffening rings have the same yield strength.
 
 ## 6.3 Combined Stresses for Cylindrical Members
@@ -2283,43 +2225,43 @@ Sections 6.3.1 and 6.3.2 apply to overall member behavior while 6.3.3 and 6.3.4 
 
 Cylindrical members subjected to combined compression and flexure shall be proportioned to satisfy both the following requirements at all points along their length.
 
-$$\frac{f_{\mathrm{a}}}{F_{\mathrm{a}}} + \frac{C_{\mathrm{m}} \sqrt{f_{\mathrm{b x}}^{2} + f_{\mathrm{b y}}^{2}}}{\left(1 - \frac{f_{\mathrm{a}}}{F_{\mathrm{e}}^{\prime}}\right) F_{\mathrm{b}}} \leq 1. 0 \tag{6.20}$$
+$$\frac{f_{\mathrm{a}}}{F_{\mathrm{a}}} + \frac{C_{\mathrm{m}} \sqrt{f_{\mathrm{bx}}^{2} + f_{\mathrm{by}}^{2}}}{\left(1 - \frac{f_{\mathrm{a}}}{F_{\mathrm{e}}^{\prime}}\right) F_{\mathrm{b}}} \leq 1.0 \tag{6.20}$$
 
-$$\frac{f_{\mathrm{a}}}{0 . 6 F_{\mathrm{y}}} + \frac{\sqrt{f_{\mathrm{b x}}^{2} + f_{\mathrm{b y}}^{2}}}{F_{\mathrm{b}}} \leq 1. 0 \tag{6.21}$$
+$$\frac{f_{\mathrm{a}}}{0.6 F_{\mathrm{y}}} + \frac{\sqrt{f_{\mathrm{bx}}^{2} + f_{\mathrm{by}}^{2}}}{F_{\mathrm{b}}} \leq 1.0 \tag{6.21}$$
 
 where the undefined terms used are as defined by the AISC 335-89.
 
-When $\frac{ f_{ \tt a } } { F_{ \tt a } } { \tt a } = 0 . 15$ , Equation (6.22) may be used in lieu of Equations (6.20) and (6.21).
+When $\frac{f_{\mathrm{a}}}{F_{\mathrm{a}}}\leq 0.15$, Equation (6.22) may be used in lieu of Equations (6.20) and (6.21).
 
-$$\frac{f_{\mathrm{a}}}{F_{\mathrm{a}}} + \frac{\sqrt{f_{\mathrm{b x}}^{2} + f_{\mathrm{b y}}^{2}}}{F_{\mathrm{b}}} \leq 1. 0 \tag{6.22}$$
+$$\frac{f_{\mathrm{a}}}{F_{\mathrm{a}}} + \frac{\sqrt{f_{\mathrm{bx}}^{2} + f_{\mathrm{by}}^{2}}}{F_{\mathrm{b}}} \leq 1.0 \tag{6.22}$$
 
-Equation (6.20) assumes that the same values of $C_{ \mathsf{ m } }$ and $F_{ \mathsf{ e } }^{ \prime }$ are appropriate for $f_{ \mathsf{ b } \mathsf{ x } }$ and $f_{ \mathsf{ b y } } .$ If different values are applicable, Equation (6.23), or other rational analysis, should be used instead of Equation (6.20):
+Equation (6.20) assumes that the same values of $C_{ \mathsf{m} }$ and $F_{ \mathsf{e} }^{ \prime }$ are appropriate for $f_{ \mathsf{b} \mathsf{x} }$ and $f_{ \mathsf{by} } .$ If different values are applicable, Equation (6.23), or other rational analysis, should be used instead of Equation (6.20):
 
-$$\frac{f_{\mathrm{a}}}{F_{\mathrm{a}}} + \frac{\sqrt{\left(\frac{C_{\mathrm{m x}} f_{\mathrm{b x}}}{1 - \frac{f_{\mathrm{a}}}{F_{\mathrm{e x}}^{\prime}}}\right)^{2} + \left(\frac{C_{\mathrm{m y}} f_{\mathrm{b y}}}{1 - \frac{f_{\mathrm{a}}}{F_{\mathrm{e y}}^{\prime}}}\right)^{2}}}{F_{\mathrm{b}}} \leq 1. 0 \tag{6.23}$$
+$$\frac{f_{\mathrm{a}}}{F_{\mathrm{a}}} + \frac{\sqrt{\left(\frac{C_{\mathrm{mx}} f_{\mathrm{bx}}}{1 - \frac{f_{\mathrm{a}}}{F_{\mathrm{ex}}^{\prime}}}\right)^{2} + \left(\frac{C_{\mathrm{my}} f_{\mathrm{by}}}{1 - \frac{f_{\mathrm{a}}}{F_{\mathrm{ey}}^{\prime}}}\right)^{2}}}{F_{\mathrm{b}}} \leq 1.0 \tag{6.23}$$
 
 6.3.2.2 Cylindrical Piles
 
 Column buckling tendencies should be considered for piling below the mudline. Overall column buckling is normally not a problem in pile design, because even soft soils help to inhibit overall column buckling. However, when laterally loaded pilings are subjected to significant axial loads, the load deflection （$P - \varDelta )$ effect should be considered in stress computations. An effective method of analysis is to model the pile as a beam column on an inelastic foundation. When such an analysis is utilized, the following interaction check shown in Equation (6.24), with the one-third increase where applicable, should be used:
 
-$$\frac{f_{\mathrm{a}}}{0 . 6 F_{\mathrm{x c}}} + \frac{\sqrt{f_{\mathrm{b x}}^{2} + f_{\mathrm{b y}}^{2}}}{F_{\mathrm{b}}} \leq 1. 0 \tag{6.24}$$
+$$\frac{f_{\mathrm{a}}}{0.6 F_{\mathrm{xc}}} + \frac{\sqrt{f_{\mathrm{bx}}^{2} + f_{\mathrm{by}}^{2}}}{F_{\mathrm{b}}} \leq 1.0 \tag{6.24}$$
 
-where $F_{ \mathsf{ x c } }$ is given by Equation (6.5).
+where $F_{ \mathsf{xc} }$ is given by Equation (6.5).
 
 6.3.2.3 Pile Overload Analysis
 
 For overload analysis of the structural foundation system under lateral loads (see 9.8), the following interaction equation may be used to check piling members:
 
-$$\frac{P / A}{F_{\mathrm{x c}}} + \frac{2}{\pi} \left[ \arcsin \left(\frac{M / Z}{F_{\mathrm{x c}}}\right) \right] \leq 1. 0 \tag{6.25}$$
+$$\frac{P / A}{F_{\mathrm{xc}}} + \frac{2}{\pi} \left[ \arcsin \left(\frac{M / Z}{F_{\mathrm{xc}}}\right) \right] \leq 1.0 \tag{6.25}$$
 
 where the arcsin term is in radians and
 
-A is the cross-sectional area, $\mathsf{ m }^{ 2 } ( \mathsf{ i n } .^{ 2 } )$ ;
+A is the cross-sectional area, $\mathsf{m}^{ 2 } ( \mathsf{in} .^{ 2 } )$ ;
 
-Z is the plastic section modulus, ${ \mathsf{ m } }^{ 3 } ( \mathsf{ i n } .^{ 3 } ) ;$
+Z is the plastic section modulus, ${ \mathsf{m} }^{ 3 } ( \mathsf{in} .^{ 3 } ) ;$
 
 P, M are the axial loading and bending moment computed from a nonlinear analysis, including the (P – Δ) effect;
 
-$F_{ \mathsf{ x c } }$ is the critical local buckling stress from Equation (6.5) with a limiting value of $1 . 2 F_{ \mathrm{ y } }$ considering the effect of strain hardening.
+$F_{ \mathsf{xc} }$ is the critical local buckling stress from Equation (6.5) with a limiting value of $1.2 F_{ \mathrm{y} }$ considering the effect of strain hardening.
 
 Load redistribution between piles and along a pile may be considered.
 
@@ -2329,27 +2271,27 @@ Determination of the slenderness ratio $K l / r$ for cylindrical compression mem
 
 6.3.2.5 Reduction Factor
 
-Values of the reduction factor $C_{ \mathsf{ m } }$ referred to in Table 6.1 are as follows (with terms as defined by AISC 335-89):
+Values of the reduction factor $C_{ \mathsf{m} }$ referred to in Table 6.1 are as follows (with terms as defined by AISC 335-89):
 
 a) 0.85;   
-b) $0 . 6 - 0 . 4 \Biggl ( { \frac{ M_{ 1 } } { M_{ 2 } } } \Biggr )$ , but not less than 0.4, nor more than 0.85;   
-c) $1 - 0 . 4 { \left( \frac{ f_{ \mathsf{ a } } } { F_{ \mathsf{ e } }^{ \prime } } \right) }$ , or 0.85, whichever is less.
+b) $0.6 - 0.4 \Biggl ( { \frac{ M_{ 1 } } { M_{ 2 } } } \Biggr )$ , but not less than 0.4, nor more than 0.85;   
+c) $1 - 0.4 { \left( \frac{ f_{ \mathsf{a} } } { F_{ \mathsf{e} }^{ \prime } } \right) }$ , or 0.85, whichever is less.
 
 6.3.3 Combined Axial Tension and Bending
 
-Cylindrical members subjected to combined tension and bending shall be proportioned to satisfy Equation (6.21) at all points along their length, where $f_{ \mathsf{ b x } }$ and $f_{ \mathsf{ b y } }$ are the computed bending tensile stresses.
+Cylindrical members subjected to combined tension and bending shall be proportioned to satisfy Equation (6.21) at all points along their length, where $f_{ \mathsf{bx} }$ and $f_{ \mathsf{by} }$ are the computed bending tensile stresses.
 
 6.3.4 Axial Tension and Hydrostatic Pressure
 
 When member longitudinal tensile stresses and hoop compressive stresses (collapse) occur simultaneously, the following interaction equation shall be satisfied:
 
-$$A^{2} + B^{2} + 2 \nu | A | B \leq 1. 0 \tag{6.26}$$
+$$A^{2} + B^{2} + 2 \nu | A | B \leq 1.0 \tag{6.26}$$
 
 where
 
-$$A = \frac{f_{\mathrm{a}} + f_{\mathrm{b}} - (0 . 5 f_{\mathrm{h}})^{(\text{s e e F o o t n o t e} 3)}}{F_{\mathrm{y}}} \times \left(\mathrm{S F}_{\mathrm{x}}\right)$$
+$$A = \frac{f_{\mathrm{a}} + f_{\mathrm{b}} - (0.5 f_{\mathrm{h}})^{(\text{see Footnote} 3)}}{F_{\mathrm{y}}} \times \left(\mathrm{SF}_{\mathrm{x}}\right)$$
 
-Table 6.1—Values of K and $c_{ \mathbf{ m } }$ for Various Member Situations   
+Table 6.1—Values of K and $C_{\mathrm{m}}$ for Various Member Situations   
 
 
 
@@ -2371,60 +2313,62 @@ Table 6.1—Values of K and $c_{ \mathbf{ m } }$ for Various Member Situations
 | Longer segment length of X-braces | 0.9 | See 6.3.2.5 c) |
 | Secondary horizontals | 0.7 | See 6.3.2.5 c) |
 | Deck truss chord members | 1.0 | See 6.3.2.5 a), b), or c) c) |
-| For K-braces and X-braces, at least one pair of members framing into a joint shall be in tension if the joint is not braced out-of-plane. | For K-braces and X-braces, at least one pair of members framing into a joint shall be in tension if the joint is not braced out-of-plane. | For K-braces and X-braces, at least one pair of members framing into a joint shall be in tension if the joint is not braced out-of-plane. |
-| a Defined in 6.3.2.5.b Use Figure C-C2.2 in commentary of AISC 335-89. This may be modified to account for conditions different from those assumed in developing the chart.c Whichever is more applicable to a specific situation. | a Defined in 6.3.2.5.b Use Figure C-C2.2 in commentary of AISC 335-89. This may be modified to account for conditions different from those assumed in developing the chart.c Whichever is more applicable to a specific situation. | a Defined in 6.3.2.5.b Use Figure C-C2.2 in commentary of AISC 335-89. This may be modified to account for conditions different from those assumed in developing the chart.c Whichever is more applicable to a specific situation. |
+
+For K-braces and X-braces, at least one pair of members framing into a joint shall be in tension if the joint is not braced out-of-plane.
+
+a Defined in 6.3.2.5.b Use Figure C-C2.2 in commentary of AISC 335-89. This may be modified to account for conditions different from those assumed in developing the chart.c Whichever is more applicable to a specific situation.
 
 
 
 the term “A” shall reflect the maximum tensile stress combination,
 
-$$B = \left(\frac{f_{\mathrm{h}}}{F_{\mathrm{h c}}}\right) \times \left(\mathrm{S F}_{\mathrm{h}}\right)$$
+$$B = \left(\frac{f_{\mathrm{h}}}{F_{\mathrm{hc}}}\right) \times \left(\mathrm{SF}_{\mathrm{h}}\right)$$
 
 ν is Poisson’s ratio, equal to 0.3;
 
-$F_{ \mathsf{ y } }$ is the yield strength, MPa (ksi);
+$F_{ \mathsf{y} }$ is the yield strength, MPa (ksi);
 
-$f_{ \mathsf{ a } }$ is the absolute value of acting axial stress, MPa (ksi);
+$f_{ \mathsf{a} }$ is the absolute value of acting axial stress, MPa (ksi);
 
-$f_{ \mathsf{ b } }$ is the absolute value of acting resultant bending stress, MPa (ksi);
+$f_{ \mathsf{b} }$ is the absolute value of acting resultant bending stress, MPa (ksi);
 
-$f_{ \natural }$ is the absolute value of hoop compression stress MPa (ksi);
+$f_{\mathrm{h}}$ is the absolute value of hoop compression stress MPa (ksi);
 
-$F_{ \mathsf{ h c } }$ is the critical hoop stress [see Equation (6.18)];
+$F_{ \mathsf{hc} }$ is the critical hoop stress [see Equation (6.18)];
 
-$\operatorname{ S F }_{ \mathsf{ X } }$ is the safety factor for axial tension (see 6.3.6);
+$\operatorname{SF}_{ \mathsf{X} }$ is the safety factor for axial tension (see 6.3.6);
 
-$\mathrm{ S F }_{ \mathsf{ h } }$ is the safety factor for hoop compression (see 6.3.6).
+$\mathrm{SF}_{ \mathsf{h} }$ is the safety factor for hoop compression (see 6.3.6).
 
 6.3.5 Axial Compression and Hydrostatic Pressure
 
 When longitudinal compressive stresses and hoop compressive stresses occur simultaneously, the following equations shall be satisfied:
 
-$$\frac{f_{\mathrm{a}} + \left(0 . 5 f_{\mathrm{h}}\right)^{(\text{s e e F o o t n o t e} 3)}}{F_{\mathrm{x c}}} \times \left(\mathrm{S F}_{\mathrm{x}}\right) + \frac{f_{\mathrm{b}}}{f_{\mathrm{y}}} \left(\mathrm{S F}_{\mathrm{b}}\right) \leq 1. 0 \tag{6.27}$$
+$$\frac{f_{\mathrm{a}} + \left(0.5 f_{\mathrm{h}}\right)^{(\text{see Footnote} 3)}}{F_{\mathrm{xc}}} \times \left(\mathrm{SF}_{\mathrm{x}}\right) + \frac{f_{\mathrm{b}}}{f_{\mathrm{y}}} \left(\mathrm{SF}_{\mathrm{b}}\right) \leq 1.0 \tag{6.27}$$
 
-$$\mathrm{S F}_{\mathrm{h}} \times \frac{f_{\mathrm{h}}}{F_{\mathrm{h c}}} \leq 1. 0 \tag{6.28}$$
+$$\mathrm{SF}_{\mathrm{h}} \times \frac{f_{\mathrm{h}}}{F_{\mathrm{hc}}} \leq 1.0 \tag{6.28}$$
 
 Equation (6.27) should reflect the maximum compressive stress combination.
 
-The following equation should also be satisfied when $f_{ \mathsf{ X } } > 0 . 5 F_{ \mathsf{ h a } }$
+The following equation should also be satisfied when $f_{ \mathsf{X} } > 0.5 F_{ \mathsf{ha} }$
 
-$$\frac{f_{\mathrm{x}} - 0 . 5 F_{\mathrm{h a}}}{F_{\mathrm{a a}} - 0 . 5 F_{\mathrm{h a}}} + \left(\frac{f_{\mathrm{h}}}{F_{\mathrm{h a}}}\right)^{2} \leq 1. 0 \tag{6.29}$$
+$$\frac{f_{\mathrm{x}} - 0.5 F_{\mathrm{ha}}}{F_{\mathrm{aa}} - 0.5 F_{\mathrm{ha}}} + \left(\frac{f_{\mathrm{h}}}{F_{\mathrm{ha}}}\right)^{2} \leq 1.0 \tag{6.29}$$
 
 where
 
-$$F_{a a} = \frac{F_{\mathrm{x e}}}{\mathrm{S F}_{\mathrm{x}}}$$
+$$F_{a a} = \frac{F_{\mathrm{xe}}}{\mathrm{SF}_{\mathrm{x}}}$$
 
-$$F_{\mathrm{h a}} = \frac{F_{\mathrm{h e}}}{\mathrm{S F}_{\mathrm{h}}}$$
+$$F_{\mathrm{ha}} = \frac{F_{\mathrm{he}}}{\mathrm{SF}_{\mathrm{h}}}$$
 
-$\operatorname{ S F }_{ \mathsf{ x } }$ is the safety factor for axial compression (see 6.3.6);
+$\operatorname{SF}_{ \mathsf{x} }$ is the safety factor for axial compression (see 6.3.6);
 
-$\operatorname{ S F }_{ \mathbf{ b } }$ is the safety factor for bending (see 6.3.6);
+$\operatorname{SF}_{ \mathbf{b} }$ is the safety factor for bending (see 6.3.6);
 
-$\begin{array} { r l } { f_{ \mathsf{ X } } } & { { } = f_{ \mathsf{ a } } + f_{ \mathsf{ b } } + ( 0 . 5 f_{ \mathsf{ h } } )^{ ( \mathsf{ s e e } } } \end{array}$ Footnote 3); $f_{ \mathsf{ x } }$ should reflect the maximum compressive stress combination.
+$f_{\mathrm{x}}=f_{\mathrm{a}}+f_{\mathrm{b}}+(0.5f_{\mathrm{h}})^{\text{(see Footnote 3)}}$; $f_{\mathrm{x}}$ should reflect the maximum compressive stress combination.
 
-$F_{ \mathsf{ x e } } , F_{ \mathsf{ x c } } , F_{ \mathsf{ h e } }$ , and $F_{ \mathrm{ h c } }$ are given by Equations (6.4), (6.5), (6.16), and (6.18), respectively. The remaining terms are defined in 6.3.4.
+$F_{ \mathsf{xe} } , F_{ \mathsf{xc} } , F_{ \mathsf{he} }$ , and $F_{ \mathrm{hc} }$ are given by Equations (6.4), (6.5), (6.16), and (6.18), respectively. The remaining terms are defined in 6.3.4.
 
-$1 \mathsf{ f } f_{ \mathsf{ b } } > f_{ \mathsf{ a } } + 0 . 5 f_{ \mathsf{ h } } ,$ both Equation (6.26) and Equation (6.27) shall be satisfied.
+If $f_{\mathrm{b}}>f_{\mathrm{a}}+0.5f_{\mathrm{h}}$, both Equation (6.26) and Equation (6.27) shall be satisfied.
 
 6.3.6 Safety Factors
 
@@ -2439,7 +2383,8 @@ Table 6.2—Safety Factors
 | Design Condition | Axial Tension | Bending | Axial Comp. a | Hoop Comp. |
 | 1) Where the basic allowable stresses would be used, for example, pressures that will definitely be encountered during the installation or life of the structure. | 1.67 | Fy/Fb b | 1.67 to 2.0 | 2.0 |
 | 2) Where the one-third increase in allowable stresses is appropriate, for example, when considering interaction with storm loads. | 1.25 | Fy/1.33Fb | 1.25 to 1.5 | 1.5 |
-| a The value used should not be less than the AISC 335-89 safety factor for column buckling under axial. b The safety factor with respect to the ultimate stress is equal to 1.67 and illustrated in Figure B.6.3. | a The value used should not be less than the AISC 335-89 safety factor for column buckling under axial. b The safety factor with respect to the ultimate stress is equal to 1.67 and illustrated in Figure B.6.3. | a The value used should not be less than the AISC 335-89 safety factor for column buckling under axial. b The safety factor with respect to the ultimate stress is equal to 1.67 and illustrated in Figure B.6.3. | a The value used should not be less than the AISC 335-89 safety factor for column buckling under axial. b The safety factor with respect to the ultimate stress is equal to 1.67 and illustrated in Figure B.6.3. | a The value used should not be less than the AISC 335-89 safety factor for column buckling under axial. b The safety factor with respect to the ultimate stress is equal to 1.67 and illustrated in Figure B.6.3. |
+
+a The value used should not be less than the AISC 335-89 safety factor for column buckling under axial. b The safety factor with respect to the ultimate stress is equal to 1.67 and illustrated in Figure B.6.3.
 
 
 
@@ -2453,11 +2398,11 @@ The recommendations in this section may be applied to a concentric cone frustum 
 
 6.4.1.2 Cone Section Properties
 
-The cone section properties should be chosen to satisfy the axial and bending stresses at each end of the cone. The nominal axial and bending stresses at any section in a cone transition are given approximately by （$f_{ \mathsf{ a } }^{ } + f_{ \mathsf{ b } }^{ } ) / { \mathsf{ c o s } } a$ , where α equals one-half the projected apex angle of the cone (see Figure 6.1 and Table 6.3) and $f_{ \mathsf{ a } }$ and $f_{ \mathsf{ b } }$ are the nominal axial and bending stresses computed using the section properties of an equivalent cylinder with diameter and thickness equal to the cone diameter and thickness at the section.
+The cone section properties should be chosen to satisfy the axial and bending stresses at each end of the cone. The nominal axial and bending stresses at any section in a cone transition are given approximately by $(f_{\mathrm{a}}+f_{\mathrm{b}})/\cos\alpha$ , where α equals one-half the projected apex angle of the cone (see Figure 6.1 and Table 6.3) and $f_{ \mathsf{a} }$ and $f_{ \mathsf{b} }$ are the nominal axial and bending stresses computed using the section properties of an equivalent cylinder with diameter and thickness equal to the cone diameter and thickness at the section.
 
 6.4.1.3 Local Buckling
 
-For local buckling under axial compression and bending, conical transitions with an apex angle less than $60^{ \circ }$ may be considered as equivalent cylinders with diameter equal to D/cosα, where D is the cone diameter at the point under consideration. This diameter is used in Equation (6.5) to determine $F_{ \mathsf{ x c } } .$ For cones of constant thickness, using the diameter at the small end of the cone would be conservative.
+For local buckling under axial compression and bending, conical transitions with an apex angle less than $60^{ \circ }$ may be considered as equivalent cylinders with diameter equal to D/cosα, where D is the cone diameter at the point under consideration. This diameter is used in Equation (6.5) to determine $F_{ \mathsf{xc} } .$ For cones of constant thickness, using the diameter at the small end of the cone would be conservative.
 
 ![](API_RP_2A-WSD_22nd/chunk1_a24e4a330389ee0695e5dc416c84c2c0d4e73409b7acdc28cbda9290236c14e1.jpg)  
 Figure 6.1—Example Conical Transition
@@ -2476,7 +2421,8 @@ Table 6.3—Limiting Angle α for Conical Transitions
 | 24 | 16.4 | 9.1 |
 | 18 | 18.7 | 10.5 |
 | 12 | 22.5 | 12.8 |
-| A cone-cylinder junction that does not satisfy the above criteria may be strengthened either by increasing the cylinder and cone wall thickness at the junction, or by providing a stiffening ring at the junction. | A cone-cylinder junction that does not satisfy the above criteria may be strengthened either by increasing the cylinder and cone wall thickness at the junction, or by providing a stiffening ring at the junction. | A cone-cylinder junction that does not satisfy the above criteria may be strengthened either by increasing the cylinder and cone wall thickness at the junction, or by providing a stiffening ring at the junction. |
+
+A cone-cylinder junction that does not satisfy the above criteria may be strengthened either by increasing the cylinder and cone wall thickness at the junction, or by providing a stiffening ring at the junction.
 
 
 
@@ -2490,7 +2436,7 @@ Cone-cylinder junctions are subject to unbalanced radial forces due to longitudi
 
 In lieu of detailed analysis, the localized bending stress at an unstiffened cone-cylinder junction may be estimated, based on results presented in Reference [170] from:
 
-$$f_{\mathrm{b}}^{\prime} = \frac{0 . 6 t \sqrt{D \left(t + t_{\mathrm{c}}\right)}}{t_{\mathrm{e}}^{2}} \left(f_{\mathrm{a}} + f_{\mathrm{b}}\right) \tan \alpha \tag{6.30}$$
+$$f_{\mathrm{b}}^{\prime} = \frac{0.6 t \sqrt{D \left(t + t_{\mathrm{c}}\right)}}{t_{\mathrm{e}}^{2}} \left(f_{\mathrm{a}} + f_{\mathrm{b}}\right) \tan \alpha \tag{6.30}$$
 
 where
 
@@ -2498,27 +2444,27 @@ D is the cylinder diameter at junction, in m (in.);
 
 t is the cylinder thickness, in m (in.);
 
-$t_{ \mathsf{ C } }$ t c is the cone thickness, in m (in.);
+$t_{\mathrm{c}}$ is the cone thickness, in m (in.);
 
-$t_{ \mathsf{ e } }$ is the t for stress in cylinder section or $t_{ \mathsf{ c } }$ for stress in cone section, in MPa (ksi);
+$t_{ \mathsf{e} }$ is the t for stress in cylinder section or $t_{ \mathsf{c} }$ for stress in cone section, in MPa (ksi);
 
-$f_{ \mathsf{ a } }$ is the acting axial stress in cylinder section at junction, in MPa (ksi);
+$f_{ \mathsf{a} }$ is the acting axial stress in cylinder section at junction, in MPa (ksi);
 
-$f_{ \mathsf{ b } }$ is the acting resultant bending stress in cylinder section at junction, in $\mathsf{ M P a }$ (ksi);
+$f_{ \mathsf{b} }$ is the acting resultant bending stress in cylinder section at junction, in $\mathsf{MPa}$ (ksi);
 
 α is one-half the apex angle of the cone, in degrees.
 
-For strength requirements, the total stress （$f_{ \mathsf{ a } } + f_{ \mathsf{ b } } + f_{ \mathsf{ b } }^{ \prime } )$ should be limited to the minimum tensile strength of the cone and cylinder material, with $f_{ \mathsf{ a } } + f_{ \mathsf{ b } }$ limited to the appropriate allowable stress. For fatigue considerations, the cone-cylinder junction should satisfy the requirements of Section 8 with a SCF equal to $1 + f_{ \mathrm{ b } }^{ \prime } / ( f_{ \mathrm{ a } }^{ \prime } + f_{ \mathrm{ b } } )$ , where $f_{ \mathsf{ b } }^{ \prime }$ is given by Equation (6.30). For equal cylinder and cone wall thicknesses, the SCF is equal to $1 + 0 . 6 \sqrt{ 2 D / t }$ tan α .
+For strength requirements, the total stress （$f_{ \mathsf{a} } + f_{ \mathsf{b} } + f_{ \mathsf{b} }^{ \prime } )$ should be limited to the minimum tensile strength of the cone and cylinder material, with $f_{ \mathsf{a} } + f_{ \mathsf{b} }$ limited to the appropriate allowable stress. For fatigue considerations, the cone-cylinder junction should satisfy the requirements of Section 8 with a SCF equal to $1 + f_{ \mathrm{b} }^{ \prime } / ( f_{\mathrm{a}} + f_{ \mathrm{b} } )$ , where $f_{ \mathsf{b} }^{ \prime }$ is given by Equation (6.30). For equal cylinder and cone wall thicknesses, the SCF is equal to $1 + 0.6 \sqrt{ 2 D / t }$ tan α .
 
 6.4.1.4.3 Hoop Stress
 
 The hoop stress caused by the unbalanced radial line load may be estimated from:
 
-$$f_{\mathrm{h}}^{\prime} = 0. 45 \sqrt{\frac{D}{t}} \left(f_{\mathrm{a}} + f_{\mathrm{b}}\right) \tan \alpha \tag{6.31}$$
+$$f_{\mathrm{h}}^{\prime} = 0.45 \sqrt{\frac{D}{t}} \left(f_{\mathrm{a}} + f_{\mathrm{b}}\right) \tan \alpha \tag{6.31}$$
 
-where the terms are as defined in 6.4.1.4.2. For hoop tension, $f_{ \mathsf{ h } }^{ \prime }$ should be limited to $0 . 6 F_{ \mathrm{ v } } .$ For hoop compression, $f_{ \mathsf{ h } }^{ \prime }$ should be limited to $0 . 5 F_{ \mathrm{ h c } } .$ , where $F_{ \mathsf{ h c } }$ is computed using Equation (6.18) with $F_{ \mathsf{ h e } } = 0 . 4 E t / D$ . This suggested value of $F_{ \mathsf{ h e } }$ is based on results presented in Reference [171].
+where the terms are as defined in 6.4.1.4.2. For hoop tension, $f_{ \mathsf{h} }^{ \prime }$ should be limited to $0.6 F_{\mathrm{y}} .$ For hoop compression, $f_{ \mathsf{h} }^{ \prime }$ should be limited to $0.5 F_{ \mathrm{hc} } .$ , where $F_{ \mathsf{hc} }$ is computed using Equation (6.18) with $F_{ \mathsf{he} } = 0.4 E t / D$ . This suggested value of $F_{ \mathsf{he} }$ is based on results presented in Reference [171].
 
-Based on the strength requirements of Equations (6.30) and (6.31), limiting cone transition angles can be derived below in which no stiffening is required to withstand the cone-cylinder junction stresses. For example, Table 6.3 of limiting cone transition angles is derived for equal cone and cylinder wall thicknesses, $F_{ \mathsf{ y } } \leq 415 ~ \mathsf{ M P a }$ (60 ksi), and the corresponding minimum tensile strengths given in Table 11.1. The limiting angles in the table represent the smaller of the two angles evaluated by satisfying the strength requirements of Equations (6.30) and (6.31). The limiting angles in the table were governed by Equation (6.30). The limiting angles for the normal condition apply to design cases where basic allowable stresses are used. While elastic HSSs are notionally at the ultimate tensile strength, limit analysis indicates that plastic section modulus and load redistribution provide sufficient reserve strength so that transitions with these angles can develop the full yield capacity of the cylinder. If the steels used at the transition have sufficient ductility to develop this reserve strength, similar to joint cans, these same angles may be applied to load cases in which allowable stresses are increased by one third.
+Based on the strength requirements of Equations (6.30) and (6.31), limiting cone transition angles can be derived below in which no stiffening is required to withstand the cone-cylinder junction stresses. For example, Table 6.3 of limiting cone transition angles is derived for equal cone and cylinder wall thicknesses, $F_{ \mathsf{y} } \leq 415 ~ \mathsf{MPa}$ (60 ksi), and the corresponding minimum tensile strengths given in Table 11.1. The limiting angles in the table represent the smaller of the two angles evaluated by satisfying the strength requirements of Equations (6.30) and (6.31). The limiting angles in the table were governed by Equation (6.30). The limiting angles for the normal condition apply to design cases where basic allowable stresses are used. While elastic HSSs are notionally at the ultimate tensile strength, limit analysis indicates that plastic section modulus and load redistribution provide sufficient reserve strength so that transitions with these angles can develop the full yield capacity of the cylinder. If the steels used at the transition have sufficient ductility to develop this reserve strength, similar to joint cans, these same angles may be applied to load cases in which allowable stresses are increased by one third.
 
 The limiting angles for the extreme condition have been derived on the more conservative basis that the allowable HSS at the transition continues to be the ultimate tensile strength, while allowable stresses in the cylinder have been increased by one-third. This also reduces the SCF from 2.22 to 1.67. The fatigue strength of the cone-cylinder junction should be checked in accordance with the requirements of Section 8.
 
@@ -2534,21 +2480,21 @@ where
 
 D is the cylinder diameter at junction, m (in.);
 
-$D_{ \mathsf{ c } }$ is the diameter to centroid of composite ring section, m (in.) (see Note 3);
+$D_{ \mathsf{c} }$ is the diameter to centroid of composite ring section, m (in.) (see Note 3);
 
-$A_{ \mathsf{ c } }$ is the cross-sectional area of composite ring section, $\mathsf{ m }^{ 2 } ( \mathsf{ i n } .^{ 2 } ) ;$
+$A_{ \mathsf{c} }$ is the cross-sectional area of composite ring section, $\mathsf{m}^{ 2 } ( \mathsf{in} .^{ 2 } ) ;$
 
-$I_{ \mathsf{ c } }$ is the moment of inertia of composite ring section, $\mathsf{ m }^{ 4 } ( \mathsf{ i } \mathsf{ n } . { }^{ 4 } )$
+$I_{ \mathsf{c} }$ is the moment of inertia of composite ring section, $\mathsf{m}^{ 4 } ( \mathsf{i} \mathsf{n} .{ }^{ 4 } )$
 
-In computing $A_{ \mathsf{ c } }$ and $I_{ \mathsf{ c } } ,$ the effective width of shell wall acting as a flange for the composite ring section may be computed from:
+In computing $A_{ \mathsf{c} }$ and $I_{ \mathsf{c} } ,$ the effective width of shell wall acting as a flange for the composite ring section may be computed from:
 
-$$b_{\mathrm{e}} = 0. 55 \left(\sqrt{D t} + \sqrt{D t_{\mathrm{c}}}\right) \tag{6.34}$$
+$$b_{\mathrm{e}} = 0.55 \left(\sqrt{D t} + \sqrt{D t_{\mathrm{c}}}\right) \tag{6.34}$$
 
-NOTE 1 Where the one-third increase is applicable, the required section properties $A_{ \mathsf{ c } }$ and $I_{ \mathsf{ c } }$ may be reduced by 25 %.
+NOTE 1 Where the one-third increase is applicable, the required section properties $A_{ \mathsf{c} }$ and $I_{ \mathsf{c} }$ may be reduced by 25 %.
 
-NOTE 2 For flat bar stiffeners, the minimum dimensions should be 10 mm × 76 mm （$^{ 3 } / 8 \ \mathrm{ i n . } \ \times 3 \ \mathrm{ i n . } )$ for internal rings and 13 mm × 102 mm (1/2 in. × 4 in.) for external rings.
+NOTE 2 For flat bar stiffeners, the minimum dimensions should be 10 mm × 76 mm （$^{ 3 } / 8 \ \mathrm{in.} \ \times 3 \ \mathrm{in.} )$ for internal rings and 13 mm × 102 mm (1/2 in. × 4 in.) for external rings.
 
-NOTE 3 For internal rings, D should be used instead of $D_{ \mathsf{ c } }$ in Equation (6.33).
+NOTE 3 For internal rings, D should be used instead of $D_{ \mathsf{c} }$ in Equation (6.33).
 
 6.4.2 Hydrostatic Pressure
 
@@ -2562,33 +2508,33 @@ Unstiffened conical transitions or cone sections between rings of stiffened cone
 
 6.4.2.3 Intermediate Stiffening Rings
 
-If required, circumferential stiffening rings within cone transitions may be sized using Equation (6.19) with an equivalent diameter equal to D∕cosα, where D is the cone diameter at the ring, t is the cone thickness, L is the average distance to adjacent rings along the cone axis, and $F_{ \mathsf{ h e } }$ is the average of the elastic hoop buckling stress values computed for the two adjacent bays.
+If required, circumferential stiffening rings within cone transitions may be sized using Equation (6.19) with an equivalent diameter equal to D∕cosα, where D is the cone diameter at the ring, t is the cone thickness, L is the average distance to adjacent rings along the cone axis, and $F_{ \mathsf{he} }$ is the average of the elastic hoop buckling stress values computed for the two adjacent bays.
 
 6.4.2.4 Cone-cylinder Junction Rings
 
 Circumferential stiffening rings required at the cone-cylinder junctions should be sized such that the moment of inertia of the composite ring section satisfies the following equation:
 
-$$I_{\mathrm{c}} = \frac{D^{2}}{16 E} \left(t L_{1} F_{\mathrm{h e}} + \frac{t_{\mathrm{c}} L_{\mathrm{c}} F_{\mathrm{h e c}}}{\cos^{2} \alpha}\right) \tag{6.35}$$
+$$I_{\mathrm{c}} = \frac{D^{2}}{16 E} \left(t L_{1} F_{\mathrm{he}} + \frac{t_{\mathrm{c}} L_{\mathrm{c}} F_{\mathrm{hec}}}{\cos^{2} \alpha}\right) \tag{6.35}$$
 
 where
 
-$I_{ \mathsf{ c } }$ is the moment of inertia of composite ring section with effective width of flange computed from Equation (6.34), in $\mathsf{ m }^{ 4 } ( \mathsf{ i } \mathsf{ n } .^{ 4 } ) ;$ ;
+$I_{ \mathsf{c} }$ is the moment of inertia of composite ring section with effective width of flange computed from Equation (6.34), in $\mathsf{m}^{ 4 } ( \mathsf{i} \mathsf{n} .^{ 4 } );$
 
 D is the diameter of cylinder at junction, m (in.) (see Note 2);
 
 t is the cylinder thickness, in m (in.);
 
-$t_{ \mathsf{ C } }$ is the cone thickness, in m (in.);
+$t_{ \mathsf{C} }$ is the cone thickness, in m (in.);
 
-$L_{ \mathsf{ c } }$ is the distance to first stiffening ring in cone section along cone axis, in m (in.);
+$L_{ \mathsf{c} }$ is the distance to first stiffening ring in cone section along cone axis, in m (in.);
 
 $L_{ 1 }$ is the distance to first stiffening ring in cylinder section, in m (in.);
 
-$F_{ \mathsf{ h e } }$ is the elastic hoop buckling stress for cylinder, in MPa (ksi);
+$F_{ \mathsf{he} }$ is the elastic hoop buckling stress for cylinder, in MPa (ksi);
 
-$F_{ \mathsf{ h e c } }$ is the $F_{ \mathsf{ h e } }$ for cone section treated as an equivalent cylinder, in MPa (ksi).
+$F_{ \mathsf{hec} }$ is the $F_{ \mathsf{he} }$ for cone section treated as an equivalent cylinder, in MPa (ksi).
 
-NOTE 1 A junction ring is not required for hydrostatic collapse if Equation (6.13) is satisfied with $F_{ \mathsf{ h e } }$ computed using $C_{ \mathsf{ h } } = 0 . 44 ( t / D )$ )cosα in Equation (6.16), where D is the cylinder diameter at the junction.
+NOTE 1 A junction ring is not required for hydrostatic collapse if Equation (6.13) is satisfied with $F_{ \mathsf{he} }$ computed using $C_{\mathrm{h}}=0.44(t/D)\cos\alpha$ in Equation (6.16), where D is the cylinder diameter at the junction.
 
 NOTE 2 For external rings, D in Equation (6.35) should be taken to the centroid of the composite ring.
 
@@ -2630,7 +2576,7 @@ For earthquake loading (see 5.3.6.5.1) and for L-2 platforms not analyzed for ro
 
 The effective strength of the brace is defined as the yield load of the brace for braces loaded primarily in tension or the ultimate buckling load of the brace for braces loaded primarily in compression. Inelasticity should be considered in the calculation of the ultimate buckling load. The effective strength calculations should be based on the nominal material and geometric properties of the brace, not of the brace stub (should one exist).
 
-For the purposes of this requirement, the chord capacity shall be determined using Equation (7.1) with a factor of safety (FS) equal to 1.0. The strength factor （$\varrho_{ \mathsf{ u } } )$ and the chord load factor (Qf) shall be consistent with the design load condition being considered.
+For the purposes of this requirement, the chord capacity shall be determined using Equation (7.1) with a factor of safety (FS) equal to 1.0. The strength factor （$Q_{ \mathsf{u} } )$ and the chord load factor (Qf) shall be consistent with the design load condition being considered.
 
 Welds in connections at the ends of tubular members should be in accordance with 14.1.3 or should not be less than required to develop a capacity equal to the lesser of
 
@@ -2731,71 +2677,85 @@ Section B.7.3.1 discusses approaches that may be adopted for joints that fall ou
 
 Tubular joints without overlap of principal braces and having no gussets, diaphragms, grout, or stiffeners should be designed using the following guidelines.
 
-$$P_{\mathrm{a}} = Q_{\mathrm{u}} Q_{\mathrm{f}} \frac{F_{\mathrm{y c}} T^{2}}{\mathrm{F S} \sin \theta} \tag{7.1}$$
+$$P_{\mathrm{a}} = Q_{\mathrm{u}} Q_{\mathrm{f}} \frac{F_{\mathrm{yc}} T^{2}}{\mathrm{FS} \sin \theta} \tag{7.1}$$
 
-$$M_{\mathrm{a}} = Q_{\mathrm{u}} Q_{\mathrm{f}} \frac{F_{\mathrm{y c}} T^{2} d}{\mathrm{F S} \sin \theta} \tag{7.2}$$
+$$M_{\mathrm{a}} = Q_{\mathrm{u}} Q_{\mathrm{f}} \frac{F_{\mathrm{yc}} T^{2} d}{\mathrm{FS} \sin \theta} \tag{7.2}$$
 
 (plus one-third increase in both cases where applicable)
 
 where
 
-$P_{ \mathsf{ a } }$ is the allowable capacity for brace axial load;
+$P_{ \mathsf{a} }$ is the allowable capacity for brace axial load;
 
-$M_{ \mathbf{ a } }$ is the allowable capacity for brace bending moment;
+$M_{ \mathbf{a} }$ is the allowable capacity for brace bending moment;
 
-$F_{ \mathsf{ y c } }$ is the yield stress of the chord member at the joint (or 0.8 of the tensile strength, if less), in MPa (ksi);
+$F_{ \mathsf{yc} }$ is the yield stress of the chord member at the joint (or 0.8 of the tensile strength, if less), in MPa (ksi);
 
 FS is the safety factor, equal to 1.60.
 
-For joints with thickened cans, $P_{ \mathsf{ a } }$ shall not exceed the capacity limits defined in 7.3.5.
+For joints with thickened cans, $P_{ \mathsf{a} }$ shall not exceed the capacity limits defined in 7.3.5.
 
-For axially loaded braces with a classification that is a mixture of K-, Y-, and X-joints, take a weighted average of $P_{ \mathsf{ a } }$ based on the portion of each in the total load.
+For axially loaded braces with a classification that is a mixture of K-, Y-, and X-joints, take a weighted average of $P_{ \mathsf{a} }$ based on the portion of each in the total load.
 
-7.3.3 Strength Factor, $\varrho_{ \mathrm{ u } }$
+7.3.3 Strength Factor, $Q_{ \mathrm{u} }$
 
-$Q_{ \mathsf{ u } }$ varies with the joint and load type, as given in Table 7.2.
+$Q_{ \mathsf{u} }$ varies with the joint and load type, as given in Table 7.2.
 
 Where the working points of members at a gap connection are separated by more than D/4 along the chord centerline, or where a connection has simultaneously loaded branch members in more than one plane, the connection may be classified as a general or multiplanar connection, and designed as described in B.7.
 
-7.3.4 Chord Load Factor, $\varrho_{ \mathsf{ f } }$
+7.3.4 Chord Load Factor, $Q_{ \mathsf{f} }$
 
-$\mathcal{ Q }_{ \mathbf{ f } }$ is a factor to account for the presence of nominal loads in the chord.
+$\mathcal{ Q }_{ \mathbf{f} }$ is a factor to account for the presence of nominal loads in the chord.
 
-$$Q_{\mathrm{f}} = \left[ 1 + C_{1} \left(\frac{\mathrm{F S P}_{\mathrm{c}}}{P_{\mathrm{y}}}\right) - C_{2} \left(\frac{\mathrm{F S M}_{\mathrm{i p b}}}{M_{\mathrm{p}}}\right) - C_{3} A^{2} \right] \tag{7.3}$$
+$$Q_{\mathrm{f}} = \left[ 1 + C_{1} \left(\frac{\mathrm{FSP}_{\mathrm{c}}}{P_{\mathrm{y}}}\right) - C_{2} \left(\frac{\mathrm{FSM}_{\mathrm{ipb}}}{M_{\mathrm{p}}}\right) - C_{3} A^{2} \right] \tag{7.3}$$
 
-Table 7.2—Values for $\varrho_{ \mathrm{ u } }$   
+Table 7.2—Values for $Q_{ \mathrm{u} }$   
 
 
 
-| Joint Classification | Brace Load | Brace Load | Brace Load | Brace Load |
-| --- | --- | --- | --- | --- |
 | Joint Classification | Axial Tension | Axial Compression | In-Plane Bending | Out-of-plane Bending |
-| K | (16 + 1.2γ)β1.2Qg but ≤ 40β1.2Qg | (16 + 1.2γ)β1.2Qg but ≤ 40β1.2Qg | (5 + 0.7γ)β1.2 | 2.5 + (4.5 + 0.2γ)β2.6 |
-| T/Y | 30β | 2.8 + (20 + 0.8γ)β1.6 but ≤ 2.8 + 36β1.6 | (5 + 0.7γ)β1.2 | 2.5 + (4.5 + 0.2γ)β2.6 |
-| X | 23β for β ≤ 0.9 20.7 + (β - 0.9)(17γ - 220) for β > 0.9 | [2.8 + (12 + 0.1γ)β]Qβ | (5 + 0.7γ)β1.2 | 2.5 + (4.5 + 0.2γ)β2.6 |
-| NOTE 1 Qβ is a geometric factor defined by: Qβ = 0.3/β(1 - 0.833β) Qβ = 1.0 for β ≤ 0.6 | NOTE 1 Qβ is a geometric factor defined by: Qβ = 0.3/β(1 - 0.833β) Qβ = 1.0 for β ≤ 0.6 | NOTE 1 Qβ is a geometric factor defined by: Qβ = 0.3/β(1 - 0.833β) Qβ = 1.0 for β ≤ 0.6 | NOTE 1 Qβ is a geometric factor defined by: Qβ = 0.3/β(1 - 0.833β) Qβ = 1.0 for β ≤ 0.6 | NOTE 1 Qβ is a geometric factor defined by: Qβ = 0.3/β(1 - 0.833β) Qβ = 1.0 for β ≤ 0.6 |
-| NOTE 2 Qg is the gap factor defined by: Qg = 1 + 0.2 [1 - 2.8g/D]3 for g/D ≥ 0.05 but ≥ 1.0 Qg = 0.13 + 0.65Φγ0.5 for g/D ≤ -0.05 where Φ = tFyb/(TFyc) | NOTE 2 Qg is the gap factor defined by: Qg = 1 + 0.2 [1 - 2.8g/D]3 for g/D ≥ 0.05 but ≥ 1.0 Qg = 0.13 + 0.65Φγ0.5 for g/D ≤ -0.05 where Φ = tFyb/(TFyc) | NOTE 2 Qg is the gap factor defined by: Qg = 1 + 0.2 [1 - 2.8g/D]3 for g/D ≥ 0.05 but ≥ 1.0 Qg = 0.13 + 0.65Φγ0.5 for g/D ≤ -0.05 where Φ = tFyb/(TFyc) | NOTE 2 Qg is the gap factor defined by: Qg = 1 + 0.2 [1 - 2.8g/D]3 for g/D ≥ 0.05 but ≥ 1.0 Qg = 0.13 + 0.65Φγ0.5 for g/D ≤ -0.05 where Φ = tFyb/(TFyc) | NOTE 2 Qg is the gap factor defined by: Qg = 1 + 0.2 [1 - 2.8g/D]3 for g/D ≥ 0.05 but ≥ 1.0 Qg = 0.13 + 0.65Φγ0.5 for g/D ≤ -0.05 where Φ = tFyb/(TFyc) |
-| The overlap should preferably not be less than 0.25βD. Linear interpolation between the limiting values of the above two Qg expressions may be used for -0.05 < g/D < 0.05 when this is otherwise permissible or unavoidable. See B.7.3.3. Fyb = yield stress of brace or brace stub if present (or 0.8 times the tensile strength if less), in MPa (ksi) | The overlap should preferably not be less than 0.25βD. Linear interpolation between the limiting values of the above two Qg expressions may be used for -0.05 < g/D < 0.05 when this is otherwise permissible or unavoidable. See B.7.3.3. Fyb = yield stress of brace or brace stub if present (or 0.8 times the tensile strength if less), in MPa (ksi) | The overlap should preferably not be less than 0.25βD. Linear interpolation between the limiting values of the above two Qg expressions may be used for -0.05 < g/D < 0.05 when this is otherwise permissible or unavoidable. See B.7.3.3. Fyb = yield stress of brace or brace stub if present (or 0.8 times the tensile strength if less), in MPa (ksi) | The overlap should preferably not be less than 0.25βD. Linear interpolation between the limiting values of the above two Qg expressions may be used for -0.05 < g/D < 0.05 when this is otherwise permissible or unavoidable. See B.7.3.3. Fyb = yield stress of brace or brace stub if present (or 0.8 times the tensile strength if less), in MPa (ksi) | The overlap should preferably not be less than 0.25βD. Linear interpolation between the limiting values of the above two Qg expressions may be used for -0.05 < g/D < 0.05 when this is otherwise permissible or unavoidable. See B.7.3.3. Fyb = yield stress of brace or brace stub if present (or 0.8 times the tensile strength if less), in MPa (ksi) |
-| NOTE 3 The Qu term for tension loading is based on limiting the capacity to first crack. The Qu associated with full ultimate capacity of tension loaded Y- and X-joints is given in B.7. | NOTE 3 The Qu term for tension loading is based on limiting the capacity to first crack. The Qu associated with full ultimate capacity of tension loaded Y- and X-joints is given in B.7. | NOTE 3 The Qu term for tension loading is based on limiting the capacity to first crack. The Qu associated with full ultimate capacity of tension loaded Y- and X-joints is given in B.7. | NOTE 3 The Qu term for tension loading is based on limiting the capacity to first crack. The Qu associated with full ultimate capacity of tension loaded Y- and X-joints is given in B.7. | NOTE 3 The Qu term for tension loading is based on limiting the capacity to first crack. The Qu associated with full ultimate capacity of tension loaded Y- and X-joints is given in B.7. |
-| NOTE 4 The X-joint, axial tension, Qu term for β > 0.9 applies to coaxial braces (i.e. e/D ≤ 0.2 where e is the eccentricity of the two braces). If the braces are not coaxial (e/D > 0.2) then 23β should be used over the full range of β. | NOTE 4 The X-joint, axial tension, Qu term for β > 0.9 applies to coaxial braces (i.e. e/D ≤ 0.2 where e is the eccentricity of the two braces). If the braces are not coaxial (e/D > 0.2) then 23β should be used over the full range of β. | NOTE 4 The X-joint, axial tension, Qu term for β > 0.9 applies to coaxial braces (i.e. e/D ≤ 0.2 where e is the eccentricity of the two braces). If the braces are not coaxial (e/D > 0.2) then 23β should be used over the full range of β. | NOTE 4 The X-joint, axial tension, Qu term for β > 0.9 applies to coaxial braces (i.e. e/D ≤ 0.2 where e is the eccentricity of the two braces). If the braces are not coaxial (e/D > 0.2) then 23β should be used over the full range of β. | NOTE 4 The X-joint, axial tension, Qu term for β > 0.9 applies to coaxial braces (i.e. e/D ≤ 0.2 where e is the eccentricity of the two braces). If the braces are not coaxial (e/D > 0.2) then 23β should be used over the full range of β. |
+| --- | --- | --- | --- | --- |
+| K | $(16+1.2\gamma)\beta^{1.2}Q_{\mathrm{g}}$, but $\leq40\beta^{1.2}Q_{\mathrm{g}}$ | $(16+1.2\gamma)\beta^{1.2}Q_{\mathrm{g}}$, but $\leq40\beta^{1.2}Q_{\mathrm{g}}$ | $(5+0.7\gamma)\beta^{1.2}$ | $2.5+(4.5+0.2\gamma)\beta^{2.6}$ |
+| T/Y | $30\beta$ | $2.8+(20+0.8\gamma)\beta^{1.6}$, but $\leq2.8+36\beta^{1.6}$ | $(5+0.7\gamma)\beta^{1.2}$ | $2.5+(4.5+0.2\gamma)\beta^{2.6}$ |
+| X | $23\beta$ for $\beta\leq0.9$; $20.7+(\beta-0.9)(17\gamma-220)$ for $\beta>0.9$ | $[2.8+(12+0.1\gamma)\beta]Q_{\beta}$ | $(5+0.7\gamma)\beta^{1.2}$ | $2.5+(4.5+0.2\gamma)\beta^{2.6}$ |
+
+NOTE 1 $Q_{\beta}$ is a geometric factor defined by:
+
+$Q_{\beta}=\dfrac{0.3}{\beta(1-0.833\beta)}$ for $\beta>0.6$;
+
+$Q_{\beta}=1.0$ for $\beta\leq0.6$.
+
+NOTE 2 $Q_{\mathrm{g}}$ is the gap factor defined by:
+
+$Q_{\mathrm{g}}=1+0.2[1-2.8g/D]^3$ for $g/D\geq0.05$, but $Q_{\mathrm{g}}\geq1.0$;
+
+$Q_{\mathrm{g}}=0.13+0.65\Phi\gamma^{0.5}$ for $g/D\leq-0.05$, where $\Phi=tF_{\mathrm{yb}}/(TF_{\mathrm{yc}})$.
+
+The overlap should preferably not be less than $0.25\beta D$. Linear interpolation between the limiting values of the above two $Q_{\mathrm{g}}$ expressions may be used for $-0.05<g/D<0.05$ when this is otherwise permissible or unavoidable. See B.7.3.3.
+
+$F_{\mathrm{yb}}$ = yield stress of brace or brace stub if present (or 0.8 times the tensile strength if less), in MPa (ksi).
+
+NOTE 3 The $Q_{\mathrm{u}}$ term for tension loading is based on limiting the capacity to first crack. The $Q_{\mathrm{u}}$ associated with full ultimate capacity of tension loaded Y- and X-joints is given in B.7.
+
+NOTE 4 The X-joint, axial tension, $Q_{\mathrm{u}}$ term for $\beta>0.9$ applies to coaxial braces (i.e. $e/D\leq0.2$ where e is the eccentricity of the two braces). If the braces are not coaxial ($e/D>0.2$) then $23\beta$ should be used over the full range of $\beta$.
 
 
 
 The parameter A is defined as follows:
 
-$$A = \left[ \left(\frac{\mathrm{F S} P_{\mathrm{c}}}{P_{\mathrm{y}}}\right)^{2} + \left(\frac{\mathrm{F S} M_{\mathrm{c}}}{M_{\mathrm{p}}}\right)^{2} \right]^{0. 5} \tag{7.4}$$
+$$A = \left[ \left(\frac{\mathrm{FS} P_{\mathrm{c}}}{P_{\mathrm{y}}}\right)^{2} + \left(\frac{\mathrm{FS} M_{\mathrm{c}}}{M_{\mathrm{p}}}\right)^{2} \right]^{0.5} \tag{7.4}$$
 
 NOTE 1 Where one-third increase is applicable, FS = 1.20 in Equations (7.3) and (7.4);
 
-NOTE 2 Where $P_{ \mathtt{ c } }$ and $M_{ \mathtt{ C } }$ are the nominal axial load and bending resultant (i.e. $M_{ \mathsf{ c } }^{ 2 } = M_{ \mathsf{ i p b } }^{ 2 } + M_{ \mathsf{ o p b } }^{ 2 } \ )$ in the chord;
+NOTE 2 Where $P_{ \mathtt{c} }$ and $M_{ \mathtt{C} }$ are the nominal axial load and bending resultant (i.e. $M_{ \mathsf{c} }^{ 2 } = M_{ \mathsf{ipb} }^{ 2 } + M_{ \mathsf{opb} }^{ 2 } )$ in the chord;
 
-$P_{ \ y }$ is the yield axial capacity of the chord;
+$P_{\mathrm{y}}$ is the yield axial capacity of the chord;
 
-$M_{ \mathsf{ p } }$ is the plastic moment capacity of the chord;
+$M_{ \mathsf{p} }$ is the plastic moment capacity of the chord;
 
 and $C_{ 1 } , C_{ 2 } ,$ and $C_{ 3 }$ are coefficients depending on joint and load type as given in Table 7.3.
 
-Table 7.3—Values for $c_{ 1 } , c_{ 2 } , c_{ 3 }$   
+Table 7.3—Values for $C_1,C_2,C_3$   
 
 
 
@@ -2807,7 +2767,8 @@ Table 7.3—Values for $c_{ 1 } , c_{ 2 } , c_{ 3 }$
 | β≤0.9 | 0.2 | 0 | 0.5 |
 | β=1.0 | -0.2 | 0 | 0.2 |
 | All joints under brace moment loading | 0.2 | 0 | 0.4 |
-| aLinearly interpolated values between β = 0.9 and β = 1.0 for X-joints under brace axial loading. | aLinearly interpolated values between β = 0.9 and β = 1.0 for X-joints under brace axial loading. | aLinearly interpolated values between β = 0.9 and β = 1.0 for X-joints under brace axial loading. | aLinearly interpolated values between β = 0.9 and β = 1.0 for X-joints under brace axial loading. |
+
+aLinearly interpolated values between β = 0.9 and β = 1.0 for X-joints under brace axial loading.
 
 
 
@@ -2823,42 +2784,42 @@ $$P_{\mathrm{a}} = \left[ r + (1 - r) \left(T_{\mathrm{n}} / T_{\mathrm{c}}\righ
 
 where
 
-（$P_{ \mathsf{ a } } )_{ \mathsf{ c } }$ is the $P_{ \mathsf{ a } }$ from Equation (7.1) based on chord can geometric and material properties, including $\mathcal{ Q }_{ \mathbf{ f } }$ calculated with respect to chord can;
+（$P_{ \mathsf{a} } )_{ \mathsf{c} }$ is the $P_{ \mathsf{a} }$ from Equation (7.1) based on chord can geometric and material properties, including $\mathcal{ Q }_{ \mathbf{f} }$ calculated with respect to chord can;
 
-$T_{ \mathbf{ n } }$ is the nominal chord member thickness;
+$T_{ \mathbf{n} }$ is the nominal chord member thickness;
 
-$T_{ \mathsf{ c } }$ is the chord can thickness;
+$T_{ \mathsf{c} }$ is the chord can thickness;
 
-r = $L_{ \mathrm{ c } } / ( 2 . 5 D )$ for joints with $\beta \leq 0 . 9 ;$ ;   
-= （$4 \beta - 3 ) L_{ \mathrm{ c } } / ( 1 . 5 D )$ for joints with $\beta > 0 . 9$ ;
+$r=L_{\mathrm{c}}/(2.5D)$ for joints with $\beta\leq 0.9$;  
+$r=(4\beta-3)L_{\mathrm{c}}/(1.5D)$ for joints with $\beta>0.9$;
 
-$L_{ \mathsf{ c } }$ is the effective total length. Figure 7.5 gives examples for calculation of $L_{ \mathsf{ c } } .$
+$L_{ \mathsf{c} }$ is the effective total length. Figure 7.5 gives examples for calculation of $L_{ \mathsf{c} } .$
 
 In no case shall r be taken as greater than unity.
 
 Alternatively, an approximate closed ring analysis may be employed, including plastic analysis with appropriate safety factors, using an effective chord length up to 1.25D either side of the line of action of
 
-the branch loads at the chord face but not more than actual distance to the end of the can. More complex joints shall receive special considerations. For multiple branches in the same plane, dominantly loaded in the same sense, the relevant crushing load is $\sum_{ \mathrm{ i } } P_{ \mathrm{ i } }$ i θ sin . Any reinforcement within this dimension (e.g. diaphragms, rings, gussets, or the stiffening effect of out of plane members) may be considered in the analysis, although its effectiveness decreases with distance from the branch footprint.
+the branch loads at the chord face but not more than actual distance to the end of the can. More complex joints shall receive special considerations. For multiple branches in the same plane, dominantly loaded in the same sense, the relevant crushing load is $\sum_{\mathrm{i}}P_{\mathrm{i}}\sin\theta_{\mathrm{i}}$ . Any reinforcement within this dimension (e.g. diaphragms, rings, gussets, or the stiffening effect of out of plane members) may be considered in the analysis, although its effectiveness decreases with distance from the branch footprint.
 
 ![](API_RP_2A-WSD_22nd/chunk1_7d3c17eff190c116f665b809a0f8d3014f4706ea03789c7b31bf9566e619c7e6.jpg)  
-Figure 7.5—Examples of Chord Length, $\pmb{ L_{ \mathsf{ c } } }$
+Figure 7.5—Examples of Chord Length, $\pmb{ L_{ \mathsf{c} } }$
 
 7.3.6 Strength Check
 
 The joint interaction ratio, IR, for axial loads and/or bending moments in the brace should be calculated using the following expression:
 
-$$\mathrm{I R} = \left| \frac{P}{P_{\mathrm{a}}} \right| + \left(\frac{M}{M_{\mathrm{a}}}\right)_{\mathrm{i p b}}^{2} + \left| \frac{M}{M_{\mathrm{a}}} \right|_{\mathrm{o p b}} \leq 1. 0 \tag{7.6}$$
+$$\mathrm{IR} = \left| \frac{P}{P_{\mathrm{a}}} \right| + \left(\frac{M}{M_{\mathrm{a}}}\right)_{\mathrm{ipb}}^{2} + \left| \frac{M}{M_{\mathrm{a}}} \right|_{\mathrm{opb}} \leq 1.0 \tag{7.6}$$
 
 ## 7.4 Overlapping Joints
 
 Braces that overlap in- or out-of-plane at the chord member form overlapping joints. Examples are shown in Figure 7.2 and Figure 7.3.
 
-Joints that have in-plane overlap involving two or more braces in a single plane (e.g. K- and KT-joints) may be designed using the simple joint provisions of 7.3, using negative gap in $\varrho_{ \mathbf{ g } } ,$ with the following exceptions and additions.
+Joints that have in-plane overlap involving two or more braces in a single plane (e.g. K- and KT-joints) may be designed using the simple joint provisions of 7.3, using negative gap in $Q_{ \mathbf{g} } ,$ with the following exceptions and additions.
 
 a) Shear parallel to the chord face is a potential failure mode and should be checked.   
 b) Section 7.3.5 does not apply to overlapping joints with balanced loads.   
 c) If axial forces in the overlapping and through braces have the same sign, the combined axial force representing that in the through brace plus a portion of the overlapping brace forces should be used to check the through brace intersection capacity. The portion of the overlapping brace force can be calculated as the ratio of cross sectional area of the brace that bears onto the through brace to the full area.   
-d) For either in-plane or out-of-plane bending moments, the combined moment of the overlapping and through braces should be used to check the through brace intersection capacity. This combined moment should account for the sign of the moments. Where combined nominal axial and bending stresses in the overlapping brace peak in the overlap region, the overlapping brace should also be checked on the basis of its chord being the through brace, using $\varrho_{ \mathbf{ g } } = 1 . 0$ . That is, through brace capacity should be checked for combined axial and moment loading in the overlapping brace. In this instance the $Q_{ \mathsf{ f } }$ associated with the through brace should be used.
+d) For either in-plane or out-of-plane bending moments, the combined moment of the overlapping and through braces should be used to check the through brace intersection capacity. This combined moment should account for the sign of the moments. Where combined nominal axial and bending stresses in the overlapping brace peak in the overlap region, the overlapping brace should also be checked on the basis of its chord being the through brace, using $Q_{ \mathbf{g} } = 1.0$ . That is, through brace capacity should be checked for combined axial and moment loading in the overlapping brace. In this instance the $Q_{ \mathsf{f} }$ associated with the through brace should be used.
 
 Joints having out-of-plane overlap may be assessed on the same general basis as in-plane overlapping joints, with the exception that axial load capacity may be calculated as for multiplanar joints in B.7.3.3.1.
 
@@ -2868,37 +2829,38 @@ Two varieties of grouted joints commonly occur in practice. The first relates to
 
 For grouted joints that are otherwise simple in configuration, the simple joint provisions defined in 7.3 may be used with the following modifications and limitations.
 
-a) For fully grouted and double-skin joints, the $Q_{ \mathsf{ u } }$ values in Table 7.2 may be replaced with the values pertinent to grouted joints given in Table 7.4. Classification and joint can derating may be disregarded. The adopted $Q_{ \mathsf{ u } }$ values should not be less than those for simple joints.
+a) For fully grouted and double-skin joints, the $Q_{ \mathsf{u} }$ values in Table 7.2 may be replaced with the values pertinent to grouted joints given in Table 7.4. Classification and joint can derating may be disregarded. The adopted $Q_{ \mathsf{u} }$ values should not be less than those for simple joints.
 
-Table $7 . 4 \mathrm{ - } Q_{ \mathrm{ u } }$ for Grouted Joints   
+Table $7.4 \mathrm{-} Q_{ \mathrm{u} }$ for Grouted Joints   
 
 
 
 | Brace Load | Qu |
 | --- | --- |
-| Axial tension | 2.5βγKa where Ka = 1/2(1 + 1/sinθ) |
+| Axial tension | $2.5\beta\gamma K_{\mathrm{a}}$, where $K_{\mathrm{a}}=\frac{1}{2}(1+1/\sin\theta)$ |
 | Bending | 1.5βγ |
-| NOTE No term is provided for axial compression since most grouted joints cannot fail under compression. Compression capacity is limited by that of the brace. | NOTE No term is provided for axial compression since most grouted joints cannot fail under compression. Compression capacity is limited by that of the brace. |
+
+NOTE No term is provided for axial compression since most grouted joints cannot fail under compression. Compression capacity is limited by that of the brace.
 
 
 
 b) For double-skin joints, failure may also occur by chord ovalization. The ovalization capacity can be estimated by substituting the following effective thickness into the simple joint equations:
 
-$$T_{\mathrm{e}} = \left(T^{2} + T_{\mathrm{p}}^{2}\right)^{0. 5} \tag{7.7}$$
+$$T_{\mathrm{e}} = \left(T^{2} + T_{\mathrm{p}}^{2}\right)^{0.5} \tag{7.7}$$
 
 where
 
-$T_{ \mathbf{ e } }$ is the effective thickness, in mm (in.);
+$T_{ \mathbf{e} }$ is the effective thickness, in mm (in.);
 
 $T$ is the wall thickness of chord, in mm (in.);
 
-$T_{ \mathbf{ p } }$ is the wall thickness of inner member, in mm (in.).
+$T_{ \mathbf{p} }$ is the wall thickness of inner member, in mm (in.).
 
-$T_{ \mathbf{ e } }$ should be used in place of T in the simple joint equations, including the γ term.
+$T_{ \mathbf{e} }$ should be used in place of T in the simple joint equations, including the γ term.
 
-c) The $\mathcal{ Q }_{ \mathbf{ f } }$ calculation for both fully grouted and double-skinned joints should be based on $T ;$ it is presumed that calculation of $Q_{ \mathsf{ f } }$ has already accounted for load sharing between the chord and inner member, such that further consideration of the effect of grout on that term is unnecessary.
+c) The $\mathcal{ Q }_{ \mathbf{f} }$ calculation for both fully grouted and double-skinned joints should be based on $T;$ it is presumed that calculation of $Q_{ \mathsf{f} }$ has already accounted for load sharing between the chord and inner member, such that further consideration of the effect of grout on that term is unnecessary.
 
-However, for fully grouted joints, $Q_{ \mathsf{ f } }$ may normally be set to unity, except in the instance of high $\beta ( \geq 0 . 9 )$ X-joints with brace tension/OPB and chord compression/OPB.
+However, for fully grouted joints, $Q_{ \mathsf{f} }$ may normally be set to unity, except in the instance of high $\beta ( \geq 0.9 )$ X-joints with brace tension/OPB and chord compression/OPB.
 
 d) The minimum capacity requirements of 7.2.3 should still be observed.
 
@@ -2954,7 +2916,7 @@ The wave climate should be derived as the aggregate of all sea states to be expe
 
 A space frame analysis should be performed to obtain the structural response in terms of nominal member stress for given wave forces applied to the structure. In general, wave force calculations should follow the procedures described in 5.3.1. However, current may be neglected and, therefore, considerations for apparent wave period and current blockage are not necessary. In addition, wave
 
-kinematics factor equal to 1.0 and conductor shielding factor equal to 1.0 should be applied for fatigue waves. The drag and inertia coefficients depend on the sea state level, as parameterized by the Keulegan-Carpenter number, K (see B.5.3.1.2.8). For small waves （$1 . 0 < K < 6 . 0$ for platform legs at mean water level), values of $C_{ \mathsf{ m } } = 2 . 0 , C_{ \mathsf{ d } } = 0 . 8$ for rough members, and $C_{ \mathsf{ d } } = 0 . 5$ for smooth members should be used. Guidelines for considering directionality, spreading, tides, and marine growth are provided in the commentary for this section.
+kinematics factor equal to 1.0 and conductor shielding factor equal to 1.0 should be applied for fatigue waves. The drag and inertia coefficients depend on the sea state level, as parameterized by the Keulegan-Carpenter number, K (see B.5.3.1.2.8). For small waves （$1.0 < K < 6.0$ for platform legs at mean water level), values of $C_{ \mathsf{m} } = 2.0 , C_{ \mathsf{d} } = 0.8$ for rough members, and $C_{ \mathsf{d} } = 0.5$ for smooth members should be used. Guidelines for considering directionality, spreading, tides, and marine growth are provided in the commentary for this section.
 
 A spectral analysis technique should be used to determine the stress response for each sea state. Dynamic effects should be considered for sea states having significant energy near a platform's natural period.
 
@@ -2997,11 +2959,11 @@ Table 8.1—Fatigue Life Safety Factors
 
 When fatigue damage can occur due to other cyclic loadings, such as transportation, the following equation shall be satisfied:
 
-$$\sum_{j} \mathrm{S F}_{j} D_{j} <   1. 0 \tag{8.2}$$
+$$\sum_{j} \mathrm{SF}_{j} D_{j} <   1.0 \tag{8.2}$$
 
 where
 
-$D_{ \mathrm{ j } }$ is the fatigue damage ratio for each type of loading;
+$D_{ \mathrm{j} }$ is the fatigue damage ratio for each type of loading;
 
 $\mathrm{ S F_{ j } }$ is the associated safety factor.
 
@@ -3015,7 +2977,7 @@ The welds at tubular joints are among the most fatigue sensitive areas in offsho
 
 For each tubular joint configuration and each type of brace loading, SCF is defined as:
 
-$$\mathrm{S C F} = \mathrm{H S S R} / \text{n o m i n a l b r a c e s t r s s r a n g e} \tag{8.3}$$
+$$\mathrm{SCF} = \mathrm{HSSR} / \text{nominal brace stress range} \tag{8.3}$$
 
 The nominal brace stress range should be based on the section properties of the brace end under consideration, taking due account of the brace stub, or a flared member end, if present. Likewise, the SCF evaluation shall be based on the same section dimensions. Nominal cyclic stress in the chord may also influence the HSSR and should be considered; see B.8.3.1.
 
@@ -3051,7 +3013,7 @@ For cast joints, the SCF is derived from the maximum principal stress at any poi
 
 Nontubular members and connections in deck structures, appurtenances and equipment; and tubular members and attachments to them, including ring stiffeners, may be subject to variations of stress due to environmental loads or operational loads. Operational loads would include those associated with machine vibration, crane usage and filling and emptying of tanks. Where variations of stress are applied to conventional weld details, identified in AWS D1.1/D1.1M:2010, Table 2.5, the associated S-N curves provided in AWS D1.1/D1.1M:2010, Figure 2.11 should be used, dependent on degree of redundancy. Where such variations of stress are applied to tubular nominal stress situations identified in AWS
 
-D1.1/D1.1M:2010, Table 2.7, the associated S-N curves provided in AWS D1.1/D1.1M:2010, Figure 2.13 should be used. Stress Categories DT, ET, FT, $\mathsf{ K }_{ 1 } ,$ and $\mathsf{ K }_{ 2 } ,$ refer to tubular connections where the SCF is not known. Where the hot spot SCF can be determined, 8.3 and 8.5 of this recommended practice take precedence.
+D1.1/D1.1M:2010, Table 2.7, the associated S-N curves provided in AWS D1.1/D1.1M:2010, Figure 2.13 should be used. Stress Categories DT, ET, FT, $\mathsf{K}_{ 1 } ,$ and $\mathsf{K}_{ 2 } ,$ refer to tubular connections where the SCF is not known. Where the hot spot SCF can be determined, 8.3 and 8.5 of this recommended practice take precedence.
 
 For service conditions where details may be exposed to random variable loads, seawater corrosion, or submerged service with effective cathodic protection, see B.8.4.
 
@@ -3085,10 +3047,10 @@ Table 8.2—Basic Design S-N Curves
 
 | Curve | log10(k1) S in ksi | log10(k1) S in MPa | m |
 | --- | --- | --- | --- |
-| Welded joints (WJ) | 9.95 | 12.48 | 3 for N < 107 |
-| Welded joints (WJ) | 11.92 | 16.13 | 5 for N > 107 |
-| Cast joints (CJ) | 11.80 | 15.17 | 4 for N < 107 |
-| Cast joints (CJ) | 13.00 | 17.21 | 5 for N > 107 |
+| Welded joints (WJ) | 9.95 | 12.48 | 3 for $N<10^{7}$ |
+| Welded joints (WJ) | 11.92 | 16.13 | 5 for $N>10^{7}$ |
+| Cast joints (CJ) | 11.80 | 15.17 | 4 for $N<10^{7}$ |
+| Cast joints (CJ) | 13.00 | 17.21 | 5 for $N>10^{7}$ |
 
 
 
@@ -3107,15 +3069,15 @@ Fabrication of welded joints should be in accordance with Section 14. The curve 
 
 The WJ curve is based on 16 mm (5/8 in.) reference thickness. For material thickness above the reference thickness, the thickness effect in Equation (8.4) should be applied for as-welded joints.
 
-$$S = S_{0} (t_{\mathrm{r e f}} / t)^{0. 25} \tag{8.5}$$
+$$S = S_{0} (t_{\mathrm{ref}} / t)^{0.25} \tag{8.5}$$
 
 where
 
-$t_{ \mathsf{ r e f } }$ is the reference thickness, 16 mm （$^{ 5 } / 8 \ \mathrm{ i n . } ) ;$
+$t_{ \mathsf{ref} }$ is the reference thickness, 16 mm （$^{ 5 } / 8 \ \mathrm{in.} ) ;$
 
 $S$ is the allowable stress range;
 
-$S_{ \circ }$ is the allowable stress range from the S-N curve;
+$S_{\mathrm{o}}$ is the allowable stress range from the S-N curve;
 
 t is the member thickness for which the fatigue life is predicted.
 
@@ -3123,9 +3085,9 @@ If the weld has profile control as defined in 14.1.3.4, the exponent in the abov
 
 The material thickness effect for castings is given by:
 
-$$S = S_{0} \left(t_{\text{r e f}} / t\right)^{0. 15} \tag{8.6}$$
+$$S = S_{0} \left(t_{\text{r e f}} / t\right)^{0.15} \tag{8.6}$$
 
-where the reference thickness $t_{ \mathsf{ r e f } }$ is 38 mm (1.5 in.).
+where the reference thickness $t_{ \mathsf{ref} }$ is 38 mm (1.5 in.).
 
 No effect shall be applied to material thickness less than the reference thickness.
 
@@ -3141,14 +3103,14 @@ Table 8.3—Factors on Fatigue Life for Weld Improvement Techniques
 
 | Weld Improvement Technique | Improvement Factor on S | Improvement Factor on N |
 | --- | --- | --- |
-| Profile (see 14.1.3.4) | τ-0.1 a | Varies |
+| Profile (see 14.1.3.4) | $\tau^{-0.1}$<sup>a</sup> | Varies |
 | Weld toe burr grind | 1.25 | 2 |
 | Hammer peening | 1.56 | 4 |
-| a Chord side only. | a Chord side only. | a Chord side only. |
+Footnote a: Chord side only.
 
 
 
-For welds with profile control as defined in 14.1.3.4 where the weld toe has been profiled, by grinding if required, to merge smoothly with the parent metal, and magnetic particle inspection (MT) demonstrates the weld toe is free of surface and near-surface defects, the improvement on fatigue performance can be considered as shown in the table, where ߬ is the ratio of brace/chord thickness. This improvement is in addition to the use of hot spot stress at the actual weld toe location, and the reduced size effect exponent. Either the factor on S or on N is used, but not both.
+For welds with profile control as defined in 14.1.3.4 where the weld toe has been profiled, by grinding if required, to merge smoothly with the parent metal, and magnetic particle inspection (MT) demonstrates the weld toe is free of surface and near-surface defects, the improvement on fatigue performance can be considered as shown in the table, where $\tau$ is the ratio of brace/chord thickness. This improvement is in addition to the use of hot spot stress at the actual weld toe location, and the reduced size effect exponent. Either the factor on S or on N is used, but not both.
 
 ## 8.6 Fracture Mechanics
 
@@ -3257,15 +3219,15 @@ Seabed scour affects both lateral and axial pile performance and capacity. Scour
 
 9.4.1 Ultimate Bearing Capacity
 
-The ultimate bearing capacity of piles, including belled piles, $\mathit{ Q_{ \mathrm{ c } } } ,$ shall be determined by Equation (16) found in API 2GEO.
+The ultimate bearing capacity of piles, including belled piles, $\mathit{ Q_{ \mathrm{c} } } ,$ shall be determined by Equation (16) found in API 2GEO.
 
 The foundation configurations should be based on those that experience has shown can be installed consistently, practically, and economically under similar conditions with the pile size and installation equipment being used. Alternatives for possible remedial action in the event design objectives cannot be obtained during installation should also be investigated and defined prior to construction.
 
 9.4.2 Shaft Friction and End Bearing in Cohesive Soils
 
-For pipe piles in cohesive soils, the unit shaft friction, $\mathcal{ I } ,$ in kPa (lb/ft2), at any point along the pile shall be calculated by Equation (17) in API 2GEO.
+For pipe piles in cohesive soils, the unit shaft friction, $f ,$ in kPa (lb/ft2), at any point along the pile shall be calculated by Equation (17) in API 2GEO.
 
-For piles end bearing in cohesive soils, the unit end bearing $q ,$ in kPa （$| \mathsf{ b } / \mathsf{ f } \mathsf{ f }^{ 2 } )$ , shall be computed by Equation (20) in API 2GEO.
+For piles end bearing in cohesive soils, the unit end bearing $q ,$ in kPa ($\mathrm{lb}/\mathrm{ft}^{2}$) , shall be computed by Equation (20) in API 2GEO.
 
 9.4.3 Shaft Friction and End Bearing in Cohesionless Soils
 
@@ -3283,7 +3245,7 @@ The end bearing capacity of the rock should be determined from the triaxial shea
 
 ## 9.5 Pile Capacity for Axial Pullout Loads
 
-The ultimate pile pullout capacity may be equal to or less than but shall not exceed $\mathcal{ Q }_{ \mathbf{ f } } ,$ the total skin friction resistance in compression (see Section 8.2 in API 2GEO for further guidance and Section 8.1 in API 2GEO for methods of calculating $\varrho_{ \sf t }^{ \mathrm{ } } )$ .
+The ultimate pile pullout capacity may be equal to or less than but shall not exceed $\mathcal{ Q }_{ \mathbf{f} } ,$ the total skin friction resistance in compression (see Section 8.2 in API 2GEO for further guidance and Section 8.1 in API 2GEO for methods of calculating $Q_{\mathrm{f}}$) .
 
 The allowable pullout capacity shall be determined by applying the factors of safety in 9.3.4 to the ultimate pullout capacity.
 
@@ -3365,7 +3327,7 @@ The allowable pile stresses shall be the same as those permitted by AISC 335-89 
 
 9.10.3 Design Pile Stresses
 
-The pile wall thickness in the vicinity of the mudline, and possibly at other points, is normally controlled by the combined axial load and bending moment that results from the design loading conditions for the platform. The moment curve for the pile may be computed with soil reactions determined in accordance with 9.8 giving due consideration to possible soil removal by scour. It may be assumed that the axial load is removed from the pile by the soil at a rate equal to the ultimate soil-pile adhesion divided by the appropriate pile safety factor from 9.3.4. When lateral deflections associated with cyclic loads at or near the mudline are relatively large (e.g. exceeding $y_{ \mathtt{ C } }$ as defined in API 2GEO, Section 8.5.3 for soft clay), consideration should be given to reducing or neglecting the soil-pile adhesion through this zone.
+The pile wall thickness in the vicinity of the mudline, and possibly at other points, is normally controlled by the combined axial load and bending moment that results from the design loading conditions for the platform. The moment curve for the pile may be computed with soil reactions determined in accordance with 9.8 giving due consideration to possible soil removal by scour. It may be assumed that the axial load is removed from the pile by the soil at a rate equal to the ultimate soil-pile adhesion divided by the appropriate pile safety factor from 9.3.4. When lateral deflections associated with cyclic loads at or near the mudline are relatively large (e.g. exceeding $y_{ \mathtt{C} }$ as defined in API 2GEO, Section 8.5.3 for soft clay), consideration should be given to reducing or neglecting the soil-pile adhesion through this zone.
 
 9.10.4 Stresses Due to Weight of Hammer During Hammer Placement
 
@@ -3373,7 +3335,7 @@ Each pile or conductor section on which a pile hammer (pile top drilling rig, et
 
 Experience indicates that reasonable protection from failure of the pile wall due to the above loads is provided if the static stresses are calculated as follows.
 
-a) The pile projecting section should be considered as a freestanding column with a minimum effective length factor K of 2.1 and a minimum reduction factor, $C_{ \mathsf{ m } } ,$ of 1.0.   
+a) The pile projecting section should be considered as a freestanding column with a minimum effective length factor K of 2.1 and a minimum reduction factor, $C_{ \mathsf{m} } ,$ of 1.0.   
 b) Bending moments and axial loads should be calculated using the full weight of the pile hammer, cap, and leads acting through the center of gravity of their combined masses, and the weight of the pile add-on section with due consideration to pile batter eccentricities. The bending moment so determined should not be less than that corresponding to a load equal to 2 % of the combined weight of the hammer, cap, and leads applied at the pile head and perpendicular to its centerline.   
 c) Allowable stresses in the pile should be calculated in accordance with 6.2 and 6.3. The one-third increase in stress should not be allowed.
 
@@ -3391,11 +3353,11 @@ The D/t ratio of the entire length of a pile should be small enough to preclude 
 
 In SI units:
 
-$$t = 6. 35 + \frac{D}{100} \tag{9.1}$$
+$$t = 6.35 + \frac{D}{100} \tag{9.1}$$
 
 In USC units:
 
-$$t = 0. 25 + \frac{D}{100} \tag{9.2}$$
+$$t = 0.25 + \frac{D}{100} \tag{9.2}$$
 
 where
 
@@ -3551,37 +3513,37 @@ In computing the axial force applied to a grouted pile-to-structure connection, 
 
 10.4.4.1 General
 
-In the absence of reliable comprehensive data that would support the use of other values of connection strength, the allowable axial load transfer should be taken as the smaller value (pile or sleeve) of the force calculated by a multiplication of the contact area between the grout and steel surfaces and the allowable axial load transfer stress ${ f }_{ \mathsf{ b a } } ,$ where $f_{ \mathsf{ b } \mathsf{ a } }$ is computed by the appropriate value in Equations (10.1) or (10.2) for the grout/steel interface. This allowable axial force should be greater than or equal to the applied axial force computed according to 10.4.3.
+In the absence of reliable comprehensive data that would support the use of other values of connection strength, the allowable axial load transfer should be taken as the smaller value (pile or sleeve) of the force calculated by a multiplication of the contact area between the grout and steel surfaces and the allowable axial load transfer stress ${ f }_{ \mathsf{ba} } ,$ where $f_{ \mathsf{b} \mathsf{a} }$ is computed by the appropriate value in Equations (10.1) or (10.2) for the grout/steel interface. This allowable axial force should be greater than or equal to the applied axial force computed according to 10.4.3.
 
 10.4.4.2 Plain Pipe Connections
 
-The value of the allowable axial load transfer stress, ${ f }_{ \mathsf{ b a } } ,$ should be taken as 138 KPa (20 psi) for Loading Conditions 1 and 2 and 184 KPa (26.7 psi) for Loading Conditions 3 and 4 (see 5.2.2).
+The value of the allowable axial load transfer stress, ${ f }_{ \mathsf{ba} } ,$ should be taken as 138 KPa (20 psi) for Loading Conditions 1 and 2 and 184 KPa (26.7 psi) for Loading Conditions 3 and 4 (see 5.2.2).
 
 10.4.4.3 Shear Key Connections
 
-Where shear keys are used at the interface between steel and grout, the value of the nominal allowable axial load transfer stress, ${ \mathit{ f } }_{ \mathsf{ b } \mathsf{ a } } ,$ for Loading Conditions 1 and 2 may be calculated as:
+Where shear keys are used at the interface between steel and grout, the value of the nominal allowable axial load transfer stress, ${ \mathit{ f } }_{ \mathsf{b} \mathsf{a} } ,$ for Loading Conditions 1 and 2 may be calculated as:
 
 In SI units:
 
-$$f_{\mathrm{b a}} = 138 \mathrm{K P a} + 0. 5 f_{\mathrm{c u}} \times \frac{h}{s} \tag{10.1}$$
+$$f_{\mathrm{ba}} = 138 \mathrm{KPa} + 0.5 f_{\mathrm{cu}} \times \frac{h}{s} \tag{10.1}$$
 
 In USC units:
 
-$$f_{\mathrm{b a}} = 20 \mathrm{p s i} + 0. 5 f_{\mathrm{c u}} \times \frac{h}{s}$$
+$$f_{\mathrm{ba}} = 20 \mathrm{psi} + 0.5 f_{\mathrm{cu}} \times \frac{h}{s}$$
 
-For Loading Conditions 3 and $4 , f_{ \mathsf{ b a } }$ may be calculated as:
+For Loading Conditions 3 and $4 , f_{ \mathsf{ba} }$ may be calculated as:
 
 In SI units:
 
-$$f_{\mathrm{b a}} = 184 \mathrm{K P a} + 0. 67 f_{\mathrm{c u}} \times \frac{h}{s} \tag{10.2}$$
+$$f_{\mathrm{ba}} = 184 \mathrm{KPa} + 0.67 f_{\mathrm{cu}} \times \frac{h}{s} \tag{10.2}$$
 
 In USC units:
 
-$$f_{\mathrm{b a}} = 26. 7 \mathrm{p s i} + 0. 67 f_{\mathrm{c u}} \times \frac{h}{s}$$
+$$f_{\mathrm{ba}} = 26.7 \mathrm{psi} + 0.67 f_{\mathrm{cu}} \times \frac{h}{s}$$
 
 where
 
-$f_{ \mathtt{ C U } }$ is the unconfined grout compressive strength, in MPa (psi) in accordance with 11.4.1;
+$f_{ \mathtt{CU} }$ is the unconfined grout compressive strength, in MPa (psi) in accordance with 11.4.1;
 
 h is the shear key outstand dimension, in mm (in.) (see Figure 10.1 and Figure 10.2);
 
@@ -3589,14 +3551,14 @@ s is the shear key spacing, in mm (in.) (see Figure 10.1 and Figure 10.2).
 
 Shear keys designed according to Equations (10.1) and (10.2) shall be detailed in accordance with the following requirements.
 
-a) Shear keys may be circular hoops at spacing “s” or a continuous helix with a pitch of $^{ * } s .^{ * }$ See 10.4.4.4 for limitations.   
+a) Shear keys may be circular hoops at spacing “s” or a continuous helix with a pitch of “s.” See 10.4.4.4 for limitations.   
 b) Shear keys should be one of the types indicated in Figure 10.2.   
 c) For driven piles, shear keys on the pile should be applied to sufficient length to ensure that, after driving, the length of the pile in contact with the grout has the required number of shear keys.   
-d) Each shear key cross section and weld should be designed to transmit that part of the connection capacity that is attributable to the shear key for Loading Conditions 1 and 2 in 5.2.2. The shear key and weld should be designed at basic allowable steel and weld stresses to transmit an average force equal to the shear key bearing area multiplied by $1 . 7 f_{ \mathrm{ c u } } ,$ except for a distance of 2 pile diameters from the top and the bottom end of the connections where $2 . 5 f_{ \mathrm{ c u } }$ should be used.
+d) Each shear key cross section and weld should be designed to transmit that part of the connection capacity that is attributable to the shear key for Loading Conditions 1 and 2 in 5.2.2. The shear key and weld should be designed at basic allowable steel and weld stresses to transmit an average force equal to the shear key bearing area multiplied by $1.7 f_{ \mathrm{cu} } ,$ except for a distance of 2 pile diameters from the top and the bottom end of the connections where $2.5 f_{ \mathrm{cu} }$ should be used.
 
 10.4.4.4 Limitations
 
-The limitation 17 MPa (2,500 psi) $\leq{ f_{ \mathtt{ C U } } } \leq 110$ MPa (16,000 psi) should be observed when designing a connection in accordance with 10.4.4.2 or 10.4.4.3.
+The limitation 17 MPa (2,500 psi) $\leq{ f_{ \mathtt{CU} } } \leq 110$ MPa (16,000 psi) should be observed when designing a connection in accordance with 10.4.4.2 or 10.4.4.3.
 
 The limitations in Table 10.1 should be observed when designing a connection according to 10.4.4.3 (see Figure 10.1 and Figure 10.2).
 
@@ -3622,17 +3584,17 @@ Table 10.1—Connection Design Limitations
 | Sleeve geometry | Ds/ts≤80 |
 | Pile geometry | Dp/tp≤40 |
 | Grout annulus geometry | 7≤Dg/tg≤45 |
-| Shear key spacing ratioc | 2.5≤Dp/s≤8 |
+| Shear key spacing ratio<sup>a</sup> | 2.5≤Dp/s≤8 |
 | Shear key ratio | h/s≤0.10 |
 | Shear key shape factor | 1.5≤w/h≤3.0 |
-| Product of fcuand h/s | ≤5.5 MPa (800 psi) |
-| a For helical shear keys only. | a For helical shear keys only. |
+| Product of $f_{\mathrm{cu}}$ and $h/s$ | ≤5.5 MPa (800 psi) |
+Footnote a: For helical shear keys only.
 
 
 
 10.4.4.5 Other Design Methods
 
-Other methods, which are based on testing and verification, may be used for calculating the allowable load transfer stress $f_{ \mathsf{ b } \mathsf{ a } }$ . One such method is described in B.10.4.4.5.
+Other methods, which are based on testing and verification, may be used for calculating the allowable load transfer stress $f_{ \mathsf{b} \mathsf{a} }$ . One such method is described in B.10.4.4.5.
 
 10.4.5 Loadings Other Than Axial Load
 
@@ -3746,9 +3708,9 @@ Group III designates high strength steels with specified minimum yield strengths
 
 such that an isolated fracture would not be catastrophic. Examples of such applications are piling, jacket braces and legs, and deck beams and legs.
 
-11.1.3.3 Class B steels are suitable for use where thickness, cold work, restraint, stress concentration, impact loading, and/or lack of redundancy indicate the need for improved notch toughness. Where impact tests are specified, Class B steels should exhibit Charpy V-notch energy of 20 J (15 ft-lb) for Group I, and 34 J (25 ft-lb) for Group II, at the lowest anticipated service temperature. Steels enumerated herein as Class B can generally meet these Charpy requirements at temperatures ranging from $10 ~^{ \circ } \mathsf{ C }$ to $0 ~^{ \circ } \mathsf C$ （$50 ~^{ \circ } \mathsf{ F }$ to $32^{ \circ } \mathsf{ F } )$ . When impact tests are specified for Class B steel, testing in accordance with ASTM A673 [30], frequency H, is suggested.
+11.1.3.3 Class B steels are suitable for use where thickness, cold work, restraint, stress concentration, impact loading, and/or lack of redundancy indicate the need for improved notch toughness. Where impact tests are specified, Class B steels should exhibit Charpy V-notch energy of 20 J (15 ft-lb) for Group I, and 34 J (25 ft-lb) for Group II, at the lowest anticipated service temperature. Steels enumerated herein as Class B can generally meet these Charpy requirements at temperatures ranging from $10 ~^{ \circ } \mathsf{C}$ to $0 ~^{ \circ } \mathsf C$ （$50 ~^{ \circ } \mathsf{F}$ to $32^{ \circ } \mathsf{F} )$ . When impact tests are specified for Class B steel, testing in accordance with ASTM A673 [30], frequency H, is suggested.
 
-11.1.3.4 Class A steels are suitable for use at subfreezing temperatures and for critical applications involving adverse combinations of the factors cited above. Critical applications may warrant Charpy testing at ${ 20 ~^{ \circ } \mathrm{ C } }$ to $30 ~^{ \circ } \mathsf{ C }$ (68 °F to $86 ~^{ \circ } \mathsf{ F } )$ below the lowest anticipated service temperature. This extra margin of notch toughness prevents the propagation of brittle fractures from large flaws and provides for crack arrest in thicknesses of several inches. Steels enumerated herein as Class A can generally meet the Charpy requirements stated above at temperatures ranging from $- 20 ~^{ \circ } \mathsf{ C }$ to $40 ~^{ \circ } \mathrm{ C }$ (–4 °F to $\scriptstyle - 40^{ \circ } \mathsf{ F } )$ . Impact testing frequency for Class A steels should be in accordance with the specification under which the steel is ordered; in the absence of other requirements, heat lot testing may be used.
+11.1.3.4 Class A steels are suitable for use at subfreezing temperatures and for critical applications involving adverse combinations of the factors cited above. Critical applications may warrant Charpy testing at ${ 20 ~^{ \circ } \mathrm{C} }$ to $30 ~^{ \circ } \mathsf{C}$ (68 °F to $86 ~^{ \circ } \mathsf{F} )$ below the lowest anticipated service temperature. This extra margin of notch toughness prevents the propagation of brittle fractures from large flaws and provides for crack arrest in thicknesses of several inches. Steels enumerated herein as Class A can generally meet the Charpy requirements stated above at temperatures ranging from $- 20 ~^{ \circ } \mathsf{C}$ to $-40\,^{\circ}\mathrm{C}$ (–4 °F to $\scriptstyle - 40^{ \circ } \mathsf{F} )$ . Impact testing frequency for Class A steels should be in accordance with the specification under which the steel is ordered; in the absence of other requirements, heat lot testing may be used.
 
 11.1.4 Steel Specifications
 
@@ -3762,7 +3724,7 @@ Unless otherwise specified, seamless or welded pipe 4 should conform to one of t
 
 11.2.2 Fabrication
 
-Structural pipe should be fabricated in accordance with API 2B, ASTM A139 $[ 26 ] 4_{ , }$ , ASTM A252 [27] 4, ASTM A381 [28], or ASTM A671 [29] using grades of structural plate listed in Table 11.1 except that hydrostatic testing may be omitted.
+Structural pipe should be fabricated in accordance with API 2B, ASTM A139 [26]<sup>4</sup>, ASTM A252 [27]<sup>4</sup>, ASTM A381 [28], or ASTM A671 [29] using grades of structural plate listed in Table 11.1 except that hydrostatic testing may be omitted.
 
 11.2.3 Selections for Conditions of Service
 
@@ -3782,33 +3744,33 @@ Table 11.1—Structural Steel Plates
 | --- | --- | --- | --- | --- | --- | --- |
 | Group | Class | ASTM Specification and Grade | MPa | ksi | MPa | ksi |
 | I | C | ASTM A36 [to 51 mm (2 in.) thick] | 250 | 36 | 400-550 | 58-80 |
-| I | C | ASTM A131, Grade A [to 13.0 mm ($^1/2$ in.) thick] | 235 | 34 | 400-490 | 58-71 |
-| I | C | ASTM A285, Grade C [to 19.0 mm ($^3/4$ in.) thick] | 205 | 30 | 380-515 | 55-75 |
+| I | C | ASTM A131, Grade A [to 13.0 mm ($1/2$ in.) thick] | 235 | 34 | 400-490 | 58-71 |
+| I | C | ASTM A285, Grade C [to 19.0 mm ($3/4$ in.) thick] | 205 | 30 | 380-515 | 55-75 |
 | I | B | ASTM A131, Grades B, D | 235 | 34 | 400-490 | 58-71 |
 | I | B | ASTM A516, Grade 65 | 240 | 35 | 450-585 | 65-85 |
 | I | B | ASTM A573, Grade 65 | 240 | 35 | 450-530 | 65-77 |
 | I | B | ASTM A709, Grade 36T2 | 250 | 36 | 400-550 | 58-80 |
 | I | A | ASTM A131, Grades CS, E | 235 | 34 | 400-490 | 58-71 |
 | II | C | ASTM A572, Grade 42 [to 51 mm (2 in.) thick a] | 290 | 42 | 415 min. | 60 min. |
-| II | C | ASTM A572, Grade 50 [to 51 mm (2 in.) thick];[ASTM A6 [S29 required over 13.0 mm ($^1/2$ in.) a]] | 345 | 50 | 450 min. | 65 min. |
+| II | C | ASTM A572, Grade 50 [to 51 mm (2 in.) thick];[ASTM A6 [S29 required over 13.0 mm ($1/2$ in.) a]] | 345 | 50 | 450 min. | 65 min. |
 | II | B | API 2MT1 | 345 | 50 | 483-620 | 70-90 |
 | II | B | ASTM A709, Grades 50T2, 50T3 | 345 | 50 | 450 min. | 65 min. |
 | II | B | ASTM A131, Grade AH32 | 315 | 45.5 | 470-585 | 68-85 |
 | II | B | ASTM A131, Grade AH36 | 350 | 51 | 490-620 | 71-90 |
 | II | A | API 2H, Grade 42 | 290 | 42 | 430-550 | 62-80 |
-| II | A | API 2H, Grade 50 [to 64 mm ($2^1/2$ in. thick)] | 345 | 50 | 483-620 | 70-90 |
-| II | A | API 2H, Grade 50 [over 64 mm ($2^1/2$ in. thick)] | 325 | 47 | 483-620 | 70-90 |
+| II | A | API 2H, Grade 50 [to 64 mm ($2\frac{1}{2}$ in. thick)] | 345 | 50 | 483-620 | 70-90 |
+| II | A | API 2H, Grade 50 [over 64 mm ($2\frac{1}{2}$ in. thick)] | 325 | 47 | 483-620 | 70-90 |
 | II | A | API 2W ,Grade 50 [to 25 mm (1 in.) thick] | 345-483 | 50-70 | 448 min. | 65 min. |
 | II | A | API 2W, Grade 50 [over 25 mm (1 in.) thick] | 345-552 | 50-80 | 483 min. | 70 min. |
 | II | A | API 2Y, Grade 50 [to 25 mm (1 in.) thick] | 345–517 | 50–75 | 448 min. | 65 min. |
 | II | A | API 2Y, Grade 50 [over 25 mm (1 in.) thick] | 345–483 | 50–70 | 448 min. | 65 min. |
 | II | A | ASTM A131, Grades DH32, EH32 | 315 | 45.5 | 470–585 | 68–85 |
 | II | A | ASTM A131 Grades DH36, EH36 | 350 | 51 | 490–620 | 71–90 |
-| II | A | ASTM A537 Class I [to 64 mm (21/2in.) thick] | 345 | 50 | 485–620 | 70–90 |
+| II | A | ASTM A537 Class I [to 64 mm ($2\frac{1}{2}$ in.) thick] | 345 | 50 | 485–620 | 70–90 |
 | II | A | ASTM A633, Grade A | 290 | 42 | 435–570 | 63–83 |
 | II | A | ASTM A633 Grades C, D | 345 | 50 | 485–620 | 70–90 |
 | II | A | ASTM A678 Grade A | 345 | 50 | 485–620 | 70–90 |
-| III | A | ASTM A537, Class II [to 64 mm (21/2in.) thick] | 415 | 60 | 550–690 | 80–100 |
+| III | A | ASTM A537, Class II [to 64 mm ($2\frac{1}{2}$ in.) thick] | 415 | 60 | 550–690 | 80–100 |
 | III | A | ASTM A678, Grade B | 415 | 60 | 550–690 | 80–100 |
 | III | A | API 2W, Grade 60 [to 25 mm (1 in.) thick] | 414–621 | 60–90 | 517 min. | 75 min. |
 | III | A | API 2W, Grade 60 [over 25 mm (1 in.) thick] | 414–586 | 60–85 | 517 min. | 75 min. |
@@ -3818,7 +3780,8 @@ Table 11.1—Structural Steel Plates
 | III | A | [Through 51 mm (2 in.)] | 515 | 75 | 585 | 85 |
 | III | A | [51 mm (2 in.) to 102 mm (4 in.)] | 450 | 65 | 515 | 75 |
 | III | A | [Over 102 mm (4 in.)] | 415 | 60 | 485 | 70 |
-| a Maximum vanadium level permitted = 0.10 % V. | a Maximum vanadium level permitted = 0.10 % V. | a Maximum vanadium level permitted = 0.10 % V. | a Maximum vanadium level permitted = 0.10 % V. | a Maximum vanadium level permitted = 0.10 % V. | a Maximum vanadium level permitted = 0.10 % V. | a Maximum vanadium level permitted = 0.10 % V. |
+
+a Maximum vanadium level permitted = 0.10 % V.
 
 
 
@@ -3842,7 +3805,8 @@ Table 11.2—Structural Steel Shapes
 | II | B | ASTM A131 Grade AH36 | 350 | 51 | 490-620 | 71-90 |
 | II | A | API 2MT2 Class A | 345 | 50 | 450-620 | 65-90 |
 | II | A | ASTM A913 Grade 50with CVN at -20 °C (-4 °F) | 345 | 50 | 450 min. | 65 min. |
-| a Maximum vanadium level permitted = 0.10 % V. | a Maximum vanadium level permitted = 0.10 % V. | a Maximum vanadium level permitted = 0.10 % V. | a Maximum vanadium level permitted = 0.10 % V. | a Maximum vanadium level permitted = 0.10 % V. | a Maximum vanadium level permitted = 0.10 % V. | a Maximum vanadium level permitted = 0.10 % V. |
+
+a Maximum vanadium level permitted = 0.10 % V.
 
 
 
@@ -3885,7 +3849,8 @@ Table 11.3—Structural Steel Pipe
 | II | C | ASTM A618 | 345 | 50 | 485 min. | 70 min. |
 | II | B | API 5L, Grade X52 PSL 2 with SR5 or SR6 | 360 | 52 | 455 min. | 66 min. |
 | II | A | See 11.2.2 |  |  |  |  |
-| a Seamless or with longitudinal seam welds. | a Seamless or with longitudinal seam welds. | a Seamless or with longitudinal seam welds. | a Seamless or with longitudinal seam welds. | a Seamless or with longitudinal seam welds. | a Seamless or with longitudinal seam welds. | a Seamless or with longitudinal seam welds. |
+
+a Seamless or with longitudinal seam welds.
 
 
 
@@ -3898,7 +3863,8 @@ Table 11.4—Input Testing Conditions
 | Over 30 | 20 °C (36 °F) below LASTa | Flat plate |
 | 20 to 30 | 30 °C (54 °F) below LAST | Flat plate |
 | Under 20 | 10 °C (18 °F) below LAST | As fabricated |
-| a LAST means lowest anticipated service temperature. | a LAST means lowest anticipated service temperature. | a LAST means lowest anticipated service temperature. |
+
+a LAST means lowest anticipated service temperature.
 
 
 
@@ -3914,7 +3880,7 @@ Although the brace ends at tubular connections are also subject to stress concen
 
 11.4.1 Cement Grout
 
-If required by the design, the space between the piles and the surrounding structure should be carefully filled with grout. Prior to installation, the compressive strength of the grout mix design should be confirmed on a representative number of laboratory specimens cured under conditions that simulate the field conditions. Laboratory test procedures should be in accordance with ASTM C109 [31]. The unconfined compressive strength of 28-day-old grout specimens computed as described in ACI 214-77 [21] but equating $f_{ \mathtt{ C } }^{ \prime }$ to $f_{ \mathtt{ C U } } .$ , should not be less than either 17 MPa (2500 psi) or the specified design strength.
+If required by the design, the space between the piles and the surrounding structure should be carefully filled with grout. Prior to installation, the compressive strength of the grout mix design should be confirmed on a representative number of laboratory specimens cured under conditions that simulate the field conditions. Laboratory test procedures should be in accordance with ASTM C109 [31]. The unconfined compressive strength of 28-day-old grout specimens computed as described in ACI 214-77 [21] but equating $f_{ \mathtt{C} }^{ \prime }$ to $f_{ \mathtt{CU} } .$ , should not be less than either 17 MPa (2500 psi) or the specified design strength.
 
 A representative number of specimens taken from random batches during grouting operations should be tested to confirm that the design grout strength has been achieved. Test procedures should be in accordance with ASTM C109 [31]. The specimens taken from the field should be subjected, until test, to a curing regime representative of the situ curing conditions, that is, underwater and with appropriate seawater salinity and temperature.
 
@@ -4056,7 +4022,8 @@ Table 13.1—Impact Testing
 | II | B | -29 (–20) | 27 (20) |
 | II | A | -40 (–40) | 34 (25) |
 | III | A | -40 (–40) | 40 (30) |
-| NOTE See B.13.2.2 for further discussion of prequalification, crack tip opening displacement testing, and heat-affected zones. | NOTE See B.13.2.2 for further discussion of prequalification, crack tip opening displacement testing, and heat-affected zones. | NOTE See B.13.2.2 for further discussion of prequalification, crack tip opening displacement testing, and heat-affected zones. | NOTE See B.13.2.2 for further discussion of prequalification, crack tip opening displacement testing, and heat-affected zones. |
+
+NOTE See B.13.2.2 for further discussion of prequalification, crack tip opening displacement testing, and heat-affected zones.
 
 
 
@@ -4167,9 +4134,9 @@ Note: Indudes tolerance
 | Groove Angle "b" | Root Opening, G | Root Opening, G |
 | --- | --- | --- |
 | Groove Angle "b" | in. | mm |
-| Over 90 | $0\mathrm{{to}}{}^{3}/{16}$ | 0 to 4.8 |
-| 45 to 90 | ${}^{1/{16}}$ to ${}^{3/{16}}$ | 1.6 to 4.8 |
-| Under 45 | ${}^{1}/{}_{8}$ to ${}^{1}/{}_{4}$ | 3.2 to 6.4 |
+| Over 90 | $0$ to $3/16$ | 0 to 4.8 |
+| 45 to 90 | $1/16$ to $3/16$ | 1.6 to 4.8 |
+| Under 45 | $1/8$ to $1/4$ | 3.2 to 6.4 |
 
 
 
@@ -4259,7 +4226,7 @@ Landing elevations and landing and stairway locations horizontally should be wit
 
 In SI units:
 
-$$3 \mathrm{m m} \times (\text{t o t a l} \mathrm{l e n g t h} \mathrm{m} / 3 \mathrm{m})$$
+$$3 \mathrm{mm} \times (\text{t o t a l} \mathrm{length} \mathrm{m} / 3 \mathrm{m})$$
 
 In USC units:
 
@@ -4626,7 +4593,8 @@ Table 15.1—Guideline Wall Thickness (in SI Units)
 | 2438 | - | - | - | 32 | 32 | 32 |
 | 2743 | - | - | - | - | 35 | 35 |
 | 3048 | - | - | - | - | 38 | 38 |
-| NOTE Values above the solid line are based on minimum pile area in mm2, equal to 24 % of the rated energy of the hammer in KJ. Values below line are controlled by 9.10.6. | NOTE Values above the solid line are based on minimum pile area in mm2, equal to 24 % of the rated energy of the hammer in KJ. Values below line are controlled by 9.10.6. | NOTE Values above the solid line are based on minimum pile area in mm2, equal to 24 % of the rated energy of the hammer in KJ. Values below line are controlled by 9.10.6. | NOTE Values above the solid line are based on minimum pile area in mm2, equal to 24 % of the rated energy of the hammer in KJ. Values below line are controlled by 9.10.6. | NOTE Values above the solid line are based on minimum pile area in mm2, equal to 24 % of the rated energy of the hammer in KJ. Values below line are controlled by 9.10.6. | NOTE Values above the solid line are based on minimum pile area in mm2, equal to 24 % of the rated energy of the hammer in KJ. Values below line are controlled by 9.10.6. | NOTE Values above the solid line are based on minimum pile area in mm2, equal to 24 % of the rated energy of the hammer in KJ. Values below line are controlled by 9.10.6. |
+
+NOTE Values above the solid line are based on minimum pile area in mm2, equal to 24 % of the rated energy of the hammer in KJ. Values below line are controlled by 9.10.6.
 
 
 
@@ -4648,7 +4616,8 @@ Table 15.2—Guideline Wall Thickness (in USC Units)
 | 96 | — | — | — | 1.25 | 1.25. | 1.25 |
 | 108 | — | — | — | — | 1.375 | 1.375 |
 | 120 | — | — | — | — | 1.50 | 1.50 |
-| NOTE Values above the solid line are based upon minimum pile area in in.2, equal to 50% of the rated energy of the hammer in ft-kips. Values below line are controlled by 9.10.6. | NOTE Values above the solid line are based upon minimum pile area in in.2, equal to 50% of the rated energy of the hammer in ft-kips. Values below line are controlled by 9.10.6. | NOTE Values above the solid line are based upon minimum pile area in in.2, equal to 50% of the rated energy of the hammer in ft-kips. Values below line are controlled by 9.10.6. | NOTE Values above the solid line are based upon minimum pile area in in.2, equal to 50% of the rated energy of the hammer in ft-kips. Values below line are controlled by 9.10.6. | NOTE Values above the solid line are based upon minimum pile area in in.2, equal to 50% of the rated energy of the hammer in ft-kips. Values below line are controlled by 9.10.6. | NOTE Values above the solid line are based upon minimum pile area in in.2, equal to 50% of the rated energy of the hammer in ft-kips. Values below line are controlled by 9.10.6. | NOTE Values above the solid line are based upon minimum pile area in in.2, equal to 50% of the rated energy of the hammer in ft-kips. Values below line are controlled by 9.10.6. |
+
+NOTE Values above the solid line are based upon minimum pile area in in.2, equal to 50% of the rated energy of the hammer in ft-kips. Values below line are controlled by 9.10.6.
 
 
 
@@ -4855,7 +4824,8 @@ Table 16.1—Recommended Minimum Extent of NDE Inspection
 | All primary full penetration welds | 100 | UT or RT |
 | All partial penetration welds | 100 | Visualc |
 | All fillet welds | 100 | Visualc |
-| a Partial inspection should be conducted as 10% of each piece, not 100% of 10% of the number of pieces. Partial inspection should include a minimum of three segments randomly selected unless specific problems are known or suspected to exist. All suspect areas (e.g. areas of tack welds) shall be included in the areas to be inspected. If rejectable flaws are found from such 10% inspection, additional inspection should be performed until the extent of rejects has been determined and the cause corrected.b Depending upon design requirements and if specified in the plans and specifications MT may be an acceptable inspection method.c May include MT and/or PT. | a Partial inspection should be conducted as 10% of each piece, not 100% of 10% of the number of pieces. Partial inspection should include a minimum of three segments randomly selected unless specific problems are known or suspected to exist. All suspect areas (e.g. areas of tack welds) shall be included in the areas to be inspected. If rejectable flaws are found from such 10% inspection, additional inspection should be performed until the extent of rejects has been determined and the cause corrected.b Depending upon design requirements and if specified in the plans and specifications MT may be an acceptable inspection method.c May include MT and/or PT. | a Partial inspection should be conducted as 10% of each piece, not 100% of 10% of the number of pieces. Partial inspection should include a minimum of three segments randomly selected unless specific problems are known or suspected to exist. All suspect areas (e.g. areas of tack welds) shall be included in the areas to be inspected. If rejectable flaws are found from such 10% inspection, additional inspection should be performed until the extent of rejects has been determined and the cause corrected.b Depending upon design requirements and if specified in the plans and specifications MT may be an acceptable inspection method.c May include MT and/or PT. |
+
+a Partial inspection should be conducted as 10% of each piece, not 100% of 10% of the number of pieces. Partial inspection should include a minimum of three segments randomly selected unless specific problems are known or suspected to exist. All suspect areas (e.g. areas of tack welds) shall be included in the areas to be inspected. If rejectable flaws are found from such 10% inspection, additional inspection should be performed until the extent of rejects has been determined and the cause corrected.b Depending upon design requirements and if specified in the plans and specifications MT may be an acceptable inspection method.c May include MT and/or PT.
 
 
 
@@ -5030,7 +5000,7 @@ Inspection documentation for materials, testing, and welding inspection performe
 17.1.5 An assessment process is presented in this section to:
 
 — initially screen those platforms considered to be at low risk, thereby not requiring detailed structural assessment; and   
-evaluate the structural performance of those platforms considered to be at high risk from a life safety and/or consequences of failure point of view, when subjected to fire, blast, and accidental loading events.
+— evaluate the structural performance of those platforms considered to be at high risk from a life safety and/or consequences of failure point of view, when subjected to fire, blast, and accidental loading events.
 
 ## 17.2 Assessment Process
 
@@ -5063,7 +5033,8 @@ Table 17.1—Platform Risk Matrix
 | H | Risk Level 1 | Risk Level 1 | Risk Level 2 |
 | M | Risk Level 1 | Risk Level 2 | Risk Level 3 |
 | L | Risk Level 2 | Risk Level 3 | Risk Level 3 |
-| NOTE See 4.7 and 17.5 for definitions of abbreviations. | NOTE See 4.7 and 17.5 for definitions of abbreviations. | NOTE See 4.7 and 17.5 for definitions of abbreviations. | NOTE See 4.7 and 17.5 for definitions of abbreviations. |
+
+NOTE See 4.7 and 17.5 for definitions of abbreviations.
 
 
 
@@ -5205,7 +5176,7 @@ Reuse platforms require additional considerations with respect to fatigue, mater
 
 18.2.2.2 The design fatigue life, L, in years should satisfy the following expression:
 
-$$L = \mathrm{S F}_{1} L_{1} + \mathrm{S F}_{2} L_{2} \tag{18.1}$$
+$$L = \mathrm{SF}_{1} L_{1} + \mathrm{SF}_{2} L_{2} \tag{18.1}$$
 
 where
 
@@ -5213,11 +5184,11 @@ $L_{ 1 }$ is the initial in service period, years;
 
 $L_{ 2 }$ is the planned service life at new location, years;
 
-$\mathrm{ S F }_{ 1 }$ is equal to 2.0 for minimum requirements of 18.2.4. If the weld in a tubular connection is 100 % NDE inspection in accordance with requirements of 18.2.4 and is upgraded if defects are found, $\mathrm{ S F }_{ 1 }$ may be between zero and 2.0, selected on a rational basis.
+$\mathrm{SF}_{ 1 }$ is equal to 2.0 for minimum requirements of 18.2.4. If the weld in a tubular connection is 100 % NDE inspection in accordance with requirements of 18.2.4 and is upgraded if defects are found, $\mathrm{SF}_{ 1 }$ may be between zero and 2.0, selected on a rational basis.
 
-$\mathrm{ S F }_{ 2 }$ is equal to 2.0.
+$\mathrm{SF}_{ 2 }$ is equal to 2.0.
 
-For both safety factors, $\mathrm{ S F }_{ 1 }$ and ${ \mathrm{ S F } }_{ 2 } ,$ higher values for failure critical elements should be considered.
+For both safety factors, $\mathrm{SF}_{ 1 }$ and ${ \mathrm{SF} }_{ 2 } ,$ higher values for failure critical elements should be considered.
 
 18.2.2.3 Remedial measures (i.e. grinding welds, grouting, reinforcing, etc.) to increase the fatigue performance of a platform to be reused are acceptable.
 
@@ -5308,10 +5279,14 @@ Table 18.1—Recommended Extent of NDE Inspection—Reused Structure
 | Circumferential weld seams (C) | 10 % | UT or RT |
 | Intersection of L and C | 10 % | UT or RT |
 | Field splices | 100 % | UT or RT |
-| a Extent of inspection for these welds should be determined by comparing the design loadings and stresses (including removal and reinstallation loads and stresses) for the new site with those to which the welds have previously been designed for and/or exposed. Where new design loadings are less than or equal to initial design or actual loadings, then the extent of inspection, if any, should be determined based on NDE documentation or the results of the initial spot survey per 18.2.4.6.3. Where new design loadings are significantly greater than initial design or actual loadings, or when comparison based on initial design or actual loadings is not possible, a minimum of one (1) bracing member and one (1) jacket leg spanning between each level should be inspected. Additional inspection per 18.2.4.6.3 should be performed where in-service damage is known of or suspected. | a Extent of inspection for these welds should be determined by comparing the design loadings and stresses (including removal and reinstallation loads and stresses) for the new site with those to which the welds have previously been designed for and/or exposed. Where new design loadings are less than or equal to initial design or actual loadings, then the extent of inspection, if any, should be determined based on NDE documentation or the results of the initial spot survey per 18.2.4.6.3. Where new design loadings are significantly greater than initial design or actual loadings, or when comparison based on initial design or actual loadings is not possible, a minimum of one (1) bracing member and one (1) jacket leg spanning between each level should be inspected. Additional inspection per 18.2.4.6.3 should be performed where in-service damage is known of or suspected. | a Extent of inspection for these welds should be determined by comparing the design loadings and stresses (including removal and reinstallation loads and stresses) for the new site with those to which the welds have previously been designed for and/or exposed. Where new design loadings are less than or equal to initial design or actual loadings, then the extent of inspection, if any, should be determined based on NDE documentation or the results of the initial spot survey per 18.2.4.6.3. Where new design loadings are significantly greater than initial design or actual loadings, or when comparison based on initial design or actual loadings is not possible, a minimum of one (1) bracing member and one (1) jacket leg spanning between each level should be inspected. Additional inspection per 18.2.4.6.3 should be performed where in-service damage is known of or suspected. |
-| b All damage-prone connections should be inspected. Damage-prone connections are defined in 18.2.4.5. Where NDE inspection of these connections reveals significant defects, additional inspection of other connections should also be performed. For tubular connections, a minimum of one (1) brace to chord connection at each level and X brace connection between levels, as applicable, should be inspected. For tubular connections not having Class A steel in the heavy-wall joint cans both UT and MT should be performed. | b All damage-prone connections should be inspected. Damage-prone connections are defined in 18.2.4.5. Where NDE inspection of these connections reveals significant defects, additional inspection of other connections should also be performed. For tubular connections, a minimum of one (1) brace to chord connection at each level and X brace connection between levels, as applicable, should be inspected. For tubular connections not having Class A steel in the heavy-wall joint cans both UT and MT should be performed. | b All damage-prone connections should be inspected. Damage-prone connections are defined in 18.2.4.5. Where NDE inspection of these connections reveals significant defects, additional inspection of other connections should also be performed. For tubular connections, a minimum of one (1) brace to chord connection at each level and X brace connection between levels, as applicable, should be inspected. For tubular connections not having Class A steel in the heavy-wall joint cans both UT and MT should be performed. |
-| c Partial inspection should be conducted as percentage of each piece, not 100 % of percentage of the number of pieces. | c Partial inspection should be conducted as percentage of each piece, not 100 % of percentage of the number of pieces. | c Partial inspection should be conducted as percentage of each piece, not 100 % of percentage of the number of pieces. |
-| d Limited to inspection of completed weld; may include MT and or PT. | d Limited to inspection of completed weld; may include MT and or PT. | d Limited to inspection of completed weld; may include MT and or PT. |
+
+a Extent of inspection for these welds should be determined by comparing the design loadings and stresses (including removal and reinstallation loads and stresses) for the new site with those to which the welds have previously been designed for and/or exposed. Where new design loadings are less than or equal to initial design or actual loadings, then the extent of inspection, if any, should be determined based on NDE documentation or the results of the initial spot survey per 18.2.4.6.3. Where new design loadings are significantly greater than initial design or actual loadings, or when comparison based on initial design or actual loadings is not possible, a minimum of one (1) bracing member and one (1) jacket leg spanning between each level should be inspected. Additional inspection per 18.2.4.6.3 should be performed where in-service damage is known of or suspected.
+
+b All damage-prone connections should be inspected. Damage-prone connections are defined in 18.2.4.5. Where NDE inspection of these connections reveals significant defects, additional inspection of other connections should also be performed. For tubular connections, a minimum of one (1) brace to chord connection at each level and X brace connection between levels, as applicable, should be inspected. For tubular connections not having Class A steel in the heavy-wall joint cans both UT and MT should be performed.
+
+c Partial inspection should be conducted as percentage of each piece, not 100 % of percentage of the number of pieces.
+
+d Limited to inspection of completed weld; may include MT and or PT.
 
 
 
@@ -5407,7 +5382,7 @@ After severe storms in the Gulf of Mexico, caissons have been observed to be lea
 
 This section provides guidelines and considerations for utilizing connection types other than welded tubular connections as covered in Section 7. Connection types are as follows:
 
-一 bolted,  
+— bolted,  
 — pinned,   
 — clamped,   
 — grouted,   
@@ -5861,15 +5836,15 @@ B.5.3.1 Waves
 
 B.5.3.1.2.2 Apparent Wave Period
 
-Kirby and Chen [88] developed a consistent first-order solution for the apparent wave period of a wave propagating on a current with an arbitrary profile. Their procedure requires the solution of the following three simultaneous equations for $T_{ \mathsf{ a p p } } , \lambda$ , and $V_{ \parallel } \colon$
+Kirby and Chen [88] developed a consistent first-order solution for the apparent wave period of a wave propagating on a current with an arbitrary profile. Their procedure requires the solution of the following three simultaneous equations for $T_{ \mathsf{app} } , \lambda$ , and $V_{\mathrm{I}} \colon$
 
-$$\frac{\lambda}{T} = \frac{\lambda}{T_{\mathrm{a p p}}} + V_{1} \tag{B.5.1}$$
+$$\frac{\lambda}{T} = \frac{\lambda}{T_{\mathrm{app}}} + V_{\mathrm{I}} \tag{B.5.1}$$
 
-$$T_{\text{a p p}}^{2} = \frac{2 \pi \lambda}{\operatorname{g t a n h} (2 \pi d / \lambda)} \tag{B.5.2}$$
+$$T_{\text{a p p}}^{2} = \frac{2 \pi \lambda}{g\tanh (2 \pi d / \lambda)} \tag{B.5.2}$$
 
-$$V_{1} = \frac{(4 \pi / \lambda)}{\sinh (4 \pi d / \lambda)} \int_{- d}^{0} U_{c} (z) \cosh \left[ \frac{4 \pi (z + d)}{\lambda} \right] d z \tag{B.5.3}$$
+$$V_{\mathrm{I}} = \frac{(4 \pi / \lambda)}{\sinh (4 \pi d / \lambda)} \int_{- d}^{0} U_{c} (z) \cosh \left[ \frac{4 \pi (z + d)}{\lambda} \right] d z \tag{B.5.3}$$
 
-Here λ is wave length, T is the wave period seen by a stationary observer, $T_{ \mathsf{ a p p } }$ is the wave period seen by an observer moving at the effective in-line current speed $V_{ \parallel } ,$ g is the acceleration due to gravity, $U_{ \mathsf{ c } } ( z )$ is the component of the steady current profile at elevation z (positive above storm mean level) in the wave direction, and $d$ is storm water depth. For the special case of a uniform current profile, the solution to these equations is provided in dimensionless form in Figure 5.2.
+Here λ is wave length, T is the wave period seen by a stationary observer, $T_{ \mathsf{app} }$ is the wave period seen by an observer moving at the effective in-line current speed $V_{\mathrm{I}} ,$ g is the acceleration due to gravity, $U_{ \mathsf{c} } ( z )$ is the component of the steady current profile at elevation z (positive above storm mean level) in the wave direction, and $d$ is storm water depth. For the special case of a uniform current profile, the solution to these equations is provided in dimensionless form in Figure 5.2.
 
 Some other sources consider the wave period seen by a stationary observer to be the apparent period rather than the actual period. Users of wave loading software should determine the assumptions and terminology assumed in developing the software and ensure that the data input is consistent with that approach.
 
@@ -5881,13 +5856,13 @@ is symmetric about the crest and propagates without changing shape. They differ 
 
 Linear wave theory is applicable only when the linearization of the free surface boundary conditions is reasonable, that is, when the wave amplitude and steepness are infinitesimal. Stokes V (Sarpkaya and Isaacson [40]) is a fifth order expansion about mean water level and satisfies the free surface boundary conditions with acceptable accuracy over a fairly broad range of applications, as shown in Figure 5.3. Chappelear’s [72] theory is similar to Stokes V but determines the coefficients in the expansion numerically through a least squares minimization of errors in the free surface boundary conditions, rather than analytically. EXVP-D (Lambrakos [90]) satisfies the dynamic boundary condition exactly and minimizes the errors in the kinematic boundary condition. Stream function theory (Dean and Perlin [74]) satisfies the kinematic boundary condition exactly and minimizes the errors in the dynamic boundary condition.
 
-When Stokes V theory is not applicable, higher-order Chappelear, EXVP-D, or stream function theory may be used. Of these, the most broadly used is stream function. Selection of the appropriate solution order can be based on either the percentage error in the dynamic boundary condition or the percentage change in velocity or acceleration in going to the next higher order. These two methods select comparable solution orders over most of the feasible domain but differ in the extremes of $H { > } 0 . 9 H_{ \mathbf{ b } }$ and d gT 2app $d / g T_{ \mathsf{ a p p } }^{ 2 } < 0 . 003$ . In these extremes, the theory has not been well substantiated with laboratory measurements, and should therefore be used with caution. In particular, the curve for breaking wave height $H_{ \mathsf{ b } }$ shown in Figure 5.3 is not universally accepted.
+When Stokes V theory is not applicable, higher-order Chappelear, EXVP-D, or stream function theory may be used. Of these, the most broadly used is stream function. Selection of the appropriate solution order can be based on either the percentage error in the dynamic boundary condition or the percentage change in velocity or acceleration in going to the next higher order. These two methods select comparable solution orders over most of the feasible domain but differ in the extremes of $H { > } 0.9 H_{ \mathbf{b} }$ and $d/gT_{\mathrm{app}}^{2}<0.003$ . In these extremes, the theory has not been well substantiated with laboratory measurements, and should therefore be used with caution. In particular, the curve for breaking wave height $H_{ \mathsf{b} }$ shown in Figure 5.3 is not universally accepted.
 
 B.5.3.1.2.4 Wave Kinematics Factor
 
 In wave force computations with regular waves, the kinematics are computed assuming a unidirectional sea (long-crested waves all propagating in the same direction), whereas the real sea surface is comprised of short-crested, directional waves. In fact, the sea surface can be viewed as the superposition of many small individual wavelets, each with its own amplitude, frequency, and direction of propagation. Fortunately, the directional spreading of the waves tends to result in peak forces that are somewhat smaller than those predicted from unidirectional seas. This force reduction due to directional spreading can be accommodated in static, deterministic wave force design procedures by reducing the horizontal velocity and acceleration from a two-dimensional wave theory by a “spreading factor.”
 
-There is generally much less directional spreading for wave frequencies near the peak of the wave spectrum than for higher frequencies (Forristall [77] for example). Since the kinematics of the large, wellformed individual waves used in static design are dominated by the most energetic wave frequencies, it is appropriate to use a “spreading factor” corresponding to the spectral peak period. Use of a weighted average spreading factor over all the wave frequencies in the spectrum would be unconservative. The spreading factor can be estimated either from measured or hindcast directional spectral wave data as $\sqrt{ ( n + 1 ) / ( n + 2 ) }$ , where n is the exponent in the cosnθ spreading function at the spectral peak frequency.
+There is generally much less directional spreading for wave frequencies near the peak of the wave spectrum than for higher frequencies (Forristall [77] for example). Since the kinematics of the large, well-formed individual waves used in static design are dominated by the most energetic wave frequencies, it is appropriate to use a “spreading factor” corresponding to the spectral peak period. Use of a weighted average spreading factor over all the wave frequencies in the spectrum would be unconservative. The spreading factor can be estimated either from measured or hindcast directional spectral wave data as $\sqrt{ ( n + 1 ) / ( n + 2 ) }$ , where n is the exponent in the cosnθ spreading function at the spectral peak frequency.
 
 Note that measured directional data from pitch/roll buoys tend to significantly overestimate spreading, while directional data from a two-horizontal axis particle velocimeter are thought to provide a good estimate of spreading.
 
@@ -5907,9 +5882,9 @@ The blockage factor for steady current can be estimated from the “actuator dis
 
 $$\left[ 1 + \sum \left(C_{\mathrm{d}} A\right)_{\mathrm{i}} / 4 \bar{A} \right]^{-1} \tag{B.5.4}$$
 
-where $\sum ( C_{ \mathsf{ d } } A )_{ \mathsf{ i } }$ is the summation of the “drag areas” of all the members (including horizontals) in the flow, and A is the area within the perimeter area of the platform projected normal to the current. For structures where geometry changes significantly with depth, the blockage factor can be computed for different depth levels. If the calculated reduction factor is less than 0.7, consideration should be given to modeling the platform as a series of actuator disks rather than a single actuator disk. Other limitations of the actuator disk model are discussed by Taylor [115].
+where $\sum ( C_{ \mathsf{d} } A )_{ \mathsf{i} }$ is the summation of the “drag areas” of all the members (including horizontals) in the flow, and A is the area within the perimeter area of the platform projected normal to the current. For structures where geometry changes significantly with depth, the blockage factor can be computed for different depth levels. If the calculated reduction factor is less than 0.7, consideration should be given to modeling the platform as a series of actuator disks rather than a single actuator disk. Other limitations of the actuator disk model are discussed by Taylor [115].
 
-An alternative expression for the blockage factor based on a similar approach to Taylor’s but accounting for mixing downstream, is given by Lambrakos and Beckmann (1982). In the case of small values of the ratio $\sum ( C_{ \mathsf{ d } } A )_{ \mathsf{ i } } / \overline{ { A } }$ , the alternative expression reduces to Taylor’s. Lambrakos and Beckmann [92] also give expressions for treating the jacket and conductor group separately.
+An alternative expression for the blockage factor based on a similar approach to Taylor’s but accounting for mixing downstream, is given by Lambrakos and Beckmann (1982). In the case of small values of the ratio $\sum ( C_{ \mathsf{d} } A )_{ \mathsf{i} } / \overline{ { A } }$ , the alternative expression reduces to Taylor’s. Lambrakos and Beckmann [92] also give expressions for treating the jacket and conductor group separately.
 
 ![](API_RP_2A-WSD_22nd/chunk2_8ed2bd901c2c3321ba99c70c4fedefaafbc718feb6fb16b803d2ee9961005ce8.jpg)  
 Figure B.5.1—Measured Current Field at 60 ft Depth Around and Through the Bullwinkle Platform in a Loop Current Event in 1991
@@ -5918,11 +5893,11 @@ The global “blockage” discussed here, and the “shielding” discussed in B
 
 B.5.3.1.2.6 Combined Wave/Current Kinematics
 
-Dalrymple and Heideman [73] and Eastwood and Watson [76] showed that waves alternately stretch and compress the current profile under crests and troughs, respectively. Dalrymple and Heideman found that a model that combined Doppler-shifted wave kinematics with a nonlinearly stretched current profile gave the best estimate of global loads on a structure. Nonlinear stretching computes the stretched current for a particle instantaneously at elevation z as the speed $U_{ \mathsf{ c } } ( z^{ \prime } )$ evaluated from the specified current profile at elevation $z^{ \prime } ,$ the mean elevation of the particle over a full wave cycle. The elevations z and $z^{ \prime }$ are related through linear (Airy) wave theory as follows:
+Dalrymple and Heideman [73] and Eastwood and Watson [76] showed that waves alternately stretch and compress the current profile under crests and troughs, respectively. Dalrymple and Heideman found that a model that combined Doppler-shifted wave kinematics with a nonlinearly stretched current profile gave the best estimate of global loads on a structure. Nonlinear stretching computes the stretched current for a particle instantaneously at elevation z as the speed $U_{ \mathsf{c} } ( z^{ \prime } )$ evaluated from the specified current profile at elevation $z^{ \prime } ,$ the mean elevation of the particle over a full wave cycle. The elevations z and $z^{ \prime }$ are related through linear (Airy) wave theory as follows:
 
 $$z = z^{\prime} + \eta \frac{\sinh \left[ 2 \pi \left(z^{\prime} + d\right) / \lambda_{n} \right]}{\sinh \left(2 \pi d / \lambda_{n}\right)} \tag{B.5.5}$$
 
-Here d is storm water depth, η is the wave surface directly above the water particle, and $\lambda_{ \mathbf{ n } }$ is the wave length determined from nonlinear wave theory for a wave of height H and period $T_{ \mathsf{ a p p } } .$ . The elevations $z , z^{ \prime } ,$ and η are all positive above storm mean water level.
+Here d is storm water depth, η is the wave surface directly above the water particle, and $\lambda_{ \mathbf{n} }$ is the wave length determined from nonlinear wave theory for a wave of height H and period $T_{ \mathsf{app} } $. The elevations $z , z^{ \prime } ,$ and η are all positive above storm mean water level.
 
 This equation gives a nonlinear stretching of the current, with the greatest stretching occurring high in the water column, where the particle orbits have the greatest radii. The nonlinearly stretched current profile, coupled with Doppler shifted wave kinematics, produces global platform loads that are within +1 % to –4 % of those produced by the exact solution on a typical drag-dominant structure subjected to representative waves and current profiles.
 
@@ -5932,20 +5907,20 @@ $$z + d = \left(z^{\prime} + d\right) (d + \eta) / d \tag{B.5.6}$$
 
 The stretched current profiles from the two models are compared qualitatively in Figure B.5.2 for typical sheared and slab current profiles under a wave crest. The linearly stretched current produces global loads on a typical drag-dominant platform that are nearly as accurate as those produced by the nonlinearly stretched current, being within 0 to –6 % of loads produced by the exact solution. However, it does not simulate the combined wave/current velocity profile from the exact solution as faithfully as nonlinear stretching.
 
-Vertical extrapolation of the input current profile above mean water level produces reasonably accurate estimates of global loads on drag-dominant platforms in most cases. In particular, for a slab profile thicker than about 50 m, like the recommended profiles in API 2MET, vertical extrapolation produces nearly the same result as nonlinear stretching, as illustrated in Figure B.5.2. However, if the specified profile $U_{ \mathsf{ c } } ( z^{ \prime } )$ has a very high speed at mean water level, sheared to much lower speeds just below mean water level, the global force may be overestimated (by about 8 % in a typical application).
+Vertical extrapolation of the input current profile above mean water level produces reasonably accurate estimates of global loads on drag-dominant platforms in most cases. In particular, for a slab profile thicker than about 50 m, like the recommended profiles in API 2MET, vertical extrapolation produces nearly the same result as nonlinear stretching, as illustrated in Figure B.5.2. However, if the specified profile $U_{ \mathsf{c} } ( z^{ \prime } )$ has a very high speed at mean water level, sheared to much lower speeds just below mean water level, the global force may be overestimated (by about 8 % in a typical application).
 
 Another approximate model is the linearly stretched model described above, adjusted so that the total momentum in the stretched profile from the seafloor to the wave surface equals that in the specified profile from the seafloor to mean water level. This procedure is not supported by the theoretical analyses of Dalrymple and Heideman [73] or Eastwood and Watson [76].
 
 ![](API_RP_2A-WSD_22nd/chunk2_810629add6b4e1d2c436d52ecf7434b635920d18dc1bc2dda4573a5d98761ee8.jpg)  
 Figure B.5.2—Comparison of Linear and Nonlinear Stretching of Current Profiles
 
-If the current is not in the same direction as the wave, the methods discussed above may still be used, with one modification. Both the in-line and normal components of current would be stretched, but only the in-line component would be used to estimate $T_{ \mathsf{ a p p } }$ for the Doppler-shifted wave.
+If the current is not in the same direction as the wave, the methods discussed above may still be used, with one modification. Both the in-line and normal components of current would be stretched, but only the in-line component would be used to estimate $T_{ \mathsf{app} }$ for the Doppler-shifted wave.
 
 While no exact solution has been developed for irregular waves, the wave/current solution for regular waves can be logically extended. In the first two approximations described above for regular waves, the period and length of the regular wave should be replaced with the period and length corresponding to the spectral peak frequency.
 
 B.5.3.1.2.7 Marine Growth
 
-All elements of the structure (members, conductors, risers, appurtenances, etc.) are increased in crosssectional area by marine growth. The effective element diameter (cross-sectional width for noncircular cylinders, or prisms) is $D = D_{ \mathsf{ c } } + 2 t ,$ , where $D_{ \mathsf{ c } }$ is the “clean” outer diameter and t is the average growth thickness that would be obtained by circumferential measurements with a 25 mm to 100 mm (1 in. to 4 in.) wide tape. An additional parameter that affects the drag coefficient of elements with circular cross sections is the relative roughness, e = k/D, where k is the average peak-to-valley height of “hard” growth organisms. Marine growth thickness and roughness are illustrated in Figure B.5.3 for a circular cylinder. Marine organisms generally colonize a structure soon after installation. They grow rapidly in the beginning, but growth tapers off after a few years. Marine growth has been measured on structures in many areas but should be estimated for other areas where no measurements exist.
+All elements of the structure (members, conductors, risers, appurtenances, etc.) are increased in crosssectional area by marine growth. The effective element diameter (cross-sectional width for noncircular cylinders, or prisms) is $D = D_{ \mathsf{c} } + 2 t ,$ where $D_{ \mathsf{c} }$ is the “clean” outer diameter and t is the average growth thickness that would be obtained by circumferential measurements with a 25 mm to 100 mm (1 in. to 4 in.) wide tape. An additional parameter that affects the drag coefficient of elements with circular cross sections is the relative roughness, e = k/D, where k is the average peak-to-valley height of “hard” growth organisms. Marine growth thickness and roughness are illustrated in Figure B.5.3 for a circular cylinder. Marine organisms generally colonize a structure soon after installation. They grow rapidly in the beginning, but growth tapers off after a few years. Marine growth has been measured on structures in many areas but should be estimated for other areas where no measurements exist.
 
 ![](API_RP_2A-WSD_22nd/chunk2_fe56733bda7d4671d38e29c49e40880b3d99e15eb2dba8dfc5916bf8c3143204.jpg)  
 Figure B.5.3—Definition of Surface Roughness Height and Thickness
@@ -5954,45 +5929,45 @@ B.5.3.1.2.8 Drag and Inertia Coefficients
 
 B.5.3.1.2.8.1 General
 
-In the ocean environment, the forces predicted by Morison’s equation are only an engineering approximation. Morison’s equation can match measured drag and inertia forces reasonably well in any particular half wave cycle with constant $C_{ \mathsf{ d } }$ and $C_{ \mathsf{ m } } ,$ but the best fit values of $C_{ \mathsf{ d } }$ and $C_{ \mathsf{ m } }$ vary from one half wave cycle to another. Most of the variation in $C_{ \mathsf{ d } }$ and $C_{ \mathsf{ m } }$ can be accounted for by expressing $C_{ \mathsf{ d } }$ and $C_{ \mathsf{ m } }$ as functions of:
+In the ocean environment, the forces predicted by Morison’s equation are only an engineering approximation. Morison’s equation can match measured drag and inertia forces reasonably well in any particular half wave cycle with constant $C_{ \mathsf{d} }$ and $C_{ \mathsf{m} } ,$ but the best fit values of $C_{ \mathsf{d} }$ and $C_{ \mathsf{m} }$ vary from one half wave cycle to another. Most of the variation in $C_{ \mathsf{d} }$ and $C_{ \mathsf{m} }$ can be accounted for by expressing $C_{ \mathsf{d} }$ and $C_{ \mathsf{m} }$ as functions of:
 
 — relative surface roughness, $e = k / D ;$   
-— Reynolds number, $R_{ \mathsf{ m } } = U_{ \mathsf{ m } } D / \upsilon ;$   
-— Keulegan-Carpenter number, $K = 2 U_{ \mathrm{ m } } T_{ 2 } / D ;$   
-— current/wave velocity ratio, $r = V_{ 1 } / U_{ \mathrm{ m o } } ,$   
+— Reynolds number, $R_{ \mathsf{m} } = U_{ \mathsf{m} } D / \upsilon ;$   
+— Keulegan-Carpenter number, $K = 2 U_{ \mathrm{m} } T_{ 2 } / D ;$   
+— current/wave velocity ratio, $r = V_{ 1 } / U_{ \mathrm{mo} } ,$   
 — member orientation.
 
-Here $U_{ \mathbf{ m } }$ is the maximum velocity (including current) normal to the cylinder axis in a half wave cycle, $T_{ 2 }$ is the duration of the half wave cycle, $V_{ 1 }$ is the in-line (with waves) current component, $U_{ \mathsf{ m o } }$ is the maximum wave-induced orbital velocity, D is effective diameter (including marine growth), υ is the kinematic viscosity of water, and k is the absolute roughness height.
+Here $U_{ \mathbf{m} }$ is the maximum velocity (including current) normal to the cylinder axis in a half wave cycle, $T_{ 2 }$ is the duration of the half wave cycle, $V_{ 1 }$ is the in-line (with waves) current component, $U_{ \mathsf{mo} }$ is the maximum wave-induced orbital velocity, D is effective diameter (including marine growth), υ is the kinematic viscosity of water, and k is the absolute roughness height.
 
 B.5.3.1.2.8.2 Surface Roughness
 
-The dependence of $C_{ \mathsf{ d } \mathsf{ s } }$ , the steady-flow drag coefficient at postcritical Reynolds numbers, on relative surface roughness, is shown in Figure B.5.4, for “hard” roughness elements. All the data in this figure have been adjusted, if necessary, to account for wind tunnel blockage and to have a drag coefficient that is referenced to the effective diameter $D ,$ including the roughness elements.
+The dependence of $C_{ \mathsf{d} \mathsf{s} }$ , the steady-flow drag coefficient at postcritical Reynolds numbers, on relative surface roughness, is shown in Figure B.5.4, for “hard” roughness elements. All the data in this figure have been adjusted, if necessary, to account for wind tunnel blockage and to have a drag coefficient that is referenced to the effective diameter $D ,$ including the roughness elements.
 
-Natural marine growth on platforms will generally have $e > 10^{ - 3 } ,$ . Thus, in the absence of better information on the expected value of surface roughness and its variation with depth for a particular site, it is reasonable to assume $C_{ \mathsf{ d s } } = 1 . 00 \mathrm{ ~ t o ~ } 1 . 10$ for all members below high tide level. One would still need to estimate the thickness of marine growth that will ultimately accumulate in order to estimate the effective diameter D. For members above high tide level, a reasonable estimate of surface roughness is k = 0.05 mm (0.002 in.), which will give $C_{ \mathsf{ d } \mathsf{ s } }$ in the range 0.6 to 0.7 for typical diameters.
+Natural marine growth on platforms will generally have $e > 10^{ - 3 } ,$ . Thus, in the absence of better information on the expected value of surface roughness and its variation with depth for a particular site, it is reasonable to assume $C_{ \mathsf{ds} } = 1.00 \mathrm{ ~ t o ~ } 1.10$ for all members below high tide level. One would still need to estimate the thickness of marine growth that will ultimately accumulate in order to estimate the effective diameter D. For members above high tide level, a reasonable estimate of surface roughness is k = 0.05 mm (0.002 in.), which will give $C_{ \mathsf{d} \mathsf{s} }$ in the range 0.6 to 0.7 for typical diameters.
 
 All the data in Figure B.5.4 are for cylinders that are densely covered with surface roughness elements. Force measurements (Kasahara and Shimazak [86]; Schlichting [108]) show that there is little degradation in the effectiveness of surface roughness for surface coverage as sparse as 10 %, but that roughness effects are negligible for surface coverage less than 3 %.
 
-The effect of soft, flexible growth on $C_{ \mathsf{ d } \mathsf{ s } }$ is poorly understood. Tests run by Nath [98] indicate that:
+The effect of soft, flexible growth on $C_{ \mathsf{d} \mathsf{s} }$ is poorly understood. Tests run by Nath [98] indicate that:
 
-a) soft, fuzzy growth has little effect, $C_{ \mathsf{ d } \mathsf{ s } }$ being determined predominantly by the underlying hard growth; and   
+a) soft, fuzzy growth has little effect, $C_{ \mathsf{d} \mathsf{s} }$ being determined predominantly by the underlying hard growth; and   
 b) anemones and kelp produce drag coefficients similar to those for hard growth.
 
 ![](API_RP_2A-WSD_22nd/chunk2_1dd13768bf2694e26001ef831efb907c489f2fac35232c1e52554dec7a43d051.jpg)  
 Figure B.5.4—Dependence of Steady Flow Drag Coefficient on Relative Surface Roughness
 
-For cylindrical members whose cross section is not circular, $C_{ \mathsf{ d } \mathsf{ s } }$ may be assumed to be independent of surface roughness. Suitable values are provided by DNV RP-C205 [39].
+For cylindrical members whose cross section is not circular, $C_{ \mathsf{d} \mathsf{s} }$ may be assumed to be independent of surface roughness. Suitable values are provided by DNV RP-C205 [39].
 
-Surface roughness also affects the inertia coefficient in oscillatory flow. Generally, as $C_{ \mathsf{ d } }$ increases with roughness, $C_{ \mathsf{ m } }$ decreases. More information is provided in subsequent discussions.
+Surface roughness also affects the inertia coefficient in oscillatory flow. Generally, as $C_{ \mathsf{d} }$ increases with roughness, $C_{ \mathsf{m} }$ decreases. More information is provided in subsequent discussions.
 
 B.5.3.1.2.8.3 Reynolds Number
 
 The force coefficients for members whose cross sections have sharp edges are practically independent of Reynolds number. However, circular cylinders have coefficients that depend on Reynolds number.
 
-Fortunately, for most offshore structures in the extreme design environment, Reynolds numbers are well into the postcritical flow regime, where $C_{ \mathsf{ d } \mathsf{ s } }$ for circular cylinders is independent of Reynolds number. However, in less severe environments, such as considered in fatigue calculations, some platform members could drop down into the critical flow regime. Use of the post critical $C_{ \mathsf{ d } \mathsf{ s } }$ in these cases would be conservative for static wave force calculations but nonconservative for calculating damping of dynamically excited structures.
+Fortunately, for most offshore structures in the extreme design environment, Reynolds numbers are well into the postcritical flow regime, where $C_{ \mathsf{d} \mathsf{s} }$ for circular cylinders is independent of Reynolds number. However, in less severe environments, such as considered in fatigue calculations, some platform members could drop down into the critical flow regime. Use of the post critical $C_{ \mathsf{d} \mathsf{s} }$ in these cases would be conservative for static wave force calculations but nonconservative for calculating damping of dynamically excited structures.
 
-In laboratory tests of scale models of platforms with circular cylindrical members, the dependence of $C_{ \mathsf{ d } \mathsf{ s } }$ on Reynolds number should be taken into account. In particular, the scale of the model and the surface roughness should be chosen to eliminate or minimize Reynolds number dependence, and the difference between model-scale and full-scale $C_{ \mathsf{ d } \mathsf{ s } }$ should be considered in the application of model test results to
+In laboratory tests of scale models of platforms with circular cylindrical members, the dependence of $C_{ \mathsf{d} \mathsf{s} }$ on Reynolds number should be taken into account. In particular, the scale of the model and the surface roughness should be chosen to eliminate or minimize Reynolds number dependence, and the difference between model-scale and full-scale $C_{ \mathsf{d} \mathsf{s} }$ should be considered in the application of model test results to
 
-full-scale structures. Further guidance on the dependence of circular cylinder $C_{ \mathsf{ d } \mathsf{ s } }$ on Reynolds number can be found in Achenbach [63], Hoerner [83], and Sarpkaya and Isaacson [40].
+full-scale structures. Further guidance on the dependence of circular cylinder $C_{ \mathsf{d} \mathsf{s} }$ on Reynolds number can be found in Achenbach [63], Hoerner [83], and Sarpkaya and Isaacson [40].
 
 B.5.3.1.2.8.4 Keulegan-Carpenter Number
 
@@ -6000,16 +5975,16 @@ This parameter is a measure of the unsteadiness of the flow; it is proportional 
 
 The parameter K is also a measure of the importance of “wake encounter” for nearly vertical (within $15^{ \circ }$ of vertical) members in waves. As the fluid moves across a member, a wake is created. When oscillatory flow reverses, fluid particles in the wake return sooner and impact the member with greater velocity than undisturbed fluid particles. For larger K, the wake travels farther and decays more before returning to the cylinder and, furthermore, is less likely to strike the cylinder at all if the waves are multidirectional or there is a component of current normal to the principal wave direction. For very large K, wake encounter can be neglected. For smaller K, wake encounter amplifies the drag force for nearly vertical members above its quasisteady value estimated from undisturbed fluid velocities.
 
-Figure B.5.5 shows data for the drag coefficient $C_{ \mathsf{ d } }$ that are most appropriate for calculating loads on nearly vertical members in extreme storm environments. All these data were obtained in the postcritical flow regime, in which $C_{ \mathsf{ d } \mathsf{ s } }$ is practically independent of Reynolds number. All account for wave spreading, that is, all have two components of motion normal to the member axis. All except the “Figure $8 "$ data implicitly account for random wave motion. The field data also naturally include an axial component of motion and, to some extent, a steady current. The data for smooth and rough cylinders are reasonably well represented by a single curve in Figure B.5.5, for K > 12, with K normalized by $C_{ \mathsf{ d } \mathsf{ s } } ,$ as suggested by the far-field, quasisteady wake model of Beckmann and McBride [68].
+Figure B.5.5 shows data for the drag coefficient $C_{ \mathsf{d} }$ that are most appropriate for calculating loads on nearly vertical members in extreme storm environments. All these data were obtained in the postcritical flow regime, in which $C_{ \mathsf{d} \mathsf{s} }$ is practically independent of Reynolds number. All account for wave spreading, that is, all have two components of motion normal to the member axis. All except the “Figure $8 "$ data implicitly account for random wave motion. The field data also naturally include an axial component of motion and, to some extent, a steady current. The data for smooth and rough cylinders are reasonably well represented by a single curve in Figure B.5.5, for K > 12, with K normalized by $C_{ \mathsf{d} \mathsf{s} } ,$ as suggested by the far-field, quasisteady wake model of Beckmann and McBride [68].
 
-Figure B.5.6 shows drag coefficient data for $K < 12$ , which are more appropriate for calculating loads on nearly vertical members in less extreme sea states and drag damping in earthquake-excited motion, for example. For $K < 12$ , the smooth and rough cylinder data are similar if K is not normalized by $C_{ \mathsf{ d } \mathsf{ s } } .$ . The data of Sarpkaya [106] do not agree well with the curves in Figure B.5.6, presumably because of the relatively low Reynolds number in his tests for the lowest values of K and because of the lack of wave spreading in his tests for the higher values of K.
+Figure B.5.6 shows drag coefficient data for $K < 12$ , which are more appropriate for calculating loads on nearly vertical members in less extreme sea states and drag damping in earthquake-excited motion, for example. For $K < 12$ , the smooth and rough cylinder data are similar if K is not normalized by $C_{ \mathsf{d} \mathsf{s} } $. The data of Sarpkaya [106] do not agree well with the curves in Figure B.5.6, presumably because of the relatively low Reynolds number in his tests for the lowest values of K and because of the lack of wave spreading in his tests for the higher values of K.
 
-It should be noted that the symbols shown in Figure B.5.5 do not represent individual data points. Rather, they represent values from a curve fitted through a scatter of data points. In designing a structure consisting of a single isolated column, one should perhaps account for the scatter in the $C_{ \mathsf{ d } }$ data. In this regard, the data of Sarpkaya [106] for one-dimensional, sinusoidally oscillating motion, which are notably omitted from Figure B.5.5, represent a reasonable upper bound. However, for a structure consisting of many members, the scatter in $C_{ \mathsf{ d } }$ can probably be neglected, as the deviations from the mean curve are uncorrelated from member to member (see Heideman et al. [81]).
+It should be noted that the symbols shown in Figure B.5.5 do not represent individual data points. Rather, they represent values from a curve fitted through a scatter of data points. In designing a structure consisting of a single isolated column, one should perhaps account for the scatter in the $C_{ \mathsf{d} }$ data. In this regard, the data of Sarpkaya [106] for one-dimensional, sinusoidally oscillating motion, which are notably omitted from Figure B.5.5, represent a reasonable upper bound. However, for a structure consisting of many members, the scatter in $C_{ \mathsf{d} }$ can probably be neglected, as the deviations from the mean curve are uncorrelated from member to member (see Heideman et al. [81]).
 
-Figure B.5.7 and Figure B.5.8 show data for the inertia coefficient $C_{ \mathsf{ m } }$ for a nearly vertical circular cylinder. Figure B.5.7 shows that $C_{ \mathsf{ m } }$ for both smooth and rough cylinders approaches the theoretical value of 2.0 for $K \leq 3 .$ For $K > 3$ , with the onset of flow separation, $C_{ \mathsf{ m } }$ begins to decrease. With the exception of Sarpkaya’s rough cylinder data, which exhibit a pronounced drop (“inertia crisis’”) in $C_{ \mathsf{ m } }$ at $K \approx 12$ , it appears that a single sloping line is adequate for both smooth and rough cylinders, up to $K \approx 12$ , beyond which smooth and rough cylinder data begin to diverge. In Figure B.5.8, the single line from Figure B.5.7 is seen to split into two lines because K is divided by $C_{ \mathrm{ d } \mathsf{ s } } = 0 . 66$ for smooth cylinders and $C_{ \mathsf{ d s } } = 1 . 1$ for rough cylinders. The value of $C_{ \mathbf{ m } }$ is taken as 1.6 for smooth cylinders and 1.2 for rough cylinders for $K / C_{ \mathsf{ d s } } \geq 17$ .
+Figure B.5.7 and Figure B.5.8 show data for the inertia coefficient $C_{ \mathsf{m} }$ for a nearly vertical circular cylinder. Figure B.5.7 shows that $C_{ \mathsf{m} }$ for both smooth and rough cylinders approaches the theoretical value of 2.0 for $K \leq 3 .$ For $K > 3$ , with the onset of flow separation, $C_{ \mathsf{m} }$ begins to decrease. With the exception of Sarpkaya’s rough cylinder data, which exhibit a pronounced drop (“inertia crisis’”) in $C_{ \mathsf{m} }$ at $K \approx 12$ , it appears that a single sloping line is adequate for both smooth and rough cylinders, up to $K \approx 12$ , beyond which smooth and rough cylinder data begin to diverge. In Figure B.5.8, the single line from Figure B.5.7 is seen to split into two lines because K is divided by $C_{ \mathrm{d} \mathsf{s} } = 0.66$ for smooth cylinders and $C_{ \mathsf{ds} } = 1.1$ for rough cylinders. The value of $C_{ \mathbf{m} }$ is taken as 1.6 for smooth cylinders and 1.2 for rough cylinders for $K / C_{ \mathsf{ds} } \geq 17$ .
 
 ![](API_RP_2A-WSD_22nd/chunk2_f1d98cbda16f915fed5309adff8505ee378d361c4643b039da52ee5b6ea37c10.jpg)  
-Figure B.5.5—Wake Amplification Factor for Drag Coefficient as a Function of $K / C_{ \mathsf{ d } \mathsf{ s } }$
+Figure B.5.5—Wake Amplification Factor for Drag Coefficient as a Function of $K / C_{ \mathsf{d} \mathsf{s} }$
 
 ![](API_RP_2A-WSD_22nd/chunk2_1b2aa550b1e9142f3ec479f0d86f9098cbc1eebd2c31e1977fae786fa0d5d053.jpg)  
 Figure B.5.6—Wake Amplification Factor for Drag Coefficient as a Function of K
@@ -6018,31 +5993,31 @@ Figure B.5.6—Wake Amplification Factor for Drag Coefficient as a Function of K
 
 ![](API_RP_2A-WSD_22nd/chunk2_9a36803b0f87e9c82909a14d07fec93e1f092788115ee5eadd95b73e322fbf01.jpg)  
 Figure B.5.7—Inertia Coefficient as a Function of K   
-Figure B.5.8—Inertia Coefficient as a Function of $K / C_{ \mathsf{ d } \mathsf{ s } }$
+Figure B.5.8—Inertia Coefficient as a Function of $K / C_{ \mathsf{d} \mathsf{s} }$
 
-Although Figure B.5.5 through Figure B.5.8 are based on circular cylinder data, they are also applicable to noncircular cylinders, provided the appropriate value of $C_{ \mathsf{ d } \mathsf{ s } }$ is used, and provided $C_{ \mathsf{ m } }$ is multiplied by $C_{ \mathrm{ m o } } / 2$ , where $C_{ \mathsf{ m o } }$ is the theoretical value of $C_{ \mathsf{ m } }$ for the noncircular cylinder as K approaches 0.
+Although Figure B.5.5 through Figure B.5.8 are based on circular cylinder data, they are also applicable to noncircular cylinders, provided the appropriate value of $C_{ \mathsf{d} \mathsf{s} }$ is used, and provided $C_{ \mathsf{m} }$ is multiplied by $C_{ \mathrm{mo} } / 2$ , where $C_{ \mathsf{mo} }$ is the theoretical value of $C_{ \mathsf{m} }$ for the noncircular cylinder as K approaches 0.
 
 Furthermore, while Figure B.5.5 through Figure B.5.8 were developed for use with individual, deterministic waves, they can also be used for random wave analysis (either time or frequency domain) of fixed platforms by using significant wave height and spectral peak period to calculate K.
 
 B.5.3.1.2.8.5 Current/Wave Velocity Ratio
 
-The effect of a steady in-line current added to oscillatory motion is to push $C_{ \mathsf{ d } }$ toward $C_{ \mathsf{ d } \mathsf{ s } } ,$ its steady flow value. Data show that, for practical purposes, $C_{ \mathsf{ d } } = C_{ \mathsf{ d } \mathsf{ s } }$ when the current/wave velocity ratio, $r ,$ is greater than 0.4. For $r < 0 . 4$ , the effect of a steady in-line current can be accommodated by modifying the Keulegan-Carpenter number. A first-order correction would be to multiply K due to wave alone by （$1 + r ) 2 \theta{ * } / \pi$ , where $\theta_{ * } = \mathsf{ a r c t a n } \left( \sqrt{ 1 - r^{ 2 } } , - r \right)$ .
+The effect of a steady in-line current added to oscillatory motion is to push $C_{ \mathsf{d} }$ toward $C_{ \mathsf{d} \mathsf{s} } ,$ its steady flow value. Data show that, for practical purposes, $C_{ \mathsf{d} } = C_{ \mathsf{d} \mathsf{s} }$ when the current/wave velocity ratio, $r ,$ is greater than 0.4. For $r < 0.4$ , the effect of a steady in-line current can be accommodated by modifying the Keulegan-Carpenter number. A first-order correction would be to multiply K due to wave alone by $(1+r)2\theta_{*}/\pi$ , where $\theta_{ * } = \mathsf{arctan} \left( \sqrt{ 1 - r^{ 2 } } , - r \right)$ .
 
-A current component normal to the wave direction also drives $C_{ \mathsf{ d } }$ toward $C_{ \mathsf{ d } \mathsf{ s } }$ , since it reduces the impact of wake encounter. Data show that, for practical purposes, $C_{ \mathsf{ d } } = C_{ \mathsf{ d } \mathsf{ s } }$ for $V_{ \mathsf{ N } } T_{ 2 } / C_{ \mathsf{ d s } } D > 4$ . On the other hand, wake encounter has nearly its full impact for $V_{ \sf N } T_{ 2 } / C_{ \sf d s } D < 0 . 5$ .
+A current component normal to the wave direction also drives $C_{ \mathsf{d} }$ toward $C_{ \mathsf{d} \mathsf{s} }$ , since it reduces the impact of wake encounter. Data show that, for practical purposes, $C_{ \mathsf{d} } = C_{ \mathsf{d} \mathsf{s} }$ for $V_{ \mathsf{N} } T_{ 2 } / C_{ \mathsf{ds} } D > 4$ . On the other hand, wake encounter has nearly its full impact for $V_{ \sf N } T_{ 2 } / C_{ \sf d s } D < 0.5$ .
 
 B.5.3.1.2.8.6 Member Orientation
 
-For members that are not nearly vertical, the effect of wake encounter, as characterized by the K dependence in Figure B.5.5 through Figure B.5.8, is small. For horizontal and diagonal members, it is sufficient for engineering purposes to use the theoretical value of $C_{ \mathsf{ m } }$ as $K {  } 0$ and the steady-flow value of $C_{ \mathsf{ d } } = C_{ \mathsf{ d } \mathsf{ s } }$ as $K {  } \infty$ .
+For members that are not nearly vertical, the effect of wake encounter, as characterized by the K dependence in Figure B.5.5 through Figure B.5.8, is small. For horizontal and diagonal members, it is sufficient for engineering purposes to use the theoretical value of $C_{ \mathsf{m} }$ as $K\to 0$ and the steady-flow value of $C_{ \mathsf{d} } = C_{ \mathsf{d} \mathsf{s} }$ as $K\to\infty$ .
 
 B.5.3.1.2.9 Conductor Shielding Factor
 
 The empirical basis for the shielding wave force reduction factor for conductor arrays is shown in Figure B.5.9. Data from flow directions perfectly aligned with a row or column of the array are excluded, for conservatism.
 
-The data in Figure B.5.9 are from steady flow tests and oscillatory flow tests at very high amplitudes of oscillation. Thus the factor is strictly applicable only in a steady current with negligible waves or near the mean water level in very large waves. The data of Heideman and Sarpkaya [82] indicate that the factor is applicable if $A / S > 6 ,$ , where A is the amplitude of oscillation and S is the center-to-center spacing of the conductors in the wave direction. The data of Reed et al. [102] indicate that range of applicability can be expanded to $A / S > 2 . 5$ . For lower values of $A / S ,$ there is still some shielding, until $A / S < 0 . 5 ~ [ 82 ]$ . With $A { \approx } U_{ \mathsf{ m o } } T_{ \mathsf{ a p p } } / 2 \pi$ , where $U_{ \mathsf{ m o } }$ and $T_{ \mathsf{ a p p } }$ are defined in B.5.3.1.2.8.1 and B.5.3.1.2.2, respectively, the approximate shielding regimes are:
+The data in Figure B.5.9 are from steady flow tests and oscillatory flow tests at very high amplitudes of oscillation. Thus the factor is strictly applicable only in a steady current with negligible waves or near the mean water level in very large waves. The data of Heideman and Sarpkaya [82] indicate that the factor is applicable if $A / S > 6 ,$ where A is the amplitude of oscillation and S is the center-to-center spacing of the conductors in the wave direction. The data of Reed et al. [102] indicate that range of applicability can be expanded to $A / S > 2.5$ . For lower values of $A / S ,$ there is still some shielding, until $A / S < 0.5 ~ [ 82 ]$ . With $A { \approx } U_{ \mathsf{mo} } T_{ \mathsf{app} } / 2 \pi$ , where $U_{ \mathsf{mo} }$ and $T_{ \mathsf{app} }$ are defined in B.5.3.1.2.8.1 and B.5.3.1.2.2, respectively, the approximate shielding regimes are:
 
 — A/S > 2.5, asymptotic shielding, factor from Figure B.5.9;   
-— $A / S < 0 . 5 ,$ , no shielding, factor = 1.0;   
-$- 0 . 5 < A / S < 2 . 5$ , partial shielding.
+— $A / S < 0.5 ,$ no shielding, factor = 1.0;   
+— $0.5<A/S<2.5$, partial shielding.
 
 In the absence of better information, the shielding factor in the partial shielding regime can be linearly interpolated as a function of A/S. Waves considered in fatigue analyses may lie in the partial shielding regime.
 
@@ -6073,13 +6048,13 @@ B.5.3.1.2.13 Local Member Design
 
 The Morison equation accounts for local drag and inertia forces but not for the “out-of-plane” (plane formed by the velocity vector and member axis) local lift force due to periodic, asymmetric vortex shedding from the downstream side of a member. Lift forces can be neglected in the calculation of global structure loads. Because of their high frequency, random phasing, and oscillatory (with zero mean) nature, lift forces are not correlated across the entire structure. However, lift forces may need to be considered in local member design, particularly for members high in the structure whose stresses may be dominated by locally generated forces.
 
-The oscillating lift force can be modeled as a modulated sine function, whose frequency is generally several times the frequency of the wave and whose amplitude is modulated with $U^{ 2 }$ , where U is the timevarying component of fluid velocity normal to the member axis. In the absence of dynamic excitation, the maximum local lift force amplitude $F_{ \mathsf{ L , m a x } }$ per unit length of the member is related to $U_{ \sf m a x } ,$ the maximum value of U during the wave cycle, by the equation:
+The oscillating lift force can be modeled as a modulated sine function, whose frequency is generally several times the frequency of the wave and whose amplitude is modulated with $U^{ 2 }$ , where U is the timevarying component of fluid velocity normal to the member axis. In the absence of dynamic excitation, the maximum local lift force amplitude $F_{ \mathsf{L,max} }$ per unit length of the member is related to $U_{ \sf m a x } ,$ the maximum value of U during the wave cycle, by the equation:
 
 $$F_{\mathrm{L}, \max } = C_{\ell , \max } (w / 2 g) D U_{\max }^{2} \tag{B.5.7}$$
 
-The coefficient $C_{ \ell , \mathsf{ m a x } }$ has been found empirically by Rodenbusch and Gutierrez [103] to have considerable scatter, with an approximate mean value $C_{ \ell , \mathrm{ m a x } } \approx 0 . 7 C_{ \mathrm{ d } } ,$ , for both smooth and rough circular cylinders, in both steady flow and in waves with large Keulegan-Carpenter numbers. Sarpkaya [106] focused on the rms value of the oscillating lift force and found that it was less than half FL,max. $F_{ \mathsf{ L , m a x } } .$
+The coefficient $C_{ \ell , \mathsf{max} }$ has been found empirically by Rodenbusch and Gutierrez [103] to have considerable scatter, with an approximate mean value $C_{ \ell , \mathrm{max} } \approx 0.7 C_{ \mathrm{d} } ,$ for both smooth and rough circular cylinders, in both steady flow and in waves with large Keulegan-Carpenter numbers. Sarpkaya [106] focused on the rms value of the oscillating lift force and found that it was less than half $F_{\mathrm{L,max}}$.
 
-The frequency of the oscillating lift force is $S_{ \sf t } U_{ \sf t o t a l } / D$ , where $S_{ \mathrm{ t } }$ is the Strouhal number and $U_{ \mathrm{ t o t a l } }$ is the total incident velocity, including the axial component. Laboratory tests [100] [103] have shown that $S_{ \mathrm{ t } } \sim 0 . 2$ for circular cylinders over a broad range of Reynolds numbers and flow inclination angles in steady flow. If $S_{ \mathrm{ t } }$ remains constant in waves, than the frequency of the oscillating lift force is also modulated as U varies with time during a wave cycle.
+The frequency of the oscillating lift force is $S_{ \sf t } U_{ \sf t o t a l } / D$ , where $S_{ \mathrm{t} }$ is the Strouhal number and $U_{ \mathrm{total} }$ is the total incident velocity, including the axial component. Laboratory tests [100] [103] have shown that $S_{ \mathrm{t} } \sim 0.2$ for circular cylinders over a broad range of Reynolds numbers and flow inclination angles in steady flow. If $S_{ \mathrm{t} }$ remains constant in waves, than the frequency of the oscillating lift force is also modulated as U varies with time during a wave cycle.
 
 In the event that any natural frequency of a member is near the lift force frequency, a large amplitude dynamic response, called vortex-induced vibration (VIV), may occur. When VIV occurs, the motion of the member and the magnitude of the fluid-dynamic forces can increase to unacceptable levels. VIV can occur on long spans due to wind forces in the construction yard and on the tow barge as well as to waves and currents on the in-place structure. A complete treatise on VIV is beyond the scope of this commentary.
 
@@ -6089,7 +6064,7 @@ Slam forces can also occur on platform members overhanging the end of the barge 
 
 In the theoretical case, slam force is impulsive. If the slam force is truly impulsive, the member may be dynamically excited. In the real world, the slam force may not be impulsive because of the threedimensional shape of the sea surface, the compressibility of air trapped between the member and the sea surface, and the aerated nature of water near the free surface.
 
-Slam force $F_{ \mathsf{ S } }$ per unit length can be calculated from the equation:
+Slam force $F_{ \mathsf{S} }$ per unit length can be calculated from the equation:
 
 $$F_{\mathrm{S}} = C_{\mathrm{S}} (w / 2 g) D U^{2} \tag{B.5.8}$$
 
@@ -6097,15 +6072,15 @@ where
 
 U is the component of water particle velocity normal to the member axis at impact.
 
-Sarpkaya (1978) has shown empirically that the coefficient $C_{ \mathsf{ S } }$ may lie between 0.5 and 1.7 times its theoretical value of π, depending on the rise time and natural frequency of the elastically mounted cylinder in his tests. Sarpkaya and Isaacson (1981) recommend that if a dynamic response analysis is performed, the theoretical value of $C_{ \mathsf{ S } } = \pi$ can be used; otherwise, a value of $\dot{ C }_{ \mathsf{ S } } = 5 . 5$ should be used.
+Sarpkaya (1978) has shown empirically that the coefficient $C_{ \mathsf{S} }$ may lie between 0.5 and 1.7 times its theoretical value of π, depending on the rise time and natural frequency of the elastically mounted cylinder in his tests. Sarpkaya and Isaacson (1981) recommend that if a dynamic response analysis is performed, the theoretical value of $C_{ \mathsf{S} } = \pi$ can be used; otherwise, a value of $C_{ \mathsf{S} } = 5.5$ should be used.
 
-Axial Froude-Krylov forces have the same form as the inertia force in the Morison equation, except that $C_{ \mathbf{ m } }$ is set to unity and the normal component of local acceleration is replaced by the axial component. Axial Froude-Krylov forces on members that are nearly vertical contribute negligibly to platform base shear and overturning moment. Axial Froude-Krylov forces on diagonal and horizontal braces are relatively more important, contributing about 10 % as much to base shear and overturning moment as the inertia force included in the Morison equation, based on computations performed by Atkins (1990). In view of approximations made elsewhere in the computation of global wave force, axial Froude-Krylov forces can generally be neglected.
+Axial Froude-Krylov forces have the same form as the inertia force in the Morison equation, except that $C_{ \mathbf{m} }$ is set to unity and the normal component of local acceleration is replaced by the axial component. Axial Froude-Krylov forces on members that are nearly vertical contribute negligibly to platform base shear and overturning moment. Axial Froude-Krylov forces on diagonal and horizontal braces are relatively more important, contributing about 10 % as much to base shear and overturning moment as the inertia force included in the Morison equation, based on computations performed by Atkins (1990). In view of approximations made elsewhere in the computation of global wave force, axial Froude-Krylov forces can generally be neglected.
 
 B.5.3.4 Hydrodynamic Force Guidelines for U.S. Waters
 
 Prior to the 21st Edition of API 2A-WSD, the 20th Edition and recent previous editions had recommended that all new structures be designed for a single criteria, based on the 100-year return period. Starting with the 21st Edition a three level criteria based on life safety and the consequences of failure of the platform was introduced. The development, calibration, and basis for this three level consequence-based criteria is discussed in more detail in OTC Papers 11885 and 11886, as noted in API 2MET.
 
-For new platforms with high life exposure and/or high consequences of failure that are classed as $^{ \mathbf{ s } } \lfloor - 1^{ \mathbf{ s } }$ as defined in 4.7, the 100-year wave height and associated tide and current is recommended. This is the 100-year criteria as previously specified in API 2A-WSD, 20th Edition and represented the best and safest technology that the industry had developed until API 2MET.
+For new platforms with high life exposure and/or high consequences of failure that are classed as “L-1” as defined in 4.7, the 100-year wave height and associated tide and current is recommended. This is the 100-year criteria as previously specified in API 2A-WSD, 20th Edition and represented the best and safest technology that the industry had developed until API 2MET.
 
 New platforms with minimal life exposure and moderate consequence of failure that are classed as L-2, as defined in 4.7 may be designed for a midlevel reduced criteria. It is intended that this criteria will result in a platform as reliable as those that had been designed to API 2A-WSD, the 9th through 20th Editions. Platforms designed for the 9th through 19th Editions have produced a satisfactory performance during Gulf of Mexico hurricanes. Calibration studies indicated that platforms designed using API 2A-WSD, 20th Edition procedures and metocean conditions with a return period of 33 to 50 years had equivalent ultimate capacities to the API 2A-WSD, 19th Edition designs. Based on this calibration, the 50-year return period was selected as the basis for the L-2 criteria. It should be noted that the 50-year return period was selected since it provides structures with equivalent reliability as the API 2A-WSD, 19th Edition designs. Thus, these criteria were selected based on satisfactory experience and not on any other considerations.
 
@@ -6171,7 +6146,7 @@ When the time history analysis method is used, a minimum of four sets of time hi
 
 each time step and the maximum code utilization during each time history record shall be used to assess the component performance. The ELE design is satisfactory if the median of the code utilization maximums is less than 1.0; a factor of 1.05 shall be applied to the median if fewer than 7 sets of records are used.
 
-For the purpose of preliminary designs and studies, a response spectrum may be developed based on API 2EQ seismic maps, risk exposure, and soil amplification factors as well as the seismic reserve capacity factor, $C_{ \Gamma } .$
+For the purpose of preliminary designs and studies, a response spectrum may be developed based on API 2EQ seismic maps, risk exposure, and soil amplification factors as well as the seismic reserve capacity factor, $C_{\mathrm{r}} .$
 
 If the design is accomplished by the time history method of analysis, the time histories used in each orthogonal direction should be scaled as stated in the above paragraph and generated or modified so that their normalized response spectra for 5 % critical damping reasonably match the design spectrum in the period range of interest.
 
@@ -6187,7 +6162,7 @@ The ground motion developed by the site-specific study typically represents that
 
 For foundation modeling, when there is a substantial difference in the soils near the pilehead and those along the lower portion of the pile, a variation in the free field motion with depth may have to be considered for the detailed design of the piles. For evaluation of the overall structure-foundation system, a satisfactory approximation is to assume that the lateral pile behavior is related to horizontal ground motions in the near surface soil and the axial pile behavior to the vertical motions in the deeper soil. (See Figure B.5.10.)
 
-The use of the response spectrum approach requires that damping be identified with each mode. In 5.3.6.3.2, modal damping of 5 % of critical is specified for use in all modes unless damping, n (percent)，are justified,either uniform or diferent for each mode.The following factor,D, may be used to multiply the response ordinates obtained from the curves in API 2EQ:
+The use of the response spectrum approach requires that damping be identified with each mode. In 5.3.6.3.2, modal damping of 5 % of critical is specified for use in all modes unless damping, $\eta$ (percent), are justified, either uniform or different for each mode. The following factor, D, may be used to multiply the response ordinates obtained from the curves in API 2EQ:
 
 $$D = \frac{- \ln (\eta / 100)}{\ln (20)} \tag{B.5.9}$$
 
@@ -6228,40 +6203,40 @@ Considerable experience has been developed in recent years in the analysis of th
 
 The guidelines include provisions for configuring and proportioning members in the vertical frames. Their purpose is to provide for redistribution of the horizontal shear loads in the vertical frames as buckling occurs in diagonal bracing, and to improve the postbuckling behavior of the diagonal braces and of nontubular members at connections. These provisions will enhance ductile behavior of the structure under extreme lateral cyclic loading. Figure 5.5 shows examples of vertical frame configurations that do not meet the guidelines. Example configurations that meet the guidelines are shown in Figure 5.6. Note that the two “K” braced panels forming an “X” in two vertically adjacent panels meet the guidelines.
 
-The objective of a static pushover analysis is to verify that the seismic reserve capacity factor, $C_{ \mathsf{ r } } ,$ of the structure as designed is greater than that initially estimated for design. The actions used in a static pushover analysis should represent the pattern of ALE seismic actions on the structure and foundation. Action patterns in a pushover analysis may be constructed to match the shear and moment distributions determined from an ALE response spectrum analysis along the height of the structure. Pushover analyses should be performed in several directions, as given below, to identify the structure’s weakest direction:
+The objective of a static pushover analysis is to verify that the seismic reserve capacity factor, $C_{ \mathsf{r} } ,$ of the structure as designed is greater than that initially estimated for design. The actions used in a static pushover analysis should represent the pattern of ALE seismic actions on the structure and foundation. Action patterns in a pushover analysis may be constructed to match the shear and moment distributions determined from an ALE response spectrum analysis along the height of the structure. Pushover analyses should be performed in several directions, as given below, to identify the structure’s weakest direction:
 
 — with the pattern of seismic actions aligned with the longitudinal (end-on) axis of the structure;   
 — with the pattern of seismic actions aligned with the transverse (broadside) axis of the structure;   
 — with the pattern of seismic actions aligned with one or more diagonal axes of the structure.
 
-Diagonal direction(s) can be the weakest direction(s), especially with regard to foundation performance. Yielding of structural members or piles shall not occur at global action levels lower than or equal to the global ELE action $F_{ \mathsf{ E L E } }$ (see Figure B.5.11). The seismic reserve capacity factor may be estimated from the global seismic action deformation curve obtained in a static pushover analysis (e.g. from global shear vs deck displacement) (see Figure B.5.11).
+Diagonal direction(s) can be the weakest direction(s), especially with regard to foundation performance. Yielding of structural members or piles shall not occur at global action levels lower than or equal to the global ELE action $F_{ \mathsf{ELE} }$ (see Figure B.5.11). The seismic reserve capacity factor may be estimated from the global seismic action deformation curve obtained in a static pushover analysis (e.g. from global shear vs deck displacement) (see Figure B.5.11).
 
 ![](API_RP_2A-WSD_22nd/chunk2_8b235c9f742d91011eda106579e5a93dee9fffeaeb58329cd4bdf3e92d072e2f.jpg)  
 Figure B.5.11—Seismic Load Deformation Curve
 
-The seismic reserve capacity factor, $C_{ \mathsf{ r } } = C_{ \mathsf{ s r } } C_{ \mathsf{ d r } }$ , where $C_{ \mathsf{ s r } }$ is a factor corresponding to the strengthening regime of the action-deformation curve and is estimated as:
+The seismic reserve capacity factor, $C_{ \mathsf{r} } = C_{ \mathsf{sr} } C_{ \mathsf{dr} }$ , where $C_{ \mathsf{sr} }$ is a factor corresponding to the strengthening regime of the action-deformation curve and is estimated as:
 
-$$C_{\mathrm{s r}} = \Delta_{\mathrm{u}} / \Delta_{\mathrm{E L E}}$$
-
-where
-
-$\varDelta_{ \mathrm{ u } }$ is the deformation corresponding to $F_{ \mathsf{ U } } ,$ the ultimate action where the slope of the actiondeformation curve becomes negative (see Figure B.5.11);
-
-$\boldsymbol{ \varDelta }_{ \sf E L E }$ is the deformation caused by the global ELE action $F_{ \mathsf{ E L E } }$
-
-$C_{ \mathsf{ d r } }$ is a factor corresponding to the degrading regime of the action-deformation curve. It is a measure of the energy dissipation capacity of the structure beyond the ultimate seismic action and the corresponding deformation. $C_{ \mathsf{ d r } }$ is estimated as:
-
-$$C_{\mathrm{d r}} = \sqrt{1 + \frac{A_{\mathrm{d}}}{F_{\mathrm{u}} \Delta_{\mathrm{u}}}}$$
+$$C_{\mathrm{sr}} = \Delta_{\mathrm{u}} / \Delta_{\mathrm{ELE}}$$
 
 where
 
-$A_{ \mathsf{ d } }$ is the area under the action-deformation curve starting from $\varDelta_{ \mathsf{ u } }$ and ending with $\scriptstyle \varDelta_{ \mathsf{ C A P } }$ , the deformation capacity of the structure.
+$\varDelta_{ \mathrm{u} }$ is the deformation corresponding to $F_{ \mathsf{U} } ,$ the ultimate action where the slope of the actiondeformation curve becomes negative (see Figure B.5.11);
 
-For the purpose of a nonlinear static pushover analysis, the deformation capacity shall be assumed to be the deformation where the global action falls to 60 % of $F_{ \mathsf{ U } }$ .
+$\boldsymbol{ \varDelta }_{ \sf E L E }$ is the deformation caused by the global ELE action $F_{ \mathsf{ELE} }$
 
-The previous determination of $C_{ \mathsf{ r } }$ presupposes that the primary sources of degradation of the global resistance have been properly modeled in the static pushover analysis, for example, soil degradation, buckling of compression members, and local buckling of members due to rotations at the member end
+$C_{ \mathsf{dr} }$ is a factor corresponding to the degrading regime of the action-deformation curve. It is a measure of the energy dissipation capacity of the structure beyond the ultimate seismic action and the corresponding deformation. $C_{ \mathsf{dr} }$ is estimated as:
 
-(reducing the plastic moment capacity). Alternatively, $\varDelta_{ \mathsf{ u } }$ shall be set as the deformation where the slope of the action-deformation curve is reduced to 5 % of the initial elastic slope, and $C_{ \mathsf{ d r } }$ shall be assumed equal to 1.0. To ensure the seismic design process is conservative the lower of the two values of $C_{ \mathsf{ r } }$ thus determined shall be adopted.
+$$C_{\mathrm{dr}} = \sqrt{1 + \frac{A_{\mathrm{d}}}{F_{\mathrm{u}} \Delta_{\mathrm{u}}}}$$
+
+where
+
+$A_{ \mathsf{d} }$ is the area under the action-deformation curve starting from $\varDelta_{ \mathsf{u} }$ and ending with $\scriptstyle \varDelta_{ \mathsf{CAP} }$ , the deformation capacity of the structure.
+
+For the purpose of a nonlinear static pushover analysis, the deformation capacity shall be assumed to be the deformation where the global action falls to 60 % of $F_{ \mathsf{U} }$ .
+
+The previous determination of $C_{ \mathsf{r} }$ presupposes that the primary sources of degradation of the global resistance have been properly modeled in the static pushover analysis, for example, soil degradation, buckling of compression members, and local buckling of members due to rotations at the member end
+
+(reducing the plastic moment capacity). Alternatively, $\varDelta_{ \mathsf{u} }$ shall be set as the deformation where the slope of the action-deformation curve is reduced to 5 % of the initial elastic slope, and $C_{ \mathsf{dr} }$ shall be assumed equal to 1.0. To ensure the seismic design process is conservative the lower of the two values of $C_{ \mathsf{r} }$ thus determined shall be adopted.
 
 Reasons that a structure-foundation system may merit an explicit analysis of its nonlinear dynamic performance during a rare, intense earthquake are defined in API 2EQ.
 
@@ -6303,11 +6278,11 @@ B.6.2 Allowable Stresses for Cylindrical Members
 
 Such a vast volume of literature is available on the subject of shell buckling that no particular purpose will be served by attempting to cover the subject in detail. This commentary is confined to describing only the background of the design recommendations in 6.2, which covers the buckling and allowable stresses for fabricated steel cylinders. A comprehensive review of the subject is contained in Reference [174].
 
-The design recommendations are tailored to cylinders of dimensions and material yield strengths typical of offshore platform members $[ F_{ \mathsf{ y } } < 415$ MPa (60 ksi) and $D / t < 120 ]$ . The local buckling equations recommended for axial compression, bending, and hydrostatic pressure are, however, considered valid up to $D / t < 300$ . Application of the recommendations to thin cylinders with high D/t ratios (>300) and high strength steels $[ F_{ y }^{ \prime } > 415 \mathsf{ M P a }$ (60 ksi)] may lead to unconservative results.
+The design recommendations are tailored to cylinders of dimensions and material yield strengths typical of offshore platform members $[ F_{ \mathsf{y} } < 415$ MPa (60 ksi) and $D / t < 120 ]$ . The local buckling equations recommended for axial compression, bending, and hydrostatic pressure are, however, considered valid up to $D / t < 300$ . Application of the recommendations to thin cylinders with high D/t ratios (>300) and high strength steels $[ F_{\mathrm{y}} > 415 \mathsf{MPa}$ (60 ksi)] may lead to unconservative results.
 
 B.6.2.2 Axial Compression
 
-Tubular members under axial compression are subject to failure due either to material yield, Euler column buckling, or local buckling. For design against Euler column buckling, 6.2 recommends use of the AISC 335-89. However, to supplement AISC 335-89, 6.3 includes appropriate interaction equations for cylindrical members under axial compression and bending, together with recommended values for effective length factors, $K ,$ and moment reduction factors, $C_{ \mathsf{ m } } ,$ for typical offshore platform members.
+Tubular members under axial compression are subject to failure due either to material yield, Euler column buckling, or local buckling. For design against Euler column buckling, 6.2 recommends use of the AISC 335-89. However, to supplement AISC 335-89, 6.3 includes appropriate interaction equations for cylindrical members under axial compression and bending, together with recommended values for effective length factors, $K ,$ and moment reduction factors, $C_{ \mathsf{m} } ,$ for typical offshore platform members.
 
 Cylindrical shells with low diameter-to-thickness (D/t) ratio are generally not subject to local buckling under axial compression and can be designed on the basis of material failure (i.e. the local buckling stress may be considered equal to the yield stress). Cylindrical shells of relatively high D/t ratios, on the other hand, shall be checked for local shell buckling.
 
@@ -6315,11 +6290,11 @@ Unstiffened thin-wall cylinders under axial compression and bending are prone to
 
 The elastic local buckling stress formula recommended in Equation (6.4) represents one-half the theoretical local buckling stress computed using classical small deflection theory. This reduction accounts for the detrimental effect of geometric imperfections and, based on the available test data [175], shown in Figure B.6.1, is considered to be conservative for cylinders with t ≥ 6 mm (0.25 in.) and $D / t < 300$ . For thinner cylinders and cylinders with higher D/t ratios, larger imperfection reduction factors would be required. Offshore platform members, however, are normally well within these dimensional limits.
 
-Tubular members with D/t < 300 fabricated from typical offshore platform steels will normally buckle inelastically rather than elastically. The formula recommended in Equation (6.5) to compute the inelastic local buckling stress, $F_{ \mathsf{ x c } } ,$ is empirical and is based primarily upon the results of local buckling tests sponsored by recent AISI and API projects, and tests conducted at the University of Illinois during the 1930s. These are the only known tests on fabricated cylinders with materials yield strengths in the range of structural steels used for offshore platforms.
+Tubular members with D/t < 300 fabricated from typical offshore platform steels will normally buckle inelastically rather than elastically. The formula recommended in Equation (6.5) to compute the inelastic local buckling stress, $F_{ \mathsf{xc} } ,$ is empirical and is based primarily upon the results of local buckling tests sponsored by recent AISI and API projects, and tests conducted at the University of Illinois during the 1930s. These are the only known tests on fabricated cylinders with materials yield strengths in the range of structural steels used for offshore platforms.
 
-Figure B.6.2 shows a comparison of the recommended empirical formula and the results of the test data. Based on the test results, it is recommended that local buckling be checked whenever D/t is greater than 60. The test data shows no clear trend of variation with $F_{ \mathsf{ y } }$ for the D/t cut-off value, below which it is
+Figure B.6.2 shows a comparison of the recommended empirical formula and the results of the test data. Based on the test results, it is recommended that local buckling be checked whenever D/t is greater than 60. The test data shows no clear trend of variation with $F_{ \mathsf{y} }$ for the D/t cut-off value, below which it is
 
-unnecessary to check local buckling. The suggested constant value of $D / t = 60$ is considered to be appropriate for commonly-used offshore platform steels $[ F_{ \mathsf{ y } } = 245 \mathsf{ M P a }$ to 415 MPa (35 ksi to 60 ksi)].
+unnecessary to check local buckling. The suggested constant value of $D / t = 60$ is considered to be appropriate for commonly-used offshore platform steels $[ F_{ \mathsf{y} } = 245 \mathsf{MPa}$ to 415 MPa (35 ksi to 60 ksi)].
 
 ![](API_RP_2A-WSD_22nd/chunk2_059a59d48cdc0d391e6f4e06f0a05fd1483d196050ff685feed21e7e2f870691.jpg)  
 Figure B.6.1—Elastic Coefficients for Local Buckling of Steel Cylinders Under Axial Compression
@@ -6327,13 +6302,13 @@ Figure B.6.1—Elastic Coefficients for Local Buckling of Steel Cylinders Under 
 ![](API_RP_2A-WSD_22nd/chunk2_da238acb83e459b68850ebb64de35184689ecabb4c97224557c5e566983f4fc5.jpg)  
 Figure B.6.2—Comparison of Test Data with Design Equation for Fabricated Steel Cylinders Under Axial Compression
 
-The allowable axial compressive stress is obtained by substituting the value of $F_{ \mathsf{ x c } }$ for $F_{ \mathsf{ y } }$ in the appropriate AISC 335-89 design formula.
+The allowable axial compressive stress is obtained by substituting the value of $F_{ \mathsf{xc} }$ for $F_{ \mathsf{y} }$ in the appropriate AISC 335-89 design formula.
 
 B.6.2.3 Bending
 
-The ultimate bending capacity of fabricated circular cylinders, normalized with respect to yield moment capacity （$M_{ \mathrm{ U } } / M_{ \mathrm{ y } } )$ is illustrated in Figure B.6.3. The data used in the figure is from Sherman [172] and Stephens et al. [173]. Cylinders with $F_{ \mathsf{ y } } D / t$ ratios less than 10,345 MPa (1,500 ksi) have ultimate bending capacities that exceed the plastic moment capacities by a considerable margin. Their load-deformation characteristics demonstrate very high postyield ductility levels, which are typical of a ductile mode of failure. The normalized rotational capacity, defined as ultimate to yield rotation ratio （$\theta_{ \mathsf{ U } } / \theta_{ \mathsf{ y } } )$ , invariably exceeds 10. When the $F_{ \mathsf{ y } } D / t$ ratios increase, the ultimate bending capacities decrease. For cylinders with $F_{ \mathsf{ y } } D / t$ ratios between 10,345 MPa and 20,685 MPa (1,500 ksi and 3,000 ksi), the load-deformation characteristics are semiductile, and the normalized rotational capacity is greater than 5. For cylinders with $F_{ \mathsf{ y } } D / t$ ratios in excess of 20,685 MPa (3,000 ksi), the load-deformation characteristics indicate little postyield ductility levels. Normalized rotational capacity of less than five is typical of a local buckling mode of failure. These local buckling strengths of cylinders under bending are significantly higher than those under uniform axial compressive loads, as shown in Figure B.6.2. Additional data for $F_{ \mathsf{ y } } D / t$ greater than 110,320 MPa (16,000 ksi), reported by Stephens, indicates that the local buckling strengths, under both bending moments and uniform axial compressive loads, converge at D/t ratios greater than 300.
+The ultimate bending capacity of fabricated circular cylinders, normalized with respect to yield moment capacity （$M_{ \mathrm{U} } / M_{ \mathrm{y} } )$ is illustrated in Figure B.6.3. The data used in the figure is from Sherman [172] and Stephens et al. [173]. Cylinders with $F_{ \mathsf{y} } D / t$ ratios less than 10,345 MPa (1,500 ksi) have ultimate bending capacities that exceed the plastic moment capacities by a considerable margin. Their load-deformation characteristics demonstrate very high postyield ductility levels, which are typical of a ductile mode of failure. The normalized rotational capacity, defined as ultimate to yield rotation ratio （$\theta_{ \mathsf{U} } / \theta_{ \mathsf{y} } )$ , invariably exceeds 10. When the $F_{ \mathsf{y} } D / t$ ratios increase, the ultimate bending capacities decrease. For cylinders with $F_{ \mathsf{y} } D / t$ ratios between 10,345 MPa and 20,685 MPa (1,500 ksi and 3,000 ksi), the load-deformation characteristics are semiductile, and the normalized rotational capacity is greater than 5. For cylinders with $F_{ \mathsf{y} } D / t$ ratios in excess of 20,685 MPa (3,000 ksi), the load-deformation characteristics indicate little postyield ductility levels. Normalized rotational capacity of less than five is typical of a local buckling mode of failure. These local buckling strengths of cylinders under bending are significantly higher than those under uniform axial compressive loads, as shown in Figure B.6.2. Additional data for $F_{ \mathsf{y} } D / t$ greater than 110,320 MPa (16,000 ksi), reported by Stephens, indicates that the local buckling strengths, under both bending moments and uniform axial compressive loads, converge at D/t ratios greater than 300.
 
-The lower bound of the normalized ultimate bending capacities has been interpreted as the nominal shape factor of 1.27. This is for cylinders with $F_{ \mathsf{ y } } D / t$ up to 10,345 MPa (1,500 ksi), for which a ductile failure is assured. The lower bound of the normalized ultimate bending capacities decreased linearly to 1.10 for $F_{ \mathsf{ y } } D / t$ of 20,685 MPa (3,000 ksi), where scatter of the data is still well-defined. For cylinders with $F_{ \mathsf{ v } } D / t$ in excess of 20,685 MPa (3,000 ksi), the scatter of data is not defined. Therefore, a margin is provided in the interpretation of the lower bound of the normalized ultimate bending capacities. The normalized ultimate capacity for $F_{ \mathsf{ y } } D / t$ of 41,370 MPa (6,000 ksi) is approximately 1.0. The interpreted lower bound terminates near two data points (6), for $D / t$ and $F_{ \mathsf{ v } } D / t$ ratios of 298 and 444, and 111,975 MPa and 135,900 MPa (16,240 ksi and 19,710 ksi), respectively.
+The lower bound of the normalized ultimate bending capacities has been interpreted as the nominal shape factor of 1.27. This is for cylinders with $F_{ \mathsf{y} } D / t$ up to 10,345 MPa (1,500 ksi), for which a ductile failure is assured. The lower bound of the normalized ultimate bending capacities decreased linearly to 1.10 for $F_{ \mathsf{y} } D / t$ of 20,685 MPa (3,000 ksi), where scatter of the data is still well-defined. For cylinders with $F_{\mathrm{y}} D / t$ in excess of 20,685 MPa (3,000 ksi), the scatter of data is not defined. Therefore, a margin is provided in the interpretation of the lower bound of the normalized ultimate bending capacities. The normalized ultimate capacity for $F_{ \mathsf{y} } D / t$ of 41,370 MPa (6,000 ksi) is approximately 1.0. The interpreted lower bound terminates near two data points (6), for $D / t$ and $F_{\mathrm{y}} D / t$ ratios of 298 and 444, and 111,975 MPa and 135,900 MPa (16,240 ksi and 19,710 ksi), respectively.
 
 The allowable stresses for cylinders under bending have been derived by using a factor of safety of 1.67 against the lower bound of the ultimate bending capacities.
 
@@ -6344,21 +6319,21 @@ Here we describe the background of the design recommendations in 6.2.5, which co
 ![](API_RP_2A-WSD_22nd/chunk2_36c7b2caacdd24a614fee1860a346c7271fc143b2e14da4ef08f96d811a6da90.jpg)  
 Figure B.6.3—Design Equation for Fabricated Steel Cylinders Under Bending
 
-The design recommendations are tailored to cylinders of dimensions and material yield strengths typical of offshore platform members $[ F_{ \mathsf{ y } } < 415 \mathsf{ M P a }$ (60 ksi) and $D / t < 120 ]$ . Application of the recommendations to thin cylinders with much higher D/t ratios and higher strength steels may lead to unconservative results.
+The design recommendations are tailored to cylinders of dimensions and material yield strengths typical of offshore platform members $[ F_{ \mathsf{y} } < 415 \mathsf{MPa}$ (60 ksi) and $D / t < 120 ]$ . Application of the recommendations to thin cylinders with much higher D/t ratios and higher strength steels may lead to unconservative results.
 
 Unstiffened cylinders under hydrostatic external pressure are subjected to local buckling of the shell wall between restraints. Ring-stiffened cylinders are subject to local buckling of the shell wall between rings. The shell buckles between the rings, while the rings remain essentially circular. However, the rings may rotate or warp out of their plane. Ring-stiffened cylinders are also subject to general instability, which occurs when the rings and shell wall buckle simultaneously at the critical load. In the general instability mode, ring instability is caused by “in-plane” buckling of the rings. Since general instability is more catastrophic than local buckling between rings, it is normally desirable to provide rings with sufficient reserve strength to preclude general instability.
 
-The equations given in 6.2.5 to compute the elastic buckling stress represent 0.8 times the theoretical stress obtained using classical small deflection theory. The implied 20 % reduction factor （$\alpha = 0 . 80 )$ , included in the coefficient $C ,$ accounts for the effect of geometric imperfections due to fabrication. All available test data indicate that this is sufficiently conservative for cylinders fabricated within API 2B outof-roundness tolerances. For cylinders with greater out-of-roundness values, local buckling test results on steel cylinders suggest a lower bound reduction factor given by:
+The equations given in 6.2.5 to compute the elastic buckling stress represent 0.8 times the theoretical stress obtained using classical small deflection theory. The implied 20 % reduction factor （$\alpha = 0.80 )$ , included in the coefficient $C ,$ accounts for the effect of geometric imperfections due to fabrication. All available test data indicate that this is sufficiently conservative for cylinders fabricated within API 2B outof-roundness tolerances. For cylinders with greater out-of-roundness values, local buckling test results on steel cylinders suggest a lower bound reduction factor given by:
 
-$$\alpha = 1. 0 - 0. 2 \sqrt{\frac{D_{\max} - D_{\min}}{0 . 01 D}} \tag{B.6.1}$$
+$$\alpha = 1.0 - 0.2 \sqrt{\frac{D_{\max} - D_{\min}}{0.01 D}} \tag{B.6.1}$$
 
-This value of α was used to normalize the available results with respect to $a ~ = ~ 0 . 80$ (for 1 % out-of-roundness), before plotting the results in Figure B.6.4 and Figure B.6.5 for comparison with the design equations for $F_{ \mathsf{ h e } }$ .
+This value of α was used to normalize the available results with respect to $\alpha=0.80$ (for 1 % out-of-roundness), before plotting the results in Figure B.6.4 and Figure B.6.5 for comparison with the design equations for $F_{ \mathsf{he} }$ .
 
-When the elastic hoop buckling stress exceeds $0 . 55 F_{ \mathrm{ y } } ,$ a plasticity reduction factor to account for the effect of inelasticity and residual stresses shall be applied. The plasticity reduction factors given in Equation (6.18) to compute the inelastic buckling stress $F_{ \mathrm{ h c } }$ represent a reasonable lower bound for the available test data shown in Figure B.6.6.
+When the elastic hoop buckling stress exceeds $0.55 F_{ \mathrm{y} } ,$ a plasticity reduction factor to account for the effect of inelasticity and residual stresses shall be applied. The plasticity reduction factors given in Equation (6.18) to compute the inelastic buckling stress $F_{ \mathrm{hc} }$ represent a reasonable lower bound for the available test data shown in Figure B.6.6.
 
 The formula given for determining the moment of inertia of stiffening rings in Equation (6.19) provides sufficient strength to resist collapse even after the shell has buckled between stiffeners. It is assumed that the shell offers no support after buckling and transfers its entire load to the effective stiffener section. The stiffening ring is designed as an isolated ring that buckles into two waves (n = 2) at a collapse pressure 20 % higher than the strength of the shell.
 
-Test results for steel cylinders indicate that a geometric imperfection reduction factor given by Equation B.6.1 is applicable for general instability failures of cylinders with initial out-of-roundness values exceeding one percent. A value of $\alpha = 0 . 80$ is appropriate for out-of-roundness values less than one percent. These α values were used to normalize the general instability test results included in Figure B.6.4 to correspond to a 1 % out-of-roundness basis.
+Test results for steel cylinders indicate that a geometric imperfection reduction factor given by Equation B.6.1 is applicable for general instability failures of cylinders with initial out-of-roundness values exceeding one percent. A value of $\alpha = 0.80$ is appropriate for out-of-roundness values less than one percent. These α values were used to normalize the general instability test results included in Figure B.6.4 to correspond to a 1 % out-of-roundness basis.
 
 When the geometric parameter, M, exceeds 1.6D/t, a ring-stiffened cylinder behaves essentially like an unstiffened cylinder of infinite length. In order to be beneficial, therefore, ring stiffeners should be spaced such that M < 1.6D/t.
 
@@ -6384,12 +6359,12 @@ B.6.3.4 Axial Compression and Hydrostatic Pressure
 
 The combination of hydrostatic pressure and axial load may produce a different critical buckling stress than either of these load systems acting independently. Figure B.6.8 illustrates the recommended interaction equations for various possible stress conditions. These interaction equations imply that no interaction occurs if the axial stress is less than one-half the allowable hoop stress.
 
-The recommended interaction equations have been checked against the results of available tests and found to give conservative results, as shown in Figure B.6.9, Figure B.6.10, and Figure B.6.11. Figure B.6.9 shows the results of elastic buckling tests on Mylar, plexiglass, and fabricated steel cylinders, while Figure B.6.10 shows the results of fabricated steel cylinders alone. In Figure B.6.9 the test results are compared with the recommended equation for elastic interaction, Equation (6.10), using $F_{ \mathsf{ x e } }$ and $F_{ \mathsf{ h e } }$ values determined from the tests. This comparison validates the form of Equation (6.10). In Figure B.6.10,
+The recommended interaction equations have been checked against the results of available tests and found to give conservative results, as shown in Figure B.6.9, Figure B.6.10, and Figure B.6.11. Figure B.6.9 shows the results of elastic buckling tests on Mylar, plexiglass, and fabricated steel cylinders, while Figure B.6.10 shows the results of fabricated steel cylinders alone. In Figure B.6.9 the test results are compared with the recommended equation for elastic interaction, Equation (6.10), using $F_{ \mathsf{xe} }$ and $F_{ \mathsf{he} }$ values determined from the tests. This comparison validates the form of Equation (6.10). In Figure B.6.10,
 
-the fabricated steel cylinder test results are compared with Equation (6.10), using $F_{ \mathsf{ x e } }$ and $F_{ \mathsf{ h e } }$ values computed from the design equations in 6.2. This confirms that Equation (6.10) is conservative. In Figure B.6.11, the recommended interaction equations are compared with the results of test data for unstiffened steel pipe with an elastic hydrostatic buckling stress and an inelastic axial buckling stress. This comparison demonstrates the validity of the recommended interaction equations for combined elastic and inelastic behavior.
+the fabricated steel cylinder test results are compared with Equation (6.10), using $F_{ \mathsf{xe} }$ and $F_{ \mathsf{he} }$ values computed from the design equations in 6.2. This confirms that Equation (6.10) is conservative. In Figure B.6.11, the recommended interaction equations are compared with the results of test data for unstiffened steel pipe with an elastic hydrostatic buckling stress and an inelastic axial buckling stress. This comparison demonstrates the validity of the recommended interaction equations for combined elastic and inelastic behavior.
 
 ![](API_RP_2A-WSD_22nd/chunk2_cd9bd55b7c50d134cb867d4f8d9f8d8b3b962498f435462ed5e6d562edcb3a5d.jpg)  
-Figure B.6.7—Comparison of Test Data with Interaction Equation for Cylinders Under Combined Axial Tension and Hydrostatic Pressure （$F_{ \mathsf{ h c } }$ Determined from Tests)
+Figure B.6.7—Comparison of Test Data with Interaction Equation for Cylinders Under Combined Axial Tension and Hydrostatic Pressure （$F_{ \mathsf{hc} }$ Determined from Tests)
 
 ![](API_RP_2A-WSD_22nd/chunk2_3d7c9d6ce98a3c3499c3d15705d5dec7ff1699abd678baa07163f243759b48a5.jpg)  
 （a)Elastic Buckling
@@ -6402,13 +6377,13 @@ Figure B.6.7—Comparison of Test Data with Interaction Equation for Cylinders U
 Figure B.6.8—Comparison of Interaction Equations for Various Stress Conditions for Cylinders Under Combined Axial Compressive Load and Hydrostatic Pressure
 
 ![](API_RP_2A-WSD_22nd/chunk2_b1733dd0837422c5571a6a161fb26639a4933a5388a01f6bca608677f7d75a2b.jpg)  
-NOTE $F_{ \mathsf{ X } \mathsf{ e } }$ and $F_{ \mathsf{ h e } }$ are determined from tests.
+NOTE $F_{ \mathsf{X} \mathsf{e} }$ and $F_{ \mathsf{he} }$ are determined from tests.
 
 Figure B.6.9—Comparison of Test Data with Elastic Interaction Curve for Cylinders Under Combined Axial Compressive Load and Hydrostatic Pressure
 
 Figure B.6.10—Comparison of Test Data on Fabricated Cylinders with Elastic Interaction Curve for Cylinders Under Combined Axial Load and Hydrostatic Pressure   
 ![](API_RP_2A-WSD_22nd/chunk2_282757f1923a8ef2aaa0f00b25b7034e065258e69754817d2ceee730730daee8.jpg)  
-NOTE $F_{ \mathsf{ x e } }$ and $F_{ \mathsf{ h e } }$ are determined from recommended design equations.
+NOTE $F_{ \mathsf{xe} }$ and $F_{ \mathsf{he} }$ are determined from recommended design equations.
 
 ![](API_RP_2A-WSD_22nd/chunk2_749403d27ae0d9bfdef2f38f9f6767ef2ea7981c9ccf24b824b84b57916bd610.jpg)  
 Figure B.6.11—Comparison of Test Data with Interaction Equations for Cylinders Under Combined Axial Compressive Load and Hydrostatic Pressure (Combination Elastic and Yield-type Failures)
@@ -6427,7 +6402,7 @@ then essentially remained unchanged for all editions up to the 21st, although fu
 
 Regardless of API 2A-WSD stability, much further knowledge, including both experimental data and numerical studies, has been gained on the behavior of joints since the 14th Edition was issued. Over the period 1994 to 1996 MSL Engineering, under the auspices of a joint industry project (JIP), undertook an update to the tubular joint database and guidance [182] [183] [184]. This work and more recent studies, notably by API/EWI and the University of Illinois, have formed the basis of the tubular joint strength provisions of ISO 19902 [33]. The ISO drafting committee took, as a starting point for drafting, the relevant provisions from API 2A-LRFD, First Edition (similar to API 2A-WSD, 20th Edition) because ISO 19902 is in LRFD format. However, the API 2A-WSD provisions were greatly modified during the drafting process to take account of the greater knowledge.
 
-For the purposes of the Second Supplement to the 21st Edition of API 2A-WSD, the draft ISO 19902 provisions, in turn, were used as a starting point. Additional studies, not available at the time of the preparation of the draft ISO 19902 guidance have been incorporated into the Second Supplement to the 21st Edition of API 2A-WSD. The major updates between the 21st Edition and the Second Supplement to the 21st Edition are detailed in the following subsections but, in summary, involve: a relaxation of the twothirds limit on tensile strength, additional guidance on detailing practice, removal of the punching shear approach, new $Q_{ \mathsf{ u } }$ and $Q_{ \mathsf{ f } }$ formulations, and a change in the form of the brace load interaction equation.
+For the purposes of the Second Supplement to the 21st Edition of API 2A-WSD, the draft ISO 19902 provisions, in turn, were used as a starting point. Additional studies, not available at the time of the preparation of the draft ISO 19902 guidance have been incorporated into the Second Supplement to the 21st Edition of API 2A-WSD. The major updates between the 21st Edition and the Second Supplement to the 21st Edition are detailed in the following subsections but, in summary, involve: a relaxation of the twothirds limit on tensile strength, additional guidance on detailing practice, removal of the punching shear approach, new $Q_{ \mathsf{u} }$ and $Q_{ \mathsf{f} }$ formulations, and a change in the form of the brace load interaction equation.
 
 B.7.2 Design Considerations
 
@@ -6437,7 +6412,7 @@ All of the empirical strength equations have been based upon measured yield. Ver
 
 One important change resulting from the MSL JIP [182] [183] [184] concerns new steels with high yield-totensile strength ratios. Previous editions of API 2A-WSD did not allow the designer to assume more than a value of two-thirds. In other words, if the ratio exceeded this limit, the designer had to downgrade the assumed chord yield level to 66 % of tensile strength. The MSL JIP found that the database justified a limit of 0.8 for joints with a chord yield of up to at least 500 MPa (72 ksi).
 
-The material property range is limited to $F_{ \mathsf{ y } } { \leq } 500 \mathsf{ M P a } \left( 72 \mathsf{ k s i } \right)$ . Historically, there has been a concern that the strength of joints with chord yield stresses in excess of 500 MPa (72 ksi) may not increase in proportion to the yield stress. The concern relates to the possibility that higher yield strength may be obtained at the expense of lower ductility and lower strain-hardening capacity, thereby compromising the postyield reserve strength on which the design criteria rely. This matter is discussed in Reference [185]. A reevaluation of the test results reported therein has revealed that use of the limiting yield-to-tensile strength ratio of 0.8 appears to be adequate to permit the capacity equations to be used for joints with 500 MPa (72 ksi) $< F_{ \mathrm{ y } } \le 800$ MPa (115 ksi), provided adequate ductility can be demonstrated in both the HAZ and parent material. However, the test data reported in Reference [185] are limited to a small number of joint types and loading modes (i.e. 11 joints).
+The material property range is limited to $F_{ \mathsf{y} } { \leq } 500 \mathsf{MPa} \left( 72 \mathsf{ksi} \right)$ . Historically, there has been a concern that the strength of joints with chord yield stresses in excess of 500 MPa (72 ksi) may not increase in proportion to the yield stress. The concern relates to the possibility that higher yield strength may be obtained at the expense of lower ductility and lower strain-hardening capacity, thereby compromising the postyield reserve strength on which the design criteria rely. This matter is discussed in Reference [185]. A reevaluation of the test results reported therein has revealed that use of the limiting yield-to-tensile strength ratio of 0.8 appears to be adequate to permit the capacity equations to be used for joints with 500 MPa (72 ksi) $< F_{ \mathrm{y} } \le 800$ MPa (115 ksi), provided adequate ductility can be demonstrated in both the HAZ and parent material. However, the test data reported in Reference [185] are limited to a small number of joint types and loading modes (i.e. 11 joints).
 
 A JIP [186] investigated the static strength of high strength steel X-joints. The project involved the testing of four compression joints [two at a nominal yield strength of 355 MPa (51.5 ksi) and one each at 500 MPa (72.5 ksi) and 700 MPa (101.5 ksi)] and three tension joints [one each at nominal yield strength of 355 MPa (51.5 ksi), 500 MPa (72.5 ksi), and 700 MPa (101.5 ksi)]. The findings presented in
 
@@ -6497,16 +6472,16 @@ An alternative approach to joint classification is to use the ovalizing paramete
 
 Additional provisions specific to axially loaded, multiplanar X-, Y-, and K-joints can be found in the CIDECT design guide [191]. More contemporary information on multiplanar Y- and K-joints is available in References [192], [193], [194], and [195]. However, the designer should be aware that none of this guidance is especially robust. There are general restrictions as to loading pattern as well as joint configuration.
 
-Effect of Classification on Basic Capacity. Unlike previous API practice where interpolation of $Q_{ \mathsf{ u } }$ was adequate for axially loaded braces with mixed classification, interpolation based on a weighted average of $P_{ \mathsf{ a } }$ is required since $\mathcal{ Q }_{ \mathbf{ f } }$ also varies with axial load classification. Taking Figure 7.1(h) as an example, the diagonal brace has a 50 % K and 50 % X classification. In this case, $P_{ \mathsf{ a } }$ is calculated separately for K classification and X classification. In the calculation for X classification, capacity downgrading (if any) in accordance with 7.3.5 requires consideration. The joint characteristic axial capacity can thereafter be calculated as follows:
+Effect of Classification on Basic Capacity. Unlike previous API practice where interpolation of $Q_{ \mathsf{u} }$ was adequate for axially loaded braces with mixed classification, interpolation based on a weighted average of $P_{ \mathsf{a} }$ is required since $\mathcal{ Q }_{ \mathbf{f} }$ also varies with axial load classification. Taking Figure 7.1(h) as an example, the diagonal brace has a 50 % K and 50 % X classification. In this case, $P_{ \mathsf{a} }$ is calculated separately for K classification and X classification. In the calculation for X classification, capacity downgrading (if any) in accordance with 7.3.5 requires consideration. The joint characteristic axial capacity can thereafter be calculated as follows:
 
-$$P_{a} = 0. 5 \left(P_{a}\right)_{K} + 0. 5 \left(P_{a}\right)_{X} \tag{B.7.1}$$
+$$P_{a} = 0.5 \left(P_{a}\right)_{K} + 0.5 \left(P_{a}\right)_{X} \tag{B.7.1}$$
 
 where
 
-$P_{ \mathsf{ a } }$ is the allowable axial joint capacity;
+$P_{ \mathsf{a} }$ is the allowable axial joint capacity;
 
-（$P_{ \mathsf{ a } } )_{ \mathsf{ K } }$ is the allowable axial joint capacity for K classification;   
-（$P_{ \mathsf{ a } } )_{ \mathsf{ X } }$ is the allowable axial joint capacity for X classification.
+（$P_{ \mathsf{a} } )_{ \mathsf{K} }$ is the allowable axial joint capacity for K classification;   
+（$P_{ \mathsf{a} } )_{ \mathsf{X} }$ is the allowable axial joint capacity for X classification.
 
 In the interaction equation in 7.3.6, it can be seen that the axial term is thus computed as:
 
@@ -6514,9 +6489,9 @@ $$\frac{P}{P_{\mathrm{a}}} = \frac{P}{k \left(P_{\mathrm{a}}\right)_{\mathrm{k}}
 
 where k, x, and y are the proportions of the classification.
 
-NOTE $k + x + y = 1 . 0 .$
+NOTE $k + x + y = 1.0 .$
 
-The above principle can also be extended to address the case of the middle brace of a KT joint, which may have K action with both adjacent braces. In this instance （$P_{ \mathsf{ a } } )_{ \mathsf{ K } }$ would be computed as the weighted average of the （$P_{ \mathsf{ a } } )_{ \mathsf{ K } }$ individual values.
+The above principle can also be extended to address the case of the middle brace of a KT joint, which may have K action with both adjacent braces. In this instance （$P_{ \mathsf{a} } )_{ \mathsf{K} }$ would be computed as the weighted average of the （$P_{ \mathsf{a} } )_{ \mathsf{K} }$ individual values.
 
 Other possibilities exist for combining the effect of mixed classifications. These possibilities are addressed in Reference [195], where it is concluded that a linear term in the interaction equation is also viable:
 
@@ -6563,9 +6538,9 @@ Apart from the yield stress limitations discussed in B.7.2.1, the guidance can b
 
 B.7.3.2 Basic Capacity
 
-The basic API format for nominal loads in previous API 2A-WSD editions has been retained for capacity equations, except that the 0.8 factor in the formula for allowable moment capacity has been absorbed in the $Q_{ \mathsf{ u } }$ term. Despite its intuitive appeal, the punching shear alternative has been eliminated, as computer nowadays does most joint checks.
+The basic API format for nominal loads in previous API 2A-WSD editions has been retained for capacity equations, except that the 0.8 factor in the formula for allowable moment capacity has been absorbed in the $Q_{ \mathsf{u} }$ term. Despite its intuitive appeal, the punching shear alternative has been eliminated, as computer nowadays does most joint checks.
 
-Calibration of Safety Factor. For a working stress design (WSD) safety factor of 1.8, current AWS-AISC criteria for all types of tubular connections in axial compression give a safety index, beta, of 2.7 (for known static loads, e.g. dead load), including a bias of 1.10 and coefficient of variation (COV) of 0.08 for the material, in addition to the bias and COV in the WRC database [241]. Tension data show notionally higher beta; however, the data trend indicates reduced conservatism with increasing thickness, possibly a reflection of the well-known size effect in fracture. These criteria are similar to the 1984 API criteria, except that separate $\mathcal{ Q }_{ \mathbf{ q } }$ equations for K versus TY versus X were eliminated by using the alpha ovalizing term [242].
+Calibration of Safety Factor. For a working stress design (WSD) safety factor of 1.8, current AWS-AISC criteria for all types of tubular connections in axial compression give a safety index, beta, of 2.7 (for known static loads, e.g. dead load), including a bias of 1.10 and coefficient of variation (COV) of 0.08 for the material, in addition to the bias and COV in the WRC database [241]. Tension data show notionally higher beta; however, the data trend indicates reduced conservatism with increasing thickness, possibly a reflection of the well-known size effect in fracture. These criteria are similar to the 1984 API criteria, except that separate $\mathcal{ Q }_{ \mathbf{q} }$ equations for K versus TY versus X were eliminated by using the alpha ovalizing term [242].
 
 The 1988 safety calibration of API 2A-WSD found that the existing API 2A-WSD had betas of 3.4 for 90 % static load, and 2.1 (lifetime) for 80 % storm loading (100-year design storm). The higher safety level was deemed appropriate for periods when the platforms are manned and loads are under human control. A target beta of 2.44 across the board was proposed for API 2A-LRFD [243].
 
@@ -6595,47 +6570,47 @@ Figure B.7.4—Safety Index Betas, API 2A-WSD, 21st Edition, Supplement 2
 
 Storm betas tell a similar story. Compressive axial load tests (darker shading) are all acceptable, but some of the experimental results, and almost all of the FE cases, are not.
 
-OTJRC Static Strength Criteria, with $\mathbf{ S } \mathbf{ F } = 1 . 6 .$ . The static betas are all acceptable, and their range of scatter is much reduced by the new criteria. Three cases (shaded) out of 20 are less conservative than existing API; these are the experimental axial compression cases. The composite beta (combining all joint types and load cases) is also shown. This shows considerable improvement in reliability over previous calibrations.
+OTJRC Static Strength Criteria, with $\mathbf{S} \mathbf{F} = 1.6 $. The static betas are all acceptable, and their range of scatter is much reduced by the new criteria. Three cases (shaded) out of 20 are less conservative than existing API; these are the experimental axial compression cases. The composite beta (combining all joint types and load cases) is also shown. This shows considerable improvement in reliability over previous calibrations.
 
 The storm betas are all acceptable, and fall in a tight cluster, except for the notionally more conservative tension test results. This is because the large storm load uncertainty overwhelms the small COVs on joint strength, making mean bias and safety factor (both elements of reserve strength) more important.
 
 Conclusion. The WSD safety factor of 1.6 has been adopted for use with the new OTJRC static strength criteria. Static betas greatly exceed target values from precedent, benefiting from reduced scatter, but they do not govern. When the one-third increase is used for storm loadings, the safety factor becomes 1.2. Storm betas are clustered on the safe side of the API WSD precedent.
 
-B.7.3.3 Strength Factor $\varrho_{ \mathrm{ u } }$
+B.7.3.3 Strength Factor $Q_{ \mathrm{u} }$
 
-The various $Q_{ \mathsf{ u } }$ factors have been derived from appraisals of screened steel model data, supplemented by FE data, for each joint and load type. In recommending the factors, the formulations of existing codes were examined and the best formulations for capturing the effects of the joint parameters (e.g. β and γ) were selected and the coefficients adjusted to give characteristic strength values. In some cases, new formulations are provided where significant improvements in the COV have been found or where the new formulation has a wider range of applicability. In particular, the axial load formulation for overlapped Kjoints applies to the former, and the out-of-plane bending formulation applies to the latter.
+The various $Q_{ \mathsf{u} }$ factors have been derived from appraisals of screened steel model data, supplemented by FE data, for each joint and load type. In recommending the factors, the formulations of existing codes were examined and the best formulations for capturing the effects of the joint parameters (e.g. β and γ) were selected and the coefficients adjusted to give characteristic strength values. In some cases, new formulations are provided where significant improvements in the COV have been found or where the new formulation has a wider range of applicability. In particular, the axial load formulation for overlapped Kjoints applies to the former, and the out-of-plane bending formulation applies to the latter.
 
-The API/EWI FE study [196]–[203] shows a dependence of the basic strength factor $\boldsymbol{ Q_{ \mathrm{ u } } } \ : \mathsf{ o n } \ : \gamma$ (as well as $\beta ) ,$ which is more obvious at large γ where there are less experimental data. The experimental database [182] [184] for DT/X-joints under axial compression and K-joints under balanced axial loading tends to show a somewhat weaker dependence on γ and this is reflected in the recommended strength factors shown in Table 7.2. This dependence of $Q_{ \mathsf{ u } }$ on γ has not previously been recognized in API 2A-WSD (with one exception, i.e. the gap factor $\varrho_{ \mathbf{ g } }$ for axially loaded K-joints with $\gamma \leq 20 )$ .
+The API/EWI FE study [196]–[203] shows a dependence of the basic strength factor $\boldsymbol{ Q_{ \mathrm{u} } } \ : \mathsf{on} \ : \gamma$ (as well as $\beta ) ,$ which is more obvious at large γ where there are less experimental data. The experimental database [182] [184] for DT/X-joints under axial compression and K-joints under balanced axial loading tends to show a somewhat weaker dependence on γ and this is reflected in the recommended strength factors shown in Table 7.2. This dependence of $Q_{ \mathsf{u} }$ on γ has not previously been recognized in API 2A-WSD (with one exception, i.e. the gap factor $Q_{ \mathbf{g} }$ for axially loaded K-joints with $\gamma \leq 20 )$ .
 
-The gap factor $\varrho_{ \mathbf{ g } }$ for K-joints under balanced axial load is now expressed in terms of $g / D$ rather than $g / T$ （${ \mathsf{ f o r } } \ \gamma \leq 20 )$ , eliminating the g dependence formerly included in $\varrho_{ \mathbf{ g } }$ for $\gamma \leq 20$ . The API/EWI FE studies show that with $Q_{ \mathsf{ u } }$ given as （$16 + 1 . 2 \gamma ) \beta 1 . 2 Q_{ 9 }$ , no significant additional effect of $\gamma$ on $\varrho_{ \mathbf{ g } }$ remains for gap joints.
+The gap factor $Q_{ \mathbf{g} }$ for K-joints under balanced axial load is now expressed in terms of $g / D$ rather than $g / T$ （${ \mathsf{for} } \ \gamma \leq 20 )$ , eliminating the g dependence formerly included in $Q_{ \mathbf{g} }$ for $\gamma \leq 20$ . The API/EWI FE studies show that with $Q_{ \mathsf{u} }$ given as （$16 + 1.2 \gamma ) \beta 1.2 Q_{\mathrm{g}}$ , no significant additional effect of $\gamma$ on $Q_{ \mathbf{g} }$ remains for gap joints.
 
-For overlap joints, there is a large effect of $\gamma .$ The equations for $\varrho_{ \mathbf{ g } }$ are not defined for $| g / D |$ less than 0.05. Linearly interpolated value between the limiting values of the two $\varrho_{ \mathbf{ g } }$ expressions may be used for assessment. However, the designer may wish to consider that this was formerly a forbidden zone. International equations for strength and SCF indicate a smooth transition in this region, but IIW s/c XV-E still recognizes a forbidden zone. Service cracking has been observed in joints that had too small an overlap, creating a stiff but weak load path, with prying on the root of the hidden weld. Very small gaps [less than 50 mm (2 in.) or 0.1βD, whichever is smaller] make welding access difficult at the point of highest load transfer.
+For overlap joints, there is a large effect of $\gamma .$ The equations for $Q_{ \mathbf{g} }$ are not defined for $| g / D |$ less than 0.05. Linearly interpolated value between the limiting values of the two $Q_{ \mathbf{g} }$ expressions may be used for assessment. However, the designer may wish to consider that this was formerly a forbidden zone. International equations for strength and SCF indicate a smooth transition in this region, but IIW s/c XV-E still recognizes a forbidden zone. Service cracking has been observed in joints that had too small an overlap, creating a stiff but weak load path, with prying on the root of the hidden weld. Very small gaps [less than 50 mm (2 in.) or 0.1βD, whichever is smaller] make welding access difficult at the point of highest load transfer.
 
 The brace in-plane bending strength for K-joints is based on the governing case [199] [202] of equal magnitude closing moments (closing moments tend to increase the angle between chord and brace). Because no generally accepted classification scheme for brace moment loadings is available, the K-joint closing moment capacity dictates the allowable in-plane bending capacity of all joint types.
 
 The brace out-of plane bending strength for K-joints is based on the governing case [199] [202] of equal magnitude aligned moments (aligned out-of-plane moments tend to bend both braces out-of-plane to the same side of the chord). The K-joint out-of-plane aligned moment capacity dictates the allowable out-ofplane bending capacity of all joint types.
 
-The strength factor $Q_{ \mathsf{ u } }$ for axially loaded T-joints is given for a condition in which the effect of the equilibrium-induced global chord bending moment is eliminated. The effect of this chord bending moment shall be accounted for in the chord load factor $\mathcal{ Q }_{ \mathbf{ f } }$ as described in B.7.3.4.
+The strength factor $Q_{ \mathsf{u} }$ for axially loaded T-joints is given for a condition in which the effect of the equilibrium-induced global chord bending moment is eliminated. The effect of this chord bending moment shall be accounted for in the chord load factor $\mathcal{ Q }_{ \mathbf{f} }$ as described in B.7.3.4.
 
-The $Q_{ \mathsf{ u } }$ formulations for tension loaded T/Y and DT/X joints have been derived on the basis of loads at which cracking has been observed in test data. However, tension loaded joints made of thin or extremely tough steel [210] can sustain further loading beyond first crack. As an estimate of this reserve strength may be important in predominantly statically loaded joints, characteristic ultimate tensile strength expressions have been developed in Reference [182] and are given as follows.
+The $Q_{ \mathsf{u} }$ formulations for tension loaded T/Y and DT/X joints have been derived on the basis of loads at which cracking has been observed in test data. However, tension loaded joints made of thin or extremely tough steel [210] can sustain further loading beyond first crack. As an estimate of this reserve strength may be important in predominantly statically loaded joints, characteristic ultimate tensile strength expressions have been developed in Reference [182] and are given as follows.
 
 a) For T/Y joints (mean bias = 1.805, COV = 0.263):
 
-$$Q_{u} = 42 \beta - 4. 1, f o r \beta \geq 0. 35 \tag{B.7.4}$$
+$$Q_{u} = 42 \beta - 4.1, for \beta \geq 0.35 \tag{B.7.4}$$
 
 b) For DT/X joints (mean bias = 1.138, COV = 0.071):
 
-$$Q_{U} = 41 \beta - 1. 9, f o r \beta \leq 0. 9 \tag{B.7.5}$$
+$$Q_{\mathrm{u}} = 41 \beta - 1.9, for \beta \leq 0.9 \tag{B.7.5}$$
 
-$$Q_{u} = 35 + (\beta - 0. 9) (32 \gamma - 285), \text{f o r} \beta > 0. 9 \tag{B.7.6}$$
+$$Q_{u} = 35 + (\beta - 0.9) (32 \gamma - 285), \text{for} \beta > 0.9 \tag{B.7.6}$$
 
 The bias is defined as the ratio of measured (test or FE) strength to predicted strength using the recommended equations and measured yield strength. The reliability of a formulation depends on both the mean bias and the COV; a higher mean bias and a lower COV lead to a higher reliability.
 
-The large increase in strength indicated in the second expression for DT/X joints at high β relies on membrane stresses in the chord saddle region as the load is essentially transferred directly from one brace to the other. If there is any significant misalignment of the braces (say, $e / D > 0 . 2$ , where e is the eccentricity of the two braces), load transfer by membrane action should not be exploited, and the first expression should be invoked over the full range of β.
+The large increase in strength indicated in the second expression for DT/X joints at high β relies on membrane stresses in the chord saddle region as the load is essentially transferred directly from one brace to the other. If there is any significant misalignment of the braces (say, $e / D > 0.2$ , where e is the eccentricity of the two braces), load transfer by membrane action should not be exploited, and the first expression should be invoked over the full range of β.
 
 In situations where fatigue cracking is evident, the strength formulations for tension loaded T/Y and DT/X joints based on loads at which cracking has been observed can be used to estimate the strength of the cracked joint. This applies for conditions in which the percentage of cracked area is not greater than 20 % of the full area. For other conditions, reference to further work published in this area [209] [210] [211] should be made to determine the strength of the joint (also see Reference [239]).
 
-Example comparisons of $Q_{ \mathsf{ u } }$ from Table 7.2 with $Q_{ \mathsf{ u } }$ from earlier API 2A-WSD editions (e.g. the 21st Edition prior to Supplement 2) are shown in Figure B.7.5 and Figure B.7.6 for axial and moment loaded joints respectively. The 0.8 factor (see B.7.3.2) has been applied to enable a fair comparison to be made.
+Example comparisons of $Q_{ \mathsf{u} }$ from Table 7.2 with $Q_{ \mathsf{u} }$ from earlier API 2A-WSD editions (e.g. the 21st Edition prior to Supplement 2) are shown in Figure B.7.5 and Figure B.7.6 for axial and moment loaded joints respectively. The 0.8 factor (see B.7.3.2) has been applied to enable a fair comparison to be made.
 
 ![](API_RP_2A-WSD_22nd/chunk3_d934f604f78f50100ce542c1b94e61ddc6f74e37144f5c2d9cd78eeada9e6f27.jpg)
 
@@ -6646,43 +6621,43 @@ Example comparisons of $Q_{ \mathsf{ u } }$ from Table 7.2 with $Q_{ \mathsf{ u 
 ![](API_RP_2A-WSD_22nd/chunk3_652e9bde682d7245766803c6a45b4f53defc258f9ca58289c760d514b7686ee5.jpg)
 
 ![](API_RP_2A-WSD_22nd/chunk3_6be70f1da4f8bdc17e58d043594f88b10cea3b312b65cdc9f0398bcbbaa48df0.jpg)  
-Figure B.7.5—Comparison of Strength Factors $\varrho_{ \mathrm{ u } }$ for Axial Loading
+Figure B.7.5—Comparison of Strength Factors $Q_{ \mathrm{u} }$ for Axial Loading
 
 B.7.3.3.1 Design for Axial Load in General and Multiplanar Connections
 
-For general and multiplanar connections, the nominal axial joint strength for each of N primary branch members may be checked in turn (starting with the largest punching load P sinθ to initially size the chord) with $Q_{ \mathsf{ u } }$ as follows:
+For general and multiplanar connections, the nominal axial joint strength for each of N primary branch members may be checked in turn (starting with the largest punching load P sinθ to initially size the chord) with $Q_{ \mathsf{u} }$ as follows:
 
-$$Q_{u} = (3. 4 + 32 \beta / \alpha) Q_{\beta}^{e} \tag{B.7.7}$$
+$$Q_{u} = (3.4 + 32 \beta / \alpha) Q_{\beta}^{e} \tag{B.7.7}$$
 
 ![](API_RP_2A-WSD_22nd/chunk3_83fbb853f080268c7d6c7bc59909dd6c8ddb2bb40187d435c867b559466f37a7.jpg)
 
-Figure B.7.6—Comparison of Strength Factors $\varrho_{ \mathrm{ u } }$ for IPB and OPB   
+Figure B.7.6—Comparison of Strength Factors $Q_{ \mathrm{u} }$ for IPB and OPB   
 ![](API_RP_2A-WSD_22nd/chunk3_bdc3de00ca925e1554397d1e0066d129f4852d9929855ab2d6a4c41367f3d4b4.jpg)  
-NOTE In API 2A-WSD, 21st Edition, $Q_{ \mathsf{ U } }$ is multiplied by a factor of 0.8 for comparisons.
+NOTE In API 2A-WSD, 21st Edition, $Q_{ \mathsf{U} }$ is multiplied by a factor of 0.8 for comparisons.
 
 where
 
-α is defined in Figure B.7.2, with $1 . 0 < \alpha < 1 + 0 . 7 \mathrm{ N } ;$
+α is defined in Figure B.7.2, with $1.0 < \alpha < 1 + 0.7 \mathrm{N} ;$
 
-$\varrho_{ \mathsf{ \beta } }$ is defined in Table 7.2, footnote (a);
+$Q_{ \mathsf{ \beta } }$ is defined in Table 7.2, footnote (a);
 
-$\begin{array} { r l } { \textsf{ e } } & { { } = 0 . 7 ( \alpha - 1 ) } \end{array}$ , with $0 < \mathsf{ e } < 1 . 0$ .
+$\begin{array} { r l } { \textsf{e} } & { { } = 0.7 ( \alpha - 1 ) } \end{array}$ , with $0 < \mathsf{e} < 1.0$ .
 
 Lightly loaded secondary bracing members at such connections may simply be checked as T- or Y-connections.
 
-B.7.3.4 Chord Load Factor $\varrho_{ \mathsf{ f } }$
+B.7.3.4 Chord Load Factor $Q_{ \mathsf{f} }$
 
-Compared to the 21st Edition of API 2A-WSD (prior to Supplement 2), a substantial change to the chord load factor $\mathcal{ Q }_{ \mathbf{ f } }$ is given in 7.3.4.
+Compared to the 21st Edition of API 2A-WSD (prior to Supplement 2), a substantial change to the chord load factor $\mathcal{ Q }_{ \mathbf{f} }$ is given in 7.3.4.
 
-a) The chord load factor $Q_{ \mathsf{ f } }$ given in Equation (7.3) includes linear terms in the nominal chord axial load and in-plane bending moments, in addition to the quadratic terms retained in the parameter A [see Equation (7.4)]. This is similar in form to the chord stress function proposed in Reference [204] and adopted in the CIDECT design guide [191].   
-b) Equation (7.3) applies over the full range of chord loads. Previous editions of API 2A-WSD contained the additional provision that $Q_{ \mathsf{ f } } = 1 . 0$ when all extreme fiber stresses in the chord are tensile. This provision had the unintended consequence that $\mathcal{ Q }_{ \mathbf{ f } }$ exhibited a step discontinuity when both axial and bending loads existed in the chord. The new formulation may produce a $\varrho_{ \mathsf{ f } } { \mathsf{ < } } 1 . 0$ even when the chord is subjected to an axial tension load, particularly in high $\beta ~ ( \beta > 0 . 9 )$ DT-joints under brace axial compression.   
-c) Inspection of the $\mathcal{ Q }_{ \mathbf{ f } }$ term shows that there is now no dependence on $\gamma .$ . Previously, API 2A-WSD included such dependence; this was based on forcing the $Q_{ \mathsf{ f } }$ factors of X-joints of a specific $\gamma$ and Kjoints of another specific $\gamma$ to align. The appraisals in References [182] and [184] indicate that any $\gamma$ dependence in K-joints is small. The API/EWI FE studies also show only a slight dependence of the chord load factor on $\gamma ,$ for all joint types and brace loading conditions. The presence in $\mathcal{ Q }_{ \mathbf{ f } }$ of the $\gamma$
+a) The chord load factor $Q_{ \mathsf{f} }$ given in Equation (7.3) includes linear terms in the nominal chord axial load and in-plane bending moments, in addition to the quadratic terms retained in the parameter A [see Equation (7.4)]. This is similar in form to the chord stress function proposed in Reference [204] and adopted in the CIDECT design guide [191].   
+b) Equation (7.3) applies over the full range of chord loads. Previous editions of API 2A-WSD contained the additional provision that $Q_{ \mathsf{f} } = 1.0$ when all extreme fiber stresses in the chord are tensile. This provision had the unintended consequence that $\mathcal{ Q }_{ \mathbf{f} }$ exhibited a step discontinuity when both axial and bending loads existed in the chord. The new formulation may produce a $Q_{ \mathsf{f} } { \mathsf{ < } } 1.0$ even when the chord is subjected to an axial tension load, particularly in high $\beta ~ ( \beta > 0.9 )$ DT-joints under brace axial compression.   
+c) Inspection of the $\mathcal{ Q }_{ \mathbf{f} }$ term shows that there is now no dependence on $\gamma $. Previously, API 2A-WSD included such dependence; this was based on forcing the $Q_{ \mathsf{f} }$ factors of X-joints of a specific $\gamma$ and Kjoints of another specific $\gamma$ to align. The appraisals in References [182] and [184] indicate that any $\gamma$ dependence in K-joints is small. The API/EWI FE studies also show only a slight dependence of the chord load factor on $\gamma ,$ for all joint types and brace loading conditions. The presence in $\mathcal{ Q }_{ \mathbf{f} }$ of the $\gamma$
 
 dependence in previous editions of API 2A-WSD leads to gross underestimates of the capacity of high γ joints with high axial chord loads.
 
-Example comparisons of $Q_{ \mathsf{ f } }$ from Equation (7.3), Equation (7.4), and Table 7.3 with $\mathcal{ Q }_{ \mathbf{ f } }$ from earlier API 2A-WSD editions (e.g. the 21st Edition prior to Supplement 2) are shown in Figure B.7.7. These comparisons show the effect of chord axial load （$\mathrm{ F S } P_{ \mathrm{ c } } / P_{ \mathrm{ y } } )$ on $\mathcal{ Q }_{ \mathsf{ f } } .$ Corresponding plots of $Q_{ \mathsf{ f } }$ as a function of chord in-plane bending load $\mathrm{ ( F S } M_{ \mathsf{ a p } } / M_{ \mathsf{ P } } )$ would be symmetric in （$\mathrm{ F S } M_{ \mathsf{ a p } } / M_{ \mathsf{ P } } )$ , except for K-joints under balanced brace axial loading (for which the coefficient $C_{ 2 }$ in Table 7.3 is nonzero). For that case a positive $M_{ \mathsf{ a p } }$ (producing compression on the K-joint footprint) yields a value $\mathcal{ Q }_{ \sf f } < 1 . 0$ , while a negative $M_{ \mathsf{ a p } }$ of the same magnitude has a less deleterious effect (larger $\mathcal{ Q }_{ \mathbf{ f } } )$ , and may actually produce a slight capacity enhancement （$Q_{ \mathsf{ f } } > 1 . 0 )$ . Although this behavior may be expected generally for joints that are not symmetric about the chord axis, the recommended formulation of $\mathcal{ Q }_{ \mathbf{ f } }$ for T-joints (Table 7.3) does not incorporate the beneficial effect of a negative $M_{ \mathsf{ a p } }$ for brace axial compression (or a positive $M_{ \mathsf{ a p } }$ for brace axial tension) because there is not sufficient data available to reliably quantify it.
+Example comparisons of $Q_{ \mathsf{f} }$ from Equation (7.3), Equation (7.4), and Table 7.3 with $\mathcal{ Q }_{ \mathbf{f} }$ from earlier API 2A-WSD editions (e.g. the 21st Edition prior to Supplement 2) are shown in Figure B.7.7. These comparisons show the effect of chord axial load （$\mathrm{FS} P_{ \mathrm{c} } / P_{ \mathrm{y} } )$ on $\mathcal{ Q }_{ \mathsf{f} } .$ Corresponding plots of $Q_{ \mathsf{f} }$ as a function of chord in-plane bending load $\mathrm{ ( F S } M_{ \mathsf{ap} } / M_{ \mathsf{P} } )$ would be symmetric in （$\mathrm{FS} M_{ \mathsf{ap} } / M_{ \mathsf{P} } )$ , except for K-joints under balanced brace axial loading (for which the coefficient $C_{ 2 }$ in Table 7.3 is nonzero). For that case a positive $M_{ \mathsf{ap} }$ (producing compression on the K-joint footprint) yields a value $\mathcal{ Q }_{ \sf f } < 1.0$ , while a negative $M_{ \mathsf{ap} }$ of the same magnitude has a less deleterious effect (larger $\mathcal{ Q }_{ \mathbf{f} } )$ , and may actually produce a slight capacity enhancement （$Q_{ \mathsf{f} } > 1.0 )$ . Although this behavior may be expected generally for joints that are not symmetric about the chord axis, the recommended formulation of $\mathcal{ Q }_{ \mathbf{f} }$ for T-joints (Table 7.3) does not incorporate the beneficial effect of a negative $M_{ \mathsf{ap} }$ for brace axial compression (or a positive $M_{ \mathsf{ap} }$ for brace axial tension) because there is not sufficient data available to reliably quantify it.
 
-The plots of $\mathcal{ Q }_{ \mathbf{ f } }$ for DT-joints under brace axial compression (Figure B.7.7) show the marked transition in the effect of axial chord load on capacity that occurs between $0 . 9 \ : < \ : \beta \ : \leq \ : 1 . 0$ . Chord axial compression significantly reduces brace axial compression capacity in low to moderate $\beta$ DT-joints [206] but has no appreciable effect for joints with $\beta \approx 1 . 0 \ [ 207 ]$ . Chord axial tension, on the other hand, has little effect on low to moderate $\beta$ DT-joints, but reduces brace axial compression capacity for high β （$\beta \approx 1 . 0 )$ joints [198] [200] [206]. Figure B.7.8 shows results of tests performed at the University of Texas [206] [207] on a series of DTjoints with different $\beta$ values (0.35, 0.67, 1.0), subjected to brace and chord axial compression loads. The test results are normalized for each geometry by the strength measured in nominally identical specimens with no chord load. These normalized results provide an experimental evaluation of the chord load factor for these joints, and they are compared with the recommended chord load factor $\mathcal{ Q }_{ \mathbf{ f } }$ in Figure B.7.8.
+The plots of $\mathcal{ Q }_{ \mathbf{f} }$ for DT-joints under brace axial compression (Figure B.7.7) show the marked transition in the effect of axial chord load on capacity that occurs between $0.9 \ : < \ : \beta \ : \leq \ : 1.0$ . Chord axial compression significantly reduces brace axial compression capacity in low to moderate $\beta$ DT-joints [206] but has no appreciable effect for joints with $\beta \approx 1.0 \ [ 207 ]$ . Chord axial tension, on the other hand, has little effect on low to moderate $\beta$ DT-joints, but reduces brace axial compression capacity for high β （$\beta \approx 1.0 )$ joints [198] [200] [206]. Figure B.7.8 shows results of tests performed at the University of Texas [206] [207] on a series of DTjoints with different $\beta$ values (0.35, 0.67, 1.0), subjected to brace and chord axial compression loads. The test results are normalized for each geometry by the strength measured in nominally identical specimens with no chord load. These normalized results provide an experimental evaluation of the chord load factor for these joints, and they are compared with the recommended chord load factor $\mathcal{ Q }_{ \mathbf{f} }$ in Figure B.7.8.
 
 In most cases, brace loads induce equilibrium chord loads. For example, in a K-joint with no joint eccentricity under balanced brace axial load, equilibrium axial loads are induced in the chord (tension on one side of the brace intersection and compression on the other side). In a T-joint under brace in-plane bending, equilibrium in-plane bending moments are induced in the chord (positive on one side of the brace intersection and negative on the other). In both of these cases the relative magnitudes of the positive and negative equilibrium chord loads and bending moments depend on the relative stiffness values and on the remote-end boundary conditions of the chord on either side of the brace intersection. A qualitatively different situation occurs in, for example, a T-joint under brace axial compression. In that case, an equilibrium chord in-plane bending moment is induced on both sides of the brace intersection. The magnitude of the equilibrium bending moment depends not only on the relative stiffness values and on the remote-end boundary conditions of the chord on either side of the brace intersection, but also strongly depends on chord absolute length. This poses a significant problem in testing T-joints with high β values: because of the large axial capacity of these joints, substantial equilibrium in-plane bending moments are generated that may affect joint strength [213] or even cause premature (i.e. before joint failure) chord plasticization. Smaller chord lengths reduce the equilibrium bending moments, but below some minimum length, the chord end conditions begin to influence the joint strength.
 
@@ -6695,24 +6670,24 @@ In most cases, brace loads induce equilibrium chord loads. For example, in a K-j
 ![](API_RP_2A-WSD_22nd/chunk3_547ed6799b8ded1dfb3cbd1fbec55d5e4ce9bb9cd329ba8566aeaaaf8b4184f8.jpg)
 
 ![](API_RP_2A-WSD_22nd/chunk3_35b53baee4d9430537a4e84a39f0b6150c48aed886f3c8ba845100373ef514e3.jpg)  
-Figure B.7.7—Comparison of Chord Load Factors $\varrho_{ \mathsf{ f } }$
+Figure B.7.7—Comparison of Chord Load Factors $Q_{ \mathsf{f} }$
 
 ![](API_RP_2A-WSD_22nd/chunk3_a438fd3572f4272c5315a2a7d2ab2ebb535d92805ad5fb28be76b115591dcbef.jpg)  
 Figure B.7.8—Effect of Chord Axial Load on DT Brace Compression Capacity Comparison of University of Texas Test Data with Chord Load Factor
 
-In the API/EWI FE analyses of T-joints under brace axial compression, compensating negative in-plane bending moments, proportional to the brace load, are applied at the chord ends so that the global bending moment at the intersection of the brace and chord centerlines remains zero throughout the loading history. The strength factor $Q_{ \mathsf{ u } }$ determined from these FE analyses therefore represents the joint capacity corresponding to a very short chord, without the effect of the equilibrium chord bending moments. A series of FE analyses with different levels of additional applied chord bending moments (reflected in Qf ) allows the estimation of joint strength for different levels of chord global bending.
+In the API/EWI FE analyses of T-joints under brace axial compression, compensating negative in-plane bending moments, proportional to the brace load, are applied at the chord ends so that the global bending moment at the intersection of the brace and chord centerlines remains zero throughout the loading history. The strength factor $Q_{ \mathsf{u} }$ determined from these FE analyses therefore represents the joint capacity corresponding to a very short chord, without the effect of the equilibrium chord bending moments. A series of FE analyses with different levels of additional applied chord bending moments (reflected in Qf ) allows the estimation of joint strength for different levels of chord global bending.
 
-Therefore, equilibrium chord loads are present and accounted for in the strength factors $Q_{ \mathsf{ u } }$ determined from tests, and (with the single exception of axially loaded T-joints, in which the effects of equilibrium chord bending moments are explicitly removed) they are also present and accounted for in the strength factors $Q_{ \mathsf{ u } }$ determined from the EWI/API FE database.
+Therefore, equilibrium chord loads are present and accounted for in the strength factors $Q_{ \mathsf{u} }$ determined from tests, and (with the single exception of axially loaded T-joints, in which the effects of equilibrium chord bending moments are explicitly removed) they are also present and accounted for in the strength factors $Q_{ \mathsf{u} }$ determined from the EWI/API FE database.
 
-In order to determine the additional chord loads to be accounted for in the chord load factor $\mathcal{ Q }_{ \mathbf{ f } } ,$ the average of the total (equilibrium plus additional) chord loads on either side of the brace intersection should be used.
+In order to determine the additional chord loads to be accounted for in the chord load factor $\mathcal{ Q }_{ \mathbf{f} } ,$ the average of the total (equilibrium plus additional) chord loads on either side of the brace intersection should be used.
 
-In cases (including the API/EWI FE analyses, and the vast majority of tests) where the chord cross sections, lengths, and remote-end boundary conditions are the same on both sides of the brace intersection, averaging the total chord loads on either side of the brace intersection yields the correct additional chord load since the equilibrium chord loads cancel from the sum. More generally, in cases where the chord does not react the equilibrium loads equally on either side of the brace intersection, the averaging procedure produces a small equivalent additional chord load that is taken into account in $\mathcal{ Q }_{ \mathsf{ f } } .$ In the axially loaded T-joint, the equilibrium chord bending moment is the same on both sides of the brace intersection, and so it is properly accounted for in the average chord bending moment.
+In cases (including the API/EWI FE analyses, and the vast majority of tests) where the chord cross sections, lengths, and remote-end boundary conditions are the same on both sides of the brace intersection, averaging the total chord loads on either side of the brace intersection yields the correct additional chord load since the equilibrium chord loads cancel from the sum. More generally, in cases where the chord does not react the equilibrium loads equally on either side of the brace intersection, the averaging procedure produces a small equivalent additional chord load that is taken into account in $\mathcal{ Q }_{ \mathsf{f} } .$ In the axially loaded T-joint, the equilibrium chord bending moment is the same on both sides of the brace intersection, and so it is properly accounted for in the average chord bending moment.
 
 Implicit in this simple averaging procedure is the assumption that the capacity of the joint is not significantly affected by small variations in the sequence of brace versus chord loading.
 
 Brace load capacities calculated from Equations (7.1) through (7.4) (with the factor of safety FS = 1) were compared with the screened test data and with the API/EWI FE data, for K-, Y-, and X-joints for the four brace load cases. The result of each individual comparison was expressed in the form of a ratio of (test or FE strength)/(predicted strength). Ratios greater than one, indicating that the joint capacity is greater than the predicted value, are obviously desirable. Statistics of the comparisons are given in Table B.7.1 to Table B.7.3 for K-, Y- and X-joints, respectively, for the four brace load cases. For each category (joint type and brace load), the mean bias, COV, and number of cases (tests or FE), N, are given. The same comparisons were made for the previous API 2A-WSD (21st Edition prior to Supplement 2) provisions, and the statistics of those comparisons are also given in these tables.
 
-It is clear that both the $Q_{ \mathsf{ u } }$ formulation alone, and the combined $\mathcal{ Q }_{ \sf u } \mathcal{ Q }_{ \sf f }$ formulation given in Equations (7.1) through (7.4) is an improvement over that of the previous API practice, particularly for brace bending loads. The former conclusion can be drawn by comparisons with the complete screened test database, since it contains relatively few cases with additional chord loads in most of the joint type/brace load categories. The latter conclusion is drawn by comparisons with the API/EWI FE database, which contains a relatively high proportion of cases with additional chord loads. In any case, the assessment of the accuracy of a chord load formulation cannot be uncoupled from that of the strength factor, even if a test database with a substantially higher proportion of cases with additional chord loads were in existence.
+It is clear that both the $Q_{ \mathsf{u} }$ formulation alone, and the combined $\mathcal{ Q }_{ \sf u } \mathcal{ Q }_{ \sf f }$ formulation given in Equations (7.1) through (7.4) is an improvement over that of the previous API practice, particularly for brace bending loads. The former conclusion can be drawn by comparisons with the complete screened test database, since it contains relatively few cases with additional chord loads in most of the joint type/brace load categories. The latter conclusion is drawn by comparisons with the API/EWI FE database, which contains a relatively high proportion of cases with additional chord loads. In any case, the assessment of the accuracy of a chord load formulation cannot be uncoupled from that of the strength factor, even if a test database with a substantially higher proportion of cases with additional chord loads were in existence.
 
 Figure B.7.9 through Figure B.7.11, for the brace axial load cases, and Figure B.7.12 and Figure B.7.13, for the brace bending cases, show the results of the comparisons plotted against β. These figures show that the performance of the recommended and previous API formulations is consistent across joint type and brace load conditions for both test and FE databases. Additional comparisons (not shown) with a subset of the FE database containing only the cases with no chord load are also consistent with the test database comparisons for both the recommended and previous API practice.
 
@@ -6744,7 +6719,8 @@ Table B.7.1—Mean Bias Factors and Coefficients of Variation for K-joints
 | Out-of-plane bending | Mean bias | 1.54 | 1.15 | 1.20 | 0.84 |
 | Out-of-plane bending | COV | 0.19 | 0.14 | 0.11 | 0.14 |
 | Out-of-plane bending | Na | 7 | 7 | 306 | 306 |
-| a Number of load cases. | a Number of load cases. | a Number of load cases. | a Number of load cases. | a Number of load cases. | a Number of load cases. |
+
+a Number of load cases.
 
 
 
@@ -6767,7 +6743,8 @@ Table B.7.2—Mean Bias Factors and Coefficients of Variation for Y-joints
 | Out-of-plane bending | Mean bias | 1.45 | 1.07 | 1.31 | 0.89 |
 | Out-of-plane bending | COV | 0.26 | 0.26 | 0.08 | 0.17 |
 | Out-of-plane bending | Na | 27 | 27 | 18 | 18 |
-| a Number of load cases. | a Number of load cases. | a Number of load cases. | a Number of load cases. | a Number of load cases. | a Number of load cases. |
+
+a Number of load cases.
 
 
 
@@ -6790,7 +6767,8 @@ Table B.7.3—Mean Bias Factors and Coefficients of Variation for X-joints
 | Out-of-plane bending | Mean bias | 1.39 | 1.13 | 1.52 | 0.75 |
 | Out-of-plane bending | COV | 0.06 | 0.09 | 0.23 | 0.23 |
 | Out-of-plane bending | Na | 6 | 6 | 80 | 80 |
-| a Number of load cases. | a Number of load cases. | a Number of load cases. | a Number of load cases. | a Number of load cases. | a Number of load cases. |
+
+a Number of load cases.
 
 
 
@@ -6851,13 +6829,13 @@ B.7.5 Grouted Joints
 
 Grouted joints are common in new steel jacket structures and joint grouting is generally a cost-effective means of strengthening older structures. Yet, API and other offshore codes of practice have historically said little about how to assess grouted joint capacity. By the mid-1990s it was possible to provide guidance upon engineering approximations and some experimental evidence (see References [223] to [228]). The experimental evidence is primarily on double-skin joints subjected to axial brace loading. However, a JIP by MSL [229] provides additional data for fully grouted joints, especially those subjected to brace bending moment.
 
-The $Q_{ \mathsf{ u } }$ values for grouted joints in Table 7.4 have been derived for Y-/X-/K-joints and are reproduced from Reference [228].
+The $Q_{ \mathsf{u} }$ values for grouted joints in Table 7.4 have been derived for Y-/X-/K-joints and are reproduced from Reference [228].
 
 For double-skin joints, a further limiting capacity has been introduced, to cater for the potential of chord ovalization failure. In these cases, capacity is the lesser of:
 
 — brace capacity;   
 — capacity calculated on the basis of effective thickness;   
-— capacity calculated on the basis of $Q_{ \mathsf{ u } }$ values for grouted joints.
+— capacity calculated on the basis of $Q_{ \mathsf{u} }$ values for grouted joints.
 
 Special joint capacity investigation may be warranted when grouted braces exist, whether or not grouted chords accompany them. Although joint capacity is heavily dependent on chord parameters, a grouted brace can cause a lower effective brace diameter, which in turn affects joint capacity.
 
@@ -6939,7 +6917,7 @@ where θ is measured from the central direction. A commonly used spreading funct
 
 $$D (\theta) = C_{n} \cos^{n} \theta \tag{B.8.2}$$
 
-where n is a positive integer and $C_{ \mathbf{ n } }$ is a coefficient such that Equation (B.8.1) is satisfied.
+where n is a positive integer and $C_{ \mathbf{n} }$ is a coefficient such that Equation (B.8.1) is satisfied.
 
 A value of n = 0 corresponds to the case when the energy is distributed in all directions. Observations of wind driven seas show that an appropriate spreading function is a cosine square function (n = 2). For situations where limited fetch restricts degree of spread a value of n = 4 has been found to be appropriate. Other methods for directional spreading are given in Reference [40].
 
@@ -6983,11 +6961,11 @@ Spectral Analysis Techniques. Several approaches are available for determining s
 a) Transfer functions developed using regular waves in the time domain.
 
 — Characterize the wave climate using either the two, three, four, or eight parameter format.   
-Select a sufficient number of frequencies to define all the peaks and valleys inherent in the jacket response transfer functions. A typical set of frequencies is illustrated in Figure B.8.1. A simplified analysis [254] that develops a global base shear transfer function may be helpful in defining frequencies to be used in the detailed analysis.   
-Select a wave height corresponding to each frequency. A constant wave steepness that is appropriate for the wave climate can be used. For the Gulf of Mexico a steepness between 1:20 and 1:25 is generally used. A minimum height of 0.3 m (1 ft) and a maximum height equal to the design wave height should be used.   
-Compute a stress range transfer function at each point where fatigue damage is to be accumulated for a minimum of four platform directions (end-on, broadside, and two diagonal). For jackets with unusual geometry or where wave directionality or spreading or current is considered, more directions may be required. At each frequency, a point on the transfer function is determined by passing an Airy wave of the appropriate height through the structure and dividing the response stress range by the wave height. Transient effects are eliminated by achieving steady state conditions. A sufficient number of time steps in the wave cycle at which members stresses are computed should be selected to determine the maximum brace HSSR. A minimum of four hot spot locations at both the brace and chord side of the connection should be considered.
+— Select a sufficient number of frequencies to define all the peaks and valleys inherent in the jacket response transfer functions. A typical set of frequencies is illustrated in Figure B.8.1. A simplified analysis [254] that develops a global base shear transfer function may be helpful in defining frequencies to be used in the detailed analysis.   
+— Select a wave height corresponding to each frequency. A constant wave steepness that is appropriate for the wave climate can be used. For the Gulf of Mexico a steepness between 1:20 and 1:25 is generally used. A minimum height of 0.3 m (1 ft) and a maximum height equal to the design wave height should be used.   
+— Compute a stress range transfer function at each point where fatigue damage is to be accumulated for a minimum of four platform directions (end-on, broadside, and two diagonal). For jackets with unusual geometry or where wave directionality or spreading or current is considered, more directions may be required. At each frequency, a point on the transfer function is determined by passing an Airy wave of the appropriate height through the structure and dividing the response stress range by the wave height. Transient effects are eliminated by achieving steady state conditions. A sufficient number of time steps in the wave cycle at which members stresses are computed should be selected to determine the maximum brace HSSR. A minimum of four hot spot locations at both the brace and chord side of the connection should be considered.
 
-Compute the stress response spectra. In a spectral fatigue analysis in its most general form, each sea state is represented by a power spectral density function $S_{ \mathbf{ a } } ( \omega )$ for each direction of wave approach α, where ω is circular frequency. At each location of interest, the platform stress response spectrum for each sea state is:
+— Compute the stress response spectra. In a spectral fatigue analysis in its most general form, each sea state is represented by a power spectral density function $S_{\alpha} ( \omega )$ for each direction of wave approach α, where ω is circular frequency. At each location of interest, the platform stress response spectrum for each sea state is:
 
 $$S_{\sigma , \alpha} (\omega) = \int_{- \pi / 2}^{\pi / 2} \left| H (\omega , \theta) \right|^{2} D (\theta) S_{\alpha} (\omega) d \theta \tag{B.8.3}$$
 
@@ -7067,7 +7045,7 @@ B.8.3.1 General
 
 The HSSR concept places many different structural geometries on a common basis, enabling them to be treated using a single S-N curve. The basis of this concept is to capture a stress (or strain) in the proximity of the weld toes, which characterizes the fatigue life of the joint, but excludes the very local microscopic effects like the sharp notch, undercut and cracklike defects at the weld toe. These local weld notch effects are included in the S-N curve. Thus, the SCF for a particular load type and at a particular location along the intersection weld may be defined as:
 
-$$\mathrm{S C F} = \frac{\text{H S S R a t h e l o c a t i o n (e x c l u d i n g n o t c h e f f e c t)}}{\text{r a n g e o f t h e n o m i n a l b r a c e s t r e s s}}$$
+$$\mathrm{SCF} = \frac{\text{H S S R at h e l o c at i o n (e x c l u d i n g n o t c h e f f e c t)}}{\text{range of the nominal brace stress}}$$
 
 Consistency with the S-N curve is established by using a compatible method for estimating the HSSR during the fatigue test as used in obtaining SCFs. The Dovey 16-node thick shell element [257] enforces a linear trend of shell bending and membrane stress. This is consistent with the experimental HSS extrapolation procedure, and was used to derive Efthymiou’s SCF [291].
 
@@ -7088,31 +7066,31 @@ Evaluation of HSSRs. The key HSSR locations at the tubular joint intersection ar
 
 The point-in-time HSS for the saddle and the crown are given by:
 
-$$\mathrm{H S S}_{\mathrm{s a}} = \mathrm{S C F}_{\mathrm{a x}, \mathrm{s a}} f_{\mathrm{a x}} \pm \mathrm{S C F}_{\mathrm{o p b}} f_{\mathrm{o p b}} \tag{B.8.4}$$
+$$\mathrm{HSS}_{\mathrm{sa}} = \mathrm{SCF}_{\mathrm{ax}, \mathrm{sa}} f_{\mathrm{ax}} \pm \mathrm{SCF}_{\mathrm{opb}} f_{\mathrm{opb}} \tag{B.8.4}$$
 
-$$\mathrm{H S S}_{\mathrm{c r}} = \mathrm{S C F}_{\mathrm{a x}, \mathrm{c r}} f_{\mathrm{a x}} \pm \mathrm{S C F}_{\mathrm{i p b}} f_{\mathrm{i p b}} + \mathrm{C E} \tag{B.8.5}$$
+$$\mathrm{HSS}_{\mathrm{cr}} = \mathrm{SCF}_{\mathrm{ax}, \mathrm{cr}} f_{\mathrm{ax}} \pm \mathrm{SCF}_{\mathrm{ipb}} f_{\mathrm{ipb}} + \mathrm{CE} \tag{B.8.5}$$
 
 where
 
-SCFax,sa $\operatorname{ S C F }_{ \mathsf{ a x } , \mathsf{ s a } }$ is the axial SCF at the saddle;
+$\operatorname{SCF}_{ \mathsf{ax} , \mathsf{sa} }$ is the axial SCF at the saddle;
 
-$f_{ \mathsf{ a x } }$ is axial nominal stress;
+$f_{ \mathsf{ax} }$ is axial nominal stress;
 
-SCFopb ${ \mathrm{ S C F } }_{ \mathsf{ o p b } }$ is the out-of-plane bending SCF;
+${ \mathrm{SCF} }_{ \mathsf{opb} }$ is the out-of-plane bending SCF;
 
-$f_{ \mathsf{ o p b } }$ is out-of-plane bending nominal stress;
+$f_{ \mathsf{opb} }$ is out-of-plane bending nominal stress;
 
-SCFax,cr $\mathrm{ S C F }_{ \mathsf{ a x , c r } }$ is the axial SCF at the crown;
+$\mathrm{SCF}_{ \mathsf{ax,cr} }$ is the axial SCF at the crown;
 
-${ \mathrm{ S C F } }_{ \mathsf{ i p b } }$ is the in-plane bending SCF;
+${ \mathrm{SCF} }_{ \mathsf{ipb} }$ is the in-plane bending SCF;
 
-$f_{ \mathsf{ i p b } }$ is in-plane bending nominal stress;
+$f_{ \mathsf{ipb} }$ is in-plane bending nominal stress;
 
 CE is the effect of the nominal cyclic stress in the chord as discussed as follows.
 
 Equations (B.8.4) and (B.8.5) are valid both for the HSS for the chord and for the HSS for the brace, but the CE is only applicable for the chord crown.
 
-Since the nominal brace stresses $f_{ \mathsf{ a x } } , f_{ \mathsf{ o p b } }$ , and $f_{ \mathsf{ i p b } }$ are functions of wave position, it follows that, when combining the contributions from the various loading modes, phase differences between them are accounted for. In the time domain, the combination is done for each wave position, and the total range of HSS (i.e. HSSR) determined from the full cycle result at each location.
+Since the nominal brace stresses $f_{ \mathsf{ax} } , f_{ \mathsf{opb} }$ , and $f_{ \mathsf{ipb} }$ are functions of wave position, it follows that, when combining the contributions from the various loading modes, phase differences between them are accounted for. In the time domain, the combination is done for each wave position, and the total range of HSS (i.e. HSSR) determined from the full cycle result at each location.
 
 ![](API_RP_2A-WSD_22nd/chunk3_9f335c5a0ea62feed2f63c2ac0da2eafd9d50acac95d0dd7adb899740a2dd27a.jpg)  
 a）T-orY-joint
@@ -7130,13 +7108,19 @@ d)KT-joint
 
 Key
 
-1 Crown β = d D A Aβ = d D B Bβ = d D C Cβ = d D   
-2 Saddle τ = t T A Aτ = t T B Bτ = t T C Cτ = t T   
-3 Brace A ζ = g D AB ABζ = g D BC BC ζ = g D   
-4 Brace B γ = D T2   
-5 Brace C α = 2L D
+| Key | Description | Parameter Definitions |
+| --- | --- | --- |
+| 1 | Crown | $\beta=d/D$; $\beta_{\mathrm{A}}=d_{\mathrm{A}}/D$; $\beta_{\mathrm{B}}=d_{\mathrm{B}}/D$; $\beta_{\mathrm{C}}=d_{\mathrm{C}}/D$ |
+| 2 | Saddle | $\tau=t/T$; $\tau_{\mathrm{A}}=t_{\mathrm{A}}/T$; $\tau_{\mathrm{B}}=t_{\mathrm{B}}/T$; $\tau_{\mathrm{C}}=t_{\mathrm{C}}/T$ |
+| 3 | Brace A | $\zeta=g/D$; $\zeta_{\mathrm{AB}}=g_{\mathrm{AB}}/D$; $\zeta_{\mathrm{BC}}=g_{\mathrm{BC}}/D$ |
+| 4 | Brace B | $\gamma=D/(2T)$ |
+| 5 | Brace C | $\alpha=2L/D$ |
 
-Nominal cyclic stresses in the chord member also contribute to fatigue loading. Their contribution is usually small because, unlike brace loading, chord loading does not cause any significant local bending of the chord walls. Hence any stress raising effects are minimal. The effect of nominal cyclic stresses in the chord member may be covered by including the stress due to axial load in the chord can member, with ${ \mathsf{ S C F } } = 1 . 25$ , at the chord crown location only, accounting for sign and phase differences with other brace load effects. Contributions at other locations, namely at the saddle and the brace side, are considerably smaller and may be neglected. For the special case of a structure in which the cyclic loads in the chords dominate, the braces can be regarded as nonload carrying attachments and checked with an appropriate S-N curve.
+
+
+
+
+Nominal cyclic stresses in the chord member also contribute to fatigue loading. Their contribution is usually small because, unlike brace loading, chord loading does not cause any significant local bending of the chord walls. Hence any stress raising effects are minimal. The effect of nominal cyclic stresses in the chord member may be covered by including the stress due to axial load in the chord can member, with ${ \mathsf{SCF} } = 1.25$ , at the chord crown location only, accounting for sign and phase differences with other brace load effects. Contributions at other locations, namely at the saddle and the brace side, are considerably smaller and may be neglected. For the special case of a structure in which the cyclic loads in the chords dominate, the braces can be regarded as nonload carrying attachments and checked with an appropriate S-N curve.
 
 Other Stress Locations. For some joints and certain individual load cases, the point of highest stress may lie at a location between the saddle and crown. Examples include balanced axial load in K-joints where the hot spot generally lies between the saddle and crown toe. For in-plane bending the hot spot may not be precisely at the crown but may lie within a sector of $\pm 30^{ \circ }$ from the crown depending on the γ and β values. The recommended SCF equations capture these higher SCFs even though, for simplicity, they are referred to as occurring notionally at the crown or the saddle.
 
@@ -7144,21 +7128,21 @@ For combined axial loads and bending moments, it is possible for the maximum HSS
 
 For such cases, use of the above equations may under-predict the maximum stress range. To overcome this, the HSSR around the entire joint intersection may be estimated (and, hence, the HSS) using an equation of the form:
 
-$$\operatorname{H S S} (X) = \operatorname{S C F}_{\mathbf{a x}, \mathbf{c h}} (X) \times f_{\mathbf{a x}} \pm \operatorname{S C F}_{\mathbf{i p b}, \mathbf{c h}} (X) \times f_{\mathbf{i p b}} \pm \operatorname{S C F}_{\mathbf{o p b}, \mathbf{c h}} (X) \times f_{\mathbf{o p b}} \tag{B.8.6}$$
+$$\operatorname{HSS} (X) = \operatorname{SCF}_{\mathbf{ax}, \mathbf{ch}} (X) \times f_{\mathbf{ax}} \pm \operatorname{SCF}_{\mathbf{ipb}, \mathbf{ch}} (X) \times f_{\mathbf{ipb}} \pm \operatorname{SCF}_{\mathbf{opb}, \mathbf{ch}} (X) \times f_{\mathbf{opb}} \tag{B.8.6}$$
 
 where
 
-$\mathrm{ S C F }_{ \mathsf{ a x , c h } } ( X )$ is the variation of chord-side SCF due to axial brace load, around the chord-brace intersection (defined by angle X);
+$\mathrm{SCF}_{ \mathsf{ax,ch} } ( X )$ is the variation of chord-side SCF due to axial brace load, around the chord-brace intersection (defined by angle X);
 
 $\mathrm{ S C F_{ i p b , c h } } ( X )$ is the variation of chord-side SCF due to in-plane bending load around the chord-brace intersection (defined by angle X);
 
-$\mathrm{ S C F }_{ \mathsf{ o p b } , \mathsf{ c h } } ( X )$ is the variation of chord-side SCF due to out-of-plane bending load around the chord-brace intersection (defined by angle X);
+$\mathrm{SCF}_{ \mathsf{opb} , \mathsf{ch} } ( X )$ is the variation of chord-side SCF due to out-of-plane bending load around the chord-brace intersection (defined by angle X);
 
 The distribution functions may be obtained from parametric expressions given in Reference [292], or a sinusoidal variation may be assumed.
 
 B.8.3.2 SCFs in Unstiffened Tubular Joints
 
-Several sets of parametric equations have been derived for estimating SCFs in tubular joints (e.g. References [262], [267], [274], [291], and [293]). Historically, SCF equations (e.g. Kuang and Alpha Kellogg) have been targeted at capturing the mean, not upper bound, SCF values. The performance of the various sets of SCF equations in terms of accuracy, degree of conservatism and range of applicability has been assessed in a number of recent studies, notably in a study by Edison Welding Institute (EWI) funded by $\mathsf{ A P l } \left[ 294 \right]$ and a study by Lloyd’s Register funded by HSE [278].
+Several sets of parametric equations have been derived for estimating SCFs in tubular joints (e.g. References [262], [267], [274], [291], and [293]). Historically, SCF equations (e.g. Kuang and Alpha Kellogg) have been targeted at capturing the mean, not upper bound, SCF values. The performance of the various sets of SCF equations in terms of accuracy, degree of conservatism and range of applicability has been assessed in a number of recent studies, notably in a study by Edison Welding Institute (EWI) funded by API [294] and a study by Lloyd’s Register funded by HSE [278].
 
 The main conclusion from the EWI study was that the Efthymiou equations and the Lloyd’s design equations have considerable advantages in consistency and coverage in comparison with other available equations. When discussing the Lloyd’s SCF equations it is important to clarify that three modern sets of Lloyd’s/Smedley SCF equations exist, namely:
 
@@ -7184,22 +7168,32 @@ Table B.8.1—Equations for SCFs in T/Y-joints
 
 | Load Type and Fixity Conditions | SCF Equations | Equation No. | Short Chord Correction |
 | --- | --- | --- | --- |
-| Axial load—chord ends fixed | Chord saddle γ11[1.11-3(β-0.52)2]sin16θ | T1 | F1 |
-| Axial load—chord ends fixed | Chord crown γ02τ[2.65+5(β-0.65)2]+πβ(0.25α-3)sinθ | T2 | None |
-| Axial load—chord ends fixed | Brace saddle 1.3+γ0.52α0.1[0.187-1.25β1.1(β-0.96)]sin(2.7-0.01α)θ | T3 | F1 |
-| Axial load—chord ends fixed | Brace crown 3+γ12[0.12 exp(-4β)+0.011β2-0.045]+βτ(0.1α-1.2) | T4 | None |
-| Axial load—general fixity conditions | Chord saddle [T1+C1(0.8α-6)τβ2(1-β2)0.5sin22θ | T5 | F2 |
-| Axial load—general fixity conditions | Chord crown γ02τ[2.65+5(β-0.65)2]+πβ(C2α-3)sinθ | T6 | None |
-| Axial load—general fixity conditions | Brace saddle (see Equation T3) Brace crown 3+γ12[0.12exp(-4β)+0.011β2-0.045]+βτ(C3α-1.2) | T7 | None |
-| In-plane bending | Chord crown 1.45βτ0.85γ(1-0.68β)sin0.7θ | T8 | None |
-| In-plane bending | Brace crown 1+0.65βτ0.4γ(1.09-0.77β)sin(0.06γ-1.16)θ | T9 | None |
-| Out-of-plane bending | Chord saddle γβ(1.7-1.05β3)sin16θ | T10 | F3 |
-| Out-of-plane bending | Brace saddle τ-0.54γ-0.05(0.99-0.47β+0.08β4)×[T10] | T11 | F3 |
-| Short chord correction factors (α<12) | Short chord correction factors (α<12) | Chord end fixity parameter C | Chord end fixity parameter C |
-| F1=1-(0.83β-0.56β2-0.02)γ0.23exp[-0.21γ-1.16α2.5] | F1=1-(0.83β-0.56β2-0.02)γ0.23exp[-0.21γ-1.16α2.5] | 0.5≤C≤1.0; typically, C=0.7 | 0.5≤C≤1.0; typically, C=0.7 |
-| F2=1-(1.43β-0.97β2-0.03)γ0.04exp[-0.71γ-1.38α2.5] | F2=1-(1.43β-0.97β2-0.03)γ0.04exp[-0.71γ-1.38α2.5] | C1=2(C-0.5) | C1=2(C-0.5) |
-| F3=1-0.55β1.8γ0.16exp[-0.49γ-0.89α1.8] | F3=1-0.55β1.8γ0.16exp[-0.49γ-0.89α1.8] | C2=C/2 | C2=C/2 |
-| where exp(x)=ex | where exp(x)=ex | C3=C/5 | C3=C/5 |
+| Axial load—chord ends fixed | Chord saddle: $\gamma\tau^{1.1}[1.11-3(\beta-0.52)^2]\sin^{1.6}\theta$ | T1 | F1 |
+| Axial load—chord ends fixed | Chord crown: $\gamma^{0.2}\tau[2.65+5(\beta-0.65)^2]+\tau\beta(0.25\alpha-3)\sin\theta$ | T2 | None |
+| Axial load—chord ends fixed | Brace saddle: $1.3+\gamma\tau^{0.52}\alpha^{0.1}[0.187-1.25\beta^{1.1}(\beta-0.96)]\sin^{(2.7-0.01\alpha)}\theta$ | T3 | F1 |
+| Axial load—chord ends fixed | Brace crown: $3+\gamma^{1.2}[0.12\exp(-4\beta)+0.011\beta^2-0.045]+\beta\tau(0.1\alpha-1.2)$ | T4 | None |
+| Axial load—general fixity conditions | Chord saddle: $[\mathrm{T1}]+C_1(0.8\alpha-6)\tau\beta^2(1-\beta^2)^{0.5}\sin^{2.2}\theta$ | T5 | F2 |
+| Axial load—general fixity conditions | Chord crown: $\gamma^{0.2}\tau[2.65+5(\beta-0.65)^2]+\tau\beta(C_2\alpha-3)\sin\theta$ | T6 | None |
+| Axial load—general fixity conditions | Brace saddle (see Equation T3) | T3 | F2 |
+| Axial load—general fixity conditions | Brace crown: $3+\gamma^{1.2}[0.12\exp(-4\beta)+0.011\beta^2-0.045]+\beta\tau(C_3\alpha-1.2)$ | T7 | None |
+| In-plane bending | Chord crown: $1.45\beta\tau^{0.85}\gamma^{(1-0.68\beta)}\sin^{0.7}\theta$ | T8 | None |
+| In-plane bending | Brace crown: $1+0.65\beta\tau^{0.4}\gamma^{(1.09-0.77\beta)}\sin^{(0.06\gamma-1.16)}\theta$ | T9 | None |
+| Out-of-plane bending | Chord saddle: $\gamma\tau\beta(1.7-1.05\beta^3)\sin^{1.6}\theta$ | T10 | F3 |
+| Out-of-plane bending | Brace saddle: $\tau^{-0.54}\gamma^{-0.05}(0.99-0.47\beta+0.08\beta^4)\times[\mathrm{T10}]$ | T11 | F3 |
+
+Short chord correction factors ($\alpha<12$):
+
+$\mathrm{F1}=1-(0.83\beta-0.56\beta^2-0.02)\gamma^{0.23}\exp[-0.21\gamma^{-1.16}\alpha^{2.5}]$;
+
+$\mathrm{F2}=1-(1.43\beta-0.97\beta^2-0.03)\gamma^{0.04}\exp[-0.71\gamma^{-1.38}\alpha^{2.5}]$;
+
+$\mathrm{F3}=1-0.55\beta^{1.8}\gamma^{0.16}\exp[-0.49\gamma^{-0.89}\alpha^{1.8}]$;
+
+where $\exp(x)=e^x$.
+
+Chord end fixity parameter C: $0.5\leq C\leq1.0$; typically, $C=0.7$.
+
+$C_1=2(C-0.5)$; $C_2=C/2$; $C_3=C/5$.
 
 
 
@@ -7209,16 +7203,16 @@ Table B.8.2—Equations for SCFs in X-joints
 
 | Load Type and Fixity Conditions | SCF Equations | Equation No. |
 | --- | --- | --- |
-| Axial load—balanced | Chord saddle 387γβ(1.10−β18) sin1.7θ | X1 |
-| Axial load—balanced | Chord crown γ0.2τ[2.65+5(β−0.65)2]−3τβsinθ | X2 |
-| Axial load—balanced | Brace saddle 1+1.9γ0.5β0.9(1.09−β1.7)sin2.5θ | X3 |
-| Axial load—balanced | Brace crown 3+γ12[0.12 exp(−4β)+0.011β2−0.045] | X4 |
-| Axial load—balanced | In joints with short chords (α<12) and closed ends, the saddle SCFs may be reduced by the short chord factors F1 or F2 as defined in Table B.8.1 |  |
-| In-plane bending | Chord crown (see Equation T8 in Table B.8.1) |  |
-| In-plane bending | Brace crown (see Equation T9 in Table B.8.1) |  |
-| Out-of-plane bending (balanced) | Chord saddle γτβ(1.56−1.34β4) sin1.6θ | X5 |
-| Out-of-plane bending (balanced) | Brace saddle τ-0.54 γ-0.05(0.99−0.47β+0.08β4)×[X5] | X6 |
-| Out-of-plane bending (balanced) | In joints with short chords (α<12) and closed ends, Equations X5 and X6 may be reduced by the short chord factor F3 as defined in Table B.8.1 |  |
+| Axial load—balanced | Chord saddle: $3.87\gamma\tau\beta(1.10-\beta^{1.8})\sin^{1.7}\theta$ | X1 |
+| Axial load—balanced | Chord crown: $\gamma^{0.2}\tau[2.65+5(\beta-0.65)^2]-3\tau\beta\sin\theta$ | X2 |
+| Axial load—balanced | Brace saddle: $1+1.9\gamma\tau^{0.5}\beta^{0.9}(1.09-\beta^{1.7})\sin^{2.5}\theta$ | X3 |
+| Axial load—balanced | Brace crown: $3+\gamma^{1.2}[0.12\exp(-4\beta)+0.011\beta^2-0.045]$ | X4 |
+| Axial load—balanced | In joints with short chords ($\alpha<12$) and closed ends, the saddle SCFs may be reduced by the short chord factors F1 or F2 as defined in Table B.8.1 | |
+| In-plane bending | Chord crown (see Equation T8 in Table B.8.1) | |
+| In-plane bending | Brace crown (see Equation T9 in Table B.8.1) | |
+| Out-of-plane bending (balanced) | Chord saddle: $\gamma\tau\beta(1.56-1.34\beta^4)\sin^{1.6}\theta$ | X5 |
+| Out-of-plane bending (balanced) | Brace saddle: $\tau^{-0.54}\gamma^{-0.05}(0.99-0.47\beta+0.08\beta^4)\times[\mathrm{X5}]$ | X6 |
+| Out-of-plane bending (balanced) | In joints with short chords ($\alpha<12$) and closed ends, Equations X5 and X6 may be reduced by the short chord factor F3 as defined in Table B.8.1 | |
 
 
 
@@ -7228,11 +7222,23 @@ Table B.8.3—Equations for SCFs in Gap/Overlap K-joints
 
 | Load Type and Fixity Conditions | SCF Equations | Equation No. | Short Chord Correction |
 | --- | --- | --- | --- |
-| Balanced axial load | Chord SCF$\tau^{0.9}\gamma^{0.5}(0.67-\beta^2+1.16\beta)\sin\theta\left[\frac{\sin\theta_{\text{max}}}{\sin\theta_{\text{min}}}\right]^{0.30}\left[\frac{\beta_{\text{max}}}{\beta_{\text{min}}}\right]^{0.30}\times$ $\left[1.64+0.29\beta^{-0.38}\text{ATAN}(8\zeta)\right]$ | K1 | None |
-| Balanced axial load | Brace SCF$1+[K1](1.97-1.57\beta^{0.25})\tau^{-0.14}\sin^{0.7}\theta+C\beta^{1.5}\gamma^{0.5}\tau^{-1.22}\sin^{1.8}(\theta_{\text{max}}+\theta_{\text{min}})\times$ $\left[0.131-0.084\text{ATAN}(14\zeta+4.2\beta)\right]$ where $C=0$ for gap joints; $C=1$ for the through brace; $C=0.5$ for the overlapping brace. NOTE $\tau,\beta,\gamma,$ and the nominal stress relate to the brace under consideration. ATAN is the arctangent evaluated in radians. | K2 | None |
-| Unbalanced IPB | Chord crown SCF (see Equation T8 in Table B.8.1)(For overlaps exceeding 30% of contact length use 1.2×[T8])Gap joint-brace crown SCF (see Equation T9 in Table B.8.1)Overlap joint-brace crown SCF [T9]$×(0.9+0.4\beta)$ | K3 | NoneNone |
-| Unbalanced OPB | Chord saddle SCF adjacent to Brace A[T10]A[1-0.08($\beta_{\text{B}}\gamma$)^{0.5}\exp(-0.8x)]+[T10]B[1-0.08($\beta_{\text{A}}\gamma$)^{0.5}\exp(-0.8x)][2.05-$\beta_{\text{max}}^{0.5}\exp(-1.3x)]$where $x=1+\frac{\zeta\sin\theta_{\text{A}}}{\beta_{\text{A}}}$ Brace A saddle SCF$\tau^{-0.54}\gamma^{-0.05}(0.99-0.47\beta+0.08\beta^4)\times[K4]$ | K4K5 | F4F4F4 |
-| F4=1-1.07$\beta^{1.88}\exp[-0.16\gamma^{-1.06}\alpha^{2.4}]$NOTE 1 [T10]A is the chord SCF adjacent to Brace A, as estimated from Equation T10 in Table B.8.1.NOTE 2 The designation of Braces A and B is not geometry dependent, it is designated by the user. | F4=1-1.07$\beta^{1.88}\exp[-0.16\gamma^{-1.06}\alpha^{2.4}]$NOTE 1 [T10]A is the chord SCF adjacent to Brace A, as estimated from Equation T10 in Table B.8.1.NOTE 2 The designation of Braces A and B is not geometry dependent, it is designated by the user. | F4=1-1.07$\beta^{1.88}\exp[-0.16\gamma^{-1.06}\alpha^{2.4}]$NOTE 1 [T10]A is the chord SCF adjacent to Brace A, as estimated from Equation T10 in Table B.8.1.NOTE 2 The designation of Braces A and B is not geometry dependent, it is designated by the user. | F4=1-1.07$\beta^{1.88}\exp[-0.16\gamma^{-1.06}\alpha^{2.4}]$NOTE 1 [T10]A is the chord SCF adjacent to Brace A, as estimated from Equation T10 in Table B.8.1.NOTE 2 The designation of Braces A and B is not geometry dependent, it is designated by the user. |
+| Balanced axial load | Chord SCF: $\tau^{0.9}\gamma^{0.5}(0.67-\beta^2+1.16\beta)\sin\theta[\sin\theta_{\max}/\sin\theta_{\min}]^{0.30}[\beta_{\max}/\beta_{\min}]^{0.30}\times[1.64+0.29\beta^{-0.38}\operatorname{ATAN}(8\zeta)]$ | K1 | None |
+| Balanced axial load | Brace SCF: $1+[\mathrm{K1}](1.97-1.57\beta^{0.25})\tau^{-0.14}\sin^{0.7}\theta+C\beta^{1.5}\gamma^{0.5}\tau^{-1.22}\sin^{1.8}(\theta_{\max}+\theta_{\min})\times[0.131-0.084\operatorname{ATAN}(14\zeta+4.2\beta)]$ | K2 | None |
+| Unbalanced IPB | Chord crown SCF (see Equation T8 in Table B.8.1); for overlaps exceeding 30 % of contact length use $1.2\times[\mathrm{T8}]$ | | None |
+| Unbalanced IPB | Gap joint-brace crown SCF (see Equation T9 in Table B.8.1) | | |
+| Unbalanced IPB | Overlap joint-brace crown SCF: $[\mathrm{T9}]\times(0.9+0.4\beta)$ | K3 | None |
+| Unbalanced OPB | Chord saddle SCF adjacent to Brace A: $[\mathrm{T10}]_{\mathrm{A}}[1-0.08(\beta_{\mathrm{B}}\gamma)^{0.5}\exp(-0.8x)]+[\mathrm{T10}]_{\mathrm{B}}[1-0.08(\beta_{\mathrm{A}}\gamma)^{0.5}\exp(-0.8x)][2.05-\beta_{\max}^{0.5}\exp(-1.3x)]$, where $x=1+\zeta\sin\theta_{\mathrm{A}}/\beta_{\mathrm{A}}$ | K4 | F4 |
+| Unbalanced OPB | Brace A saddle SCF: $\tau^{-0.54}\gamma^{-0.05}(0.99-0.47\beta+0.08\beta^4)\times[\mathrm{K4}]$ | K5 | F4 |
+
+For K2, $C=0$ for gap joints; $C=1$ for the through brace; $C=0.5$ for the overlapping brace.
+
+NOTE $\tau$, $\beta$, $\gamma$, and the nominal stress relate to the brace under consideration. ATAN is the arctangent evaluated in radians.
+
+$\mathrm{F4}=1-1.07\beta^{1.88}\exp[-0.16\gamma^{-1.06}\alpha^{2.4}]$.
+
+NOTE 1 $[\mathrm{T10}]_{\mathrm{A}}$ is the chord SCF adjacent to Brace A, as estimated from Equation T10 in Table B.8.1.
+
+NOTE 2 The designation of Braces A and B is not geometry dependent, it is designated by the user.
 
 
 
@@ -7242,12 +7248,17 @@ Table B.8.4—Equations for SCFs in KT-joints
 
 | Load Type and Fixity Conditions | SCF Equations | Equation No. |
 | --- | --- | --- |
-| Balanced axial load | Chord SCF (see Equation K1 in Table B.8.3) Brace SCF (see Equation K2 in Table B.8.3) For the diagonal braces A and C, use ζ = ζAB + ζBC + βB For the central brace B use ζ = maximum of ζAB, ζBC |  |
-| In-plane bending | Chord crown (see Equation T8 in Table B.8.1) Brace crown (see Equation T9 in Table B.8.1) |  |
-| Unbalanced out-of-plane bending | Chord saddle SCF adjacent to diagonal Brace A [T10]A[1-0.08(βBγ)0.5exp(-0.8xAB)]×[1-0.08(βCγ)0.5exp(-0.8xAC)] + [T10]B[1-0.08(βAγ)0.5exp(-0.8xAB)]×[2.05βmaxexp(-1.3xAB)] + [T10]C[1-0.08(βAγ)0.5exp(-0.8xAC)]×[2.05βminexp(-1.3xAC)] where xAB=1+ζABsinθA/βA and xAC=1+(ζAB+ζBC+βB)sinθA/βA | KT1 |
-| Unbalanced out-of-plane bending | Chord saddle SCF adjacent to central Brace B [T10]B×[1-0.08(βAγ)0.5exp(-0.8xAB)]/(βA/βB)2×[1-0.08(βCγ)0.5exp(-0.8xBC)]/(βC/βB)2+ [T10]A[1-0.08(βBγ)0.5exp(-0.8xAB)]×[2.05βmaxexp(-1.3xAB)] + [T10]C[1-0.08(βBγ)0.5exp(-0.8xBC)]×[2.05βminexp(-1.3xBC)] where xAB=1+ζABsinθB/βB and xBC=1+ζBCsinθA/βB | KT2 |
-| Unbalanced out-of-plane bending | Bridge saddle SCFs under OPB Obtained from the adjacent chord SCFs using τ-0.54γ-0.05(0.99-0.47β+0.08β4)×SCFchord where SCFchord=KT1 or KT2 | KTB |
-| In joints with short chords (∞<12), Equations KT1, KT2, and KTB may be reduced by the short chord factor F4, where F4 is defined in Table B.8.3 | In joints with short chords (∞<12), Equations KT1, KT2, and KTB may be reduced by the short chord factor F4, where F4 is defined in Table B.8.3 | In joints with short chords (∞<12), Equations KT1, KT2, and KTB may be reduced by the short chord factor F4, where F4 is defined in Table B.8.3 |
+| Balanced axial load | Chord SCF (see Equation K1 in Table B.8.3); Brace SCF (see Equation K2 in Table B.8.3). For the diagonal braces A and C, use $\zeta=\zeta_{\mathrm{AB}}+\zeta_{\mathrm{BC}}+\beta_{\mathrm{B}}$. For the central brace B use $\zeta=\max(\zeta_{\mathrm{AB}},\zeta_{\mathrm{BC}})$. | |
+| In-plane bending | Chord crown (see Equation T8 in Table B.8.1); Brace crown (see Equation T9 in Table B.8.1). | |
+| Unbalanced out-of-plane bending | Chord saddle SCF adjacent to diagonal Brace A: $[\mathrm{T10}]_{\mathrm{A}}[1-0.08(\beta_{\mathrm{B}}\gamma)^{0.5}\exp(-0.8x_{\mathrm{AB}})]\times[1-0.08(\beta_{\mathrm{C}}\gamma)^{0.5}\exp(-0.8x_{\mathrm{AC}})]+[\mathrm{T10}]_{\mathrm{B}}[1-0.08(\beta_{\mathrm{A}}\gamma)^{0.5}\exp(-0.8x_{\mathrm{AB}})]\times[2.05\beta_{\max}^{0.5}\exp(-1.3x_{\mathrm{AB}})]+[\mathrm{T10}]_{\mathrm{C}}[1-0.08(\beta_{\mathrm{A}}\gamma)^{0.5}\exp(-0.8x_{\mathrm{AC}})]\times[2.05\beta_{\max}^{0.5}\exp(-1.3x_{\mathrm{AC}})]$ | KT1 |
+| Unbalanced out-of-plane bending | Chord saddle SCF adjacent to central Brace B: $[\mathrm{T10}]_{\mathrm{B}}[1-0.08(\beta_{\mathrm{A}}\gamma)^{0.5}\exp(-0.8x_{\mathrm{AB}})]^{(\beta_{\mathrm{A}}/\beta_{\mathrm{B}})^2}\times[1-0.08(\beta_{\mathrm{C}}\gamma)^{0.5}\exp(-0.8x_{\mathrm{BC}})]^{(\beta_{\mathrm{C}}/\beta_{\mathrm{B}})^2}+[\mathrm{T10}]_{\mathrm{A}}[1-0.08(\beta_{\mathrm{B}}\gamma)^{0.5}\exp(-0.8x_{\mathrm{AB}})]\times[2.05\beta_{\max}^{0.5}\exp(-1.3x_{\mathrm{AB}})]+[\mathrm{T10}]_{\mathrm{C}}[1-0.08(\beta_{\mathrm{B}}\gamma)^{0.5}\exp(-0.8x_{\mathrm{BC}})]\times[2.05\beta_{\max}^{0.5}\exp(-1.3x_{\mathrm{BC}})]$ | KT2 |
+| Unbalanced out-of-plane bending | Brace saddle SCFs under OPB: Obtained from the adjacent chord SCFs using $\tau^{-0.54}\gamma^{-0.05}(0.99-0.47\beta+0.08\beta^4)\times\mathrm{SCF}_{\mathrm{chord}}$, where $\mathrm{SCF}_{\mathrm{chord}}=\mathrm{KT1}$ or $\mathrm{KT2}$. | KTB |
+
+For KT1: $x_{\mathrm{AB}}=1+\zeta_{\mathrm{AB}}\sin\theta_{\mathrm{A}}/\beta_{\mathrm{A}}$ and $x_{\mathrm{AC}}=1+(\zeta_{\mathrm{AB}}+\zeta_{\mathrm{BC}}+\beta_{\mathrm{B}})\sin\theta_{\mathrm{A}}/\beta_{\mathrm{A}}$.
+
+For KT2: $x_{\mathrm{AB}}=1+\zeta_{\mathrm{AB}}\sin\theta_{\mathrm{B}}/\beta_{\mathrm{B}}$ and $x_{\mathrm{BC}}=1+\zeta_{\mathrm{BC}}\sin\theta_{\mathrm{A}}/\beta_{\mathrm{B}}$.
+
+In joints with short chords ($\alpha<12$), Equations KT1, KT2, and KTB may be reduced by the short chord factor F4, where F4 is defined in Table B.8.3.
 
 
 
@@ -7270,21 +7281,21 @@ Effect of Weld Toe Position. Ideally, the SCF should be invariant, given the tub
 
 Influenced by deBack and others, international thinking tends to suggest that weld profile effects (mainly the variable position of the actual weld toe) should be reflected in the SCF, rather than in the S-N curve. This is consistent with how experimental HSSs were measured to define the basic international S-N curve for hot spot fatigue in 16 mm thick tubular joints. One tentative method for correcting analytical SCF for weld toe position was presented in the seminal volume for deBeck’s retirement [275]. A more robust formulation is now proposed [316]:
 
-$$\mathrm{S C F}_{\text{c o r r}} = 1 - \left(L_{\alpha} - L\right) / L_{\mathrm{m p}} \tag{B.8.7}$$
+$$\mathrm{SCF}_{\text{c o r r}} = 1 - \left(L_{\mathrm{\alpha}} - L\right) / L_{\mathrm{mp}} \tag{B.8.7}$$
 
 where
 
-$\operatorname{ S C F }_{ \mathsf{ c o r r } }$ is the correction factor applied to Efthymiou SCF;
+$\operatorname{SCF}_{ \mathsf{corr} }$ is the correction factor applied to Efthymiou SCF;
 
-$L_{ \mathbf{ a } }$ is the actual weld toe position (typical of yard practice);
+$L_{\alpha}$ is the actual weld toe position (typical of yard practice);
 
 $L$ is the nominal weld toe position (Figure 2.15 of Reference [242]);
 
-$L_{ \mathsf{ m p } }$ is the moment persistence length (distance from nominal toe to reversal of shell bending stress).
+$L_{ \mathsf{mp} }$ is the moment persistence length (distance from nominal toe to reversal of shell bending stress).
 
-Various expressions for $L_{ \mathsf{ m p } }$ are shown in Table B.8.5 as a function of joint type, load type, and hot spot orientation. R and T are radius and thickness, respectively, of the joint can. Consistency in format with the rules for strain gage placement at crown and saddle position may be noted. Attempts to produce an improved as-welded profile often result in overwelding. As such, high estimates of $L_{ \mathsf{ m p } }$ (low estimates of local stress gradient) will produce conservative corrections. This approach assumes that the weld is not so massive as to change the overall load distribution in the joint can, nor so finely tapered that positions other than the weld toe become critical, and that local hot spot stresses are dominated by shell bending stress.
+Various expressions for $L_{ \mathsf{mp} }$ are shown in Table B.8.5 as a function of joint type, load type, and hot spot orientation. R and T are radius and thickness, respectively, of the joint can. Consistency in format with the rules for strain gage placement at crown and saddle position may be noted. Attempts to produce an improved as-welded profile often result in overwelding. As such, high estimates of $L_{ \mathsf{mp} }$ (low estimates of local stress gradient) will produce conservative corrections. This approach assumes that the weld is not so massive as to change the overall load distribution in the joint can, nor so finely tapered that positions other than the weld toe become critical, and that local hot spot stresses are dominated by shell bending stress.
 
-Table B.8.5—Expressions for $L_{ \mathbf{ m p } }$   
+Table B.8.5—Expressions for $L_{ \mathbf{mp} }$   
 
 
 
@@ -7318,7 +7329,7 @@ Influence Functions. The concept of Influence Functions as a generalization of t
 
 For complex joints of particular interest, specific Influence Coefficients and HSSs may be accurately established by developing a detailed local FE model of the joint and incorporating this model into the overall fatigue analysis (frame) model of the substructure [296]. The advantage of this approach is that it captures brace-in-frame coupling of axial load and bending, as well as all brace and chord loads and moments, including phase differences, and all geometric stress concentration effects, including multiplanar effects.
 
-Tubular Joints Welded from One Side. Single-sided welding is used as the principal method for connecting braces to chords in tubular joints for offshore structures in many areas of the world. Singlesided welding presupposes that the critical fatigue crack typically initiates at the outer weld toe. However, if the SCF at the internal weld root of a tubular joint is relatively large compared to that at the external weld toe （$\mathsf{ e . g . ~ S C F }_{ \mathsf{ i n } } > 0 . 7 \times \mathrm{ S C F }_{ \mathsf{ e x } } )$ , then the crack may initiate at the internal weld root due to the more onerous S-N curve relevant for the root detail than for the external weld toe. A log-log replot of the SAE notch stress analysis in Figure 7.11 in Reference [242] indicates that the weld root at AWS Detail D has 70 % of the fatigue strength of the weld toe at Detail A for 25 mm (1 in.) branch thickness and a size effect exponent of 0.40 instead of 0.20. This degraded root behavior is consistent with OTJTC curve “Z,” having the S-N knee extended to $10^{ 8 }$ cycles, and is particularly important when weld improvement techniques are employed externally. For further information, see References [297] and [298].
+Tubular Joints Welded from One Side. Single-sided welding is used as the principal method for connecting braces to chords in tubular joints for offshore structures in many areas of the world. Singlesided welding presupposes that the critical fatigue crack typically initiates at the outer weld toe. However, if the SCF at the internal weld root of a tubular joint is relatively large compared to that at the external weld toe （$\mathsf{ e .g .~ S C F }_{ \mathsf{in} } > 0.7 \times \mathrm{SCF}_{ \mathsf{ex} } )$ , then the crack may initiate at the internal weld root due to the more onerous S-N curve relevant for the root detail than for the external weld toe. A log-log replot of the SAE notch stress analysis in Figure 7.11 in Reference [242] indicates that the weld root at AWS Detail D has 70 % of the fatigue strength of the weld toe at Detail A for 25 mm (1 in.) branch thickness and a size effect exponent of 0.40 instead of 0.20. This degraded root behavior is consistent with OTJTC curve “Z,” having the S-N knee extended to $10^{ 8 }$ cycles, and is particularly important when weld improvement techniques are employed externally. For further information, see References [297] and [298].
 
 B.8.3.3 SCFs in Internally Ring-stiffened Tubular Joints
 
@@ -7344,15 +7355,15 @@ Grouted joints have either the chord completely filled with grout (single skin g
 
 Grouted joints may be treated as simple joints except that the chord thickness in the γ term for SCF calculation for brace and chord saddle points may be substituted with an equivalent chord wall thickness given by:
 
-$$T_{\text{e f f}} = 0. 035 D + 0. 93 T_{\text{c a n}} \tag{B.8.8}$$
+$$T_{\text{e f f}} = 0.035 D + 0.93 T_{\text{c a n}} \tag{B.8.8}$$
 
 where
 
-D and $T_{ \mathsf{ c a n } }$ are the chord outer diameter and thickness, respectively.
+D and $T_{ \mathsf{can} }$ are the chord outer diameter and thickness, respectively.
 
 This formulation has been derived on the basis of engineering mechanics and testing. However, it can be unconservative for the gap region of axially loaded K-joints [242].
 
-Joints with high β or low γ ratios experience little effect of grouting. Although fully substantiated evidence is not available, the benefits of grouting should be neglected for joints with $\beta > 0 . 9 \ \mathsf{ o r } \ \gamma < \ 12$ unless documented otherwise. A minimum SCF value of 1.5 is recommended for all locations.
+Joints with high β or low γ ratios experience little effect of grouting. Although fully substantiated evidence is not available, the benefits of grouting should be neglected for joints with $\beta > 0.9 \ \mathsf{or} \ \gamma < \ 12$ unless documented otherwise. A minimum SCF value of 1.5 is recommended for all locations.
 
 B.8.3.5 SCFs in Cast Nodes
 
@@ -7466,7 +7477,7 @@ Following the above discussion, a progression of size effect exponents is given 
 
 The τ−0.1 improvement factor for joints with profiled welds, when considering fatigue in the joint can (T), is actually a size effect compromise between existing API (using branch thickness, t, to represent the size of the notch, as indicated to be more relevant for both notch stress theory and early stage crack growth in fracture mechanics) and ISO (using T as relevant to the later stages of crack growth). Improved joints spend most of their fatigue life in initiation and early stage crack growth, whereas these stages are much shorter for sharply notched weld toes. This compromise is also similar to the modified size effect proposed by Vosikovsky [276] and previously endorsed by OTJRC [279], in which an exponent of 0.13 on the thickness ratio τ = t/T reduces to a size effect expression given by:
 
-$$\tau^{0. 13} (T / t_{\mathrm{r e f}})^{0. 25} = t^{0. 13} T^{0. 12} / t_{\mathrm{r e f}} 0. 25 \text{o r} [ \sqrt{} (T t) / t_{\mathrm{r e f}} ]^{0. 25} \tag{B.8.9}$$
+$$\tau^{0.13} (T / t_{\mathrm{ref}})^{0.25} = t^{0.13} T^{0.12} / t_{\mathrm{ref}} 0.25 \text{o r} [ \sqrt{Tt} / t_{\mathrm{ref}} ]^{0.25} \tag{B.8.9}$$
 
 The cast node design curve is based on a material thickness of 38 mm (1.5 in.). Fracture mechanics predictions [284] show that the thickness effect in castings is smaller than that in welded joints, and an exponent of 0.15 is specified.
 
@@ -7491,7 +7502,7 @@ Booth’s more recent review [287] reiterates that, apart from the potential ben
 Thus, for fully concave improved profiles, conforming to AWS D1.1 Clause 2.21.6.6 and Figure 3.10, the new API provisions consider
 
 a) a less onerous size effect exponent (0.20 vs 0.25),   
-b) a modest improvement factor of $\tau^{ - 0 . 1 }$ on stress, and   
+b) a modest improvement factor of $\tau^{ - 0.1 }$ on stress, and   
 c) consideration of actual weld toe position.
 
 For t = T = 16 mm (0.625 in.), there is no improvement for Items a) and b). For the reference geometry of t = 16 mm (0.625 in.) and T = 40 mm (1.625 in.), and no overwelding, the foregoing amounts to an improvement factor of 1.15 on stress. A constant improvement factor of 2 on life (1.25 on stress for m = 3) would overstate the low cycle benefit of profiling, compared to calibrations by both OTJTC and HSE.
@@ -7550,13 +7561,13 @@ B.10.4 Grouted Pile-to-structure Connections
 
 Tests indicate that the strength of a grouted pile-to-structure connection using plain pipe is due to the bond and confinement friction between the steel and grout. Failure of test specimens normally occurs by slippage between the grout and steel. However, in practice, large diameter sandwich shells and wind turbine monopile caps with annulus radius over 1 m or 2 m (3 ft or 6 ft) have been observed to disbond due to grout shrinkage (no load) or low level cyclic loading.
 
-Figure B.10.1 shows a plot of available test data for plain pipe grouted connections. Ordinates are failing values of the ultimate load transfer stress, $f_{ \mathsf{ b u } }$ , which were computed by dividing the failing value of axial load by the contact area between the grout and pipe at the surface of failure. Abscissas are corresponding values of unconfined grout compressive strength, $f_{ \mathtt{ C U } } .$ Only tests in which $f_{ \mathtt{ c u } } \geq 17 . 25$ MPa (2,500 psi) are included (see 10.4.4.5). A comparison between the basic allowable load transfer stress of 138 KPa (20 psi) and each of the 62 available test results gives a mean safety factor of 11.0, a minimum safety factor of 2.5, a maximum safety factor of 33.6, a maximum safety index of 4.5 (see Reference [323]). A histogram of the safety factors for these 52 tests is shown in Figure B.10.2 and a cumulative histogram of the safety factors is shown in Figure B.10.3.
+Figure B.10.1 shows a plot of available test data for plain pipe grouted connections. Ordinates are failing values of the ultimate load transfer stress, $f_{ \mathsf{bu} }$ , which were computed by dividing the failing value of axial load by the contact area between the grout and pipe at the surface of failure. Abscissas are corresponding values of unconfined grout compressive strength, $f_{ \mathtt{CU} } .$ Only tests in which $f_{ \mathtt{cu} } \geq 17.25$ MPa (2,500 psi) are included (see 10.4.4.5). A comparison between the basic allowable load transfer stress of 138 KPa (20 psi) and each of the 62 available test results gives a mean safety factor of 11.0, a minimum safety factor of 2.5, a maximum safety factor of 33.6, a maximum safety index of 4.5 (see Reference [323]). A histogram of the safety factors for these 52 tests is shown in Figure B.10.2 and a cumulative histogram of the safety factors is shown in Figure B.10.3.
 
 ## B.10.4.4.3 Shear Key Connections
 
 Tests of grouted pile-to-structure connections using shear keys indicate that two separate sources of strength contribute to the ultimate strength of the connection: first, the contribution of bond and confinement friction between the steel and grout, and second, the contribution of bearing of the shear keys against the grout. At failure, two separate mechanisms occur: first, a slippage between the steel and grout, and second, a crushing of the grout against the shear keys. These specimens normally fail in a ductile manner, with both mechanisms acting, so that the ultimate strength of the connection is the sum of the two separate sources of strength. At some time prior to final failure, diagonal cracks tend to open across the grout, generally between diagonally opposite shear keys, or from one shear key to the opposite pipe.
 
-The basic equation for allowable load transfer stress [Equation (10.1)] is based on an ultimate strength formulation of the mechanisms of failure described above, with the application of a safety factor, see Reference [321]. Figure B.10.4 shows a plot of available test data for shear key grouted connections. Ordinates are failing values of load transfer stress, $f_{ \mathsf{ b u } } .$ , which were computed by dividing the failing value of axial load by the contact area (π times diameter times length) between the grout and the pipe at the surface of failure. Abscissas are corresponding values of $f_{ \mathtt{ C U } } \times h / s$ . Only tests in which $f_{ \mathtt{ c u } } \geq 17 . 25 ~ \mathsf{ M P a }$ (2500 psi) are included (see 10.4.4.4). A comparison between allowable values of Equation (10.1) and each of the 85 available test results gives a mean safety factor of 4.8, a minimum safety factor of 2.0, a maximum safety factor of 16.6, and a safety index of 4.6, see Reference [323]. A histogram of the safety factors for these 85 tests is shown in Figure B.10.2 and a cumulative histogram of the safety factors is shown in Figure B.10.3. One test value is included in the statistical analysis but is not shown in Figure B.10.2 because the data point would fall outside of the limits shown. For this data point $f_{ \mathsf{ b u } } = 15 \mathsf{ M P a }$ (2200 psi) and $f_{ \mathtt{ c u } } \times h / s = 12 \mathsf{ M P a }$ (1770 psi).
+The basic equation for allowable load transfer stress [Equation (10.1)] is based on an ultimate strength formulation of the mechanisms of failure described above, with the application of a safety factor, see Reference [321]. Figure B.10.4 shows a plot of available test data for shear key grouted connections. Ordinates are failing values of load transfer stress, $f_{ \mathsf{bu} } .$ , which were computed by dividing the failing value of axial load by the contact area (π times diameter times length) between the grout and the pipe at the surface of failure. Abscissas are corresponding values of $f_{ \mathtt{CU} } \times h / s$ . Only tests in which $f_{ \mathtt{cu} } \geq 17.25 ~ \mathsf{MPa}$ (2500 psi) are included (see 10.4.4.4). A comparison between allowable values of Equation (10.1) and each of the 85 available test results gives a mean safety factor of 4.8, a minimum safety factor of 2.0, a maximum safety factor of 16.6, and a safety index of 4.6, see Reference [323]. A histogram of the safety factors for these 85 tests is shown in Figure B.10.2 and a cumulative histogram of the safety factors is shown in Figure B.10.3. One test value is included in the statistical analysis but is not shown in Figure B.10.2 because the data point would fall outside of the limits shown. For this data point $f_{ \mathsf{bu} } = 15 \mathsf{MPa}$ (2200 psi) and $f_{ \mathtt{cu} } \times h / s = 12 \mathsf{MPa}$ (1770 psi).
 
 The provision for the design of shear key cross section and weld (Figure B.10.4) is intended to provide a shear key whose failing capacity is greater than the failing capacity of the grout crushing against the shear key.
 
@@ -7565,10 +7576,10 @@ NOTE Measured bond strength vs cube compressive strength for 62 tests of grouted
 
 Key
 
-+ See References [317] and [318]   
-See Reference [320]   
-See Reference [322]   
-→ See Reference [324]
++ See References [317] and [318]  
+△ See Reference [320]  
+◇ See Reference [322]  
+↑ See Reference [324]
 
 Figure B.10.1—Measured Bond Strength vs Cube Compressive Strength
 
@@ -7577,10 +7588,10 @@ Figure B.10.2—Histogram of the Safety Factors—Tests with and Without Shear K
 
 Key
 
-四 Without shear connectors, 62 tests.  
+▧ Without shear connectors, 62 tests.  
 ■ With shear connectors, 85 tests.
 
-NOTE Straight line equation: $f_{ b a } = 20 + 0 . 5 f_{ \mathsf{ c u } } \%_{ \mathsf{ \Gamma } , \mathsf{ i n p s i } }$
+NOTE Straight line equation: $f_{\mathrm{ba}}=20+0.5f_{\mathrm{cu}}h/c$, in psi.
 
 ![](API_RP_2A-WSD_22nd/chunk3_fdfa7adeda7a8d6d45360ec74531c6dc1078ac8972faef78dc84a6d63dcff829.jpg)  
 Figure B.10.3—Cumulative Histogram of the Safety Factors—Tests with and Without Shear Key Connections
@@ -7600,13 +7611,13 @@ The maximum values of important variables that are specified in this paragraph c
 
 ## B.10.4.4.5 Other Design Methods
 
-In recent years the design method included in the DOE Code has received considerable use in the design of connections using shear keys see References [317], [318], and [319]. The allowable load transfer stress, ${ f }_{ \mathsf{ b a } } ,$ by the DOE Code is calculated from the following equation, using SI units:
+In recent years the design method included in the DOE Code has received considerable use in the design of connections using shear keys see References [317], [318], and [319]. The allowable load transfer stress, ${ f }_{ \mathsf{ba} } ,$ by the DOE Code is calculated from the following equation, using SI units:
 
-$$f_{\mathrm{b a}} = \frac{1}{6} K C_{\mathrm{L}} \left(9 C_{\mathrm{S}} + 1100 \frac{h}{s}\right) \left(f_{\mathrm{c u}}\right)^{1 / 2} \mathrm{M P a} \tag{B.10.1}$$
+$$f_{\mathrm{ba}} = \frac{1}{6} K C_{\mathrm{L}} \left(9 C_{\mathrm{S}} + 1100 \frac{h}{s}\right) \left(f_{\mathrm{cu}}\right)^{1 / 2} \mathrm{MPa} \tag{B.10.1}$$
 
 where
 
-$f_{ \mathtt{ C U } }$ is the characteristic grout compressive strength as defined in the DOE Code in units of MPa;
+$f_{ \mathtt{CU} }$ is the characteristic grout compressive strength as defined in the DOE Code in units of MPa;
 
 K is a dimensionless stiffness factor defined as follows:
 
@@ -7614,9 +7625,9 @@ $$K = \frac{1}{m} \left(\frac{D}{t}\right)_{\mathrm{g}}^{-1} + \left[ \left(\fra
 
 and where
 
-$C_{ \mathrm{ L } }$ is the length coefficient as specified in the DOE Code;
+$C_{ \mathrm{L} }$ is the length coefficient as specified in the DOE Code;
 
-$C_{ \mathsf{ S } }$ is the a surface coefficient as specified in the DOE Code;
+$C_{ \mathsf{S} }$ is the a surface coefficient as specified in the DOE Code;
 
 h is the minimum shear connector outstand expressed in millimeters;
 
@@ -7644,7 +7655,7 @@ Tubulars used as structural components are often subjected to substantial axial 
 
 ## B.13.2.2 Impact Requirements
 
-Charpy impact testing is a method for qualitative assessment of material toughness. Although lacking the technical precision of crack tip opening displacement (CTOD) testing, the method has been and continues to be a reasonable measure of fracture safety, when employed with a definitive program of NDE to eliminate weld area imperfections. The recommendations contained herein are based on practices that have generally provided satisfactory fracture experience in structures located in moderate temperature environments [e.g. $4^{ \circ } \mathsf C ( 40^{ \circ } \mathsf F )$ seawater and $^{ - 10^{ \circ } \mathsf{ C } } ( 14^{ \circ } \mathsf{ F } )$ air exposure]. For environments that are either more or less hostile, impact testing temperatures should be reconsidered, based on local temperature exposures.
+Charpy impact testing is a method for qualitative assessment of material toughness. Although lacking the technical precision of crack tip opening displacement (CTOD) testing, the method has been and continues to be a reasonable measure of fracture safety, when employed with a definitive program of NDE to eliminate weld area imperfections. The recommendations contained herein are based on practices that have generally provided satisfactory fracture experience in structures located in moderate temperature environments [e.g. $4^{ \circ } \mathsf C ( 40^{ \circ } \mathsf F )$ seawater and $-10^{\circ}\mathrm{C}$ ($14^{\circ}\mathrm{F}$) air exposure]. For environments that are either more or less hostile, impact testing temperatures should be reconsidered, based on local temperature exposures.
 
 For critical welded connections, the technically more exact CTOD test is appropriate. CTOD tests are run at realistic temperatures and strain rates, representing those of the engineering application, using specimens having the full prototype thickness. This yields quantitative information useful for engineering fracture mechanics analysis and defect assessment, in which the required CTOD is related to anticipated stress levels (including residual stress) and flaw sizes.
 
@@ -7692,7 +7703,7 @@ Elements carrying substantial dead load (i.e. knee braces), except for platform 
 
 Impact Energy. The kinetic energy of a vessel can be calculated using Equation (B.17.1).
 
-$$E = 0. 5 a m v^{2} \tag{B.17.1}$$
+$$E = 0.5 a m v^{2} \tag{B.17.1}$$
 
 where
 
@@ -7741,9 +7752,9 @@ $$P_{\mathrm{d}} = 15 M_{\mathrm{p}} (D / t)^{1 / 2} (X / R)^{1 / 2} \tag{B.17.2
 
 where
 
-$P_{ \mathsf{ d } }$ is the denting force;
+$P_{ \mathsf{d} }$ is the denting force;
 
-$M_{ \mathsf{ p } }$ is the plastic moment capacity of the tube, which equals $M_{ \mathsf{ p } } t^{ 2 } / 4$ , where $F_{ \mathsf{ y } }$ is the yield strength;
+$M_{ \mathsf{p} }$ is the plastic moment capacity of the tube, which equals $M_{ \mathsf{p} } t^{ 2 } / 4$ , where $F_{ \mathsf{y} }$ is the yield strength;
 
 D is the diameter of the tube;
 
@@ -7763,15 +7774,15 @@ $$E_{\mathrm{d}} = \int_{0}^{x} P_{\mathrm{d}} d x \tag{B.17.4}$$
 
 Combining Equations (B.17.2) and (B.17.4) yields:
 
-$$E_{\mathrm{d}} = 14. 14 M_{\mathrm{p}} X^{3 / 2} / t^{1 / 2} \tag{B.17.5}$$
+$$E_{\mathrm{d}} = 14.14 M_{\mathrm{p}} X^{3 / 2} / t^{1 / 2} \tag{B.17.5}$$
 
-Substitution of $M_{ \mathbf{ p } }$ yields:
+Substitution of $M_{ \mathbf{p} }$ yields:
 
-$$E_{\mathrm{d}} = 3. 54 F_{\mathrm{y}} (t X)^{3 / 2} \tag{B.17.6}$$
+$$E_{\mathrm{d}} = 3.54 F_{\mathrm{y}} (t X)^{3 / 2} \tag{B.17.6}$$
 
 and introducing the relationship X = D/B to solve for various D/t ratios yield:
 
-$$E_{\mathrm{d}} = 3. 54 F_{\mathrm{y}} (t D / B)^{3 / 2} \tag{B.17.7}$$
+$$E_{\mathrm{d}} = 3.54 F_{\mathrm{y}} (t D / B)^{3 / 2} \tag{B.17.7}$$
 
 where
 
@@ -7787,61 +7798,63 @@ Table B.17.1—Required Tubular Thickness to Locally Absorb Vessel Impact
 
 
 
-| Diameter mm (in.) | Diameter mm (in.) | $F_y=345 MPa (50 ksi)$ | $F_y=345 MPa (50 ksi)$ | $F_y=345 MPa (50 ksi)$ | $F_y=345 MPa (50 ksi)$ | $F_y=240 MPa (35 ksi)$ | $F_y=240 MPa (35 ksi)$ | $F_y=240 MPa (35 ksi)$ | $F_y=240 MPa (35 ksi)$ |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Diameter mm (in.) | Diameter mm (in.) | $B^1=8.0$ | $B^1=8.0$ | $B=6.0$ | $B=4.0$ | $B=8.0$ | $B=8.0$ | $B=6.0$ | $B=4.0$ |
-| Diameter mm (in.) | Diameter mm (in.) | Wall Thickness, $t$mm (in.) | Wall Thickness, $t$mm (in.) | Wall Thickness, $t$mm (in.) | Wall Thickness, $t$mm (in.) | Wall Thickness, $t$mm (in.) | Wall Thickness, $t$mm (in.) | Wall Thickness, $t$mm (in.) | Wall Thickness, $t$mm (in.) |
-| 300 | (12.0) | 73 | (2.83) | 55 | (2.13) | 37 | (1.42) | 93 | (3.60) |
-| 350 | (14.0) | 63 | (2.43) | 47 | (1.82) | 31 | (1.23) | 79 | (3.08) |
-| 400 | (16.0) | 55 | (2.13) | 41 | (1.59) | 27 | (1.06) | 70 | (2.70) |
-| 450 | (18.0) | 49 | (1.89) | 37 | (1.42) | 24 | (0.95) | 62 | (2.40) |
-| 500 | (20.0) | 44 | (1.70) | 33 | (1.28) | 22 | (0.85) | 56 | (2.16) |
-| 550 | (22.0) | 40 | (1.55) | 30 | (1.16) | 20 | (0.77) | 51 | (1.96) |
-| 600 | (24.0) | 37 | (1.42) | 27 | (1.06) | 18 | (0.71) | 46 | (1.80) |
-|  |  |  |  |  |  |  |  |  |  |
-| 650 | (26.0) | 34 | (1.31) | 25 | (0.98) | 17 | (0.65) | 43 | (1.66) |
-| 700 | (28.0) | 31 | (1.22) | 23 | (0.91) | 16 | (0.61) | 40 | (1.54) |
-| 750 | (30.0) | 29 | (1.13) | 22 | (0.85) | 15 | (0.57) | 37 | (1.44) |
-| 800 | (32.0) | 27 | (1.06) | 21 | (0.80) | 14 | (0.53) | 35 | (1.35) |
-| 850 | (34.0) | 26 | (1.00) | 19 | (0.75) | 13 | (0.50) | 33 | (1.27) |
-| 900 | (36.0) | 24 | (0.95) | 18 | (0.71) | 12 | (0.47) | 31 | (1.20) |
-|  |  |  |  |  |  |  |  |  |  |
-| 950 | (38.0) | 23 | (0.90) | 17 | (0.67) | 12 | (0.45) | 29 | (1.14) |
-| 1000 | (40.0) | 22 | (0.85) | 16 | (0.64) | 11 | (0.43) | 28 | (1.08) |
-| 1050 | (42.0) | 21 | (0.81) | 16 | (0.61) | 10 | (0.41) | 26 | (1.03) |
-| 1100 | (44.0) | 20 | (0.77) | 15 | (0.58) | 10 | (0.39) | 25 | (0.98) |
-| 1150 | (46.0) | 19 | (0.74) | 14 | (0.55) | 10 | (0.37) | 24 | (0.94) |
-| 1200 | (48.0) | 18 | (0.71) | 14 | (0.53) | 9 | (0.35) | 23 | (0.90) |
-|  |  |  |  |  |  |  |  |  |  |
-| 1250 | (50.0) | 18 | (0.68) | 13 | (0.51) | 9 | (0.34) | 22 | (0.86) |
-| 1300 | (52.0) | 17 | (0.65) | 13 | (0.49) | 8 | (0.33) | 21 | (0.83) |
-| 1350 | (54.0) | 16 | (0.63) | 12 | (0.47) | 8 | (0.32) | 21 | (0.80) |
-| 1400 | (56.0) | 16 | (0.61) | 12 | (0.46) | 8 | (0.30) | 20 | (0.77) |
-| 1450 | (58.0) | 15 | (0.59) | 11 | (0.44) | 8 | (0.29) | 19 | (0.74) |
-| 1500 | (60.0) | 15 | (0.57) | 11 | (0.43) | 7 | (0.28) | 19 | (0.72) |
-|  |  |  |  |  |  |  |  |  |  |
-| 1550 | (62.0) | 14 | (0.55) | 11 | (0.41) | 7 | (0.27) | 18 | (0.70) |
-| 1600 | (64.0) | 14 | (0.53) | 10 | (0.40) | 7 | (0.27) | 17 | (0.67) |
-| 1650 | (66.0) | 13 | (0.52) | 10 | (0.39) | 7 | (0.26) | 17 | (0.65) |
-| 1700 | (68.0) | 13 | (0.50) | 10 | (0.38) | 6 | (0.25) | 16 | (0.63) |
-| 1750 | (70.0) | 13 | (0.49) | 9 | (0.36) | 6 | (0.24) | 16 | (0.62) |
-| 1800 | (72.0) | 12 | (0.47) | 9 | (0.35) | 6 | (0.24) | 15 | (0.60) |
-| NOTE 1 The table lists the required wall thickness for selected values of D, B, and F_y based on Equation (B.17.7).NOTE 2 Values are derived assuming a broadside impact of a 1000-metric-ton vessel moving at 0.50 m/s.NOTE 3 All energy is assumed to be absorbed by the member. | NOTE 1 The table lists the required wall thickness for selected values of D, B, and F_y based on Equation (B.17.7).NOTE 2 Values are derived assuming a broadside impact of a 1000-metric-ton vessel moving at 0.50 m/s.NOTE 3 All energy is assumed to be absorbed by the member. | NOTE 1 The table lists the required wall thickness for selected values of D, B, and F_y based on Equation (B.17.7).NOTE 2 Values are derived assuming a broadside impact of a 1000-metric-ton vessel moving at 0.50 m/s.NOTE 3 All energy is assumed to be absorbed by the member. | NOTE 1 The table lists the required wall thickness for selected values of D, B, and F_y based on Equation (B.17.7).NOTE 2 Values are derived assuming a broadside impact of a 1000-metric-ton vessel moving at 0.50 m/s.NOTE 3 All energy is assumed to be absorbed by the member. | NOTE 1 The table lists the required wall thickness for selected values of D, B, and F_y based on Equation (B.17.7).NOTE 2 Values are derived assuming a broadside impact of a 1000-metric-ton vessel moving at 0.50 m/s.NOTE 3 All energy is assumed to be absorbed by the member. | NOTE 1 The table lists the required wall thickness for selected values of D, B, and F_y based on Equation (B.17.7).NOTE 2 Values are derived assuming a broadside impact of a 1000-metric-ton vessel moving at 0.50 m/s.NOTE 3 All energy is assumed to be absorbed by the member. | NOTE 1 The table lists the required wall thickness for selected values of D, B, and F_y based on Equation (B.17.7).NOTE 2 Values are derived assuming a broadside impact of a 1000-metric-ton vessel moving at 0.50 m/s.NOTE 3 All energy is assumed to be absorbed by the member. | NOTE 1 The table lists the required wall thickness for selected values of D, B, and F_y based on Equation (B.17.7).NOTE 2 Values are derived assuming a broadside impact of a 1000-metric-ton vessel moving at 0.50 m/s.NOTE 3 All energy is assumed to be absorbed by the member. | NOTE 1 The table lists the required wall thickness for selected values of D, B, and F_y based on Equation (B.17.7).NOTE 2 Values are derived assuming a broadside impact of a 1000-metric-ton vessel moving at 0.50 m/s.NOTE 3 All energy is assumed to be absorbed by the member. | NOTE 1 The table lists the required wall thickness for selected values of D, B, and F_y based on Equation (B.17.7).NOTE 2 Values are derived assuming a broadside impact of a 1000-metric-ton vessel moving at 0.50 m/s.NOTE 3 All energy is assumed to be absorbed by the member. |
-| 1 Where B = diameter/X (dent depth). | 1 Where B = diameter/X (dent depth). | 1 Where B = diameter/X (dent depth). | 1 Where B = diameter/X (dent depth). | 1 Where B = diameter/X (dent depth). | 1 Where B = diameter/X (dent depth). | 1 Where B = diameter/X (dent depth). | 1 Where B = diameter/X (dent depth). | 1 Where B = diameter/X (dent depth). | 1 Where B = diameter/X (dent depth). |
+| Diameter, mm (in.) | $F_y=345$ MPa (50 ksi), $B=8.0$ | $F_y=345$ MPa (50 ksi), $B=6.0$ | $F_y=345$ MPa (50 ksi), $B=4.0$ | $F_y=240$ MPa (35 ksi), $B=8.0$ | $F_y=240$ MPa (35 ksi), $B=6.0$ | $F_y=240$ MPa (35 ksi), $B=4.0$ |
+| --- | --- | --- | --- | --- | --- | --- |
+| 300 (12.0) | 73 (2.83) | 55 (2.13) | 37 (1.42) | 93 (3.60) | 70 (2.70) | 46 (1.80) |
+| 350 (14.0) | 63 (2.43) | 47 (1.82) | 31 (1.23) | 79 (3.08) | 60 (2.31) | 40 (1.54) |
+| 400 (16.0) | 55 (2.13) | 41 (1.59) | 27 (1.06) | 70 (2.70) | 52 (2.02) | 35 (1.35) |
+| 450 (18.0) | 49 (1.89) | 37 (1.42) | 24 (0.95) | 62 (2.40) | 46 (1.80) | 31 (1.20) |
+| 500 (20.0) | 44 (1.70) | 33 (1.28) | 22 (0.85) | 56 (2.16) | 42 (1.62) | 28 (1.08) |
+| 550 (22.0) | 40 (1.55) | 30 (1.16) | 20 (0.77) | 51 (1.96) | 38 (1.47) | 25 (0.98) |
+| 600 (24.0) | 37 (1.42) | 27 (1.06) | 18 (0.71) | 46 (1.80) | 35 (1.35) | 23 (0.90) |
+| 650 (26.0) | 34 (1.31) | 25 (0.98) | 17 (0.65) | 43 (1.66) | 32 (1.24) | 21 (0.83) |
+| 700 (28.0) | 31 (1.22) | 23 (0.91) | 16 (0.61) | 40 (1.54) | 30 (1.16) | 20 (0.77) |
+| 750 (30.0) | 29 (1.13) | 22 (0.85) | 15 (0.57) | 37 (1.44) | 28 (1.08) | 19 (0.72) |
+| 800 (32.0) | 27 (1.06) | 21 (0.80) | 14 (0.53) | 35 (1.35) | 26 (1.01) | 17 (0.67) |
+| 850 (34.0) | 26 (1.00) | 19 (0.75) | 13 (0.50) | 33 (1.27) | 25 (0.95) | 16 (0.63) |
+| 900 (36.0) | 24 (0.95) | 18 (0.71) | 12 (0.47) | 31 (1.20) | 23 (0.90) | 15 (0.60) |
+| 950 (38.0) | 23 (0.90) | 17 (0.67) | 12 (0.45) | 29 (1.14) | 22 (0.85) | 15 (0.57) |
+| 1000 (40.0) | 22 (0.85) | 16 (0.64) | 11 (0.43) | 28 (1.08) | 21 (0.81) | 14 (0.54) |
+| 1050 (42.0) | 21 (0.81) | 16 (0.61) | 10 (0.41) | 26 (1.03) | 20 (0.77) | 13 (0.51) |
+| 1100 (44.0) | 20 (0.77) | 15 (0.58) | 10 (0.39) | 25 (0.98) | 19 (0.74) | 13 (0.49) |
+| 1150 (46.0) | 19 (0.74) | 14 (0.55) | 10 (0.37) | 24 (0.94) | 18 (0.70) | 12 (0.47) |
+| 1200 (48.0) | 18 (0.71) | 14 (0.53) | 9 (0.35) | 23 (0.90) | 17 (0.67) | 12 (0.44) |
+| 1250 (50.0) | 18 (0.68) | 13 (0.51) | 9 (0.34) | 22 (0.86) | 17 (0.65) | 11 (0.43) |
+| 1300 (52.0) | 17 (0.65) | 13 (0.49) | 8 (0.33) | 21 (0.83) | 16 (0.62) | 11 (0.42) |
+| 1350 (54.0) | 16 (0.63) | 12 (0.47) | 8 (0.32) | 21 (0.80) | 15 (0.60) | 10 (0.40) |
+| 1400 (56.0) | 16 (0.61) | 12 (0.46) | 8 (0.30) | 20 (0.77) | 15 (0.58) | 10 (0.39) |
+| 1450 (58.0) | 15 (0.59) | 11 (0.44) | 8 (0.29) | 19 (0.74) | 14 (0.55) | 10 (0.37) |
+| 1500 (60.0) | 15 (0.57) | 11 (0.43) | 7 (0.28) | 19 (0.72) | 14 (0.54) | 9 (0.36) |
+| 1550 (62.0) | 14 (0.55) | 11 (0.41) | 7 (0.27) | 18 (0.70) | 13 (0.52) | 9 (0.35) |
+| 1600 (64.0) | 14 (0.53) | 10 (0.40) | 7 (0.27) | 17 (0.67) | 13 (0.51) | 9 (0.34) |
+| 1650 (66.0) | 13 (0.52) | 10 (0.39) | 7 (0.26) | 17 (0.65) | 13 (0.49) | 8 (0.33) |
+| 1700 (68.0) | 13 (0.50) | 10 (0.38) | 6 (0.25) | 16 (0.63) | 12 (0.48) | 8 (0.32) |
+| 1750 (70.0) | 13 (0.49) | 9 (0.36) | 6 (0.24) | 16 (0.62) | 12 (0.46) | 8 (0.31) |
+| 1800 (72.0) | 12 (0.47) | 9 (0.35) | 6 (0.24) | 15 (0.60) | 12 (0.45) | 8 (0.30) |
+
+Wall thickness $t$ is given in mm (in.).
+
+NOTE 1 The table lists the required wall thickness for selected values of D, B, and $F_y$ based on Equation (B.17.7).
+
+NOTE 2 Values are derived assuming a broadside impact of a 1000-metric-ton vessel moving at 0.50 m/s.
+
+NOTE 3 All energy is assumed to be absorbed by the member.
+
+Footnote 1: $B=\mathrm{diameter}/X$ (dent depth).
 
 
 
 ![](API_RP_2A-WSD_22nd/chunk3_15f3f2ffdcb0a19db7aa943eac2db9de1e6c23f382f91ffd00f125d1c6d00263.jpg)  
-Figure B.17.1—D/T Ratio vs Reduction in Ultimate Capacity, 1220 mm, 1370 mm, and 1525 mm (48 in., 54 in., and 60 in.) Legs—Straight with L = 18.3 m (60 ft), K = 1.0, and $F_{ \mathbf{ y } } = 240$ MPa (35 ksi)
+Figure B.17.1—D/T Ratio vs Reduction in Ultimate Capacity, 1220 mm, 1370 mm, and 1525 mm (48 in., 54 in., and 60 in.) Legs—Straight with L = 18.3 m (60 ft), K = 1.0, and $F_{ \mathbf{y} } = 240$ MPa (35 ksi)
 
 ![](API_RP_2A-WSD_22nd/chunk3_1ccf251f04dba17db03dfa5bc7760e145b9d38b8070e0dd0c369df04011f4a71.jpg)  
-Figure B.17.2—D/T Ratio vs Reduction in Ultimate Capacity, 1220 mm, 1370 mm, and 1525 mm (48 in., 54 in., and 60 in.) Legs—Straight with L = 18.3 m (60 ft), K = 1.0, and $F_{ \mathbf{ y } } = 345 ~ \mathsf{ M P a }$ (50 ksi)
+Figure B.17.2—D/T Ratio vs Reduction in Ultimate Capacity, 1220 mm, 1370 mm, and 1525 mm (48 in., 54 in., and 60 in.) Legs—Straight with L = 18.3 m (60 ft), K = 1.0, and $F_{ \mathbf{y} } = 345 ~ \mathsf{MPa}$ (50 ksi)
 
 ![](API_RP_2A-WSD_22nd/chunk3_f48e20172c221c19ab805361f2ff81dbf8fa1b602a304b9a782238970f5ae2bd.jpg)  
-Figure B.17.3—D/T Ratio vs Reduction in Ultimate Capacity, 1220 mm, 1370 mm, and 1525 mm (48 in., 54 in., and 60 in.) Legs—Bent with L = 18.3 m (60 ft), K = 1.0, and $F_{ \mathbf{ y } } = 240 \ \mathsf{ M P a }$ (35 ksi)
+Figure B.17.3—D/T Ratio vs Reduction in Ultimate Capacity, 1220 mm, 1370 mm, and 1525 mm (48 in., 54 in., and 60 in.) Legs—Bent with L = 18.3 m (60 ft), K = 1.0, and $F_{ \mathbf{y} } = 240 \ \mathsf{MPa}$ (35 ksi)
 
 ![](API_RP_2A-WSD_22nd/chunk3_ba9d3e887c975da981a8a459be9893e99cbc0754e48074221c9c1429ba513dd9.jpg)  
-Figure B.17.4—D/T Ratio vs Reduction in Ultimate Capacity, 1220 mm, 1370 mm, and 1525 mm (48 in., 54 in., and 60 in.) Legs—Bent with L = 18.3 m (60 ft), K = 1.0, and $F_{ \mathbf{ y } } = 345 ~ \mathsf{ M P a }$ (50 ksi)
+Figure B.17.4—D/T Ratio vs Reduction in Ultimate Capacity, 1220 mm, 1370 mm, and 1525 mm (48 in., 54 in., and 60 in.) Legs—Bent with L = 18.3 m (60 ft), K = 1.0, and $F_{ \mathbf{y} } = 345 ~ \mathsf{MPa}$ (50 ksi)
 
 For structures with limited redundancy, such as minimal structures, the loss of a waterline brace may be catastrophic. In addition, some decks have critical knee braces in the vessel impact zone. These braces should be designed to withstand vessel impact if the loss of the structure is unacceptable.
 
@@ -7888,7 +7901,7 @@ The recommendation that all axial load transfer be accomplished using only shear
 
 ## B.19.4.2 Caissons Materials
 
-There is a history of successful use of Class C material in caissons at service temperatures above freezing. However, most of this history was generated when $F_{ \natural } = 0 . 66 F_{ y } ~ ( F_{ \natural } = 0 . 75 F_{ y }$ starting with API 2A-WSD, 17th Edition, April 1987). Therefore, since caissons are primarily subjected to environmentally induced bending, the use of an interaction ratio allowable of 0.85 will closely approximate the use of $F_{ \mathsf{ b } } { = } \mathsf{ \bar{ 0 } } . 66 F_{ \mathsf{ y } }$ rather than $F_{ \mathsf{ b } } = 0 . 75 F_{ \mathsf{ y } }$ .
+There is a history of successful use of Class C material in caissons at service temperatures above freezing. However, most of this history was generated when $F_{\mathrm{b}} = 0.66 F_{ y } ~ ( F_{\mathrm{b}} = 0.75 F_{ y }$ starting with API 2A-WSD, 17th Edition, April 1987). Therefore, since caissons are primarily subjected to environmentally induced bending, the use of an interaction ratio allowable of 0.85 will closely approximate the use of $F_{ \mathsf{b} } { = } 0.66 F_{ \mathsf{y} }$ rather than $F_{ \mathsf{b} } = 0.75 F_{ \mathsf{y} }$ .
 
 Bibliography
 
@@ -8189,7 +8202,7 @@ Bibliography
 [280] Recommended S-N Curves for Tubular Joints in Air and Seawater, R. King, Fracture Control Limited, Doc Ref 6083/01 Rev 0, February 1997   
 [281] High Strength Steels for Jack-up Drilling Rigs, The Effect of Seawater and Cathodic Protection, R. King et al., 11th International Conference on Offshore Mechanics and Arctic Engineering, Calgary, Canada, June 1992
 
-[282] Corrosion Fatigue of API 5L X85 Grade Welded Tubular Joints with Applied Cathodic Protection of - lOOOMV, Fatigue Crack Growth in Offshore Structures, A. T. Smith et al., Engineering Materials Advisory Services (EMAS) Limited, Solihull, UK   
+[282] Corrosion Fatigue of API 5L X85 Grade Welded Tubular Joints with Applied Cathodic Protection of - IOOOMV, Fatigue Crack Growth in Offshore Structures, A. T. Smith et al., Engineering Materials Advisory Services (EMAS) Limited, Solihull, UK   
 [283] Fatigue Design of Cast Steel Nodes in Offshore Structures Based on Research Data, A. Ma and J. V. Sharp, Proceedings ICE, Vol. 124, Paper 11324, pp. 112–126, June 1997   
 [284] Fatigue Life Assessment of Castings Using Fracture Mechanics, Earl and Wright Consultancy Engineers, Report OTH 91300, HMSO, London   
 [285] The Design Aspects and Fatigue Behavior of Welded Joints, J. de Beck, Third International Conference on Steel in Marine Structures, Delft, the Netherlands, 1987   
@@ -8200,7 +8213,7 @@ Bibliography
 [290] Extrapolation Procedures for Determining SCFs in Mid-surface Tubular Joint Models, R. E. Healy and J. Buitrago, 6th International Symposium on Tubular Structures, Monash University, Melbourne, Australia, 1994   
 [291] Development of SCF Formulae and Generalized Influence Functions for Use in Fatigue Analysis, Recent Developments in Tubular Joint Technology, M. Efthymiou, OTJ'88, October 1988, London, plus updates   
 [292] Stress Concentration Factors for Tubular Complex Joints, Lloyd’s Register of Shipping, Complex Joints JIP, Final Report No. 3 of 5 of Simple Unstiffened Joint SCFs, March 1988   
-[293] Stress Concentration Factors for Simple Tubular Joints, P. A. Smedley and P. Fisher, Offshore and Polar Engineering Conference ISOPE-l, Edinburgh, 1991   
+[293] Stress Concentration Factors for Simple Tubular Joints, P. A. Smedley and P. Fisher, Offshore and Polar Engineering Conference ISOPE-I, Edinburgh, 1991   
 [294] Stress Concentration Factors for Tubular Connections; Edison Welding Institute, EWI Project No. J7266, March 1995   
 [295] Proposed Revisions for Fatigue Design of Planar Welded Connections Made of Hollow Structural Sections, A. M. van Wingerde et al., Tubular Structures V, Nottingham, UK, pp. 663–672, August 1993   
 [296] Refined Fatigue Analysis Approach and its Application to the Veslefrikk Jacket, M. Gibstein et al., Third International Symposium on Tubular Structures, ISTS-3, Finland, 1990   
