@@ -12,594 +12,409 @@ Copyright Notice
 
 Copyright © 2024, Bentley Systems, Incorporated. All Rights Reserved.
 
-TABLE OF CONTENTS
-
-1 INTRODUCTION .. .13
-
-## 1.1 OVERVIEW.. .. 13
-## 1.2 PROGRAM FEATURES.. .. 13
-
-2 SACS IV MODEL COMPONENTS. .. 16
-
-## 2.1 ANALYSIS OPTIONS .. ... 16
-## 2.2 LINEAR SOLVER OPTIONS.. .. 17
-
-## 2.3 POST PROCESSOR OPTIONS .. ... 18
-
-2.3.1 Member Check Code.. . 19   
-2.3.2 Member Check Locations.... 19   
-2.3.3 Output Reports . 19   
-2.3.4 Redesign Parameters . 19   
-2.3.5 Hydrostatic Collapse Parameters.... 19   
-2.3.6 Grouping Elements by Unity Check Ratio . 19   
-2.3.7 Allowable Stress/Material Factor..... 19   
-2.3.8 Resistance Factors..... .20
-
-2.3.8.1 User Defined Resistance Factors.... .. 20
-
-2.3.9 Euro Code Check Options.... .. 20   
-2.3.10 Span Designation . .20   
-2.3.11 AISC 2005 (13th Edition) Options.... . 21   
-2.3.12 Panel Code Check Options .. .21   
-2.3.13 ISO code check options ..... .23   
-2.3.14 Norsok Standard N-004 code check options.... .24   
-2.3.15 ALS load cases specification..... . 24
-
-## 2.4 SELECTING LOAD CASES FOR OUTPUT... ... 24
-
-2.4.1 P-Delta Load Cases.... . 25   
-2.4.1.1 Large Deflection or P-Delta Analysis .. .. 25
-
-## 2.5 FACTORING LOAD CASES . .... 26
-
-## 2.6 MATERIAL AND SECTION PROPERTY DATA.. ... 26
-
-2.6.1 Section Properties... .. 26
-
-2.6.1.1 Non-Tubular Members.... .. 26   
-2.6.1.2 Tubular Members... . 29   
-2.6.1.3 Grouted Tubular Members ..... .29   
-2.6.1.4 Dented Tubular Members... . 29   
-2.6.1.5 Segmented Members... . 30   
-2.6.1.6 Plate Elements .. . 30   
-2.6.1.7 Shell and Solid Elements . .30
-
-2.6.2 Material Properties . . 31
-
-2.6.2.1 Members or Beam Elements.... .31   
-2.6.2.2 Tapered Members..... . 31   
-2.6.2.3 Segmented Members... . 32   
-2.6.2.4 Plate Elements .. . 33   
-2.6.2.5 Shell and Solid Elements . .33
-
-2.6.3 Stiffener Data . . 33
-
-2.6.3.1 Plate Girders.... .. 33   
-2.6.3.2 Tubular Members... . 34
-
-## 2.7 ELEMENT DATA . .. 34
-
-2.7.1 Members or Beam Elements . . 34
-
-2.7.1.1 Member Local Coordinate System... . 34   
-2.7.1.1.1 Member Internal Load and Stress Sign Convention .. . 35
-
-2.7.1.2 Member End Fixity ..... .. 36   
-2.7.1.3 Member Offsets .... . 36
-
-2.7.1.4 K-factors/Effective Buckling Length . .. 37
-
-2.7.1.5 Unbraced Length of Compression Flange ..... . 37   
-2.7.1.6 Shear Area Factor for Tubular Members .... .. 38   
-2.7.1.7 Skipping from Output Reports . .38   
-2.7.1.8 Multiple Members Between Two Joints . .38   
-2.7.1.9 Defining Special Element Types .. .. 38
-
-2.7.1.9.1 Cable Element . .38   
-2.7.1.9.2 Gap Element... . 38   
-2.7.1.9.3 Initial Gap Spacing.. . 39   
-2.7.1.9.4 X-Brace or K-Brace ... . 39
-
-2.7.2 Plate Elements . . 40
-
-2.7.2.1 Isotropic Plates.... .. 40   
-2.7.2.2 Membrane and Shear Plates... .. 41   
-2.7.2.3 Stiffened Plates . .41   
-2.7.2.4 Corrugated Plates.... .. 42   
-2.7.2.5 Plate Local Coordinate System..... .. 43   
-2.7.2.6 Plate Offsets ... . 43   
-2.7.2.7 Skipping from Output Reports . .. 44   
-2.7.2.8 Plate Modeling Considerations... .. 44
-
-2.7.3 Curved MITC Shell Elements .. . 45
-
-2.7.3.1 MITC Shells Local Coordinate System ..... .. 45   
-2.7.3.2 Shells Normal . .. 45   
-2.7.3.3 Integration Points... .. 46   
-2.7.3.4 Shell Offsets . .46   
-2.7.3.5 Shell Element Report... .. 46   
-2.7.3.6 A Note on Choice of MITC Shell Elements .. .. 46
-
-2.7.4 Solid Elements... .. 46
-
-2.7.4.1 Solid Local Coordinate System ..... .47   
-2.7.4.2 Solid Offsets ... .. 47
-
-## 2.8 JOINTS .. ... 48
-
-2.8.1 Joint Coordinates . .48   
-2.8.2 Joint Support/ Fixity ..... .. 48
-
-2.8.2.1 Fixed to Ground . .48   
-2.8.2.2 Pilehead Supports . .49   
-2.8.2.3 Spring Supports .... .. 49
-
-2.8.2.4 Retained for Dynamics... .. 50   
-2.8.2.5 Retained Degrees of Freedom . .. 50
-
-## 2.9 LOADING . .. 51
-
-2.9.1 Load Conditions..... . 51
-
-2.9.1.1 Member Distributed Loads and Moments... .. 51   
-2.9.1.2 Member Concentrated Loads and Moments.. .. 52   
-2.9.1.3 Member Temperature Loads .. .. 52   
-2.9.1.4 Joint Loads... .. 53   
-2.9.1.5 Joint Specified Displacements.. .. 53   
-2.9.1.6 Plate Pressure Loads ... .. 53
-
-2.9.1.6.1 Uniform Pressure ... .. 53   
-2.9.1.6.2 Varying Pressure .. .. 53   
-2.9.1.6.3 Submerged Pressure.. .. 54
-
-2.9.1.7 Plate Thermal Loads. .. 54
-
-2.9.1.7.1 Uniform Temperature... .. 54   
-2.9.1.7.2 Varying Temperature... .. 54   
-2.9.1.7.3 Surface Temperature .... .. 54
-
-2.9.1.8 Shell Pressure Loads. .. 55   
-2.9.1.9 Shell Temperature Loads .. .. 55
-
-2.9.2 Load Combinations ... . 55
-
-## 2.10 SETS... .. 56
-
-2.10.1 Joint List ... .. 56   
-2.10.2 Member List ... .. 56   
-2.10.3 Member Group List .... .. 56   
-2.10.4 Plate List ... .57   
-2.10.5 Plate Group List.. .. 57   
-2.10.6 Shell List ... .57   
-2.10.7 Solid List .. .57   
-2.10.8 Load Condition List.. .. 57
-
-3 SACS IV TROUBLE SHOOTING. .. 58
-
-## 3.1 MODEL SINGULARITY.. .. 58
-## 3.2 DEBUGGING THE MODEL . .. 58
-
-4 COMMENTARY . . 60
-
-## 4.1 ANGLE CROSS-SECTIONS.. .... 60
-## 4.2 FLAT PLATE CROSS-SECTIONS .. ... 62
-
-4.2.1 Isotropic Plates... .. 62   
-4.2.2 Membrane Plates.... . 62   
-4.2.3 Shear Plates... .. 62   
-4.2.4 Stiffened Plates ... .. 62   
-4.2.5 Corrugated Plates.... .. 63   
-4.2.6 Plate Element Transition to Beam Element . ... 63
-
-## 4.3 SOLID ELEMENTS.. .. 63
-
-## 4.4 Curved MITC Shell Elements ... .. 64
-
-4.3.1 Solid Transition to Shell, Plate or Beam Elements .... ... 63
-
-4.4.1 Formulation... .. 64   
-4.4.2 Constitutive Equation and Internal Force/Stress Output . .. 65   
-4.4.3 MITC Tying Procedure.... .. 65   
-4.4.4 Drilling Stiffness .... .. 66   
-4.4.5 Normals at Common Joints... .. 66   
-4.4.6 Shell Element Transition to Beam Element .. ... 66
-
-## 4.5 Linear Solver Options .... ... 67
-
-4.5.1 Rigid-Body Modes of a Statically Indeterminate Structure ..... . 67   
-4.5.2 Extraction of Rigid-Body Modes.. .. 68   
-4.5.3 Solution of a Statically Determined Structure Using Cholesky Decomposition... .. 68   
-4.5.4 Solution of a Statically Indeterminate Structure Using Singular Value Decomposition ..... 68   
-4.5.5 Krylov Subspace Solvers.... . 69
-
-4.5.5.1 Conjugate Gradient Method . .. 69   
-4.5.5.2 Flexible General Minimum Residual Method . ... 70
-
-4.5.6 Solution of a Statically Indeterminate Structure Using Krylov Subspace Solvers .......... .... 70   
-4.5.7 A comment on Balancing the Forces .... ... 70   
-4.5.8 General Guidelines on the Choice of Linear Solver Method... .. 71
-
-5 REFERENCES . .. 72
-
-6 SAMPLE PROBLEMS.. ... 73
-
-## 6.1 JACKET MODEL.. .. 74
-## 6.2 SHELL AND SOLID ELEMENT MODEL. .. 86
-
-7 VERIFICATIONS . .. 96
-
-## 7.1 Beams..... .. 96
-
-7.1.1 Deflection and Reactions in a Beam ... .. 96
-
-7.1.1.1 Reference .... .. 96   
-7.1.1.2 Problem ..... .. 96   
-7.1.1.3 Theoretical Solution .... .. 96   
-7.1.1.4 Comparison .... .. 97
-
-7.1.2 Thermal Loading on a Beam . .97
-
-7.1.2.1 Reference .... .. 97   
-7.1.2.2 Problem ..... .. 97   
-7.1.2.3 Theoretical Solution ... .. 98   
-7.1.2.4 Comparison ... .. 98
-
-7.1.3 Forces on a Propped Cantilever 1 .. .. 98
-
-7.1.3.1 Reference ... .. 98   
-7.1.3.2 Problem.... .. 98   
-7.1.3.3 Theoretical Solution ..... .99
-
-7.1.3.3.1 Load Case 1 .. .. 99   
-7.1.3.3.2 Load Case 2 .. .. 99   
-7.1.3.4 Comparison .... . 100
-
-7.1.4 Torsion on a Stepped Cantilever.... .. 100
-
-7.1.4.1 Reference .... . 100   
-7.1.4.2 Problem ..... .101   
-7.1.4.3 Theoretical Solution .. ..101
-
-7.1.4.4 Comparison ..... .. 101
-
-7.1.5 Forces on a Propped Cantilever 2 .. . 102
-
-7.1.5.1 Reference .... ..102   
-7.1.5.2 Problem ..... .. 102   
-7.1.5.3 Comparison ..... .. 103
-
-7.1.6 Axially Loaded Column..... .103
-
-7.1.6.1 Reference .... .. 103   
-7.1.6.2 Problem ..... .. 103   
-7.1.6.3 Comparison .... .. 104
-
-7.1.7 Tee Shaped Cantilever .... .104
-
-7.1.7.1 Reference .... .. 105   
-7.1.7.2 Problem... .. 105   
-7.1.7.3 Comparison ..... ..105
-
-7.1.8 Beam on Elastic Foundation.... .105
-
-7.1.8.1 Reference .. .. 106   
-7.1.8.2 Problem... .. 106   
-7.1.8.3 Comparison ..... .. 107
-
-7.1.9 Stresses in a Circular Beam .. .107
-
-7.1.9.1 Reference .. .. 107   
-7.1.9.2 Problem... .. 107   
-7.1.9.3 Comparison ..... .. 108
-
-7.1.10 End Moments in a Non Uniform Beam.. . 108
-
-7.1.10.1 Reference .. ..108   
-7.1.10.2 Problem ..... .. 108   
-7.1.10.3 Comparison .... ..109
-
-7.1.11 Stresses in a Tapered Cantilever.. . 109
-
-7.1.11.1 Reference .... .. 109   
-7.1.11.2 Problem ..... .. 110   
-7.1.11.3 Comparison .... .. 110
-
-7.1.12 Stresses in a Cable due to Thermal Loading .. . 111
-
-7.1.12.1 Reference . .111   
-7.1.12.2 Problem.. . 111   
-7.1.12.3 Comparison ..... .112
-
-7.1.13 Curved Beam.. . 112
-
-7.1.13.1 Reference .. .. 112   
-7.1.13.2 Problem... .112   
-7.1.13.3 Comparison ..... ..113
-
-7.1.14 Hanging Bar Axial Stress... . 113
-
-7.1.14.1 Reference .. ..113   
-7.1.14.2 Problem... .. 113   
-7.1.14.3 Comparison ..... .. 114
-
-7.1.15 Bent Cantilever Deflection.. . 115
-
-7.1.15.1 Reference .. ..115   
-7.1.15.2 Problem ..... ..115
-
-7.1.15.3 Comparison ..... .. 115
-
-7.1.16 Bent Beam Thermal Loading.. . 116
-
-7.1.16.1 Reference .... ..116   
-7.1.16.2 Problem ..... . 116   
-7.1.16.3 Comparison ..... .117
-
-## 7.2 Trusses . .117
-
-7.2.1 Axial Stress on a Truss Model .. .117
-
-7.2.1.1 Reference . .117   
-7.2.1.2 Problem ..... . 117   
-7.2.1.3 Comparison ..... .118
-
-7.2.2 Axial Force on a Cable .... . 118
-
-7.2.2.1 Reference ..... .118   
-7.2.2.2 Problem ..... .118   
-7.2.2.3 Comparison ..... .119
-
-7.2.3 Axial Force in a 2D Plane Frame 1.. . 119
-
-7.2.3.1 Reference ..... .119   
-7.2.3.2 Problem ..... .119   
-7.2.3.3 Comparison ..... . 120
-
-7.2.4 Axial Forces on a 3D Space Model .. . 120
-
-7.2.4.1 Reference ..... .120   
-7.2.4.2 Problem ..... . 120   
-7.2.4.3 Comparison ..... . 121
-
-7.2.5 Reactions in a 2D Truss Model 1.. .122
-
-7.2.5.1 Reference .... . 122   
-7.2.5.2 Problem ..... . 122   
-7.2.5.3 Comparison ..... . 123
-
-7.2.6 Reactions in a 2D Truss Model 2.. .123
-
-7.2.6.1 Reference . .123   
-7.2.6.2 Problem.... . 123   
-7.2.6.3 Comparison ..... . 124
-
-7.2.7 Reactions in a 2D Truss Model 3.. . 125
-
-7.2.7.1 Reference . . 125   
-7.2.7.2 Problem ..... .125   
-7.2.7.3 Comparison ..... . 125
-
-7.2.8 Deflections in a 2D Truss Model . . 126
-
-7.2.8.1 Reference ..... .126   
-7.2.8.2 Problem ..... .126   
-7.2.8.3 Comparison .... . 127
-
-7.2.9 Stress in a 2D Truss Model.. .127
-
-7.2.9.1 Reference ..... . 127   
-7.2.9.2 Problem ..... . 127   
-7.2.9.3 Comparison ..... . 128
-
-7.2.10 Axial Forces in a Plane Frame 2.. . 128
-
-7.2.10.1 Reference .... .128
-
-7.2.10.2 Problem. .128   
-7.2.10.3 Comparison ..... . 129
-
-## 7.3 Frames.... .129
-
-7.3.1 2D Portal Reactions 1. . 129
-
-7.3.1.1 Reference .... . 129   
-7.3.1.2 Problem.... . 129   
-7.3.1.3 Calculations ..... .. 130   
-7.3.1.4 Comparison ..... .. 130
-
-7.3.2 3x2 Plane Frame Moments . . 130
-
-7.3.2.1 Reference .... .. 130   
-7.3.2.2 Problem ..... .. 130   
-7.3.2.3 Comparison .... .. 132
-
-7.3.3 Support Reactions for a Simple Frame .... .. 133
-
-7.3.3.1 Reference ..... .133   
-7.3.3.2 Problem.... .. 133   
-7.3.3.3 Comparison ..... .134
-
-7.3.4 2D Portal Reactions 2.. .134
-
-7.3.4.1 Reference .... .. 134   
-7.3.4.2 Problem ..... . 134   
-7.3.4.3 Comparison ..... .135
-
-7.3.5 2D Portal Reactions Sidesway 2 .. .. 135
-
-7.3.5.1 Reference .... .. 135   
-7.3.5.2 Problem ..... .136   
-7.3.5.3 Comparison ..... .. 137
-
-7.3.6 1x2 Plane Frame Lateral Load . .. 137
-
-7.3.6.1 Reference ..... . 137   
-7.3.6.2 Problem ..... .. 137   
-7.3.6.3 Comparison ..... .. 138
-
-7.3.7 2D Portal Reactions Sidesway 1 .. .. 138
-
-7.3.7.1 Reference .... .. 138   
-7.3.7.2 Problem.... .138   
-7.3.7.3 Comparison . . 139
-
-7.3.8 2 Bay Frame Moments and Shear..... .139
-
-7.3.8.1 Reference .... .. 139   
-7.3.8.2 Problem.... .. 139   
-7.3.8.3 Comparison ..... .140
-
-7.3.9 3D Frame Max Forces ..... .140
-
-7.3.9.1 Reference .... .. 140   
-7.3.9.2 Problem.... .. 141   
-7.3.9.3 Comparison ..... . 141
-
-## 7.4 Plate Elements ..... .. 142
-
-7.4.1 Cantilever Tube Stresses and Deflection ..... .. 142
-
-7.4.1.1 Reference ..... .142   
-7.4.1.2 Problem ..... ..142
-
-7.4.1.3 Comparison ..... .. 143
-
-7.4.2 2D Cantilever Beam End Deflection 1 .. .. 144
-
-7.4.2.1 Reference .... ..144   
-7.4.2.2 Problem ..... .. 144   
-7.4.2.3 Theoretical Solution ..... .. 145   
-7.4.2.4 Comparison ..... .145
-
-7.4.3 Natural Frequency of Beam on Springs . .. 145
-
-7.4.3.1 Reference .. .. 145   
-7.4.3.2 Problem ..... . 145   
-7.4.3.3 Comparison ..... .146
-
-7.4.4 2D Cantilever Beam End Deflection 2.. .. 146
-
-7.4.4.1 Reference ..... .146   
-7.4.4.2 Problem ..... .146   
-7.4.4.3 Theoretical Solution ..... .147   
-7.4.4.4 Comparison ..... . 147
-
-7.4.5 2D Curved Beam Maximum Stress.... .. 148
-
-7.4.5.1 Reference ..... .... 148   
-7.4.5.2 Problem ..... .. 148   
-7.4.5.3 Comparison ..... . 149
-
-7.4.6 2D Circular Surface Displacements and Stresses .... .. 149
-
-7.4.6.1 Reference .. .149   
-7.4.6.2 Problem ..... .. 149   
-7.4.6.3 Comparison ..... .150
-
-7.4.7 Twisted Beam Displacements ... . 150
-
-7.4.7.1 Reference . .150   
-7.4.7.2 Problem ..... . 151   
-7.4.7.3 Comparison ..... . 151
-
-7.4.8 Curved Roof Displacements and Stresses.. .151
-
-7.4.8.1 Reference .. . 152   
-7.4.8.2 Problem ..... . 152   
-7.4.8.3 Comparison .. . 153
-
-7.4.9 Spherical Shell Displacements . . 153
-
-7.4.9.1 Reference ..... .153   
-7.4.9.2 Problem.... . 153   
-7.4.9.3 Comparison .. . 154
-
-7.4.10 2D Circular Plate In-Plane Stresses . .154
-
-7.4.10.1 Reference .... .155   
-7.4.10.2 Problem... . 155   
-7.4.10.3 Comparison ..... .156
-
-7.4.11 2D Rectangular Plate with fixed edges . . 156
-
-7.4.11.1 Reference ..... .... 156   
-7.4.11.2 Problem ..... . 156   
-7.4.11.3 Comparison ..... .157
-
-7.4.12 2D Tapered Beam In-Plane Stress... .158
-
-7.4.12.1 Reference . .158   
-7.4.12.2 Problem ..... . 158   
-7.4.12.3 Comparison ..... .158
-
-7.4.13 2D Surface with Hole Edge Stress ... . 159
-
-7.4.13.1 Reference .... .. 159   
-7.4.13.2 Problem.. .. 159   
-7.4.13.3 Comparison ..... .. 160
-
-7.4.14 2D Circular Surface Edge Stress ... . 160
-
-7.4.14.1 Reference . .. 160   
-7.4.14.2 Problem. ..161   
-7.4.14.3 Comparison ..... .. 162
-
-7.4.15 Thermal Load on a Plate . .162
-
-7.4.15.1 Reference . ..162   
-7.4.15.2 Problem... ..162   
-7.4.15.3 Theoretical Solution ... .. 163   
-7.4.15.4 Comparison ..... .. 164
-
-## 7.5 Curved MITC Shell Elements .. .. 166
-
-7.5.1 Patch Test.. . 166
-
-7.5.1.1 Reference .. .. 166   
-7.5.1.2 Problem... .. 167   
-7.5.1.3 Comparison ..... .. 167
-
-7.5.2 Cook’s Membrane.... . 168
-
-7.5.2.1 Reference .. .. 168   
-7.5.2.2 Problem ..... .. 169   
-7.5.2.3 Comparison ..... .. 169
-
-7.5.3 Hemispherical Shell.. . 170
-
-7.5.3.1 Reference .... .. 170   
-7.5.3.2 Problem.. ..170   
-7.5.3.3 Comparison .... .. 171
-
-7.5.4 Pinched Cylinder ... . 172
-
-7.5.4.1 Reference . ..172   
-7.5.4.2 Problem.. .. 172   
-7.5.4.3 Comparison ..... ..172
-
-7.5.5 Twisted Beam..... . 173
-
-7.5.5.1 Reference .. .. 173   
-7.5.5.2 Problem... .. 173   
-7.5.5.3 Comparison ..... .. 174
-
-## 7.6 Solids .. . 175
-
-7.6.1 Cantilever Beam End Displacement 1.. . 175
-
-7.6.1.1 Reference .. .. 175   
-7.6.1.2 Problem ..... .. 175   
-7.6.1.3 Hand Calculation .... .. 176   
-7.6.1.4 Comparison ..... .. 176
-
-7.6.2 Cantilever Beam End Displacement 2.. .177
-
-7.6.2.1 Hand Calculation .. .. 177   
-7.6.2.2 Comparison .... .. 178
-
-8 INPUT LINES... ..179
-
-1 INTRODUCTION
+## TABLE OF CONTENTS
+
+| Section | Title | PDF page |
+| --- | --- | --- |
+| 1 | INTRODUCTION | [13](../pdfs/SACS2024_SACS.pdf#page=13) |
+| 1.1 | OVERVIEW | [13](../pdfs/SACS2024_SACS.pdf#page=13) |
+| 1.2 | PROGRAM FEATURES | [13](../pdfs/SACS2024_SACS.pdf#page=13) |
+| 2 | SACS IV MODEL COMPONENTS | [16](../pdfs/SACS2024_SACS.pdf#page=16) |
+| 2.1 | ANALYSIS OPTIONS | [16](../pdfs/SACS2024_SACS.pdf#page=16) |
+| 2.2 | LINEAR SOLVER OPTIONS | [17](../pdfs/SACS2024_SACS.pdf#page=17) |
+| 2.3 | POST PROCESSOR OPTIONS | [18](../pdfs/SACS2024_SACS.pdf#page=18) |
+| 2.3.1 | Member Check Code | [19](../pdfs/SACS2024_SACS.pdf#page=19) |
+| 2.3.2 | Member Check Locations | [19](../pdfs/SACS2024_SACS.pdf#page=19) |
+| 2.3.3 | Output Reports | [19](../pdfs/SACS2024_SACS.pdf#page=19) |
+| 2.3.4 | Redesign Parameters | [19](../pdfs/SACS2024_SACS.pdf#page=19) |
+| 2.3.5 | Hydrostatic Collapse Parameters | [19](../pdfs/SACS2024_SACS.pdf#page=19) |
+| 2.3.6 | Grouping Elements by Unity Check Ratio | [19](../pdfs/SACS2024_SACS.pdf#page=19) |
+| 2.3.7 | Allowable Stress/Material Factor | [19](../pdfs/SACS2024_SACS.pdf#page=19) |
+| 2.3.8 | Resistance Factors | [20](../pdfs/SACS2024_SACS.pdf#page=20) |
+| 2.3.8.1 | User Defined Resistance Factors | [20](../pdfs/SACS2024_SACS.pdf#page=20) |
+| 2.3.9 | Euro Code Check Options | [20](../pdfs/SACS2024_SACS.pdf#page=20) |
+| 2.3.10 | Span Designation | [20](../pdfs/SACS2024_SACS.pdf#page=20) |
+| 2.3.11 | AISC 2005 (13th Edition) Options | [21](../pdfs/SACS2024_SACS.pdf#page=21) |
+| 2.3.12 | Panel Code Check Options | [21](../pdfs/SACS2024_SACS.pdf#page=21) |
+| 2.3.13 | ISO code check options | [23](../pdfs/SACS2024_SACS.pdf#page=23) |
+| 2.3.14 | Norsok Standard N-004 code check options | [24](../pdfs/SACS2024_SACS.pdf#page=24) |
+| 2.3.15 | ALS load cases specification | [24](../pdfs/SACS2024_SACS.pdf#page=24) |
+| 2.4 | SELECTING LOAD CASES FOR OUTPUT | [24](../pdfs/SACS2024_SACS.pdf#page=24) |
+| 2.4.1 | P-Delta Load Cases | [25](../pdfs/SACS2024_SACS.pdf#page=25) |
+| 2.4.1.1 | Large Deflection or P-Delta Analysis | [25](../pdfs/SACS2024_SACS.pdf#page=25) |
+| 2.5 | FACTORING LOAD CASES | [26](../pdfs/SACS2024_SACS.pdf#page=26) |
+| 2.6 | MATERIAL AND SECTION PROPERTY DATA | [26](../pdfs/SACS2024_SACS.pdf#page=26) |
+| 2.6.1 | Section Properties | [26](../pdfs/SACS2024_SACS.pdf#page=26) |
+| 2.6.1.1 | Non-Tubular Members | [26](../pdfs/SACS2024_SACS.pdf#page=26) |
+| 2.6.1.2 | Tubular Members | [29](../pdfs/SACS2024_SACS.pdf#page=29) |
+| 2.6.1.3 | Grouted Tubular Members | [29](../pdfs/SACS2024_SACS.pdf#page=29) |
+| 2.6.1.4 | Dented Tubular Members | [29](../pdfs/SACS2024_SACS.pdf#page=29) |
+| 2.6.1.5 | Segmented Members | [30](../pdfs/SACS2024_SACS.pdf#page=30) |
+| 2.6.1.6 | Plate Elements | [30](../pdfs/SACS2024_SACS.pdf#page=30) |
+| 2.6.1.7 | Shell and Solid Elements | [30](../pdfs/SACS2024_SACS.pdf#page=30) |
+| 2.6.2 | Material Properties | [31](../pdfs/SACS2024_SACS.pdf#page=31) |
+| 2.6.2.1 | Members or Beam Elements | [31](../pdfs/SACS2024_SACS.pdf#page=31) |
+| 2.6.2.2 | Tapered Members | [31](../pdfs/SACS2024_SACS.pdf#page=31) |
+| 2.6.2.3 | Segmented Members | [32](../pdfs/SACS2024_SACS.pdf#page=32) |
+| 2.6.2.4 | Plate Elements | [33](../pdfs/SACS2024_SACS.pdf#page=33) |
+| 2.6.2.5 | Shell and Solid Elements | [33](../pdfs/SACS2024_SACS.pdf#page=33) |
+| 2.6.3 | Stiffener Data | [33](../pdfs/SACS2024_SACS.pdf#page=33) |
+| 2.6.3.1 | Plate Girders | [33](../pdfs/SACS2024_SACS.pdf#page=33) |
+| 2.6.3.2 | Tubular Members | [34](../pdfs/SACS2024_SACS.pdf#page=34) |
+| 2.7 | ELEMENT DATA | [34](../pdfs/SACS2024_SACS.pdf#page=34) |
+| 2.7.1 | Members or Beam Elements | [34](../pdfs/SACS2024_SACS.pdf#page=34) |
+| 2.7.1.1 | Member Local Coordinate System | [34](../pdfs/SACS2024_SACS.pdf#page=34) |
+| 2.7.1.1.1 | Member Internal Load and Stress Sign Convention | [35](../pdfs/SACS2024_SACS.pdf#page=35) |
+| 2.7.1.2 | Member End Fixity | [36](../pdfs/SACS2024_SACS.pdf#page=36) |
+| 2.7.1.3 | Member Offsets | [36](../pdfs/SACS2024_SACS.pdf#page=36) |
+| 2.7.1.4 | K-factors/Effective Buckling Length | [37](../pdfs/SACS2024_SACS.pdf#page=37) |
+| 2.7.1.5 | Unbraced Length of Compression Flange | [37](../pdfs/SACS2024_SACS.pdf#page=37) |
+| 2.7.1.6 | Shear Area Factor for Tubular Members | [38](../pdfs/SACS2024_SACS.pdf#page=38) |
+| 2.7.1.7 | Skipping from Output Reports | [38](../pdfs/SACS2024_SACS.pdf#page=38) |
+| 2.7.1.8 | Multiple Members Between Two Joints | [38](../pdfs/SACS2024_SACS.pdf#page=38) |
+| 2.7.1.9 | Defining Special Element Types | [38](../pdfs/SACS2024_SACS.pdf#page=38) |
+| 2.7.1.9.1 | Cable Element | [38](../pdfs/SACS2024_SACS.pdf#page=38) |
+| 2.7.1.9.2 | Gap Element | [38](../pdfs/SACS2024_SACS.pdf#page=38) |
+| 2.7.1.9.3 | Initial Gap Spacing | [39](../pdfs/SACS2024_SACS.pdf#page=39) |
+| 2.7.1.9.4 | X-Brace or K-Brace | [39](../pdfs/SACS2024_SACS.pdf#page=39) |
+| 2.7.2 | Plate Elements | [40](../pdfs/SACS2024_SACS.pdf#page=40) |
+| 2.7.2.1 | Isotropic Plates | [40](../pdfs/SACS2024_SACS.pdf#page=40) |
+| 2.7.2.2 | Membrane and Shear Plates | [41](../pdfs/SACS2024_SACS.pdf#page=41) |
+| 2.7.2.3 | Stiffened Plates | [41](../pdfs/SACS2024_SACS.pdf#page=41) |
+| 2.7.2.4 | Corrugated Plates | [42](../pdfs/SACS2024_SACS.pdf#page=42) |
+| 2.7.2.5 | Plate Local Coordinate System | [43](../pdfs/SACS2024_SACS.pdf#page=43) |
+| 2.7.2.6 | Plate Offsets | [43](../pdfs/SACS2024_SACS.pdf#page=43) |
+| 2.7.2.7 | Skipping from Output Reports | [44](../pdfs/SACS2024_SACS.pdf#page=44) |
+| 2.7.2.8 | Plate Modeling Considerations | [44](../pdfs/SACS2024_SACS.pdf#page=44) |
+| 2.7.3 | Curved MITC Shell Elements | [45](../pdfs/SACS2024_SACS.pdf#page=45) |
+| 2.7.3.1 | MITC Shells Local Coordinate System | [45](../pdfs/SACS2024_SACS.pdf#page=45) |
+| 2.7.3.2 | Shells Normal | [45](../pdfs/SACS2024_SACS.pdf#page=45) |
+| 2.7.3.3 | Integration Points | [46](../pdfs/SACS2024_SACS.pdf#page=46) |
+| 2.7.3.4 | Shell Offsets | [46](../pdfs/SACS2024_SACS.pdf#page=46) |
+| 2.7.3.5 | Shell Element Report | [46](../pdfs/SACS2024_SACS.pdf#page=46) |
+| 2.7.3.6 | A Note on Choice of MITC Shell Elements | [46](../pdfs/SACS2024_SACS.pdf#page=46) |
+| 2.7.4 | Solid Elements | [46](../pdfs/SACS2024_SACS.pdf#page=46) |
+| 2.7.4.1 | Solid Local Coordinate System | [47](../pdfs/SACS2024_SACS.pdf#page=47) |
+| 2.7.4.2 | Solid Offsets | [47](../pdfs/SACS2024_SACS.pdf#page=47) |
+| 2.8 | JOINTS | [48](../pdfs/SACS2024_SACS.pdf#page=48) |
+| 2.8.1 | Joint Coordinates | [48](../pdfs/SACS2024_SACS.pdf#page=48) |
+| 2.8.2 | Joint Support/ Fixity | [48](../pdfs/SACS2024_SACS.pdf#page=48) |
+| 2.8.2.1 | Fixed to Ground | [48](../pdfs/SACS2024_SACS.pdf#page=48) |
+| 2.8.2.2 | Pilehead Supports | [49](../pdfs/SACS2024_SACS.pdf#page=49) |
+| 2.8.2.3 | Spring Supports | [49](../pdfs/SACS2024_SACS.pdf#page=49) |
+| 2.8.2.4 | Retained for Dynamics | [50](../pdfs/SACS2024_SACS.pdf#page=50) |
+| 2.8.2.5 | Retained Degrees of Freedom | [50](../pdfs/SACS2024_SACS.pdf#page=50) |
+| 2.9 | LOADING | [51](../pdfs/SACS2024_SACS.pdf#page=51) |
+| 2.9.1 | Load Conditions | [51](../pdfs/SACS2024_SACS.pdf#page=51) |
+| 2.9.1.1 | Member Distributed Loads and Moments | [51](../pdfs/SACS2024_SACS.pdf#page=51) |
+| 2.9.1.2 | Member Concentrated Loads and Moments | [52](../pdfs/SACS2024_SACS.pdf#page=52) |
+| 2.9.1.3 | Member Temperature Loads | [52](../pdfs/SACS2024_SACS.pdf#page=52) |
+| 2.9.1.4 | Joint Loads | [53](../pdfs/SACS2024_SACS.pdf#page=53) |
+| 2.9.1.5 | Joint Specified Displacements | [53](../pdfs/SACS2024_SACS.pdf#page=53) |
+| 2.9.1.6 | Plate Pressure Loads | [53](../pdfs/SACS2024_SACS.pdf#page=53) |
+| 2.9.1.6.1 | Uniform Pressure | [53](../pdfs/SACS2024_SACS.pdf#page=53) |
+| 2.9.1.6.2 | Varying Pressure | [53](../pdfs/SACS2024_SACS.pdf#page=53) |
+| 2.9.1.6.3 | Submerged Pressure | [54](../pdfs/SACS2024_SACS.pdf#page=54) |
+| 2.9.1.7 | Plate Thermal Loads | [54](../pdfs/SACS2024_SACS.pdf#page=54) |
+| 2.9.1.7.1 | Uniform Temperature | [54](../pdfs/SACS2024_SACS.pdf#page=54) |
+| 2.9.1.7.2 | Varying Temperature | [54](../pdfs/SACS2024_SACS.pdf#page=54) |
+| 2.9.1.7.3 | Surface Temperature | [54](../pdfs/SACS2024_SACS.pdf#page=54) |
+| 2.9.1.8 | Shell Pressure Loads | [55](../pdfs/SACS2024_SACS.pdf#page=55) |
+| 2.9.1.9 | Shell Temperature Loads | [55](../pdfs/SACS2024_SACS.pdf#page=55) |
+| 2.9.2 | Load Combinations | [55](../pdfs/SACS2024_SACS.pdf#page=55) |
+| 2.10 | SETS | [56](../pdfs/SACS2024_SACS.pdf#page=56) |
+| 2.10.1 | Joint List | [56](../pdfs/SACS2024_SACS.pdf#page=56) |
+| 2.10.2 | Member List | [56](../pdfs/SACS2024_SACS.pdf#page=56) |
+| 2.10.3 | Member Group List | [56](../pdfs/SACS2024_SACS.pdf#page=56) |
+| 2.10.4 | Plate List | [57](../pdfs/SACS2024_SACS.pdf#page=57) |
+| 2.10.5 | Plate Group List | [57](../pdfs/SACS2024_SACS.pdf#page=57) |
+| 2.10.6 | Shell List | [57](../pdfs/SACS2024_SACS.pdf#page=57) |
+| 2.10.7 | Solid List | [57](../pdfs/SACS2024_SACS.pdf#page=57) |
+| 2.10.8 | Load Condition List | [57](../pdfs/SACS2024_SACS.pdf#page=57) |
+| 3 | SACS IV TROUBLE SHOOTING | [58](../pdfs/SACS2024_SACS.pdf#page=58) |
+| 3.1 | MODEL SINGULARITY | [58](../pdfs/SACS2024_SACS.pdf#page=58) |
+| 3.2 | DEBUGGING THE MODEL | [58](../pdfs/SACS2024_SACS.pdf#page=58) |
+| 4 | COMMENTARY | [60](../pdfs/SACS2024_SACS.pdf#page=60) |
+| 4.1 | ANGLE CROSS-SECTIONS | [60](../pdfs/SACS2024_SACS.pdf#page=60) |
+| 4.2 | FLAT PLATE CROSS-SECTIONS | [62](../pdfs/SACS2024_SACS.pdf#page=62) |
+| 4.2.1 | Isotropic Plates | [62](../pdfs/SACS2024_SACS.pdf#page=62) |
+| 4.2.2 | Membrane Plates | [62](../pdfs/SACS2024_SACS.pdf#page=62) |
+| 4.2.3 | Shear Plates | [62](../pdfs/SACS2024_SACS.pdf#page=62) |
+| 4.2.4 | Stiffened Plates | [62](../pdfs/SACS2024_SACS.pdf#page=62) |
+| 4.2.5 | Corrugated Plates | [63](../pdfs/SACS2024_SACS.pdf#page=63) |
+| 4.2.6 | Plate Element Transition to Beam Element | [63](../pdfs/SACS2024_SACS.pdf#page=63) |
+| 4.3 | SOLID ELEMENTS | [63](../pdfs/SACS2024_SACS.pdf#page=63) |
+| 4.3.1 | Solid Transition to Shell, Plate or Beam Elements | [63](../pdfs/SACS2024_SACS.pdf#page=63) |
+| 4.4 | Curved MITC Shell Elements | [64](../pdfs/SACS2024_SACS.pdf#page=64) |
+| 4.4.1 | Formulation | [64](../pdfs/SACS2024_SACS.pdf#page=64) |
+| 4.4.2 | Constitutive Equation and Internal Force/Stress Output | [65](../pdfs/SACS2024_SACS.pdf#page=65) |
+| 4.4.3 | MITC Tying Procedure | [65](../pdfs/SACS2024_SACS.pdf#page=65) |
+| 4.4.4 | Drilling Stiffness | [66](../pdfs/SACS2024_SACS.pdf#page=66) |
+| 4.4.5 | Normals at Common Joints | [66](../pdfs/SACS2024_SACS.pdf#page=66) |
+| 4.4.6 | Shell Element Transition to Beam Element | [66](../pdfs/SACS2024_SACS.pdf#page=66) |
+| 4.5 | Linear Solver Options | [67](../pdfs/SACS2024_SACS.pdf#page=67) |
+| 4.5.1 | Rigid-Body Modes of a Statically Indeterminate Structure | [67](../pdfs/SACS2024_SACS.pdf#page=67) |
+| 4.5.2 | Extraction of Rigid-Body Modes | [68](../pdfs/SACS2024_SACS.pdf#page=68) |
+| 4.5.3 | Solution of a Statically Determined Structure Using Cholesky Decomposition | [68](../pdfs/SACS2024_SACS.pdf#page=68) |
+| 4.5.4 | Solution of a Statically Indeterminate Structure Using Singular Value Decomposition | [68](../pdfs/SACS2024_SACS.pdf#page=68) |
+| 4.5.5 | Krylov Subspace Solvers | [69](../pdfs/SACS2024_SACS.pdf#page=69) |
+| 4.5.5.1 | Conjugate Gradient Method | [69](../pdfs/SACS2024_SACS.pdf#page=69) |
+| 4.5.5.2 | Flexible General Minimum Residual Method | [70](../pdfs/SACS2024_SACS.pdf#page=70) |
+| 4.5.6 | Solution of a Statically Indeterminate Structure Using Krylov Subspace Solvers | [70](../pdfs/SACS2024_SACS.pdf#page=70) |
+| 4.5.7 | A comment on Balancing the Forces | [70](../pdfs/SACS2024_SACS.pdf#page=70) |
+| 4.5.8 | General Guidelines on the Choice of Linear Solver Method | [71](../pdfs/SACS2024_SACS.pdf#page=71) |
+| 5 | REFERENCES | [72](../pdfs/SACS2024_SACS.pdf#page=72) |
+| 6 | SAMPLE PROBLEMS | [73](../pdfs/SACS2024_SACS.pdf#page=73) |
+| 6.1 | JACKET MODEL | [74](../pdfs/SACS2024_SACS.pdf#page=74) |
+| 6.2 | SHELL AND SOLID ELEMENT MODEL | [86](../pdfs/SACS2024_SACS.pdf#page=86) |
+| 7 | VERIFICATIONS | [96](../pdfs/SACS2024_SACS.pdf#page=96) |
+| 7.1 | Beams | [96](../pdfs/SACS2024_SACS.pdf#page=96) |
+| 7.1.1 | Deflection and Reactions in a Beam | [96](../pdfs/SACS2024_SACS.pdf#page=96) |
+| 7.1.1.1 | Reference | [96](../pdfs/SACS2024_SACS.pdf#page=96) |
+| 7.1.1.2 | Problem | [96](../pdfs/SACS2024_SACS.pdf#page=96) |
+| 7.1.1.3 | Theoretical Solution | [96](../pdfs/SACS2024_SACS.pdf#page=96) |
+| 7.1.1.4 | Comparison | [97](../pdfs/SACS2024_SACS.pdf#page=97) |
+| 7.1.2 | Thermal Loading on a Beam | [97](../pdfs/SACS2024_SACS.pdf#page=97) |
+| 7.1.2.1 | Reference | [97](../pdfs/SACS2024_SACS.pdf#page=97) |
+| 7.1.2.2 | Problem | [97](../pdfs/SACS2024_SACS.pdf#page=97) |
+| 7.1.2.3 | Theoretical Solution | [98](../pdfs/SACS2024_SACS.pdf#page=98) |
+| 7.1.2.4 | Comparison | [98](../pdfs/SACS2024_SACS.pdf#page=98) |
+| 7.1.3 | Forces on a Propped Cantilever 1 | [98](../pdfs/SACS2024_SACS.pdf#page=98) |
+| 7.1.3.1 | Reference | [98](../pdfs/SACS2024_SACS.pdf#page=98) |
+| 7.1.3.2 | Problem | [98](../pdfs/SACS2024_SACS.pdf#page=98) |
+| 7.1.3.3 | Theoretical Solution | [99](../pdfs/SACS2024_SACS.pdf#page=99) |
+| 7.1.3.3.1 | Load Case 1 | [99](../pdfs/SACS2024_SACS.pdf#page=99) |
+| 7.1.3.3.2 | Load Case 2 | [99](../pdfs/SACS2024_SACS.pdf#page=99) |
+| 7.1.3.4 | Comparison | [100](../pdfs/SACS2024_SACS.pdf#page=100) |
+| 7.1.4 | Torsion on a Stepped Cantilever | [100](../pdfs/SACS2024_SACS.pdf#page=100) |
+| 7.1.4.1 | Reference | [100](../pdfs/SACS2024_SACS.pdf#page=100) |
+| 7.1.4.2 | Problem | [101](../pdfs/SACS2024_SACS.pdf#page=101) |
+| 7.1.4.3 | Theoretical Solution | [101](../pdfs/SACS2024_SACS.pdf#page=101) |
+| 7.1.4.4 | Comparison | [101](../pdfs/SACS2024_SACS.pdf#page=101) |
+| 7.1.5 | Forces on a Propped Cantilever 2 | [102](../pdfs/SACS2024_SACS.pdf#page=102) |
+| 7.1.5.1 | Reference | [102](../pdfs/SACS2024_SACS.pdf#page=102) |
+| 7.1.5.2 | Problem | [102](../pdfs/SACS2024_SACS.pdf#page=102) |
+| 7.1.5.3 | Comparison | [103](../pdfs/SACS2024_SACS.pdf#page=103) |
+| 7.1.6 | Axially Loaded Column | [103](../pdfs/SACS2024_SACS.pdf#page=103) |
+| 7.1.6.1 | Reference | [103](../pdfs/SACS2024_SACS.pdf#page=103) |
+| 7.1.6.2 | Problem | [103](../pdfs/SACS2024_SACS.pdf#page=103) |
+| 7.1.6.3 | Comparison | [104](../pdfs/SACS2024_SACS.pdf#page=104) |
+| 7.1.7 | Tee Shaped Cantilever | [104](../pdfs/SACS2024_SACS.pdf#page=104) |
+| 7.1.7.1 | Reference | [105](../pdfs/SACS2024_SACS.pdf#page=105) |
+| 7.1.7.2 | Problem | [105](../pdfs/SACS2024_SACS.pdf#page=105) |
+| 7.1.7.3 | Comparison | [105](../pdfs/SACS2024_SACS.pdf#page=105) |
+| 7.1.8 | Beam on Elastic Foundation | [105](../pdfs/SACS2024_SACS.pdf#page=105) |
+| 7.1.8.1 | Reference | [106](../pdfs/SACS2024_SACS.pdf#page=106) |
+| 7.1.8.2 | Problem | [106](../pdfs/SACS2024_SACS.pdf#page=106) |
+| 7.1.8.3 | Comparison | [107](../pdfs/SACS2024_SACS.pdf#page=107) |
+| 7.1.9 | Stresses in a Circular Beam | [107](../pdfs/SACS2024_SACS.pdf#page=107) |
+| 7.1.9.1 | Reference | [107](../pdfs/SACS2024_SACS.pdf#page=107) |
+| 7.1.9.2 | Problem | [107](../pdfs/SACS2024_SACS.pdf#page=107) |
+| 7.1.9.3 | Comparison | [108](../pdfs/SACS2024_SACS.pdf#page=108) |
+| 7.1.10 | End Moments in a Non Uniform Beam | [108](../pdfs/SACS2024_SACS.pdf#page=108) |
+| 7.1.10.1 | Reference | [108](../pdfs/SACS2024_SACS.pdf#page=108) |
+| 7.1.10.2 | Problem | [108](../pdfs/SACS2024_SACS.pdf#page=108) |
+| 7.1.10.3 | Comparison | [109](../pdfs/SACS2024_SACS.pdf#page=109) |
+| 7.1.11 | Stresses in a Tapered Cantilever | [109](../pdfs/SACS2024_SACS.pdf#page=109) |
+| 7.1.11.1 | Reference | [109](../pdfs/SACS2024_SACS.pdf#page=109) |
+| 7.1.11.2 | Problem | [110](../pdfs/SACS2024_SACS.pdf#page=110) |
+| 7.1.11.3 | Comparison | [110](../pdfs/SACS2024_SACS.pdf#page=110) |
+| 7.1.12 | Stresses in a Cable due to Thermal Loading | [111](../pdfs/SACS2024_SACS.pdf#page=111) |
+| 7.1.12.1 | Reference | [111](../pdfs/SACS2024_SACS.pdf#page=111) |
+| 7.1.12.2 | Problem | [111](../pdfs/SACS2024_SACS.pdf#page=111) |
+| 7.1.12.3 | Comparison | [112](../pdfs/SACS2024_SACS.pdf#page=112) |
+| 7.1.13 | Curved Beam | [112](../pdfs/SACS2024_SACS.pdf#page=112) |
+| 7.1.13.1 | Reference | [112](../pdfs/SACS2024_SACS.pdf#page=112) |
+| 7.1.13.2 | Problem | [112](../pdfs/SACS2024_SACS.pdf#page=112) |
+| 7.1.13.3 | Comparison | [113](../pdfs/SACS2024_SACS.pdf#page=113) |
+| 7.1.14 | Hanging Bar Axial Stress | [113](../pdfs/SACS2024_SACS.pdf#page=113) |
+| 7.1.14.1 | Reference | [113](../pdfs/SACS2024_SACS.pdf#page=113) |
+| 7.1.14.2 | Problem | [113](../pdfs/SACS2024_SACS.pdf#page=113) |
+| 7.1.14.3 | Comparison | [114](../pdfs/SACS2024_SACS.pdf#page=114) |
+| 7.1.15 | Bent Cantilever Deflection | [115](../pdfs/SACS2024_SACS.pdf#page=115) |
+| 7.1.15.1 | Reference | [115](../pdfs/SACS2024_SACS.pdf#page=115) |
+| 7.1.15.2 | Problem | [115](../pdfs/SACS2024_SACS.pdf#page=115) |
+| 7.1.15.3 | Comparison | [115](../pdfs/SACS2024_SACS.pdf#page=115) |
+| 7.1.16 | Bent Beam Thermal Loading | [116](../pdfs/SACS2024_SACS.pdf#page=116) |
+| 7.1.16.1 | Reference | [116](../pdfs/SACS2024_SACS.pdf#page=116) |
+| 7.1.16.2 | Problem | [116](../pdfs/SACS2024_SACS.pdf#page=116) |
+| 7.1.16.3 | Comparison | [117](../pdfs/SACS2024_SACS.pdf#page=117) |
+| 7.2 | Trusses | [117](../pdfs/SACS2024_SACS.pdf#page=117) |
+| 7.2.1 | Axial Stress on a Truss Model | [117](../pdfs/SACS2024_SACS.pdf#page=117) |
+| 7.2.1.1 | Reference | [117](../pdfs/SACS2024_SACS.pdf#page=117) |
+| 7.2.1.2 | Problem | [117](../pdfs/SACS2024_SACS.pdf#page=117) |
+| 7.2.1.3 | Comparison | [118](../pdfs/SACS2024_SACS.pdf#page=118) |
+| 7.2.2 | Axial Force on a Cable | [118](../pdfs/SACS2024_SACS.pdf#page=118) |
+| 7.2.2.1 | Reference | [118](../pdfs/SACS2024_SACS.pdf#page=118) |
+| 7.2.2.2 | Problem | [118](../pdfs/SACS2024_SACS.pdf#page=118) |
+| 7.2.2.3 | Comparison | [119](../pdfs/SACS2024_SACS.pdf#page=119) |
+| 7.2.3 | Axial Force in a 2D Plane Frame 1 | [119](../pdfs/SACS2024_SACS.pdf#page=119) |
+| 7.2.3.1 | Reference | [119](../pdfs/SACS2024_SACS.pdf#page=119) |
+| 7.2.3.2 | Problem | [119](../pdfs/SACS2024_SACS.pdf#page=119) |
+| 7.2.3.3 | Comparison | [120](../pdfs/SACS2024_SACS.pdf#page=120) |
+| 7.2.4 | Axial Forces on a 3D Space Model | [120](../pdfs/SACS2024_SACS.pdf#page=120) |
+| 7.2.4.1 | Reference | [120](../pdfs/SACS2024_SACS.pdf#page=120) |
+| 7.2.4.2 | Problem | [120](../pdfs/SACS2024_SACS.pdf#page=120) |
+| 7.2.4.3 | Comparison | [121](../pdfs/SACS2024_SACS.pdf#page=121) |
+| 7.2.5 | Reactions in a 2D Truss Model 1 | [122](../pdfs/SACS2024_SACS.pdf#page=122) |
+| 7.2.5.1 | Reference | [122](../pdfs/SACS2024_SACS.pdf#page=122) |
+| 7.2.5.2 | Problem | [122](../pdfs/SACS2024_SACS.pdf#page=122) |
+| 7.2.5.3 | Comparison | [123](../pdfs/SACS2024_SACS.pdf#page=123) |
+| 7.2.6 | Reactions in a 2D Truss Model 2 | [123](../pdfs/SACS2024_SACS.pdf#page=123) |
+| 7.2.6.1 | Reference | [123](../pdfs/SACS2024_SACS.pdf#page=123) |
+| 7.2.6.2 | Problem | [123](../pdfs/SACS2024_SACS.pdf#page=123) |
+| 7.2.6.3 | Comparison | [124](../pdfs/SACS2024_SACS.pdf#page=124) |
+| 7.2.7 | Reactions in a 2D Truss Model 3 | [125](../pdfs/SACS2024_SACS.pdf#page=125) |
+| 7.2.7.1 | Reference | [125](../pdfs/SACS2024_SACS.pdf#page=125) |
+| 7.2.7.2 | Problem | [125](../pdfs/SACS2024_SACS.pdf#page=125) |
+| 7.2.7.3 | Comparison | [125](../pdfs/SACS2024_SACS.pdf#page=125) |
+| 7.2.8 | Deflections in a 2D Truss Model | [126](../pdfs/SACS2024_SACS.pdf#page=126) |
+| 7.2.8.1 | Reference | [126](../pdfs/SACS2024_SACS.pdf#page=126) |
+| 7.2.8.2 | Problem | [126](../pdfs/SACS2024_SACS.pdf#page=126) |
+| 7.2.8.3 | Comparison | [127](../pdfs/SACS2024_SACS.pdf#page=127) |
+| 7.2.9 | Stress in a 2D Truss Model | [127](../pdfs/SACS2024_SACS.pdf#page=127) |
+| 7.2.9.1 | Reference | [127](../pdfs/SACS2024_SACS.pdf#page=127) |
+| 7.2.9.2 | Problem | [127](../pdfs/SACS2024_SACS.pdf#page=127) |
+| 7.2.9.3 | Comparison | [128](../pdfs/SACS2024_SACS.pdf#page=128) |
+| 7.2.10 | Axial Forces in a Plane Frame 2 | [128](../pdfs/SACS2024_SACS.pdf#page=128) |
+| 7.2.10.1 | Reference | [128](../pdfs/SACS2024_SACS.pdf#page=128) |
+| 7.2.10.2 | Problem | [128](../pdfs/SACS2024_SACS.pdf#page=128) |
+| 7.2.10.3 | Comparison | [129](../pdfs/SACS2024_SACS.pdf#page=129) |
+| 7.3 | Frames | [129](../pdfs/SACS2024_SACS.pdf#page=129) |
+| 7.3.1 | 2D Portal Reactions 1 | [129](../pdfs/SACS2024_SACS.pdf#page=129) |
+| 7.3.1.1 | Reference | [129](../pdfs/SACS2024_SACS.pdf#page=129) |
+| 7.3.1.2 | Problem | [129](../pdfs/SACS2024_SACS.pdf#page=129) |
+| 7.3.1.3 | Calculations | [130](../pdfs/SACS2024_SACS.pdf#page=130) |
+| 7.3.1.4 | Comparison | [130](../pdfs/SACS2024_SACS.pdf#page=130) |
+| 7.3.2 | 3x2 Plane Frame Moments | [130](../pdfs/SACS2024_SACS.pdf#page=130) |
+| 7.3.2.1 | Reference | [130](../pdfs/SACS2024_SACS.pdf#page=130) |
+| 7.3.2.2 | Problem | [130](../pdfs/SACS2024_SACS.pdf#page=130) |
+| 7.3.2.3 | Comparison | [132](../pdfs/SACS2024_SACS.pdf#page=132) |
+| 7.3.3 | Support Reactions for a Simple Frame | [133](../pdfs/SACS2024_SACS.pdf#page=133) |
+| 7.3.3.1 | Reference | [133](../pdfs/SACS2024_SACS.pdf#page=133) |
+| 7.3.3.2 | Problem | [133](../pdfs/SACS2024_SACS.pdf#page=133) |
+| 7.3.3.3 | Comparison | [134](../pdfs/SACS2024_SACS.pdf#page=134) |
+| 7.3.4 | 2D Portal Reactions 2 | [134](../pdfs/SACS2024_SACS.pdf#page=134) |
+| 7.3.4.1 | Reference | [134](../pdfs/SACS2024_SACS.pdf#page=134) |
+| 7.3.4.2 | Problem | [134](../pdfs/SACS2024_SACS.pdf#page=134) |
+| 7.3.4.3 | Comparison | [135](../pdfs/SACS2024_SACS.pdf#page=135) |
+| 7.3.5 | 2D Portal Reactions Sidesway 2 | [135](../pdfs/SACS2024_SACS.pdf#page=135) |
+| 7.3.5.1 | Reference | [135](../pdfs/SACS2024_SACS.pdf#page=135) |
+| 7.3.5.2 | Problem | [136](../pdfs/SACS2024_SACS.pdf#page=136) |
+| 7.3.5.3 | Comparison | [137](../pdfs/SACS2024_SACS.pdf#page=137) |
+| 7.3.6 | 1x2 Plane Frame Lateral Load | [137](../pdfs/SACS2024_SACS.pdf#page=137) |
+| 7.3.6.1 | Reference | [137](../pdfs/SACS2024_SACS.pdf#page=137) |
+| 7.3.6.2 | Problem | [137](../pdfs/SACS2024_SACS.pdf#page=137) |
+| 7.3.6.3 | Comparison | [138](../pdfs/SACS2024_SACS.pdf#page=138) |
+| 7.3.7 | 2D Portal Reactions Sidesway 1 | [138](../pdfs/SACS2024_SACS.pdf#page=138) |
+| 7.3.7.1 | Reference | [138](../pdfs/SACS2024_SACS.pdf#page=138) |
+| 7.3.7.2 | Problem | [138](../pdfs/SACS2024_SACS.pdf#page=138) |
+| 7.3.7.3 | Comparison | [139](../pdfs/SACS2024_SACS.pdf#page=139) |
+| 7.3.8 | 2 Bay Frame Moments and Shear | [139](../pdfs/SACS2024_SACS.pdf#page=139) |
+| 7.3.8.1 | Reference | [139](../pdfs/SACS2024_SACS.pdf#page=139) |
+| 7.3.8.2 | Problem | [139](../pdfs/SACS2024_SACS.pdf#page=139) |
+| 7.3.8.3 | Comparison | [140](../pdfs/SACS2024_SACS.pdf#page=140) |
+| 7.3.9 | 3D Frame Max Forces | [140](../pdfs/SACS2024_SACS.pdf#page=140) |
+| 7.3.9.1 | Reference | [140](../pdfs/SACS2024_SACS.pdf#page=140) |
+| 7.3.9.2 | Problem | [141](../pdfs/SACS2024_SACS.pdf#page=141) |
+| 7.3.9.3 | Comparison | [141](../pdfs/SACS2024_SACS.pdf#page=141) |
+| 7.4 | Plate Elements | [142](../pdfs/SACS2024_SACS.pdf#page=142) |
+| 7.4.1 | Cantilever Tube Stresses and Deflection | [142](../pdfs/SACS2024_SACS.pdf#page=142) |
+| 7.4.1.1 | Reference | [142](../pdfs/SACS2024_SACS.pdf#page=142) |
+| 7.4.1.2 | Problem | [142](../pdfs/SACS2024_SACS.pdf#page=142) |
+| 7.4.1.3 | Comparison | [143](../pdfs/SACS2024_SACS.pdf#page=143) |
+| 7.4.2 | 2D Cantilever Beam End Deflection 1 | [144](../pdfs/SACS2024_SACS.pdf#page=144) |
+| 7.4.2.1 | Reference | [144](../pdfs/SACS2024_SACS.pdf#page=144) |
+| 7.4.2.2 | Problem | [144](../pdfs/SACS2024_SACS.pdf#page=144) |
+| 7.4.2.3 | Theoretical Solution | [145](../pdfs/SACS2024_SACS.pdf#page=145) |
+| 7.4.2.4 | Comparison | [145](../pdfs/SACS2024_SACS.pdf#page=145) |
+| 7.4.3 | Natural Frequency of Beam on Springs | [145](../pdfs/SACS2024_SACS.pdf#page=145) |
+| 7.4.3.1 | Reference | [145](../pdfs/SACS2024_SACS.pdf#page=145) |
+| 7.4.3.2 | Problem | [145](../pdfs/SACS2024_SACS.pdf#page=145) |
+| 7.4.3.3 | Comparison | [146](../pdfs/SACS2024_SACS.pdf#page=146) |
+| 7.4.4 | 2D Cantilever Beam End Deflection 2 | [146](../pdfs/SACS2024_SACS.pdf#page=146) |
+| 7.4.4.1 | Reference | [146](../pdfs/SACS2024_SACS.pdf#page=146) |
+| 7.4.4.2 | Problem | [146](../pdfs/SACS2024_SACS.pdf#page=146) |
+| 7.4.4.3 | Theoretical Solution | [147](../pdfs/SACS2024_SACS.pdf#page=147) |
+| 7.4.4.4 | Comparison | [147](../pdfs/SACS2024_SACS.pdf#page=147) |
+| 7.4.5 | 2D Curved Beam Maximum Stress | [148](../pdfs/SACS2024_SACS.pdf#page=148) |
+| 7.4.5.1 | Reference | [148](../pdfs/SACS2024_SACS.pdf#page=148) |
+| 7.4.5.2 | Problem | [148](../pdfs/SACS2024_SACS.pdf#page=148) |
+| 7.4.5.3 | Comparison | [149](../pdfs/SACS2024_SACS.pdf#page=149) |
+| 7.4.6 | 2D Circular Surface Displacements and Stresses | [149](../pdfs/SACS2024_SACS.pdf#page=149) |
+| 7.4.6.1 | Reference | [149](../pdfs/SACS2024_SACS.pdf#page=149) |
+| 7.4.6.2 | Problem | [149](../pdfs/SACS2024_SACS.pdf#page=149) |
+| 7.4.6.3 | Comparison | [150](../pdfs/SACS2024_SACS.pdf#page=150) |
+| 7.4.7 | Twisted Beam Displacements | [150](../pdfs/SACS2024_SACS.pdf#page=150) |
+| 7.4.7.1 | Reference | [150](../pdfs/SACS2024_SACS.pdf#page=150) |
+| 7.4.7.2 | Problem | [151](../pdfs/SACS2024_SACS.pdf#page=151) |
+| 7.4.7.3 | Comparison | [151](../pdfs/SACS2024_SACS.pdf#page=151) |
+| 7.4.8 | Curved Roof Displacements and Stresses | [151](../pdfs/SACS2024_SACS.pdf#page=151) |
+| 7.4.8.1 | Reference | [152](../pdfs/SACS2024_SACS.pdf#page=152) |
+| 7.4.8.2 | Problem | [152](../pdfs/SACS2024_SACS.pdf#page=152) |
+| 7.4.8.3 | Comparison | [153](../pdfs/SACS2024_SACS.pdf#page=153) |
+| 7.4.9 | Spherical Shell Displacements | [153](../pdfs/SACS2024_SACS.pdf#page=153) |
+| 7.4.9.1 | Reference | [153](../pdfs/SACS2024_SACS.pdf#page=153) |
+| 7.4.9.2 | Problem | [153](../pdfs/SACS2024_SACS.pdf#page=153) |
+| 7.4.9.3 | Comparison | [154](../pdfs/SACS2024_SACS.pdf#page=154) |
+| 7.4.10 | 2D Circular Plate In-Plane Stresses | [154](../pdfs/SACS2024_SACS.pdf#page=154) |
+| 7.4.10.1 | Reference | [155](../pdfs/SACS2024_SACS.pdf#page=155) |
+| 7.4.10.2 | Problem | [155](../pdfs/SACS2024_SACS.pdf#page=155) |
+| 7.4.10.3 | Comparison | [156](../pdfs/SACS2024_SACS.pdf#page=156) |
+| 7.4.11 | 2D Rectangular Plate with fixed edges | [156](../pdfs/SACS2024_SACS.pdf#page=156) |
+| 7.4.11.1 | Reference | [156](../pdfs/SACS2024_SACS.pdf#page=156) |
+| 7.4.11.2 | Problem | [156](../pdfs/SACS2024_SACS.pdf#page=156) |
+| 7.4.11.3 | Comparison | [157](../pdfs/SACS2024_SACS.pdf#page=157) |
+| 7.4.12 | 2D Tapered Beam In-Plane Stress | [158](../pdfs/SACS2024_SACS.pdf#page=158) |
+| 7.4.12.1 | Reference | [158](../pdfs/SACS2024_SACS.pdf#page=158) |
+| 7.4.12.2 | Problem | [158](../pdfs/SACS2024_SACS.pdf#page=158) |
+| 7.4.12.3 | Comparison | [158](../pdfs/SACS2024_SACS.pdf#page=158) |
+| 7.4.13 | 2D Surface with Hole Edge Stress | [159](../pdfs/SACS2024_SACS.pdf#page=159) |
+| 7.4.13.1 | Reference | [159](../pdfs/SACS2024_SACS.pdf#page=159) |
+| 7.4.13.2 | Problem | [159](../pdfs/SACS2024_SACS.pdf#page=159) |
+| 7.4.13.3 | Comparison | [160](../pdfs/SACS2024_SACS.pdf#page=160) |
+| 7.4.14 | 2D Circular Surface Edge Stress | [160](../pdfs/SACS2024_SACS.pdf#page=160) |
+| 7.4.14.1 | Reference | [160](../pdfs/SACS2024_SACS.pdf#page=160) |
+| 7.4.14.2 | Problem | [161](../pdfs/SACS2024_SACS.pdf#page=161) |
+| 7.4.14.3 | Comparison | [162](../pdfs/SACS2024_SACS.pdf#page=162) |
+| 7.4.15 | Thermal Load on a Plate | [162](../pdfs/SACS2024_SACS.pdf#page=162) |
+| 7.4.15.1 | Reference | [162](../pdfs/SACS2024_SACS.pdf#page=162) |
+| 7.4.15.2 | Problem | [162](../pdfs/SACS2024_SACS.pdf#page=162) |
+| 7.4.15.3 | Theoretical Solution | [163](../pdfs/SACS2024_SACS.pdf#page=163) |
+| 7.4.15.4 | Comparison | [164](../pdfs/SACS2024_SACS.pdf#page=164) |
+| 7.5 | Curved MITC Shell Elements | [166](../pdfs/SACS2024_SACS.pdf#page=166) |
+| 7.5.1 | Patch Test | [166](../pdfs/SACS2024_SACS.pdf#page=166) |
+| 7.5.1.1 | Reference | [166](../pdfs/SACS2024_SACS.pdf#page=166) |
+| 7.5.1.2 | Problem | [167](../pdfs/SACS2024_SACS.pdf#page=167) |
+| 7.5.1.3 | Comparison | [167](../pdfs/SACS2024_SACS.pdf#page=167) |
+| 7.5.2 | Cook’s Membrane | [168](../pdfs/SACS2024_SACS.pdf#page=168) |
+| 7.5.2.1 | Reference | [168](../pdfs/SACS2024_SACS.pdf#page=168) |
+| 7.5.2.2 | Problem | [169](../pdfs/SACS2024_SACS.pdf#page=169) |
+| 7.5.2.3 | Comparison | [169](../pdfs/SACS2024_SACS.pdf#page=169) |
+| 7.5.3 | Hemispherical Shell | [170](../pdfs/SACS2024_SACS.pdf#page=170) |
+| 7.5.3.1 | Reference | [170](../pdfs/SACS2024_SACS.pdf#page=170) |
+| 7.5.3.2 | Problem | [170](../pdfs/SACS2024_SACS.pdf#page=170) |
+| 7.5.3.3 | Comparison | [171](../pdfs/SACS2024_SACS.pdf#page=171) |
+| 7.5.4 | Pinched Cylinder | [172](../pdfs/SACS2024_SACS.pdf#page=172) |
+| 7.5.4.1 | Reference | [172](../pdfs/SACS2024_SACS.pdf#page=172) |
+| 7.5.4.2 | Problem | [172](../pdfs/SACS2024_SACS.pdf#page=172) |
+| 7.5.4.3 | Comparison | [172](../pdfs/SACS2024_SACS.pdf#page=172) |
+| 7.5.5 | Twisted Beam | [173](../pdfs/SACS2024_SACS.pdf#page=173) |
+| 7.5.5.1 | Reference | [173](../pdfs/SACS2024_SACS.pdf#page=173) |
+| 7.5.5.2 | Problem | [173](../pdfs/SACS2024_SACS.pdf#page=173) |
+| 7.5.5.3 | Comparison | [174](../pdfs/SACS2024_SACS.pdf#page=174) |
+| 7.6 | Solids | [175](../pdfs/SACS2024_SACS.pdf#page=175) |
+| 7.6.1 | Cantilever Beam End Displacement 1 | [175](../pdfs/SACS2024_SACS.pdf#page=175) |
+| 7.6.1.1 | Reference | [175](../pdfs/SACS2024_SACS.pdf#page=175) |
+| 7.6.1.2 | Problem | [175](../pdfs/SACS2024_SACS.pdf#page=175) |
+| 7.6.1.3 | Hand Calculation | [176](../pdfs/SACS2024_SACS.pdf#page=176) |
+| 7.6.1.4 | Comparison | [176](../pdfs/SACS2024_SACS.pdf#page=176) |
+| 7.6.2 | Cantilever Beam End Displacement 2 | [177](../pdfs/SACS2024_SACS.pdf#page=177) |
+| 7.6.2.1 | Hand Calculation | [177](../pdfs/SACS2024_SACS.pdf#page=177) |
+| 7.6.2.2 | Comparison | [178](../pdfs/SACS2024_SACS.pdf#page=178) |
+| 8 | INPUT LINES | [179](../pdfs/SACS2024_SACS.pdf#page=179) |
+
+# 1 INTRODUCTION
 
 ## 1.1 OVERVIEW
 
@@ -648,10 +463,10 @@ e. Corrugated
 6. Contains 6, 8 and 9 node triangular and rectangular shell elements.   
 7. Contains the following solid elements shapes:
 
-## a. 4 node tetrahedron
-## b. 5 node pyramid
-## c. 6 node wedge
-## d. 8 node brick
+a. 4 node tetrahedron
+b. 5 node pyramid
+c. 6 node wedge
+d. 8 node brick
 
 8. Beam and finite element offsets.   
 9. Rotational and translational member releases.   
@@ -663,7 +478,7 @@ e. Corrugated
 14. Thermal loads.   
 15. Specified support deflections.   
 16. Supports tapered sections.   
-17. Supports two analysis techniques for plate elements including DKT and traditional plate beamstrip theory.
+17. Supports two analysis techniques for plate elements including DKT and traditional plate beam-strip theory.
 
 Some of Post module features which can be specified directly in the model file are:
 
@@ -2250,37 +2065,37 @@ Note: Positive B dimension is in the negative local Y axis direction.
 
 SACS IV uses properties about the member principal axes for stiffness calculations. Normally, the cross section input local axes are axes of symmetry and are therefore principal axes. For angles, however, the input axes are not principal axes. Therefore, the inertia properties calculated about the input axes must be transformed to the principal axes by the program using the following:
 
-$$\tan 2 \alpha = - \frac{2 I_{y z}}{I_{y} - I_{z}}$$
+$$\tan 2 \alpha = - \frac{2 I_{yz}}{I_{y} - I_{z}}$$
 
-$$I_{V_{1}} = \frac{I_{y} + I_{z}}{2} + \sqrt{\left(\frac{I_{y} - I_{z}}{2}\right)^{2} + I_{y z}^{2}} \quad I_{V_{2}} = \frac{I_{y} + I_{z}}{2} - \sqrt{\left(\frac{I_{y} - I_{z}}{2}\right)^{2} + I_{y z}^{2}}$$
+$$I_{V_{1}} = \frac{I_{y} + I_{z}}{2} + \sqrt{\left(\frac{I_{y} - I_{z}}{2}\right)^{2} + I_{yz}^{2}} \quad I_{V_{2}} = \frac{I_{y} + I_{z}}{2} - \sqrt{\left(\frac{I_{y} - I_{z}}{2}\right)^{2} + I_{yz}^{2}}$$
 
 The shear areas about the principal axes are used in member stiffness calculations and are taken as:
 
-$$A_{s i} = \frac{I_{V_{i}}^{2}}{\int_{A} \left(\frac{Q_{V_{i}}}{t}\right)^{2} d A}$$
+$$A_{si} = \frac{I_{V_{i}}^{2}}{\int_{A} \left(\frac{Q_{V_{i}}}{t}\right)^{2} d A}$$
 
-where the $\mathsf{ I }_{ \mathsf{ V } \mathrm{ i } }$ and $\mathtt{ Q }_{ \mathtt{ V i } }$ are with respect to the m principal axis.
+where the $I_{V_i}$ and $Q_{V_i}$ are with respect to the m principal axis.
 
-Bending stress and Euler buckling stress are calculated with respect to the principal axes. The effective buckling length factors, $\mathsf{ K }_{ \mathsf{ y } }$ and $\mathsf{ K }_{ \mathsf{ Z } } ,$ are input with respect to the local coordinates. The program transforms the input K-factors into the principal axes system to obtain the factors to be used in Euler buckling calculations, from:
+Bending stress and Euler buckling stress are calculated with respect to the principal axes. The effective buckling length factors, $K_y$ and $K_z$, are input with respect to the local coordinates. The program transforms the input K-factors into the principal axes system to obtain the factors to be used in Euler buckling calculations, from:
 
 $$K_{1} = \left| \frac{K_{z} + K_{y}}{2} \right| + \left| \frac{K_{z} - K_{y}}{2} \right| \cos 2 \alpha \quad K_{2} = \left| \frac{K_{z} + K_{y}}{2} \right| - \left| \frac{K_{z} - K_{y}}{2} \right| \cos 2 \alpha$$
 
-$\mathsf{ K }_{ 1 , 2 }$ = Principal axes effective length factors
+$K_{1,2}$ = Principal axes effective length factors
 
-${ \sf K }_{ \sf y , z }$ = Input effective buckling length factors
+$K_{y,z}$ = Input effective buckling length factors
 
 α = Angle between input axes and principal axes
 
 The shear stress at any point is calculated with respect to the local coordinate system using the following equation:
 
-$$\tau = \frac{\left(V_{z} I_{z} - V_{y} I_{y z}\right) Q_{y} + \left(V_{y} I_{y} - V_{z} I_{y z}\right) Q_{z}}{\left(I_{y} I_{z} - I_{y z}^{2}\right) t}$$
+$$\tau = \frac{\left(V_{z} I_{z} - V_{y} I_{yz}\right) Q_{y} + \left(V_{y} I_{y} - V_{z} I_{yz}\right) Q_{z}}{\left(I_{y} I_{z} - I_{yz}^{2}\right) t}$$
 
-$\mathsf{ I }_{ \mathsf{ y } } , \mathsf{ I }_{ \mathsf{ z } } , \mathsf{ I }_{ \mathsf{ y } \mathsf{ z } }$ = Inertia properties with respect to Y and Z axes
+$I_y,I_z,I_{yz}$ = Inertia properties with respect to Y and Z axes
 
-$\mathsf{ V }_{ \mathsf{ Y } } , \mathsf{ V }_{ \mathsf{ Z } }$ = Shear in Y and Z directions
+$V_y,V_z$ = Shear in Y and Z directions
 
 t = Thickness
 
-$\mathsf{ O }_{ \mathsf{ y } } , \mathsf{ O }_{ \mathsf{ z } }$ = First moments about Y and Z axes of portion of the cross section area between the point and the free edge (Shaded area in figure below).
+$Q_y,Q_z$ = First moments about Y and Z axes of portion of the cross section area between the point and the free edge (Shaded area in figure below).
 
 ![](SACS2024_SACS/chunk0_3bc62ec05b57d92dd4142ad547e2fa6302e89b564960d0314954433486a9cbd9.jpg)
 
@@ -2294,35 +2109,33 @@ Note: Although principal axes are used in stiffness, bending stress and Euler bu
 
 The SACS IV program contains both triangular and quadrilateral orthotropic flat plate elements. These elements are derived from classical flat plate theory techniques by incorporating an empirical theory that includes a constant strain in-plane extensional and shear model, an edge beam representation for out-of-plane bending and shear model and an in-plane torsion model. This combination results in a true 6 degree of freedom linear strain element that has excellent convergence properties.
 
-4.2.1 Isotropic Plates
+### 4.2.1 Isotropic Plates
 
-The isotropic plate element is a full 6 degree of freedom bending element that assumes constant inplane and out-of-plane properties in all directions. This element is applicable for plates with constant thickness and material properties.
+The isotropic plate element is a full 6 degree of freedom bending element that assumes constant in-plane and out-of-plane properties in all directions. This element is applicable for plates with constant thickness and material properties.
 
-4.2.2 Membrane Plates
+### 4.2.2 Membrane Plates
 
 The membrane plate element is similar to the isotropic plate element except the out-of-plane bending and shear stiffness is set to zero. The out-of-plane deflections and rotations are not restrained. This element is applicable when the bending stiffness of the plate is not coupled to the supporting frame or the bending stiffness of the plate is included in the supporting structure elements.
 
-4.2.3 Shear Plates
+### 4.2.3 Shear Plates
 
 Shear plates have only in-plane shear stiffness with all other components of stiffness set equal to zero. This element can be used to represent shear walls or a general shear stiffness for coarse finite element mesh representation.
 
-4.2.4 Stiffened Plates
+### 4.2.4 Stiffened Plates
 
 Stiffened plates are represented by an isotropic plate with additional out-of-plane bending and shear stiffness included to represent parallel member elements attached to the plate in the plate local X and Y coordinate directions. The additional bending and shear stiffness does not have biaxial coupling (the X stiffeners are not coupled to the Y stiffeners).
 
 The stiffened plate element contains the flat plate properties and the average member stiffener properties in both local coordinates including the placement of the plate relative to the member stiffeners. The out-of-plane bending stiffness calculation for the stiffeners assumes an effective plate width acting with the stiffeners for calculating an average additional moment of inertia due to the stiffeners. The effective plate width is limited to the smaller of the parallel stiffener spacing or 30 times the plate thickness.
 
-Stiffened plate elements are effective for including the stiffness of plates and members in one element without modeling an excessive number of joints and/or beam elements. The properties reported for the
+Stiffened plate elements are effective for including the stiffness of plates and members in one element without modeling an excessive number of joints and/or beam elements. The properties reported for the stiffened plate are the effective smeared properties. The maximum stresses are reported for the flat plate portion and the stiffeners separately.
 
-stiffened plate are the effective smeared properties. The maximum stresses are reported for the flat plate portion and the stiffeners separately.
+### 4.2.5 Corrugated Plates
 
-4.2.5 Corrugated Plates
-
-The corrugated plate is a special combination of both in-plane and out-of-plane stiffness. A corrugated plate has extensional stiffness in the direction of the corrugations and no extensional stiffness across the corrugations. In-plane shear is assumed to be fully effective. The out-of-plane bending and shear stiffness is zero when bending across the corrugations. In the direction of the corrugations, the out-ofplane bending and shear stiffness is due to the effective beam properties of the cross section. No biaxial bending coupling is allowed and the in-plane torsional properties are assumed to be fully effective.
+The corrugated plate is a special combination of both in-plane and out-of-plane stiffness. A corrugated plate has extensional stiffness in the direction of the corrugations and no extensional stiffness across the corrugations. In-plane shear is assumed to be fully effective. The out-of-plane bending and shear stiffness is zero when bending across the corrugations. In the direction of the corrugations, the out-of-plane bending and shear stiffness is due to the effective beam properties of the cross section. No biaxial bending coupling is allowed and the in-plane torsional properties are assumed to be fully effective.
 
 Note: When using corrugated plates, the sum of the in-plane area due to the effective plate thickness and the stiffeners must equal the total in-plane area of the corrugated panel in the direction of the corrugations.
 
-4.2.6 Plate Element Transition to Beam Element
+### 4.2.6 Plate Element Transition to Beam Element
 
 Plate offsets can be used to model transition points between plate and beam elements. Any two adjacent plate nodes can be specified as the same joint name. Plate offsets specified at each plate node can then be used to separate the nodes and place them in different spatial positions. This will result in one edge if the plate being described by the motion of one joint which can be connected to a beam element. For example, when modeling a tubular member with a finite element mesh, there is usually a transition point where beam element theory becomes sufficiently accurate. At this point, all of the plate elements must be attached to a single central joint which is the beginning joint of the beam element. The plate elements are connected to the central Joint with offsets such that the ends of the plates are located at the surface of the tubular. The transition joint will define the complete displacement of the cross section at that point and will assure proper internal load transfer. Also, the cross section of the tubular at the transition will remain plane during deformation which is a constraint of normal beam theory.
 
@@ -2330,21 +2143,19 @@ Plate offsets can be used to model transition points between plate and beam elem
 
 The SACS IV program contains 4, 5, 6 and 8 node Solid Finite Elements that represent tetrahedron, pyramid, wedge, and brick shaped elements, respectively. The Solid Elements are based on a constant strain theory and the elements do not restrain rotation at the nodes. The pyramid, wedge and brick elements are built from the basic tetrahedron element.
 
-4.3.1 Solid Transition to Shell, Plate or Beam Elements
+### 4.3.1 Solid Transition to Shell, Plate or Beam Elements
 
-Solid element offsets can be used to generate the transition between the solid elements and isoparametric shells, flat plates and/or beam elements. If a four node face of a solid element is connected to a one or two dimensional element then the four node face should be described by only two Joints. These two Joints should lie on at the center of the face of the Solid Element. The upper and lower edges of the face will be described by the same two Joints and will include offsets to locate them
-
-correctly in space. The resulting Offset Solid Element will form a full 6 degree of freedom transition connection between the elements.
+Solid element offsets can be used to generate the transition between the solid elements and isoparametric shells, flat plates and/or beam elements. If a four node face of a solid element is connected to a one or two dimensional element then the four node face should be described by only two Joints. These two Joints should lie on at the center of the face of the Solid Element. The upper and lower edges of the face will be described by the same two Joints and will include offsets to locate them correctly in space. The resulting Offset Solid Element will form a full 6 degree of freedom transition connection between the elements.
 
 ## 4.4 Curved MITC Shell Elements
 
 Enhanced MITC shell elements replace the Isoparametric shell elements in the Solver.
 
-4.4.1 Formulation
+### 4.4.1 Formulation
 
-MITC shell elements offer a locking-free formulation for general curved shells. MITC shell elements (like Error! Reference source not found.) are based on a degenerate 3D continuum concept where the shell kinematical assumptions are superimposed [6]. For MITC shells, Riesner-Mindilin shell kinematical assumptions are used to derive reduced dimensional shell elements. Each shell element is mapped to a unit flat element using a curvilinear transformation. The curvilinear mapping defines the natural coordinates system （$e_{ r } , e_{ s } , e_{ t } )$ which in general is not orthonormal.
+MITC shell elements offer a locking-free formulation for general curved shells. MITC shell elements (like Error! Reference source not found.) are based on a degenerate 3D continuum concept where the shell kinematical assumptions are superimposed [6]. For MITC shells, Riesner-Mindilin shell kinematical assumptions are used to derive reduced dimensional shell elements. Each shell element is mapped to a unit flat element using a curvilinear transformation. The curvilinear mapping defines the natural coordinates system $(e_{ r } , e_{ s } , e_{ t } )$ which in general is not orthonormal.
 
-In addition, to define the constitutive equation of the shell element, an orthonormal coordinate system is then generated using the natural coordinate system as （$e_{ \bar{ r } } , e_{ \bar{ s } } , e_{ t } )$ where
+In addition, to define the constitutive equation of the shell element, an orthonormal coordinate system is then generated using the natural coordinate system as $(e_{ \bar{ r } } , e_{ \bar{ s } } , e_{ t } )$ where
 
 $$\begin{array}{l} e_{\bar{r}} = \frac{e_{s} \times e_{t}}{| e_{s} \times e_{t} |} \\ e_{\bar{s}} = e_{t} \times e_{\bar{r}} \\ \end{array}$$
 
@@ -2352,35 +2163,33 @@ MITC shells’ geometry is defined by
 
 $$\vec{x} (r, s, t) = \sum_{i = 1}^{N_{j}} \left(h_{i} (r, s) \vec{\hat{x}}_{i} + \frac{t}{2} h_{i} (r, s) a_{i} \vec{n}_{i}\right)$$
 
-Where （$r , s , t )$ are the natural coordinates system, $\vec{ \hat{ x } }_{ i }$ are nodal coordinates in global coordinate system, $a_{ i }$ are the nodal thicknesses, and $\vec{ n }_{ i }$ are the nodal normal. We can now define the covariant base vectors as:
+Where $(r , s , t )$ are the natural coordinates system, $\vec{ \hat{ x } }_{ i }$ are nodal coordinates in global coordinate system, $a_{ i }$ are the nodal thicknesses, and $\vec{ n }_{ i }$ are the nodal normal. We can now define the covariant base vectors as:
 
 $$\vec{g}_{i} = \frac{\partial \vec{x}}{\partial r_{i}}$$
 
-Where $r_{ 1 } = r , r_{ 2 } = s , r_{ 3 } = z .$ .
+Where $r_1=r,r_2=s,r_3=z$.
 
 Similarly, the shells’ displacement fields are approximated using Reissner-Mindlin kinematical assumptions as:
 
-$$\vec{u} (r, s, t) = \sum_{i = 1}^{N_{j}} \left(h_{i} (r, s) \vec{\vec{u}}_{i} + \frac{t}{2} h_{i} (r, s) a_{i} \big (\beta_{i} \vec{V}_{i}^{1} - \alpha_{i} \vec{V}_{i}^{2} \big)\right)$$
+$$\vec{u} (r, s, t) = \sum_{i = 1}^{N_{j}} \left(h_{i} (r, s) \vec{\hat{u}}_{i} + \frac{t}{2} h_{i} (r, s) a_{i} \big (\beta_{i} \vec{V}_{i}^{1} - \alpha_{i} \vec{V}_{i}^{2} \big)\right)$$
 
-Where $\vec{ \hat{ u } }_{ i }$ are nodal displacements in the global coordinate system, （$\alpha_{ i } , \beta_{ i } )$ are the nodal rotations around the chosen nodal director vectors $\vec{ V }_{ i }^{ 1 } , \vec{ V }_{ i }^{ 2 }$ in mid-plane of the shell. The director vectors are a
-
-coordinate system only defined at nodes and are constructed as $\vec{ V }_{ i }^{ 1 } = e_{ y } \times n_{ i } \mathsf{ i f } n_{ i } = e_{ t }$ is not parallel to the global y-axis; otherwise $\vec{ V }_{ i }^{ 1 } = e_{ z } \times n_{ i }$ and ${ \vec{ V } }_{ i }^{ 2 } = n_{ i } \times{ \vec{ V } }_{ i }^{ 1 }$ .
+Where $\vec{ \hat{ u } }_{ i }$ are nodal displacements in the global coordinate system, $(\alpha_{ i } , \beta_{ i } )$ are the nodal rotations around the chosen nodal director vectors $\vec{ V }_{ i }^{ 1 } , \vec{ V }_{ i }^{ 2 }$ in mid-plane of the shell. The director vectors are a coordinate system only defined at nodes and are constructed as $\vec V_i^1=e_y\times n_i$ if $n_i=e_t$ is not parallel to the global y-axis; otherwise $\vec{ V }_{ i }^{ 1 } = e_{ z } \times n_{ i }$ and ${ \vec{ V } }_{ i }^{ 2 } = n_{ i } \times{ \vec{ V } }_{ i }^{ 1 }$ .
 
 The covariant strain components then can be written as:
 
-$$e_{i j} = \frac{1}{2} \left(\vec{g}_{i} \cdot \frac{\partial \vec{u}}{\partial r_{j}} + \vec{g}_{j} \cdot \frac{\partial \vec{u}}{\partial r_{i}}\right)$$
+$$e_{ij} = \frac{1}{2} \left(\vec{g}_{i} \cdot \frac{\partial \vec{u}}{\partial r_{j}} + \vec{g}_{j} \cdot \frac{\partial \vec{u}}{\partial r_{i}}\right)$$
 
 It is easy to see that, similar to all plate and shell theories, the rotation in the shell’s plane (drilling) is not accounted for. The procedure used to add drilling stiffness is described in section 4.4.4.
 
-4.4.2 Constitutive Equation and Internal Force/Stress Output
+### 4.4.2 Constitutive Equation and Internal Force/Stress Output
 
-The traction free conditions on the surface of the shell element are modeled by explicitly zeroing the normal stresses （$\mathsf{ i } . \mathsf{ e } . , \sigma_{ t t } \equiv 0 )$ . The stress-strain relationship in Voigt notation reads as:
+The traction free conditions on the surface of the shell element are modeled by explicitly zeroing the normal stresses $(\mathsf{ i } . \mathsf{ e } . , \sigma_{ t t } \equiv 0 )$ . The stress-strain relationship in Voigt notation reads as:
 
-$$\left\{ \begin{array}{l} \sigma_{\bar{r} \bar{r}} \\ \sigma_{\bar{s} \bar{s}} \\ \sigma_{t t} \\ \sigma_{\bar{r} \bar{s}} \\ \sigma_{\bar{s} t} \\ \sigma_{\bar{r} t} \end{array} \right\} = \frac{E}{1 - \nu^{2}} \left[ \begin{array}{l l l l l l} 1 & \nu & 0 & 0 & 0 & 0 \\ \nu & 1 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & (1 - \nu) & 0 & 0 \\ 0 & 0 & 0 & 0 & k (1 - \nu) & 0 \\ 0 & 0 & 0 & 0 & 0 & k (1 - \nu) \end{array} \right] \left\{ \begin{array}{l} \bar{e}_{\bar{r} \bar{r}} \\ \bar{e}_{\bar{s} \bar{s}} \\ \bar{e}_{t t} \\ \bar{e}_{\bar{r} \bar{s}} \\ \bar{e}_{\bar{s} t} \\ \bar{e}_{\bar{r} t} \end{array} \right\}$$
+$$\left\{ \begin{array}{l} \sigma_{\bar{r} \bar{r}} \\ \sigma_{\bar{s} \bar{s}} \\ \sigma_{tt} \\ \sigma_{\bar{r} \bar{s}} \\ \sigma_{\bar{s} t} \\ \sigma_{\bar{r} t} \end{array} \right\} = \frac{E}{1 - \nu^{2}} \left[ \begin{array}{l l l l l l} 1 & \nu & 0 & 0 & 0 & 0 \\ \nu & 1 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & (1 - \nu) & 0 & 0 \\ 0 & 0 & 0 & 0 & k (1 - \nu) & 0 \\ 0 & 0 & 0 & 0 & 0 & k (1 - \nu) \end{array} \right] \left\{ \begin{array}{l} \bar{e}_{\bar{r} \bar{r}} \\ \bar{e}_{\bar{s} \bar{s}} \\ \bar{e}_{tt} \\ \bar{e}_{\bar{r} \bar{s}} \\ \bar{e}_{\bar{s} t} \\ \bar{e}_{\bar{r} t} \end{array} \right\}$$
 
 Where $E , \nu$ are elastic modulus and Poisson’s ratio, respectively, and $k = 5 / 6$ is the transverse shear factor [1]. And
 
-$$\bar{e}_{i j} = T_{i}^{k} T_{j}^{l} e_{k l}$$
+$$\bar{e}_{ij} = T_{i}^{k} T_{j}^{l} e_{kl}$$
 
 are the strain tensor components in the orthonormal basis and where transformation tensor T can be written as:
 
@@ -2390,37 +2199,35 @@ where $\bar{ e }_{ 1 } = e_{ \bar{ r } } , \bar{ e }_{ 2 } = e_{ \bar{ s } } , \
 
 The free energy of the shell is then written as
 
-$$F_{s h e l l} = \frac{1}{2} \int_{\Omega} \sigma_{i j} \bar{e}_{i j} d V$$
+$$F_{shell} = \frac{1}{2} \int_{\Omega} \sigma_{ij} \bar{e}_{ij} d V$$
 
-Following the same procedure, the internal forces and stresses of MITC shell element are written in the （$e_{ \bar{ r } } , e_{ \bar{ s } } , e_{ t } )$ orthonormal coordinate system.
+Following the same procedure, the internal forces and stresses of MITC shell element are written in the $(e_{ \bar{ r } } , e_{ \bar{ s } } , e_{ t } )$ orthonormal coordinate system.
 
-4.4.3 MITC Tying Procedure
+### 4.4.3 MITC Tying Procedure
 
-It is well known that shells suffer from shear and membrane locking. Simply put, shear locking occurs because the bending displacement of the shell creates transverse shear deformation, which should not
+It is well known that shells suffer from shear and membrane locking. Simply put, shear locking occurs because the bending displacement of the shell creates transverse shear deformation, which should not be present in pure bending. The contribution of transverse shears to the stiffness matrix can become larger than the bending stiffness of the shell and can result in locking. Similarly, membrane locking occurs because of pure bending of the shell results in membrane deformation. The contribution of the membrane effects to stiffness can become larger than the bending stiffness of the shell and result in locking. MITC procedure circumvents these issues by projecting the membrane and transverse shear strains to a lower order approximation compared to that used for bending strain. MITC shells use different tying points at which the covariant transverse shear and membrane strains are calculated. Then during the integration procedure, these strains are approximated using their values at these tying points.
 
-be present in pure bending. The contribution of transverse shears to the stiffness matrix can become larger than the bending stiffness of the shell and can result in locking. Similarly, membrane locking occurs because of pure bending of the shell results in membrane deformation. The contribution of the membrane effects to stiffness can become larger than the bending stiffness of the shell and result in locking. MITC procedure circumvents these issues by projecting the membrane and transverse shear strains to a lower order approximation compared to that used for bending strain. MITC shells use different tying points at which the covariant transverse shear and membrane strains are calculated. Then during the integration procedure, these strains are approximated using their values at these tying points.
+### 4.4.4 Drilling Stiffness
 
-4.4.4 Drilling Stiffness
+The drilling stiffness is added to shells stiffness following the method first described in [7]. The drilling stiffness is added to minimize the difference between the out-of-plane rotation of the shell and the skew-symmetric part of strain representing the twisting of the shell. The covariant components of skew-symmetric twist of the element can be written as:
 
-The drilling stiffness is added to shells stiffness following the method first described in [7]. The drilling stiffness is added to minimize the difference between the out-of-plane rotation of the shell and the skew-symmetric part of strain representing the twisting of the shell. The covariant components of skewsymmetric twist of the element can be written as:
-
-$$\omega_{i j} = \frac{1}{2} \left(\vec{g}_{i} \cdot \frac{\partial \vec{u}}{\partial r_{j}} - \vec{g}_{j} \cdot \frac{\partial \vec{u}}{\partial r_{i}}\right)$$
+$$\omega_{ij} = \frac{1}{2} \left(\vec{g}_{i} \cdot \frac{\partial \vec{u}}{\partial r_{j}} - \vec{g}_{j} \cdot \frac{\partial \vec{u}}{\partial r_{i}}\right)$$
 
 The twist in orthonormal basis is then calculated as:
 
-$$\omega_{\bar{r} \bar{s}} = T_{1}^{i} T_{2}^{j} \omega_{i j}$$
+$$\omega_{\bar{r} \bar{s}} = T_{1}^{i} T_{2}^{j} \omega_{ij}$$
 
 Finally, we can write the energetic cost of twisting as
 
-$$F_{d r i l l} = \int_{\Omega} k_{d r i l l} \mu (\theta_{t} - \omega_{\bar{r} \bar{s}})^{2} d V$$
+$$F_{drill} = \int_{\Omega} k_{drill} \mu (\theta_{t} - \omega_{\bar{r} \bar{s}})^{2} d V$$
 
 Where $k_{ d r i l l } = 10^{ - 3 } , \mu = E / ( 2 ( 1 + \nu ) )$ , and $\theta_{ t }$ is the drilling rotation (i.e., rotational degree freedom perpendicular to the surface of the shell).
 
-4.4.5 Normals at Common Joints
+### 4.4.5 Normals at Common Joints
 
 MITC shell elements approximate the geometry of the surface using the isoparametric shape functions, which are quadratic in each natural direction (see 4.4.1). Therefore, a generally curved surface is described using discrete elements such that their local normal may not exactly coincide with the original surface. This can cause discontinuities of the normal in neighboring shell elements, resulting in reduced performance of the elements. Therefore, the normal of the shell elements within each shell group are averaged at each common joint to alleviate this issue.
 
-4.4.6 Shell Element Transition to Beam Element
+### 4.4.6 Shell Element Transition to Beam Element
 
 Isoparametric shell offsets are normally used to locate the neutral axis of the shell relative to the connecting structure. They can also be used to generate the transition between the isoparametric shells and beam elements.
 
@@ -2430,43 +2237,41 @@ For example, when modeling a tubular member with shell elements, there is usuall
 
 ## 4.5 Linear Solver Options
 
-The Solver allows the user to change the linear solver type and to remove the rigid-body motion and solve a statically indeterminate structure. The Solver extracts the rigid-body modes using Singular Value Decomposition (SVD) and can obtain the solution either using the same or using two Krylov subspace iterative solvers: Conjugate Gradient Method (CG), Flexible General Minimum Residual (FGMRes) [1]. All these methods can also be used for a statically determined structure along with the sparse and dense inmemory Cholesky factorization provided by the SACS solver.
+The Solver allows the user to change the linear solver type and to remove the rigid-body motion and solve a statically indeterminate structure. The Solver extracts the rigid-body modes using Singular Value Decomposition (SVD) and can obtain the solution either using the same or using two Krylov subspace iterative solvers: Conjugate Gradient Method (CG), Flexible General Minimum Residual (FGMRes) [1]. All these methods can also be used for a statically determined structure along with the sparse and dense in-memory Cholesky factorization provided by the SACS solver.
 
-4.5.1 Rigid-Body Modes of a Statically Indeterminate Structure
+### 4.5.1 Rigid-Body Modes of a Statically Indeterminate Structure
 
-The rigid-body modes (also known as zero-energy or zero-frequency modes) are displacements under which the structure does not deform, and therefore, these modes do not create any stresses [1, sec.
-
-4.2.5]. For a three-dimensional elastic body with 6 degrees of freedom per point (node), the rigid body mode can be written as a combination of 3 translations and 3 rotations. In static analysis, after discretization, the finite element method reduces the system to a system of algebraic equations that in general read as
+The rigid-body modes (also known as zero-energy or zero-frequency modes) are displacements under which the structure does not deform, and therefore, these modes do not create any stresses [1, sec. 4.2.5]. For a three-dimensional elastic body with 6 degrees of freedom per point (node), the rigid body mode can be written as a combination of 3 translations and 3 rotations. In static analysis, after discretization, the finite element method reduces the system to a system of algebraic equations that in general read as
 
 $$K u = f$$
 
-where ?? is the vector of unknown degrees of freedom, ?? is the stiffness matrix, ?? is the right-hand-side forces vector. At this algebraic level, the rigid-body modes are manifested as the null-space of the global stiffness matrix ??. Simply put, rigid-body modes are a set of $N_{ r i g i d - b o d y }$ orthonormal bases such that
+where $u$ is the vector of unknown degrees of freedom, $K$ is the stiffness matrix, $f$ is the right-hand-side forces vector. At this algebraic level, the rigid-body modes are manifested as the null-space of the global stiffness matrix $K$. Simply put, rigid-body modes are a set of $N_{\mathrm{rigid-body}}$ orthonormal bases such that
 
-$$K n_{i} = 0 i = 1.. N_{r i g i d - b o d y}$$
+$$K n_{i} = 0 i = 1.. N_{\mathrm{rigid-body}}$$
 
-$$n_{i} \cdot n_{j} = \delta_{i j}$$
+$$n_{i} \cdot n_{j} = \delta_{ij}$$
 
-where $\delta_{ i j }$ is the Kronecker’s delta. The null-space of global stiffness matrix ?? is the space that is spanned by its null space
+where $\delta_{ i j }$ is the Kronecker’s delta. The null-space of global stiffness matrix $K$ is the space that is spanned by its null space
 
-$$N_{K} = s p a n \{n_{i} \mid K n_{i} = 0 \}$$
+$$N_{K} = \operatorname{span} \{n_{i} \mid K n_{i} = 0 \}$$
 
 For a statically indeterminate structure, the resulting global stiffness matrix is rank deficient, and its nullspace is none empty. In contrast, a statically determined (and stable) structure results in a full rank global stiffness matrix and an empty null space.
 
-4.5.2 Extraction of Rigid-Body Modes
+### 4.5.2 Extraction of Rigid-Body Modes
 
 To detect rigid body modes, the Solver performs a Singular Value Decomposition of the stiffness matrix:
 
 $$K = U \Sigma V^{T}$$
 
-Where ?? and ?? are unitary matrices （$i . e . , U^{ - 1 } = U^{ T } )$ and Σ is a diagonal singular values matrix. It is easy to show that each rigid-body mode (null-space basis vector) of ?? corresponds to a zero diagonal of Σ and is given by the corresponding row in ?? (or corresponding column in ??). In practice, the rigid bodymodes manifest as small entries in Σ and are extracted based on the given tolerance or the desired number. The user can inspect the system's singular values in the SACS listing file, where the rigid-body modes can be easily identified since their values are orders of magnitude smaller than any ordinary mode of the system. The user should note that the current SVD algorithm used is memory intensive and should be used with care for large structures.
+Where $U$ and $V$ are unitary matrices $(i . e . , U^{ - 1 } = U^{ T } )$ and Σ is a diagonal singular values matrix. It is easy to show that each rigid-body mode (null-space basis vector) of $K$ corresponds to a zero diagonal of Σ and is given by the corresponding row in $U$ (or corresponding column in $V$). In practice, the rigid body-modes manifest as small entries in Σ and are extracted based on the given tolerance or the desired number. The user can inspect the system's singular values in the SACS listing file, where the rigid-body modes can be easily identified since their values are orders of magnitude smaller than any ordinary mode of the system. The user should note that the current SVD algorithm used is memory intensive and should be used with care for large structures.
 
-4.5.3 Solution of a Statically Determined Structure Using Cholesky Decomposition
+### 4.5.3 Solution of a Statically Determined Structure Using Cholesky Decomposition
 
 If the structure is statically determined (i.e., the global stiffness matrix is full-ranked), the solution of the system can be obtained using the Cholesky factorization
 
 $$K = L L^{T}$$
 
-Where the global stiffness matrix is decomposed into a lower-triangular matrix ??. The solution can then be easily calculated first using a forward substitution to solve
+Where the global stiffness matrix is decomposed into a lower-triangular matrix $L$. The solution can then be easily calculated first using a forward substitution to solve
 
 $$L y = f$$
 
@@ -2474,63 +2279,63 @@ And subsequently to solve for deformations using a backward substitution
 
 $$L^{T} u = y$$
 
-It is easy to show that if the global stiffness matrix is not full-ranked, a zero diagonal will be created in ?? and therefore, the forward and backward substitutions will break down. The Cholesky factorization, however, is extremely memory-efficient and computationally cheap and should be used as the default linear solver for statically determined structures. SACS provides two implementations of Cholesky decomposition. The default solver uses the sparse matrix and offloads the matrices into disk. On the other hand, the dense version performs the solution completely in memory.
+It is easy to show that if the global stiffness matrix is not full-ranked, a zero diagonal will be created in $L$ and therefore, the forward and backward substitutions will break down. The Cholesky factorization, however, is extremely memory-efficient and computationally cheap and should be used as the default linear solver for statically determined structures. SACS provides two implementations of Cholesky decomposition. The default solver uses the sparse matrix and offloads the matrices into disk. On the other hand, the dense version performs the solution completely in memory.
 
-4.5.4 Solution of a Statically Indeterminate Structure Using Singular Value Decomposition
+### 4.5.4 Solution of a Statically Indeterminate Structure Using Singular Value Decomposition
 
 To solve a statically indeterminate structure using the SVD decomposition one can create a pseudoinverse of the stiffness matrix as [2, sec. 2.6]
 
-$$K^{i n v} = V \Sigma^{\mathrm{i n v}} U^{T}$$
+$$K^{\mathrm{inv}} = V \Sigma^{\mathrm{inv}} U^{T}$$
 
 Where
 
-$$\Sigma_{i j}^{\mathrm{i n v}} = \left\{ \begin{array}{l l} \Sigma_{i j}^{-1} & \text{i f} \Sigma_{i j} \neq 0 \\ 0 & \text{o t h e r w i s e} \end{array} \right.$$
+$$\Sigma_{ij}^{\mathrm{inv}} = \left\{ \begin{array}{l l} \Sigma_{ij}^{-1} & \text{if} \Sigma_{ij} \neq 0 \\ 0 & \text{otherwise} \end{array} \right.$$
 
 The solution then can be easily obtained as [2]
 
-$$\boldsymbol{u} = K^{i n v} \boldsymbol{f} = V \Sigma^{i n v} U^{T} \boldsymbol{f}$$
+$$\boldsymbol{u} = K^{\mathrm{inv}} \boldsymbol{f} = V \Sigma^{\mathrm{inv}} U^{T} \boldsymbol{f}$$
 
-If the right-hand-side force vector ?? is statically unbalanced, it will have components along the structure's rigid-body-modes. Much like the Krylov subspace solvers presented next, the above formulation will project the force on the span of the global stiffness matrix ?? and results in a statically balanced set of forces. While being computationally more expensive than the Cholesky factorization, the above solution algorithm is recommended for large statically indeterminate structures where the condition number of the global stiffness matrix deteriorates and limits the use of iterative Krylov subspace solvers.
+If the right-hand-side force vector $f$ is statically unbalanced, it will have components along the structure's rigid-body-modes. Much like the Krylov subspace solvers presented next, the above formulation will project the force on the span of the global stiffness matrix $K$ and results in a statically balanced set of forces. While being computationally more expensive than the Cholesky factorization, the above solution algorithm is recommended for large statically indeterminate structures where the condition number of the global stiffness matrix deteriorates and limits the use of iterative Krylov subspace solvers.
 
-4.5.5 Krylov Subspace Solvers
+### 4.5.5 Krylov Subspace Solvers
 
 The Krylov subspace is a subspace that is created by spanning a matrix together with a vector as[3]
 
-$$\mathcal{K}_{r} (A, v) = s p a n \{v, A v, A^{2} v, \dots , A^{r - 1} v \}$$
+$$\mathcal{K}_{r} (A, v) = \operatorname{span} \{v, A v, A^{2} v, \dots , A^{r - 1} v \}$$
 
-The Krylov subspace methods solve a linear set of equations $A x = b$ by finding the solution in space ${ \mathcal{ K } }_{ r } ( A , b - A x_{ 0 } )$ where $x_{ 0 }$ is the initial guess by imposing the Galerkin condition
+The Krylov subspace methods solve a linear set of equations $A x = b$ by finding the solution in space $\mathcal K_r(A,b-Ax_0)$ where $x_{ 0 }$ is the initial guess by imposing the Galerkin condition
 
 $$b - A x \perp \mathcal{S}$$
 
-where ?? is another subspace. The Galerkin condition simply states that the solution has the minimum residual with respect to the given space ??. Different Krylov subspace methods correspond to different choices of ??. The user should note that general the speed of convergence for the Krylov subspace solvers depends strongly on condition number of the global stiffness matrix.
+where $\mathcal S$ is another subspace. The Galerkin condition simply states that the solution has the minimum residual with respect to the given space $\mathcal S$. Different Krylov subspace methods correspond to different choices of $\mathcal S$. The user should note that general the speed of convergence for the Krylov subspace solvers depends strongly on condition number of the global stiffness matrix.
 
-4.5.5.1 Conjugate Gradient Method
+#### 4.5.5.1 Conjugate Gradient Method
 
-The Conjugate gradient method corresponds to a Krylov subspace method where $\mathcal{ S } = \mathcal{ K }_{ r } ( A , r_{ 0 } )$ where $r_{ 0 } = b - A x_{ 0 }$ is the initial residual. This method is restricted to systems of equations where the matrix ?? is positive definite （$A = A^{ T }$ and eigenvalues of ?? are all positive). For a positive definite matrix ?? , solution of $A x = b$ is equivalent to minimization of convex $\begin{array} { r } { f ( x ) = \frac{ 1 } { 2 } x^{ T } A x - b x } \end{array}$ . Conjugate gradient method can be thought of as an extension to the steepest decent method where at each step instead of using the steepest decent direction (i.e., the residual direction $r_{ n } = b - A x_{ n } )$ we require the new search direction $p_{ n }$ to be conjugate to all previous direction （$\mathsf{ i . e . , } p_{ n }^{ T } A p_{ i } i = 1 \ldots n - 1 )$ . Since the Conjugate gradient method is particularly well suited for large finite element problems, since it only depends on sparse matrix, vector multiplication, and the global stiffness matrix resulting from the finite element discretization is (semi-) positive-definite.
+The Conjugate gradient method corresponds to a Krylov subspace method where $\mathcal{ S } = \mathcal{ K }_{ r } ( A , r_{ 0 } )$ where $r_{ 0 } = b - A x_{ 0 }$ is the initial residual. This method is restricted to systems of equations where the matrix $A$ is positive definite $(A = A^{ T }$ and eigenvalues of $A$ are all positive). For a positive definite matrix $A$ , solution of $A x = b$ is equivalent to minimization of convex $f(x)=\frac12 x^T A x-bx$ . Conjugate gradient method can be thought of as an extension to the steepest decent method where at each step instead of using the steepest decent direction (i.e., the residual direction $r_{ n } = b - A x_{ n } )$ we require the new search direction $p_{ n }$ to be conjugate to all previous direction $(i.e.,p_n^T A p_i\quad i=1,\ldots,n-1)$ . Since the Conjugate gradient method is particularly well suited for large finite element problems, since it only depends on sparse matrix, vector multiplication, and the global stiffness matrix resulting from the finite element discretization is (semi-) positive-definite.
 
-4.5.5.2 Flexible General Minimum Residual Method
+#### 4.5.5.2 Flexible General Minimum Residual Method
 
-The Flexible General Minim Residual (FGMRes) method correspond to a Krylov subspace method where $\mathcal{ S } = A \mathcal{ K }_{ r } ( A , \frac{ r_{ 0 } } { \left| \left| r_{ 0 } \right| \right|_{ 2 } } )$ ||??0||2) . Unlike the conjugate gradient method, FGMRes does not require matrix ?? to be symmetric and converges if the symmetric part of ??, （$A + A^{ T } ) / 2$ is positive definite. In practice, this better convergence behavior comes at a more computational cost. Because of this added cost, FGMRes method should be used only as an alternative if the Conjugate gradient method does not converge.
+The Flexible General Minim Residual (FGMRes) method correspond to a Krylov subspace method where $\mathcal S=A\mathcal K_r(A,r_0/\lVert r_0\rVert_2)$. Unlike the conjugate gradient method, FGMRes does not require matrix $A$ to be symmetric and converges if the symmetric part of $A$, $(A + A^{ T } ) / 2$ is positive definite. In practice, this better convergence behavior comes at a more computational cost. Because of this added cost, FGMRes method should be used only as an alternative if the Conjugate gradient method does not converge.
 
-4.5.6 Solution of a Statically Indeterminate Structure Using Krylov Subspace Solvers
+### 4.5.6 Solution of a Statically Indeterminate Structure Using Krylov Subspace Solvers
 
-To solve a statically indeterminate structure (i.e., to solve ???? = ?? where ?? is rank deficient and nullspace of ?? is not empty). In practice, each iteration of Krylov subspace solvers can be written as a linear operation on the solution of the previous iteration:
+To solve a statically indeterminate structure (i.e., to solve $Ku=f$ where $K$ is rank deficient and null-space of $K$ is not empty). In practice, each iteration of Krylov subspace solvers can be written as a linear operation on the solution of the previous iteration:
 
 $$u_{n} = \mathcal{L} \left(u_{i}, i <   n\right)$$
 
-It is easy to see that since the solution space is chosen from the Krylov subspace, it is not going to be normal to the null-space of the global stiffness matrix (i.e., it is not going to involve rigid-body modes). We, however, need to ensure that the right-hand-side forces are also normal to the null-space, i.e., they are statically balanced. To achieve this, we remove the projection of right-hand-side forces on the nullspace from it and replace ?? with ?? that is statically balanced
+It is easy to see that since the solution space is chosen from the Krylov subspace, it is not going to be normal to the null-space of the global stiffness matrix (i.e., it is not going to involve rigid-body modes). We, however, need to ensure that the right-hand-side forces are also normal to the null-space, i.e., they are statically balanced. To achieve this, we remove the projection of right-hand-side forces on the nullspace from it and replace $f$ with $\mathcal f$ that is statically balanced
 
-$$f = f - \sum_{i = 1}^{N_{r i g i d - b o d y}} (f. n_{i}) n_{i}$$
+$$\mathcal f = f - \sum_{i = 1}^{N_{\mathrm{rigid-body}}} (f. n_{i}) n_{i}$$
 
-In practice, the rigid body modes appear because of the truncation error. The Solver creates a solution that is rigid-body-motion free $\scriptstyle{ { \mathcal{ u } }_{ n } }$ from the solution given by the Krylov subspace solver, at each iteration
+In practice, the rigid body modes appear because of the truncation error. The Solver creates a solution that is rigid-body-motion free $\mathcal u_n$ from the solution given by the Krylov subspace solver, at each iteration
 
-$$u_{n} = u_{n} - \sum_{i = 1}^{N_{r i g i d - b o d y}} (u_{n}. n_{i}) n_{i}$$
+$$\mathcal u_{n} = u_{n} - \sum_{i = 1}^{N_{\mathrm{rigid-body}}} (u_{n}. n_{i}) n_{i}$$
 
-4.5.7 A comment on Balancing the Forces
+### 4.5.7 A comment on Balancing the Forces
 
 A rigid-body-motion-free deformation cannot be obtained from the linear set of balance equations unless the right-hand-side forces are also balanced (normal to the null-space). The algorithm presented above achieves this by finding the unbalanced forces nearest projection on the subspace of balanced forces. In general, this projection, however, does not correspond to a set of balanced forces that can be obtained taking into account the d’Alembert inertial forces on the system since the Krylov subspace lacks any knowledge of the system’s mass matrix. In practice, the users are encouraged to verify the balance or near balance of their forces along the different components of the rigid-body-motion. The Solver provides the magnitude of each of these projections in the SACS listing file.
 
-4.5.8 General Guidelines on the Choice of Linear Solver Method
+### 4.5.8 General Guidelines on the Choice of Linear Solver Method
 
 Different linear solvers have different strengths and shortcomings that make them suitable for different situations.
 
@@ -2541,7 +2346,9 @@ The iterative Krylov solvers (fGMRes and CG) can only be used for static analysi
 
 Note: SACS will attempt to use the sparse Cholesky in the event that any other method fails.
 
-5 REFERENCES
+> PDF 原书疑点（p.61、64、68-70）：p.61 在含 i 下标的主轴定义后写 m principal axis；p.64 自带 “Error! Reference source not found.”，并把 $r_3$ 写为 z；p.68 将静不定与刚度矩阵秩亏直接等同，SVD 模态行/列的叙述也需另行核验；p.70 的 “not going to be normal to the null-space” 与紧接着的无刚体模态解释不一致。此处保留原书表述，仅恢复可由 PDF 核实的 OCR 符号。
+
+# 5 REFERENCES
 
 [1] Bathe, Klaus-Jürgen. Finite element procedures. Klaus-Jurgen Bathe, 2006.   
 [2] Press, William H., et al. Numerical recipes 3rd edition: The art of scientific computing. Cambridge university press, 2007.   
@@ -2551,11 +2358,14 @@ Note: SACS will attempt to use the sparse Cholesky in the event that any other m
 [6] Wriggers, Peter. Nonlinear finite element methods. Springer Science & Business Media, 2008.   
 [7] Kanok‐nukulchai, Worsak. "A simple and efficient finite element for general shell analysis." International Journal for Numerical Methods in Engineering 14.2 (1979): 179-200.
 
-6 SAMPLE PROBLEMS
+# 6 SAMPLE PROBLEMS
+
+> 校订说明：输入与报告已按 PDF p.73-95 的文字坐标恢复。代码块左侧保留原书行号，以便对应 Line / Lines 说明；行号、列号标尺和 ADDITIONAL 提示行是文档示例标记，不属于完整可执行的 SACS 输入文件。原书报告中的软件版本、日期、旧标题及原书内部矛盾均保留。
 
 The sample problems illustrate various capabilities of the SACS IV program module. Two separate analyses are detailed.
 
-1. The first sample problem is a jacket type structure consisting of tubular, wide flange, angle and cone cross section beam elements and flat plate elements. In addition to properties specified in the model file, section properties defined in the AISC section library were referenced. This sample contains member and plate offsets along with member end releases. Four basic load conditions, comprised of joint loads, member uniform loads, member concentrated loads and joint specified displacements, and two load combinations were specified.   
+1. The first sample problem is a jacket type structure consisting of tubular, wide flange, angle and cone cross section beam elements and flat plate elements. In addition to properties specified in the model file, section properties defined in the AISC section library were referenced. This sample contains member and plate offsets along with member end releases. Four basic load conditions, comprised of joint loads, member uniform loads, member concentrated loads and joint specified displacements, and two load combinations were specified.
+
 2. Sample Problem 2 illustrates the use of shell and solid elements. Three basic load cases consisting of joint loads, linearly varying shell pressure loads and varying shell temperature loads were specified in addition to two load combinations.
 
 ## 6.1 JACKET MODEL
@@ -2566,230 +2376,226 @@ Sample Problem 1 is the deck type structure shown. Cone, tubular, and wide flang
 
 Offsets are specified for flare boom tubular members so that braces are modeled to the face of the chord. An equipment skid is modeled with dummy members to distribute the equipment load to the beam elements.
 
-Six basic load conditions and two load combinations are specified. Load case ‘AREA’ consists of distributed area loads automatically generated by the Precede Load > Member Area feature representing general dead loading. Load case ‘DEAD’ consists of member and joint loads automatically
-
-generated by the Precede Load> Self Weight feature to represent the dead load of the structure. Load Case ‘EQPT’ contains concentrated member loads automatically generated by the Precede Load > Skid Loads feature representing equipment loads. Load case ‘LIVE’ consist of member uniform loads automatically generated by the Load > Member Area feature representing live load. Load case, ‘MACH’ contains joint loads representing additional equipment loads and Load Case ‘MISC’ is used to specify additional miscellaneous dead loads.
+Six basic load conditions and two load combinations are specified. Load case ‘AREA’ consists of distributed area loads automatically generated by the Precede Load > Member Area feature representing general dead loading. Load case ‘DEAD’ consists of member and joint loads automatically generated by the Precede Load> Self Weight feature to represent the dead load of the structure. Load Case ‘EQPT’ contains concentrated member loads automatically generated by the Precede Load > Skid Loads feature representing equipment loads. Load case ‘LIVE’ consist of member uniform loads automatically generated by the Load > Member Area feature representing live load. Load case, ‘MACH’ contains joint loads representing additional equipment loads and Load Case ‘MISC’ is used to specify additional miscellaneous dead loads.
 
 Parts of the SACS model file is shown below followed by a description of selected portions.
 
+<!-- 校订来源：SACS2024_SACS.pdf p.75；保留原书示例行号与报告列位。 -->
+```text
+               1         2         3         4         5         6         7         8
+      12345678901234567890123456789012345678901234567890123456789012345678901234567890
+ 1    SAMPLE 01 ENGLISH UNITS MODEL
+ 2    OPTIONS      EN       SDUC   2 1                PTPT      PT
+ 3    LCSEL           CMB1 CMB2
+ 4    SECT
+ 5    SECT CONE      CON                               36.0000.75026.000
+ 6    GRUP
+ 7    GRUP DUM         12.000 1.000 29.0011.6036.00 9    1.001.00     0.500N490.00
+ 8    GRUP LG6         36.000 0.750 29.0011.0036.00 1    1.001.00     0.500N490.003.25
+ 9    GRUP LG6 CONE                 29.0011.6036.00 1    1.001.00     0.500N490.004.95
+10    GRUP LG6         26.000 0.750 29.0011.6036.00 1    1.001.00     0.500N490.00
+11    GRUP LG7         26.000 0.750 29.0011.6036.00 1    1.001.00     0.500N490.00
+12    GRUP SHF          4.000 1.000 29.0011.6036.00 1    1.001.00     0.500N490.00
+13    GRUP SK2 W8X24                29.0011.6036.00 1    1.001.00     0.500N1.00-2
+14    GRUP SKD W12X30               29.0011.6036.00 1    1.001.00     0.500N1.00-2
+15    GRUP STB          6.000 1.000 29.0011.6036.00 9    1.001.00     0.500N1.00-2
+16    GRUP VB1         12.750 0.625 29.0011.6036.00 1    1.001.00     0.500N490.00
+17    GRUP VB2          8.825 0.500 29.0011.6036.00 1    1.001.00     0.500N490.00
+18    GRUP VBS         12.750 0.625 29.0011.6036.00 1    1.001.00     0.500N490.00
+19    GRUP W01 W24X162              29.0111.2035.97 1    1.001.00     0.500 490.00
+20    GRUP W02 W24X131              29.0111.2035.97 1    1.001.00     0.500 490.00
+21    MEMBER
+22    MEMBER1937 1000 DUM   000111000000
+23    MEMBER OFFSETS                                 12.000
+24    MEMBER1938 1000 DUM   000111000000
+25    MEMBER OFFSETS                                 12.000
+26    MEMBER1939 3000 DUM   000111000000
+27    MEMBER OFFSETS                                 12.000
+28    MEMBER1940 3000 DUM   000111000000
+29    MEMBER OFFSETS                                 12.000
+30    *************************ADDITIONAL MEMBER LINES************************************
+31    PGRUP
+32    PGRUP P01 0.3750I29.000 0.25036.000                                     490.0000
+33    PGRUP PLT 0.2500 29.000 0.25036.000                                     490.0000
+34    PLATE
+35    PLATE AAAC 801 834 805 837 P01            0
+36    PLATE AAAD 834 835 837 838 P01            0
+37    PLATE SK01 903 949 942 938 PLT            1
+38    PLATE  OFFSETS                                 12.000            12.000
+39    PLATE  OFFSETS                                 12.000            12.000
+40    *************************ADDITIONAL PLATE LINES************************************
+41    JOINT
+42    JOINT 601     -24.   -16.    13.                      PINNED
+43    JOINT 603      24.   -16.    13.                      PINNED
+44    JOINT 605     -24.    16.    13.                      PINNED
+45    JOINT 607      24.    16.    13.                      PINNED
+46    JOINT 701     -24.   -16.    50.                      222000
+47    JOINT 703      24.   -16.    50.                      222000
+48    JOINT 705     -24.    16.    50.                      222000
+49    JOINT 707      24.    16.    50.                      222000
+50    JOINT 709     -24.   -26.    50.        -2.964
+51    JOINT 710      -8.   -26.    50. -2.424 -2.964
+52    JOINT 711       8.   -26.    50.  2.424 -2.964
+53    JOINT 712      24.   -26.    50.        -2.964
+54    JOINT 714      -8.   -16.    50. -2.424               222000
+55    JOINT 715       8.   -16.    50.  2.424               222000
+```
 
+<!-- 校订来源：SACS2024_SACS.pdf p.76；保留原书示例行号与报告列位。 -->
+```text
+ 56    JOINT 717      -8.    16.    50. -2.424               222000
+ 57    JOINT 718       8.    16.    50.  2.424               222000
+ 58    *************************ADDITIONAL JOINT LINES*************************************
+ 59    LOAD
+ 60    LOADCNAREA
+ 61    *
+ 62    ***LDS1**     24.000   -26.247    50.000    24.000    26.247    50.000   -24.000
+ 63    ***LDS2**    -26.247    50.000   -24.000    26.247    50.000   -10.000
+ 64    ***LDS3**              0   1   3   0   0AREA  -2EQUPPRES10PSFL
+ 65    LOAD Z 701 705         -0.0790       -0.0790                GLOB UNIF   10PSFL
+ 66    LOAD Z 703 707         -0.0790       -0.0790                GLOB UNIF   10PSFL
+ 67    LOAD Z 705 720         -0.0790       -0.0790                GLOB UNIF   10PSFL
+ 68    LOAD Z 707 723         -0.0790       -0.0790                GLOB UNIF   10PSFL
+ 69    LOAD Z 709 701         -0.0790       -0.0790                GLOB UNIF   10PSFL
+ 70    LOAD Z 710 714         -0.1610       -0.1610                GLOB UNIF   10PSFL
+ 71    LOAD Z 711 715         -0.1610       -0.1610                GLOB UNIF   10PSFL
+ 72    LOAD Z 712 703         -0.0790       -0.0790                GLOB UNIF   10PSFL
+ 73    LOAD Z 714 717         -0.1610       -0.1610                GLOB UNIF   10PSFL
+ 74    LOAD Z 715 718         -0.1610       -0.1610                GLOB UNIF   10PSFL
+ 75    LOAD Z 717 721         -0.1610       -0.1610                GLOB UNIF   10PSFL
+ 76    LOAD Z 718 722         -0.1610       -0.1610                GLOB UNIF   10PSFL
+ 77    *
+ 78    ***LDS1**     41.011   -26.247    75.000    41.011    26.247    75.000   -24.000
+ 79    ***LDS2**    -26.247    75.000   -24.000    26.247    75.000   -15.000
+ 80    ***LDS3**              0   1   3   0   0AREA  -2EQUPPRES15PSFU
+ 81    LOAD Z 801 805         -0.1180       -0.1180                GLOB UNIF   15PSFU
+ 82    LOAD Z 803 847         -0.2460       -0.2460                GLOB UNIF   15PSFU
+ 83    LOAD Z 805 840         -0.1180       -0.1180                GLOB UNIF   15PSFU
+ 84    LOAD Z 807 843         -0.2460       -0.2460                GLOB UNIF   15PSFU
+ 85    LOAD Z 829 801         -0.1180       -0.1180                GLOB UNIF   15PSFU
+ 86    LOAD Z 830 834         -0.2420       -0.2420                GLOB UNIF   15PSFU
+ 87    LOAD Z 831 835         -0.2420       -0.2420                GLOB UNIF   15PSFU
+ 88    LOAD Z 832 803         -0.2460       -0.2460                GLOB UNIF   15PSFU
+ 89    LOAD Z 833 836         -0.1280       -0.1280                GLOB UNIF   15PSFU
+ 90    LOAD Z 834 837         -0.2420       -0.2420                GLOB UNIF   15PSFU
+ 91    LOAD Z 835 838         -0.2420       -0.2420                GLOB UNIF   15PSFU
+ 92    LOAD Z 836 848         -0.1280       -0.1280                GLOB UNIF   15PSFU
+ 93    LOAD Z 837 841         -0.2420       -0.2420                GLOB UNIF   15PSFU
+ 94    LOAD Z 838 842         -0.2420       -0.2420                GLOB UNIF   15PSFU
+ 95    LOAD Z 839 844         -0.1280       -0.1280                GLOB UNIF   15PSFU
+ 96    LOAD Z 845 807         -0.2460       -0.2460                GLOB UNIF   15PSFU
+ 97    LOAD Z 846 839         -0.1280       -0.1280                GLOB UNIF   15PSFU
+ 98    LOAD Z 847 845         -0.2460       -0.2460                GLOB UNIF   15PSFU
+ 99    LOAD Z 848 846         -0.1280       -0.1280                GLOB UNIF   15PSFU
+100    LOADCNDEAD
+101    LOAD Z 937 1000        -0.1180       -0.1180                GLOB UNIF   SELF_WT
+102    LOAD Z 938 1000        -0.1180       -0.1180                GLOB UNIF   SELF_WT
+103    LOAD Z 939 3000        -0.1180       -0.1180                GLOB UNIF   SELF_WT
+104    *************************ADDITIONAL LOAD LINES************************************
+105    LOADCNEQPT
+106    *
+107    ***LDS1**     16.000     6.000    75.000    16.000     6.000    75.000
+108    ***LDS2**             -250.000                                  20.000    10.000
+109    ***LDS3**     10.000   1   2   2   0   0EQPT  -1EQUPSKIDSKID1   X
+110    LOAD Z 835 838  17.4040-65.579                              GLOB CONC   SKID1
+111    LOAD Z 835 838  27.4040-65.579                              GLOB CONC   SKID1
+112    LOAD Z 845 807  7.40400-59.421                              GLOB CONC   SKID1
+113    LOAD Z 845 807  17.4040-59.421                              GLOB CONC   SKID1
+114    *************************ADDITIONAL LOAD LINES************************************
+115    LOADCNLIVE
+116    *
+117    ***LDS1**     41.011   -26.247    75.000    41.011    26.247    75.000   -24.606
+118    ***LDS2**     26.247    75.000   -24.606   -26.247    75.000  -100.000
+119    ***LDS3**              0   1   3   0   0LIVE  -2EQUPPRES100PSFU
+120    LOAD Z 829 801         -0.8200       -0.8200                GLOB UNIF   100PSFU
+121    LOAD Z 830 834         -1.6400       -1.6400                GLOB UNIF   100PSFU
+122    LOAD Z 831 835         -1.6400       -1.6400                GLOB UNIF   100PSFU
+123    LOAD Z 832 803         -1.6400       -1.6400                GLOB UNIF   100PSFU
+124    LOAD Z 833 836         -0.8200       -0.8200                GLOB UNIF   100PSFU
+125    LOAD Z 834 837         -1.6400       -1.6400                GLOB UNIF   100PSFU
+```
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 |
-| 1 | SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL |
-| 2 | OPTIONS EN SDUC 2 1 | OPTIONS EN SDUC 2 1 | OPTIONS EN SDUC 2 1 | OPTIONS EN SDUC 2 1 | PTPT | PT |  |  |
-| 3 | LCSEL CMB1 CMB2 | LCSEL CMB1 CMB2 | LCSEL CMB1 CMB2 | LCSEL CMB1 CMB2 | LCSEL CMB1 CMB2 | LCSEL CMB1 CMB2 | LCSEL CMB1 CMB2 | LCSEL CMB1 CMB2 |
-| 4 | SECT | SECT | SECT | SECT | SECT | SECT | SECT | SECT |
-| 5 | SECT CONE CON | SECT CONE CON | SECT CONE CON | SECT CONE CON | 36.0000.75026.000 | 36.0000.75026.000 | 36.0000.75026.000 | 36.0000.75026.000 |
-| 6 | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP |
-| 7 | GRUP DUM | 12.000 | 1.000 | 29.0011.6036.00 | 9 | 1.001.00 | 0.500N490.00 | 0.500N490.00 |
-| 8 | GRUP LG6 | 36.000 | 0.750 | 29.0011.0036.00 | 1 | 1.001.00 | 0.500N490.003.25 | 0.500N490.003.25 |
-| 9 | GRUP LG6 CONE |  |  | 29.0011.6036.00 | 1 | 1.001.00 | 0.500N490.004.95 | 0.500N490.004.95 |
-| 10 | GRUP LG6 | 26.000 | 0.750 | 29.0011.6036.00 | 1 | 1.001.00 | 0.500N490.00 | 0.500N490.00 |
-| 11 | GRUP LG7 | 26.000 | 0.750 | 29.0011.6036.00 | 1 | 1.001.00 | 0.500N490.00 | 0.500N490.00 |
-| 12 | GRUP SHF | 4.000 | 1.000 | 29.0011.6036.00 | 1 | 1.001.00 | 0.500N490.00 | 0.500N490.00 |
-| 13 | GRUP SK2 W8X24 |  |  | 29.0011.6036.00 | 1 | 1.001.00 | 0.500N1.00-2 | 0.500N1.00-2 |
-| 14 | GRUP SKD W12X30 |  |  | 29.0011.6036.00 | 1 | 1.001.00 | 0.500N1.00-2 | 0.500N1.00-2 |
-| 15 | GRUP STB | 6.000 | 1.000 | 29.0011.6036.00 | 9 | 1.001.00 | 0.500N1.00-2 | 0.500N1.00-2 |
-| 16 | GRUP VB1 | 12.750 | 0.625 | 29.0011.6036.00 | 1 | 1.001.00 | 0.500N490.00 | 0.500N490.00 |
-| 17 | GRUP VB2 | 8.825 | 0.500 | 29.0011.6036.00 | 1 | 1.001.00 | 0.500N490.00 | 0.500N490.00 |
-| 18 | GRUP VBS | 12.750 | 0.625 | 29.0011.6036.00 | 1 | 1.001.00 | 0.500N490.00 | 0.500N490.00 |
-| 19 | GRUP W01 W24X162 |  |  | 29.0111.2035.97 | 1 | 1.001.00 | 0.500 490.00 | 0.500 490.00 |
-| 20 | GRUP W02 W24X131 |  |  | 29.0111.2035.97 | 1 | 1.001.00 | 0.500 490.00 | 0.500 490.00 |
-| 21 | MEMBER | MEMBER | MEMBER | MEMBER | MEMBER | MEMBER | MEMBER | MEMBER |
-| 22 | MEMBER1937 1000 DUM | 000111000000 | 000111000000 | 000111000000 | 000111000000 | 000111000000 | 000111000000 | 000111000000 |
-| 23 | MEMBER OFFSETS |  |  |  | 12.000 |  |  |  |
-| 24 | MEMBER1938 1000 DUM | 000111000000 | 000111000000 | 000111000000 | 000111000000 | 000111000000 | 000111000000 | 000111000000 |
-| 25 | MEMBER OFFSETS |  |  |  | 12.000 |  |  |  |
-| 26 | MEMBER1939 3000 DUM | 000111000000 | 000111000000 | 000111000000 | 000111000000 | 000111000000 | 000111000000 | 000111000000 |
-| 27 | MEMBER OFFSETS |  |  |  | 12.000 |  |  |  |
-| 28 | MEMBER1940 3000 DUM | 000111000000 | 000111000000 | 000111000000 | 000111000000 | 000111000000 | 000111000000 | 000111000000 |
-| 29 | MEMBER OFFSETS |  |  |  | 12.000 |  |  |  |
-| 30 | **********ADDITIONAL MEMBER LINES********** | **********ADDITIONAL MEMBER LINES********** | **********ADDITIONAL MEMBER LINES********** | **********ADDITIONAL MEMBER LINES********** | **********ADDITIONAL MEMBER LINES********** | **********ADDITIONAL MEMBER LINES********** | **********ADDITIONAL MEMBER LINES********** | **********ADDITIONAL MEMBER LINES********** |
-| 31 | PGRP | PGRP | PGRP | PGRP | PGRP | PGRP | PGRP | PGRP |
-| 32 | PGRP P01 0.3750I29.000 0.25036.000 | PGRP P01 0.3750I29.000 0.25036.000 | PGRP P01 0.3750I29.000 0.25036.000 | PGRP P01 0.3750I29.000 0.25036.000 | PGRP P01 0.3750I29.000 0.25036.000 | PGRP P01 0.3750I29.000 0.25036.000 | 490.0000 | 490.0000 |
-| 33 | PGRP PLT 0.2500 29.000 0.25036.000 | PGRP PLT 0.2500 29.000 0.25036.000 | PGRP PLT 0.2500 29.000 0.25036.000 | PGRP PLT 0.2500 29.000 0.25036.000 | PGRP PLT 0.2500 29.000 0.25036.000 | PGRP PLT 0.2500 29.000 0.25036.000 | 490.0000 | 490.0000 |
-| 34 | PLATE | PLATE | PLATE | PLATE | PLATE | PLATE | PLATE | PLATE |
-| 35 | PLATE AAAC 801 834 805 837 P01 | PLATE AAAC 801 834 805 837 P01 | PLATE AAAC 801 834 805 837 P01 | PLATE AAAC 801 834 805 837 P01 | 0 |  |  |  |
-| 36 | PLATE AAAD 834 835 837 838 P01 | PLATE AAAD 834 835 837 838 P01 | PLATE AAAD 834 835 837 838 P01 | PLATE AAAD 834 835 837 838 P01 | 0 |  |  |  |
-| 37 | PLATE SK01 903 949 942 938 PLT | PLATE SK01 903 949 942 938 PLT | PLATE SK01 903 949 942 938 PLT | PLATE SK01 903 949 942 938 PLT | 1 |  |  |  |
-| 38 | PLATE OFFSETS |  |  |  | 12.000 | 12.000 |  |  |
-| 39 | PLATE OFFSETS |  |  |  | 12.000 | 12.000 |  |  |
-| 40 | **********ADDITIONAL PLATE LINES********** | **********ADDITIONAL PLATE LINES********** | **********ADDITIONAL PLATE LINES********** | **********ADDITIONAL PLATE LINES********** | **********ADDITIONAL PLATE LINES********** | **********ADDITIONAL PLATE LINES********** | **********ADDITIONAL PLATE LINES********** | **********ADDITIONAL PLATE LINES********** |
-| 41 | JOINT | JOINT | JOINT | JOINT | JOINT | JOINT | JOINT | JOINT |
-| 42 | JOINT 601 | -24. | -16. | 13. |  | PINNED |  |  |
-| 43 | JOINT 603 | 24. | -16. | 13. |  | PINNED |  |  |
-| 44 | JOINT 605 | -24. | 16. | 13. |  | PINNED |  |  |
-| 45 | JOINT 607 | 24. | 16. | 13. |  | PINNED |  |  |
-| 46 | JOINT 701 | -24. | -16. | 50. |  | 222000 |  |  |
-| 47 | JOINT 703 | 24. | -16. | 50. |  | 222000 |  |  |
-| 48 | JOINT 705 | -24. | 16. | 50. |  | 222000 |  |  |
-| 49 | JOINT 707 | 24. | 16. | 50. |  | 222000 |  |  |
-| 50 | JOINT 709 | -24. | -26. | 50. | -2.964 |  |  |  |
-| 51 | JOINT 710 | -8. | -26. | 50. | -2.424 | -2.964 |  |  |
-| 52 | JOINT 711 | 8. | -26. | 50. | 2.424 | -2.964 |  |  |
-| 53 | JOINT 712 | 24. | -26. | 50. | -2.964 |  |  |  |
-| 54 | JOINT 714 | -8. | -16. | 50. | -2.424 |  | 222000 |  |
-| 55 | JOINT 715 | 8. | -16. | 50. | 2.424 |  | 222000 |  |
-| 56 | JOINT 717 | -8. | 16. | 50. | -2.424 | 222000 |  |  |
-| 57 | JOINT 718 | 8. | 16. | 50. | 2.424 | 222000 |  |  |
-| 58 | ********** | ********** | ADDITIONAL JOINT LINES********** | ADDITIONAL JOINT LINES********** | ADDITIONAL JOINT LINES********** | ADDITIONAL JOINT LINES********** | ADDITIONAL JOINT LINES********** | ADDITIONAL JOINT LINES********** |
-| 59 | LOAD |  |  |  |  |  |  |  |
-| 60 | LOADCNAREA |  |  |  |  |  |  |  |
-| 61 | * |  |  |  |  |  |  |  |
-| 62 | ***LDS1** | 24.000 | -26.247 | 50.000 | 24.000 | 26.247 | 50.000 | -24.000 |
-| 63 | ***LDS2** | -26.247 | 50.000 | -24.000 | 26.247 | 50.000 | -10.000 |  |
-| 64 | ***LDS3** | 0 | 1 | 3 | 0 | 0AREA -2EQUIPPRES10PSFL |  |  |
-| 65 | LOAD Z 701 | 705 | -0.0790 | -0.0790 |  |  | GLOB UNIF | 10PSFL |
-| 66 | LOAD Z 703 | 707 | -0.0790 | -0.0790 |  |  | GLOB UNIF | 10PSFL |
-| 67 | LOAD Z 705 | 720 | -0.0790 | -0.0790 |  |  | GLOB UNIF | 10PSFL |
-| 68 | LOAD Z 707 | 723 | -0.0790 | -0.0790 |  |  | GLOB UNIF | 10PSFL |
-| 69 | LOAD Z 709 | 701 | -0.0790 | -0.0790 |  |  | GLOB UNIF | 10PSFL |
-| 70 | LOAD Z 710 | 714 | -0.1610 | -0.1610 |  |  | GLOB UNIF | 10PSFL |
-| 71 | LOAD Z 711 | 715 | -0.1610 | -0.1610 |  |  | GLOB UNIF | 10PSFL |
-| 72 | LOAD Z 712 | 703 | -0.0790 | -0.0790 |  |  | GLOB UNIF | 10PSFL |
-| 73 | LOAD Z 714 | 717 | -0.1610 | -0.1610 |  |  | GLOB UNIF | 10PSFL |
-| 74 | LOAD Z 715 | 718 | -0.1610 | -0.1610 |  |  | GLOB UNIF | 10PSFL |
-| 75 | LOAD Z 717 | 721 | -0.1610 | -0.1610 |  |  | GLOB UNIF | 10PSFL |
-| 76 | LOAD Z 718 | 722 | -0.1610 | -0.1610 |  |  | GLOB UNIF | 10PSFL |
-| 77 | * |  |  |  |  |  |  |  |
-| 78 | ***LDS1** | 41.011 | -26.247 | 75.000 | 41.011 | 26.247 | 75.000 | -24.000 |
-| 79 | ***LDS2** | -26.247 | 75.000 | -24.000 | 26.247 | 75.000 | -15.000 |  |
-| 80 | ***LDS3** | 0 | 1 | 3 | 0 | 0AREA -2EQUIPPRES15PSFU |  |  |
-| 81 | LOAD Z 801 | 805 | -0.1180 | -0.1180 |  |  | GLOB UNIF | 15PSFU |
-| 82 | LOAD Z 803 | 847 | -0.2460 | -0.2460 |  |  | GLOB UNIF | 15PSFU |
-| 83 | LOAD Z 805 | 840 | -0.1180 | -0.1180 |  |  | GLOB UNIF | 15PSFU |
-| 84 | LOAD Z 807 | 843 | -0.2460 | -0.2460 |  |  | GLOB UNIF | 15PSFU |
-| 85 | LOAD Z 829 | 801 | -0.1180 | -0.1180 |  |  | GLOB UNIF | 15PSFU |
-| 86 | LOAD Z 830 | 834 | -0.2420 | -0.2420 |  |  | GLOB UNIF | 15PSFU |
-| 87 | LOAD Z 831 | 835 | -0.2420 | -0.2420 |  |  | GLOB UNIF | 15PSFU |
-| 88 | LOAD Z 832 | 803 | -0.2460 | -0.2460 |  |  | GLOB UNIF | 15PSFU |
-| 89 | LOAD Z 833 | 836 | -0.1280 | -0.1280 |  |  | GLOB UNIF | 15PSFU |
-| 90 | LOAD Z 834 | 837 | -0.2420 | -0.2420 |  |  | GLOB UNIF | 15PSFU |
-| 91 | LOAD Z 835 | 838 | -0.2420 | -0.2420 |  |  | GLOB UNIF | 15PSFU |
-| 92 | LOAD Z 836 | 848 | -0.1280 | -0.1280 |  |  | GLOB UNIF | 15PSFU |
-| 93 | LOAD Z 837 | 841 | -0.2420 | -0.2420 |  |  | GLOB UNIF | 15PSFU |
-| 94 | LOAD Z 838 | 842 | -0.2420 | -0.2420 |  |  | GLOB UNIF | 15PSFU |
-| 95 | LOAD Z 839 | 844 | -0.1280 | -0.1280 |  |  | GLOB UNIF | 15PSFU |
-| 96 | LOAD Z 845 | 807 | -0.2460 | -0.2460 |  |  | GLOB UNIF | 15PSFU |
-| 97 | LOAD Z 846 | 839 | -0.1280 | -0.1280 |  |  | GLOB UNIF | 15PSFU |
-| 98 | LOAD Z 847 | 845 | -0.2460 | -0.2460 |  |  | GLOB UNIF | 15PSFU |
-| 99 | LOAD Z 848 | 846 | -0.1280 | -0.1280 |  |  | GLOB UNIF | 15PSFU |
-| 100 | LOADCNDEAD |  |  |  |  |  |  |  |
-| 101 | LOAD Z 937 | 1000 | -0.1180 | -0.1180 |  |  | GLOB UNIF | SELF_WT |
-| 102 | LOAD Z 938 | 1000 | -0.1180 | -0.1180 |  |  | GLOB UNIF | SELF_WT |
-| 103 | LOAD Z 939 | 3000 | -0.1180 | -0.1180 |  |  | GLOB UNIF | SELF_WT |
-| 104 | ********** | ADDITIONAL LOAD LINES********** | ADDITIONAL LOAD LINES********** | ADDITIONAL LOAD LINES********** | ADDITIONAL LOAD LINES********** | ADDITIONAL LOAD LINES********** | ADDITIONAL LOAD LINES********** | ADDITIONAL LOAD LINES********** |
-| 105 | LOADCNEQPT |  |  |  |  |  |  |  |
-| 106 | * |  |  |  |  |  |  |  |
-| 107 | ***LDS1** | 16.000 | 6.000 | 75.000 | 16.000 | 6.000 | 75.000 |  |
-| 108 | ***LDS2** | -250.000 |  |  |  |  | 20.000 | 10.000 |
-| 109 | ***LDS3** | 10.000 | 1 | 2 | 0 | 0EQPT -1EQUPSKIDSKID1 | X |  |
-| 110 | LOAD Z 835 | 838 | 17.4040-65.579 |  |  |  | GLOB CONC | SKID1 |
-| 111 | LOAD Z 835 | 838 | 27.4040-65.579 |  |  |  | GLOB CONC | SKID1 |
-| 112 | LOAD Z 845 | 807 | 7.4040-59.421 |  |  |  | GLOB CONC | SKID1 |
-| 113 | LOAD Z 845 | 807 | 17.4040-59.421 |  |  |  | GLOB CONC | SKID1 |
-| 114 | ********** | ADDITIONAL LOAD LINES********** | ADDITIONAL LOAD LINES********** | ADDITIONAL LOAD LINES********** | ADDITIONAL LOAD LINES********** | ADDITIONAL LOAD LINES********** | ADDITIONAL LOAD LINES********** | ADDITIONAL LOAD LINES********** |
-| 115 | LOADCNLIVE |  |  |  |  |  |  |  |
-| 116 | * |  |  |  |  |  |  |  |
-| 117 | ***LDS1** | 41.011 | -26.247 | 75.000 | 41.011 | 26.247 | 75.000 | -24.606 |
-| 118 | ***LDS2** | 26.247 | 75.000 | -24.606 | -26.247 | 75.000 | -100.000 |  |
-| 119 | ***LDS3** | 0 | 1 | 3 | 0 | 0LIVE -2EQUIPPRES10PSFU |  |  |
-| 120 | LOAD Z 829 | 801 | -0.8200 | -0.8200 |  |  | GLOB UNIF | 100PSFU |
-| 121 | LOAD Z 830 | 834 | -1.6400 | -1.6400 |  |  | GLOB UNIF | 100PSFU |
-| 122 | LOAD Z 831 | 835 | -1.6400 | -1.6400 |  |  | GLOB UNIF | 100PSFU |
-| 123 | LOAD Z 832 | 803 | -1.6400 | -1.6400 |  |  | GLOB UNIF | 100PSFU |
-| 124 | LOAD Z 833 | 836 | -0.8200 | -0.8200 |  |  | GLOB UNIF | 100PSFU |
-| 125 | LOAD Z 834 | 837 | -1.6400 | -1.6400 |  |  | GLOB UNIF | 100PSFU |
+<!-- 校订来源：SACS2024_SACS.pdf p.77；保留原书示例行号与报告列位。 -->
+```text
+126    LOAD Z 835 838         -1.6400       -1.6400                GLOB UNIF   100PSFU
+127    LOAD Z 836 848         -0.8200       -0.8200                GLOB UNIF   100PSFU
+128    LOAD Z 837 841         -1.6400       -1.6400                GLOB UNIF   100PSFU
+129    LOAD Z 838 842         -1.6400       -1.6400                GLOB UNIF   100PSFU
+130    LOAD Z 839 844         -0.8200       -0.8200                GLOB UNIF   100PSFU
+131    LOAD Z 801 805         -0.8200       -0.8200                GLOB UNIF   100PSFU
+132    LOAD Z 803 847         -1.6400       -1.6400                GLOB UNIF   100PSFU
+133    LOAD Z 805 840         -0.8200       -0.8200                GLOB UNIF   100PSFU
+134    LOAD Z 807 843         -1.6400       -1.6400                GLOB UNIF   100PSFU
+135    *
+136    ***LDS1**     24.606   -26.247    50.000    24.606    26.247    50.000   -24.606
+137    ***LDS2**     26.247    50.000   -24.606   -26.247    50.000   -50.000
+138    ***LDS3**              0   1   3   0   0LIVE  -2EQUPPRES50PSFL
+139    LOAD Z 701 705         -0.4100       -0.4100                GLOB UNIF   50PSFL
+140    LOAD Z 703 707         -0.4100       -0.4100                GLOB UNIF   50PSFL
+141    LOAD Z 705 720         -0.4100       -0.4100                GLOB UNIF   50PSFL
+142    LOAD Z 707 723         -0.4100       -0.4100                GLOB UNIF   50PSFL
+143    LOAD Z 709 701         -0.4100       -0.4100                GLOB UNIF   50PSFL
+144    LOAD Z 710 714         -0.8200       -0.8200                GLOB UNIF   50PSFL
+145    LOAD Z 711 715         -0.8200       -0.8200                GLOB UNIF   50PSFL
+146    LOAD Z 712 703         -0.4100       -0.4100                GLOB UNIF   50PSFL
+147    LOAD Z 714 717         -0.8200       -0.8200                GLOB UNIF   50PSFL
+148    LOAD Z 715 718         -0.8200       -0.8200                GLOB UNIF   50PSFL
+149    LOAD Z 717 721         -0.8200       -0.8200                GLOB UNIF   50PSFL
+150    LOAD Z 718 722         -0.8200       -0.8200                GLOB UNIF   50PSFL
+151    LOAD Z 845 807         -1.6400       -1.6400                GLOB UNIF   100PSFU
+152    LOAD Z 846 839         -0.8200       -0.8200                GLOB UNIF   100PSFU
+153    LOAD Z 847 845         -1.6400       -1.6400                GLOB UNIF   100PSFU
+154    LOAD Z 848 846         -0.8200       -0.8200                GLOB UNIF   100PSFU
+155    LOADCNMACH
+156    LOAD   1000                   -3.1000                       GLOB JOIN   ENGINE
+157    LOAD   3000                   -5.1000                       GLOB JOIN   COMPRESS
+158    LOADCNMISC
+159    LOAD Z 712 703         -0.1900       -0.1900                GLOB UNIF   WALK1
+160    LOAD Z 703 707         -0.1900       -0.1900                GLOB UNIF   WALK1
+161    LOAD Z 707 723         -0.1900       -0.1900                GLOB UNIF   WALK1
+162    LOAD Z 833 836         -0.1900       -0.1900                GLOB UNIF   WALK2
+163    LOAD Z 836 848         -0.1900       -0.1900                GLOB UNIF   WALK2
+164    LOAD Z 839 844         -0.1900       -0.1900                GLOB UNIF   WALK2
+165    LOAD   807                    -20.000                       GLOB JOIN   CRANE
+166    *
+167    ***LDS1**     -8.000    20.000    50.000    -8.000    20.000    50.000
+168    ***LDS2**              -10.000                                  34.000     0.100
+169    ***LDS3**      0.100   1   2   2   0   0MISC  -1EQUPSKIDFIREWALLX
+170    LOAD Z 705 720  3.95000-1.6667                              GLOB CONC   FIREWALL
+171    LOAD Z 705 720  4.05000-1.6667                              GLOB CONC   FIREWALL
+172    LOAD Z 717 721  3.95000-1.6667                              GLOB CONC   FIREWALL
+173    LOAD Z 717 721  4.05000-1.6667                              GLOB CONC   FIREWALL
+174    LOAD Z 718 722  3.95000-1.6667                              GLOB CONC   FIREWALL
+175    LOAD Z 718 722  4.05000-1.6667                              GLOB CONC   FIREWALL
+176    LOAD Z 846 839         -0.1900       -0.1900                GLOB UNIF   WALK2
+177    LOAD Z 848 846         -0.1900       -0.1900                GLOB UNIF   WALK2
+178    LOAD   VB01                   -1.0000                       GLOB JOIN   VENTBOOM
+179    LCOMB
+180    * OPERATIONAL COMBINATIONS
+181    LCOMB CMB1 MISC1.0000EQPT1.0000AREA0.5000LIVE1.0000DEAD1.0500MACH1.0000
+182    LCOMB CMB2 MISC1.0000EQPT1.0000AREA1.0000LIVE0.5000DEAD1.0500MACH1.0000
+183    END
+184     **LEG1**    1   -24.000   -16.000    13.000   -24.000   -50.250  -261.000
+185     **LEG2**    1    75.000  -261.000    13.000   1   0   1
+186     **LEG1**    3    24.000   -16.000    13.000    51.400   -50.250  -261.000
+187     **LEG2**    3    75.000  -261.000    13.000   1   0   1
+188     **LEG1**    5   -24.000    16.000    13.000   -24.000    50.250  -261.000
+189     **LEG2**    5    75.000  -261.000    13.000   1   0   1
+190     **LEG1**    7    24.000    16.000    13.000    51.400    50.250  -261.000
+191     **LEG2**    7    75.000  -261.000    13.000   1   0   1
+192     **ELEV**     13.000 100    75.000 100    13.000 100    75.000 400
+193     **ELEV**     50.000   0
+194     **LGLB**   6
+195     **PLLB**   0
+```
 
-
-
-
-
-| 126 | LOAD Z 835 838 |  | -1.6400 |  | -1.6400 |  | GLOB | UNIF | 100PSFU |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 127 | LOAD Z 836 848 |  | -0.8200 |  | -0.8200 |  | GLOB | UNIF | 100PSFU |
-| 128 | LOAD Z 837 841 |  | -1.6400 |  | -1.6400 |  | GLOB | UNIF | 100PSFU |
-| 129 | LOAD Z 838 842 |  | -1.6400 |  | -1.6400 |  | GLOB | UNIF | 100PSFU |
-| 130 | LOAD Z 839 844 |  | -0.8200 |  | -0.8200 |  | GLOB | UNIF | 100PSFU |
-| 131 | LOAD Z 801 805 |  | -0.8200 |  | -0.8200 |  | GLOB | UNIF | 100PSFU |
-| 132 | LOAD Z 803 847 |  | -1.6400 |  | -1.6400 |  | GLOB | UNIF | 100PSFU |
-| 133 | LOAD Z 805 840 |  | -0.8200 |  | -0.8200 |  | GLOB | UNIF | 100PSFU |
-| 134 | LOAD Z 807 843 |  | -1.6400 |  | -1.6400 |  | GLOB | UNIF | 100PSFU |
-| 135 | * |  |  |  |  |  |  |  |  |
-| 136 | ***LDS1** | 24.606 | -26.247 | 50.000 | 24.606 | 26.247 | 50.000 | -24.606 |  |
-| 137 | ***LDS2** | 26.247 | 50.000 | -24.606 | -26.247 | 50.000 | -50.000 |  |  |
-| 138 | ***LDS3** | 0 | 1 | 3 | 0 | 0 LIVE | -2EQUIPPRES50PSFL |  |  |
-| 139 | LOAD Z 701 705 |  | -0.4100 |  | -0.4100 |  | GLOB | UNIF | 50PSFL |
-| 140 | LOAD Z 703 707 |  | -0.4100 |  | -0.4100 |  | GLOB | UNIF | 50PSFL |
-| 141 | LOAD Z 705 720 |  | -0.4100 |  | -0.4100 |  | GLOB | UNIF | 50PSFL |
-| 142 | LOAD Z 707 723 |  | -0.4100 |  | -0.4100 |  | GLOB | UNIF | 50PSFL |
-| 143 | LOAD Z 709 701 |  | -0.4100 |  | -0.4100 |  | GLOB | UNIF | 50PSFL |
-| 144 | LOAD Z 710 714 |  | -0.8200 |  | -0.8200 |  | GLOB | UNIF | 50PSFL |
-| 145 | LOAD Z 711 715 |  | -0.8200 |  | -0.8200 |  | GLOB | UNIF | 50PSFL |
-| 146 | LOAD Z 712 703 |  | -0.4100 |  | -0.4100 |  | GLOB | UNIF | 50PSFL |
-| 147 | LOAD Z 714 717 |  | -0.8200 |  | -0.8200 |  | GLOB | UNIF | 50PSFL |
-| 148 | LOAD Z 715 718 |  | -0.8200 |  | -0.8200 |  | GLOB | UNIF | 50PSFL |
-| 149 | LOAD Z 717 721 |  | -0.8200 |  | -0.8200 |  | GLOB | UNIF | 50PSFL |
-| 150 | LOAD Z 718 722 |  | -0.8200 |  | -0.8200 |  | GLOB | UNIF | 50PSFL |
-| 151 | LOAD Z 845 807 |  | -1.6400 |  | -1.6400 |  | GLOB | UNIF | 100PSFU |
-| 152 | LOAD Z 846 839 |  | -0.8200 |  | -0.8200 |  | GLOB | UNIF | 100PSFU |
-| 153 | LOAD Z 847 845 |  | -1.6400 |  | -1.6400 |  | GLOB | UNIF | 100PSFU |
-| 154 | LOAD Z 848 846 |  | -0.8200 |  | -0.8200 |  | GLOB | UNIF | 100PSFU |
-| 155 | LOADCNMACH |  |  |  |  |  |  |  |  |
-| 156 | LOAD 1000 |  | -3.1000 |  |  |  | GLOB | JOIN | ENGINE |
-| 157 | LOAD 3000 |  | -5.1000 |  |  |  | GLOB | JOIN | COMPRESS |
-| 158 | LOADCNMISC |  |  |  |  |  |  |  |  |
-| 159 | LOAD Z 712 703 |  | -0.1900 |  | -0.1900 |  | GLOB | UNIF | WALK1 |
-| 160 | LOAD Z 703 707 |  | -0.1900 |  | -0.1900 |  | GLOB | UNIF | WALK1 |
-| 161 | LOAD Z 707 723 |  | -0.1900 |  | -0.1900 |  | GLOB | UNIF | WALK1 |
-| 162 | LOAD Z 833 836 |  | -0.1900 |  | -0.1900 |  | GLOB | UNIF | WALK2 |
-| 163 | LOAD Z 836 848 |  | -0.1900 |  | -0.1900 |  | GLOB | UNIF | WALK2 |
-| 164 | LOAD Z 839 844 |  | -0.1900 |  | -0.1900 |  | GLOB | UNIF | WALK2 |
-| 165 | LOAD 807 |  | -20.000 |  |  |  | GLOB | JOIN | CRANE |
-| 166 | * |  |  |  |  |  |  |  |  |
-| 167 | ***LDS1** | -8.000 | 20.000 | 50.000 | -8.000 | 20.000 | 50.000 |  |  |
-| 168 | ***LDS2** | -10.000 |  |  |  |  | 34.000 | 0.100 |  |
-| 169 | ***LDS3** | 0.100 | 1 | 2 | 2 | 0 OMISC | -1EQUPSKIDFIREWALLX |  |  |
-| 170 | LOAD Z 705 720 | 3.95000-1.6667 |  |  |  |  | GLOB | CONC | FIREWALL |
-| 171 | LOAD Z 705 720 | 4.05000-1.6667 |  |  |  |  | GLOB | CONC | FIREWALL |
-| 172 | LOAD Z 717 721 | 3.95000-1.6667 |  |  |  |  | GLOB | CONC | FIREWALL |
-| 173 | LOAD Z 717 721 | 4.05000-1.6667 |  |  |  |  | GLOB | CONC | FIREWALL |
-| 174 | LOAD Z 718 722 | 3.95000-1.6667 |  |  |  |  | GLOB | CONC | FIREWALL |
-| 175 | LOAD Z 718 722 | 4.05000-1.6667 |  |  |  |  | GLOB | CONC | FIREWALL |
-| 176 | LOAD Z 846 839 |  | -0.1900 |  | -0.1900 |  | GLOB | UNIF | WALK2 |
-| 177 | LOAD Z 848 846 |  | -0.1900 |  | -0.1900 |  | GLOB | UNIF | WALK2 |
-| 178 | LOAD VB01 |  | -1.0000 |  |  |  | GLOB | JOIN | VENTBOOM |
-| 179 | LCOMB |  |  |  |  |  |  |  |  |
-| 180 | * OPERATIONAL COMBINATIONS | * OPERATIONAL COMBINATIONS | * OPERATIONAL COMBINATIONS | * OPERATIONAL COMBINATIONS | * OPERATIONAL COMBINATIONS | * OPERATIONAL COMBINATIONS | * OPERATIONAL COMBINATIONS | * OPERATIONAL COMBINATIONS | * OPERATIONAL COMBINATIONS |
-| 181 | LCOMB CMB1 MISC1.0000EQPT1.0000AREA0.5000LIVE1.0000DEAD1.0500MACH1.0000 | LCOMB CMB1 MISC1.0000EQPT1.0000AREA0.5000LIVE1.0000DEAD1.0500MACH1.0000 | LCOMB CMB1 MISC1.0000EQPT1.0000AREA0.5000LIVE1.0000DEAD1.0500MACH1.0000 | LCOMB CMB1 MISC1.0000EQPT1.0000AREA0.5000LIVE1.0000DEAD1.0500MACH1.0000 | LCOMB CMB1 MISC1.0000EQPT1.0000AREA0.5000LIVE1.0000DEAD1.0500MACH1.0000 | LCOMB CMB1 MISC1.0000EQPT1.0000AREA0.5000LIVE1.0000DEAD1.0500MACH1.0000 | LCOMB CMB1 MISC1.0000EQPT1.0000AREA0.5000LIVE1.0000DEAD1.0500MACH1.0000 | LCOMB CMB1 MISC1.0000EQPT1.0000AREA0.5000LIVE1.0000DEAD1.0500MACH1.0000 | LCOMB CMB1 MISC1.0000EQPT1.0000AREA0.5000LIVE1.0000DEAD1.0500MACH1.0000 |
-| 182 | LCOMB CMB2 MISC1.0000EQPT1.0000AREA1.0000LIVE0.5000DEAD1.0500MACH1.0000 | LCOMB CMB2 MISC1.0000EQPT1.0000AREA1.0000LIVE0.5000DEAD1.0500MACH1.0000 | LCOMB CMB2 MISC1.0000EQPT1.0000AREA1.0000LIVE0.5000DEAD1.0500MACH1.0000 | LCOMB CMB2 MISC1.0000EQPT1.0000AREA1.0000LIVE0.5000DEAD1.0500MACH1.0000 | LCOMB CMB2 MISC1.0000EQPT1.0000AREA1.0000LIVE0.5000DEAD1.0500MACH1.0000 | LCOMB CMB2 MISC1.0000EQPT1.0000AREA1.0000LIVE0.5000DEAD1.0500MACH1.0000 | LCOMB CMB2 MISC1.0000EQPT1.0000AREA1.0000LIVE0.5000DEAD1.0500MACH1.0000 | LCOMB CMB2 MISC1.0000EQPT1.0000AREA1.0000LIVE0.5000DEAD1.0500MACH1.0000 | LCOMB CMB2 MISC1.0000EQPT1.0000AREA1.0000LIVE0.5000DEAD1.0500MACH1.0000 |
-| 183 | END | END | END | END | END | END | END | END | END |
-| 184 | **LEG1** | 1 | -24.000 | -16.000 | 13.000 | -24.000 | -50.250 | -261.000 |  |
-| 185 | **LEG2** | 1 | 75.000 | -261.000 | 13.000 | 1 | 0 | 1 |  |
-| 186 | **LEG1** | 3 | 24.000 | -16.000 | 13.000 | 51.400 | -50.250 | -261.000 |  |
-| 187 | **LEG2** | 3 | 75.000 | -261.000 | 13.000 | 1 | 0 | 1 |  |
-| 188 | **LEG1** | 5 | -24.000 | 16.000 | 13.000 | -24.000 | 50.250 | -261.000 |  |
-| 189 | **LEG2** | 5 | 75.000 | -261.000 | 13.000 | 1 | 0 | 1 |  |
-| 190 | **LEG1** | 7 | 24.000 | 16.000 | 13.000 | 51.400 | 50.250 | -261.000 |  |
-| 191 | **LEG2** | 7 | 75.000 | -261.000 | 13.000 | 1 | 0 | 1 |  |
-| 192 | **ELEV** | 13.000 100 |  | 75.000 100 | 13.000 100 | 75.000 400 |  |  |  |
-| 193 | **ELEV** | 50.000 | 0 |  |  |  |  |  |  |
-| 194 | **LGLB** | 6 |  |  |  |  |  |  |  |
-| 195 | **PLLB** | 0 |  |  |  |  |  |  |  |
-
-
-
-
-
-| 196 | **ROWS** | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ | ROW A > ROW B > ROW 1 ^ ROW 2 ^ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 197 | **CONN** | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 198 | **JNCV** | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 199 | END |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-
-
+<!-- 校订来源：SACS2024_SACS.pdf p.78；保留原书示例行号与报告列位。 -->
+```text
+196     **ROWS** ROW A > ROW B > ROW 1 ^ ROW 2 ^                  0
+197     **CONN**    0   0   0   0   0   0   0   0   0   0   0   0   0   0
+198     **JNCV** 0 0 0 0 0 0 1
+199    END
+```
 
 The following is a description of selected input lines in the SACS model file for Sample Problem 1. The input lines are referenced by the number in the left margin of the input listing.
 
@@ -2799,12 +2605,24 @@ Line 1. The Title line. The title will be printed in the header of each page in 
 
 Line 2. The OPTIONS line specifies general analysis and reporting options:
 
-a. English units are specified by ‘EN’ in columns 14-15.   
-b. Shear deformation (Timoshenko beam theory) is specified in columns 23-24.   
-c. *API RP 2A 21st edition and AISC 9th edition are specified as the unity code checks for tubular and non-tubular beams respectively in columns 25-26.   
-d. *Non-segmented beam elements will be divided into two post-processing segments and each segment of segmented elements will be considered as a post-processing segment by ‘2’ and ‘1’ in columns 30 and 32.   
-e. *The Stress at Maximum Unity Check Report is specified by ‘PT’ in columns 49-50.   
-f. *The Internal Loads at Maximum Unity Check Report is specified by ‘PT’ in columns 51- 52.   
+a. English units are specified by ‘EN’ in columns 14-15.
+
+b. Shear deformation (Timoshenko beam theory) is specified in columns 23-24.
+
+c. *API RP 2A 21st edition and AISC 9th edition are specified as the unity code checks for
+
+tubular and non-tubular beams respectively in columns 25-26.
+
+d. *Non-segmented beam elements will be divided into two post-processing segments and
+
+each segment of segmented elements will be considered as a post-processing segment by ‘2’ and ‘1’ in columns 30 and 32.
+
+e. *The Stress at Maximum Unity Check Report is specified by ‘PT’ in columns 49-50.
+
+f. *The Internal Loads at Maximum Unity Check Report is specified by ‘PT’ in columns 51-
+
+52.
+
 g. The Joint Reactions Report is specified by ‘PT’ in columns 59-60.
 
 Line 3. Only load combinations CMB1 and CMB2 are to be reported as specified on the LCSEL line.
@@ -2813,10 +2631,14 @@ Line 4. User-defined section lines are specified after the SECT header line.
 
 Line 5. A user-defined section is specified on the SECT line:
 
-a. The section name is specified as ‘CONE’ in columns 6-12.   
-b. The section type is a cone as specified by ‘CON’ in columns 16-18.   
-c. The larger diameter of the cone is specified as ’36.000’ inches in columns 50-55.   
-d. The wall thickness of the cone is specified as ‘0.750’ inches in columns 56-60.   
+a. The section name is specified as ‘CONE’ in columns 6-12.
+
+b. The section type is a cone as specified by ‘CON’ in columns 16-18.
+
+c. The larger diameter of the cone is specified as ’36.000’ inches in columns 50-55.
+
+d. The wall thickness of the cone is specified as ‘0.750’ inches in columns 56-60.
+
 e. The smaller diameter of the cone is specified as ’26.000’ inches in columns 61-66.
 
 Line 6. Member groups are defined after the GRUP header line.
@@ -2825,16 +2647,29 @@ Lines 8-10. The segmented deck leg member group, LG6, is defined with three GRUP
 
 a. The member group name is specified as ‘LG6’ in columns 6-8.
 
-b. Segment 1 is defined as a tubular specified with a ‘36.000’ inch outside diameter in columns 18-23 and ‘0.750’ inch wall thickness in columns 24-29. Segment 2 is defined as a user-defined cone with ‘CONE’ in columns 10-16. Segment 3 is defined as a tubular with a 26 inch outside diameter and 0.75 inch wall thickness.   
-c. The elastic modulus is specified as ‘29.00’ thousand ksi in columns 31-35.   
-d. The shear modulus is specified as ’11.60’ thousand ksi in columns 36-40.   
-e. *The yield stress is specified as ’36.00’ ksi in columns 41-45.   
-f. *The member is classified as primary (Cm = 0.85) with ‘1’ in column 47.   
-g. *Ky and Kz are both specified as ‘1.00’ in columns 52-55 and 56-59 respectively.   
-h. *The tubular shear area modifier is specified as ‘0.500’ in columns 65-69.   
-i. The member is specified as not-flooded with ‘N’ in column 70.   
-j. The material density is specified as ‘490.00’ lb/ft3 in columns 71-76.   
-k. Segment 1 has a segment length of ‘3.25’ in columns 77-80. Segment 2 has a segment length of ‘4.95’. Segment 3’s length is automatically calculated by SACS with a blank entry.
+b. Segment 1 is defined as a tubular specified with a ‘36.000’ inch outside diameter in
+
+columns 18-23 and ‘0.750’ inch wall thickness in columns 24-29. Segment 2 is defined as a user-defined cone with ‘CONE’ in columns 10-16. Segment 3 is defined as a tubular with a 26 inch outside diameter and 0.75 inch wall thickness.
+
+c. The elastic modulus is specified as ‘29.00’ thousand ksi in columns 31-35.
+
+d. The shear modulus is specified as ’11.60’ thousand ksi in columns 36-40.
+
+e. *The yield stress is specified as ’36.00’ ksi in columns 41-45.
+
+f. *The member is classified as primary (Cm = 0.85) with ‘1’ in column 47.
+
+g. *Ky and Kz are both specified as ‘1.00’ in columns 52-55 and 56-59 respectively.
+
+h. *The tubular shear area modifier is specified as ‘0.500’ in columns 65-69.
+
+i. The member is specified as not-flooded with ‘N’ in column 70.
+
+j. The material density is specified as ‘490.00’ lb/ft³ in columns 71-76.
+
+k. Segment 1 has a segment length of ‘3.25’ in columns 77-80. Segment 2 has a segment
+
+length of ‘4.95’. Segment 3’s length is automatically calculated by SACS with a blank entry.
 
 Line 13. Member group SK2 is defined as a wide flange ‘W8x24’ from the AISC section library in columns 10-16.
 
@@ -2842,9 +2677,13 @@ Line 21. Members are specified after the MEMBER header line.
 
 Line 22. Member 937-1000 is defined from joint ‘937’ to ‘1000’ in columns 8-11 and columns 12- 15 respectively:
 
-a. Global offsets are specified with ‘1’ in column 7.   
-b. Member group ‘DUM’ is specified in columns 17-19.   
-c. Member X, Y, and Z rotations are released at joint A (937) as specified by ‘000111’ in columns 23-28. No degrees of freedom are released at joint B (1000) as specified by ‘000000’ in columns 29-34.
+a. Global offsets are specified with ‘1’ in column 7.
+
+b. Member group ‘DUM’ is specified in columns 17-19.
+
+c. Member X, Y, and Z rotations are released at joint A (937) as specified by ‘000111’ in
+
+columns 23-28. No degrees of freedom are released at joint B (1000) as specified by ‘000000’ in columns 29-34.
 
 Line 23. Global Z offsets at joint A (937) for member 937-1000 is ’12.000’ inches as specified in columns 48-53.
 
@@ -2852,8 +2691,10 @@ Line 31. Plate groups are specified after the PGRUP header line.
 
 Line 32. Plate group P01 is named in columns 7-9:
 
-a. The plate thickness is defined as ‘0.3750’ inches in columns 11-16.   
-b. The elastic modulus is specified as ’29.000’ thousand ksi in columns 18-23.   
+a. The plate thickness is defined as ‘0.3750’ inches in columns 11-16.
+
+b. The elastic modulus is specified as ’29.000’ thousand ksi in columns 18-23.
+
 c. Poisson’s ratio is specified as ‘0.250’ in columns 24-29.
 
 d. *The yield stress is specified as ’36.000’ in columns 30-35.
@@ -2862,44 +2703,75 @@ Line 34. Plates are specified after the PLATE header line.
 
 Line 38. Plate SK01 is named in columns 7-10:
 
-a. The plate is connected to joints ‘903’, ‘949’, ‘942’, and ‘938’ in columns 12-15, 16-19, 20- 23, and 24-27 respectively.   
-b. The plate properties are defined by the plate group ‘PLT’ specified in columns 28-30.   
-c. Global offsets are defined on the subsequent PLATE OFFSET lines as specified in column 43.
+a. The plate is connected to joints ‘903’, ‘949’, ‘942’, and ‘938’ in columns 12-15, 16-19, 20-
+
+23, and 24-27 respectively.
+
+b. The plate properties are defined by the plate group ‘PLT’ specified in columns 28-30.
+
+c. Global offsets are defined on the subsequent PLATE OFFSET lines as specified in column
+
+43.
 
 Lines 39-40. Global Z offsets are specified for joints 1 and 2 columns 48-53 and columns 66-71 respectively on the first line and joints 3 and 4 on the second line.
 
-Line 41. Joints are specified after the JOINT header line.   
+Line 41. Joints are specified after the JOINT header line.
+
 Line 42. Joint 601 is named in columns 7-10:
 
-a. The joint coordinates are ‘-24.’, ‘-16.’, and ’13.’ as specified in columns 12-18, 19-25, and 26-32 respectively.   
-b. The joint is fixed against all translational degrees of freedom as specified by ‘PINNED’ in columns 55-60.
+a. The joint coordinates are ‘-24.’, ‘-16.’, and ’13.’ as specified in columns 12-18, 19-25, and
 
-Line 49. Load conditions are specified after the LOAD header line.   
+26-32 respectively.
+
+b. The joint is fixed against all translational degrees of freedom as specified by ‘PINNED’ in
+
+columns 55-60.
+
+Line 49. Load conditions are specified after the LOAD header line.
+
 Line 50. Load condition ‘AREA’ is name in columns 7-10 on the LOADCN line.
 
 Lines 51-54. Lines LDS1, LDS2, and LDS3 are commented lines which are used for Precede visualization of the member area load.
 
 Lines 55. The load is defined as a distributed member load with ‘UNIF’ in columns 66-69:
 
-a. The load is oriented in the ‘Z’ direction as specified in column 6.   
-b. The load is distributed to member ‘701’-‘705’ as specified in columns 8-11 and 12-15 respectively.   
-c. The beginning and ending loads are both ‘-0.0790’ kips per foot as specified in columns 24-30 and 38-44 respectively.   
-d. The load is oriented in the global coordinate system as specified by ‘GLOB’ in columns 61-64.
+a. The load is oriented in the ‘Z’ direction as specified in column 6.
+
+b. The load is distributed to member ‘701’-‘705’ as specified in columns 8-11 and 12-15
+
+respectively.
+
+c. The beginning and ending loads are both ‘-0.0790’ kips per foot as specified in columns
+
+24-30 and 38-44 respectively.
+
+d. The load is oriented in the global coordinate system as specified by ‘GLOB’ in columns
+
+61-64.
 
 Line 110. The load is defined as a concentrated member load with ‘CONC’ in columns 66-69:
 
-a. The load is oriented in the ‘Z’ direction as specified in column 6.   
-b. The load is distributed to member ‘835’-‘838’ as specified in columns 8-11 and 12-15 respectively.
+a. The load is oriented in the ‘Z’ direction as specified in column 6.
 
-c. The load is located ’17.4040’ feet along the local x axis as specified in columns 17-23.   
-d. The load is ‘-16.579’ kips as specified in columns 24-30.   
-e. The load is oriented in the global coordinate system as specified by ‘GLOB’ in columns 61-64.
+b. The load is distributed to member ‘835’-‘838’ as specified in columns 8-11 and 12-15
+
+respectively.
+
+c. The load is located ’17.4040’ feet along the local x axis as specified in columns 17-23.
+
+d. The load is ‘-16.579’ kips as specified in columns 24-30.
+
+e. The load is oriented in the global coordinate system as specified by ‘GLOB’ in columns
+
+61-64.
 
 Line 179. Load combinations are entered after the LCOMB header line.
 
 Line 180. The load combination is named ‘CMB1’ in columns 7-10:
 
-a. Load conditions ‘MISC’, ‘EQPT’, ‘AREA’, ‘LIVE’, ‘DEAD’, and ‘MACH’ are combined with factors ‘1.0000’, ‘1.0000’, ‘0.5000’, ‘1.0000’, ‘0.5000’, and ‘1.0000’ respectively.
+a. Load conditions ‘MISC’, ‘EQPT’, ‘AREA’, ‘LIVE’, ‘DEAD’, and ‘MACH’ are combined with
+
+factors ‘1.0000’, ‘1.0000’, ‘0.5000’, ‘1.0000’, ‘0.5000’, and ‘1.0000’ respectively.
 
 Line 183. The END line indicates the end of the input file.
 
@@ -2907,172 +2779,189 @@ Lines 184-199. The additional comment lines are used for Precede visualization. 
 
 The following are excerpts of the output listing file:
 
+<!-- 校订来源：SACS2024_SACS.pdf p.82；保留原书示例行号与报告列位。 -->
+```text
+SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+ SAMPLE 01 ENGLISH UNITS MODEL                                                    DATE 17-SEP-2020  TIME 15:12:46   PRE PAGE    1
 
+                                                                                                    PRE VERSION 14.3.0.27
 
-| SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | Company: Bentley Sytems DATE 17-SEP-2020 TIME 15:12:46 PRE PAGE 1 | Company: Bentley Sytems DATE 17-SEP-2020 TIME 15:12:46 PRE PAGE 1 | Company: Bentley Sytems DATE 17-SEP-2020 TIME 15:12:46 PRE PAGE 1 | Company: Bentley Sytems DATE 17-SEP-2020 TIME 15:12:46 PRE PAGE 1 | Company: Bentley Sytems DATE 17-SEP-2020 TIME 15:12:46 PRE PAGE 1 | Company: Bentley Sytems DATE 17-SEP-2020 TIME 15:12:46 PRE PAGE 1 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UNITS ....ENGLISH | UNITS ....ENGLISH | UNITS ....ENGLISH | UNITS ....ENGLISH | UNITS ....ENGLISH | UNITS ....ENGLISH | UNITS ....ENGLISH | UNITS ....ENGLISH | UNITS ....ENGLISH | UNITS ....ENGLISH | UNITS ....ENGLISH | UNITS ....ENGLISH | UNITS ....ENGLISH | UNITS ....ENGLISH | UNITS ....ENGLISH | UNITS ....ENGLISH | UNITS ....ENGLISH | UNITS ....ENGLISH |
-| EXECUTION ....SHEAR DEFORMATION INCLUDED ....UNITY CHECK WSD AISC 9TH EDITION WITH API-RP2A 21ST EDITION FOR TUBULARS ....DKT PLATES SELECTED ....NO SEGMENTS FOR PRISMATIC MEMBERS 2 ....NO SEGMENTS/SECTION FOR NON-PRISMATIC MEMBERS 1 | EXECUTION ....SHEAR DEFORMATION INCLUDED ....UNITY CHECK WSD AISC 9TH EDITION WITH API-RP2A 21ST EDITION FOR TUBULARS ....DKT PLATES SELECTED ....NO SEGMENTS FOR PRISMATIC MEMBERS 2 ....NO SEGMENTS/SECTION FOR NON-PRISMATIC MEMBERS 1 | EXECUTION ....SHEAR DEFORMATION INCLUDED ....UNITY CHECK WSD AISC 9TH EDITION WITH API-RP2A 21ST EDITION FOR TUBULARS ....DKT PLATES SELECTED ....NO SEGMENTS FOR PRISMATIC MEMBERS 2 ....NO SEGMENTS/SECTION FOR NON-PRISMATIC MEMBERS 1 | EXECUTION ....SHEAR DEFORMATION INCLUDED ....UNITY CHECK WSD AISC 9TH EDITION WITH API-RP2A 21ST EDITION FOR TUBULARS ....DKT PLATES SELECTED ....NO SEGMENTS FOR PRISMATIC MEMBERS 2 ....NO SEGMENTS/SECTION FOR NON-PRISMATIC MEMBERS 1 | EXECUTION ....SHEAR DEFORMATION INCLUDED ....UNITY CHECK WSD AISC 9TH EDITION WITH API-RP2A 21ST EDITION FOR TUBULARS ....DKT PLATES SELECTED ....NO SEGMENTS FOR PRISMATIC MEMBERS 2 ....NO SEGMENTS/SECTION FOR NON-PRISMATIC MEMBERS 1 | EXECUTION ....SHEAR DEFORMATION INCLUDED ....UNITY CHECK WSD AISC 9TH EDITION WITH API-RP2A 21ST EDITION FOR TUBULARS ....DKT PLATES SELECTED ....NO SEGMENTS FOR PRISMATIC MEMBERS 2 ....NO SEGMENTS/SECTION FOR NON-PRISMATIC MEMBERS 1 | EXECUTION ....SHEAR DEFORMATION INCLUDED ....UNITY CHECK WSD AISC 9TH EDITION WITH API-RP2A 21ST EDITION FOR TUBULARS ....DKT PLATES SELECTED ....NO SEGMENTS FOR PRISMATIC MEMBERS 2 ....NO SEGMENTS/SECTION FOR NON-PRISMATIC MEMBERS 1 | EXECUTION ....SHEAR DEFORMATION INCLUDED ....UNITY CHECK WSD AISC 9TH EDITION WITH API-RP2A 21ST EDITION FOR TUBULARS ....DKT PLATES SELECTED ....NO SEGMENTS FOR PRISMATIC MEMBERS 2 ....NO SEGMENTS/SECTION FOR NON-PRISMATIC MEMBERS 1 | EXECUTION ....SHEAR DEFORMATION INCLUDED ....UNITY CHECK WSD AISC 9TH EDITION WITH API-RP2A 21ST EDITION FOR TUBULARS ....DKT PLATES SELECTED ....NO SEGMENTS FOR PRISMATIC MEMBERS 2 ....NO SEGMENTS/SECTION FOR NON-PRISMATIC MEMBERS 1 | EXECUTION ....SHEAR DEFORMATION INCLUDED ....UNITY CHECK WSD AISC 9TH EDITION WITH API-RP2A 21ST EDITION FOR TUBULARS ....DKT PLATES SELECTED ....NO SEGMENTS FOR PRISMATIC MEMBERS 2 ....NO SEGMENTS/SECTION FOR NON-PRISMATIC MEMBERS 1 | EXECUTION ....SHEAR DEFORMATION INCLUDED ....UNITY CHECK WSD AISC 9TH EDITION WITH API-RP2A 21ST EDITION FOR TUBULARS ....DKT PLATES SELECTED ....NO SEGMENTS FOR PRISMATIC MEMBERS 2 ....NO SEGMENTS/SECTION FOR NON-PRISMATIC MEMBERS 1 | EXECUTION ....SHEAR DEFORMATION INCLUDED ....UNITY CHECK WSD AISC 9TH EDITION WITH API-RP2A 21ST EDITION FOR TUBULARS ....DKT PLATES SELECTED ....NO SEGMENTS FOR PRISMATIC MEMBERS 2 ....NO SEGMENTS/SECTION FOR NON-PRISMATIC MEMBERS 1 | EXECUTION ....SHEAR DEFORMATION INCLUDED ....UNITY CHECK WSD AISC 9TH EDITION WITH API-RP2A 21ST EDITION FOR TUBULARS ....DKT PLATES SELECTED ....NO SEGMENTS FOR PRISMATIC MEMBERS 2 ....NO SEGMENTS/SECTION FOR NON-PRISMATIC MEMBERS 1 | EXECUTION ....SHEAR DEFORMATION INCLUDED ....UNITY CHECK WSD AISC 9TH EDITION WITH API-RP2A 21ST EDITION FOR TUBULARS ....DKT PLATES SELECTED ....NO SEGMENTS FOR PRISMATIC MEMBERS 2 ....NO SEGMENTS/SECTION FOR NON-PRISMATIC MEMBERS 1 | EXECUTION ....SHEAR DEFORMATION INCLUDED ....UNITY CHECK WSD AISC 9TH EDITION WITH API-RP2A 21ST EDITION FOR TUBULARS ....DKT PLATES SELECTED ....NO SEGMENTS FOR PRISMATIC MEMBERS 2 ....NO SEGMENTS/SECTION FOR NON-PRISMATIC MEMBERS 1 | EXECUTION ....SHEAR DEFORMATION INCLUDED ....UNITY CHECK WSD AISC 9TH EDITION WITH API-RP2A 21ST EDITION FOR TUBULARS ....DKT PLATES SELECTED ....NO SEGMENTS FOR PRISMATIC MEMBERS 2 ....NO SEGMENTS/SECTION FOR NON-PRISMATIC MEMBERS 1 | EXECUTION ....SHEAR DEFORMATION INCLUDED ....UNITY CHECK WSD AISC 9TH EDITION WITH API-RP2A 21ST EDITION FOR TUBULARS ....DKT PLATES SELECTED ....NO SEGMENTS FOR PRISMATIC MEMBERS 2 ....NO SEGMENTS/SECTION FOR NON-PRISMATIC MEMBERS 1 | EXECUTION ....SHEAR DEFORMATION INCLUDED ....UNITY CHECK WSD AISC 9TH EDITION WITH API-RP2A 21ST EDITION FOR TUBULARS ....DKT PLATES SELECTED ....NO SEGMENTS FOR PRISMATIC MEMBERS 2 ....NO SEGMENTS/SECTION FOR NON-PRISMATIC MEMBERS 1 |
-| REPORTSE SELECTED ....ELEMENT STRESS AT MAXIMUM UNITY CHECK...PRINT ....BEAM COMBINED AND SHEAR UNITY CHECK...PRINT ....JOINT REACTIONS...PRINT | REPORTSE SELECTED ....ELEMENT STRESS AT MAXIMUM UNITY CHECK...PRINT ....BEAM COMBINED AND SHEAR UNITY CHECK...PRINT ....JOINT REACTIONS...PRINT | REPORTSE SELECTED ....ELEMENT STRESS AT MAXIMUM UNITY CHECK...PRINT ....BEAM COMBINED AND SHEAR UNITY CHECK...PRINT ....JOINT REACTIONS...PRINT | REPORTSE SELECTED ....ELEMENT STRESS AT MAXIMUM UNITY CHECK...PRINT ....BEAM COMBINED AND SHEAR UNITY CHECK...PRINT ....JOINT REACTIONS...PRINT | REPORTSE SELECTED ....ELEMENT STRESS AT MAXIMUM UNITY CHECK...PRINT ....BEAM COMBINED AND SHEAR UNITY CHECK...PRINT ....JOINT REACTIONS...PRINT | REPORTSE SELECTED ....ELEMENT STRESS AT MAXIMUM UNITY CHECK...PRINT ....BEAM COMBINED AND SHEAR UNITY CHECK...PRINT ....JOINT REACTIONS...PRINT | REPORTSE SELECTED ....ELEMENT STRESS AT MAXIMUM UNITY CHECK...PRINT ....BEAM COMBINED AND SHEAR UNITY CHECK...PRINT ....JOINT REACTIONS...PRINT | REPORTSE SELECTED ....ELEMENT STRESS AT MAXIMUM UNITY CHECK...PRINT ....BEAM COMBINED AND SHEAR UNITY CHECK...PRINT ....JOINT REACTIONS...PRINT | REPORTSE SELECTED ....ELEMENT STRESS AT MAXIMUM UNITY CHECK...PRINT ....BEAM COMBINED AND SHEAR UNITY CHECK...PRINT ....JOINT REACTIONS...PRINT | REPORTSE SELECTED ....ELEMENT STRESS AT MAXIMUM UNITY CHECK...PRINT ....BEAM COMBINED AND SHEAR UNITY CHECK...PRINT ....JOINT REACTIONS...PRINT | REPORTSE SELECTED ....ELEMENT STRESS AT MAXIMUM UNITY CHECK...PRINT ....BEAM COMBINED AND SHEAR UNITY CHECK...PRINT ....JOINT REACTIONS...PRINT | REPORTSE SELECTED ....ELEMENT STRESS AT MAXIMUM UNITY CHECK...PRINT ....BEAM COMBINED AND SHEAR UNITY CHECK...PRINT ....JOINT REACTIONS...PRINT | REPORTSE SELECTED ....ELEMENT STRESS AT MAXIMUM UNITY CHECK...PRINT ....BEAM COMBINED AND SHEAR UNITY CHECK...PRINT ....JOINT REACTIONS...PRINT | REPORTSE SELECTED ....ELEMENT STRESS AT MAXIMUM UNITY CHECK...PRINT ....BEAM COMBINED AND SHEAR UNITY CHECK...PRINT ....JOINT REACTIONS...PRINT | REPORTSE SELECTED ....ELEMENT STRESS AT MAXIMUM UNITY CHECK...PRINT ....BEAM COMBINED AND SHEAR UNITY CHECK...PRINT ....JOINT REACTIONS...PRINT | REPORTSE SELECTED ....ELEMENT STRESS AT MAXIMUM UNITY CHECK...PRINT ....BEAM COMBINED AND SHEAR UNITY CHECK...PRINT ....JOINT REACTIONS...PRINT | REPORTSE SELECTED ....ELEMENT STRESS AT MAXIMUM UNITY CHECK...PRINT ....BEAM COMBINED AND SHEAR UNITY CHECK...PRINT ....JOINT REACTIONS...PRINT | REPORTSE SELECTED ....ELEMENT STRESS AT MAXIMUM UNITY CHECK...PRINT ....BEAM COMBINED AND SHEAR UNITY CHECK...PRINT ....JOINT REACTIONS...PRINT |
-| LOAD ....NO. BASIC LOAD COND. 6 ....NO. COMB. LOAD COND. 2 | LOAD ....NO. BASIC LOAD COND. 6 ....NO. COMB. LOAD COND. 2 | LOAD ....NO. BASIC LOAD COND. 6 ....NO. COMB. LOAD COND. 2 | LOAD ....NO. BASIC LOAD COND. 6 ....NO. COMB. LOAD COND. 2 | LOAD ....NO. BASIC LOAD COND. 6 ....NO. COMB. LOAD COND. 2 | LOAD ....NO. BASIC LOAD COND. 6 ....NO. COMB. LOAD COND. 2 | LOAD ....NO. BASIC LOAD COND. 6 ....NO. COMB. LOAD COND. 2 | LOAD ....NO. BASIC LOAD COND. 6 ....NO. COMB. LOAD COND. 2 | LOAD ....NO. BASIC LOAD COND. 6 ....NO. COMB. LOAD COND. 2 | LOAD ....NO. BASIC LOAD COND. 6 ....NO. COMB. LOAD COND. 2 | LOAD ....NO. BASIC LOAD COND. 6 ....NO. COMB. LOAD COND. 2 | LOAD ....NO. BASIC LOAD COND. 6 ....NO. COMB. LOAD COND. 2 | LOAD ....NO. BASIC LOAD COND. 6 ....NO. COMB. LOAD COND. 2 | LOAD ....NO. BASIC LOAD COND. 6 ....NO. COMB. LOAD COND. 2 | LOAD ....NO. BASIC LOAD COND. 6 ....NO. COMB. LOAD COND. 2 | LOAD ....NO. BASIC LOAD COND. 6 ....NO. COMB. LOAD COND. 2 | LOAD ....NO. BASIC LOAD COND. 6 ....NO. COMB. LOAD COND. 2 | LOAD ....NO. BASIC LOAD COND. 6 ....NO. COMB. LOAD COND. 2 |
-| SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | Company: Bentley Sytems DATE 17-SEP-2020 TIME 15:12:46 PRE PAGE 2 | Company: Bentley Sytems DATE 17-SEP-2020 TIME 15:12:46 PRE PAGE 2 | Company: Bentley Sytems DATE 17-SEP-2020 TIME 15:12:46 PRE PAGE 2 | Company: Bentley Sytems DATE 17-SEP-2020 TIME 15:12:46 PRE PAGE 2 | Company: Bentley Sytems DATE 17-SEP-2020 TIME 15:12:46 PRE PAGE 2 | Company: Bentley Sytems DATE 17-SEP-2020 TIME 15:12:46 PRE PAGE 2 |
-| TUBULAR MEMBER PROPERTIES | TUBULAR MEMBER PROPERTIES | TUBULAR MEMBER PROPERTIES | TUBULAR MEMBER PROPERTIES | TUBULAR MEMBER PROPERTIES | TUBULAR MEMBER PROPERTIES | TUBULAR MEMBER PROPERTIES | TUBULAR MEMBER PROPERTIES | TUBULAR MEMBER PROPERTIES | TUBULAR MEMBER PROPERTIES | TUBULAR MEMBER PROPERTIES | TUBULAR MEMBER PROPERTIES | TUBULAR MEMBER PROPERTIES | TUBULAR MEMBER PROPERTIES | TUBULAR MEMBER PROPERTIES | TUBULAR MEMBER PROPERTIES | TUBULAR MEMBER PROPERTIES | TUBULAR MEMBER PROPERTIES |
-| GRP M/S | JOINT THICK FT | WALL THICK IN | OUTSIDE DIAM. IN | E 1000 KSI | G 1000 KSI | AXIAL AREA IN**2 | ********X-X IN**4 | MOMENTS OF INERTIA***** Z-Z IN**4 | YIELD STRESS KSI | KY | KZ | SHEAR AREA IN**2 | RING SPACE FT | SECT TAPER Length FT |  |  |  |
-| DUM 9 | 0.00 | 1.000 | 12.00 | 29.0 | 11.6 | 34.558 | 1054.0 | 527.00 | 527.00 | 36.0 | 1.0 | 1.0 | 17.28 | 0.00 | 0.00 |  |  |
-| LG6 1 | 0.00 | 0.750 | 36.00 | 29.0 | 11.0 | 83.056 | 25812. | 12906. | 12906. | 36.0 | 1.0 | 1.0 | 41.53 | 0.00 | 3.25 |  |  |
-| LG6 1 | 0.00 | 0.750 | 26.00 | 29.0 | 11.6 | 59.494 | 9491.1 | 4745.6 | 4745.6 | 36.0 | 1.0 | 1.0 | 29.75 | 0.00 | 0.00 |  |  |
-| LG7 1 | 0.00 | 0.750 | 26.00 | 29.0 | 11.6 | 59.494 | 9491.1 | 4745.6 | 4745.6 | 36.0 | 1.0 | 1.0 | 29.75 | 0.00 | 0.00 |  |  |
-| SHF 1 | 0.00 | 1.000 | 4.00 | 29.0 | 11.6 | 9.4248 | 23.562 | 11.781 | 11.781 | 36.0 | 1.0 | 1.0 | 4.71 | 0.00 | 0.00 |  |  |
-| STB 9 | 0.00 | 1.000 | 6.00 | 29.0 | 11.6 | 15.708 | 102.10 | 51.051 | 51.051 | 36.0 | 1.0 | 1.0 | 7.85 | 0.00 | 0.00 |  |  |
-| VB1 1 | 0.00 | 0.625 | 12.75 | 29.0 | 11.6 | 23.807 | 877.34 | 438.67 | 438.67 | 36.0 | 1.0 | 1.0 | 11.90 | 0.00 | 0.00 |  |  |
-| VB2 1 | 0.00 | 0.500 | 8.82 | 29.0 | 11.6 | 13.077 | 227.39 | 113.70 | 113.70 | 36.0 | 1.0 | 1.0 | 6.54 | 0.00 | 0.00 |  |  |
-| VBS 1 | 0.00 | 0.625 | 12.75 | 29.0 | 11.6 | 23.807 | 877.34 | 438.67 | 438.67 | 36.0 | 1.0 | 1.0 | 11.90 | 0.00 | 0.00 |  |  |
-| SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL | Company: Bentley Sytems DATE 17-SEP-2020 TIME 15:12:46 PRE PAGE 3 | Company: Bentley Sytems DATE 17-SEP-2020 TIME 15:12:46 PRE PAGE 3 | Company: Bentley Sytems DATE 17-SEP-2020 TIME 15:12:46 PRE PAGE 3 | Company: Bentley Sytems DATE 17-SEP-2020 TIME 15:12:46 PRE PAGE 3 | Company: Bentley Sytems DATE 17-SEP-2020 TIME 15:12:46 PRE PAGE 3 | Company: Bentley Sytems DATE 17-SEP-2020 TIME 15:12:46 PRE PAGE 3 |
+                    ** PROGRAM OPTIONS **
 
+         UNITS
+                  ....ENGLISH
 
+         EXECUTION
+                  ....SHEAR DEFORMATION INCLUDED
+                  ....UNITY CHECK
+                       WSD AISC 9TH EDITION WITH API-RP2A 21ST EDITION FOR TUBULARS
+                  ....DKT PLATES SELECTED
+                  ....NO SEGMENTS FOR PRISMATIC MEMBERS    2
+                  ....NO SEGMENTS/SECTION FOR NON-PRISMATIC MEMBERS    1
 
-WIDE FLANGE/WIDE FLANGE COMPACT,MEMBER PROPERTIES  
+         REPORTS SELECTED
+                  ....ELEMENT STRESS AT MAXIMUM UNITY CHECK...PRINT
+                  ....BEAM COMBINED AND SHEAR UNITY CHECK.....PRINT
+                  ....JOINT REACTIONS.........................PRINT
 
+         LOAD
+                  ....NO. BASIC LOAD COND.     6
+                  ....NO. COMB. LOAD COND.     2
 
+ SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+ SAMPLE 01 ENGLISH UNITS MODEL                                                    DATE 17-SEP-2020  TIME 15:12:46   PRE PAGE    2
 
-| GRP | M/S | ** FLANGE ** | ** FLANGE ** | WEB | FILET | E | G | AXIAL | **** MOMENTS | OF INERTIA | **** | YIELD | KY | KZ | FLANGE-BRC | SECT | TPR |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| GRP | M/S | THICK | WIDTH | THICK | RAD. | 1000 | 1000 | AREA | X-X | Y-Y | Z-Z | STRESS |  |  | TOP | BOT | LEN |
-| GRP | M/S | IN | IN | IN | IN | KSI | KSI | IN**2 | IN**4 | IN**4 | IN**4 | KSI |  |  | FT | FT | FT |
-| SK2 | 1 | 0.40 | 6.49 | 0.245 | 0.400 | 7.93 | 29.0 | 11.6 | 7.080 | 0.3500 | 82.80 | 18.30 | 36.0 | 1.0 | 1.0 | 0.0 | 0.00 |
-| SKD | 1 | 0.44 | 6.52 | 0.260 | 0.300 | 12.34 | 29.0 | 11.6 | 8.790 | 0.4600 | 238.0 | 20.30 | 36.0 | 1.0 | 1.0 | 0.0 | 0.00 |
-| W01 | 1 | 1.22 | 12.95 | 0.705 | 0.500 | 25.00 | 29.0 | 11.2 | 47.70 | 18.50 | 5170. | 443.0 | 36.0 | 1.0 | 1.0 | 0.0 | 0.00 |
-| W02 | 1 | 0.96 | 12.85 | 0.605 | 0.500 | 24.48 | 29.0 | 11.2 | 38.50 | 9.500 | 4020. | 340.0 | 36.0 | 1.0 | 1.0 | 0.0 | 0.00 |
+                                                  TUBULAR MEMBER PROPERTIES
 
+        JOINT   WALL   OUTSIDE   E     G    AXIAL       ***** MOMENTS OF INERTIA ****   YIELD   KY   KZ   SHEAR  RING   SECT TAPER
+GRP M/S THICK  THICK    DIAM.  1000  1000   AREA       X-X         Y-Y         Z-Z      STRESS            AREA   SPACE  LENG
+         FT     IN        IN    KSI   KSI   IN**2     IN**4       IN**4       IN**4     KSI               IN**2    FT    FT
 
+DUM  9   0.00  1.000   12.00   29.0  11.6  34.558      1054.0      527.00      527.00     36.0  1.0  1.0   17.28  0.00  0.00
+LG6  1   0.00  0.750   36.00   29.0  11.0  83.056      25812.      12906.      12906.     36.0  1.0  1.0   41.53  0.00  3.25
+LG6  1   0.00  0.750   26.00   29.0  11.6  59.494      9491.1      4745.6      4745.6     36.0  1.0  1.0   29.75  0.00  0.00
+LG7  1   0.00  0.750   26.00   29.0  11.6  59.494      9491.1      4745.6      4745.6     36.0  1.0  1.0   29.75  0.00  0.00
+SHF  1   0.00  1.000    4.00   29.0  11.6  9.4248      23.562      11.781      11.781     36.0  1.0  1.0    4.71  0.00  0.00
+STB  9   0.00  1.000    6.00   29.0  11.6  15.708      102.10      51.051      51.051     36.0  1.0  1.0    7.85  0.00  0.00
+VB1  1   0.00  0.625   12.75   29.0  11.6  23.807      877.34      438.67      438.67     36.0  1.0  1.0   11.90  0.00  0.00
+VB2  1   0.00  0.500    8.82   29.0  11.6  13.077      227.39      113.70      113.70     36.0  1.0  1.0    6.54  0.00  0.00
+VBS  1   0.00  0.625   12.75   29.0  11.6  23.807      877.34      438.67      438.67     36.0  1.0  1.0   11.90  0.00  0.00
 
-SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL
+ SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+ SAMPLE 01 ENGLISH UNITS MODEL                                                    DATE 17-SEP-2020  TIME 15:12:46   PRE PAGE    3
+```
 
-Company: Bentley Sytems
+<!-- 校订来源：SACS2024_SACS.pdf p.83；保留原书示例行号与报告列位。 -->
+```text
+                                       WIDE FLANGE/WIDE FLANGE COMPACT,MEMBER PROPERTIES
 
-DATE 17-SEP-2020 TIME 15:12:46 PRE PAGE 4
+        ** FLANGE **  WEB  FILET           E     G    AXIAL    **** MOMENTS OF INERTIA ****     YIELD   KY  KZ FLANGE-BRC  SECT TPR
+GRP M/S THICK  WIDTH THICK  RAD.  DEPTH  1000  1000   AREA        X-X        Y-Y        Z-Z     STRESS          TOP  BOT   LEN
+          IN     IN    IN    IN     IN   KSI   KSI    IN**2      IN**4      IN**4      IN**4      KSI            FT   FT    FT
 
-CONE MEMBER PROPERTIES  
+SK2  1   0.40   6.49 0.245 0.400   7.93  29.0  11.6   7.080     0.3500      82.80      18.30      36.0 1.0 1.0  0.0  0.0  0.00
+SKD  1   0.44   6.52 0.260 0.300  12.34  29.0  11.6   8.790     0.4600      238.0      20.30      36.0 1.0 1.0  0.0  0.0  0.00
+W01  1   1.22  12.95 0.705 0.500  25.00  29.0  11.2   47.70      18.50      5170.      443.0      36.0 1.0 1.0  0.0  0.0  0.00
+W02  1   0.96  12.85 0.605 0.500  24.48  29.0  11.2   38.50      9.500      4020.      340.0      36.0 1.0 1.0  0.0  0.0  0.00
 
+ SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+ SAMPLE 01 ENGLISH UNITS MODEL                                                    DATE 17-SEP-2020  TIME 15:12:46   PRE PAGE    4
 
+                                                  CONE MEMBER PROPERTIES
 
-| GRP | M/S | JOINT | WALL | DIAMETERS | DIAMETERS | E | G | AXIAL | ********** | MOMENTS OF INERTIA | ********** | YIELD | TENSIL | KY | KZ | SHEAR | SECTION |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| GRP | M/S | THICK | THICK | A | B | 1000 | 1000 | AREA | IX | IY | IZ | STRESS | STRN |  |  | AREA | LENGTH |
-| GRP | M/S | FT | IN | IN | IN | KSI | KSI | IN**2 | IN**4 | IN**4 | IN**4 | KSI | KSI |  |  | IN**2 | FT |
-| LG6 | 1 | 0.00 | 0.75 | 36.0 | 26.0 | 29.0 | 11.6 | 71.27 | 16315. | 8157.6 | 8157.6 | 36.0 | 60.0 | 1.0 | 1.0 | 35.64 | 4.95 |
+        JOINT WALL   DIAMETERS    E    G     AXIAL  ****** MOMENTS OF INERTIA ******   YIELD  TENSIL  KY   KZ     SHEAR SECTION
+GRP M/S THICK THICK    A     B   1000 1000   AREA      IX          IY          IZ      STRESS  STRN               AREA   LENGTH
+         FT    IN     IN    IN   KSI   KSI   IN**2   IN**4       IN**4       IN**4      KSI    KSI                IN**2    FT
 
+LG6  1   0.00  0.75  36.0  26.0  29.0  11.6   71.27  16315.      8157.6      8157.6      36.0  60.0  1.0  1.0     35.64   4.95
 
+ SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+ SAMPLE 01 ENGLISH UNITS MODEL                                                    DATE 17-SEP-2020  TIME 15:12:46   PRE PAGE    5
 
-SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL
+                                        PLATE GROUP REPORT
 
-Company: Bentley Sytems DATE 17-SEP-2020 TIME 15:12:46 PRE PAGE 5
+PLATE THICK TYPE  ELAST POIS. YIELD  ********** X-STIFFENERS **********   ********** Y-STIFFENERS ********** *** PLATE OFFSETS ***
+GROUP              MOD  RATIO STRESS   TX      IY     DXU    DXL  SPAC      TY      IX     DYU    DYL  SPAC    DPY    DPX   Z-OFF
+                  1000
+       IN          KSI        KSI    IN/IN  IN**4/IN  IN     IN     IN    IN/IN  IN**4/IN  IN     IN     IN     IN     IN     IN
 
-PLATE GROUP REPORT   
+ P01  0.375 ISO   29.00.250   36.00  0.000    0.00   0.00   0.00   0.00   0.000    0.00   0.00   0.00   0.00   0.00   0.00   0.00
+ PLT  0.250 ISO   29.00.250   36.00  0.000    0.00   0.00   0.00   0.00   0.000    0.00   0.00   0.00   0.00   0.00   0.00   0.00
+SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+ SAMPLE 01 ENGLISH UNITS MODEL                                                    DATE 17-SEP-2020  TIME 15:12:46   PRE PAGE    6
 
+                    OPTIMIZATION DATA
 
+          OPTIMIZED FINAL BANDWIDTH =     5.493          FINAL MAXIMUM BANDWIDTH =    26
 
-| PLATE | THICK | TYPE | ELAST | POIS. | YIELD | ********** | X-STIFFENERS | X-STIFFENERS | X-STIFFENERS | X-STIFFENERS | ********** | Y-STIFFENERS | Y-STIFFENERS | Y-STIFFENERS | ********** | *** | PLATE | OFFSET | *** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| GROUP |  |  | MOD | RATIO | STRESS | TX | IY | DXU | DXL | SPAC | TY | IX | DYU | DYL | SPAC | DPY | DPX | Z-OFF |  |
-|  | IN |  | 1000 KSI |  | KSI | IN/IN | IN**4/IN | IN | IN | IN | IN/IN | IN**4/IN | IN | IN | IN | IN | IN | IN |  |
-| P01 | 0.375 | ISO | 29.00 | 250 | 36.00 | 0.000 | 0.00 | 0.00 | 0.00 | 0.00 | 0.000 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |  |
-| PLT | 0.250 | ISO | 29.00 | 250 | 36.00 | 0.000 | 0.00 | 0.00 | 0.00 | 0.00 | 0.000 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |  |
-| SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL |  |
-| SAMPLE | 01 | ENGLISH | UNITS | MODEL |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+ SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+ SAMPLE 01 ENGLISH UNITS MODEL                                                    DATE 17-SEP-2020  TIME 15:12:46   PRE PAGE    7
 
+          **** LOAD CASE STATUS REPORT ****
 
+     LOAD   LOAD   PRINT   DEAD   P-DELTA    LOAD    AMOD
+     CASE    ID    OPTION  LOAD    LOAD     FACTOR  FACTOR
 
-SACS CONNECT Edition V(14.3) - CL SAMPLE 01 ENGLISH UNITS MODEL
+       1    AREA     NO     NO      NO        1.00    1.00
+```
 
-OPTIMIZATION DATA
+<!-- 校订来源：SACS2024_SACS.pdf p.84；保留原书示例行号与报告列位。 -->
+```text
+      2    DEAD     NO     NO      NO        1.00    1.00
+      3    EQPT     NO     NO      NO        1.00    1.00
+      4    LIVE     NO     NO      NO        1.00    1.00
+      5    MACH     NO     NO      NO        1.00    1.00
+      6    MISC     NO     NO      NO        1.00    1.00
+      7    CMB1     YES    NO      NO        1.00    1.00
+      8    CMB2     YES    NO      NO        1.00    1.00
 
-OPTIMIZED FINAL BANDWIDTH = 5.493 FINAL MAXIMUM BANDWIDTH = 26
+SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+SAMPLE 01 ENGLISH UNITS MODEL                                                    DATE 17-SEP-2020  TIME 15:12:47   SLV PAGE    1
 
-Company: Bentley Sytems DATE 17-SEP-2020 TIME 15:12:46 PRE PAGE 7
+                                                                                                   SLV VERSION 14.3.0.25
 
-** LOAD CASE STATUS REPORT **
+                  ** SACS PROBLEM DESCRIPTION **
 
+                     NUMBER OF JOINTS ..........     75
 
+                     NUMBER OF BEAMS ...........    123
 
-| LOAD | LOAD | PRINT | DEAD | P-DELTA | LOAD | AMOD |
-| --- | --- | --- | --- | --- | --- | --- |
-| CASE | ID | OPTION | LOAD | LOAD | FACTOR | FACTOR |
+                     NUMBER OF PLATES ..........     11
 
+                     NUMBER OF SHELLS ..........      0
 
+                     NUMBER OF SOLIDS ..........      0
 
-AREA NO NO NO 1.00 1.00
+                     NUMBER OF LOADS ...........      6
 
+                     NUMBER OF RETAINED JOINTS ...    0
 
+                     PRINT OPTION ..............      0
 
-| 2 | DEAD | NO | NO | NO | 1.00 | 1.00 |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 3 | EQPT | NO | NO | NO | 1.00 | 1.00 |  |  |  |  |  |
-| 4 | LIVE | NO | NO | NO | 1.00 | 1.00 |  |  |  |  |  |
-| 5 | MACH | NO | NO | NO | 1.00 | 1.00 |  |  |  |  |  |
-| 6 | MISC | NO | NO | NO | 1.00 | 1.00 |  |  |  |  |  |
-| 7 | CMB1 | YES | NO | NO | 1.00 | 1.00 |  |  |  |  |  |
-| 8 | CMB2 | YES | NO | NO | 1.00 | 1.00 |  |  |  |  |  |
-| SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | Company: Bentley Sytems | Company: Bentley Sytems | Company: Bentley Sytems | Company: Bentley Sytems | Company: Bentley Sytems |
-| SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | DATE 17-SEP-2020 | TIME 15:12:47 | SLV PAGE | 1 |  |
-| SLV VERSION 14.3.0.25 | SLV VERSION 14.3.0.25 | SLV VERSION 14.3.0.25 | SLV VERSION 14.3.0.25 | SLV VERSION 14.3.0.25 | SLV VERSION 14.3.0.25 | SLV VERSION 14.3.0.25 | SLV VERSION 14.3.0.25 | SLV VERSION 14.3.0.25 | SLV VERSION 14.3.0.25 | SLV VERSION 14.3.0.25 | SLV VERSION 14.3.0.25 |
-| ** SACS PROBLEM DESCRIPTION ** | ** SACS PROBLEM DESCRIPTION ** | ** SACS PROBLEM DESCRIPTION ** | ** SACS PROBLEM DESCRIPTION ** | ** SACS PROBLEM DESCRIPTION ** | ** SACS PROBLEM DESCRIPTION ** | ** SACS PROBLEM DESCRIPTION ** | ** SACS PROBLEM DESCRIPTION ** | ** SACS PROBLEM DESCRIPTION ** | ** SACS PROBLEM DESCRIPTION ** | ** SACS PROBLEM DESCRIPTION ** | ** SACS PROBLEM DESCRIPTION ** |
-| NUMBER OF JOINTS | NUMBER OF JOINTS | NUMBER OF JOINTS | NUMBER OF JOINTS | NUMBER OF JOINTS | 75 |  |  |  |  |  |  |
-| NUMBER OF BEAMS | NUMBER OF BEAMS | NUMBER OF BEAMS | NUMBER OF BEAMS | NUMBER OF BEAMS | 123 |  |  |  |  |  |  |
-| NUMBER OF PLATES | NUMBER OF PLATES | NUMBER OF PLATES | NUMBER OF PLATES | NUMBER OF PLATES | 11 |  |  |  |  |  |  |
-| NUMBER OF SHELLS | NUMBER OF SHELLS | NUMBER OF SHELLS | NUMBER OF SHELLS | NUMBER OF SHELLS | 0 |  |  |  |  |  |  |
-| NUMBER OF SOLIDS | NUMBER OF SOLIDS | NUMBER OF SOLIDS | NUMBER OF SOLIDS | NUMBER OF SOLIDS | 0 |  |  |  |  |  |  |
-| NUMBER OF LOADS | NUMBER OF LOADS | NUMBER OF LOADS | NUMBER OF LOADS | NUMBER OF LOADS | 6 |  |  |  |  |  |  |
-| NUMBER OF RETAINED JOINTS | NUMBER OF RETAINED JOINTS | NUMBER OF RETAINED JOINTS | NUMBER OF RETAINED JOINTS | NUMBER OF RETAINED JOINTS | 0 |  |  |  |  |  |  |
-| PRINT OPTION | PRINT OPTION | PRINT OPTION | PRINT OPTION | PRINT OPTION | 0 |  |  |  |  |  |  |
-| SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | Company: Bentley Sytems | Company: Bentley Sytems | Company: Bentley Sytems | Company: Bentley Sytems | Company: Bentley Sytems |
-| SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | DATE 17-SEP-2020 | TIME 15:12:47 | SLV PAGE | 2 |  |
-| APPLIED LOAD SUMMARY | APPLIED LOAD SUMMARY | APPLIED LOAD SUMMARY | APPLIED LOAD SUMMARY | APPLIED LOAD SUMMARY | APPLIED LOAD SUMMARY | APPLIED LOAD SUMMARY | APPLIED LOAD SUMMARY | APPLIED LOAD SUMMARY | APPLIED LOAD SUMMARY | APPLIED LOAD SUMMARY | APPLIED LOAD SUMMARY |
-| LOAD CASE NO. | ID | TOTAL FORCE(X) KIPS | TOTAL FORCE(X) KIPS | TOTAL FORCE(Y) KIPS | TOTAL FORCE(Y) KIPS | TOTAL FORCE(Z) KIPS | TOTAL FORCE(Z) KIPS |  |  |  |  |
-| 1 | AREA | 0.000000E+00 | 0.000000E+00 | 0.000000E+00 | 0.000000E+00 | -7.643123E+01 | -7.643123E+01 |  |  |  |  |
-| 2 | DEAD | 8.876968E-08 | 8.876968E-08 | -1.950585E-07 | -1.950585E-07 | -1.916951E+02 | -1.916951E+02 |  |  |  |  |
-| 3 | EQPT | 0.000000E+00 | 0.000000E+00 | 0.000000E+00 | 0.000000E+00 | -5.349998E+02 | -5.349998E+02 |  |  |  |  |
-| 4 | LIVE | 0.000000E+00 | 0.000000E+00 | 0.000000E+00 | 0.000000E+00 | -4.734957E+02 | -4.734957E+02 |  |  |  |  |
-| 5 | MACH | 0.000000E+00 | 0.000000E+00 | 0.000000E+00 | 0.000000E+00 | -8.200000E+00 | -8.200000E+00 |  |  |  |  |
-| 6 | MISC | 0.000000E+00 | 0.000000E+00 | 0.000000E+00 | 0.000000E+00 | -5.094791E+01 | -5.094791E+01 |  |  |  |  |
-| SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | Company: Bentley Sytems | Company: Bentley Sytems | Company: Bentley Sytems | Company: Bentley Sytems | Company: Bentley Sytems |
-| SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | SAMPLE 01 ENGLISH UNITS MODEL | DATE 17-SEP-2020 | TIME 15:12:47 | SLV PAGE | 3 |  |
+SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+SAMPLE 01 ENGLISH UNITS MODEL                                                    DATE 17-SEP-2020  TIME 15:12:47   SLV PAGE    2
 
+                                   APPLIED LOAD SUMMARY
 
+   LOAD CASE          TOTAL FORCE(X)      TOTAL FORCE(Y)      TOTAL FORCE(Z)
+    NO.  ID                KIPS                KIPS                KIPS
 
-MATRIX TRIANGULARIZATION COMPLETE
+      1 AREA           0.000000E+00        0.000000E+00       -7.643123E+01
+      2 DEAD           8.876968E-08       -1.950585E-07       -1.916951E+02
+      3 EQPT           0.000000E+00        0.000000E+00       -5.349998E+02
+      4 LIVE           0.000000E+00        0.000000E+00       -4.734957E+02
+      5 MACH           0.000000E+00        0.000000E+00       -8.200000E+00
+      6 MISC           0.000000E+00        0.000000E+00       -5.094791E+01
 
-MAX. SIGNIFICANT DIGITS LOST = 3 SOLUTION ACCURATE TO 12 DIGITS OUT OF POSSIBLE 15
+SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+SAMPLE 01 ENGLISH UNITS MODEL                                                    DATE 17-SEP-2020  TIME 15:12:47   SLV PAGE    3
+```
 
-FORWARD SUBSTITUTION COMPLETE
+<!-- 校订来源：SACS2024_SACS.pdf p.85；保留原书示例行号与报告列位。 -->
+```text
+         MATRIX TRIANGULARIZATION COMPLETE
 
-BACK SUBSTITUTION COMPLETE
+           MAX. SIGNIFICANT DIGITS LOST =  3     SOLUTION ACCURATE TO 12 DIGITS OUT OF POSSIBLE 15
 
-SACS CONNECT Edition V(14.3) - CL
+         FORWARD SUBSTITUTION COMPLETE
 
-SAMPLE 01 ENGLISH UNITS MODEL
+         BACK SUBSTITUTION COMPLETE
 
-Company: Bentley Sytems
+SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+SAMPLE 01 ENGLISH UNITS MODEL                                                    DATE 17-SEP-2020  TIME 15:12:47   SLV PAGE    4
 
-DATE 17-SEP-2020 TIME 15:12:47 SLV PAGE
+                            FIXED DEGREE OF FREEDOM REACTION SUMMARY
 
-4
+   LOAD CASE          TOTAL FORCE(X)      TOTAL FORCE(Y)      TOTAL FORCE(Z)
+    NO.  ID                KIPS                KIPS                KIPS
 
-FIXED DEGREE OF FREEDOM REACTION SUMMARY   
-
-
-
-| LOAD CASE NO. | ID | TOTAL FORCE (X) KIPS | TOTAL FORCE (Y) KIPS | TOTAL FORCE (Z) KIPS |
-| --- | --- | --- | --- | --- |
-| 1 | AREA | 1.626972E-12 | -3.172716E-13 | 7.643123E+01 |
-| 2 | DEAD | -8.876599E-08 | 1.950621E-07 | 1.916951E+02 |
-| 3 | EQPT | 2.989964E-12 | -1.625836E-12 | 5.349998E+02 |
-| 4 | LIVE | 1.018179E-11 | -2.056595E-12 | 4.734957E+02 |
-| 5 | MACH | 1.869808E-12 | 6.525625E-13 | 8.200000E+00 |
-| 6 | MISC | 2.954835E-12 | 1.984347E-12 | 5.094791E+01 |
-
-
+      1 AREA           1.626972E-12       -3.172716E-13        7.643123E+01
+      2 DEAD          -8.876599E-08        1.950621E-07        1.916951E+02
+      3 EQPT           2.989964E-12       -1.625836E-12        5.349998E+02
+      4 LIVE           1.018179E-11       -2.056595E-12        4.734957E+02
+      5 MACH           1.869808E-12        6.525625E-13        8.200000E+00
+      6 MISC           2.954835E-12        1.984347E-12        5.094791E+01
+```
 
 ## 6.2 SHELL AND SOLID ELEMENT MODEL
 
@@ -3082,111 +2971,113 @@ Sample Problem 2 illustrates the use of nine node shell and eight node solid fin
 
 Following is the SACS model file for this sample problem and a description of selected portions.
 
+<!-- 校订来源：SACS2024_SACS.pdf p.86；保留原书示例行号与报告列位。 -->
+```text
+               1         2         3         4         5         6         7         8
+      12345678901234567890123456789012345678901234567890123456789012345678901234567890
+ 1         SACS SHELL AND SOLID SAMPLE PROBLEM
+ 2    OPTIONS      EN         UC     1   DC  C
+ 3    LCSEL ST        4    5
+ 4    SHELL
+ 5    SHELL0S212 212 213 214 224 234 233 232 222 223     2.5  29.0 0.25  36.490.0  6.5
+ 6    SHELL0S214 214 215 216 226 236 235 234 224 225     2.5  29.0 0.25  36.490.0  6.5
+ 7    SOLID
+ 8    SOLID D101 101 102 202 201 111 112 212 211              3.64          150.0
+ 9    SOLID D102 102 103 203 202 112 113 213 212              3.64          150.0
+10    SOLID D103 103 104 204 203 113 114 214 213              3.64          150.0
+11    SOLID D104 104 105 205 204 114 115 215 214              3.64          150.0
+12    SOLID D105 105 106 206 205 115 116 216 215              3.64          150.0
+13    SOLID D106 106 107 207 206 116 117 217 216              3.64          150.0
+14    SOLID D111 111 112 212 211 121 122 222 221              3.64          150.0
+15    SOLID D116 116 117 217 216 126 127 227 226              3.64          150.0
+16    SOLID D121 121 122 222 221 131 132 232 231              3.64          150.0
+17    SOLID D126 126 127 227 226 136 137 237 236              3.64          150.0
+18    JOINT
+19    JOINT 101  -9.    -5.    0.            -0.276         111111
+20    JOINT 102  -6.    -5.    0.     -4.368 -0.276         111111
+21    JOINT 103  -3.    -6.    0.     -3.528 -3.528         111111
+22    JOINT 104  0.     -6.    0.            -8.736         111111
+```
 
+<!-- 校订来源：SACS2024_SACS.pdf p.87；保留原书示例行号与报告列位。 -->
+```text
+23    JOINT 105  3.     -6.    0.     3.528  -3.528         111111
+24    JOINT 106  6.     -5.    0.     4.368  -0.276         111111
+25    JOINT 107  9.     -5.    0.            -0.276         111111
+26    JOINT 111  -9.    -5.    3.            -0.276         111111
+27    JOINT 112  -6.    -5.    3.     -4.368 -0.276         000111
+28    JOINT 113  -3.    -6.    3.     -3.528 -3.528         000111
+29    JOINT 114  0.     -6.    3.            -8.736         000111
+30    JOINT 115  3.     -6.    3.     3.528  -3.528         000111
+31    JOINT 116  6.     -5.    3.     4.368  -0.276         000111
+32    JOINT 117  9.     -5.    3.            -0.276         111111
+33    JOINT 121  -9.    -5.    6.            -0.276         111111
+34    JOINT 122  -6.    -5.    6.     -4.368 -0.276         000111
+35    JOINT 126  6.     -5.    6.     4.368  -0.276         000111
+36    JOINT 127  9.     -5.    6.            -0.276         111111
+37    JOINT 131  -9.    -5.    9.            -0.276         111111
+38    JOINT 132  -6.    -5.    9.     -4.368 -0.276         000111
+39    JOINT 136  6.     -5.    9.     4.368  -0.276         000111
+40    JOINT 137  9.     -5.    9.            -0.276         111111
+41    JOINT 201  -9.    -2.    0.            -0.276         111111
+42    JOINT 202  -6.    -2.    0.     -4.368 -0.276         111111
+43    JOINT 203  -3.    -3.    0.     -3.528 -3.528         111111
+44    JOINT 204  0.     -3.    0.            -8.736         111111
+45    JOINT 205  3.     -3.    0.     3.528  -3.528         111111
+46    JOINT 206  6.     -2.    0.     4.368  -0.276         111111
+47    JOINT 207  9.     -2.    0.            -0.276         111111
+48    JOINT 211  -9.    -2.    3.            -0.276
+49    JOINT 212  -6.    -2.    3.     -4.368 -0.276
+50    JOINT 213  -3.    -3.    3.     -3.528 -3.528
+51    JOINT 214  0.     -3.    3.            -8.736
+52    JOINT 215  3.     -3.    3.     3.528  -3.528
+53    JOINT 216  6.     -2.    3.     4.368  -0.276
+54    JOINT 217  9.     -2.    3.            -0.276         111111
+55    JOINT 221  -9.    -2.    6.            -0.276         111111
+56    JOINT 222  -6.    -2.    6.     -4.368 -0.276
+57    JOINT 223  -3.    -3.    6.     -3.528 -3.528
+58    JOINT 224  0.     -3.    6.            -8.736
+59    JOINT 225  3.     -3.    6.     3.528  -3.528
+60    JOINT 226  6.     -2.    6.     4.368  -0.276
+61    JOINT 227  9.     -2.    6.            -0.276         111111
+62    JOINT 231  -9.    -2.    9.            -0.276         111111
+63    JOINT 232  -6.    -2.    9.     -4.368 -0.276
+64    JOINT 233  -3.    -3.    9.     -3.528 -3.528
+65    JOINT 234  0.     -3.    9.            -8.736
+66    JOINT 235  3.     -3.    9.     3.528  -3.528
+67    JOINT 236  6.     -2.    9.     4.368  -0.276
+68    JOINT 237  9.     -2.    9.            -0.276         111111
+69    LOAD
+70    LOADCN   1
+71    LOAD   212                    -0.735                        GLOB JOIN   SHDEAD
+72    LOAD   213                    -1.470                        GLOB JOIN   SHDEAD
+73    LOAD   214                    -1.470                        GLOB JOIN   SHDEAD
+74    LOAD   215                    -1.470                        GLOB JOIN   SHDEAD
+75    LOAD   216                    -0.735                        GLOB JOIN   SHDEAD
+76    LOAD   222                    -1.470                        GLOB JOIN   SHDEAD
+77    LOAD   223                    -2.940                        GLOB JOIN   SHDEAD
+78    LOAD   224                    -2.940                        GLOB JOIN   SHDEAD
+79    LOAD   225                    -2.940                        GLOB JOIN   SHDEAD
+80    LOAD   226                    -1.470                        GLOB JOIN   SHDEAD
+81    LOAD   232                    -1.470                        GLOB JOIN   SHDEAD
+82    LOAD   233                    -2.940                        GLOB JOIN   SHDEAD
+83    LOAD   234                    -2.940                        GLOB JOIN   SHDEAD
+84    LOAD   235                    -2.940                        GLOB JOIN   SHDEAD
+85    LOAD   236                    -1.470                        GLOB JOIN   SHDEAD
+86    LOADCN   2
+87    LOAD SPC S212S214  -10.4        -0.866
+88    LOADCN   3
+89    LOAD STT S212S214-40.0  -40.0  -40.0  -35.0  -30.0  -30.0  -30.0  -35.0  -35.0
+90    LOAD STB S212S2140.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0
+91    LCOMB
+92    LCOMB 4    1   1.1   2   1.0
+```
 
-|  | 1 | 1 | 2 | 2 | 3 | 3 | 4 | 4 | 5 | 5 | 6 | 6 | 7 | 7 | 8 |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 |
-| 1 | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM |
-| 2 | OPTIONS EN | OPTIONS EN | OPTIONS EN | OPTIONS EN | UC | UC | 1 | 1 | DC | DC | C | C | C | C | C | C |
-| 3 | LCSEL ST | LCSEL ST | 4 | 4 | 5 | 5 |  |  |  |  |  |  |  |  |  |  |
-| 4 | SHELL | SHELL |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 5 | SHELLOS212 | 212 | 213 | 214 | 224 | 234 | 233 | 232 | 222 | 223 | 2.5 | 29.0 | 0.25 | 36.490.0 | 6.5 |  |
-| 6 | SHELLOS214 | 214 | 215 | 216 | 226 | 236 | 235 | 234 | 224 | 225 | 2.5 | 29.0 | 0.25 | 36.490.0 | 6.5 |  |
-| 7 | SOLID | SOLID |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 8 | SOLID D101 | 101 | 102 | 202 | 201 | 111 | 112 | 212 | 211 |  | 3.64 | 3.64 | 150.0 | 150.0 |  |  |
-| 9 | SOLID D102 | 102 | 103 | 203 | 202 | 112 | 113 | 213 | 212 |  | 3.64 | 3.64 | 150.0 | 150.0 |  |  |
-| 10 | SOLID D103 | 103 | 104 | 204 | 203 | 113 | 114 | 214 | 213 |  | 3.64 | 3.64 | 150.0 | 150.0 |  |  |
-| 11 | SOLID D104 | 104 | 105 | 205 | 204 | 114 | 115 | 215 | 214 |  | 3.64 | 3.64 | 150.0 | 150.0 |  |  |
-| 12 | SOLID D105 | 105 | 106 | 206 | 205 | 115 | 116 | 216 | 215 |  | 3.64 | 3.64 | 150.0 | 150.0 |  |  |
-| 13 | SOLID D106 | 106 | 107 | 207 | 206 | 116 | 117 | 217 | 216 |  | 3.64 | 3.64 | 150.0 | 150.0 |  |  |
-| 14 | SOLID D111 | 111 | 112 | 212 | 211 | 121 | 122 | 222 | 221 |  | 3.64 | 3.64 | 150.0 | 150.0 |  |  |
-| 15 | SOLID D116 | 116 | 117 | 217 | 216 | 126 | 127 | 227 | 226 |  | 3.64 | 3.64 | 150.0 | 150.0 |  |  |
-| 16 | SOLID D121 | 121 | 122 | 222 | 221 | 131 | 132 | 232 | 231 |  | 3.64 | 3.64 | 150.0 | 150.0 |  |  |
-| 17 | SOLID D126 | 126 | 127 | 227 | 226 | 136 | 137 | 237 | 236 |  | 3.64 | 3.64 | 150.0 | 150.0 |  |  |
-| 18 | JOINT | JOINT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 19 | JOINT 101 | -9. | -5. | -5. | 0. | 0. | -0.276 | -0.276 | -0.276 | -0.276 | 111111 | 111111 |  |  |  |  |
-| 20 | JOINT 102 | -6. | -5. | -5. | 0. | 0. | -4.368 | -4.368 | -4.368 | -4.368 | 111111 | 111111 |  |  |  |  |
-| 21 | JOINT 103 | -3. | -6. | -6. | 0. | 0. | -3.528 | -3.528 | -3.528 | -3.528 | 111111 | 111111 |  |  |  |  |
-| 22 | JOINT 104 | 0. | -6. | -6. | 0. | 0. | -8.736 | -8.736 | -8.736 | -8.736 | 111111 | 111111 |  |  |  |  |
-
-
-
-
-
-| 23 | JOINT 105 | 3. | -6. | 0. | 3.528 | -3.528 | 111111 |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 24 | JOINT 106 | 6. | -5. | 0. | 4.368 | -0.276 | 111111 |  |
-| 25 | JOINT 107 | 9. | -5. | 0. |  | -0.276 | 111111 |  |
-| 26 | JOINT 111 | -9. | -5. | 3. |  | -0.276 | 111111 |  |
-| 27 | JOINT 112 | -6. | -5. | 3. | -4.368 | -0.276 | 000111 |  |
-| 28 | JOINT 113 | -3. | -6. | 3. | -3.528 | -3.528 | 000111 |  |
-| 29 | JOINT 114 | 0. | -6. | 3. |  | -8.736 | 000111 |  |
-| 30 | JOINT 115 | 3. | -6. | 3. | 3.528 | -3.528 | 000111 |  |
-| 31 | JOINT 116 | 6. | -5. | 3. | 4.368 | -0.276 | 000111 |  |
-| 32 | JOINT 117 | 9. | -5. | 3. |  | -0.276 | 111111 |  |
-| 33 | JOINT 121 | -9. | -5. | 6. |  | -0.276 | 111111 |  |
-| 34 | JOINT 122 | -6. | -5. | 6. | -4.368 | -0.276 | 000111 |  |
-| 35 | JOINT 126 | 6. | -5. | 6. | 4.368 | -0.276 | 000111 |  |
-| 36 | JOINT 127 | 9. | -5. | 6. |  | -0.276 | 111111 |  |
-| 37 | JOINT 131 | -9. | -5. | 9. |  | -0.276 | 111111 |  |
-| 38 | JOINT 132 | -6. | -5. | 9. | -4.368 | -0.276 | 000111 |  |
-| 39 | JOINT 136 | 6. | -5. | 9. | 4.368 | -0.276 | 000111 |  |
-| 40 | JOINT 137 | 9. | -5. | 9. |  | -0.276 | 111111 |  |
-| 41 | JOINT 201 | -9. | -2. | 0. |  | -0.276 | 111111 |  |
-| 42 | JOINT 202 | -6. | -2. | 0. | -4.368 | -0.276 | 111111 |  |
-| 43 | JOINT 203 | -3. | -3. | 0. | -3.528 | -3.528 | 111111 |  |
-| 44 | JOINT 204 | 0. | -3. | 0. |  | -8.736 | 111111 |  |
-| 45 | JOINT 205 | 3. | -3. | 0. | 3.528 | -3.528 | 111111 |  |
-| 46 | JOINT 206 | 6. | -2. | 0. | 4.368 | -0.276 | 111111 |  |
-| 47 | JOINT 207 | 9. | -2. | 0. |  | -0.276 | 111111 |  |
-| 48 | JOINT 211 | -9. | -2. | 3. |  | -0.276 |  |  |
-| 49 | JOINT 212 | -6. | -2. | 3. | -4.368 | -0.276 |  |  |
-| 50 | JOINT 213 | -3. | -3. | 3. | -3.528 | -3.528 |  |  |
-| 51 | JOINT 214 | 0. | -3. | 3. |  | -8.736 |  |  |
-| 52 | JOINT 215 | 3. | -3. | 3. | 3.528 | -3.528 |  |  |
-| 53 | JOINT 216 | 6. | -2. | 3. | 4.368 | -0.276 |  |  |
-| 54 | JOINT 217 | 9. | -2. | 3. |  | -0.276 | 111111 |  |
-| 55 | JOINT 221 | -9. | -2. | 6. |  | -0.276 | 111111 |  |
-| 56 | JOINT 222 | -6. | -2. | 6. | -4.368 | -0.276 |  |  |
-| 57 | JOINT 223 | -3. | -3. | 6. | -3.528 | -3.528 |  |  |
-| 58 | JOINT 224 | 0. | -3. | 6. |  | -8.736 |  |  |
-| 59 | JOINT 225 | 3. | -3. | 6. | 3.528 | -3.528 |  |  |
-| 60 | JOINT 226 | 6. | -2. | 6. | 4.368 | -0.276 |  |  |
-| 61 | JOINT 227 | 9. | -2. | 6. |  | -0.276 | 111111 |  |
-| 62 | JOINT 231 | -9. | -2. | 9. |  | -0.276 | 111111 |  |
-| 63 | JOINT 232 | -6. | -2. | 9. | -4.368 | -0.276 |  |  |
-| 64 | JOINT 233 | -3. | -3. | 9. | -3.528 | -3.528 |  |  |
-| 65 | JOINT 234 | 0. | -3. | 9. |  | -8.736 |  |  |
-| 66 | JOINT 235 | 3. | -3. | 9. | 3.528 | -3.528 |  |  |
-| 67 | JOINT 236 | 6. | -2. | 9. | 4.368 | -0.276 |  |  |
-| 68 | JOINT 237 | 9. | -2. | 9. |  | -0.276 | 111111 |  |
-| 69 | LOAD | LOAD | LOAD | LOAD | LOAD | LOAD | LOAD | LOAD |
-| 70 | LOADCN 1 | LOADCN 1 | LOADCN 1 | LOADCN 1 | LOADCN 1 | LOADCN 1 | LOADCN 1 | LOADCN 1 |
-| 71 | LOAD 212 | LOAD 212 | LOAD 212 | LOAD 212 | -0.735 | -0.735 | GLOB JOIN SHDEAD | GLOB JOIN SHDEAD |
-| 72 | LOAD 213 | LOAD 213 | LOAD 213 | LOAD 213 | -1.470 | -1.470 | GLOB JOIN SHDEAD | GLOB JOIN SHDEAD |
-| 73 | LOAD 214 | LOAD 214 | LOAD 214 | LOAD 214 | -1.470 | -1.470 | GLOB JOIN SHDEAD | GLOB JOIN SHDEAD |
-| 74 | LOAD 215 | LOAD 215 | LOAD 215 | LOAD 215 | -1.470 | -1.470 | GLOB JOIN SHDEAD | GLOB JOIN SHDEAD |
-| 75 | LOAD 216 | LOAD 216 | LOAD 216 | LOAD 216 | -0.735 | -0.735 | GLOB JOIN SHDEAD | GLOB JOIN SHDEAD |
-| 76 | LOAD 222 | LOAD 222 | LOAD 222 | LOAD 222 | -1.470 | -1.470 | GLOB JOIN SHDEAD | GLOB JOIN SHDEAD |
-| 77 | LOAD 223 | LOAD 223 | LOAD 223 | LOAD 223 | -2.940 | -2.940 | GLOB JOIN SHDEAD | GLOB JOIN SHDEAD |
-| 78 | LOAD 224 | LOAD 224 | LOAD 224 | LOAD 224 | -2.940 | -2.940 | GLOB JOIN SHDEAD | GLOB JOIN SHDEAD |
-| 79 | LOAD 225 | LOAD 225 | LOAD 225 | LOAD 225 | -2.940 | -2.940 | GLOB JOIN SHDEAD | GLOB JOIN SHDEAD |
-| 80 | LOAD 226 | LOAD 226 | LOAD 226 | LOAD 226 | -1.470 | -1.470 | GLOB JOIN SHDEAD | GLOB JOIN SHDEAD |
-| 81 | LOAD 232 | LOAD 232 | LOAD 232 | LOAD 232 | -1.470 | -1.470 | GLOB JOIN SHDEAD | GLOB JOIN SHDEAD |
-| 82 | LOAD 233 | LOAD 233 | LOAD 233 | LOAD 233 | -2.940 | -2.940 | GLOB JOIN SHDEAD | GLOB JOIN SHDEAD |
-| 83 | LOAD 234 | LOAD 234 | LOAD 234 | LOAD 234 | -2.940 | -2.940 | GLOB JOIN SHDEAD | GLOB JOIN SHDEAD |
-| 84 | LOAD 235 | LOAD 235 | LOAD 235 | LOAD 235 | -2.940 | -2.940 | GLOB JOIN SHDEAD | GLOB JOIN SHDEAD |
-| 85 | LOAD 236 | LOAD 236 | LOAD 236 | LOAD 236 | -1.470 | -1.470 | GLOB JOIN SHDEAD | GLOB JOIN SHDEAD |
-| 86 | LOADCN 2 | LOADCN 2 | LOADCN 2 | LOADCN 2 | LOADCN 2 | LOADCN 2 | LOADCN 2 | LOADCN 2 |
-| 87 | LOAD SPC S212S214 -10.4 -0.866 | LOAD SPC S212S214 -10.4 -0.866 | LOAD SPC S212S214 -10.4 -0.866 | LOAD SPC S212S214 -10.4 -0.866 | LOAD SPC S212S214 -10.4 -0.866 | LOAD SPC S212S214 -10.4 -0.866 | LOAD SPC S212S214 -10.4 -0.866 | LOAD SPC S212S214 -10.4 -0.866 |
-| 88 | LOADCN 3 | LOADCN 3 | LOADCN 3 | LOADCN 3 | LOADCN 3 | LOADCN 3 | LOADCN 3 | LOADCN 3 |
-| 89 | LOAD STT S212S214-40.0 -40.0 -40.0 -35.0 -30.0 -30.0 -35.0 -35.0 | LOAD STT S212S214-40.0 -40.0 -40.0 -35.0 -30.0 -30.0 -35.0 -35.0 | LOAD STT S212S214-40.0 -40.0 -40.0 -35.0 -30.0 -30.0 -35.0 -35.0 | LOAD STT S212S214-40.0 -40.0 -40.0 -35.0 -30.0 -30.0 -35.0 -35.0 | LOAD STT S212S214-40.0 -40.0 -40.0 -35.0 -30.0 -30.0 -35.0 -35.0 | LOAD STT S212S214-40.0 -40.0 -40.0 -35.0 -30.0 -30.0 -35.0 -35.0 | LOAD STT S212S214-40.0 -40.0 -40.0 -35.0 -30.0 -30.0 -35.0 -35.0 | LOAD STT S212S214-40.0 -40.0 -40.0 -35.0 -30.0 -30.0 -35.0 -35.0 |
-| 90 | LOAD STB S212S2140.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 | LOAD STB S212S2140.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 | LOAD STB S212S2140.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 | LOAD STB S212S2140.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 | LOAD STB S212S2140.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 | LOAD STB S212S2140.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 | LOAD STB S212S2140.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 | LOAD STB S212S2140.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 |
-| 91 | LCOMB | LCOMB | LCOMB | LCOMB | LCOMB | LCOMB | LCOMB | LCOMB |
-| 92 | LCOMB 4 1 1.1 2 1.0 | LCOMB 4 1 1.1 2 1.0 | LCOMB 4 1 1.1 2 1.0 | LCOMB 4 1 1.1 2 1.0 | LCOMB 4 1 1.1 2 1.0 | LCOMB 4 1 1.1 2 1.0 | LCOMB 4 1 1.1 2 1.0 | LCOMB 4 1 1.1 2 1.0 |
-
-
+<!-- 校订来源：SACS2024_SACS.pdf p.88；保留原书示例行号与报告列位。 -->
+```text
+93    LCOMB 5    1   1.1   2   1.0   3   1.0
+94    END
+```
 
 The following is a description of selected input lines in the SACS model file for Sample Problem 2. The input lines are referenced by the letter in the left margin of the input listing.
 
@@ -3194,40 +3085,69 @@ Note: For asterisked items (*), see Post program manual for a detailed discussio
 
 Line 2. The OPTIONS line specifies the analysis options, namely:
 
-a. English units are designated by ‘EN’ in columns 14-15.   
-b. By default, a static analysis is desired (columns 19-20 are blank).   
-c. * Element code check will be based on AISC/API code (‘UC’ in columns 25- 26).   
+a. English units are designated by ‘EN’ in columns 14-15.
+
+b. By default, a static analysis is desired (columns 19-20 are blank).
+
+c. * Element code check will be based on AISC/API code (‘UC’ in columns 25- 26).
+
 d. * An element detailed stress report is requested by ‘PT’ in columns 55-56.
 
 Line 3. * Only results for load combinations 4 and 5 are to be reported as specified on the LCSEL line.
 
 Line 4. A SHELL header line designates that shell element definitions follow. The first SHELL input line defines the properties of shell ‘S212’ as follows:
 
-a. The shell name ‘S212’ is designated in columns 7-10.   
-b. The connecting joints are specified in columns 12-47. Shell ‘S212’ is a nine node shell defined by joints 212, 213, 214, 224, 234, 233, 232, 222 and 223, where joint 223 is the center joint. The local X axis is defined by joints 212 and 214, the local Y is perpendicular to the local X and parallel to the line formed by joints 214 and 234.   
-c. A constant thickness of 2.5" is assigned by ‘0’ in column 6 (constant) and ‘2.5’ in columns 53-55.   
-d. The Modulus of elasticity, Poisson’s ratio, yield stress, material density and coefficient of thermal expansion are specified in columns 57-61, 62-65, 66-70, 71-75 and 76-80.
+a. The shell name ‘S212’ is designated in columns 7-10.
+
+b. The connecting joints are specified in columns 12-47. Shell ‘S212’ is a nine node shell
+
+defined by joints 212, 213, 214, 224, 234, 233, 232, 222 and 223, where joint 223 is the center joint. The local X axis is defined by joints 212 and 214, the local Y is perpendicular to the local X and parallel to the line formed by joints 214 and 234.
+
+c. A constant thickness of 2.5" is assigned by ‘0’ in column 6 (constant) and ‘2.5’ in
+
+columns 53-55.
+
+d. The Modulus of elasticity, Poisson’s ratio, yield stress, material density and coefficient of
+
+thermal expansion are specified in columns 57-61, 62-65, 66-70, 71-75 and 76-80.
 
 Line 7. Solid elements are defined on SOLID input lines following the SOLID header line. The geometry and properties for solid element ‘D101’ are defined on the first SOLID line as follows:
 
-a. The solid name ‘D101’ is designated in columns 7-10.   
-b. The connecting joints are specified in columns 12-43. Solid ‘D101’ is an eight node brick element defined by joints 101, 102, 202, 201, 111, 112, 212, and 211.   
-c. A modulus of elasticity of 3,640 ksi is assigned by ‘3.64’ in columns 57-61. The default Poisson’s ratio and yield stress are used.   
+a. The solid name ‘D101’ is designated in columns 7-10.
+
+b. The connecting joints are specified in columns 12-43. Solid ‘D101’ is an eight node brick
+
+element defined by joints 101, 102, 202, 201, 111, 112, 212, and 211.
+
+c. A modulus of elasticity of 3,640 ksi is assigned by ‘3.64’ in columns 57-61. The default
+
+Poisson’s ratio and yield stress are used.
+
 d. The material density is specified as 150.0 #/ft3 in columns 71-75.
 
 Line 18. The JOINT header line signals the beginning of joint definitions. The first JOINT line defines the coordinates** of joint 101 (‘101’ specified in columns 8-10).
 
 **Note: Joint coordinates may be defined in decimals of feet(meters) or in feet(meters) plus inches(centimeters). For this sample, coordinates are expressed in feet plus inches.
 
-a. The X coordinate of joint 101 is -9 ft as designated by ‘-9.’ in columns 12-18.   
-b. The Y coordinate is -5'0.276" or -5.023' (-5.00276m if model units are metric) as designated by ‘-5.’ in columns 19-25 and ‘-0.276’ in columns 40-46.   
-c. The Z coordinate is 0. (‘0’ in columns 26-32).   
-d. Joint 101 is a support joint with all six degrees of freedom restrained (‘111111’ in columns 55-60).
+a. The X coordinate of joint 101 is -9 ft as designated by ‘-9.’ in columns 12-18.
+
+b. The Y coordinate is -5'0.276" or -5.023' (-5.00276m if model units are metric) as
+
+designated by ‘-5.’ in columns 19-25 and ‘-0.276’ in columns 40-46.
+
+c.  The Z coordinate is 0. (‘0’ in columns 26-32).
+
+d. Joint 101 is a support joint with all six degrees of freedom restrained (‘111111’ in
+
+columns 55-60).
 
 Line 27. Joint 112 is defined by JOINT line with ‘112’ in columns 8-10.
 
-a. The X, Y and Z coordinates are defined in columns 12-53.   
-b. The X, Y and Z rotational degrees of freedom are restrained by ‘000111’ in columns 55- 60.
+a. The X, Y and Z coordinates are defined in columns 12-53.
+
+b. The X, Y and Z rotational degrees of freedom are restrained by ‘000111’ in columns 55-
+
+60.
 
 Note: Because solid elements do not have rotational stiffness, the rotational degrees of freedom for joints connected exclusively to solid elements must be fixed.
 
@@ -3235,169 +3155,274 @@ Line 69. The loading portion of the input begins with the LOAD header line. Load
 
 Line 70. Load case 1 consist of loads on joints 212, 213, 214, 215, 216, 222, 223, 224, 225, 226, 232, 233, 234, 235 and 236. Joint 212 is loaded as follows:
 
-a. The ‘JOIN’ label in columns 66-69 designates the type of loading as a joint load.   
-b. The joint to be loaded is designated in columns 9-11.   
+a. The ‘JOIN’ label in columns 66-69 designates the type of loading as a joint load.
+
+b. The joint to be loaded is designated in columns 9-11.
+
 c. A load of -0.735 is to be applied in the global Z direction as indicated in columns 31-37.
 
 Line 86. Load case 2 contains a varying normal pressure load acting on shells S212 and S214. The LOAD input line specifies the following:
 
-a. The type of load is designated as a normal pressure load by ‘SPC’ in columns 6-8.   
-b. All shell names from S212 through S214 are to be loaded by this input line (‘S212’ and ‘S214’ in columns 10-13 and 14-17).   
-c. The normal pressure at the origin joint (i.e. first joint specified on the SHELL line) is 10.4 psi in the local -Z direction as specified by ‘-10.4’ in columns 18- 24.   
-d. The normal pressure decreases by 0.866 psi per foot in the local Y direction (- 0.866 in columns 32-38).
+a. The type of load is designated as a normal pressure load by ‘SPC’ in columns 6-8.
+
+b. All shell names from S212 through S214 are to be loaded by this input line (‘S212’ and
+
+‘S214’ in columns 10-13 and 14-17).
+
+c. The normal pressure at the origin joint (i.e. first joint specified on the SHELL line) is 10.4
+
+psi in the local -Z direction as specified by ‘-10.4’ in columns 18- 24.
+
+d. The normal pressure decreases by 0.866 psi per foot in the local Y direction (- 0.866 in
+
+columns 32-38).
 
 Line 88. Load case 3 contains shell temperature loads on the top and bottom surfaces of shells S212 and S214. The top surface of the shell is exposed to a temperature lower than the ambient temperature while the bottom surface is at the ambient temperature.
 
-a. The type of load is designated as a shell temperature load at the top surface by ‘STT’ in columns 6-8.   
-b. All shell names from S212 through S214 are to be loaded by this input line (‘S212’ and ‘S214’ in columns 10-13 and 14-17).   
-c. The temperature at the top surface relative to the ambient temperature at each of the shell joints is specified in columns 18-80.   
-d. The temperature at the bottom surface relative to ambient temperature is specified in columns 18-80 of the SHELL line with ‘STB’ designated in columns 6-8.
+a. The type of load is designated as a shell temperature load at the top surface by ‘STT’ in
+
+columns 6-8.
+
+b. All shell names from S212 through S214 are to be loaded by this input line (‘S212’ and
+
+‘S214’ in columns 10-13 and 14-17).
+
+c. The temperature at the top surface relative to the ambient temperature at each of the
+
+shell joints is specified in columns 18-80.
+
+d. The temperature at the bottom surface relative to ambient temperature is specified in
+
+columns 18-80 of the SHELL line with ‘STB’ designated in columns 6-8.
 
 Line 91. Load combinations made up of one or more load cases and/or combinations are defined after the LCOMB header line. Load case 4 is a combination consisting of load case 1 multiplied by 1.1 and 100.0 percent of load case 2.
 
 The output file for the analysis is listed on the following pages. The output for the post processor is included and is discussed in detail in the Post program module manual.
 
-SACS CONNECT Edition V(14.3)-CL Company:Bentley Sytems SACS SHELL AND SOLID SAMPLE PROBLEM DATE 16-SEP-2020 TIME 16:27:41 PRE PAGE 1 PRE VERSION 14.3.0.27 **PROGRAM OPTIONS ** UNITS ..ENGLISH EXECUTION .UNITY CHECK WSD AISC 9TH EDITION WITH API-RP2A 21ST EDITION FOR TUBULARS .DKT PLATES SELECTED .NO SEGMENTS FOR PRISMATIC MEMBERS 1 .NO SEGMENTS/SECTION FOR NON-PRISMATIC MEMBERS 1 REPORTS SELECTED .ELEMENT DETAIL PRINT .SPECIAL ELEMENT PRINT LOAD .NO.BASIC LOAD COND. 3 .NO.COMB. LOAD COND. 2 SACS CONNECT Edition V(14.3)-CL Company:Bentley Sytems SACS SHELL AND SOLID SAMPLE PROBLEM DATE 16-SEP-2020 TIME 16:27:41 PRE PAGE 2 OPTIMIZATION DATA OPTIMIZED FINAL BANDWIDTH $=$ 8.260 FINAL MAXIMUM BANDWIDTH $=$ 18 SACS CONNECT Edition V(14.3)-CL Company:Bentley Sytems SACS SHELL AND SOLID SAMPLE PROBLEM DATE 16-SEP-2020 TIME 16:27:41 PRE PAGE 3 \*\*SHELL DATA LIST\*\* SHELL SHEL L CONNECTING JOINTS \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+<!-- 校订来源：SACS2024_SACS.pdf p.91；保留原书示例行号与报告列位。 -->
+```text
+SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+     SACS SHELL AND SOLID SAMPLE PROBLEM                                          DATE 16-SEP-2020  TIME 16:27:41   PRE PAGE    1
 
+                                                                                                    PRE VERSION 14.3.0.27
 
+                    ** PROGRAM OPTIONS **
 
-| **** LOAD CASE STATUS REPORT **** | **** LOAD CASE STATUS REPORT **** | **** LOAD CASE STATUS REPORT **** | **** LOAD CASE STATUS REPORT **** | **** LOAD CASE STATUS REPORT **** | **** LOAD CASE STATUS REPORT **** | **** LOAD CASE STATUS REPORT **** | **** LOAD CASE STATUS REPORT **** | **** LOAD CASE STATUS REPORT **** | **** LOAD CASE STATUS REPORT **** |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LOAD CASE | LOAD ID | PRINT OPTION | DEAD LOAD | P-DELTA LOAD | LOAD FACTOR | AMOD FACTOR |  |  |  |  |  |
-| 1 | 1 | NO | NO | NO | 1.00 | 1.00 |  |  |  |  |  |
-| 2 | 2 | NO | NO | NO | 1.00 | 1.00 |  |  |  |  |  |
-| 3 | 3 | NO | NO | NO | 1.00 | 1.00 |  |  |  |  |  |
-| 4 | 4 | YES | NO | NO | 1.00 | 1.00 |  |  |  |  |  |
-| 5 | 5 | YES | NO | NO | 1.00 | 1.00 |  |  |  |  |  |
-| SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | Company: Bentley Sytems | Company: Bentley Sytems | Company: Bentley Sytems |  |  |
-| SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | DATE 16-SEP-2020 | TIME 16:27:42 | SLV PAGE 1 |  |  |
-|  |  |  |  |  |  |  |  | SLV VERSION 14.3.0.25 | SLV VERSION 14.3.0.25 |  |  |
-| ** SACS PROBLEM DESCRIPTION ** | ** SACS PROBLEM DESCRIPTION ** | ** SACS PROBLEM DESCRIPTION ** | ** SACS PROBLEM DESCRIPTION ** | ** SACS PROBLEM DESCRIPTION ** | ** SACS PROBLEM DESCRIPTION ** | ** SACS PROBLEM DESCRIPTION ** |  |  |  |  |  |
-|  |  | NUMBER OF JOINTS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . | 50 |  |  |  |  |  |  |  |  |
-|  |  | NUMBER OF BEAMS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. Number of PLATES . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. Number of SHELLS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. Number of SOLIDS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. Number of LOADS . . . . . . . . . . . . . . . . . . . . . . . . . . Number of RETAINED JOINTS ... 0 |  |  |  |  |  |  |  |  |  |
-| SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | Company: Bentley Sytems | Company: Bentley Sytems | Company: Bentley Sytems |  |  |
-| SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | DATE 16-SEP-2020 | TIME 16:27:42 | SLV PAGE 2 |  |  |
-| APPLIED LOAD SUMMARY | APPLIED LOAD SUMMARY | APPLIED LOAD SUMMARY | APPLIED LOAD SUMMARY | APPLIED LOAD SUMMARY | APPLIED LOAD SUMMARY | APPLIED LOAD SUMMARY |  |  |  |  |  |
-| LOAD CASE NO. | ID | TOTAL FORCE (X) KIPS | TOTAL FORCE (Y) KIPS | TOTAL FORCE (Z) KIPS |  |  |  |  |  |  |  |
-| 1 | 1 | 0.000000E+00 | 0.000000E+00 | -2.940000E+01 |  |  |  |  |  |  |  |
-| 2 | 2 | -3.069545E-15 | 8.315263E+01 | 0.000000E+00 |  |  |  |  |  |  |  |
-| 3 | 3 | 3.637979E-13 | -1.055014E-13 | -1.455192E-14 |  |  |  |  |  |  |  |
-| SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | SACS CONNECT Edition V(14.3) - CL | Company: Bentley Sytems | Company: Bentley Sytems | Company: Bentley Sytems |  |  |
-| SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | SACS SHELL AND SOLID SAMPLE PROBLEM | DATE 16-SEP-2020 | TIME 16:27:42 | SLV PAGE 3 |  |  |
+         UNITS
+                  ....ENGLISH
 
+         EXECUTION
+                  ....UNITY CHECK
+                       WSD AISC 9TH EDITION WITH API-RP2A 21ST EDITION FOR TUBULARS
+                  ....DKT PLATES SELECTED
+                  ....NO SEGMENTS FOR PRISMATIC MEMBERS    1
+                  ....NO SEGMENTS/SECTION FOR NON-PRISMATIC MEMBERS    1
 
+         REPORTS SELECTED
+                  ....ELEMENT DETAIL..........................PRINT
+                  ....SPECIAL ELEMENT.........................PRINT
 
-MATRIX TRIANGULARIZATION COMPLETE
+         LOAD
+                  ....NO. BASIC LOAD COND.     3
+                  ....NO. COMB. LOAD COND.     2
 
-MAX. SIGNIFICANT DIGITS LOST = 1 SOLUTION ACCURATE TO 14 DIGITS OUT OF POSSIBLE 15
+ SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+     SACS SHELL AND SOLID SAMPLE PROBLEM                                          DATE 16-SEP-2020  TIME 16:27:41   PRE PAGE    2
 
-FORWARD SUBSTITUTION COMPLETE
+                    OPTIMIZATION DATA
 
-BACK SUBSTITUTION COMPLETE
+          OPTIMIZED FINAL BANDWIDTH =     8.260          FINAL MAXIMUM BANDWIDTH =    18
 
-SACS CONNECT Edition V(14.3) - CL SACS SHELL AND SOLID SAMPLE PROBLEM
+ SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+     SACS SHELL AND SOLID SAMPLE PROBLEM                                          DATE 16-SEP-2020  TIME 16:27:41   PRE PAGE    3
 
-Company: Bentley Sytems
+                                        * * *  S H E L L  D A T A  L I S T  * * *
 
-DATE 16-SEP-2020 TIME 16:27:42 SLV PAGE 4
+SHELL  SHELL  ************ CONNECTING JOINTS ************ GRUP RPT  SHELL  EM  POISSONS YIELD  DENSITY JOINT ******* OFFSETS *******
+ORDER  NAME     1    2    3    4    5    6    7    8    9  ID  OPT  THICK 1000  RATIO   STRESS                   X       Y       Z
+                                                                     IN   KSI           KSI    LB/FT3           IN      IN      IN
 
-FIXED DEGREE OF FREEDOM REACTION SUMMARY   
+    1  S212   212  213  214  224  234  233  232  222  223       CE  2.50  29.00 0.250    36.00  490.00
+    2  S214   214  215  216  226  236  235  234  224  225       CE  2.50  29.00 0.250    36.00  490.00
 
+ SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+     SACS SHELL AND SOLID SAMPLE PROBLEM                                          DATE 16-SEP-2020  TIME 16:27:41   PRE PAGE    4
+```
 
+<!-- 校订来源：SACS2024_SACS.pdf p.92；保留原书示例行号与报告列位。 -->
+```text
+         **** LOAD CASE STATUS REPORT ****
 
-| LOAD | CASE | TOTAL | FORCE(X) | KIPS | TATAL | FORCE(Y) | KIPS |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| NO. | ID | TOTAL | FORCE(X) | KIPS | TATAL | FORCE(Y) | KIPS |
-| 1 | 1 | 3.524292E-15 |  | 6.252776E-16 |  | 2.940000E+01 |  |
-| 2 | 2 | -2.946763E-13 |  | -8.315263E+01 |  | 2.978595E-14 |  |
-| 3 | 3 | -1.331500E-12 |  | -5.202310E-13 |  | 5.620678E-13 |  |
+    LOAD   LOAD   PRINT   DEAD   P-DELTA    LOAD    AMOD
+    CASE    ID    OPTION  LOAD    LOAD     FACTOR  FACTOR
 
+      1       1     NO     NO      NO        1.00    1.00
+      2       2     NO     NO      NO        1.00    1.00
+      3       3     NO     NO      NO        1.00    1.00
+      4       4     YES    NO      NO        1.00    1.00
+      5       5     YES    NO      NO        1.00    1.00
 
+SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+    SACS SHELL AND SOLID SAMPLE PROBLEM                                          DATE 16-SEP-2020  TIME 16:27:42   SLV PAGE    1
 
-SACS CONNECT Edition V(14.3) - CL SACS SHELL AND SOLID SAMPLE PROBLEM
+                                                                                                   SLV VERSION 14.3.0.25
 
-Company: Bentley Sytems
+                  ** SACS PROBLEM DESCRIPTION **
 
-DATE 16-SEP-2020 TIME 16:27:43 PST PAGE 1
+                     NUMBER OF JOINTS ..........     50
 
-PST VERSION 14.3.0.42
+                     NUMBER OF BEAMS ...........      0
 
-***** SACS MODEL PARAMETERS ******
+                     NUMBER OF PLATES ..........      0
 
-NUMBER OF JOINTS 50
+                     NUMBER OF SHELLS ..........      2
 
-NUMBER OF MEMBERS 0
+                     NUMBER OF SOLIDS ..........     10
 
-NUMBER OF PLATES 0
+                     NUMBER OF LOADS ...........      3
 
-NUMBER OF SHELL ELEMENTS .... 2
+                     NUMBER OF RETAINED JOINTS ...    0
 
-NUMBER OF SOLID ELEMENTS ..... 10
+                     PRINT OPTION ..............      0
 
-NUMBER OF BASIC LOADS .. 3
+SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+    SACS SHELL AND SOLID SAMPLE PROBLEM                                          DATE 16-SEP-2020  TIME 16:27:42   SLV PAGE    2
 
-NUMBER OF COMBINED LOADS ..... 2
+                                   APPLIED LOAD SUMMARY
 
-UNITY CHECK .... API RP2A 21ST/AISC 9TH
+   LOAD CASE          TOTAL FORCE(X)      TOTAL FORCE(Y)      TOTAL FORCE(Z)
+    NO.  ID                KIPS                KIPS                KIPS
 
-JOINT DEFLECTION REPORT .NO
+      1    1           0.000000E+00        0.000000E+00       -2.940000E+01
+      2    2          -3.069545E-15        8.315263E+01        0.000000E+00
+      3    3           3.637979E-13       -1.055014E-13       -1.455192E-14
 
-GROUP SUMMARY REPORT .NO
+SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+    SACS SHELL AND SOLID SAMPLE PROBLEM                                          DATE 16-SEP-2020  TIME 16:27:42   SLV PAGE    3
+```
 
-ELEMENT STRESS AT MAXIMUM UC REPORT .......NO
+<!-- 校订来源：SACS2024_SACS.pdf p.93；保留原书示例行号与报告列位。 -->
+```text
+         MATRIX TRIANGULARIZATION COMPLETE
 
-MEMBER INTERNAL LOADS SUMMARY REPORT ......NO
+           MAX. SIGNIFICANT DIGITS LOST =  1     SOLUTION ACCURATE TO 14 DIGITS OUT OF POSSIBLE 15
 
-ELEMENT UNITY CHECK REPORT .NO
+         FORWARD SUBSTITUTION COMPLETE
 
-ELEMENT DETAIL REPORT .YES
+         BACK SUBSTITUTION COMPLETE
 
-MEMBER END FORCES AND MOMENTS REPORT ......NO
+SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+    SACS SHELL AND SOLID SAMPLE PROBLEM                                          DATE 16-SEP-2020  TIME 16:27:42   SLV PAGE    4
 
-JOINT REACTIONS REPORT .NO
+                            FIXED DEGREE OF FREEDOM REACTION SUMMARY
 
+   LOAD CASE          TOTAL FORCE(X)      TOTAL FORCE(Y)      TOTAL FORCE(Z)
+    NO.  ID                KIPS                KIPS                KIPS
 
+      1    1           3.524292E-15        6.252776E-16        2.940000E+01
+      2    2          -2.946763E-13       -8.315263E+01        2.978595E-14
+      3    3          -1.331500E-12       -5.202310E-13        5.620678E-13
 
-| SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE4 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE4 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE4 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE4 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE4 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE4 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE4 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE4 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE4 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE4 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE4 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE4 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE4 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE4 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE4 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE4 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE4 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE4 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE4 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| SHELL GRUPXIN | STRESSYZIN | LOCATION | THICKCASE | ********** SXXKSI | ********** SYKIS | TOPSXYKIS | ********** SPKSI | ********** TMAXKSI | ********** SXXKSI | SYKIS | TMAXSPKSI | TMAXKSI | SYZKSI | SZKSI | UNITYCHECK |  |  |  |
-| S212 | 39.5 | 36.0 | 5.2 | 2.50 | 4 | -0.36 | -0.14 | -0.04 | -0.36 | 0.12 | -0.23 | 0.06 | -0.08 | -0.25 | 0.17 | -0.00 | 0.01 | 0.015 |
-| S212 | 39.5 | 36.0 | 5.2 | 2.50 | 5 | 4.02 | 3.26 | -0.38 | 4.17 | 0.54 | -3.38 | -2.96 | -0.41 | -3.63 | 0.46 | -0.04 | 0.03 | 0.174 |
-| S214 | 39.5 | 36.0 | 5.2 | 2.50 | 4 | -0.36 | -0.13 | 0.04 | -0.36 | 0.12 | -0.23 | 0.07 | 0.08 | -0.25 | 0.17 | -0.00 | -0.01 | 0.015 |
-| S214 | 39.5 | 36.0 | 5.2 | 2.50 | 5 | 4.00 | 3.22 | 0.38 | 4.15 | 0.55 | -3.37 | -2.93 | 0.41 | -3.62 | 0.46 | -0.03 | -0.03 | 0.173 |
-| SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE5 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE5 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE5 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE5 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE5 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE5 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE5 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE5 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE5 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE5 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE5 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE5 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE5 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE5 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE5 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE5 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE5 | SACS CONNECT Edition V(14.3) - CLCompany: Bentley SytemsSACS SHELL AND SOLID SAMPLE PROBLEMDATE 16-SEP-2020 TIME 16:27:43 PST PAGE5 |  |
-| SOLIDGRUPSTRESSJOINTLOAD** DIRECT STRESSES**SAXSYYSSZZTXYTXZTYZS1S2S3MAXIMUMVONMISESUNITIYNAMEIDCOORD. | SOLIDGRUPSTRESSJOINTLOAD** DIRECT STRESSES**SAXSYYSSZZTXYTXZTYZS1S2S3MAXIMUMVONMISESUNITIYNAMEIDCOORD. | SOLIDGRUPSTRESSJOINTLOAD** DIRECT STRESSES**SAXSYYSSZZTXYTXZTYZS1S2S3MAXIMUMVONMISESUNITIYNAMEIDCOORD. | SOLIDGRUPSTRESSJOINTLOAD** DIRECT STRESSES**SAXSYYSSZZTXYTXZTYZS1S2S3MAXIMUMVONMISESUNITIYNAMEIDCOORD. | SOLIDGRUPSTRESSJOINTLOAD** DIRECT STRESSES**SAXSYYSSZZTXYTXZTYZS1S2S3MAXIMUMVONMISESUNITIYNAMEIDCOORD. | SOLIDGRUPSTRESSJOINTLOAD** DIRECT STRESSES**SAXSYYSSZZTXYTXZTYZS1S2S3MAXIMUMVONMISESUNITIYNAMEIDCOORD. | SOLIDGRUPSTRESSJOINTLOAD** DIRECT STRESSES**SAXSYYSSZZTXYTXZTYZS1S2S3MAXIMUMVONMISESUNITIYNAMEIDCOORD. | SOLIDGRUPSTRESSJOINTLOAD** DIRECT STRESSES**SAXSYYSSZZTXYTXZTYZS1S2S3MAXIMUMVONMISESUNITIYNAMEIDCOORD. | SOLIDGRUPSTRESSJOINTLOAD** DIRECT STRESSES**SAXSYYSSZZTXYTXZTYZS1S2S3MAXIMUMVONMISESUNITIYNAMEIDCOORD. | SOLIDGRUPSTRESSJOINTLOAD** DIRECT STRESSES**SAXSYYSSZZTXYTXZTYZS1S2S3MAXIMUMVONMISESUNITIYNAMEIDCOORD. | SOLIDGRUPSTRESSJOINTLOAD** DIRECT STRESSES**SAXSYYSSZZTXYTXZTYZS1S2S3MAXIMUMVONMISESUNITIYNAMEIDCOORD. | SOLIDGRUPSTRESSJOINTLOAD** DIRECT STRESSES**SAXSYYSSZZTXYTXZTYZS1S2S3MAXIMUMVONMISESUNITIYNAMEIDCOORD. | SOLIDGRUPSTRESSJOINTLOAD** DIRECT STRESSES**SAXSYYSSZZTXYTXZTYZS1S2S3MAXIMUMVONMISESUNITIYNAMEIDCOORD. | SOLIDGRUPSTRESSJOINTLOAD** DIRECT STRESSES**SAXSYYSSZZTXYTXZTYZS1S2S3MAXIMUMVONMISESUNITIYNAMEIDCOORD. | SOLIDGRUPSTRESSJOINTLOAD** DIRECT STRESSES**SAXSYYSSZZTXYTXZTYZS1S2S3MAXIMUMVONMISESUNITIYNAMEIDCOORD. | SOLIDGRUPSTRESSJOINTLOAD** DIRECT STRESSES**SAXSYYSSZZTXYTXZTYZS1S2S3MAXIMUMVONMISESUNITIYNAMEIDCOORD. | SOLIDGRUPSTRESSJOINTLOAD** DIRECT STRESSES**SAXSYYSSZZTXYTXZTYZS1S2S3MAXIMUMVONMISESUNITIYNAMEIDCOORD. | SOLIDGRUPSTRESSJOINTLOAD** DIRECT STRESSES**SAXSYYSSZZTXYTXZTYZS1S2S3MAXIMUMVONMISESUNITIYNAMEIDCOORD. |  |
+SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+    SACS SHELL AND SOLID SAMPLE PROBLEM                                          DATE 16-SEP-2020  TIME 16:27:43   PST PAGE     1
 
+                                                                                                       PST VERSION 14.3.0.42
 
+                             ******* SACS MODEL PARAMETERS ********
 
+                             NUMBER OF JOINTS ..............   50
 
+                             NUMBER OF MEMBERS .............    0
 
-|  |  |  | KSI | KSI | KSI | KSI | KSI | KSI | KSI | KSI | KSI | KSI | KSI | KSI |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| D101 | GLOBAL | CENT | 4 | -0.00 | -0.00 | -0.01 | 0.00 | -0.00 | 0.00 | 0.00 | -0.01 | -0.00 | 0.00 | 0.01 | 0.00 |
-| D101 | GLOBAL | CENT | 5 | 0.01 | 0.00 | 0.00 | -0.00 | 0.00 | -0.00 | 0.01 | 0.00 | 0.00 | 0.00 | 0.01 | 0.00 |
-| D102 | GLOBAL | CENT | 4 | -0.00 | 0.00 | -0.00 | -0.00 | -0.00 | 0.00 | 0.00 | -0.01 | -0.00 | 0.01 | 0.01 | 0.00 |
-| D102 | GLOBAL | CENT | 5 | -0.01 | -0.00 | 0.01 | -0.00 | 0.01 | 0.00 | 0.02 | -0.01 | -0.00 | 0.02 | 0.03 | 0.00 |
-| D103 | GLOBAL | CENT | 4 | 0.00 | 0.00 | 0.00 | 0.00 | -0.00 | 0.01 | 0.01 | -0.00 | 0.00 | 0.01 | 0.01 | 0.00 |
-| D103 | GLOBAL | CENT | 5 | 0.03 | 0.03 | 0.04 | 0.02 | -0.01 | 0.03 | 0.07 | -0.01 | 0.04 | 0.04 | 0.07 | 0.00 |
-| D104 | GLOBAL | CENT | 4 | 0.00 | 0.00 | 0.00 | -0.00 | 0.00 | 0.01 | 0.01 | -0.00 | 0.00 | 0.01 | 0.01 | 0.00 |
-| D104 | GLOBAL | CENT | 5 | 0.03 | 0.03 | 0.04 | -0.02 | 0.01 | 0.03 | 0.07 | -0.01 | 0.04 | 0.04 | 0.07 | 0.00 |
-| D105 | GLOBAL | CENT | 4 | -0.00 | 0.00 | -0.00 | 0.00 | 0.00 | 0.00 | 0.00 | -0.01 | -0.00 | 0.00 | 0.01 | 0.00 |
-| D105 | GLOBAL | CENT | 5 | -0.01 | -0.00 | 0.01 | 0.00 | -0.01 | 0.00 | 0.02 | -0.01 | -0.00 | 0.02 | 0.03 | 0.00 |
-| D106 | GLOBAL | CENT | 4 | -0.00 | -0.00 | -0.00 | -0.00 | 0.00 | 0.00 | 0.00 | -0.01 | -0.00 | 0.00 | 0.01 | 0.00 |
-| D106 | GLOBAL | CENT | 5 | 0.00 | 0.00 | -0.00 | 0.00 | -0.00 | -0.00 | 0.01 | -0.00 | 0.00 | 0.00 | 0.01 | 0.00 |
-| D111 | GLOBAL | CENT | 4 | -0.01 | 0.00 | -0.00 | 0.01 | -0.00 | 0.00 | 0.00 | -0.01 | -0.00 | 0.01 | 0.02 | 0.00 |
-| D111 | GLOBAL | CENT | 5 | -0.01 | -0.01 | -0.06 | -0.00 | -0.02 | -0.00 | 0.00 | -0.07 | -0.01 | 0.03 | 0.06 | 0.00 |
-| D116 | GLOBAL | CENT | 4 | -0.01 | -0.00 | -0.00 | -0.01 | 0.00 | 0.00 | 0.00 | -0.02 | -0.00 | 0.01 | 0.02 | 0.00 |
-| D116 | GLOBAL | CENT | 5 | -0.01 | -0.01 | -0.06 | 0.00 | 0.02 | -0.00 | 0.00 | -0.07 | -0.01 | 0.03 | 0.06 | 0.00 |
-| D121 | GLOBAL | CENT | 4 | -0.02 | 0.00 | -0.00 | 0.01 | -0.00 | -0.00 | 0.01 | -0.02 | -0.00 | 0.02 | 0.03 | 0.00 |
-| D121 | GLOBAL | CENT | 5 | 0.05 | 0.01 | -0.01 | 0.00 | -0.05 | -0.02 | 0.08 | -0.05 | 0.01 | 0.06 | 0.11 | 0.00 |
-| D126 | GLOBAL | CENT | 4 | -0.02 | 0.00 | -0.00 | -0.01 | 0.00 | -0.00 | 0.01 | -0.02 | -0.00 | 0.01 | 0.03 | 0.00 |
-|  | 5 | 0.05 | 0.01 | -0.01 | -0.00 | 0.05 | -0.02 | 0.08 | -0.05 | 0.01 | 0.06 | 0.11 | 0.00 |  |  |
+                             NUMBER OF PLATES ..............    0
 
+                             NUMBER OF SHELL ELEMENTS ......    2
 
+                             NUMBER OF SOLID ELEMENTS ......   10
 
-7 VERIFICATIONS
+                             NUMBER OF BASIC LOADS .........    3
+
+                             NUMBER OF COMBINED LOADS ......    2
+```
+
+<!-- 校订来源：SACS2024_SACS.pdf p.94；保留原书示例行号与报告列位。 -->
+```text
+                              UNITY CHECK .... API RP2A 21ST/AISC 9TH
+
+                              JOINT DEFLECTION REPORT ...................NO
+
+                              GROUP SUMMARY REPORT ......................NO
+
+                              ELEMENT STRESS AT MAXIMUM UC REPORT .......NO
+
+                              MEMBER INTERNAL LOADS SUMMARY REPORT ......NO
+
+                              ELEMENT UNITY CHECK REPORT ................NO
+
+                              ELEMENT DETAIL REPORT .....................YES
+
+                              MEMBER END FORCES AND MOMENTS REPORT ......NO
+
+                              JOINT REACTIONS REPORT ....................NO
+
+SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+     SACS SHELL AND SOLID SAMPLE PROBLEM                                          DATE 16-SEP-2020  TIME 16:27:43   PST PAGE     4
+                                       ******** SHELL ELEMENT DETAIL STRESS REPORT ********
+
+SHELL GRUP   STRESS LOCATION  THICK  LOAD  ************** TOP ************** ************* BOTTOM *************  ** MIDDLE **  UNITY
+       ID     X     Y     Z          CASE   SXX    SYY    SXY    SP    TMAX    SXX    SYY    SXY    SP    TMAX    SYZ    SZX   CHECK
+             IN    IN    IN    IN          KSI    KSI    KSI    KSI    KSI    KSI    KSI    KSI    KSI    KSI    KSI    KSI
+
+S212       39.5  36.0   5.2   2.50      4  -0.36  -0.14  -0.04  -0.36   0.12  -0.23   0.06  -0.08  -0.25   0.17  -0.00   0.01  0.015
+                                        5   4.02   3.26  -0.38   4.17   0.54  -3.38  -2.96  -0.41  -3.63   0.46  -0.04   0.03  0.174
+
+S214       39.5  36.0   5.2   2.50      4  -0.36  -0.13   0.04  -0.36   0.12  -0.23   0.07   0.08  -0.25   0.17  -0.00  -0.01  0.015
+                                        5   4.00   3.22   0.38   4.15   0.55  -3.37  -2.93   0.41  -3.62   0.46  -0.03  -0.03  0.173
+
+ SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+     SACS SHELL AND SOLID SAMPLE PROBLEM                                          DATE 16-SEP-2020  TIME 16:27:43   PST PAGE     5
+                                       ******** SOLID ELEMENT DETAIL STRESS REPORT ********
+
+ SOLID  GRUP STRESS  JOINT LOAD   ** DIRECT STRESSES **   *** SHEAR STRESSES ***   * PRINCIPAL STRESSES *   MAXIMUM     VON   UNITY
+ NAME    ID  COORD.  NAME  CASE    SXX     SYY     SZZ      TXY     TXZ     TYZ       S1      S2      S3     SHEAR     MISES  CHECK
+```
+
+<!-- 校订来源：SACS2024_SACS.pdf p.95；保留原书示例行号与报告列位。 -->
+```text
+                                  KSI     KSI     KSI      KSI     KSI     KSI      KSI     KSI     KSI      KSI       KSI
+
+D101        GLOBAL  CENT     4   -0.00   -0.00   -0.01     0.00   -0.00    0.00     0.00   -0.01   -0.00     0.00      0.01   0.00
+                             5    0.01    0.00    0.00    -0.00    0.00   -0.00     0.01    0.00    0.00     0.00      0.01   0.00
+
+D102        GLOBAL  CENT     4   -0.00    0.00   -0.00    -0.00   -0.00    0.00     0.00   -0.01   -0.00     0.01      0.01   0.00
+                             5   -0.01   -0.00    0.01    -0.00    0.01    0.00     0.02   -0.01   -0.00     0.02      0.03   0.00
+
+D103        GLOBAL  CENT     4    0.00    0.00    0.00     0.00   -0.00    0.01     0.01   -0.00    0.00     0.01      0.01   0.00
+                             5    0.03    0.03    0.04     0.02   -0.01    0.03     0.07   -0.01    0.04     0.04      0.07   0.00
+
+D104        GLOBAL  CENT     4    0.00    0.00    0.00    -0.00    0.00    0.01     0.01   -0.00    0.00     0.01      0.01   0.00
+                             5    0.03    0.03    0.04    -0.02    0.01    0.03     0.07   -0.01    0.04     0.04      0.07   0.00
+
+D105        GLOBAL  CENT     4   -0.00    0.00   -0.00     0.00    0.00    0.00     0.00   -0.01   -0.00     0.00      0.01   0.00
+                             5   -0.01   -0.00    0.01     0.00   -0.01    0.00     0.02   -0.01   -0.00     0.02      0.03   0.00
+
+D106        GLOBAL  CENT     4   -0.00   -0.00   -0.00    -0.00    0.00    0.00     0.00   -0.01   -0.00     0.00      0.01   0.00
+                             5    0.00    0.00   -0.00     0.00   -0.00   -0.00     0.01   -0.00    0.00     0.00      0.01   0.00
+
+D111        GLOBAL  CENT     4   -0.01    0.00   -0.00     0.01   -0.00    0.00     0.00   -0.01   -0.00     0.01      0.02   0.00
+                             5   -0.01   -0.01   -0.06    -0.00   -0.02   -0.00     0.00   -0.07   -0.01     0.03      0.06   0.00
+
+D116        GLOBAL  CENT     4   -0.01   -0.00   -0.00    -0.01    0.00    0.00     0.00   -0.02   -0.00     0.01      0.02   0.00
+                             5   -0.01   -0.01   -0.06     0.00    0.02   -0.00     0.00   -0.07   -0.01     0.03      0.06   0.00
+
+D121        GLOBAL  CENT     4   -0.02    0.00   -0.00     0.01   -0.00   -0.00     0.01   -0.02   -0.00     0.02      0.03   0.00
+                             5    0.05    0.01   -0.01     0.00   -0.05   -0.02     0.08   -0.05    0.01     0.06      0.11   0.00
+
+D126        GLOBAL  CENT     4   -0.02    0.00   -0.00    -0.01    0.00   -0.00     0.01   -0.02   -0.00     0.01      0.03   0.00
+                  5     0.05    0.01    -0.01    -0.00    0.05   -0.02     0.08   -0.05    0.01     0.06      0.11   0.00
+```
+
+# 7 VERIFICATIONS
 
 All verification tests enumerated in the following section are accessible via SACS sample 26.
 
@@ -3451,41 +3476,42 @@ Table 1: Comparison of results
 
 > 核验说明（PDF p.96-97）：上式的转角分母已恢复为 $48EIl$、$240EIl$。PDF 原式 $R_B=(W_a-W_l)(l-a)/2-R_A$ 与表 1 不一致，原式保留；按荷载合力应为 $(W_a+W_l)(l-a)/2-R_A$，所得 $R_B=21.4614\,\mathrm{kN}$ 与表值一致。表中转角和端弯矩为正值，而按原式计算分别为 $-0.002035125\,\mathrm{rad}$、$-25.9605\,\mathrm{kN\cdot m}$，应区分数值大小与符号。第 8 章对应输入行为 MEMBER p.218、JOINT p.196、GRUP p.189-191、LOAD UNIF p.213。
 
-7.1.2 Thermal Loading on a Beam
+### 7.1.2 Thermal Loading on a Beam
 
 To find the support reactions due to a temperature loads applied on a fixed-fixed beam
 
-7.1.2.1 Reference
+#### 7.1.2.1 Reference
 
 Hand calculation using the following reference:
 
-Matrix Analysis of Framed Structures, $3^{ \mathsf{ r d } }$ edition, W.Weaver Jr. & J.M.Gere, Van Nostrand Reinhold, Table B2,Appendix B, p.500
+Matrix Analysis of Framed Structures, $3^{rd}$ edition, W.Weaver Jr. & J.M.Gere, Van Nostrand Reinhold, Table B2,Appendix B, p.500
 
-7.1.2.2 Problem
+#### 7.1.2.2 Problem
 
-The beam in the following geometric, load, and section properties: $L = 7 . 5 m , T = 40^{ \circ } C ,$ $T_{ 2 } , T_{ 1 } = 5 O^{ \circ } C , \alpha = 21 . 7 ( 10 )^{ - 6 } /^{ \circ } C , d = 30 c m , I_{ z } = 5 . 000 c m^{ 4 } \ , E = 200 \ K N / m m^{ 2 }$ .
+The beam in the following geometric, load, and section properties: $L = 7.5 m , T = 40^{ \circ } C ,$ $T_{2} , T_{1} = 5 O^{ \circ } C , \alpha = 21.7 ( 10 )^{ - 6 } /^{ \circ } C , d = 30 cm , I_{z} = 5.000 cm^{4} \ , E = 200 \ K N / mm^{2}$ .
 
 ![](SACS2024_SACS/chunk1_15cc86aa536d8c5b92ea2ceac67c59fc20fe7959bab578c59a621a36d527e205.jpg)
 
 ![](SACS2024_SACS/chunk1_a84a46a0e69dfec863d56d1fe0298f01eacdc182c8342347a3eaf2991a458a4c.jpg)  
 Figure 2: Fixed support beam with temper load
 
-7.1.2.3 Theoretical Solution
+#### 7.1.2.3 Theoretical Solution
 
 Horizontal reactions due to case 1 loads:
 
-$$R_{A} = - R_{B} = E A \alpha \Delta T = [ 200 (10)^{6} ] \cdot [ 50 (10)^{-4} ] \cdot [ 11. 7 (10)^{-6} ] \cdot (40) = 468 k N$$
+$$R_{A} = - R_{B} = E A \alpha \Delta T = [ 200 (10)^{6} ] \cdot [ 50 (10)^{-4} ] \cdot [ 11.7 (10)^{-6} ] \cdot (40) = 468 kN$$
 
 Moment reactions due to case 2 loads:
 
-$$M_{A} = - M_{B} = \frac{a E I \Delta T}{d} = \frac{\left[ 11 . 7 (10)^{-6} \right] \cdot \left[ 200 (10)^{-6} \right] \cdot \left[ 5 , 000 (10)^{-8} \right] (50)}{0 . 3} = 19. 5 k N \cdot m$$
+$$M_A=-M_B=\frac{\alpha EI\Delta T}{d}=\frac{[11.7(10)^{-6}]\,[200(10)^{-6}]\,[5{,}000(10)^{-8}](50)}{0.3}=19.5\,\mathrm{kN\cdot m}$$
 
-7.1.2.4 Comparison
+#### 7.1.2.4 Comparison
 
 Table 2: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.98。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
 | Horizontal Reaction at Node A (kN) | 468 | 468 | none |
@@ -3495,17 +3521,19 @@ Table 2: Comparison of results
 
 Note: In the SACS model, two load cases are used. In case 1, the uniform expansion is applied. In case 2, the temperature change between top and bottom flanges is applied.
 
-7.1.3 Forces on a Propped Cantilever 1
+> PDF 原书疑点（p.98）：热弯矩展开式把 E 的系数写为 $200(10)^{-6}$，与题设及同页反力式的 $200(10)^6$ 不一致；原展开式保留，不将此视为 OCR 错误。
+
+### 7.1.3 Forces on a Propped Cantilever 1
 
 To find the deflection and member forces due to an applied load on a propped cantilever beam with a compression only support.
 
-7.1.3.1 Reference
+#### 7.1.3.1 Reference
 
 Hand calculation using the following reference:
 
 Manual of Steel Construction, Load and Resistance Factor Design, Second Edition, American Institute of Steel Construction, 1998, pp. 4-194, 4-197.
 
-7.1.3.2 Problem
+#### 7.1.3.2 Problem
 
 A cantilever beam with an end support capable of resisting only a compressive force is analyzed for two concentrated loads at 0.6xL:
 
@@ -3514,126 +3542,128 @@ A cantilever beam with an end support capable of resisting only a compressive fo
 
 $$E = 10 (10)^{6}$$
 
-$$w i d t h = 0. 6 \text{i n}$$
+$$w i d t h = 0.6 \mathrm{in}$$
 
-$$\mathrm{d e p t h} = 0. 3 \mathrm{i n}$$
+$$\text{d e p t h} = 0.3 \mathrm{in}$$
 
-$$L = 4 f t$$
+$$L = 4 ft$$
 
 Note: A dummy member is used to represent a compression only support
 
 ![](SACS2024_SACS/chunk1_1a3ded762d2e9395022e4f3ab80b5dd63d19e0049b56ca5bb521c65aa8bb3724.jpg)  
 Figure 3: Cantilevered member with a compression only support
 
-7.1.3.3 Theoretical Solution
+#### 7.1.3.3 Theoretical Solution
 
-7.1.3.3.1 Load Case 1
+##### 7.1.3.3.1 Load Case 1
 
 General solution equations found on p.2-121 of the reference.
 
-$$M (x <   b) = - P (b - x) = - 0. 5 l b (28. 8 - x)$$
+$$M (x <   b) = - P (b - x) = - 0.5 lb (28.8 - x)$$
 
-At the rigid support, $M = 14 . 4 ~ i n { \cdot } l b$ .
+At the rigid support, $M = 14.4 ~ in { \cdot } lb$ .
 
 By inspection, fixed end shear is equal to load value = 0.50 lb.
 
-$$\begin{array}{l} \Delta (x <   b) = \frac{P x^{2}}{6 E I} (3 x - b) \\ = \frac{0 . 5 l b (28 . 8 i n .)^{2}}{6 (10 , 000 , 000 p s i) (0 . 00135 i n .^{4})} \left[ 3 (28. 8 i n.) - 28. 8 i n. \right] = 0. 295 i n. \\ \end{array}$$
+$$\begin{array}{l} \Delta (x <   b) = \frac{P x^{2}}{6 E I} (3 x - b) \\ = \frac{0.5 lb (28.8 in .)^{2}}{6 (10,000,000 psi) (0.00135 in .^{4})} \left[ 3 (28.8 in.) - 28.8 in. \right] = 0.295 in. \\ \end{array}$$
 
-7.1.3.3.2 Load Case 2
+##### 7.1.3.3.2 Load Case 2
 
 General solution equations found on p.2-118 of the reference
 
-$$R_{1} = \frac{P b^{2 (a + 2 \ell)}}{2 \ell^{3}} = \frac{0 . 5 l b (48 i n .)^{2}}{2 (48 i n .)^{3}} \left[ 19. 2 i n + 2 (48 i n) \right] = 0. 216 l b.$$
+$$R_1=\frac{Pb^2(a+2\ell)}{2\ell^3}=\frac{0.5\,\mathrm{lb}(48\,\mathrm{in})^2}{2(48\,\mathrm{in})^3}[19.2\,\mathrm{in}+2(48\,\mathrm{in})]=0.216\,\mathrm{lb}$$
 
-$$R_{2} = P - R_{1} = 0. 50 l b - 0. 216 l b = 0. 284 l b.$$
+$$R_{2} = P - R_{1} = 0.50 lb - 0.216 lb = 0.284 lb.$$
 
 Moment at rigid support:
 
-$$\begin{array}{l} M (x <   b) = R_{1} (\ell - x) - P (\ell - x - a) \\ = 0. 216 l b (48 i n - 0) - 0. 5 l b (48 i n - 0 - 19. 2 i n) = - 4. 032 i n \cdot l b \\ \end{array}$$
+$$\begin{array}{l} M (x <   b) = R_{1} (\ell - x) - P (\ell - x - a) \\ = 0.216 lb (48 in - 0) - 0.5 lb (48 in - 0 - 19.2 in) = - 4.032 in \cdot lb \\ \end{array}$$
 
 Deflection at point of load:
 
-$$\begin{array}{l} \Delta \left(x <   b\right) = \frac{- P a x^{2}}{12 E I \ell^{3}} \left(3 \ell^{3} - 3 \ell^{2} x - 3 a^{2} \ell + a^{2} x\right) \\ = \frac{- 0 . 5 l b (19 . 2 i n) (28 . 8 i n)^{3}}{12 (10 , 000 , 000 p s i) (0 . 00135 i n .^{4}) (48 i n .)^{3}} \left[ 3 (48 i n.)^{3} - 3 (48 i n.)^{2} (28. 8 i n) - 3 (19. 2 i n.)^{2} (48 i n) + (19. 2 i n.)^{2} (28. 8 i n) \right] \\ \end{array}$$
+$$\begin{array}{l} \Delta \left(x <   b\right) = \frac{- P a x^{2}}{12 E I \ell^{3}} \left(3 \ell^{3} - 3 \ell^{2} x - 3 a^{2} \ell + a^{2} x\right) \\ = \frac{- 0.5 lb (19.2 in) (28.8 in)^{3}}{12 (10,000,000 psi) (0.00135 in .^{4}) (48 in .)^{3}} \left[ 3 (48 in.)^{3} - 3 (48 in.)^{2} (28.8 in) - 3 (19.2 in.)^{2} (48 in) + (19.2 in.)^{2} (28.8 in) \right] \\ \end{array}$$
 
-7.1.3.4 Comparison
+#### 7.1.3.4 Comparison
 
 Table 3: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.100。 -->
 | Load Case | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- | --- |
 | LC 1 | Moment at fixed end (in·lb) | -14.4 | -14.4 | None |
 | LC 1 | Shear at fixed end (lb) | 0.50 | 0.50 | None |
 | LC 1 | Deflection at load (.in) | 0.295 | 0.295 | None |
-| LC 2 | Moment at fixed end(in·lb) | 4.032 | 4.032 | None |
+| LC 2 | Moment at fixed end (in·lb) | 4.032 | 4.032 | None |
 | LC 2 | Shear at fixed end (lb) | 0.284 | 0.284 | None |
 | LC 2 | Deflection at load (.in) | -0.040 | -.040 | None |
 
+> PDF 原书疑点（p.99-100）：$R_1$ 代入式写 $(48\,\mathrm{in})^2$，而图中的 b 为 28.8 in；挠度的代入幂次和正负号亦与通式/比较表存在不一致。此处恢复被 OCR 错纳入指数的 $(a+2\ell)$，其余原书值保留。
 
-
-7.1.4 Torsion on a Stepped Cantilever
+### 7.1.4 Torsion on a Stepped Cantilever
 
 To find end rotation due to torques on a stepped cantilever shaft.
 
-7.1.4.1 Reference
+#### 7.1.4.1 Reference
 
 Hand calculation using the following reference:
 
 Gere J. M., and Timoshenko, S. P., Mechanics of Materials, 2nd Edition, PWS Engineering, Page 171, Problem 3.3 -1.
 
-7.1.4.2 Problem
+#### 7.1.4.2 Problem
 
-A stepped shaft is subjected to torques, as shown in the figure. The material has a shear modulus of elasticity $\mathsf{ G } = 80 \mathsf{ G } \mathsf{ p } \mathsf{ a }$ . Determine the angle of twist θx in degrees at the free end.
+A stepped shaft is subjected to torques, as shown in the figure. The material has a shear modulus of elasticity $G = 80 G p a$ . Determine the angle of twist θx in degrees at the free end.
 
 ![](SACS2024_SACS/chunk1_1eefc55121c3c0e4975a14109704f43a310532682cb349afabb78d54373a9a79.jpg)  
 Figure 4: Cantilevered member subject to torsional loads
 
-7.1.4.3 Theoretical Solution
+#### 7.1.4.3 Theoretical Solution
 
 Moment of Inertia:
 
-$$I_{p 1} = \frac{\pi (80 m m / 2)^{4}}{2} = 4. 021 (10)^{6} m m^{4}$$
+$$I_{p1} = \frac{\pi (80 mm / 2)^{4}}{2} = 4.021 (10)^{6} mm^{4}$$
 
-$$I_{p 2} = \frac{\pi (60 m m / 2)^{4}}{2} = 1. 272 (10)^{6} m m^{4}$$
+$$I_{p2} = \frac{\pi (60 mm / 2)^{4}}{2} = 1.272 (10)^{6} mm^{4}$$
 
-$$I_{p 2} = \frac{\pi (40 m m / 2)^{4}}{2} = 0. 251 (10)^{6} m m^{4}$$
+$$I_{p2} = \frac{\pi (40 mm / 2)^{4}}{2} = 0.251 (10)^{6} mm^{4}$$
 
 Angle of twist is given by:
 
-$$\begin{array}{l} \theta = \sum_{i} \frac{L_{i} T_{i}}{G I_{p}} \\ = \frac{5 , 800 N - m m (500 m m)}{4 . 021 (10)^{6} m m^{4} 80 G P a} + \frac{2 , 800 N - m m (500 m m)}{1 . 272 (10)^{6} m m^{4} 80 G P a} + \frac{, 800 N - m m (500 m m)}{0 . 251 (10)^{6} m m^{4} 80 G P a} \\ = 0. 0090 + 0. 0138 + 0. 0199 = 0. 0427 \\ \end{array}$$
+$$\begin{aligned}\theta&=\sum_i\frac{L_iT_i}{GI_p}\\&=\frac{5{,}800\,\mathrm{N\!\cdot mm}(500\,\mathrm{mm})}{4.021(10)^6\,\mathrm{mm}^4\,80\,\mathrm{GPa}}+\frac{2{,}800\,\mathrm{N\!\cdot mm}(500\,\mathrm{mm})}{1.272(10)^6\,\mathrm{mm}^4\,80\,\mathrm{GPa}}+\frac{80\,\mathrm{N\!\cdot mm}(500\,\mathrm{mm})}{0.251(10)^6\,\mathrm{mm}^4\,80\,\mathrm{GPa}}\\&=0.0090+0.0138+0.0199=0.0427\end{aligned}$$
 
-which is equal to $2 . 446^{ \circ }$ .
+which is equal to $2.446^{ \circ }$ .
 
-7.1.4.4 Comparison
+#### 7.1.4.4 Comparison
 
 Table 4: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.101,102。 -->
 | Result | Theory | SACS | Difference |
 | --- | --- | --- | --- |
 | Angle of twist (rad.) | 0.0427 | 0.0427 | none |
 
+> PDF 原书疑点（p.101）：第三个极惯性矩仍标为 $I_{p2}$；扭角展开式末项显示 80 N·mm（图中为 800），各项扭矩单位与列出的 0.0090/0.0138/0.0199 结果也不自洽。保留原页写法与结果，并标注这些差异。
 
-
-7.1.5 Forces on a Propped Cantilever 2
+### 7.1.5 Forces on a Propped Cantilever 2
 
 To find deflections, stress, and support reactions due to a uniform load on a beam with one end fixed and the other end supported by a roller.
 
-7.1.5.1 Reference
+#### 7.1.5.1 Reference
 
 Hand calculation using the following reference:
 
 Roark, R.J., and Young, W.C., Formulas for Stress and Strain, 5th Edition, Page 109, Problem 23.
 
-7.1.5.2 Problem
+#### 7.1.5.2 Problem
 
-A horizontal beam of length = 100 in, $\mathsf{ a r e a } = 4 \mathsf{ i n }^{ 2 } ,$ , height = 2 in, and moment of inertia = $1 . 3333 \mathrm{ i n }^{ 4 }$ is simply supported at one end and fixed at the other end. The beam is subjected to a uniform loading. Determine the deflection δ at $\aleph = 42 . 15$ in., the slope θ at end A, the maximum bending stress $\sigma_{ \mathrm{ b e n d } }$ in the beam, and the support reactions.
+A horizontal beam of length = 100 in, area = 4 in², height = 2 in, and moment of inertia = $1.3333 \mathrm{in}^{4}$ is simply supported at one end and fixed at the other end. The beam is subjected to a uniform loading. Determine the deflection δ at $x=42.15$ in., the slope θ at end A, the maximum bending stress $\sigma_{ \text{bend} }$ in the beam, and the support reactions.
 
-$$E = 30 \times (10) 6 p s i$$
+$$E=30\times10^6\,\mathrm{psi}$$
 
-$$D e n s i t y = 0. 2821 \mathrm{l b s} / \mathrm{i n} 3$$
+$$\mathrm{Density}=0.2821\,\mathrm{lbs/in}^3$$
 
 ![](SACS2024_SACS/chunk1_ef9364eabc377055bf9cdc6c0562a7a01e775b1049b164bfbc6fe96efcf206d0.jpg)
 
@@ -3641,18 +3671,19 @@ $$D e n s i t y = 0. 2821 \mathrm{l b s} / \mathrm{i n} 3$$
 B)   
 Figure 5: Beam A) problem sketch and B) mathematical model
 
-7.1.5.3 Comparison
+#### 7.1.5.3 Comparison
 
 Table 5: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.103。 -->
 | Result | Theory | SACS | Difference |
 | --- | --- | --- | --- |
 | Reaction at Node 1 (lb) | 42.31 | 42.19 | none |
 | Reaction at Node 3 (lb) | 70.52 | 70.31 | none |
 | Moment at Node 3 (in·lb) | 1,410.4 | 1406.3 | none |
-| Bending Stress, σbend at Node 2 (psi) | 585.9 | 584.12 | none |
+| Bending Stress, σ<sub>bend</sub> at Node 2 (psi) | 585.9 | 584.12 | none |
 | Rotation at Node 1 (rad.) | -.000588 | -.00059 | none |
 | Deflection at Node 2 (in.) | -0.01528 | -0.01523 | none |
 
@@ -3697,25 +3728,25 @@ Table 6: Comparison of results
 
 > 核验说明（PDF p.103-104）：$E=30\times10^6\,\mathrm{psi}$、图 6 两端铰支及表 6 的 600 lb / 900 lb 已对照 PDF 核实。原书图中只标注 $F_1$、$F_2$、$a$、$b$、$l$，没有给出这些量的数值，本次不声称独立复算该反力。第 8 章对应输入行为 JOINT p.196、MEMBER p.218、GRUP p.189-191、LOAD JOIN p.204。
 
-7.1.7 Tee Shaped Cantilever
+### 7.1.7 Tee Shaped Cantilever
 
 To find the stress due to an applied moment at the free end of a cantilever beam with inverted tee section.
 
-7.1.7.1 Reference
+#### 7.1.7.1 Reference
 
 Hand calculation using the following reference:
 
 Crandall, S.H., and Dahl, N.C., An Introduction to the Mechanics of Solids, McGraw-Hill, Inc., 1959, Page 294, Problem 7.2.
 
-7.1.7.2 Problem
+#### 7.1.7.2 Problem
 
 Find the maximum bending stress in the beam.
 
-$$E = 30 \times (10)^{6} p s i$$
+$$E = 30 \times (10)^{6} psi$$
 
-$$b = 1. 5 \text{i n .}, h = 8 \text{i n .}, L = 10 \text{i n .}$$
+$$b = 1.5 \text{in .}, h = 8 \text{in .}, L = 10 \text{in .}$$
 
-$$M = 1, 000, 000 \text{i n}. \cdot \mathrm{l b}.$$
+$$M = 1,000,000 \mathrm{in}. \cdot \mathrm{lb}.$$
 
 ![](SACS2024_SACS/chunk1_5a7bcd53e903e9c8966f08dcf3d0ff4a7286d599a796cbfc0d274b1f47a3f282.jpg)
 
@@ -3723,82 +3754,85 @@ $$M = 1, 000, 000 \text{i n}. \cdot \mathrm{l b}.$$
   
 Figure 7: Beam A) problem sketch and B) mathematical model
 
-7.1.7.3 Comparison
+#### 7.1.7.3 Comparison
 
 Table 7: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.105。 -->
 | Result | Theory | SACS | Difference |
 | --- | --- | --- | --- |
 | Bending stress, σ (psi) | 700 | 700 | none |
 
+> PDF 原书疑点（p.105）：题干给 M=1,000,000 in·lb，但比较表的最大弯曲应力为 700 psi；两者均在 PDF 中如此，未按推测改动。
 
-
-7.1.8 Beam on Elastic Foundation
+### 7.1.8 Beam on Elastic Foundation
 
 To find deflection and stress at the center due to a uniform, static load on a simply supported beam on elastic foundation.
 
-7.1.8.1 Reference
+#### 7.1.8.1 Reference
 
-Peterson, F.E., Elastic Analysis for Structural Engineering (EASE2), Example Problem Manual, EngineeringAnalysis Corporation, Berkeley, CA, 1981.
+Peterson, F.E., Elastic Analysis for Structural Engineering (EASE2), Example Problem Manual, Engineering Analysis Corporation, Berkeley, CA, 1981.
 
-7.1.8.2 Problem
+#### 7.1.8.2 Problem
 
 Find the vertical deflection and bending stress at the center of the beam.Spacing between
 
-$\mathsf{ E } = 30 \times ( 10 )^{ 6 } \mathsf{ p s i }$
+$E = 30 \times ( 10 )^{6} psi$
 
-$\flat = 1 . 0 \ \mathsf{ i n . , h } = 7 . 114 \ \mathsf{ i n . , L } = 240 \ \mathsf{ i n . }$
+$b=1.0\,\mathrm{in},\ h=7.114\,\mathrm{in},\ L=240\,\mathrm{in}$
 
-$\mathsf{ w }_{ \mathsf{ u } } = 43 . 3 \mathsf{ | b / i n . }$
+$w_u=43.3\,\text{lb/in}$
 
 ![](SACS2024_SACS/chunk1_d695afff898389e33435ad76af1474337aa20a7ea18b2d9c09414bf03a141b76.jpg)  
 Figure 8: One-half beam for mathematical model
 
-7.1.8.3 Comparison
+#### 7.1.8.3 Comparison
 
 Table 8: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.107。 -->
 | Result | Theory | SACS | Difference |
 | --- | --- | --- | --- |
 | Vertical deflection (in.) | 1.0453 | 1.0453 | none |
 
+> PDF 原书疑点（p.106）：题干末尾的 “Spacing between” 没有后续内容；原文残句保留。
 
-
-7.1.9 Stresses in a Circular Beam
+### 7.1.9 Stresses in a Circular Beam
 
 Find deflections and stress at the center of a locomotive axle.
 
-7.1.9.1 Reference
+#### 7.1.9.1 Reference
 
-Timoshenko, S., Strength of Materials, Part- 1, D. Van Nostrand Co., $3^{ \mathsf{ r d } }$ edition, 1956.
+Timoshenko, S., Strength of Materials, Part- 1, D. Van Nostrand Co., $3^{rd}$ edition, 1956.
 
-## p. 94, problems 1, 2.
+p. 94, problems 1, 2.
 
-7.1.9.2 Problem
+#### 7.1.9.2 Problem
 
 Determine the maximum stress in a locomotive axle (as shown in the figure) as well as the deflection at the middle of the axle.
 
 Diameter = 10 in.
 
-$\mathsf{ P } = 26 , 000 \mathsf{ \Pi } | \mathsf{ b } \mathsf{ f }$
+$P=26{,}000\,\mathrm{lbf}$
 
-$\mathsf{ E } = 30 \times ( 10 )^{ 6 } \mathsf{ p s i }$
+$E = 30 \times ( 10 )^{6} psi$
 
-$\mathsf{ L 1 } = 13 . 5 \mathsf{ i n . , L 2 } = 59 \mathsf{ i n . }$
+$L 1 = 13.5 in . , L 2 = 59 in .$
 
 ![](SACS2024_SACS/chunk1_449d55587cfadf5baf604b4f41f63f6f57016851e02189e0355718aed362d557.jpg)  
 Figure 9: Locomotive axle model
 
-7.1.9.3 Comparison
+#### 7.1.9.3 Comparison
 
 Table 9: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.108。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
 | σ (psi), Joint 0001 | 3,575.* | 3,575.3 | negligible |
@@ -3808,21 +3842,21 @@ Table 9: Comparison of results
 
 * The value is recalculated.
 
-7.1.10 End Moments in a Non Uniform Beam
+### 7.1.10 End Moments in a Non Uniform Beam
 
 To find end moments due to a uniform load on a beam with nonuniform sections, fixed at both ends.
 
-7.1.10.1 Reference
+#### 7.1.10.1 Reference
 
 Hand calculation using the following reference:
 
 McCormack, J.C., Structural Analysis, Intext Educational Publishers, 3rd Edition, 1975.
 
-7.1.10.2 Problem
+#### 7.1.10.2 Problem
 
 Find the moment at the supports. Assume for input a unit width for the beam. Depths are as shown.
 
-$$\begin{array}{l} E = 30 \times (10)^{6} p s i \\ w = 4 k / f t \\ d 1 = 10 \text{i n .}, d 2 = 20 \text{i n .} \\ \mathrm{L} 1 = 12 \mathrm{f t}, \mathrm{L} 2 = 8 \mathrm{f t} \\ \end{array}$$
+$$\begin{array}{l} E = 30 \times (10)^{6} psi \\ w = 4 k / ft \\ d 1 = 10 \text{in .}, d 2 = 20 \text{in .} \\ \text{L} 1 = 12 \mathrm{ft}, \text{L} 2 = 8 \mathrm{ft} \\ \end{array}$$
 
 ![](SACS2024_SACS/chunk1_68f4220be87ee7a093c28aa53418860ffc99a14ffe30194d7020e45c37b82173.jpg)
 
@@ -3831,12 +3865,13 @@ $$\begin{array}{l} E = 30 \times (10)^{6} p s i \\ w = 4 k / f t \\ d 1 = 10 \te
 (B)   
 Figure 10: Beam A) problem sketch and B) mathematical model
 
-7.1.10.3 Comparison
+#### 7.1.10.3 Comparison
 
 Table 10: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.109。 -->
 | Result | Theory | SACS | Difference |
 | --- | --- | --- | --- |
 | Moment at Node 1 (kip·ft) | -98.2 | -97.45 | none |
@@ -3844,21 +3879,21 @@ Table 10: Comparison of results
 
 
 
-7.1.11 Stresses in a Tapered Cantilever
+### 7.1.11 Stresses in a Tapered Cantilever
 
 To find the maximum deflection and principal stress due to a load on the free end of a cantilever beam with a tapered section.
 
-7.1.11.1 Reference
+#### 7.1.11.1 Reference
 
 Hand calculation using the following reference:
 
 Harris, C.O., Introduction to Stress Analysis, The Macmillan Co., 1959. Page 114, Problem 61.
 
-7.1.11.2 Problem
+#### 7.1.11.2 Problem
 
 Find the maximum deflection, δ, and the principal normal stress, σ, in the beam.
 
-$$\begin{array}{l} E = 30 \times (10)^{6} p s i \\ P = 10 \mathrm{l b} \\ d = 3 \text{i n .}, b = 0. 5 \text{i n .} \\ L = 20 \\ \end{array}$$
+$$\begin{array}{l} E = 30 \times (10)^{6} psi \\ P = 10 \mathrm{lb} \\ d = 3 \text{in .}, b = 0.5 \text{in .} \\ L = 20 \\ \end{array}$$
 
 ![](SACS2024_SACS/chunk1_da3251844aa288c41508d330e45cae20b9ddbdc6b4a1f9b3694170532b9393ce.jpg)
 
@@ -3867,12 +3902,13 @@ $$\begin{array}{l} E = 30 \times (10)^{6} p s i \\ P = 10 \mathrm{l b} \\ d = 3 
 ![](SACS2024_SACS/chunk1_3c9b9bafb19b6504bd446555b24eb5d8a90c48d4bce807ecbd11b0233f425638.jpg)  
 Figure 11: Beam with a tapering cross section
 
-7.1.11.3 Comparison
+#### 7.1.11.3 Comparison
 
 Table 11: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.110。 -->
 | Result | Theory | SACS | Difference |
 | --- | --- | --- | --- |
 | Maximum deflection at free end (in.) | -0.04267 | -0.0427 | none |
@@ -3880,68 +3916,70 @@ Table 11: Comparison of results
 
 
 
-7.1.12 Stresses in a Cable due to Thermal Loading
+### 7.1.12 Stresses in a Cable due to Thermal Loading
 
 A rigid bar is suspended by two copper wires and one steel wire. Find the stresses in the wires due to a rise in temperature.
 
-7.1.12.1 Reference
+#### 7.1.12.1 Reference
 
-Timoshenko, $\mathsf{ S }_{ \cdot } ,$ Strength of Materials, Part 1, D. Van Nostrand $\mathsf{ C o . } , 3^{ \mathsf{ r d } }$ edition, 1956, page 30, problem 9.
+Timoshenko, $S_{ \cdot } ,$ Strength of Materials, Part 1, D. Van Nostrand $C o . , 3^{rd}$ edition, 1956, page 30, problem 9.
 
-7.1.12.2 Problem
+#### 7.1.12.2 Problem
 
-Assuming the horizontal member to be very rigid, determine the stresses in the copper and steel wires if the temperature rise is $10^{ \circ } \mathsf{ F }$ . Members 1 and 3 are copper, and member 2 is steel.
+Assuming the horizontal member to be very rigid, determine the stresses in the copper and steel wires if the temperature rise is $10^{ \circ } F$ . Members 1 and 3 are copper, and member 2 is steel.
 
-Esteel $= 30\times (10)^{6}$ psi, Ecopper $= 16\times (10)6$ psi   
-αsteel $= 70\mathrm{E - 7}$ in/in/°F, αcopper $= 92\mathrm{E - 7}$ in/in/°F   
-AX = 0.1 in2   
+Esteel $= 30\times (10)^{6}$ psi, Ecopper $=16\times10^6$ psi   
+αsteel $= 70\text{E - 7}$ in/in/°F, αcopper $= 92\text{E - 7}$ in/in/°F   
+AX = 0.1 in²   
 w = 400 lbf/in.   
 L = 20 in.   
 d= 5 in.
 
-Tip: When modeling, assume a large moment of inertia for the horizontal rigid member and distribute of theconcentrated load as uniform.
+Tip: When modeling, assume a large moment of inertia for the horizontal rigid member and distribute of the concentrated load as uniform.
 
 ![](SACS2024_SACS/chunk1_2069df3b58dc7f20db6c632b16770104152ce28471b468c175e12f18597e4cca.jpg)  
 Figure 12: Model of a rigid wire suspended by wires
 
-7.1.12.3 Comparison
+#### 7.1.12.3 Comparison
 
 Table 12: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.112。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
-| oSteel (psi) | 19,695 | 19,698 | negligible |
-| oCopper (psi) | 10,152 | 10,151 | negligible |
+| σ<sub>Steel</sub> (psi) | 19,695 | 19,698 | negligible |
+| σ<sub>Copper</sub> (psi) | 10,152 | 10,151 | negligible |
 
 
 
-7.1.13 Curved Beam
+### 7.1.13 Curved Beam
 
 To find the out-of-plane deflection and stress in a circular cantilever member with a concentrated load at the free end.
 
-7.1.13.1 Reference
+#### 7.1.13.1 Reference
 
 Hand calculation using the following reference:
 
 Timoshenko, S., Strength of Materials, Part I, D. Van Nostrand, 3rd Edition., 1955.
 
-7.1.13.2 Problem
+#### 7.1.13.2 Problem
 
 Calculate the displacement at the free end and the bending stress at the fixed end due to a concentrated load producing out–of–plane bending.
 
-$$\begin{array}{l} E = 30 \times (10)^{6} p s i \\ P = 50 \mathrm{l b} \\ r = 100 \text{i n}. \\ \end{array}$$
+$$\begin{array}{l} E = 30 \times (10)^{6} psi \\ P = 50 \mathrm{lb} \\ r = 100 \mathrm{in}. \\ \end{array}$$
 
 ![](SACS2024_SACS/chunk1_9cfce013d55a7005645d15cf361e763db2e55fb703fe90e3c0c2e04218ef4f97.jpg)  
 Figure 13: Curved beam
 
-7.1.13.3 Comparison
+#### 7.1.13.3 Comparison
 
 Table 13: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.113。 -->
 | Result | Theory | SACS | Difference | Comments |
 | --- | --- | --- | --- | --- |
 | Maximum deflection at free end (in.) | 2.648 | 2.6767 | negligible |  |
@@ -3949,39 +3987,40 @@ Table 13: Comparison of results
 
 
 
-7.1.14 Hanging Bar Axial Stress
+### 7.1.14 Hanging Bar Axial Stress
 
 Two vertical bars are supported by a rigid bar, which is pinned-supported on one end. Find stresses in vertical bars due to a load at the free end of the rigid bar.
 
-7.1.14.1 Reference
+#### 7.1.14.1 Reference
 
-Higdon, Ohlsen, Stiles, Weese and Riley, Mechanics of Materials, 3rd Edition, John Wiley & Sons, Page 135,Problem 3-37.
+Higdon, Ohlsen, Stiles, Weese and Riley, Mechanics of Materials, 3rd Edition, John Wiley & Sons, Page 135, Problem 3-37.
 
-7.1.14.2 Problem
+#### 7.1.14.2 Problem
 
 Bars A and B are connected by rigid links to a fixed support at the top and to a rigid bar at the bottom. Determine the axial stresses in bars A and B when the load P is 177.92888 kN applied as shown.
 
-$$P = 177. 93 k N$$
+$$P = 177.93 kN$$
 
-$$A A = 1, 290. 3 \mathrm{m m} 2$$
+$$A_A=1{,}290.3\,\mathrm{mm}^2$$
 
-$$A B = 1, 612. 9 m m 2$$
+$$A_B=1{,}612.9\,\mathrm{mm}^2$$
 
-$$E A = 68. 95 G P a$$
+$$E_A=68.95\,\mathrm{GPa}$$
 
-$$E B = 206. 84 G P a$$
+$$E_B=206.84\,\mathrm{GPa}$$
 
 Assume the moment of inertia of member CD to be very large.
 
 ![](SACS2024_SACS/chunk1_0b2aad99dc27dc1a23ace855a406c1f1d388d105b99276f44601052bf8924300.jpg)  
 Figure 14: Rigid bar hanging from a pair of rods
 
-7.1.14.3 Comparison
+#### 7.1.14.3 Comparison
 
 Table 14: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.114。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
 | Stress in A (GPa) | 0.17237 | 0.17241 | negligible |
@@ -3989,44 +4028,47 @@ Table 14: Comparison of results
 
 
 
-7.1.15 Bent Cantilever Deflection
+### 7.1.15 Bent Cantilever Deflection
 
 Find deflection due to load at the free end of a cantilever plane bent.
 
-7.1.15.1 Reference
+#### 7.1.15.1 Reference
 
 Kinney, J. S., Indeterminate Structural Analysis, Addison - Wesley Publishing Co., 1957, Page 13, Problem 4 - 38
 
-7.1.15.2 Problem
+#### 7.1.15.2 Problem
 
-$$\begin{array}{l} E = 30, 000 \mathrm{k s i} \\ 1 = 200 \mathrm{i n}^{4} \\ A = 10 \text{i n}^{2} \\ \end{array}$$
+Find the vertical, horizontal and rotational deflection components of point A.
+
+$$\begin{aligned}E&=30{,}000\,\mathrm{ksi}\\I&=200\,\mathrm{in}^4\\A&=10\,\mathrm{in}^2\end{aligned}$$
 
 ![](SACS2024_SACS/chunk1_fcefa6fc41de2c7feaaf0f07f4be777c40b7cd7ec7215fbcd20cc27dc7c400c8.jpg)  
 Figure 15: Bent plate frame
 
-7.1.15.3 Comparison
+#### 7.1.15.3 Comparison
 
 Table 15: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.115。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
-| Deflection right, δx (in) | 0.53 | 0.53056 | none |
-| Deflection down, δy (in) | 1.16 | -1.17109 | <1% |
+| Deflection right, δ<sub>x</sub> (in) | 0.53 | 0.53056 | none |
+| Deflection down, δ<sub>y</sub> (in) | 1.16 | -1.17109 | &lt;1% |
 | Rotation, θ (rad) | 0.0049 | 0.00488 | none |
 
 
 
-7.1.16 Bent Beam Thermal Loading
+### 7.1.16 Bent Beam Thermal Loading
 
 To find member forces and moments due to a temperature load on a Zee shaped plane bent.
 
-7.1.16.1 Reference
+#### 7.1.16.1 Reference
 
-Seeley, F.B., and Smith, J.O., Advanced Mechanics of Materials, 2nd Edition, John Wiley and Sons, 1955, Pages494-497.
+Seeley, F.B., and Smith, J.O., Advanced Mechanics of Materials, 2nd Edition, John Wiley and Sons, 1955, Pages 494-497.
 
-7.1.16.2 Problem
+#### 7.1.16.2 Problem
 
 Calculate reactions and maximum moments in the structure due to a temperature increase of 430 ºF. Do not consider shear deformation.
 
@@ -4037,12 +4079,13 @@ ID = 10.255 in
 ![](SACS2024_SACS/chunk1_165272fe042a448e8c843ec1b46fb9d394fedfc8a116aa1e7c27317e97de2025.jpg)  
 Figure 16: Frame subject to temperature change
 
-7.1.16.3 Comparison
+#### 7.1.16.3 Comparison
 
 Table 16: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.117。 -->
 | Result Type | Theory | SACS | Difference | Comments |
 | --- | --- | --- | --- | --- |
 | Horizontal reaction (lbs) | 8,980 | 8,952.88 | negligible |  |
@@ -4054,83 +4097,86 @@ Table 16: Comparison of results
 
 ## 7.2 Trusses
 
-7.2.1 Axial Stress on a Truss Model
+### 7.2.1 Axial Stress on a Truss Model
 
 To find member stress due to a joint load in a space truss using static analysis.
 
-7.2.1.1 Reference
+#### 7.2.1.1 Reference
 
-Beer, F.P., and Johnston, Jr., E.R., Vector Mechanics for Engineers, Statics and Dynamics, McGraw - Hill, Inc., NewYork, 1962, p.47, Problem 2.70.
+Beer, F.P., and Johnston, Jr., E.R., Vector Mechanics for Engineers, Statics and Dynamics, McGraw - Hill, Inc., New York, 1962, p.47, Problem 2.70.
 
-7.2.1.2 Problem
+#### 7.2.1.2 Problem
 
 A 50 lb load is supported by three bars which are pinned to a ceiling as shown. Determine the stress, σ, in each bar.
 
-Area of each bar = 1 in2, E = 30 (10)6 psi
+Area of each bar $=1\,\mathrm{in}^2$, $E=30\times10^6\,\mathrm{psi}$
 
 ![](SACS2024_SACS/chunk1_408bd5f4f24bc382e6fad0121f0f9d7879c19fcd2a4fbc797db641ec66d0d41e.jpg)  
 Figure 17: Space truss
 
-7.2.1.3 Comparison
+#### 7.2.1.3 Comparison
 
 
 
+<!-- 校订来源：PDF p.118。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
-| σAD | 31.2 | 31.2 | none |
-| σBD | 10.4 | 10.4 | none |
-| σCD | 22.9 | 22.9 | none |
+| σ_AD | 31.2 | 31.2 | none |
+| σ_BD | 10.4 | 10.4 | none |
+| σ_CD | 22.9 | 22.9 | none |
 
 
 
-7.2.2 Axial Force on a Cable
+### 7.2.2 Axial Force on a Cable
 
 To find member force due to a member load in a plane articulate structure.
 
-7.2.2.1 Reference
+#### 7.2.2.1 Reference
 
 Kinney, J. S.,Indeterminate Structural Analysis, Addison - Wesley Publishing Co., 1957, p.275, Problem 6 - 19.(Original data is in US Customary Units)
 
-7.2.2.2 Problem
+#### 7.2.2.2 Problem
 
-Find the tensile stress in the cable. The cross-sectional area of the cable is 967.74 mm2 with an E of 137.895 GPa. The timber beam 1-3 is 304.8 mm x 304.8 mm in section, with E = 11.03161 GPa. Each member of the steel cantilever truss has a cross - sectional area of 2,580.64 mm2, and E of 206.8427 GPa.
+Find the tensile stress in the cable. The cross-sectional area of the cable is 967.74 mm² with an E of 137.895 GPa. The timber beam 1-3 is 304.8 mm x 304.8 mm in section, with E = 11.03161 GPa. Each member of the steel cantilever truss has a cross - sectional area of 2,580.64 mm², and E of 206.8427 GPa.
 
 ![](SACS2024_SACS/chunk1_ff1e6defd37cfa37d8a0fc3ce84d6727c6c0e7537b0380e4f1fa473659e9e430.jpg)  
 Figure 18: Plane articulate truss
 
-7.2.2.3 Comparison
+#### 7.2.2.3 Comparison
 
 Table 18: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.119。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
 | Cable, 3-4 | 22.7 | 22.6 | negligible |
 
 
 
-7.2.3 Axial Force in a 2D Plane Frame 1
+### 7.2.3 Axial Force in a 2D Plane Frame 1
 
 To find member forces due to joint loads in a plane truss.
 
-7.2.3.1 Reference
+#### 7.2.3.1 Reference
 
 Norris C.H., Wilbur J. B., Elementary Structural Analysis, 2nd Edition, McGraw – Hill, Inc., Page 159, Problem 4.3.(Original data is in US Customary Units)
 
-7.2.3.2 Problem
+#### 7.2.3.2 Problem
 
 Compute the bar forces in the bars a, b, c, d, e of the truss due to the loads shown.
 
 ![](SACS2024_SACS/chunk1_504cad1319933609834dcfbccdc2d88fab7231ae674dfe948071055dea95ded2.jpg)  
 Figure 19: Plane truss
 
-7.2.3.3 Comparison
+#### 7.2.3.3 Comparison
 
 Table 19: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.120。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
 | a | -202.13 | -202.1 | none |
@@ -4141,35 +4187,36 @@ Table 19: Comparison of results
 
 
 
-7.2.4 Axial Forces on a 3D Space Model
+### 7.2.4 Axial Forces on a 3D Space Model
 
 To find support reactions and member forces due to a joint load in a space truss.
 
-7.2.4.1 Reference
+#### 7.2.4.1 Reference
 
-Beer F. P., and Johnston, E. R., Vector Mechanics for Engineers - Statics, 4th Edition, McGraw – Hill, Inc., p.216,Problem 6.20.
+Beer F. P., and Johnston, E. R., Vector Mechanics for Engineers - Statics, 4th Edition, McGraw – Hill, Inc., p.216, Problem 6.20.
 
-7.2.4.2 Problem
+#### 7.2.4.2 Problem
 
-The space truss is supported by the six reactions shown. If a horizontal 2,700 N load is applied at $\mathsf{ A } ,$ determine the reactions and the force in each member.
+The space truss is supported by the six reactions shown. If a horizontal 2,700 N load is applied at $A ,$ determine the reactions and the force in each member.
 
 ![](SACS2024_SACS/chunk1_47e34206629f2c4f14d2bb7c78b12d4de57a279f02d5c97a510f5268b34a25a6.jpg)  
 Figure 20: Space truss
 
-7.2.4.3 Comparison
+#### 7.2.4.3 Comparison
 
 Table 20: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.121。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
-| Bv | 0 | 0 | none |
+| B<sub>v</sub> | 0 | 0 | none |
 | Bz | 2,700 | 2,700 | none |
 | Cx | 1,800 | 1,800 | none |
-| Cv | 3,375 | 3,375 | none |
+| C<sub>v</sub> | 3,375 | 3,375 | none |
 | Dx | 1,800 | 1,800 | none |
-| Dv | 3,375 | 3,375 | none |
+| D<sub>v</sub> | 3,375 | 3,375 | none |
 
 
 
@@ -4177,6 +4224,7 @@ Table 21: Comparison of results
 
 
 
+<!-- 校订来源：PDF p.122。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
 | AB | 0 | 0 | none |
@@ -4188,294 +4236,303 @@ Table 21: Comparison of results
 
 
 
-7.2.5 Reactions in a 2D Truss Model 1
+### 7.2.5 Reactions in a 2D Truss Model 1
 
 To find support reactions due to joint loads in a plane truss.
 
-7.2.5.1 Reference
+#### 7.2.5.1 Reference
 
 McCormack, J.C. Structural Analysis, Intext Educational Publishers, 3rd Edition, 1975.
 
-7.2.5.2 Problem
+#### 7.2.5.2 Problem
 
 Find the vertical support reactions of the truss.
 
-$$E = 30, 000. 0 \mathrm{k s i}$$
+$$E = 30,000.0 \mathrm{ksi}$$
 
-$$A = 100 \text{i n}^{2}$$
+$$A = 100 \mathrm{in}^{2}$$
 
 Loads as shown.
 
 ![](SACS2024_SACS/chunk1_d4e7b48ebe49dfeeb46044249744172360251727c23dca080c003f871f3bc72a.jpg)  
 Figure 21: Plane truss
 
-7.2.5.3 Comparison
+#### 7.2.5.3 Comparison
 
 Table 22: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.123。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
-| R1 (kips) | -76.7 | -76.7 | none |
-| R4 (kips) | 346.7 | 346.7 | none |
-| R9 (kips) | 30 | 30 | none |
+| R<sub>1</sub> (kips) | -76.7 | -76.7 | none |
+| R<sub>4</sub> (kips) | 346.7 | 346.7 | none |
+| R<sub>9</sub> (kips) | 30 | 30 | none |
 
 
 
-7.2.6 Reactions in a 2D Truss Model 2
+### 7.2.6 Reactions in a 2D Truss Model 2
 
 To find support reactions due to joint loads in a plane truss.
 
-7.2.6.1 Reference
+#### 7.2.6.1 Reference
 
-McCormack, $\mathsf{ J . C . } ,$ Structural Analysis, Intext Educational Publishers, $3^{ \mathsf{ r d } }$ Edition, 1975.
+McCormack, $J . C . ,$ Structural Analysis, Intext Educational Publishers, $3^{rd}$ Edition, 1975.
 
-7.2.6.2 Problem
+#### 7.2.6.2 Problem
 
 Find the vertical and horizontal reactions at the supports of the truss.
 
-$$E = 30, 000. 0 \mathrm{k s i}$$
+$$E = 30,000.0 \mathrm{ksi}$$
 
-$$A = 100 \text{i n}^{2}$$
+$$A = 100 \mathrm{in}^{2}$$
 
 Loads as shown.
 
 ![](SACS2024_SACS/chunk1_6adeab6c59141560169e523db5a8f894936f574f8ac742d2a8b648b9f723dbe7.jpg)
 
-7.2.6.3 Comparison
+#### 7.2.6.3 Comparison
 
 Table 23: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.124。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
-| Horizontal, R1 (kips) | 11.5 | 11.49 | none |
-| Vertical, R1 (kips) | 34.3 | 34.29 | none |
-| Horizontal, R2 (kips) | -31.7 | -31.67 | none |
-| Vertical, R2 (kips) | 36.0 | 36.0 | none |
+| Horizontal, R<sub>1</sub> (kips) | 11.5 | 11.49 | none |
+| Vertical, R<sub>1</sub> (kips) | 34.3 | 34.29 | none |
+| Horizontal, R<sub>2</sub> (kips) | -31.7 | -31.67 | none |
+| Vertical, R<sub>2</sub> (kips) | 36.0 | 36.0 | none |
 
 
 
-7.2.7 Reactions in a 2D Truss Model 3
+### 7.2.7 Reactions in a 2D Truss Model 3
 
 Find the support reactions due to a joint load in a plane truss.
 
-7.2.7.1 Reference
+#### 7.2.7.1 Reference
 
-Timoshenko, $\mathsf{ S }_{ \cdot } ,$ Strength of Materials, Part 1, D. Van Nostrand Co., Inc., $3^{ \mathsf{ r d } }$ edition, 1956, p.346, problem 3.
+Timoshenko, $S_{ \cdot } ,$ Strength of Materials, Part 1, D. Van Nostrand Co., Inc., $3^{rd}$ edition, 1956, p.346, problem 3.
 
-7.2.7.2 Problem
+#### 7.2.7.2 Problem
 
 Determine the horizontal reaction at support 4 of the system.
 
-$$\begin{array}{l} L = 50 \text{i n}. \\ P = 10 k i p s \\ \end{array}$$
+$$\begin{array}{l} L = 50 \mathrm{in}. \\ P = 10 kips \\ \end{array}$$
 
 ![](SACS2024_SACS/chunk1_47314d2fa36ab3869b24e6d30874579510a71939c8a4e74435af9cb34a2cd7b6.jpg)  
 Figure 23: Plane truss
 
-7.2.7.3 Comparison
+#### 7.2.7.3 Comparison
 
 Table 24: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.125。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
-| R4 (kips) | 8.77 | 8.77 | none |
+| R<sub>4</sub> (kips) | 8.77 | 8.77 | none |
 
 
 
-7.2.8 Deflections in a 2D Truss Model
+### 7.2.8 Deflections in a 2D Truss Model
 
 Find the joint deflection due to joint loads in a plane truss.
 
-7.2.8.1 Reference
+#### 7.2.8.1 Reference
 
 McCormac, J. C., Structural Analysis, Intext Educational Publishers, $3^{ \mathrm{ { r d } } }$ edition, 1975, page 271, example 18 - 2.
 
-7.2.8.2 Problem
+#### 7.2.8.2 Problem
 
 Determine the vertical deflection at point 5 of plane truss structure shown in the figure.
 
 ![](SACS2024_SACS/chunk1_435958d9ad2755545d32ca6d4ceadcb33a95b40b9ee42b0996a7fdb2d00b39a8.jpg)  
 Stress in a 2D Truss Model
 
-$$P = 20 k i p$$
+$$P = 20 kip$$
 
-$$L = 15 f t$$
+$$L = 15 ft$$
 
 Truss width = 4 spaces at 15 ft = 60 ft
 
 Truss height = 15 ft
 
-$$A_{X 1 - 4} = 1 \text{i n}^{2}, A_{X 5 - 6} = 2 \text{i n}^{2}, A_{X 7 - 8} = 1. 5 \text{i n}^{2},$$
+$$A_{X 1 - 4} = 1 \mathrm{in}^{2}, A_{X 5 - 6} = 2 \mathrm{in}^{2}, A_{X 7 - 8} = 1.5 \mathrm{in}^{2},$$
 
-$$A_{X 9 - 11 B} = 3 \text{i n}^{2 P}, A_{X 12 - 13} = 4 \text{i n}^{2}$$
+$$A_{X 9 - 11 B} = 3 \mathrm{in}^{2P}, A_{X 12 - 13} = 4 \mathrm{in}^{2}$$
 
-$$\mathrm{E} = 30 \mathrm{E} 3 \mathrm{k s i}$$
+$$\text{E} = 30 \text{E} 3 \mathrm{ksi}$$
 
-7.2.8.3 Comparison
+#### 7.2.8.3 Comparison
 
 Table 25: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.127。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
-| δ5 (in.) | 2.63 | 2.6305 | negligible |
+| δ<sub>5</sub> (in.) | 2.63 | 2.6305 | negligible |
 
+> PDF 原书疑点（p.126）：面积定义的第二行在 $A_{X9-11}$ 后带 B，在 in² 后带 P，这两个多余字符在原页图像中也存在；保留原书符号形态，不据此解释为新变量或单位。
 
-
-7.2.9 Stress in a 2D Truss Model
+### 7.2.9 Stress in a 2D Truss Model
 
 Find the joint deflection and member stress due to a joint load in a plane truss.
 
-7.2.9.1 Reference
+#### 7.2.9.1 Reference
 
-Timoshenko, S., Strength of Materials, Part 1, D. Van Nostrand $\mathsf{ C o . , l n c . , 3^{ r d } }$ edition, 1956, page 10, problem 2.
+Timoshenko, S., Strength of Materials, Part 1, D. Van Nostrand $\mathsf{ C o . , l n c . , 3^{rd} }$ edition, 1956, page 10, problem 2.
 
-7.2.9.2 Problem
+#### 7.2.9.2 Problem
 
 Determine the vertical deflection at point A and the member stresses.
 
-$$\begin{array}{l} A X = 0. 5 \text{i n}^{2} \\ E = 30 E 6 p s i \\ P = 5000 \text{l b f} \\ L = 180 \text{i n}. \\ \text{a n g l e} = 30^{\circ} \\ \end{array}$$
+$$\begin{array}{l} A X = 0.5 \mathrm{in}^{2} \\ E = 30 E 6 psi \\ P = 5000 \mathrm{lbf} \\ L = 180 \mathrm{in}. \\ \text{angle} = 30^{\circ} \\ \end{array}$$
 
 ![](SACS2024_SACS/chunk1_d5ab66ee315928858df7b38434c1da4261624f8140164493158dbcd98636d29a.jpg)  
 Figure 25: Model of two member truss
 
-7.2.9.3 Comparison
+#### 7.2.9.3 Comparison
 
 Table 26: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.128。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
-| σA (psi) | 10,000. | 10,000. | none |
-| δA (in) | 0.12 | 0.12 | none |
+| σ<sub>A</sub> (psi) | 10,000. | 10,000. | none |
+| δ<sub>A</sub> (in) | 0.12 | 0.12 | none |
 
 
 
-7.2.10 Axial Forces in a Plane Frame 2
+### 7.2.10 Axial Forces in a Plane Frame 2
 
 To find member forces due to a thermal load in a plane truss.
 
-7.2.10.1 Reference
+#### 7.2.10.1 Reference
 
 Gere J. M., and Timoshenko, S. P., Mechanics of Materials, 2nd Edition, PWS Engineering, p.21, Problem 2.6 - 23.
 
-7.2.10.2 Problem
+#### 7.2.10.2 Problem
 
-A symmetric, three-bar truss ABCD undergoes a temperature increase of $20^{ \circ } \mathsf{ C }$ in the two outer bars and $70 \textdegree$ in the middle bar. Calculate the forces F1 and F2 in the bars.
+A symmetric, three-bar truss ABCD undergoes a temperature increase of $20^{ \circ } C$ in the two outer bars and $70 \textdegree$ in the middle bar. Calculate the forces F1 and F2 in the bars.
 
-$$\begin{array}{l} E = 200 \mathrm{G P a} \\ \alpha = 14 (10)^{-6} /^{\circ} \mathrm{C} \\ A = 900 m m^{2} \\ \end{array}$$
+$$\begin{array}{l} E = 200 \mathrm{GPa} \\ \alpha = 14 (10)^{-6} /^{\circ} \text{C} \\ A = 900 mm^{2} \\ \end{array}$$
 
 ![](SACS2024_SACS/chunk1_4c90ca026c1f691432e5b1281ecb3f3df6a0182f9332689fcbe71b7d5a7cd807.jpg)  
 Figure 26: Plane truss subject to differential thermal loading
 
-7.2.10.3 Comparison
+#### 7.2.10.3 Comparison
 
 Table 27: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.129。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
-| F1 | 22,100 | 22,143 | 0.2% (negligible) |
-| F2 | -31,300 | -31,315 | 0.1% (negligible) |
+| F 1 | 22,100 | 22,143 | 0.2% (negligible) |
+| F 2 | -31,300 | -31,315 | 0.1% (negligible) |
 
 
 
 ## 7.3 Frames
 
-7.3.1 2D Portal Reactions 1
+### 7.3.1 2D Portal Reactions 1
 
 To find section properties, member forces and support reactions for a 1x1 bay plane frame with members of rectangular section.
 
-7.3.1.1 Reference
+#### 7.3.1.1 Reference
 
-Timoshenko, S., Strength of Materials, Part I, Elementary Theory and Problems, 2nd Edition, Van NostrandCompany, 1940, Pages 188-191,
+Timoshenko, S., Strength of Materials, Part I, Elementary Theory and Problems, 2nd Edition, Van Nostrand Company, 1940, Pages 188-191,
 
-7.3.1.2 Problem
+#### 7.3.1.2 Problem
 
-The frame supports a concentrated load at middle of the horizontal member. Verify the internally calculated section properties, support reactions and bending moments at the ends of the horizontal member. Columns are square $2 " \times 2 "$ ; beams are rectangular with ${ \mathsf{ b } } = 2^{ \mathbf{ n } }$ and $h = 4 "$ .
+The frame supports a concentrated load at middle of the horizontal member. Verify the internally calculated section properties, support reactions and bending moments at the ends of the horizontal member. Columns are square $2 " \times 2 "$ ; beams are rectangular with ${ b } = 2^{ \mathbf{ n } }$ and $h = 4 "$ .
 
-$$P = 1, 000 \mathrm{l b}$$
+$$P = 1,000 \mathrm{lb}$$
 
-$$h = 100 \text{i n .} l = 120 \text{i n .}$$
+$$h = 100 \text{in .} l = 120 \text{in .}$$
 
-$$E = 30 \times (10)^{6} p s i$$
+$$E = 30 \times (10)^{6} psi$$
 
 ![](SACS2024_SACS/chunk1_6c7b49683a456e7358655bd8dd060066862a85a61cc3e0827724b34b606cfc52.jpg)  
 Figure 27: Symmetric portal frame
 
-7.3.1.3 Calculations
+#### 7.3.1.3 Calculations
 
 From the reference:
 
-$$M = \frac{P l}{8} \frac{1}{1 + \frac{2}{3} \frac{h}{l} \frac{I_{b}}{I_{c}}} = \frac{1 , 000 (120)}{8} \frac{1}{1 + \frac{2}{3} \frac{100}{120} \frac{10 . 67}{1 . 333}} = 2, 754 \mathrm{i n - l b}$$
+$$M = \frac{P l}{8} \frac{1}{1 + \frac{2}{3} \frac{h}{l} \frac{I_{b}}{I_{c}}} = \frac{1,000 (120)}{8} \frac{1}{1 + \frac{2}{3} \frac{100}{120} \frac{10.67}{1.333}} = 2,754 \text{in - lb}$$
 
-7.3.1.4 Comparison
+#### 7.3.1.4 Comparison
 
 Table 28: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.130。 -->
 | Result Type |  | Theory | SACS | Difference |
 | --- | --- | --- | --- | --- |
-| Column Cross Section | Ax(in.2) | 4.0 | 4.0 | none |
-|  | Ix(in.4) | 2.25 | 2.2533 | none |
-|  | Iy(in.4) | 1.333 | 1.3333 | none |
-|  | Iz(in.4) | 1.333 | 1.3333 | none |
-| Beam Cross Section | Ax(in.2) | 8.0 | 8.0 | none |
-|  | Ix(in.4) | 7.324 | 7.3242 | none |
-|  | Iy(in.4) | 2.667 | 2.6667 | none |
-|  | Iz(in.4) | 10.667 | 10.667 | none |
-| Ry(lb) |  | 500 | 500 | none |
-| Rx(lb) |  | 27.55 | 27.55 | none |
+| Result Type |  | Theory | SACS | Difference |
+| Column Cross Section | A<sub>x</sub> (in.²) | 4.0 | 4.0 | none |
+|  | I<sub>x</sub> (in.⁴) | 2.25 | 2.2533 | none |
+|  | I<sub>y</sub> (in.⁴) | 1.333 | 1.3333 | none |
+|  | I<sub>z</sub> (in.⁴) | 1.333 | 1.3333 | none |
+| Beam Cross Section | A<sub>x</sub> (in.²) | 8.0 | 8.0 | none |
+|  | I<sub>x</sub> (in.⁴) | 7.324 | 7.3242 | none |
+|  | I<sub>y</sub> (in.⁴) | 2.667 | 2.6667 | none |
+|  | I<sub>z</sub> (in.⁴) | 10.667 | 10.667 | none |
+| R<sub>y</sub> (lb) |  | 500 | 500 | none |
+| R<sub>x</sub> (lb) |  | 27.55 | 27.55 | none |
 | M(in·lb) |  | 2,754.97 | 2,755.0 | none |
 
 
 
-7.3.2 3x2 Plane Frame Moments
+### 7.3.2 3x2 Plane Frame Moments
 
 To find the bending moments due to lateral joint loads in a 3x2 bay plane frame.
 
-7.3.2.1 Reference
+#### 7.3.2.1 Reference
 
 Noris and Wilbur, Elementary Structural Analysis, 2nd Edition, McGraw – Hill, Inc., Page 304.
 
-7.3.2.2 Problem
+#### 7.3.2.2 Problem
 
 Determine the bending moments in the members of frame.
 
-$$\mathbf{E} = 30, 000 \mathrm{k s i}$$
+$$\mathbf{E} = 30,000 \mathrm{ksi}$$
 
-$$I_{A E} = I_{E I} = 240 i n^{4}$$
+$$I_{AE} = I_{EI} = 240 in^{4}$$
 
-$$\mathrm{I}_{\mathrm{B F}} = \mathrm{I}_{\mathrm{F J}} = 480 \mathrm{i n}^{4}$$
+$$I_{BF}=I_{FJ}=480\,\mathrm{in}^4$$
 
-$$\mathrm{I}_{\mathrm{C G}} = \mathrm{I}_{\mathrm{G K}} = 600 \mathrm{i n}^{4}$$
+$$I_{CG}=I_{GK}=600\,\mathrm{in}^4$$
 
-$$\mathrm{I}_{\mathrm{D H}} = \mathrm{I}_{\mathrm{H L}} = 360 \mathrm{i n}^{4}$$
+$$I_{DH}=I_{HL}=360\,\mathrm{in}^4$$
 
-$$\mathrm{I}_{\mathrm{E F}} = \mathrm{I}_{\mathrm{L J}} = 600 \mathrm{i n}^{4}$$
+$$I_{EF}=I_{IJ}=600\,\mathrm{in}^4$$
 
-$$I_{F G} = I_{J K} = 1, 200 i n^{4}$$
+$$I_{FG} = I_{JK} = 1,200 in^{4}$$
 
-$$\mathrm{I}_{\mathrm{G H}} = \mathrm{I}_{\mathrm{K L}} = 1, 800 \mathrm{i n}^{4}$$
+$$I_{GH}=I_{KL}=1{,}800\,\mathrm{in}^4$$
 
 ![](SACS2024_SACS/chunk1_504d9700717ab194fcf831f63c09ac021be93e5ab638b63863262043aa15470a.jpg)  
 Figure 28: 3x2 bay plane frame
 
-7.3.2.3 Comparison
+#### 7.3.2.3 Comparison
 
 Table 29: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.132,133。 -->
 | Result Type | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- | --- |
 | Bending in member (ft·kips) | AE | 29.6 | 29.8 | negligible |
@@ -4502,115 +4559,118 @@ Table 29: Comparison of results
 | Bending in member (ft·kips) | GF | 41.3 | 41.7 | negligible |
 | Bending in member (ft·kips) | JK | 14.8 | 15.1 | 2% |
 | Bending in member (ft·kips) | KJ | 14.4 | 14.7 | 2% |
-|  | GH | 52.2 | 51.8 | negligible |
-|  | HG | 53.6 | 53.5 | negligible |
-|  | KL | 18.0 | 17.8 | 1% |
-|  | LK | 18.5 | 18.4 | negligible |
+| Bending in member (ft·kips) | GH | 52.2 | 51.8 | negligible |
+| Bending in member (ft·kips) | HG | 53.6 | 53.5 | negligible |
+| Bending in member (ft·kips) | KL | 18.0 | 17.8 | 1% |
+| Bending in member (ft·kips) | LK | 18.5 | 18.4 | negligible |
 
 
 
-7.3.3 Support Reactions for a Simple Frame
+### 7.3.3 Support Reactions for a Simple Frame
 
 Find support reactions due to a load at the free end of a cantilever bent plate with an intermediate support.
 
-7.3.3.1 Reference
+#### 7.3.3.1 Reference
 
-Timoshenko, S., Strength of Materials, Part 1, D. Van Nostrand Co., Inc., $3^{ \mathsf{ r d } }$ edition, 1956, page 346, problem 2.
+Timoshenko, S., Strength of Materials, Part 1, D. Van Nostrand Co., Inc., $3^{rd}$ edition, 1956, page 346, problem 2.
 
-7.3.3.2 Problem
+#### 7.3.3.2 Problem
 
 Determine the reaction of the system as shown in the figure.
 
-$$\begin{array}{l} P = 1 \text{k i p} \\ L = 10 \text{i n} \\ \end{array}$$
+$$\begin{array}{l} P = 1 \mathrm{kip} \\ L = 10 \mathrm{in} \\ \end{array}$$
 
 ![](SACS2024_SACS/chunk1_d5573089aec3c6cb7f35b9b0a22d51990b2e48e8913c042da8cd02caaad96cd9.jpg)  
 Figure 29: Cantilever model
 
-7.3.3.3 Comparison
+#### 7.3.3.3 Comparison
 
 Table 30: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.134。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
-| Rx (kips) | 1.5 | 1.5 | none |
+| R<sub>x</sub> (kips) | 1.5 | 1.5 | none |
 
 
 
-7.3.4 2D Portal Reactions 2
+### 7.3.4 2D Portal Reactions 2
 
 Find the maximum moment due to a uniform load on the horizontal member in a 1x1 bay plane frame.
 
-7.3.4.1 Reference
+#### 7.3.4.1 Reference
 
 McCormac, J. C., Structural Analysis, Intext Educational Publishers, $3^{ \mathrm{ { r d } } }$ edition, 1975, page 383, example 22 - 5.
 
-7.3.4.2 Problem
+#### 7.3.4.2 Problem
 
 Determine the maximum moment in the frame. E and I same for all members.
 
-$$L = 20 f t$$
+$$L = 20 ft$$
 
-$$w = 2 k i p s / f t$$
+$$w = 2 kips / ft$$
 
 ![](SACS2024_SACS/chunk1_e5fb3515697514dcf9f7be82e9e596b571c2dea1f5cd9d2e0900558270d286d9.jpg)  
 Figure 30: 1x1 bay plane frame
 
-7.3.4.3 Comparison
+#### 7.3.4.3 Comparison
 
 Table 31: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.135。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
-| MMax (kip·ft) | 44.40 | 44.45 | negligible |
+| M<sub>Max</sub> (kip·ft) | 44.40 | 44.45 | negligible |
 
 
 
-7.3.5 2D Portal Reactions Sidesway 2
+### 7.3.5 2D Portal Reactions Sidesway 2
 
 Find the maximum moment due to a concentrated load on the horizontal member in a 1x1 bay plane frame.
 
-7.3.5.1 Reference
+#### 7.3.5.1 Reference
 
 McCormac, J. C., Structural Analysis, Intext Educational Publishers, 3rd edition, 1975, page 385, problem 22 - 6.
 
-7.3.5.2 Problem
+#### 7.3.5.2 Problem
 
 Determine the maximum moment in the structure.
 
 P = 30 kip
 
-$\lfloor 1 = 20 \mathrm{ f t } , \mathsf{ L } 2 = 30 \mathrm{ f t }$
+$\lfloor 1 = 20 \mathrm{ft} , L 2 = 30 \mathrm{ft}$
 
 E and I same for all members
 
 ![](SACS2024_SACS/chunk1_528c3132584cb96221dadc0078d231f02b97738f8ded35a686b592b2d9e992e7.jpg)  
 Figure 31: Unequal leg bay model
 
-7.3.5.3 Comparison
+#### 7.3.5.3 Comparison
 
 Table 32: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.137。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
-| MMax (ft·kip) | 69.40 | 69.56 | negligible |
+| M<sub>Max</sub> (ft·kip) | 69.40 | 69.56 | negligible |
 
 
 
-7.3.6 1x2 Plane Frame Lateral Load
+### 7.3.6 1x2 Plane Frame Lateral Load
 
 Find the maximum moment due to lateral joint loads in a 1x2 bay plane frame.
 
-7.3.6.1 Reference
+#### 7.3.6.1 Reference
 
 McCormac, J. C., Structural Analysis, Intext Educational Publishers, $3^{ \mathrm{ { r d } } }$ edition, 1975, page 388, example 22 - 7.
 
-7.3.6.2 Problem
+#### 7.3.6.2 Problem
 
 Determine the maximum moment in the frame.
 
@@ -4623,27 +4683,28 @@ E and I same for all members.
 ![](SACS2024_SACS/chunk1_3568518c6e1f1b695eaeb709bfb4ed28f20627a14d289801058424fc9b1f2967.jpg)  
 Figure 32: Two story frame model
 
-7.3.6.3 Comparison
+#### 7.3.6.3 Comparison
 
 Table 33: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.138。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
-| MMax (ft·kip) | 176.40 | 178.01 | 0.9% |
+| M<sub>Max</sub> (ft·kip) | 176.40 | 178.01 | 0.9% |
 
 
 
-7.3.7 2D Portal Reactions Sidesway 1
+### 7.3.7 2D Portal Reactions Sidesway 1
 
 To find the displacements at the nodes of a frame due to movements of supports.
 
-7.3.7.1 Reference
+#### 7.3.7.1 Reference
 
 C.K. Wang, Intermediate Structural Analysis, International Student Edition, 1983, McGraw Hill, Section 2.11, p47.
 
-7.3.7.2 Problem
+#### 7.3.7.2 Problem
 
 Calculate the deflections at node B and support D.
 
@@ -4655,12 +4716,13 @@ Load Cases:
 1. Vertical displacement of 1 cm at Node A   
 2. Vertical displacement of 1 cm at Node B
 
-7.3.7.3 Comparison
+#### 7.3.7.3 Comparison
 
 Table 34: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.139。 -->
 | Result Type | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- | --- |
 | Load Case 1 | Horizontal displacement at node B (cm) | 1.25 | 1.25 | none |
@@ -4672,98 +4734,100 @@ Table 34: Comparison of results
 
 
 
-7.3.8 2 Bay Frame Moments and Shear
+### 7.3.8 2 Bay Frame Moments and Shear
 
 To find the member forces in a 1x2 bay plane frame with members of rectangular section.
 
-7.3.8.1 Reference
+#### 7.3.8.1 Reference
 
 Manual of Steel Construction – Allowable Stress Design, AISC, 9th Edition, 1989.
 
-7.3.8.2 Problem
+#### 7.3.8.2 Problem
 
 The frame supports a uniformly distributed load and concentrated loads. Calculate the bending moment and shear force at the mid point of the beam of the first bay.
 
-$$E = 30, 000 \mathrm{k s i}$$
+$$E = 30,000 \mathrm{ksi}$$
 
 Columns are $\ L { 12 " } \times \ L { 24 } "$ , beams are $12 " \times 30 "$
 
 ![](SACS2024_SACS/chunk1_599fbda23a05296899f0f2011cdeba31a22e49e06d8cff51d5d204ff9e4ae1c8.jpg)  
 Figure 34: 2 bay frame
 
-7.3.8.3 Comparison
+#### 7.3.8.3 Comparison
 
 Table 35: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.140。 -->
 | Result Type | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- | --- |
-| Load Case 1 | Moment, M (in·kips) | 3,375 | 3,375 | none |
+| Load Case 1 | Moment , M (in·kips) | 3,375 | 3,375 | none |
 | Load Case 1 | Shear, V (kips) | 68.75 | 68.75 | none |
 | Load Case 2 | Moment, M (in·kips) | 2,430 | 2,429.7 | negligible |
 | Load Case 2 | Shear, V (kips) | 22.50 | 22.50 | none |
 
 
 
-7.3.9 3D Frame Max Forces
+### 7.3.9 3D Frame Max Forces
 
 Find the maximum axial force and moment due to load and moment applied at a joint in a Space frame.
 
-7.3.9.1 Reference
+#### 7.3.9.1 Reference
 
 Weaver Jr., W., Computer Programs for Structural Analysis, page 146, problem 8.
 
-7.3.9.2 Problem
+#### 7.3.9.2 Problem
 
 Determine the maximum axial force and moment in the space structure.
 
 F = 2 kip, P = 1 kip, M = 120 in·kip
 
-$\mathsf{ L } = 120 \mathsf{ i n } .$
+$L = 120 in .$
 
-$\mathsf{ E } = 30 \mathsf{ E } 3 \mathsf{ k s i } ,$
+$E = 30 E 3 ksi ,$
 
-$\mathsf{ A X } = 11 \mathsf{ i n }^{ 2 }$
+$A X = 11 in^{2}$
 
-$\vert \mathsf{ X } = 83 \mathrm{ i n }^{ 4 }$
+$\vert X = 83 \mathrm{in}^{4}$
 
-$\mathsf{ I Y } = 56 ~ \mathsf{ i n }^{ 4 }$
+$I Y = 56 ~ in^{4}$
 
-$\lvert Z = 56 \mathrm{ i n }^{ 4 }$
+$\lvert Z = 56 \mathrm{in}^{4}$
 
 ![](SACS2024_SACS/chunk1_273b19137592fb22d5ad95b24db2d8ef7e01f582872a2c5d409522427a82ccfc.jpg)  
 Figure 35: Space frame model
 
-7.3.9.3 Comparison
+#### 7.3.9.3 Comparison
 
 Table 36: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.141。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
-| FMax (kips) | 1.47 | 1.47 | none |
-| MY, Max (in·kip) | 84.04 | 85.3 | 1.4% |
-| MZ, Max (in·kip) | 95.319 | 97.04 | 1.7% |
+| F<sub>Max</sub> (kips) | 1.47 | 1.47 | none |
+| M<sub>Y,Max</sub> (in·kip) | 84.04 | 85.3 | 1.4% |
+| M<sub>Z,Max</sub> (in·kip) | 95.319 | 97.04 | 1.7% |
 
 
 
 ## 7.4 Plate Elements
 
-7.4.1 Cantilever Tube Stresses and Deflection
+### 7.4.1 Cantilever Tube Stresses and Deflection
 
 To find deflections and element stresses due to loads at the free end of a Cantilever beam of tubular section. The beam is modeled using plate/shell elements.
 
-7.4.1.1 Reference
+#### 7.4.1.1 Reference
 
-Timoshenko, S., Strength of Materials, Part I, Elementary Theory and Problems, 2nd Edition, Van NostrandCompany, 1940.
+Timoshenko, S., Strength of Materials, Part I, Elementary Theory and Problems, 2nd Edition, Van Nostrand Company, 1940.
 
-7.4.1.2 Problem
+#### 7.4.1.2 Problem
 
 A cantilever beam is made of a tubular section. Using plate/shell elements calculate the deflection at the free end and axial stress at the center of the beam for the following free end loads:
 
-$$\begin{array}{l} P = 1, 000 \mathrm{l b} \\ M x = 2, 000 \text{i n} \cdot \mathrm{l b} \\ M y = 2, 500 \text{i n} \cdot \mathrm{l b} \\ V = 1, 000 \mathrm{l b} \\ \end{array}$$
+$$\begin{array}{l} P = 1,000 \mathrm{lb} \\ M x = 2,000 \mathrm{in} \cdot \mathrm{lb} \\ M y = 2,500 \mathrm{in} \cdot \mathrm{lb} \\ V = 1,000 \mathrm{lb} \\ \end{array}$$
 
 ![](SACS2024_SACS/chunk1_0b094c36cf4e27625bd9a98a0c300cbc5fccb38f9e160b3854e593eb57e20135.jpg)  
 Figure 36: Cantilever beam modeled with elements
@@ -4773,138 +4837,143 @@ Figure 37: SACS Model showing Node numbers
 
 Average deflection for nodes 104, 105, 106, 107, 108, 109, 110, 111, 112 and 113 due to load case 3 (My):
 
-$$d = [ 4 (0. 073781) + 4 (0. 073663) + 2 (0. 073815) ] / 10 = 0. 073741$$
+$$d = [ 4 (0.073781) + 4 (0.073663) + 2 (0.073815) ] / 10 = 0.073741$$
 
 Average deflection for nodes 104, 105, 106, 107, 108, 109, 110, 111, 112 and 113 due to load case 4 (V):
 
-$$d = [ 4 (- 0. 409578) + 4 (- 0. 409568) + 2 (- 0. 409601) ] / 10 = 0. 409579$$
+$$d = [ 4 (- 0.409578) + 4 (- 0.409568) + 2 (- 0.409601) ] / 10 = 0.409579$$
 
 Average bending stress for nodes 104, 107, 108, 109, 112, and 113 due to load case 3 (My):
 
-$$\sigma = 4 (5800) + 2 (5200) / 6 = 5600 \mathrm{p s i}$$
+$$\sigma = 4 (5800) + 2 (5200) / 6 = 5600 \mathrm{psi}$$
 
 Average bending stress for nodes 0, 6, 9, and 12 due to load case 4 (V):
 
-$$\sigma = 4 (42950) / 4 = 42950 \mathrm{p s i}$$
+$$\sigma = 4 (42950) / 4 = 42950 \mathrm{psi}$$
 
-7.4.1.3 Comparison
+#### 7.4.1.3 Comparison
 
 Table 37: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.143,144。 -->
 | Result Type | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- | --- |
 | Free end deflection due to axial load, P (in) | Nodes 104, 105, 106, 107, 108, 109, 110, 111, 112 and 113 | 0.004 | 0.004 | none |
 | Axial stress at the middle of the beam due to axial load, P (psi) | Nodes 54, 55, 56, 57, 58, 59, 60, 61, 62 and 63 | 2,000 | 2,000 | none |
-| In plane shear stress at the free end due to torque, Mx (psi) | Nodes 104, 107, 109, 112 | 3,333 | 3,280 | negligible |
-| In plane shear stress at the free end due to torque, Mx (psi) | Nodes 105, 106, 110, 111 | 3,333 | 3,330 | negligible |
-| In plane shear stress at the free end due to torque, Mx (psi) | Nodes 108, 113 | 3,333 | 3,340 | negligible |
-| Result Type | Theory | SACS | Difference |  |
-| Avg. free end deflection at the center due to moment, My (in) | 0.0741 | 0.0737 | negligible |  |
-| Avg. free end bending stress at the center due to moment, My (psi) | 5,647 | 5,600 | negligible |  |
-| Avg. free end deflection at the center due to shear, V (in) | 0.4152 | 0.4096 | 1.3% |  |
-| Avg. free end bending stress at the center due to shear, V (psi) | 42,913 | 42,950 | negligible |  |
+| In plane shear stress at the free end due to torque, M<sub>x</sub> (psi) | Nodes 104, 107, 109, 112 | 3,333 | 3,280 | negligible |
+| In plane shear stress at the free end due to torque, M<sub>x</sub> (psi) | Nodes 105, 106, 110, 111 | 3,333 | 3,330 | negligible |
+| In plane shear stress at the free end due to torque, M<sub>x</sub> (psi) | Nodes 108, 113 | 3,333 | 3,340 | negligible |
 
+| Result Type | Theory | SACS | Difference |
+| --- | --- | --- | --- |
+| Avg. free end deflection at the center due to moment, M<sub>y</sub> (in) | 0.0741 | 0.0737 | negligible |
+| Avg. free end bending stress at the center due to moment, M<sub>y</sub> (psi) | 5,647 | 5,600 | negligible |
+| Avg. free end deflection at the center due to shear, V (in) | 0.4152 | 0.4096 | 1.3% |
+| Avg. free end bending stress at the center due to shear, V (psi) | 42,913 | 42,950 | negligible |
 
+> PDF 原书疑点（p.143）：荷载 4 平均挠度式左侧各项为负，结果写成正 0.409579；应力平均式未给整个加权和加括号。两处都来自 PDF，原式保留。
 
-7.4.2 2D Cantilever Beam End Deflection 1
+### 7.4.2 2D Cantilever Beam End Deflection 1
 
 To find the free end deflection due to a joint load on a Cantilever beam modeled using Plate/shell elements.
 
-7.4.2.1 Reference
+#### 7.4.2.1 Reference
 
 Hand calculation.
 
-7.4.2.2 Problem
+#### 7.4.2.2 Problem
 
 Using the finite element method calculate the deflection of the free end of the cantilever beam.
 
 ![](SACS2024_SACS/chunk1_7c32e8173e87ce0bd2185d4ab880f325b099346565c9744a74d9acde1c4e4b8f.jpg)  
 Figure 38: Fixed support beam with point load
 
-$$E = 4, 278 \mathrm{k s i}$$
+$$E = 4,278 \mathrm{ksi}$$
 
-$$h = 10 \text{i n}$$
+$$h = 10 \mathrm{in}$$
 
-$$b = 5 \mathrm{i n}$$
+$$b = 5 \mathrm{in}$$
 
-$$P = 2 k i p s$$
+$$P = 2 kips$$
 
-$$L = 60 \text{i n}$$
+$$L = 60 \mathrm{in}$$
 
-7.4.2.3 Theoretical Solution
+#### 7.4.2.3 Theoretical Solution
 
 Moment of Inertia:
 
-$$I = (5 \text{i n}) (10 \text{i n})^{3} / 12 = 416. 7 \text{i n}^{4}$$
+$$I = (5 \mathrm{in}) (10 \mathrm{in})^{3} / 12 = 416.7 \mathrm{in}^{4}$$
 
 Deflection at free end:
 
-$$\delta = \frac{P L^{3}}{3 E I} = \frac{2 k i p s (60 i n)^{3}}{3 (4 , 278 k s i) (416 . 7 i n^{4})} = 0. 0808 i n$$
+$$\delta = \frac{P L^{3}}{3 E I} = \frac{2 kips (60 in)^{3}}{3 (4,278 ksi) (416.7 in^{4})} = 0.0808 in$$
 
-7.4.2.4 Comparison
+#### 7.4.2.4 Comparison
 
 Table 38: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.145。 -->
 | Result Type | Theory | SACS | Difference | Comments |
 | --- | --- | --- | --- | --- |
 | Deflection at node B (in) | 0.0808 | 0.0824 | 1.98% | The expression for deflection for beam is used to compare the results of a model with Plate Elements with FE formulation, hence the difference in results. |
 
 
 
-7.4.3 Natural Frequency of Beam on Springs
+### 7.4.3 Natural Frequency of Beam on Springs
 
 Find the period of free vibration for a beam supported on two springs with a point mass.
 
-7.4.3.1 Reference
+#### 7.4.3.1 Reference
 
 Timoshenko, S., Young, D., and Weaver, W., Vibration Problems in Engineering, John Wiley & Sons, 4th edition,1974. page 11, problem 1.1-3.
 
-7.4.3.2 Problem
+#### 7.4.3.2 Problem
 
 A simple beam is supported by two spring as shown in the figure. Neglecting the distributed mass of the beam, calculate the period of free vibration of the beam subjected to a load of W.
 
-$$E I = 30, 000. 0 \mathrm{k s i}$$
+$$E I = 30,000.0 \mathrm{ksi}$$
 
-$$A = 7. 0 f t$$
+$$A = 7.0 ft$$
 
-$$B = 3. 0 \text{f t}.$$
+$$B = 3.0 \mathrm{ft}.$$
 
-$$W = 1, 000 \text{I b f K} = 300. 0 \text{I b / i n}.$$
+$$W=1{,}000\,\mathrm{lbf},\qquad K=300.0\,\mathrm{lb/in}$$
 
 ![](SACS2024_SACS/chunk1_05ebc1d3f3ff9906468e1b149860fca330ecb7de7ce013a2daaab6a4157e4fb7.jpg)  
 Figure 39: Beam supported on springs
 
-7.4.3.3 Comparison
+#### 7.4.3.3 Comparison
 
 Table 39: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.146。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
 | Period (sec) | 0.533 | 0.53295 | negligible |
 
+> PDF 原书疑点（p.145）：原文写 EI=30,000.0 ksi，其单位形式不像弯曲刚度单位；W 和 K 连在同一行。此处仅分开 W/K 两个参数，保留 EI 名称与 ksi 原值。
 
-
-7.4.4 2D Cantilever Beam End Deflection 2
+### 7.4.4 2D Cantilever Beam End Deflection 2
 
 Find the deflection and moments for plate-bending finite element due to a pressure load.
 
-7.4.4.1 Reference
+#### 7.4.4.1 Reference
 
 Results are calculated using simple hand calculation considering the entire structure as a cantilever beam.
 
-7.4.4.2 Problem
+#### 7.4.4.2 Problem
 
 A simple cantilever plate is divided into 12 4-noded finite elements. A uniform pressure load is applied, and the maximum deflection at the tip of the cantilever and the maximum bending at the support are calculated.
 
 Plate thickness = 25 mm
 
-Uniform pressure= 5 N/mm2
+Uniform pressure = 5 N/mm²
 
 Plate length = 6 spaces at 50 mm = 300 mm
 
@@ -4913,44 +4982,45 @@ Plate width = 2 space at 50 mm = 100 mm
 ![](SACS2024_SACS/chunk1_e1b736c6f13574f91626efa0c04f47103c4709815c5f950087512e80df3c89b3.jpg)  
 Figure 40: Finite element mesh of cantilevered plate
 
-7.4.4.3 Theoretical Solution
+#### 7.4.4.3 Theoretical Solution
 
 Maximum deflection is equal to WL3/8EI, where:
 
-$$\Delta_{\max } = \frac{5 (300) (100) (300)^{3}}{8 (210 \cdot 10^{3}) (\frac{100 \cdot 25^{3}}{12})} = \frac{4050 (10)^{9}}{218 . 75 (10)^{9}} = 18. 51 \mathrm{m m}$$
+$$\Delta_{\max } = \frac{5 (300) (100) (300)^{3}}{8 (210 \cdot 10^{3}) (\frac{100 \cdot 25^{3}}{12})} = \frac{4050 (10)^{9}}{218.75 (10)^{9}} = 18.51 \mathrm{mm}$$
 
 Maximum Moment:
 
-$$M_{\max } = \frac{W L}{2} = \frac{5 (300) (100) (300)}{2} = 22. 5 (10)^{6} \mathrm{N} \cdot \mathrm{m m}$$
+$$M_{\max } = \frac{W L}{2} = \frac{5 (300) (100) (300)}{2} = 22.5 (10)^{6} \text{N} \cdot \mathrm{mm}$$
 
-7.4.4.4 Comparison
+#### 7.4.4.4 Comparison
 
 Table 40: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.147。 -->
 | Result Type | Hand Calculation | SACS | Difference |
 | --- | --- | --- | --- |
-| δmax(mm) | 18.51 | 17.792 | 4% |
-| Mmax(kN·m) | 22.50 | 22.501 | none |
+| δ<sub>max</sub> (mm) | 18.51 | 17.792 | 4% |
+| M<sub>max</sub> (kN·m) | 22.50 | 22.501 | none |
 
 
 
-Note: The maximum moment is taken as the sum of the moments at nodes 1, 8, and 15 (i.e., 5.14 + 12.221 $+ 5 . 14 = 22 . 5 \ : k N { \cdot } m )$ .
+Note: The maximum moment is taken as the sum of the moments at nodes 1, 8, and 15 (i.e., 5.14 + 12.221 $+ 5.14 = 22.5 \ : kN { \cdot } m )$ .
 
-7.4.5 2D Curved Beam Maximum Stress
+### 7.4.5 2D Curved Beam Maximum Stress
 
 Using plate/shell elements, find maximum bending stress due to a force couple on a curved cantilever beam.
 
-7.4.5.1 Reference
+#### 7.4.5.1 Reference
 
-Timoshenko, $\mathsf{ S }_{ \cdot } ,$ Strength of Materials, Part I, 3rd Edition, Van Nostrand $\mathsf{ C o . , }$ 1956.
+Timoshenko, $S_{ \cdot } ,$ Strength of Materials, Part I, 3rd Edition, Van Nostrand $C o . ,$ 1956.
 
-7.4.5.2 Problem
+#### 7.4.5.2 Problem
 
 Find the maximum bending stress.
 
-$\mathsf{ E } = 3 , 000 . 0 \mathsf{ k s i } .$   
+$E = 3,000.0 ksi .$   
 Poisson’s ratio = 0.3.   
 t = 1.0 in.   
 P = 100 lbs
@@ -4958,12 +5028,13 @@ P = 100 lbs
 ![](SACS2024_SACS/chunk1_d961618bc4b45ae208bf47e4302017a5d11bb428ade8af42420aca98c7919770.jpg)  
 Figure 41: Cantilevered, curved plate with coupling load a free end
 
-7.4.5.3 Comparison
+#### 7.4.5.3 Comparison
 
 Table 41: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.149。 -->
 | Result Type | Theory | SACS | Difference | Comments |
 | --- | --- | --- | --- | --- |
 | Inside stress (psi) | 655.0 | 640 | 2.3% | The result from the Beam theory is compared with the result from a Finite Element Model output, hence the difference in results. |
@@ -4971,15 +5042,15 @@ Table 41: Comparison of results
 
 
 
-7.4.6 2D Circular Surface Displacements and Stresses
+### 7.4.6 2D Circular Surface Displacements and Stresses
 
 A circular plate is fixed along its perimeter. Using plate/shell elements, find the deflection at the center, maximum bending stress due to a uniformly distributed load, and a concentrated load at the center.
 
-7.4.6.1 Reference
+#### 7.4.6.1 Reference
 
 Timoshenko, S., Strength of Materials, Part II, 3rd Edition, Van Nostrand Co., 1956, pp.96-97, 103.
 
-7.4.6.2 Problem
+#### 7.4.6.2 Problem
 
 The circular plate shown below is subject to two load cases. Load 1 is a uniform pressure, w, and load 2 is a concentrated force, P, at the center. Determine:
 
@@ -4991,44 +5062,45 @@ E = 30,000.0 ksi
 
 Poisson’s ratio = 0.3 r = 40 in.
 
-$\mathsf{ t } = 1 \mathsf{ i } \mathsf{ n } . \mathsf{ w } = 6 \mathsf{ p s i } .$
+$t = 1 i n . w = 6 psi .$
 
-$\mathsf{ P } = 7 , 539 . 82 \ : | \mathsf{ b } \mathsf{ s }$
+$P = 7,539.82 \ : | b s$
 
 ![](SACS2024_SACS/chunk1_d7fb4b5a8726dc292bee34ef8b0edebfe5196e7923b73902890fcb203baee65b.jpg)  
 Figure 42: Finite element model of a circular plate
 
-7.4.6.3 Comparison
+#### 7.4.6.3 Comparison
 
 Table 42: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.150。 -->
 | Result Type | Result Type | Theory | SACS | Difference | Comments |
 | --- | --- | --- | --- | --- | --- |
-| Load Case 1 | σbend (psi) | 7,200 | 7,600 | 5.3% | The theoretical results from classical Plate theory was compared with the results from Finite Element model - hence the difference in results. |
-| Load Case 1 | δmax (in) (Y translation at Node 127) | -0.0874 | -0.0876 | negligible | The theoretical results from classical Plate theory was compared with the results from Finite Element model - hence the difference in results. |
+| Load Case 1 | σ<sub>bend</sub> (psi) | 7,200 | 7,600 | 5.3% | The theoretical results from classical Plate theory was compared with the results from Finite Element model - hence the difference in results. |
+| Load Case 1 | δ<sub>max</sub> (in) (Y translation at Node 127) | -0.0874 | -0.0876 | negligible | The theoretical results from classical Plate theory was compared with the results from Finite Element model - hence the difference in results. |
 | Load Case 1 | Moment at center (in·lb/in) | 780 | 780 | none | The theoretical results from classical Plate theory was compared with the results from Finite Element model - hence the difference in results. |
-| Load Case 2 | σbend (psi) | 3,600 | 4,000 | 11.1% | The theoretical results from classical Plate theory was compared with the results from Finite Element model - hence the difference in results. |
-| Load Case 2 | δmax (in) (Y translation at Node 127) | -0.0874 | -0.0869 | negligible | The theoretical results from classical Plate theory was compared with the results from Finite Element model - hence the difference in results. |
+| Load Case 2 | σ<sub>bend</sub> (psi) | 3,600 | 4,000 | 11.1% | The theoretical results from classical Plate theory was compared with the results from Finite Element model - hence the difference in results. |
+| Load Case 2 | δ<sub>max</sub> (in) (Y translation at Node 127) | -0.0874 | -0.0869 | negligible | The theoretical results from classical Plate theory was compared with the results from Finite Element model - hence the difference in results. |
 
 
 
-7.4.7 Twisted Beam Displacements
+### 7.4.7 Twisted Beam Displacements
 
 To find the displacements at the free end of a warped cantilever plate due to in-plane load and out of plane loads.
 
-7.4.7.1 Reference
+#### 7.4.7.1 Reference
 
 MacNeal, R.H. and Harder, R.C., A Proposed Standard Set of Problems to Test Finite Element Accuracy, Finite Element in Analysis and Design 1, 1985.
 
-7.4.7.2 Problem
+#### 7.4.7.2 Problem
 
 The finite element model is as shown below: Find the displacements at the tip in the direction of the loads. Loading is unit forces at the free end: in-plane and out-of-plane.
 
-$\mathsf{ E } = 29 , 000 . 0 \mathsf{ k s i } .$
+$E = 29,000.0 ksi .$
 
-$\mathsf{ L } = 12 . 0 \mathsf{ i n } .$
+$L = 12.0 in .$
 
 B = 1.1 in.
 
@@ -5041,12 +5113,13 @@ Poisson’s ratio = 0.22
 ![](SACS2024_SACS/chunk1_cb448ec798ef93064061f53c2ccf299079424c28e2d97a5b48145e250f526d57.jpg)  
 Figure 43: Finite element model of warped, contilever plate
 
-7.4.7.3 Comparison
+#### 7.4.7.3 Comparison
 
 Table 43: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.151。 -->
 | Result Type | Theory | SACS | Difference | Comments |
 | --- | --- | --- | --- | --- |
 | δ due to in-plane load (in) | 5.424(10)-3 | 5.321(10)-3 | 1.9% | Instead of using triangular elements, MITC curved shell elements can be used (see 7.5.5). Also, the mesh size could be reduced to get closer result in comparison the theoretical value. |
@@ -5054,15 +5127,15 @@ Table 43: Comparison of results
 
 
 
-7.4.8 Curved Roof Displacements and Stresses
+### 7.4.8 Curved Roof Displacements and Stresses
 
 A Cylindrical roof is supported along two circular edges. Using plate/shell elements, find the vertical deflection at the center of the free edge, principal stresses at the center of the support and center of the free edge (top and bottom of the roof plate) due to uniformly distributed gravity load.
 
-7.4.8.1 Reference
+#### 7.4.8.1 Reference
 
 Scordelis, A.C. and Lo, K.S., "Computer Analysis of Cylindrical Shells", Journal of the American Concrete Institute,Vol. 61, May 1964.
 
-7.4.8.2 Problem
+#### 7.4.8.2 Problem
 
 For the cylindrical roof shell calculate the following deflection and stresses due to the gravity load.
 
@@ -5070,11 +5143,11 @@ The vertical deflection, δy, at the center of the free edge.
 
 Principal stresses, σmax and σmin, at the center line section at the vertical angle (top and bottom of the roof plate element). Principal stresses, σmax and σmin, at the center section of the free edge (top and bottom of the roof plate element).
 
-$\mathsf{ E } = 4 . 32 \times ( 10 )^{ 8 } \mathsf{ p s i }$
+$E = 4.32 \times ( 10 )^{8} psi$
 
 t = 3.0 in.
 
-Poisson’s ratio = 0.0 in theory (0.1*10-4 in )
+Poisson’s ratio = 0.0 in theory ($0.1\times10^{-4}$ in )
 
 w = 90 psi (uniform on surface).
 
@@ -5087,37 +5160,38 @@ Boundary conditions: simply supported on circular edges
 ![](SACS2024_SACS/chunk1_75d1fe1d4960f7f1f813607eb04a3fa2ab981d772cd1a9daf7e2bda2602b9250.jpg)  
 Figure 44: Finite element model of cylindrical roof structure
 
-7.4.8.3 Comparison
+#### 7.4.8.3 Comparison
 
 Table 44: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.153。 -->
 | Result Type | Theory | SACS | Difference | Comments |
 | --- | --- | --- | --- | --- |
-| δz, at the center of the free edge (in) (y translation at node 431) | 0.3086 | 0.3044 | 1.4% | A finer mesh may reduce the difference between the theoretical and software output. |
+| δ<sub>z,</sub> at the center of the free edge (in) (y translation at node 431) | 0.3086 | 0.3044 | 1.4% | A finer mesh may reduce the difference between the theoretical and software output. |
 
+> PDF 原书疑点（p.152）：泊松比括号说明末尾缺词并带 in；原文缺项保留，未猜测其指代的软件或单位。
 
-
-7.4.9 Spherical Shell Displacements
+### 7.4.9 Spherical Shell Displacements
 
 To find the displacement in the direction of the load due to a unit load applied at the quadrants of a quarter of a spherical shell.
 
-7.4.9.1 Reference
+#### 7.4.9.1 Reference
 
 MacNeal, R.H. and Harder, R.C., A Proposed Standard Set of Problems to Test Finite Element Accuracy, Finite Element in Analysis and Design 1, 1985.
 
-7.4.9.2 Problem
+#### 7.4.9.2 Problem
 
 For the quarter of a spherical shell find the displacement in the direction of the load.
 
-$$E = 6. 825 (10)^{7} p s i$$
+$$E = 6.825 (10)^{7} psi$$
 
-$$\text{P o i s s o n ' s r a t i o} = 0. 3$$
+$$\text{Poisson's ratio} = 0.3$$
 
-$$t = 0. 04 \text{i n c h e s}$$
+$$t = 0.04 \text{inches}$$
 
-$$r = 10 \text{i n}.$$
+$$r = 10 \mathrm{in}.$$
 
 Unit forces on quadrants
 
@@ -5130,12 +5204,13 @@ Symmetry defines boundary conditions
 ![](SACS2024_SACS/chunk1_182b4972c37d4610b44c67f7b73e94993f2a42be842ad68808546f925bb04518.jpg)  
 Figure 45: Model
 
-7.4.9.3 Comparison
+#### 7.4.9.3 Comparison
 
 Table 45: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.154。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
 | Deflection, δ (in) at joint 1 | 0.094 | 0.0924 | 1.7% |
@@ -5143,15 +5218,15 @@ Table 45: Comparison of results
 
 
 
-7.4.10 2D Circular Plate In-Plane Stresses
+### 7.4.10 2D Circular Plate In-Plane Stresses
 
 A thick cylindrical plate supported along 2 radial edges. Find the radial displacement, radial stress, tangential stress and longitudinal stress at inner surface due to a unit pressure applied at the inner surface.
 
-7.4.10.1 Reference
+#### 7.4.10.1 Reference
 
 MacNeal, R.H. and Harder, R.C., A Proposed Standard Set of Problems to Test Finite Element Accuracy, Finite Element in Analysis and Design 1, 1985.
 
-7.4.10.2 Problem
+#### 7.4.10.2 Problem
 
 Loading is 1 ksi pressure at inner radius
 
@@ -5166,98 +5241,103 @@ Outer radius = 9.0 in
 ![](SACS2024_SACS/chunk1_7c0324aaa495702944e238a5fba357df75dec6db118f5cad17a533427e4fa9f6.jpg)  
 Figure 46: Semi-circular plate finite element model
 
-7.4.10.3 Comparison
+#### 7.4.10.3 Comparison
 
 Table 46: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.156。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
-| Radial deflection (10-3in) | 4.582 | 4.657a | <1% |
-| Radial stress (ksi) | -1.00 | -0.90b | 10.0% |
-| Tangential stress (ksi) | 1.25 | 1.27b | 1.6% |
+| Radial deflection (10⁻³ in) | 4.582 | 4.657<sup>a</sup> | &lt;1% |
+| Radial stress (ksi) | -1.00 | -0.90<sup>b</sup> | 10.0% |
+| Tangential stress (ksi) | 1.25 | 1.27<sup>b</sup> | 1.6% |
 
 
 
 a. Radial displacements are measured along FY at node 102 and FX at node 101.   
 b. At node 102, SX is tangential stress, SY is radial stress.
 
-7.4.11 2D Rectangular Plate with fixed edges
+### 7.4.11 2D Rectangular Plate with fixed edges
 
 To find the vertical deflection and bending moments at several points due to a unit pressure on a thin rectangular plate simply supported along 4 edges.
 
-7.4.11.1 Reference
+#### 7.4.11.1 Reference
 
 Timoshenko, S. and Woinowsky-Kreiger, S., Theory of Plates and Shells, McGraw-Hill, 2nd Edition, 1959, Pages 113-117.
 
-7.4.11.2 Problem
+#### 7.4.11.2 Problem
 
 Loading is unit pressure (1 psi) over entire surface.
 
-$$\begin{array}{l} E = 1 \times (10)^{6} p s i \\ \text{P o i s s o n} = 0. 3 \\ \text{L e n g t h} = 16 \text{i n}. \\ \text{W i d t h} = 10 \text{i n}. \\ \text{T h i c k n e s s} = 0. 2 \text{i n} \\ \end{array}$$
+$$\begin{array}{l} E = 1 \times (10)^{6} psi \\ \text{Poisson} = 0.3 \\ \text{Length} = 16 \mathrm{in}. \\ \text{Width} = 10 \mathrm{in}. \\ \text{Thickness} = 0.2 \mathrm{in} \\ \end{array}$$
 
 ![](SACS2024_SACS/chunk1_19271474eb6e93281897c849806eb79fc6d6c774dc9cc62171438658db88af51.jpg)  
 Figure 47: Model
 
-7.4.11.3 Comparison
+#### 7.4.11.3 Comparison
 
 Table 47: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.157。 -->
 | Result Type | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- | --- |
 | Vertical deflection, δ (in) at joint | 89 | 0.036 | 0.0360 | none |
-| Vertical deflection, δ (in) at joint | 93 | 0.113 | 0.1138 | <1.0% |
-| Vertical deflection, δ (in) at joint | 170 | 0.025 | 0.0252 | <1.0% |
+| Vertical deflection, δ (in) at joint | 93 | 0.113 | 0.1138 | &lt;1.0% |
+| Vertical deflection, δ (in) at joint | 170 | 0.025 | 0.0252 | &lt;1.0% |
 | Bending moment, Mx (in·lb) in plate | A081 | 1.763 | 1.720 | 2.5% |
-| Bending moment, Mx (in·lb) in plate | A085 | 8.513 | 8.468 | <1% |
+| Bending moment, Mx (in·lb) in plate | A085 | 8.513 | 8.468 | &lt;1% |
 | Bending moment, Mx (in·lb) in plate | A155 | 1.098 | 1.080 | 1.7% |
 | Bending moment, My (in·lb) in plate | A081 | 0.897 | 0.879 | 2.0% |
-| Bending moment, My (in·lb) in plate | A085 | 4.873 | 4.832 | <1% |
+| Bending moment, My (in·lb) in plate | A085 | 4.873 | 4.832 | &lt;1% |
 | Bending moment, My (in·lb) in plate | A155 | 1.108 | 1.066 | 3.9% |
 
 
 
-7.4.12 2D Tapered Beam In-Plane Stress
+### 7.4.12 2D Tapered Beam In-Plane Stress
 
 To find element stress due to joint load at the fixed end of a tapered plate with one end fixed.
 
-7.4.12.1 Reference
+#### 7.4.12.1 Reference
 
 Crandall, S.H., & Dahl, N.C., An Introduction to the Mechanics of Solids, McGraw – Hill, Inc., 1959.
 
-7.4.12.2 Problem
+#### 7.4.12.2 Problem
 
-$$\begin{array}{l} E = 30, 000. 0 \mathrm{k s i} \\ \text{T h i c k n e s s} = 0. 2 \text{i n} \\ \text{P o i s s o n} = 0. 2 \\ P = 4 k i p s \\ \end{array}$$
+The tapered plate structure is loaded at the free end. Calculate the maximum stress at the midspan.
+
+$$\begin{array}{l} E = 30,000.0 \mathrm{ksi} \\ \text{Thickness} = 0.2 \mathrm{in} \\ \text{Poisson} = 0.2 \\ P = 4 kips \\ \end{array}$$
 
 ![](SACS2024_SACS/chunk1_5064fd0f9bed9529323713b8c9e7fee7ecdd16c7a7b394e69dfbfac7c1b95e66.jpg)  
 Figure 48: Model
 
-7.4.12.3 Comparison
+#### 7.4.12.3 Comparison
 
-The SACS result is taken as average of stress in elements 9 and 11 at node $16 = 0 . 5 ( 80 . 85 + 85 . 21 ) =$ 83.03.
+The SACS result is taken as average of stress in elements 9 and 11 at node $16 = 0.5 ( 80.85 + 85.21 ) =$ 83.03.
 
 Table 48: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.158。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
-| Maximum stress at the center (ksi) | 83.33 | 83.03 | <1% |
+| Maximum stress at the center (ksi) | 83.33 | 83.03 | &lt;1% |
 
 
 
-7.4.13 2D Surface with Hole Edge Stress
+### 7.4.13 2D Surface with Hole Edge Stress
 
 To find the normal stress on the edge of a circular hole in the center of a rectangular plate.
 
-7.4.13.1 Reference
+#### 7.4.13.1 Reference
 
 Young, W. C., Roark’s Formulas for Stress and Strain, McGraw-Hill Inc., 6th Edition, 1989 (Page 732, Type 7).
 
-7.4.13.2 Problem
+#### 7.4.13.2 Problem
 
 Find the normal stress on the edge of the circular hole for the plate shown, when an in-plane load causes tension. Use a one-quarter, doubly symmetric model.
 
@@ -5279,27 +5359,28 @@ P = 2,000 lbs
 ![](SACS2024_SACS/chunk1_29d1567d97f3cc20844c77ca4d9a7e5540c5ae9990c4b51f71e32cc206ef27a7.jpg)  
 Figure 50: Model with nodes and elements labeled
 
-7.4.13.3 Comparison
+#### 7.4.13.3 Comparison
 
 Table 49: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.160。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
 | Stress on fillet (node 1, plate 1) (psi) | 9.475 | 9.380 | 1% |
 
 
 
-7.4.14 2D Circular Surface Edge Stress
+### 7.4.14 2D Circular Surface Edge Stress
 
 The objective of this example is to find the displacement at center, and bending stress at the center and at the perimeter of a circular plate fixed at its periphery.
 
-7.4.14.1 Reference
+#### 7.4.14.1 Reference
 
 Young, W. C., Roark’s Formulas for Stress and Strain, McGraw-Hill Inc., 6th Edition, 1989, Page 429.
 
-7.4.14.2 Problem
+#### 7.4.14.2 Problem
 
 Find the normal stress on the edge of the circular hole for the plate shown, when an in-plane load causes tension. Use a one-quarter, doubly symmetric model.
 
@@ -5314,40 +5395,41 @@ w = 0.1 psi
 ![](SACS2024_SACS/chunk2_4b8a01f8cd8851ed41f2d8052b2375dff8bf87dbfc16746079ea80305fffc85a.jpg)  
 Figure 51: Model
 
-7.4.14.3 Comparison
+#### 7.4.14.3 Comparison
 
 Table 50: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.162。 -->
 | Result Type | Theory | SACS | Difference | Comments |
 | --- | --- | --- | --- | --- |
-| δ at node 1 (in) | 2.133 | 2.134 | <1% |  |
+| δ at node 1 (in) | 2.133 | 2.134 | &lt;1% |  |
 
 
 
-7.4.15 Thermal Load on a Plate
+### 7.4.15 Thermal Load on a Plate
 
 Find deflections and moments due to thermal loading and compare theoretical answers to the SACS solution.
 
-7.4.15.1 Reference
+#### 7.4.15.1 Reference
 
 Timoshenko, S., and Woinowsky-Krieger, S., Theory of Plates and Shells, Second Edition, McGraw-Hill, 1959, pages 162 - 165.
 
-7.4.15.2 Problem
+#### 7.4.15.2 Problem
 
-A rectangular plate is simply supported on all four sides. The transverse and longitudinal bending moments aswell as the deflections at several points on the plate are computed.
+A rectangular plate is simply supported on all four sides. The transverse and longitudinal bending moments as well as the deflections at several points on the plate are computed.
 
 ![](SACS2024_SACS/chunk2_ec94801b22b3e8a0455c9ffd8f3ef93ac7a73d381a1f8c83d2f7a7adec97707b.jpg)  
 Figure 52: Rectangular plate model
 
-The plate is modeled using 1 in. X 1 in. size elements. At the corner nodes, all the degrees of freedom areconsidered restrained. For the nodes along the four edges, rotation is permitted about that edge.
+The plate is modeled using 1 in. X 1 in. size elements. At the corner nodes, all the degrees of freedom are considered restrained. For the nodes along the four edges, rotation is permitted about that edge.
 
-7.4.15.3 Theoretical Solution
+#### 7.4.15.3 Theoretical Solution
 
 From the Reference, equation (j), the expression for deflection normal to the plate surface is:
 
-$$w = - \frac{a t (1 + v) 4 a^{2}}{\pi^{3} h} \sum_{m = 1, 3, 5 \dots}^{\infty} \frac{\sin \frac{m \pi x}{a}}{m^{3}} \left(1 - \frac{\cosh \frac{m \pi y}{a}}{\cosh a_{m}}\right)$$
+$$w=-\frac{\alpha t(1+\nu)4a^2}{\pi^3h}\sum_{m=1,3,5,\ldots}^{\infty}\frac{\sin\frac{m\pi x}{a}}{m^3}\left(1-\frac{\cosh\frac{m\pi y}{a}}{\cosh a_m}\right)$$
 
 Where
 
@@ -5355,50 +5437,52 @@ $$a_{m} \quad = \quad \frac{m \pi b}{2 a}$$
 
 From the Reference, equation (k), the expressions for bending moment per unit width are
 
-$$\begin{array}{l} M_{x} = \frac{4 D a t (1 - v^{2})}{\pi h} \sum_{m = 1, 3, 5 \dots}^{\infty} \frac{\sin \frac{m \pi x}{a} \cosh \frac{m \pi y}{a}}{m \cdot \cosh a_{m}} \\ M_{y} = \frac{a t (1 - v^{2}) D}{h} - \frac{4 D a t (1 - v^{2})}{\pi h} \sum_{m = 1, 3, 5 \dots}^{\infty} \frac{\sin \frac{m \pi x}{a} \cosh \frac{m \pi y}{a}}{m \cdot \cosh a_{m}} \\ \end{array}$$
+$$\begin{aligned}M_x&=\frac{4D\alpha t(1-\nu^2)}{\pi h}\sum_{m=1,3,5,\ldots}^{\infty}\frac{\sin\frac{m\pi x}{a}\cosh\frac{m\pi y}{a}}{m\cosh a_m}\\M_y&=\frac{\alpha t(1-\nu^2)D}{h}-\frac{4D\alpha t(1-\nu^2)}{\pi h}\sum_{m=1,3,5,\ldots}^{\infty}\frac{\sin\frac{m\pi x}{a}\cosh\frac{m\pi y}{a}}{m\cosh a_m}\end{aligned}$$
 
 Where
 
-α Coefficient of Thermal Expansion
+$\alpha$ = Coefficient of Thermal Expansion
 
-t 三 Difference between the temperatures of the upper and lower surfaces of the plate
+$t$ = Difference between the temperatures of the upper and lower surfaces of the plate
 
-二 Poisson's ratio
+$\nu$ = Poisson's ratio
 
-h Plate thickness
+$h$ = Plate thickness
 
-Dimension of the plate along the x1 axis
+$a$ = Dimension of the plate along the $x_1$ axis
 
-b Dimension of the plate along the x2 axis
+$b$ = Dimension of the plate along the $x_2$ axis
 
-E Elastic Modulus
+$E$ = Elastic Modulus
 
-D = $E h^{ 3 } / / 12 ( 1 - \nu^{ 2 } )$
+$D=Eh^3/[12(1-\nu^2)]$
 
 The numerical values used for this example are:
 
-$$a = 12. 0 E - 06 /^{\circ} F$$
+$$\alpha=12.0\times10^{-6}/{}^{\circ}\mathrm F$$
 
 $$t = 450^{\circ} F$$
 
-$$v = 0. 3$$
+$$v = 0.3$$
 
-$$h = 0. 3 \text{i n}.$$
+$$h = 0.3 \mathrm{in}.$$
 
-$$a = 12 \text{i n}.$$
+$$a = 12 \mathrm{in}.$$
 
-$$b = 16 \text{i n}.$$
+$$b = 16 \mathrm{in}.$$
 
-$$E = 10. 0 E 6 p s i$$
+$$E = 10.0 E 6 psi$$
 
-7.4.15.4 Comparison
+#### 7.4.15.4 Comparison
 
 Table 51: Comparison of results   
 
 
 
-| Node Number | X | Y | Theoretical Deflection | SACS Deflection |
+<!-- 校订来源：PDF p.164。 -->
+| Node Number | X | Y | Theoretical | SACS Deflection |
 | --- | --- | --- | --- | --- |
+|  |  |  | Deflection |  |
 | 12 | 6 | -8 | 0.00 | 0.00 |
 | 13 | 6 | -7 | 0.0897 | 0.0895 |
 | 32 | 6 | -6 | 0.1597 | 0.1593 |
@@ -5416,8 +5500,10 @@ Table 52: Comparison of results
 
 
 
-| Node Number | X | Y | Theoretical Deflection | SACS Deflection |
+<!-- 校订来源：PDF p.164,165。 -->
+| Node Number | X | Y | Theoretical | SACS Deflection |
 | --- | --- | --- | --- | --- |
+|  |  |  | Deflection |  |
 | 117 | 0 | 1 | 0 | 0 |
 | 118 | 1 | 1 | 0.1004 | 0.1002 |
 | 119 | 2 | 1 | 0.1794 | 0.1790 |
@@ -5438,9 +5524,10 @@ Table 53: Comparison of results
 
 
 
+<!-- 校订来源：PDF p.165。 -->
 | Element Number | X | Y | Theoretical Moment (Pound-in/in) | Theoretical Moment (Pound-in/in) | SACS Moment (Pound-in/in) | SACS Moment (Pound-in/in) |
 | --- | --- | --- | --- | --- | --- | --- |
-| Element Number | X | Y | Mx | My | Mx | My |
+|  |  |  | Mx | My | Mx | My |
 | 97 | 0.5 | 0.5 | 16.74 | 388.26 | 17.21 | 388.52 |
 | 98 | 1.5 | 0.5 | 48.93 | 356.07 | 50.26 | 356.68 |
 | 99 | 2.5 | 0.5 | 77.45 | 327.55 | 79.43 | 328.76 |
@@ -5460,9 +5547,10 @@ Table 54: Comparison of results
 
 
 
+<!-- 校订来源：PDF p.166。 -->
 | Element Number | X | Y | Theoretical Moment (Pound-in/in) | Theoretical Moment (Pound-in/in) | SACS Moment (Pound-in/in) | SACS Moment (Pound-in/in) |
 | --- | --- | --- | --- | --- | --- | --- |
-| Element Number | X | Y | Mx | My | Mx | My |
+|  |  |  | Mx | My | Mx | My |
 | 6 | 5.5 | -7.5 | 373.88 | 31.12 | 373.55 | 32.86 |
 | 18 | 5.5 | -6.5 | 311.64 | 93.36 | 313.02 | 95.80 |
 | 30 | 5.5 | -5.5 | 256.83 | 148.17 | 258.89 | 151.33 |
@@ -5484,23 +5572,24 @@ Table 54: Comparison of results
 
 We present all the following verification tests with non-dimensional parameters so that the results are independent of unit system choice.
 
-7.5.1 Patch Test
+### 7.5.1 Patch Test
 
-7.5.1.1 Reference
+#### 7.5.1.1 Reference
 
 Bucalem, M.L. and Bathe, K.J., 1993. Higher‐order MITC general shell elements. International Journal for Numerical Methods in Engineering, 36(21), pp.3729-3754.
 
 Lee, P.S. and Bathe, K.J., 2004. Development of MITC isotropic triangular shell finite elements. Computers & Structures, 82(11-12), pp.945-962.
 
-7.5.1.2 Problem
+#### 7.5.1.2 Problem
 
-A square plate simply supported at one side is placed under constant tension. We verify the convergence of stresses to a constant stress state $\sigma_{ y } = p / t$ .
+A square plate simply supported at one side is placed under constant tension. We verify the convergence of stresses to a constant stress state $\sigma_{y} = p / t$ .
 
 Table 55: Material properties and loading condition for patch tests   
 
 
 
-| Elastic Modulus (E) | Poisson's Ratio (ν) | Shell Thicknesses (t) | Load Magnitude (P) |
+<!-- 校订来源：PDF p.167。 -->
+| Elastic Modulus (E) | Poisson’s Ratio (ν) | Shell Thicknesses (t) | Load Magnitude (P) |
 | --- | --- | --- | --- |
 | 1 | 0.3 | 1 | 1000 |
 
@@ -5509,17 +5598,19 @@ Table 55: Material properties and loading condition for patch tests
 ![](SACS2024_SACS/chunk2_80f45ef0fc8e8103c6998c3d4a8d969755fe161715362b12b282dbb1673675bc.jpg)  
 Figure 53: Quadrilateral mesh patch test (left) Triangular mesh patch test (right)
 
-7.5.1.3 Comparison
+#### 7.5.1.3 Comparison
 
-The following tables compare the theoretical value of $\sigma_{ y } = 1000$ to obtained values at elements’ centers.
+The following tables compare the theoretical value of $\sigma_{y} = 1000$ to obtained values at elements’ centers.
 
 Table 56: Comparison of results for nine-node quadrilateral mesh patch test.   
 
 
 
-| Position | Position | Stress Value σyy | % Error |
+<!-- 校订来源：PDF p.167。 -->
+| Position | Position | Stress Value | % Error |
 | --- | --- | --- | --- |
-| x | y | Stress Value σyy | % Error |
+| x | y | σ_yy |  |
+| x | y |  |  |
 | 10.0 | 6.25 | 1006.1 | 0.61 |
 | 6.5 | 9.75 | 1000.9 | 0.09 |
 | 10.5 | 9.75 | 998.5 | 0.15 |
@@ -5532,9 +5623,11 @@ Table 57: Comparison of results for eight-node quadrilateral mesh patch test.
 
 
 
-| Position | Position | Stress Value σyy | % Error |
+<!-- 校订来源：PDF p.168。 -->
+| Position | Position | Stress Value | % Error |
 | --- | --- | --- | --- |
-| x | y | Stress Value σyy | % Error |
+| x | y | σ_yy |  |
+| x | y |  |  |
 | 10 | 6.25 | 1005.5 | 0.45 |
 | 6.5 | 9.75 | 1000.1 | 0.01 |
 | 10.5 | 9.75 | 998.5 | 0.15 |
@@ -5547,9 +5640,11 @@ Table 58: Comparison of results for the triangular mesh patch test
 
 
 
-| Position | Position | Stress Value σyy | % Error |
+<!-- 校订来源：PDF p.168。 -->
+| Position | Position | Stress Value | % Error |
 | --- | --- | --- | --- |
-| x | y | Stress Value σyy | % Error |
+| x | y | σ_yy |  |
+| x | y |  |  |
 | 9 | 5.667 | 1000.01 | 0.001 |
 | 11.667 | 6.667 | 1000.01 | 0.001 |
 | 5.666 | 9 | 1000.01 | 0.001 |
@@ -5561,23 +5656,24 @@ Table 58: Comparison of results for the triangular mesh patch test
 | 12.333 | 13 | 1000.01 | 0.001 |
 | 9.667 | 14 | 1000.01 | 0.001 |
 
+> PDF 原书疑点（p.168）：八节点 patch test 第一行应力为 1005.5，误差栏却为 0.45%；原表两值保留。
 
+### 7.5.2 Cook’s Membrane
 
-7.5.2 Cook’s Membrane
-
-7.5.2.1 Reference
+#### 7.5.2.1 Reference
 
 Cook, Robert D. "Improved two-dimensional finite element." Journal of the Structural Division 100.9 (1974): 1851-1863.
 
-7.5.2.2 Problem
+#### 7.5.2.2 Problem
 
-A slanted plane-stress cantilever beam schematically shown in figure 54 is modeled. The problem is known to create shear locking and tests in-plane bending and shear convergence. The vertical displacement at the upper right corner of the beam is compared to the reference value of $u_{ y } =$ 23.9642.
+A slanted plane-stress cantilever beam schematically shown in figure 54 is modeled. The problem is known to create shear locking and tests in-plane bending and shear convergence. The vertical displacement at the upper right corner of the beam is compared to the reference value of $u_{y} =$ 23.9642.
 
 Table 59: Material properties and loading condition for Cook’s membrane   
 
 
 
-| Elastic Modulus (E) | Poisson's Ratio (ν) | Shell Thicknesses (t) | Load Magnitude (P) |
+<!-- 校订来源：PDF p.169。 -->
+| Elastic Modulus (E) | Poisson’s Ratio (ν) | Shell Thicknesses (t) | Load Magnitude (P) |
 | --- | --- | --- | --- |
 | 1 | 0.3 | 1 | 1 |
 
@@ -5586,97 +5682,100 @@ Table 59: Material properties and loading condition for Cook’s membrane
 ![](SACS2024_SACS/chunk2_9cfa414f2403855b866e240b393e934d3c48bfd58c1292ab565063ceb190de48.jpg)  
 Figure 54: Geometry of the Cook’s membrane problem
 
-7.5.2.3 Comparison
+#### 7.5.2.3 Comparison
 
 The beam is discretized with an equal number of elements along all edges. Figure 55, shows the results’ convergence for 6 node and 9 node MITC shell elements. As expected, Quad9 elements show better convergence compared to the Tri6 elements.
 
 ![](SACS2024_SACS/chunk2_01fe64e11c3f806c9d3a5cd8b7ba3a2c66b05de59f27ea85fcc3f1e5fb732814.jpg)  
 Figure 55: Convergence of the results for the Cook’s membrane problem
 
-7.5.3 Hemispherical Shell
+### 7.5.3 Hemispherical Shell
 
-7.5.3.1 Reference
+#### 7.5.3.1 Reference
 
 Ko, Yeongbin, et al. "Performance of the MITC3+ and MITC4+ shell elements in widely-used benchmark problems." Computers & Structures 193 (2017): 187-206.
 
-7.5.3.2 Problem
+#### 7.5.3.2 Problem
 
-A hemispherical shell of radius 10, with ${ \boldsymbol{ 10^{ \circ } } }$ opening, is simultaneously pushed, and pulled on 2 pairs of perpendicular points on its equator. As highlighted in figure 56, only one quadrant of the shell is modeled due to the problem’s symmetries. For verification, we compare the radial displacement at tensile load location to reference value $u_{ r } = 0 . 93$ .
+A hemispherical shell of radius 10, with ${ \boldsymbol{ 10^{ \circ } } }$ opening, is simultaneously pushed, and pulled on 2 pairs of perpendicular points on its equator. As highlighted in figure 56, only one quadrant of the shell is modeled due to the problem’s symmetries. For verification, we compare the radial displacement at tensile load location to reference value $u_{r} = 0.93$ .
 
 Table 60: Material properties and loading condition for hemispherical shell problem   
 
 
 
-| Elastic Modulus (E) | Poisson's Ratio (ν) | Shell Thicknesses (t) | Load Magnitude (P) |
+<!-- 校订来源：PDF p.170。 -->
+| Elastic Modulus (E) | Poisson’s Ratio (ν) | Shell Thicknesses (t) | Load Magnitude (P) |
 | --- | --- | --- | --- |
-| 6.825 × 107 | 0.3 | 0.04 | 2 |
+| $6.825\times10^7$ | 0.3 | 0.04 | 2 |
 
 
 
 ![](SACS2024_SACS/chunk2_8754aeabce7ac01f71804f9f3befabd551ab5529a76f09363805bf6bae00e406.jpg)  
 Figure 56: Geometry of the hemispherical shell problem
 
-7.5.3.3 Comparison
+#### 7.5.3.3 Comparison
 
 The spherical shell is discretized with an equal number of elements along the azimuthal and circumferential edges. Figure 57 shows the results’ convergence for 6 node and 9 node MITC shell elements. As expected, Quad9 elements show better convergence compared to the Tri6 elements.
 
 ![](SACS2024_SACS/chunk2_e9ab48c697feb9ac659666429fb393fc712a9f31a251b96c793a4083d6cac777.jpg)  
 Figure 57: Convergence of the results for the hemispherical shell problem
 
-7.5.4 Pinched Cylinder
+### 7.5.4 Pinched Cylinder
 
-7.5.4.1 Reference
+#### 7.5.4.1 Reference
 
 Ko, Yeongbin, et al. "Performance of the MITC3+ and MITC4+ shell elements in widely-used benchmark problems." Computers & Structures 193 (2017): 187-206.
 
-7.5.4.2 Problem
+#### 7.5.4.2 Problem
 
-The problem consists of a pair of loads that compress a cylindrical shell of radius 300 and length 600 on its midplane. Cylinder’s ends are fixed using a rigid diaphragm. Due to the symmetries of the problem, we only model one quadrant of the cylinder, as highlighted in figure 58. For verification, we compare the radial displacement at the load application point to the reference value of $u_{ r } = 0 . 018248$ .
+The problem consists of a pair of loads that compress a cylindrical shell of radius 300 and length 600 on its midplane. Cylinder’s ends are fixed using a rigid diaphragm. Due to the symmetries of the problem, we only model one quadrant of the cylinder, as highlighted in figure 58. For verification, we compare the radial displacement at the load application point to the reference value of $u_{r} = 0.018248$ .
 
 Table 61: Material properties and loading condition for pinched cylinder problem   
 
 
 
-| Elastic Modulus (E) | Poisson's Ratio (ν) | Shell Thicknesses (t) | Load Magnitude (P) |
+<!-- 校订来源：PDF p.172。 -->
+| Elastic Modulus (E) | Poisson’s Ratio (ν) | Shell Thicknesses (t) | Load Magnitude (P) |
 | --- | --- | --- | --- |
-| 3 × 103 | 0.3 | 3 | 1 |
+| $3\times10^3$ | 0.3 | 3 | 1 |
 
 
 
 ![](SACS2024_SACS/chunk2_169621bb44e3a53eb14dc1652f8d69d7d086b1b681c053f277ad2201d0811c07.jpg)  
 Figure 58: Geometry of the pinched cylinder problem
 
-7.5.4.3 Comparison
+#### 7.5.4.3 Comparison
 
 The cylindrical quadrant is mesh using an equal number of elements along the axial and circumferential edges. Figure 59 shows the results’ convergence for 6 node and 9 node MITC shell elements. Similar to previous verification problems, Quad9 elements show better convergence compared to the Tri6 elements. Both shell types show a small softening at finer meshes which are also observed in the reference simulations.
 
 ![](SACS2024_SACS/chunk2_a7abfa0af5ae6d905c7c5b66a93bc3c9932ed0f76b2d6a7b96acd356517b28b6.jpg)  
 Figure 59: Convergence of the results for the pinched cylinder problem
 
-7.5.5 Twisted Beam
+### 7.5.5 Twisted Beam
 
-7.5.5.1 Reference
+#### 7.5.5.1 Reference
 
 Ko, Yeongbin, et al. "Performance of the MITC3+ and MITC4+ shell elements in widely-used benchmark problems." Computers & Structures 193 (2017): 187-206.
 
-7.5.5.2 Problem
+#### 7.5.5.2 Problem
 
-A thin twisted cantilever beam, shown in figure 60, is placed under lateral $p_{ l }$ and bending $p_{ b }$ loads. We compare the midpoint deflection of the free edge of the beam in the direction of each load to reference values: $u_{ l } = 5 . 424$ and $w_{ b } = 1 . 754$ for lateral and bending loading conditions, respectively.
+A thin twisted cantilever beam, shown in figure 60, is placed under lateral $p_{l}$ and bending $p_{b}$ loads. We compare the midpoint deflection of the free edge of the beam in the direction of each load to reference values: $u_{l} = 5.424$ and $w_{b} = 1.754$ for lateral and bending loading conditions, respectively.
 
 Table 62: Material properties and loading condition for pinched cylinder problem   
 
 
 
-| Elastic Modulus (E) | Poisson's Ratio (ν) | Shell Thicknesses (t) | Load Magnitude (pl, pb) |
+<!-- 校订来源：PDF p.173。 -->
+| Elastic Modulus (E) | Poisson’s Ratio (ν) | Shell Thicknesses (t) | Load Magnitude (p , p ) l b |
 | --- | --- | --- | --- |
-| 29 × 106 | 0.22 | 0.32 | 1 |
+| $29\times10^6$ | 0.22 | 0.32 | 1 |
 
 
 
 ![](SACS2024_SACS/chunk2_afd5b50d5cd1a96f2fa931fed07c4fefb85b342291ca9a1b56952a0d9c1f4d70.jpg)  
 Figure 60: Geometry of the twisted beam problem
 
-7.5.5.3 Comparison
+#### 7.5.5.3 Comparison
 
 The beam is meshed with equidistant joints along the width and length of the beam. As shown in figure 61, both elements show fast convergence to the correct results. The triangular shells, however, show a softening under bending similar to the results of the Pinched Cylinder problem. This verification test also highlights the enhanced convergence of shell elements compared to the flat plate elements (see 7.4.7.3). Due to the beam’s curvature, the lateral stiffness of the beam is overestimated when using the flat plate elements.
 
@@ -5685,49 +5784,53 @@ Figure 59: Convergence of the results for the twisted beam problem
 
 ## 7.6 Solids
 
-7.6.1 Cantilever Beam End Displacement 1
+> PDF 原书疑点（p.173-174）：本例为 twisted beam，但 Table 62 标题仍写 pinched cylinder；正文引用 Figure 61，末图标题却写 Figure 59。保留原编号与标题。
+
+### 7.6.1 Cantilever Beam End Displacement 1
 
 To find the displacement at the free end of a cantilever beam modeled with solid elements.
 
-7.6.1.1 Reference
+#### 7.6.1.1 Reference
 
 Hand calculation.
 
-7.6.1.2 Problem
+#### 7.6.1.2 Problem
 
 Calculate the maximum displacement of a cantilever beam due to a concentrated load at the free end
 
-![](SACS2024_SACS/chunk2_abec745e856e05881b58dcd3ed21656c49dd9d9fa57e795dbdb1fd1d24ad9d5c.jpg)
+![](SACS2024_SACS/chunk2_abec745e856e05881b58dcd3ed21656c49dd9d9fa57e795dbdb1fd1d24ad9d5c.jpg)  
+Figure 53: Entire model
 
 ![](SACS2024_SACS/chunk2_6b1bf214cc1228c986e1517656e5a7add2fff3f1a132c3e20c0acfb1d8c5a2db.jpg)  
 Figure 54: Free end section with node numbers
 
-$$L = 10 \text{i n}$$
+$$L = 10 \mathrm{in}$$
 
-$$A = 2 \mathrm{i n}^{2}$$
+$$A = 2 \mathrm{in}^{2}$$
 
-$$P = 300 \mathrm{l b}$$
+$$P = 300 \mathrm{lb}$$
 
-$$1 = 2 / 3 \text{i n}.^{4}$$
+$$I=\frac23\,\mathrm{in}^4$$
 
-$$E = 29, 000 \mathrm{k s i}$$
+$$E = 29,000 \mathrm{ksi}$$
 
-$$v = 0. 3$$
+$$v = 0.3$$
 
-7.6.1.3 Hand Calculation
+#### 7.6.1.3 Hand Calculation
 
-$$\delta_{\text{b e n d}} = \mathrm{P L}^{3} / (3 \mathrm{E I}) = 300 (10)^{3} / \{3 [ 29 (10)^{6} ] (2 / 3) \} = 0. 00517 \text{i n}$$
+$$\delta_{\text{bend}} = PL^{3} / (3 EI) = 300 (10)^{3} / \{3 [ 29 (10)^{6} ] (2 / 3) \} = 0.00517 \mathrm{in}$$
 
-$$\delta_{\text{s h e a r}} = 12 / 5^{*} (1 + v) P L / A E = 12 / 5^{*} (1 + 0. 3) (300) (10) / [ 29 (10)^{6} (2) ] = 0. 00016 \text{i n}$$
+$$\delta_{\mathrm{shear}}=\frac{12}{5}(1+v)\frac{PL}{AE}=\frac{\frac{12}{5}(1+0.3)(300)(10)}{29(10)^6(2)}=0.00016\,\mathrm{in}$$
 
-$$\delta = \delta_{\text{b e n d}} + \delta_{\text{s h e a r}} = 0. 00517 + 0. 00016 = 0. 00533 \text{i n}$$
+$$\delta = \delta_{\text{bend}} + \delta_{\text{shear}} = 0.00517 + 0.00016 = 0.00533 \mathrm{in}$$
 
-7.6.1.4 Comparison
+#### 7.6.1.4 Comparison
 
 Table 55: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.176,177。 -->
 | Result Type | Theory | SACS | Difference |
 | --- | --- | --- | --- |
 | Deflection, δ, (in) (3DOF) | 0.00533 | 0.0042 | 27% |
@@ -5737,50 +5840,53 @@ Table 55: Comparison of results
 
 Note: There is a significant error in the 3DOF solution due to the large mesh size of the solid elements. The 6DOF solution accounts for the larger mesh size using rotational degrees of freedom which results in almost no error. A finer mesh would be required with the 3DOF solution to reduce the error.
 
-7.6.2 Cantilever Beam End Displacement 2
+> PDF 原书疑点（p.175-178）：本节图表编号重新使用 53-56，与前面 MITC 壳例题重复；本次保持原书编号，靠章节号区分。
+
+### 7.6.2 Cantilever Beam End Displacement 2
 
 To find the displacement at the free end and normal stresses at mid-span of a cantilever beam modeled with solid elements.
 
-7.6.2.1 Hand Calculation
+#### 7.6.2.1 Hand Calculation
 
 Displacement due to Load 1:
 
-$$\delta_{L L} = \frac{P L}{A E} = \frac{1 , 200 (15)}{10 \times (10)^{6 (6)}} = 0. 0003 \mathrm{i n}$$
+$$\delta_{LL}=\frac{PL}{AE}=\frac{1{,}200(15)}{10\times(10)^6(6)}=0.0003\,\mathrm{in}$$
 
 Rotate due to Load 2:
 
-$$\varphi_{L 2} = \mathrm{T L} / (\mathrm{c}_{2} \mathrm{a b}^{3} \mathrm{G})$$
+$$\varphi_{L2} = TL / (c_2 ab^3 G)$$
 
 where
 
-$$\begin{array}{r c l} a & = & \text{l o n g s i d e o f t h e c r o s s s e c t i o n = 3 i n} \\ b & = & \text{s h o r t s i d e o f t h e c r o s s s e c t i o n = 2 i n} \\ c 2 & = & 0. 1958 \text{f o r} a / b = 1. 5 \\ G & = & E / [ 2 (1 + v) ] = 10 (10)^{3} / (2 (1 + 0. 3) ] = 3, 846 k s i \\ \varphi_{\mathrm{L} 2} & = & 2000 (15) / [ 0. 1958 (3) (2)^{3} 3. 846 (10)^{6} ] = 0. 00166 \mathrm{r a d} \end{array}$$
+$$\begin{aligned}a&=\text{long side of the cross section}=3\,\mathrm{in}\\b&=\text{short side of the cross section}=2\,\mathrm{in}\\c_2&=0.1958\quad\text{for }a/b=1.5\\G&=E/[2(1+v)]=10(10)^3/(2(1+0.3)]=3{,}846\,\mathrm{ksi}\\\varphi_{L2}&=2000(15)/[0.1958(3)(2)^3\,3.846(10)^6]=0.00166\,\mathrm{rad}\end{aligned}$$
 
 Displacement due to Load 3:
 
-$$\delta_{\mathrm{L} 3} = \mathrm{M L}^{2} / (2 \mathrm{E I}) = 2500 (15)^{2} / [ 2 (10) (10)^{7} (4. 5) ] = 0. 00625 \mathrm{i n}$$
+$$\delta_{\text{L} 3} = ML^{2} / (2 EI) = 2500 (15)^{2} / [ 2 (10) (10)^{7} (4.5) ] = 0.00625 \mathrm{in}$$
 
 Displacement due to Load 4:
 
-$$\begin{array}{l} \delta_{\text{b e n d}} = \mathrm{P L}^{3} / (3 \mathrm{E I}) = 1000 (15)^{3} / \{3 [ 10 (10)^{6} ] (4. 5) \} = 0. 025 \text{i n} \\ \delta_{\text{s h e a r}} = 12 / 5^{*} (1 + v) \mathrm{P L} / \mathrm{A E} = 12 / 5^{*} (1 + 0. 3) (1000) (15) / [ (6) 10 (10)^{6} ] = 0. 00078 \text{i n} \\ \delta_{\mathrm{L} 4} = \delta_{\text{b e n d}} + \delta_{\text{s h e a r}} = 0. 025 + 0. 00078 = 0. 02578 \text{i n} \end{array}$$
+$$\begin{aligned}\delta_{\mathrm{bend}}&=PL^3/(3EI)=1000(15)^3/\{3[10(10)^6](4.5)\}=0.025\,\mathrm{in}\\\delta_{\mathrm{shear}}&=\frac{12}{5}(1+v)PL/AE=\frac{12}{5}(1+0.3)(1000)(15)/[(6)10(10)^6]=0.00078\,\mathrm{in}\\\delta_{L4}&=\delta_{\mathrm{bend}}+\delta_{\mathrm{shear}}=0.025+0.000078=0.02578\,\mathrm{in}\end{aligned}$$
 
 Stress at midspan due to Load 1:
 
-$$\sigma_{a} = P / A = 1200 / 6 = 200 \mathrm{p s i}$$
+$$\sigma_{a} = P / A = 1200 / 6 = 200 \mathrm{psi}$$
 
 Stress at midspan due to Load 3:
 
-$$\sigma_{b} = \mathrm{M y} / \mathrm{I} = 2500 (1. 5) / 4. 5 = 833. 33 \mathrm{p s i}$$
+$$\sigma_{b} = My / I = 2500 (1.5) / 4.5 = 833.33 \mathrm{psi}$$
 
 Stress at midspan due to Load 4:
 
-$$\sigma_{b} = \text{M y} / \mathrm{I} = 7. 5 (1000) (1. 5) / 4. 5 = 2, 500 \text{p s i}$$
+$$\sigma_{b} = My / I = 7.5 (1000) (1.5) / 4.5 = 2,500 \mathrm{psi}$$
 
-7.6.2.2 Comparison
+#### 7.6.2.2 Comparison
 
 Table 56: Comparison of results   
 
 
 
+<!-- 校订来源：PDF p.178。 -->
 | Result Type | Result Type | Theory | SACS | Difference | Comments |
 | --- | --- | --- | --- | --- | --- |
 | Maximum Displacement, δ (in) | LC1 | 0.00030 | 0.000317 | 13.6% | The theoretical results from classical beam theory was compared with the results from the model with solid elements - hence the difference in results. |
@@ -5794,6 +5900,9 @@ Table 56: Comparison of results
 
 
 Note: (*) Stresses computed at Node no. 0259 of solid no. A145.
+
+> PDF 原书疑点（p.177-178）：LC3 代入式的 $10(10)^7$ 与 E=10(10)^6 和结果 0.00625 不一致；LC4 合计行写 0.000078，而剪切行写 0.00078；转角表写 SACS=0.000176、差异 5.7%，与 Theory=0.00166 不相符，LC1 13.6% 也与两列数值不符。原书值保留，未按误差百分比反推并覆盖。
+
 
 # 8 INPUT LINES
 

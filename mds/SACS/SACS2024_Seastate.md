@@ -331,9 +331,11 @@ The following designates +Z vertical coordinate, English units, mudline elevatio
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 | +Z |  | -100. | 100.GLOBEN |  |  |  |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+LDOPT         +Z                   -100.    100.GLOBEN
+```
 
 
 
@@ -371,9 +373,11 @@ The following designates that the model file and operating data are not to be in
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 | +Z |  | -100. | 100.GLOBEN |  | NPNP |  |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+LDOPT         +Z                   -100.    100.GLOBEN                NPNP
+```
 
 
 
@@ -397,11 +401,12 @@ Loading information may be used from the Seastate input file, the model file or 
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 |
-| 1 | LDOPT | +Z |  | -100. | 100.GLOBEN |  |  |  |
-| 2 | FILE S |  |  |  |  |  |  |  |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+LDOPT         +Z                   -100.    100.GLOBEN
+FILE S
+```
 
 
 
@@ -423,8 +428,11 @@ Leave function blank if the load cases listed are to be used for standard ‘ST�
 
 For example, the following lines designate that load cases ‘GRAV’, ‘ST01’ and ‘ST02’ are to be used for standard analyses, while load cases ‘BOAT’ and ‘MISC’ are to be converted to mass when running Dynpac.
 
-```txt
-1 2 3 4 5 6 7 8 1234567890123456789012345678901234567890123456789012345678901234567890 1 LCSEL ST GRAV ST01 ST02 2 LCSEL DY 0.5MISC BOAT 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+LCSEL ST        GRAV ST01 ST02
+LCSEL DY     0.5MISC BOAT
 ```
 
 Note: The LCSEL line must appear prior to the FILE line. Also, more than one LCSEL line may be used. If no LCSEL line is specified, all load cases are used for standard analysis.
@@ -441,8 +449,12 @@ Leave function blank if the load cases listed are to be used for standard ‘ST�
 
 For example, the following lines designate that load cases ‘BOAT’ and ‘MISC’ are to be factored by 0.5 when converted to mass for Dynpac.
 
-```txt
-1 2 3 4 5 6 7 8 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+LCSEL DY        MISC BOAT
+LCFAC DY     0.5MISC BOAT
+FILE B
 ```
 
 Note: The LCFAC line must appear prior to the FILE line. Also, more than one LCFAC line may be used. When load case factors are specified, the load case is factored before being applied to any load combinations.
@@ -463,10 +475,11 @@ Enter the load combination name in columns 7-10. For each load case component of
 
 The following defines combination ‘S180’ consisting of 110% of load case ‘DEAD’ and 100% of load case ‘MISC’ and 100% of ‘W180’:
 
-```txt
-1 2 3 4 5 6 7 8 123456789012345678901234567890123456789012345678901234567890  
-1 LCOMB
-2 LCOMB S180 DEAD 1.1MISC 1.0W180 1.0 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+LCOMB
+LCOMB S180 DEAD   1.1MISC   1.0W180   1.0
 ```
 
 Note: When using a separate input file for Seastate data, only load combinations defined in the Seastate input file are used. Any combinations specified in the model file are ignored.
@@ -517,10 +530,11 @@ The cross section area used to calculate weight and buoyancy of the material may
 
 The following designates that the cross section area of member 101-102 and group PL1 is 0.001.
 
-```txt
-1 2 3 4 5 6 7 8 1234567890123456789012345678901234567890123456789012345678901234567890  
-1 GRPOV PL1 0.001  
-2 MEMOV 101 102 0.001 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+GRPOV          PL1   0.001
+MEMOV   101 102      0.001
 ```
 
 2.3.1.4 Dimensions for Force
@@ -529,8 +543,12 @@ By default the actual member dimension is used when generating force. The diamet
 
 The following override sets the dimension for force to 0.001 for member 101-102 and group PL1 so that they receive no environmental loading.
 
-```txt
-1 2 3 4 5 6 7 8 1234567890123456789012345678901234567890123456789012345678901234567890 1 GRPOV PL1 0.001 0.001 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+GRPOV          PL1                       0.001 0.001
+MEMOV   101 102    F                     0.001
+0.001
 ```
 
 Note: Because member dimension overrides are used only when generating loading and are not passed to SACS IV or other programs, the structural properties of the element(s) are unaffected.
@@ -539,7 +557,7 @@ Note: Because member dimension overrides are used only when generating loading a
 
 The normal and tangential coefficients of drag and/or mass used to calculate force in the member local Y and Z directions may be overridden in columns 53-76. The coefficient specified is applied to the member/group regardless of whether it is clean or fouled.
 
-Note: When $C_{ d }$ and/or $C_{ m }$ overrides are specified on the MEMOV and/or GRPOV input line, the values of $C_{ d } a n d / o r C_{ m }$ are set to the specified values regardless of the values determined by the program. On the other hand, the values calculated by Seastate can be factored by the value specified by selecting the factored option in column 77 on the MEMOV and/or GRPOV input line.
+Note: When $C_{ d }$ and/or $C_{ m }$ overrides are specified on the MEMOV and/or GRPOV input line, the values of $C_d$ and/or $C_m$ are set to the specified values regardless of the values determined by the program. On the other hand, the values calculated by Seastate can be factored by the value specified by selecting the factored option in column 77 on the MEMOV and/or GRPOV input line.
 
 2.3.2 Overriding Plate Element Properties
 
@@ -561,11 +579,12 @@ The following designates that the effective thickness for plate group TTT is 0.7
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 |
-| 1 | PGROV |  |  |  |  |  |  |  |
-| 2 | PGROV | TTT | 0.75 |  |  |  |  |  |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+PGROV
+PGROV   TTT    0.75
+```
 
 
 
@@ -574,7 +593,7 @@ The following designates that the effective thickness for plate group TTT is 0.7
 Wind areas or wind blocks are defined to account for the wind loading on unmodeled items such as derricks, buildings, mechanical equipment, flare booms, etc. A wind area is designated by a two character name and consists of one or more surfaces defined using AREA input lines.
 
 ![](SACS2024_Seastate/chunk0_a4adba9c523d8e1047f5280e58442479b354b0311cb7c30dbe595f53b26c6da7.jpg)  
-THE_SIGN ASSOCIATED_WITH_THE AREAPROJECTIONSISTHATOF THECORRESPONDING COMPONENTSOF OUTWARDDIRE TOTHESURFAC FIGURETHEXF NEGATIVE,WHIL PROJECTIONSAI   
+THE SIGN ASSOCIATED WITH THE AREA PROJECTIONS IS THAT OF THE CORRESPONDING COMPONENTS OF THE OUTWARD DIRECTED NORMAL TO THE SURFACE. IN THE FIGURE THE X PROJECTION IS NEGATIVE, WHILE THE Y AND Z PROJECTIONS ARE POSITIVE.   
 Figure 1. Area Local Coordinate System
 
 A wind surface is defined using the AREA input line. The wind area name is specified in columns 5-6. The surface shape may be designated as flat or round by specifying ‘F’ or ‘R’ in column 79, respectively. The orientation of the surface is specified either by entering the projections of it on planes normal to the global axis or by specifying the area along with the azimuth and elevation angles in columns 7-24. When specifying azimuth and elevation angles for a flat surface, the area option in column 79 is ‘A’. It is recommended that if an object has projected areas in two or three planes that two separate wind areas be defined rather than specifying two projections. Two or three wind areas may be specified on the same AREA line by specifying ‘B’ in column 79.
@@ -587,12 +606,13 @@ For example, the wind block for a building has a projection of 10.0 in X directi
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 |
-| 1 | AREA |  |  |  |  |  |  |  |
-| 2 | AREABX 10.0 |  | 34.0 | 10.0 | 25.0 | 1.0 | 625 | 626 |
-| 3 | AREABY | 25.0 | 34.0 | 10.0 | 25.0 | 1.0 | 625 | 626 |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+AREA
+AREABX  10.0               34.0   10.0   25.0  1.0 625 626 635 676            F
+AREABY        25.0         34.0   10.0   25.0  1.0 625 626 635 676            F
+```
 
 
 
@@ -604,16 +624,17 @@ specified, the program assumes that these joints are connected to a rigid body t
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 |
-| 1 | AREA |  |  |  |  |  |  |  |
-| 2 | AREABX | 10.0 |  | 34.0 | 10.0 | 25.0 | 1.0 | 625 626 635 676 640 642 643F |
-| 3 | AREABX |  |  |  |  |  | 627 628 641 633 634 621 622D | 627 628 641 633 634 621 622D |
-| 4 | AREABX |  |  |  |  |  | 623 631 632 650 | D |
-| 5 | AREABY | 10.0 | 20.0 | 4.0 | 1.00 | 2.00 | 1.0 | 627 628 641 633 634 621 622D |
-| 6 | AREABZ |  | 15.03.0 |  | 1.00 | 2.00 | 1.0 | 625 626 635 676 640 642 643R |
-| 7 | AREABZ |  |  |  |  |  | 623 631 650 | D |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+AREA
+AREABX  10.0               34.0   10.0   25.0  1.0 625 626 635 676 640 642 643F
+AREABX                                             627 628 641 633 634 621 622D
+AREABX                                             623 631 632 650            D
+AREABY  10.0  20.0   4.0   1.00   2.00  12.00  1.0 627 628 641 633 634 621 622D
+AREABZ        15.03.0      1.00   2.00  12.00  1.0 625 626 635 676 640 642 643R
+AREABZ                                             623 631 650                D
+```
 
 
 
@@ -627,10 +648,11 @@ For example, members between the cellar deck, elevation +40, and the main deck, 
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 1234567890 |
-| 1 | WINSHL | 40.0 | 58.0 |  |  |  |  |  |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+WINSHL        40.0    58.0
+```
 
 
 
@@ -653,10 +675,12 @@ The following illustrates a submerged volume named ‘Q1’ represented by volum
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 | AREA |  |  |  |  |  |  |
-| 2 | AREAQ1 16.5 28.3 28.4 -8.1 7.3 -12.0 213 220 | AREAQ1 16.5 28.3 28.4 -8.1 7.3 -12.0 213 220 | AREAQ1 16.5 28.3 28.4 -8.1 7.3 -12.0 213 220 | AREAQ1 16.5 28.3 28.4 -8.1 7.3 -12.0 213 220 | AREAQ1 16.5 28.3 28.4 -8.1 7.3 -12.0 213 220 | AREAQ1 16.5 28.3 28.4 -8.1 7.3 -12.0 213 220 | AREAQ1 16.5 28.3 28.4 -8.1 7.3 -12.0 213 220 | AREAQ1 16.5 28.3 28.4 -8.1 7.3 -12.0 213 220 |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+AREA
+AREAQ1  16.5  28.3  28.4   -8.1    7.3  -12.0      213 220
+```
 
 
 
@@ -680,11 +704,12 @@ Up to 100 separate dummy structures may be designated.
 
 The following defines a dummy structure named ‘BOATLAND’. The boundary joints or structural joints to which the dummy structure is attached are 803, 807, 903 and 907. The delete joints or the joint on the dummy structure are 1803, 1807, 1903 and 1907.
 
-```txt
-1 2 3 4 5 6 7 8 123456789012345678901234567890123456789012345678901234567890  
-1 DUMMY BOATLANDDUMMY STRUCTURE DATA OPERATING  
-2 KEEP 803 903 807 907  
-3 DELETE 1803 1903 1807 1907
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+DUMMY BOATLANDDUMMY STRUCTURE DATA OPERATING
+KEEP    803  903  807  907
+DELETE 1803 1903 1807 1907
 ```
 
 2.7.2 Appurtenance Structures
@@ -695,12 +720,11 @@ The members of the appurtenance structure are removed from the model by specifyi
 
 As an example, a riser is modeled next to a jacket leg but is not connected to the leg. Each joint of the riser element (1101, 1201, 1301 and 1401) corresponds to a point at which the riser will be clamped to the leg. The riser member loads are distributed to its end joints and the riser members are deleted by using the DELGRP input line and specifying group ‘RS1’. The riser joints are deleted and the riser joint loads are transferred to members of the primary structure as designated on the DELJNT input line.
 
-```txt
-1 2 3 4 5 6 7 8 123456789012345678901234567890123456789012345678901234567890 
-```
-
-```txt
-1 DELGRP RS1 2 DELJNT 1101 101 201 1201 201 301 1301 301 401 1401 401 501
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+DELGRP  RS1
+DELJNT  1101  101  201  1201  201  301  1301  301  401  1401  401  501
 ```
 
 Note: Appurtenance structures may be used for static analysis only.
@@ -721,8 +745,13 @@ Each report desired is labeled using the REPLBL input line by specifying a uniqu
 
 The following requests a loading report for members 101-102 and 102-103 along with members in group LG1. The report name is ‘LEG A1’.
 
-```txt
-1 2 3 4 5 6 7 8 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+REPORT
+REPLBL LEG     A1
+REPGRP  LG1
+REPMEM   101  102   102  103
 ```
 
 Note: A member or member property group may be included in a report and may not be including in other reports.
@@ -743,8 +772,12 @@ The structural weight specified on the ‘WTSTR’ line is most typically used t
 
 In the following example, inertial weight is specified as weight group 1. A contingency factor of 1.10 is supplied to weight group 1 in the definition of weight group 2 via the ‘WTCMB’ line. Weight group 2 is to be included in subsequent dynamic analysis via the ‘DYNMAS’ line.
 
-```txt
-1 2 3 4 5 6 7 8 1 12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567891 1 1.10 2 WTCMB 2 1 1.10 3 DYNMAS 2 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+WTSTR 1
+WTCMB 2    1     1.10
+DYNMAS  2
 ```
 
 Note: For offshore structures the ‘WTSTR’ line is not recommended for use within weight group(s) and/or weight combination(s) to calculate dead loads. Instead, specifying the ‘DEAD’ load line within load conditions will cause buoyancy effects to be properly considered.
@@ -755,8 +788,10 @@ The vertical location of a weight within a structure may be specified with an �
 
 The following example specifies two elevation identifiers, E1 and E2, with vertical coordinates of 55.0 and 105.0, respectively.
 
-```txt
-1 2 3 4 5 6 7 8 1 23456789012345678901234567890123456789012345678901234567890 1 ELEV E1 55.0 E2 105.0 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+ELEV    E1      55.0  E2     105.0
 ```
 
 2.9.1.3 Surface Weight
@@ -771,8 +806,12 @@ The ‘SURFWT’ line which follows the surface definition(s) defines the loadin
 
 In the following example, surface ‘SCRANE2’ is defined with its X axis from joint 2 positive to joint 3, its Y axis positive from joint 2 toward joint 4, and the Z axis determined by the right-hand rule. All members within 0.5 feet (the default) distance from the surface XY plane within the surface boundary will have loads transmitted to them. The surface boundary goes from joint 2 to joint 3 to joint 5 to joint 4 back to joint 2. The weight group 2 has a pressure of 250 defined with the weight ID ‘LIFTWT1’. All weight application factors are 1.0, their default values, and the weight is applied only within surface ‘SCRANE2’.
 
-```txt
-1 2 3 4 5 6 7 8 1 23456789012345678901234567890123456789012345678901234567890 1 SURFID SCRANE2 LX 2 3 4 2 SURFDR 2 3 5 4 3 SURFWT2 250.00LIFTWT1 SCRANE2 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+SURFID SCRANE2 LX    2    3    4
+SURFDR    2    3    5    4
+SURFWT2    250.00LIFTWT1                    SCRANE2
 ```
 
 2.9.1.4 Structural Weight Footprint
@@ -785,18 +824,23 @@ coordinates by entering ‘G’ in column 48; it may be entered in coordinates r
 
 In the ‘WGTFP2’ line, additional data is given to describe the weight footprint. Weight application factors in the three principal directions may be specified in columns 11-22. If not specified, the default value for each factor is 1.0. The vertical tolerance for selecting applicable members to support the weight is given in columns 23-26. Specifying a value of 1.0 means that all members which cross the skid beams will have load applied provided the endpoints of the members lie within plus or minus 1.0 unit in the vertical direction. The ‘WGTFP2’ line provides for input of rotary inertia data for the weight in the form of radii of gyration around three axes. The axes are either the global axes (‘G’) or local axes (‘L’) input in column 27. Local coordinates are defined with X parallel to the length of the skid, Y parallel to the width of the skid, and Z vertical. The radii of gyration themselves are input in columns 28-42. For the purposes of buoyancy calculations, a weight density may be supplied. The final input is the angle the skid length direction makes with respect to the global X axis. This is supplied in columns 49-54.
 
-In the following example, a skid of weight 120 with name SKID1 is added to weight group 2. The global coordinates of the skid are X=20, Y=10, and Z=0 with the elevation from elevation ID ‘E1’ added to the vertical coordinate. The skid mass is located at a position of Y=2 and Z=5 relative to the position of the skid. The skid length and width is 24. There are 3 skid beams along the length axis of the skid. Structural loading will be multiplied by 1 when computing skid loading (the default). The vertical tolerance for outof-plane members is 0.5. The radii of gyration in the global X, Y, and Z directions are 10, 3, and 11, respectively. No density is supplied for buoyancy calculations, and the orientation of the length axis is 90 degrees from the global X axis.
+In the following example, a skid of weight 120 with name SKID1 is added to weight group 2. The global coordinates of the skid are X=20, Y=10, and Z=0 with the elevation from elevation ID ‘E1’ added to the vertical coordinate. The skid mass is located at a position of Y=2 and Z=5 relative to the position of the skid. The skid length and width is 24. There are 3 skid beams along the length axis of the skid. Structural loading will be multiplied by 1 when computing skid loading (the default). The vertical tolerance for out-of-plane members is 0.5. The radii of gyration in the global X, Y, and Z directions are 10, 3, and 11, respectively. No density is supplied for buoyancy calculations, and the orientation of the length axis is 90 degrees from the global X axis.
 
-```txt
-1 2 3 4 5 6 7 8 123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678910 E1 20. 10. 0.0R 0.0 2. 5. 24. 24. 30 0.5G 10. 3. 11. 90. 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+WGTFP 2    120.00SKID1     E1   20.   10.   0.0R   0.0    2.    5.  24.  24. 3 0
+WGTFP2                 0.5G  10.   3.  11.         90.
 ```
 
 In specific design instances there may be smaller diagonal or cross-tie members which lie within a weight footprint. Without further entry, these members would have the footprint weight distributed to them in a design analysis. The ‘EXCGRP’ line is used to prevent this from occurring. For a particular footprint weight group identified in columns 7-10, the specified member groups are excluded from weight loading. Up to 17 member groups are specified in columns 12-78 of the ‘EXCGRP’ line.
 
 In the following example, footprint weight group ‘FP1’ is specified to not include member groups ‘XBM’ and ‘DIA’ when the footprint loading is distributed.
 
-```txt
-1 2 3 4 5 6 7 8 1 234567890123456789012345678901234567890123456789012345678901234567890 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+EXCGRPFP1  XBM DIA
 ```
 
 2.9.1.5 Joint Weight
@@ -807,8 +851,10 @@ weight density may be supplied in columns 30-36. The global axis radii of gyrati
 
 In the following example, a weight of 160 with name OUTRIG which is applied to joint 1 is added to weight group 3. The weight has no density supplied and its radii of gyration are 10.2 about the X axis, 10.2 about the Y axis, and 3.1 about the Z axis. Load application factors in the X and Y directions are 1.0 (the default value), whereas the load application factor in the Z direction is 0.5.
 
-```txt
-1 2 3 4 5 6 7 8 1 23456789012345678901234567890123456789012345678901234567890 1 WGTJT 3 160.000OUTRIG 1 10.2 10.2 3.1 0.5 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+WGTJT 3    160.00OUTRIG     1         10.2  10.2   3.1            0.5
 ```
 
 2.9.1.6 Member Weight
@@ -821,11 +867,12 @@ In the following example, a concentrated weight named ‘BOAT’ of 90 is applie
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 | 2 | 3 | 2.3 | 90. |  | GLOBCONC | BOAT |
-| 1 | WGTMEM3 | 4 | 5 | 1.2 | 10. |  | GLOBUNIF | TIEDOWN |
-| 2 | WGTMEM3 |  |  |  |  |  |  |  |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+WGTMEM3      2   3    2.3    90.                          GLOBCONC          BOAT
+WGTMEM3      4   5    1.2    10.                          GLOBUNIF       TIEDOWN
+```
 
 
 
@@ -839,13 +886,14 @@ Alternatively, one may enter the absolute global position of the weight (‘A’
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 1234567890 |
-| 1 | WGTNS | COMP | 100.100K | A | 5.0 | 30.0 | 16 | 14 |
-| 2 | WGTNS |  |  | A |  | 9 | 4 | 7 |
-| 3 | WGTNS |  |  | A |  | 1 | 18 | 19 |
-| 4 | WGTNS |  |  | A |  | 25 | 26 | 27 |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+WGTNS COMP   100.100K        A         5.0  30.0  16  14  17  15  13  12  11  10
+WGTNS                        A                     9   4   7   8   6   5   3   2
+WGTNS                        A                     1  18  19  20  21  22  23  24
+WGTNS                        A                    25  26  27
+```
 
 
 
@@ -857,11 +905,12 @@ In the following example, a non-structural weight 70 with name RISER1 is added t
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 |
-| 1 | WGTNS 4 | 70.00RISER1 | E2R | 2.0 | 3.0 | 4 | 5 | 6 |
-| 2 | WGTNS2 |  | L | 8.2 | 2.1 | 8.2 |  |  |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+WGTNS 4     70.00RISER1    E2R   2.0         3.0   4   5   6   7
+WGTNS2                       L  8.2  2.1  8.2
+```
 
 
 
@@ -871,8 +920,10 @@ Weight groups may be combined via the ‘WTCMB’ line. The ‘WTCMB’ line all
 
 In the following example, weight group 8 is defined as a combination of 1.05 of weight group 3, 1.10 of weight group 4, and 0.80 of weight group 5.
 
-```txt
-1 2 3 4 5 6 7 8 1 234567890123456789012345678901234567890123456789012345678901234567890 1 WTCMB 8 3 1.054 1.105 0.80 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+WTCMB 8    3     1.054     1.105     0.80
 ```
 
 2.9.1.9 Dynamic Mass Selection
@@ -881,8 +932,10 @@ Weight groups may be included in dynamic analysis in Dynpac via the ‘DYNMAS’
 
 In the following example, weight groups 1, 3 and 4 will be used in dynamic analysis with unity added mass (the default).
 
-```txt
-1 2 3 4 5 6 7 8 123456789012345678901234567890123456789012345678901234567890 1 DYNMAS 1 3 4 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+DYNMAS  1   3   4
 ```
 
 Note: All weight groups specified on the ‘DYNMAS’ line must be defined via ‘WTSTR’, ‘SURFWT’, ‘WGTFP’, ‘WGTJT’, ‘WGTMEM’, ‘WGTNS’ or ‘WTCMB’ lines.
@@ -895,13 +948,13 @@ The structural loading defined to this point is general in that it may be applie
 
 The inclusion of weight group identifiers in individual load cases is accomplished with the ‘INCWGT’ line. Up to 18 weight group identifiers are supplied in columns 9-80 of the ‘INCWGT’ line. In the following example, weight groups 9, 10 and 11 are applied to dead weight in load condition 2.
 
-```txt
-1 2 3 4 5 6 7 8  
-1234567890123456789012345678901234567890123456789012345678901234567890  
-1LOADCN 2
-2INCWGT 9 10 11  
-# 3DEAD
-# 4DEAD -Z M
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+LOADCN   2
+INCWGT  9   10  11
+DEAD
+DEAD      -Z                                M
 ```
 
 Note: The ‘INCWGT’ line will only produce loading if the load condition in which it lies also has ‘DEAD’ loading, has ‘ACCEL’ loading, has ‘MOTION’ loading, or has ‘INCRAO’ loading. If none of these loadings is
@@ -914,8 +967,10 @@ The center of inertia loading is specified with the ‘CENTER’ line. The ‘CE
 
 The following example specifies a center of inertia loading (roll center) located at X=10.5, Y=9.6 and Z=0.0. The roll center is named ‘C1 ’.
 
-```txt
-1 2 3 4 5 6 7 8 1 2345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+CENTER    C1-10.500  9.600  0.000
 ```
 
 Note: The center identifier in columns 9-12 is space sensitive; center ‘C1 ’ is not the same as center ‘ C1’.
@@ -930,8 +985,12 @@ Translational acceleration (surge, sway, heave) is specified in columns 53-73. E
 
 In the following example, load condition 1 has weight groups 1, 2 and 3 applied with structural motion of 2.5 degrees pitch with period 22 seconds. Gravity will be included when computing the loading due to the acceleration, but the structural weight will not be added to the weight supplied in the weight groups. The structural pitch motion will be centered about the center ‘CEN1’.
 
-```txt
-1 2 3 4 5 6 7 8 1 1 23456789012345678901234567890123456789012345678901234567890 1 LOADCN 1 2 3 2.5 22. GN CEN1 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+LOADCN     1
+INCWGT  1   2   3
+MOTION                      2.5    22.                                   GN CEN1
 ```
 
 2.9.2.4 Response Amplitude Operators
@@ -946,18 +1005,19 @@ In the following example, an RAO is specified with the identifier ‘TIDE’. Th
 
 
 
-|  | 1 | 1 | 2 | 2 | 3 | 3 | 4 | 4 | 5 | 5 | 6 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 |
-| 1 | RAO | HEAD | 45. | 4. | XZ | 10. | 10. | 10. | 10. | 0.0TIDE | 0.0TIDE | 0.0TIDE | 0.0TIDE | 0.0TIDE |
-| 2 | RAO | DF | 0.06 | 0.93 | 47.5 | 0.91 | 19.0 | 0.92 | 0.2 | 0.31 | 87.6 | 0.26267.9 | 0.46189.5 |  |
-| 3 | RAO | DF | 0.07 | 0.81 | 47.1 | 0.80 | 18.9 | 0.89 | 0.3 | 0.40 | 87.8 | 0.29267.6 | 0.46185.2 |  |
-| 4 | RAO | DF | 0.08 | 0.69 | 46.2 | 0.70 | 19.2 | 0.83 | 0.5 | 0.61 | 90.2 | 0.34266.9 | 0.48179.0 |  |
-| 5 | RAO | DF | 0.09 | 0.62 | 45.5 | 0.66 | 20.8 | 0.79 | 0.5 | 0.86 | 96.0 | 0.37266.3 | 0.50173.7 |  |
-| 6 | RAO | DF | 0.10 | 0.55 | 44.2 | 0.62 | 31.4 | 0.72 | 0.1 | 1.50102.1 | 0.40265.1 | 0.59167.2 |  |  |
-| 7 | RAO | DF | 0.12 | 0.36 | 37.3 | 0.25 | 16.1 | 0.44354.6 | 0.33164.7 | 0.43258.5 | 0.51169.9 |  |  |  |
-| 8 | RAO | DF | 0.16 | 0.09 | 6.6 | 0.05 | 52.6 | 0.17268.5 | 0.13 | 87.0 | 0.22225.8 | 0.33131.2 |  |  |
-| 9 | RAO | DF | 0.20 | 0.00 | 8.7 | 0.01271.2 | 0.01 | 64.0 | 0.02152.8 | 0.03352.2 | 0.06231.8 |  |  |  |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+RAO HEAD    45.     4. XZ          10.      10.      0.0TIDE
+RAO DF  0.06  0.93 47.5  0.91 19.0  0.92  0.2  0.31 87.6  0.26267.9  0.46189.5
+RAO DF  0.07  0.81 47.1  0.80 18.9  0.89  0.3  0.40 87.8  0.29267.6  0.46185.2
+RAO DF  0.08  0.69 46.2  0.70 19.2  0.83  0.5  0.61 90.2  0.34266.9  0.48179.0
+RAO DF  0.09  0.62 45.5  0.66 20.8  0.79  0.5  0.86 96.0  0.37266.3  0.50173.7
+RAO DF  0.10  0.55 44.2  0.62 31.4  0.72  0.1  1.50102.1  0.40265.1  0.59167.2
+RAO DF  0.12  0.36 37.3  0.25 16.1  0.44354.6  0.33164.7  0.43258.5  0.51169.9
+RAO DF  0.16  0.09  6.6  0.05 52.6  0.17268.5  0.13 87.0  0.22225.8  0.33131.2
+RAO DF  0.20  0.00  8.7  0.01271.2  0.01 64.0  0.02152.8  0.03352.2  0.06231.8
+```
 
 
 
@@ -965,15 +1025,13 @@ The ‘INCRAO’ line includes RAO information in load conditions. The velocity 
 
 In the following example, a previously defined RAO is included in load condition 4. The velocity for the RAO is 3.5 (knots if the units are English, meters per second if the units are metric). Structural weight is not to be included in the RAO loading, meaning that weight groups must be included to generate loads. The weight groups specified on the ‘INCWGT’ line are weight groups 1, 3 and 6. The ‘WAVE’ line specifies a Stokes’ fifth order wave of crest-to-trough height of 28. The wave period is 12.8 seconds and the wave angle is 67.5 degrees. If an RAO is not specified for this wave angle, existing RAOs will be interpolated or extrapolated to obtain the values.
 
-```txt
-1 2 3 4 5 6 7 8 123456789012345678901234567890123456789012345678901234567890 
-```
-
-```txt
-# 1 LOADCN 4
-# 2 INCRAO 3.5
-3 INCWGT 1 3 6   
-4 WAVE STOK 28.0 12.80 67.50 D 18MM 0 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+LOADCN   4
+INCRAO     3.5
+INCWGT  1   3   6
+WAVE    STOK  28.0       12.80         67.50      D               18MM     0
 ```
 
 2.9.2.5 Space Forces and Moments
@@ -982,8 +1040,11 @@ The ‘SFRC’ and ‘SMOM’ lines allow forces or moments at a point in space 
 
 In the following example, a space moment of 8.2 about the X axis, 5.1 about the Y axis, and -6.3 about the Z axis is specified for load condition 6. The origin of this moment lies at X=5, Y=0, and Z=-2 with respect to joint 2. The moment will be distributed to joints 2, 3, 4, 11, 12 and 13. The load identifier is ‘CMOM’.
 
-```javascript
-1 2 3 4 5 6 7 8 1 23456789012345678901234567890123456789012345678901234567890 1 6 2 3 4 11 12 13 CMOM 2 SMOM 8.2 5.1 -6.3R 5.0 -2.0 2 3 4 11 12 13 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+LOADCN   6
+SMOM    8.2    5.1   -6.3R   5.0        -2.0   2   3   4  11  12  13        CMOM
 ```
 
 Note: Do not convert space moments to mass. This will yield unrealistic values or directions.
@@ -1002,31 +1063,32 @@ Members in member groups BM1 and BT2 will have the moving loads applied to them.
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 |
-| 1 | LOADCN1 |  |  |  |  |  |  |  |
-| 2 | LOAD Z 10 |  | -10.000 |  |  | GLOB JOIN MOVLD1 |  |  |
-| 3 | LOADCN2 |  |  |  |  |  |  |  |
-| 4 | LOAD Z 11 |  | -7.5000 |  |  | GLOB JOIN MOVLD2 |  |  |
-| 5 | LOADCN3 |  |  |  |  |  |  |  |
-| 6 | LOAD Z 12 |  | -30.000 |  |  | GLOB JOIN MOVLD3 |  |  |
-| 7 | LOADCN4 |  |  |  |  |  |  |  |
-| 8 | LOAD Z 13 |  | -60.000 |  |  | GLOB JOIN MOVLD4 |  |  |
-| 9 | LOADCN5 |  |  |  |  |  |  |  |
-| 10 | MOVLOTD TOPSIDE | 1 2 3 4 |  |  |  |  |  |  |
-| 11 | MOVGRP TOPSIDE | BM1 BT2 |  |  |  |  |  |  |
-| 12 | MOVSTP TOPSIDE | 12 6.25 |  | 1.0 0.0 0.0 |  |  |  |  |
-| 13 | MOVGRP TOPSIDE | BM1 BT2 |  |  |  |  |  |  |
-| 14 | MOVSTP TOPSIDE | 12 6.25 |  | 0.0 1.0 0.0 |  |  |  |  |
-| 15 | MOVGRP TOPSIDE | BM1 BT2 |  |  |  |  |  |  |
-| 16 | MOVSTP TOPSIDE | 12 6.25 |  | -1.0 0.0 0.0 |  |  |  |  |
-| 17 | MOVGRP TOPSIDE | BM1 BT2 |  |  |  |  |  |  |
-| 18 | MOVSTP TOPSIDE | 12 6.25 |  | 0.0 -1.0 0.0 |  |  |  |  |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+LOADCN1
+LOAD Z   10                   -10.000                       GLOB JOIN   MOVLD1
+LOADCN2
+LOAD Z   11                   -7.5000                       GLOB JOIN   MOVLD2
+LOADCN3
+LOAD Z   12                   -30.000                       GLOB JOIN   MOVLD3
+LOADCN4
+LOAD Z   13                   -60.000                       GLOB JOIN   MOVLD4
+LOADCN5
+MOVLOD TOPSIDE     1   2   3   4
+MOVGRP TOPSIDE   BM1 BT2
+MOVSTP TOPSIDE   12    6.25            1.0  0.0  0.0
+MOVGRP TOPSIDE   BM1 BT2
+MOVSTP TOPSIDE   12    6.25            0.0  1.0  0.0
+MOVGRP TOPSIDE   BM1 BT2
+MOVSTP TOPSIDE   12    6.25           -1.0  0.0  0.0
+MOVGRP TOPSIDE   BM1 BT2
+MOVSTP TOPSIDE   12    6.25            0.0 -1.0  0.0
+```
 
 
 
-## 2.10FLOOR LOADS
+## 2.10 FLOOR LOADS
 
 Floor loads enable automatic member load generation from defined enclosed zones and zone pressure loads. Seastate takes a set of boundary joints and a vertical tolerance, identifies members which fall within this volume, constructs a set of panels from these members, and then calculates tributary areas using yield-line theory. Zone load pressures are then applied to these zones and converted to member loads.
 
@@ -1072,11 +1134,11 @@ Members may be excluded from panel generation with the ZONIM and ZONIG lines. An
 
 Note: If multiple members form the edge of a panel, Seastate will use strictest constraint for that edge. Ignore is stricter than Virtual, which is in turn stricter than the default behavior.
 
-## 2.10.1.5.1Ignored Members
+## 2.10.1.5.1 Ignored Members
 
 Lists of ignored members are defined on ZONIM lines. The Zone Label identifies the zone and associates the zone options and definitions with each other. Up to 6 members may be defined on each ignored member line. Multiple ZONIM lines with the same Zone Label may be defined to increase the number of ignored members.
 
-## 2.10.1.5.2Ignored Member Groups
+## 2.10.1.5.2 Ignored Member Groups
 
 Lists of ignored member groups are defined on ZONIG lines. The Zone Label identifies the zone and associates the zone options and definitions with each other. Up to 15 member groups may be defined on each ignored member group line. Multiple ZONIG lines with the same Zone Label may be defined to increase the number of ignored member groups.
 
@@ -1084,11 +1146,11 @@ Lists of ignored member groups are defined on ZONIG lines. The Zone Label identi
 
 Members may be excluded from tributary area calculation and load distribution with the ZONVM and ZONVG lines. This option is intended for members which form a panel, but the load is not distributed to these beams. For instance, one way load distribution is defined by making the beams in one direction virtual members.
 
-## 2.10.1.6.1Virtual Members
+## 2.10.1.6.1 Virtual Members
 
 Lists of virtual members are defined on ZONVM lines. The Zone Label identifies the zone and associates the zone options and definitions with each other. Up to 6 members may be defined on each virtual member line. Multiple ZONVM lines with the same Zone Label may be defined to increase the number of ignored members.
 
-## 2.10.1.6.2Virtual Member Groups
+## 2.10.1.6.2 Virtual Member Groups
 
 Lists of virtual member groups are defined on ZONVG lines. The Zone Label identifies the zone and associates the zone options and definitions with each other. Up to 15 member groups may be defined on each virtual member group line. Multiple ZONVG lines with the same Zone Label may be defined to increase the number of virtual member groups.
 
@@ -1104,17 +1166,15 @@ Members with group ‘W01’ are defined as virtual members. These members will 
 
 ![](SACS2024_Seastate/chunk0_24f5cd492e9aa68a12337308313ee9959796d1047816ce2d66596e25a6341be9.jpg)
 
-```c
-1 2 3 4 5 6 7 8  
-123456789012345678901234567890123456789012345678901234567890  
-1 ZONOP MAINDECK 1.  
-2 ZONBD MAINDECK 829 833 844 840  
-3 ZONEH MAINDECK OPENING1 801 835 838 805  
-4 ZONIG MAINDECK BR1  
-5 ZONVG MAINDECK W01 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+ZONOP MAINDECK             1.
+ZONBD MAINDECK        829  833  844  840
+ZONEH MAINDECK        OPENING1  801  835  838  805
+ZONIG MAINDECK        BR1
+ZONVG MAINDECK        W01
 ```
-
-0
 
 2.10.2 Zone Load
 
@@ -1126,10 +1186,11 @@ Zone loads are defined on LOAD ZONE lines. The Zone Label associates the pressur
 
 In this example, a load of -50 psf is applied to the zone MAINDECK depicted in the previous section. Because the normal for the zone is pointing out of the page, this pressure will be applied into the page.
 
-```txt
-1 2 3 4 5 6 7 8 1 2345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890   
-# 1 LOADCN 100
-2LOAD MAINDECK -50. ZONE 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+LOADCN 100
+LOAD  MAINDECK          -50.                                     ZONE
 ```
 
 3 HYDRO STATIC/DYNAMIC DATA
@@ -1359,10 +1420,11 @@ By default, buoyancy loading is factored by the dead load factor in columns 19-2
 
 For example, the following stipulates that dead loading in load case MISC is to be factored by 1.15 while all other loading is not factored.
 
-```txt
-1 2 3 4 5 6 7 8 123456789012345678901234567890123456789012345678901234567890  
-1 LOAD
-2LOADCNMISC 1.15 1.0 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+LOAD
+LOADCNMISC           1.15                  1.0
 ```
 
 Note: Since the buoyancy factor was not the same as the dead load factor, it was specified in columns 40-46.
@@ -1383,7 +1445,7 @@ Seastate can develop wave loading automatically based on the wave theory specifi
 6. ‘CNOI’ Cnoidal Theory   
 7. ‘SOLI’ Solitary Wave Theory
 
-Note: For situations when the water depth is greater than 1.25gT2/P, deep water wave theory is automatically used by the program.
+Note: For situations when the water depth is greater than $1.25gT^2/P$, deep water wave theory is automatically used by the program.
 
 The figures below have been suggested by Dean (1970) and Le Méhauté (1979) for selecting limits of validity of various wave theories. In general the higher order theories are applicable in and beyond the range of validity for the lower order theories. Thus in Seastate, a high order stream function theory is applicable anywhere the Stokes’ or Airy theories are and in ranges where they are not, but the simpler theories generally run somewhat faster.
 
@@ -1413,10 +1475,12 @@ The following illustrates a Stream Function wave along the global X axis (0 degr
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 | WAVE | 12.0 | 0.0 |  |  |  |  |
-| 2 | WAVE | STRE | 12.0 | 0.0 |  |  |  |  |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+WAVE
+WAVE    STRE  10.0        12.0           0.0
+```
 
 
 
@@ -1440,8 +1504,11 @@ Wave loading is generated for the crest position that is critical based on one o
 
 For example, the following WAVE input line creates an AIRY wave with an approach angle of 0 degrees, height of 25.0 and a period of 10.0 seconds. The wave is stepped through the structure using 12 crest positions defined using length units. The initial crest position is -50.0, the crest position step size is 5.0 and the critical position is that which creates maximum base shear.
 
-```txt
-1 2 3 4 5 6 7 8 123456789012345678901234567890123456789012345678901234567890 1 WAVE 2 WAVE AIRY 25.00 10.0 0.0 L -50.0 5.0 12MS10 1 1 7 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+WAVE
+WAVE    AIRY 25.00        10.0           0.0      L  -50.0   5.0  12MS10 1 1 7
 ```
 
 Wave load can be created for all crest positions by designating the critical position as ‘AL’ in columns 69- 70.
@@ -1454,8 +1521,11 @@ By default, the water depth and mudline elevation specified on the LDOPT input l
 
 For example, if the still water depth is specified on the LDOPT input line, the water depth for a storm wave may be modified on the WAVE input line to include the storm tide. The following specifies a water depth override of 150.
 
-```txt
-1 2 3 4 5 6 7 8 123456789012345678901234567890123456789012345678901234567890 1 WAVE 2 WAVE AIRY 25.00 10.0 0.0 L -50.0 5.0 12MS10 1 1 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+WAVE
+WAVE    AIRY 25.00        10.0           0.0      L  -50.0   5.0  12MS10 1 1
 ```
 
 4.3.5 Wave Kinematics or Spreading Factor
@@ -1464,8 +1534,11 @@ The reduction in wave force due to directional spreading or irregularity in wave
 
 The following designates a spreading factor of 0.85.
 
-```txt
-1 2 3 4 5 6 7 8 1 23456789012345678901234567890123456789012345678901234567890 1 WAVE 2 WAVE0.85AIRY 25.00 150.0 10.0 0.0 L -50.0 5.0 12MS10 1 1 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+WAVE
+WAVE0.85AIRY 25.00 150.0  10.0           0.0      L  -50.0   5.0  12MS10 1 1
 ```
 
 4.3.6 Member Distributed Load Segments
@@ -1479,7 +1552,7 @@ The output print level is specified in column 76 on the WAVE input line. The def
 Note: Seastate generates the fluid particle velocities and accelerations at 740 points (37 stations along the wave and 20 elevations from the surface to the mudline). The horizontal locations are equally spaced from the crest to the trough. The vertical grid points are closely spaced near the surface, the spacing increasing arithmetically with depth. At every horizontal location the vertical grid is defined by 20 points from the wave surface to the mudline - this defines a curvilinear grid as can be seen in Figure 5 for a simplified grid of five horizontal and four vertical grid stations. If the user requests grid velocity and acceleration data to be printed, it is not printed at these grid points, but on a straight line grid defined by 19 equally spaced horizontal locations and the 20 vertical locations defined above at the wave crest. Figure 5 shows the actual curvilinear grid and the output grid points for a simplified case.
 
 ![](SACS2024_Seastate/chunk0_867c5af66574aa5960303b192df5c60c38b6c96e488049e2aeb513b466dfeef6.jpg)  
-AUTOMATED GRID GENERATIONN
+AUTOMATED GRID GENERATION
 
 ![](SACS2024_Seastate/chunk0_9b4f67b4b3d681e3823921d7d745b3932f7408915f68e13e3c1096ad659fa497.jpg)  
 OUTPUT GRID POINTS   
@@ -1503,13 +1576,14 @@ The following defines a current along the global X axis (0 degree) that is const
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 | 12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678 | 12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678 0.250 | 0.000 | 0.000 |  |  |  |  |
-| 1 | CURR |  |  |  |  |  |  |  |  |
-| 2 | CURR | 0.000 |  |  |  |  |  |  |  |
-| 3 | CURR | 30.000 |  |  |  |  |  |  |  |
-| 4 | CURR | 50.000 |  |  |  |  |  |  |  |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+CURR
+CURR       0.000   0.250   0.000
+CURR      30.000   0.250
+CURR      50.000   0.750
+```
 
 
 
@@ -1528,10 +1602,12 @@ The lines below specify that nonlinear stretching is to be used to determine the
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 1234567890 |
-| 2 | CURR | 0.000 | 0.250 | 0.000 |  | NL |  |  |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+CURR
+CURR       0.000   0.250   0.000                           NL
+```
 
 
 
@@ -1545,13 +1621,14 @@ The following designates that the blocking factor is to be calculated automatica
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 123456789012345678 | 89012345678 | 89012345678 | 89012345678 | 89012345678 | 89012345678 | 89012345678 | 8 |
-| 1 | CURR |  |  |  |  |  |  |  |
-| 2 | CURR | 0.000 | 0.250 | 0.000 |  | -10.0BC |  |  |
-| 3 | CURR | 30.000 | 0.250 |  |  |  |  |  |
-| 4 | CURR | 50.000 | 0.750 |  |  |  |  |  |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+CURR
+CURR       0.000   0.250   0.000                   -10.0BC
+CURR      30.000   0.250
+CURR      50.000   0.750
+```
 
 
 
@@ -1565,13 +1642,14 @@ The input below specifies that the apparent wave period is to be determined auto
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 123456789012345678 | 89012345678 | 89012345678 | 89012345678 | 89012345678 | 89012345678 | 89012345678 | 8 |
-| 1 | CURR |  |  |  |  |  |  |  |
-| 2 | CURR | 0.000 | 0.250 | 0.000 |  |  | AWP |  |
-| 3 | CURR | 30.000 | 0.250 |  |  |  |  |  |
-| 4 | CURR | 50.000 | 0.750 |  |  |  |  |  |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+CURR
+CURR       0.000   0.250   0.000                                      AWP
+CURR      30.000   0.250
+CURR      50.000   0.750
+```
 
 
 
@@ -1607,11 +1685,11 @@ By default the marine method is used. The buoyancy method to be used may be spec
 
 The following specifies that gravity acts in the -Z direction and the marine method is to be used to calculate buoyancy. The buoyancy for elements below the mudline is included.
 
-```txt
-1 2 3 4 5 6 7 8  
-1234567890123456789012345678901234567890123456789012345678901234567890  
-1 DEAD
-2 DEAD -Z M BML 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+DEAD
+DEAD      -Z                                M BML
 ```
 
 4.5.1 Overriding Buoyancy Parameters
@@ -1624,19 +1702,22 @@ By default, the flood condition specified for each element is used. Enter ‘FLD
 
 Seastate can generate loads on the structure resulting from wind data specified on the WIND input line. Wind load is generated on all members above the water surface as well as any wind areas designated. Seastate calculates pressures on members and wind areas using the equation:
 
-$$p = 0. 0038 V^{2} C_{h} C_{s}$$
+$$p = 0.0038 V^{2} C_{h} C_{s}$$
 
-Where: $\begin{array} { r l r } { \mathsf{ p } = } & { { } } & { \mathsf{ p r e s s u r e } \left( | | \mathsf{ b } \mathsf{ s } / \mathsf{ s q . f t . } \right) } \end{array}$ $\begin{array} { r l r } { \mathsf{ V } = } & { { } } & { \mathsf{ V e l o c i t y } \left( \mathsf{ k n o t s } \right) } \end{array}$
+Where:
 
-$$C_{h} = \quad \text{h e i g h t c o e f f i c i e n t} \quad C_{s} = \quad \text{s h a p e c o e f f i c i e n t}$$
+- $p$ = pressure (lbs/sq.ft.)
+- $V$ = velocity (knots)
+- $C_h$ = height coefficient
+- $C_s$ = shape coefficient
 
-Constant in previous relation depends on the unit used for velocity (It reads $p = 0 . 00256 V^{ 2 } C_{ h } C_{ s }$ when velocity is reported in mph). As recommended by API and ABS, ${ \sf C }_{ \sf s }$ is taken as 0.5 for tubular members and 1.5 for other members and flat surfaces. The wind force on members and surfaces is normal to the member or surface and is calculated as recommended by DNV and API by:
+Constant in previous relation depends on the unit used for velocity (It reads $p = 0.00256 V^{ 2 } C_{ h } C_{ s }$ when velocity is reported in mph). As recommended by API and ABS, $C_s$ is taken as 0.5 for tubular members and 1.5 for other members and flat surfaces. The wind force on members and surfaces is normal to the member or surface and is calculated as recommended by DNV and API by:
 
 $$F = p A \sin \alpha$$
 
 Where: A = projected area of the surface or member normal to the force.
 
-$$\alpha = \begin{array}{l} \text{a n g l e b e t w e e n t h e d i r e c t i o n o f t h e w i n d a n d t h e a x i s o f t h e m e b e r (o r t h e p l a n e o f t h e s u r f a c e) .} \end{array}$$
+$\alpha$ = angle between the direction of the wind and the axis of the member (or the plane of the surface).
 
 Note: Surfaces can also be specified as round in which case Cs is taken as 0.5 and the force is in the direction of the wind.
 
@@ -1655,11 +1736,12 @@ The following defines a wind along the global X axis (0 degree) with a velocity 
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 |
-| 1 | WIND |  |  |  |  |  |  |  |
-| 2 | WIND | M120.0 |  |  |  |  |  |  |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+WIND
+WIND   M120.0
+```
 
 
 
@@ -1667,17 +1749,17 @@ The following defines a wind along the global X axis (0 degree) with a velocity 
 
 The user also has the option of accounting for the variation of wind with height utilizing A.B.S., API or Australian AS1170 recommendations. The wind height variation option is specified in columns 41-44.
 
-‘APxx’ should be specified for API formulas where xx is a value from $' 07^{ \prime }$ to $\mathbf{ \prime }_{ 13^{ \prime } }$ corresponding to the denominator of the exponent as follows:
+‘APxx’ should be specified for API formulas where xx is a value from ‘07’ to ‘13’ corresponding to the denominator of the exponent as follows:
 
-$$V_{z} = V_{r} \left(\frac{z}{z_{r}}\right)^{\frac{1}{x x}}$$
+$$V_{z} = V_{r} \left(\frac{z}{z_{r}}\right)^{\frac{1}{xx}}$$
 
 If the recommendations of API 21st edition are to be used, ‘21AP’ should be specified in columns 41-44.
 
-Enter ‘ASxx’ for Australian AS1170 variation where xx is a value from ‘01’ to $' 04^{ \prime }$ corresponding to the wind category.
+Enter ‘ASxx’ for Australian AS1170 variation where xx is a value from ‘01’ to ‘04’ corresponding to the wind category.
 
 ‘RH01’ and ‘RH02’ corresponding to RH001 cyclonic and non-cyclonic wind formulas may be specified.
 
-If ABS wind variation is to be used, either ‘ABS ’ or ‘ABS2’ is specified in columns 41-44. If $\prime_{ A B S } \prime$ is specified, the values of the height coefficient, $\complement_{ \mathbf{ h } } ,$ as recommended by A.B.S. are shown in the table below, where a number of zones are defined within each of which a value of $\mathsf{ C }_{ \mathsf{ h } }$ is given.
+If ABS wind variation is to be used, either ‘ABS ’ or ‘ABS2’ is specified in columns 41-44. If ‘ABS ’ is specified, the values of the height coefficient, $C_h$, as recommended by A.B.S. are shown in the table below, where a number of zones are defined within each of which a value of $C_h$ is given.
 
 
 
@@ -1703,9 +1785,9 @@ Where: z = Calculated wind height
 
 Zref = Reference elevation = 33.0 feet
 
-?? = 0.09 - 0.16 for 1-minute average wind
+$\beta$ = 0.09 - 0.16 for 1-minute average wind
 
-?? = 0.125 for 1-hour average wind
+$\beta$ = 0.125 for 1-hour average wind
 
 4.6.3 Overriding Water Depth
 
@@ -1715,11 +1797,12 @@ The following overrides the default water depth for the purpose of wind load gen
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 1234567890 |
-| 1 | WIND |  |  |  |  |  |  |  |
-| 2 | WIND DM | 120.0 |  |  | 150.0 |  |  |  |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+WIND
+WIND D M   120.0                   150.0
+```
 
 
 
@@ -1733,41 +1816,44 @@ The following designates that wind load is to be generated for wind areas AA and
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 1234567890 |
-| 1 | WIND |  |  |  |  |  |  |  |
-| 2 | WIND DIM | 120.0 |  | 150.0 | AAAB |  |  |  |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+WIND
+WIND DIM   120.0                   150.0    AAAB
+```
 
 
 
 4.6.5 Loading Single – Three – Four Sided Wind Walls (API 4F Specification)
 
-This feature enables the software to model three types of wind walls in order to apply for instance wind loading on equipment, cabins or other substructures on the deck. Single – Three – Four sided wind walls given in Table 8 API 4F specification $4^{ \mathrm{ t h } }$ edition Jan 2013 (equivalent to Table 8.6 in $3^{ \mathsf{ r d } }$ edition) can be defined and loaded using appropriate number of areas i.e. one, three and four areas for single, three and four sided walls respectively. This feature is available only if API4F is chosen in “WIND” line for wind variation definition, otherwise program will return an error. The whole structure cannot be considered for this type of wind loading regarding the limitation of geometry given in Table 8 (API 4F $4^{ \mathrm{ t h } }$ edition). The input data and the notation follows mostly the table 8 in API 4F specification. As it has been explained in detail in section B.8.3.3 in Annex B of API 4F （$4^{ \mathrm{ t h } }$ edition Jan 2013), there are generally three distinct approaches to calculate wind force components namely “projected area”, “projected pressure” and “velocity component”. To be in line with previous implementation of SACS for wind areas, “Projected Pressure” method has been used in all three types of wind walls. It is worth mentioning that the obtained results of this method can be easily transformed to other methods using the table given in Annex B.
+This feature enables the software to model three types of wind walls in order to apply for instance wind loading on equipment, cabins or other substructures on the deck. Single – Three – Four sided wind walls given in Table 8 API 4F specification 4th edition Jan 2013 (equivalent to Table 8.6 in 3rd edition) can be defined and loaded using appropriate number of areas i.e. one, three and four areas for single, three and four sided walls respectively. This feature is available only if API4F is chosen in “WIND” line for wind variation definition, otherwise program will return an error. The whole structure cannot be considered for this type of wind loading regarding the limitation of geometry given in Table 8 (API 4F 4th edition). The input data and the notation follows mostly the table 8 in API 4F specification. As it has been explained in detail in section B.8.3.3 in Annex B of API 4F (4th edition Jan 2013), there are generally three distinct approaches to calculate wind force components namely “projected area”, “projected pressure” and “velocity component”. To be in line with previous implementation of SACS for wind areas, “Projected Pressure” method has been used in all three types of wind walls. It is worth mentioning that the obtained results of this method can be easily transformed to other methods using the table given in Annex B.
 
 4.6.5.1 Single sided wall
 
-The type of area can be specified in column 80 on AREA line by entering $' 5^{ \prime }$ and the area definition should be specified in column 79 on AREA line by entering $' \mathsf{ W }^{ \prime }$ (Wall – Flat surface with orientation). Assuming the global Z axis along the height of the wind wall, width (shown by $\mathrm{^{ \prime } b }^{ \prime }$ in API 4F table 8), height (shown by $\mathrm{ \Delta \Omega^{ \prime } h \Omega }$ in API 4F table 8) and the angle between outward normal to the area and global X direction are entered in columns 7-24. The angle should be measured counterclockwise. For the single sided wall, the result for the opposite direction shown in the following figure is the same (in the following figure $\theta_{ 1 }$ and $\theta_{ 2 }$ will give the same result), but this convention will play an important role to model three sided and four sided walls. The program automatically checks the limitation of geometry specified in Table 8 API 4F $4^{ \mathrm{ t h } }$ edition and picks up appropriate shape coefficient based on the wind direction and the outward normal. The wind force is assumed to act at the centroid of the surface designated in columns 25-45.
+The type of area can be specified in column 80 on AREA line by entering ‘S’ and the area definition should be specified in column 79 on AREA line by entering ‘W’ (Wall – Flat surface with orientation). Assuming the global Z axis along the height of the wind wall, width (shown by ‘b’ in API 4F table 8), height (shown by ‘h’ in API 4F table 8) and the angle between outward normal to the area and global X direction are entered in columns 7-24. The angle should be measured counterclockwise. For the single sided wall, the result for the opposite direction shown in the following figure is the same (in the following figure $\theta_{ 1 }$ and $\theta_{ 2 }$ will give the same result), but this convention will play an important role to model three sided and four sided walls. The program automatically checks the limitation of geometry specified in Table 8 API 4F 4th edition and picks up appropriate shape coefficient based on the wind direction and the outward normal. The wind force is assumed to act at the centroid of the surface designated in columns 25-45.
 
 ![](SACS2024_Seastate/chunk0_3b45a0346f2720a2f23b6ccb69fe52a398e7647b03edc062ddd1943dcbde1d96.jpg)  
 Figure 9. API 4F Single-Sided Wall
 
-As an example, following lines in Seastate input file, models a single sided wall (Area “A1”) with width and height of 10 and $\theta_{ 2 } = 200 ~ d e g$ . As can be seen AP4F has been chosen in “WIND” line.
+As an example, following lines in Seastate input file, models a single sided wall (Area “A1”) with width and height of 10 and $\theta_2 = 200\,\mathrm{deg}$ . As can be seen AP4F has been chosen in “WIND” line.
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 | 10. | 10. | 200. | 5. | A | WS |  |
-| 2 | AREA1 | 10. | 10. | 200. |  |  |  |  |
-| 3 | WIND |  |  |  |  |  |  |  |
-| 4 | WIND1SI | 100.0 | 0.85 | AP4FA1 |  |  |  |  |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+AREA
+AREAA1   10.   10.  200.                   5.        A                        WS
+WIND
+WIND1SI    100.0    0.85                AP4FA1
+```
 
 
 
 4.6.5.2 Three sided wall
 
-Three sided wall can be modeled using the angle of the outward normal as depicted in the following figure and explained in previous section. It is worth to emphasize that the order of the areas defined for three sided wall follows the order number in API4F specification i.e. the first line is numbered I, the second line is the area # II on the right side of the first, and the third line is the area # III. As can be seen the current numbering is exactly the same as Table 8 API 4F specification 4th edition. Moreover, entered wind approach direction angle (??), will be considered as an applied load on the first wall which is measured counterclockwise from the global X axis as specified in the section 4.6.1 (see figure below). Shape coefficients will be calculated using the data given in Table 8 for all three areas automatically.
+Three sided wall can be modeled using the angle of the outward normal as depicted in the following figure and explained in previous section. It is worth to emphasize that the order of the areas defined for three sided wall follows the order number in API4F specification i.e. the first line is numbered I, the second line is the area # II on the right side of the first, and the third line is the area # III. As can be seen the current numbering is exactly the same as Table 8 API 4F specification 4th edition. Moreover, entered wind approach direction angle ($\beta$), will be considered as an applied load on the first wall which is measured counterclockwise from the global X axis as specified in the section 4.6.1 (see figure below). Shape coefficients will be calculated using the data given in Table 8 for all three areas automatically.
 
 ![](SACS2024_Seastate/chunk0_92c74684d4366eee1281ad89bb5d89516ae2ae2cb5069737befe78ca628265f0.jpg)  
 Figure 10. API 4F 3-Sided Wall
@@ -1778,21 +1864,22 @@ direction are entered in columns 7-24 separately for each area. The angle should
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 |
-| 1 | AREA |  |  |  |  |  |  |  |
-| 2 | AREA1 | 10. | 10. | 180. | -5. | 5. | 1 | WT |
-| 3 | AREA1 | 10. | 10. | 270. |  | -5. | 5. | 2 |
-| 4 | AREA1 | 10. | 10. | 90. |  | 5. | 5. | 3 |
-| 5 | WIND |  |  |  |  |  |  |  |
-| 6 | WIND1SI | 100.0 | 0.85 |  | AP4FA1 |  |  |  |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+AREA
+AREAA1   10.   10.  180.   -5.             5.        1                        WT
+AREAA1   10.   10.  270.          -5.      5.        2                        WT
+AREAA1   10.   10.   90.            5.     5.        3                        WT
+WIND
+WIND1SI    100.0    0.85                AP4FA1
+```
 
 
 
 4.6.5.3 Four sided wall
 
-Four sided wall can be modeled using the angle of the outward normal as depicted in the following figure and explained in single sided wall section. It is worth to emphasize that the order of the areas defined for four sided wall follows the order number in API4F specification i.e. the first line is numbered I, the second line is the area # II on the right side of the first, the third line is the area # III and the fourth line is the area # IV. Therefore, areas numbered I and IV are parallel as well as areas numbered II and III. As can be seen the current numbering is exactly the same as Table 8 API 4F specification 4th edition. Moreover, entered wind approach direction angle (??), will be considered as an applied load on the first wall which is measured counterclockwise from the global X axis as specified in the section 4.6.1 (see figure below). Shape coefficients will be calculated using the data given in Table 8 for all four areas.
+Four sided wall can be modeled using the angle of the outward normal as depicted in the following figure and explained in single sided wall section. It is worth to emphasize that the order of the areas defined for four sided wall follows the order number in API4F specification i.e. the first line is numbered I, the second line is the area # II on the right side of the first, the third line is the area # III and the fourth line is the area # IV. Therefore, areas numbered I and IV are parallel as well as areas numbered II and III. As can be seen the current numbering is exactly the same as Table 8 API 4F specification 4th edition. Moreover, entered wind approach direction angle ($\beta$), will be considered as an applied load on the first wall which is measured counterclockwise from the global X axis as specified in the section 4.6.1 (see figure below). Shape coefficients will be calculated using the data given in Table 8 for all four areas.
 
 ![](SACS2024_Seastate/chunk0_88860416418b8423eee62e07c7680f7cb30ebbbabcf2f93a5da6ba7d39cd30b4.jpg)  
 Figure 11. API 4F 4-Sided Wall
@@ -1801,25 +1888,17 @@ The type of area can be specified in column 80 on AREA line by entering ‘F’ 
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 | 12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678 | 12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678 |  |  |  |  |  |
-| 2 | AREA1 | 10. | 10. | 180. | -5. | 5. | 1 | WF |
-| 3 | AREA1 | 10. | 10. | 270. | -5. | 5. | 2 | WF |
-| 4 | AREA1 | 10. | 10. | 90. | 5. | 5. | 3 | WF |
-| 5 | AREA1 | 10. | 10. | 0. | 5. | 5. | 4 | WF |
-
-
-
-6 WIND
-
-7 WIND1SI
-
-## 100.0
-
-## 0.85
-
-AP4FA1
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+AREA
+AREAA1   10.   10.  180.   -5.             5.        1                        WF
+AREAA1   10.   10.  270.          -5.      5.        2                        WF
+AREAA1   10.   10.   90.            5.     5.        3                        WF
+AREAA1   10.   10.    0.    5.             5.        4                        WF
+WIND
+WIND1SI    100.0    0.85                AP4FA1
+```
 
 Note: The wall order should be internally consistent when defining a 4-sided wall (i.e. Wall I is the front side, Wall II is the right side, Wall III is the left side, Wall IV is the back side). However, the windward side is automatically determined by the seastate for each wind load condition so only one wind area is required for all wind loading directions.
 
@@ -1831,10 +1910,11 @@ Enter the two character identifier of submerged bodies to be loaded by wave and/
 
 The following designates that submerged bodies named s1, s2 and s3 are to be included when generating wave and current loading.
 
-```txt
-1 2 3 4 5 6 7 8 123456789012345678901234567890123456789012345678901234567890  
-1 DRAG
-2 DRAG S1S2S3 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+DRAG
+DRAG                                        S1S2S3
 ```
 
 A detailed report of loading generated on each submerged body may be generated by specifying ‘1’ in column 5.
@@ -1849,20 +1929,23 @@ The elevation of the mudflow is measured from the global origin and is entered i
 
 The following illustrates a mudflow with a top elevation of 13 from the origin. The flow is downhill and makes an angle of 27 degrees with the X axis and 7 degrees with the horizontal. The values of alpha and beta are 8 and 4 degrees, respectively and the normal load plateau is 0.85.
 
-```txt
-1 2 3 4 5 6 7 8 123456789012345678901234567890123456789012345678901234567890 
-```
-
-```txt
-1 MFLO1 13.0 27.0 -7.0 8.0 4.0 0.85 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+MFLO1
+MFLO1       13.0    27.0    -7.0     8.0     4.0    0.85
 ```
 
 The load profile is defined on the subsequent MFLO2 lines with normal and tangential components of the load defined at various depths below the mud surface.
 
 The following shows normal and tangential load intensities 0.0, 3.0 and 6.0 feet below the mudflow surface:
 
-```txt
-1 2 3 4 5 6 7 8 1 123456789012345678901234567890123456789012345678901234567890 MFLO1 2 MFLO1 13.0 27.0 -7.0 8.0 4.0 0.85 3 MFLO2 0.0 0.0 0.0 3.0 350. 35.0 6.0 750. 75.0 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+MFLO1
+MFLO1       13.0    27.0    -7.0     8.0     4.0    0.85
+MFLO2        0.0     0.0     0.0     3.0    350.    35.0     6.0    750.    75.0
 ```
 
 ## 4.9 REPEATING A LOAD CASE
@@ -1873,8 +1956,22 @@ This feature is only applicable if all environmental load characteristics are th
 
 Note: No other load data can be specified in the load case to be created by the load repeat function.
 
-```txt
-1 2 3 4 5 6 7 8 123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678910 WIND 1.000 1.100 1.350 1.000 0.0 AP13 4 CURR 0.000 0.250 0.000 -10.000BC NL AWP 6 CURR 30.000 0.250 0.250 7 CURR 50.000 0.250 7 Dead 8 WAVE 11 WAVE1.00AIRY 10.00 13.00 0.00 L -20.00 2.00 15MS10 1 12 LOADRP 45.0 S000S045 13 0 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+LOADCNS000   1.000  1.100  1.350  1.000
+WIND
+WIND D     20.00             0.0        AP13
+CURR
+CURR       0.000   0.250   0.000                 -10.000BC NL         AWP
+CURR      30.000   0.250
+CURR      50.000   0.250
+DEAD
+DEAD      -Z                                M
+WAVE
+WAVE1.00AIRY 10.00       13.00          0.00      L -20.00  2.00  15MS10 1 0
+LOADRP    45.0  S000S045
+0
 ```
 
 ## 4.10 API RP2A-WSD 20TH EDITION CONSIDERATIONS
@@ -1939,8 +2036,10 @@ To print the deck height requirement specified in API Bulletin 2INT-DG, enter 'P
 
 For example, a platform is located in the Gulf of Mexico at a longitude of 90.25, the platform is orientated with true north towards the SACS 290 degree direction. A 50-year return period wave, using peak wave design case are entered as the default 2MET parameters.
 
-```txt
-1 2 3 4 5 6 7 8 1234567890123456789012345678901234567890123456789012345678901234567890 1 LDAPI 90.25 290.0 C WA OMN STRNL -100.0 5.0 40MMPT 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+LDAPI     90.25  290.0         C WA OMN             STRNL -100.0   5.0  40MMPT
 ```
 
 4.11.2 API Bulletin 2INT-MET General Line
@@ -1963,8 +2062,11 @@ Note: Nonlinear Current Stretching and Apparent Wave Period will be automaticall
 
 For example a 10-year return period operational wave including wind, current, and dead loads in the 180 degree SACS direction would be specified by the following.
 
-```txt
-1 2 3 4 5 6 7 8 1 123456789012345678901234567890123456789012345678901234567890 1LOADCNO180 2MET 180.0 A III 0.85 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+LOADCNO180
+2MET  180.0 A                                    IIII     0.85
 ```
 
 4.11.3 API Bulletin 2INT-MET Wave Line
@@ -2079,7 +2181,7 @@ Figure 12 defines the parameters and coordinates used in the following brief dis
 ![](SACS2024_Seastate/chunk0_a1ad0f4565d90d43b2205f1bbd10aa7deb625a4c35833a27025187e6f193fc28.jpg)  
 Figure 12. Wave Parameters
 
-It is shown in standard references on fluid mechanics that the velocity field, ??̅ (x,y,z,t), for an ideal fluid must satisfy a continuity equation:
+It is shown in standard references on fluid mechanics that the velocity field, $\bar V(x,y,z,t)$, for an ideal fluid must satisfy a continuity equation:
 
 $$\overline{{\boldsymbol{\nabla}}} \cdot \overline{{\boldsymbol{\mathrm{V}}}} = 0 \tag{1}$$
 
@@ -2087,15 +2189,15 @@ and an irrationality condition:
 
 $$\bar{\nabla} \times \bar{\mathbf{V}} = 0 \tag{2}$$
 
-It is easily seen that the second equation is satisfied if one can find a scalar function, , called a velocity potential, such that:
+It is easily seen that the second equation is satisfied if one can find a scalar function, $\phi$, called a velocity potential, such that:
 
 $$\bar{V} = \bar{\nabla} \phi \tag{3}$$
 
-The continuity equation can then be written in terms of , resulting in:
+The continuity equation can then be written in terms of $\phi$, resulting in:
 
 $$\bar{\nabla}^{2} \phi = 0 \tag{4}$$
 
-Thus it is seen that the potential function satisfies Laplace’s equation. Any problem concerning motion of an ideal fluid will therefore be solved if we can find a function, , that satisfies Laplace’s equation and whatever boundary and initial conditions pertain to that problem.
+Thus it is seen that the potential function satisfies Laplace’s equation. Any problem concerning motion of an ideal fluid will therefore be solved if we can find a function, $\phi$, that satisfies Laplace’s equation and whatever boundary and initial conditions pertain to that problem.
 
 For a plane wave Laplace’s equation becomes:
 
@@ -2103,11 +2205,11 @@ $$\frac{\partial^{2} \phi}{\partial x^{2}} + \frac{\partial^{2} \phi}{\partial z
 
 with the boundary conditions:
 
-$$\frac{\partial \phi}{\partial z} = 0 \text{a t} z = - d \tag{6}$$
+$$\frac{\partial \phi}{\partial z} = 0 \quad\text{at } z = - d \tag{6}$$
 
-$$\frac{\partial \eta}{\partial t} + \frac{\partial \phi}{\partial x} \frac{\partial \eta}{\partial x} - \frac{\partial \phi}{\partial z} = 0 \text{a t} z = \eta \tag{7}$$
+$$\frac{\partial \eta}{\partial t} + \frac{\partial \phi}{\partial x} \frac{\partial \eta}{\partial x} - \frac{\partial \phi}{\partial z} = 0 \quad\text{at } z = \eta \tag{7}$$
 
-$$\frac{\partial \eta}{\partial t} + \frac{1}{2} \left[ \left(\frac{\partial \phi}{\partial x}\right)^{2} + \left(\frac{\partial \phi}{\partial z}\right)^{2} \right] + g_{\eta} = 0 \text{a t} z = \eta \tag{8}$$
+$$\frac{\partial \eta}{\partial t} + \frac{1}{2} \left[ \left(\frac{\partial \phi}{\partial x}\right)^{2} + \left(\frac{\partial \phi}{\partial z}\right)^{2} \right] + g_{\eta} = 0 \quad\text{at } z = \eta \tag{8}$$
 
 and a propagation condition
 
@@ -2119,13 +2221,13 @@ This condition serves instead of an initial condition.
 
 Equation (6) demands that the vertical component of velocity be zero at the mudline. Equation (7) states that the vertical component of velocity at the free surface equals the vertical velocity of the free surface itself. Equation 8 requires the pressure at the free surface to be zero.
 
-Two difficulties arise in attempting to solve the system of equations (5) through (9). First equations (7) and (8) are nonlinear and second, those equations are prescribed at the free surface, z=, which is unknown. Consequently various approximate solutions have been developed.
+Two difficulties arise in attempting to solve the system of equations (5) through (9). First equations (7) and (8) are nonlinear and second, those equations are prescribed at the free surface, $z=\eta$, which is unknown. Consequently various approximate solutions have been developed.
 
 ## 6.2 AIRY WAVE THEORY
 
-This is the simplest of the theories, it is also called the linear wave theory because it linearizes the nonlinear boundary conditions, equations 7 and 8. The theory is based on the assumption that the wave height is much smaller than both the wave length and the still water depth. In this case it can be shown that the nonlinear terms in equations (7) and (8) are small and that only a small error is introduced if the conditions are applied at z = 0 instead of at z = .
+This is the simplest of the theories, it is also called the linear wave theory because it linearizes the nonlinear boundary conditions, equations 7 and 8. The theory is based on the assumption that the wave height is much smaller than both the wave length and the still water depth. In this case it can be shown that the nonlinear terms in equations (7) and (8) are small and that only a small error is introduced if the conditions are applied at z = 0 instead of at $z=\eta$.
 
-The resulting solution for  is:
+The resulting solution for $\phi$ is:
 
 $$\phi = \frac{H L}{2 T} \frac{\cosh [ 2 \pi (\frac{z + d}{L}) ]}{\sinh (2 \pi \frac{d}{L})} \sin \left[ 2 \left(\frac{x}{L} - \frac{t}{T}\right) \right] \tag{10}$$
 
@@ -2139,35 +2241,35 @@ The resulting velocities and accelerations, as well as other wave properties can
 
 The linear wave theory provides a first order approximation to the wave motion. By a perturbation procedure higher order approximations can be obtained, which more nearly satisfy the nonlinear boundary conditions.
 
-In the Stokes’ Fifth Order Theory the velocity potential,  , takes the form:
+In the Stokes’ Fifth Order Theory the velocity potential, $\phi$ , takes the form:
 
-$$\phi = \frac{L^{2}}{2 \pi \mathrm{T}} \sum_{n = 1}^{5} \phi_{n}^{\prime} \cosh \left[ 2 \pi \ln \left(\frac{z + d}{L}\right) \right] \sin \left[ 2 \pi \ln \left(\frac{x}{L} + \frac{t}{T}\right) \right] \tag{12}$$
+$$\phi = \frac{L^{2}}{2 \pi \mathrm{T}} \sum_{n = 1}^{5} \phi_{n}^{\prime} \cosh \left[2\pi n\left(\frac{z+d}{L}\right)\right] \sin \left[2\pi n\left(\frac{x}{L}+\frac{t}{T}\right)\right] \tag{12}$$
 
 with the relation,
 
 $$T = \sqrt{\frac{2 \pi L}{g X \tanh  \left(2 \pi \frac{d}{L}\right) \left[ 1 + \lambda^{2} C_{1} + \lambda^{4} C_{2} \right]}} \tag{13}$$
 
-The constants, n, , C1 and C2 are known (but complicated) functions of H, L, and d.
+The constants, $\phi_n^{\prime}$, $\lambda$, C1 and C2 are known (but complicated) functions of H, L, and d.
 
 ## 6.4 STREAM FUNCTION THEORY
 
-The stream function theory is so called because instead of solving for the velocity potential function the stream function is found. It is shown in standard references on fluid mechanics that for two dimensional motion of an ideal fluid a stream function, (x,z,t), exists such that:
+The stream function theory is so called because instead of solving for the velocity potential function the stream function is found. It is shown in standard references on fluid mechanics that for two dimensional motion of an ideal fluid a stream function, $\psi(x,z,t)$, exists such that:
 
-$$u = \frac{\partial \Psi}{\partial z} w = - \frac{\partial \Psi}{\partial z}$$
+$$u = \frac{\partial \Psi}{\partial z}, \qquad w = -\frac{\partial \Psi}{\partial z}$$
 
 where u and w are the velocity components in the x and z directions respectively.
 
-By choosing a coordinate system that moves with the wave the stream function is independent of t, that is the problem is reduced to one of steady flow. The stream function, (x,z,t), is shown to satisfy Laplace’s equation:
+By choosing a coordinate system that moves with the wave the stream function is independent of t, that is the problem is reduced to one of steady flow. The stream function, $\psi(x,z,t)$, is shown to satisfy Laplace’s equation:
 
 $$\frac{\partial^{2} \Psi}{\partial x^{2}} + \frac{\partial^{2} \Psi}{\partial z^{2}} = 0 \tag{14}$$
 
 with boundary conditions:
 
-$$\frac{\partial \Psi}{\partial x} = 0 \text{a t} z = - d \tag{15}$$
+$$\frac{\partial \Psi}{\partial x} = 0 \quad\text{at } z = - d \tag{15}$$
 
-$$w - u \frac{\partial \eta}{\partial x} = 0 \text{a t} z = \eta \tag{16}$$
+$$w - u \frac{\partial \eta}{\partial x} = 0 \quad\text{at } z = \eta \tag{16}$$
 
-$$\frac{1}{2 g} \left(u^{2} + w^{2}\right) + \eta = Q \text{a t} z = \eta \tag{17}$$
+$$\frac{1}{2 g} \left(u^{2} + w^{2}\right) + \eta = Q \quad\text{at } z = \eta \tag{17}$$
 
 where Q is a constant.
 
@@ -2177,7 +2279,7 @@ $$\Psi (x, z) = C z + \sum_{n = 1}^{N} x_{n} \sinh \left(n k (z + d)\right) \cos
 
 where N is the order of the stream function and k is the wave number.
 
-An advantage of the stream function formulation is that on the free surface the stream function is a constant, say A. Thus evaluating equation (18) at z= gives an equation (within a constant) for (x):
+An advantage of the stream function formulation is that on the free surface the stream function is a constant, say A. Thus evaluating equation (18) at $z=\eta$ gives an equation (within a constant) for $\eta(x)$:
 
 $$C \eta + \sum_{n = 1}^{N} x_{n} \sinh (n k (\eta + d)) \cos (n k x) = A \tag{19}$$
 
@@ -2203,7 +2305,7 @@ Fenton, J. D. 1979 A High Order Cnoidal Wave Theory. Journal of Fluid Mechanics.
 
 The resultant force distribution on members due to fluid particle motion is calculated using Morison’s equation. This is in accordance with API, DNV, and NPD recommendations and produces reliable results for members whose cross sectional dimensions are small with respect to both the wave length and the characteristic distance between members. These are the conditions that usually prevail for typical offshore jacket structures.
 
-The resultant force per unit length on a cylinder, ${ \bar{ F } } ,$ in general has a component normal to the cylinder, ${ \bar{ F } }_{ n } ,$ and a component along the axis of the cylinder (a tangential component), $\hat{ F }_{ t }$ .
+The resultant force per unit length on a cylinder, ${ \bar{ F } } ,$ in general has a component normal to the cylinder, ${ \bar{ F } }_{ n } ,$ and a component along the axis of the cylinder (a tangential component), $\bar F_t$ .
 
 $$\bar{\mathrm{F}} = \bar{\mathrm{F}}_{\mathrm{n}} + \bar{\mathrm{F}}_{\mathrm{t}}$$
 
@@ -2211,19 +2313,19 @@ Each of these components can be expressed as functions of the fluid particle mot
 
 $$\overline{{\mathrm{F_{n}}}} = \bar{\mathrm{F}}_{\mathrm{D n}} + \bar{\mathrm{F}}_{\mathrm{I n}}$$
 
-where $\boldsymbol{ \bar{ F } }_{ D n }$ and $\boldsymbol{ \bar{ F } }_{ I n }$ are the drag and inertia forces respectively and are given by:
+where $\boldsymbol{ \bar{ F } }_{ D n }$ and $\bar F_{In}$ are the drag and inertia forces respectively and are given by:
 
 $$\bar{F}_{D n} = \frac{1}{2} C_{D n} D \rho \bar{V}_{n} | \bar{V}_{n} |$$
 
-$$\bar{F}_{I n} = \frac{1}{4} \pi C_{M n} D^{2} \rho \bar{V}_{n}$$
+$$\bar F_{In} = \frac{1}{4}\pi C_{Mn}D^2\rho\dot{\bar V}_n$$
 
 Where: $C_{ D n }$ = Drag coefficient for flow normal to the member
 
-$C_{ M \mathbf{ n } }$ = Inertia coefficient for flow normal to the member
+$C_{Mn}$ = Inertia coefficient for flow normal to the member
 
 D = Member diameter
 
-p= Fluid mass density
+$\rho$ = Fluid mass density
 
 $V_{ n }$ = Fluid particle relative velocity normal component
 
@@ -2241,7 +2343,7 @@ $$\overline{{F}}_{x} = \frac{1}{2} C_{D t} D \boldsymbol{\rho} | \overline{{V}}_
 
 $$\overline{{{F}}}_{y} = \frac{1}{2} C_{D n} D \boldsymbol{\rho} | \overline{{{V}}}_{n} | \overline{{{V}}}_{y} + \frac{1}{4} \pi C_{M n} D^{2} \boldsymbol{\rho} \overline{{{\dot{V}}}}_{y}$$
 
-$$\bar{F}_{z} = \frac{1}{2} C_{D n} D \rho | \bar{V}_{n} | \bar{V}_{z} + \frac{1}{4} \pi C_{M n} D^{2} \rho \bar{V}_{z}$$
+$$\bar{F}_{z} = \frac{1}{2} C_{D n} D \rho | \bar{V}_{n} | \bar{V}_{z} + \frac{1}{4} \pi C_{M n} D^{2} \rho \dot{\bar V}_{z}$$
 
 where x, y, and z are the member local coordinates (x is always in the axial direction)
 
@@ -2249,9 +2351,9 @@ For non-cylindrical members these equations are modified to account for the fact
 
 $$\bar{F}_{x} = \frac{1}{4} C_{D t} \left(D_{y} + D_{z}\right) \rho | \bar{V}_{t} | \bar{V}_{t}$$
 
-$$\bar{F}_{y} = \frac{1}{4} C_{D y} D_{y} \rho | \bar{V}_{n} | \bar{V}_{y} + \frac{1}{4} \pi C_{M y} D_{y}^{2} \rho \bar{V}_{y}$$
+$$\bar{F}_{y} = \frac{1}{4} C_{D y} D_{y} \rho | \bar{V}_{n} | \bar{V}_{y} + \frac{1}{4} \pi C_{M y} D_{y}^{2} \rho \dot{\bar V}_{y}$$
 
-$$\bar{F}_{z} = \frac{1}{4} C_{D z} D_{z} \rho | \bar{V}_{n} | \bar{V}_{z} + \frac{1}{4} \pi C_{M z} D_{z}^{2} \rho \bar{V}_{z}$$
+$$\bar{F}_{z} = \frac{1}{4} C_{D z} D_{z} \rho | \bar{V}_{n} | \bar{V}_{z} + \frac{1}{4} \pi C_{M z} D_{z}^{2} \rho \dot{\bar V}_{z}$$
 
 Where: CDy,CDz = Drag coefficients for flow in the local y and z directions.
 
@@ -2277,11 +2379,11 @@ The "rational" technique recognizes that the effect of the pressure distribution
 
 distributed load is:
 
-$$w = \frac{1}{4} \pi D^{2} \gamma c o s \alpha$$
+$$w = \frac{1}{4} \pi D^{2} \gamma \cos \alpha$$
 
 Where: D = member diameter
 
-y= fluid weight density
+$\gamma$ = fluid weight density
 
 α= angle between the member and its projection on a horizontal plane
 
@@ -2289,7 +2391,7 @@ The joint loads consist of forces acting in the directions of all of the members
 
 $$P = \gamma A d$$
 
-Where:  = fluid weight density
+Where: $\gamma$ = fluid weight density
 
 A = "displaced area" i.e. the material area for flooded members, the enclosed area for non-flooded members.
 
@@ -2325,9 +2427,9 @@ When the rational method is used to produce the loads on the structure, API perm
 
 Mud flow is treated as a mass of soil above the mudline moving past the structure and causing the members to be loaded by pressures normal to the member axes and skin frictions acting axially. For convenience these components are referred to as "normal pressure" and "tangential pressure" respectively. The user enters the value of normal pressure that would act on a member oriented normal to the flow and the tangential pressure that would act on a member oriented with its axis along the
 
-flow. Factors are calculated by the program by which these pressures are multiplied for members oriented arbitrarily with respect to the flow. The form of the curve of these factors (normalized pressures) as a function of incidence angle of the flow over the member is shown in the figure below. It is seen from these curves that the tangential pressure remains constant until a critical angle  is reached, after which it drops off to zero when the flow is normal to the member. This is characteristic of a force that is essentially the result of friction.
+flow. Factors are calculated by the program by which these pressures are multiplied for members oriented arbitrarily with respect to the flow. The form of the curve of these factors (normalized pressures) as a function of incidence angle of the flow over the member is shown in the figure below. It is seen from these curves that the tangential pressure remains constant until a critical angle $\beta$ is reached, after which it drops off to zero when the flow is normal to the member. This is characteristic of a force that is essentially the result of friction.
 
-The behavior of the normal pressure, however, is somewhat more complicated. Recent geotechnical work on the subject indicates that a normal pressure variation as shown in the figure gives a good approximation for forces generated for a variety of soil conditions. The user specifies the parameters, , βand plateau to define the curves. Member forces are calculated from these pressures as follows:
+The behavior of the normal pressure, however, is somewhat more complicated. Recent geotechnical work on the subject indicates that a normal pressure variation as shown in the figure gives a good approximation for forces generated for a variety of soil conditions. The user specifies the parameters, $\alpha$, $\beta$ and plateau to define the curves. Member forces are calculated from these pressures as follows:
 
 1. Normal forces per unit length are calculated by multiplying the normal pressure by the dimension of the member in the plane perpendicular to the flow.   
 2. The axial force per unit length is calculated by multiplying the tangential pressure by the circumference for cylindrical members or the perimeter of the enclosing rectangle for noncylindrical members.
@@ -2345,11 +2447,11 @@ Both horizontal and vertical components of mud flow can be accounted for. When m
 
 The apparent wave period, $T_{ a p p } ,$ is the wave period relative to the effective in-line current. For a wave propagating on an arbitrary current profile, determination of the apparent wave period requires solving the following simultaneous equations:
 
-$$\frac{\lambda}{T} = \frac{\lambda}{T_{a p p}} + V_{1} T_{a p p}^{2} = \frac{2 \pi \lambda}{g \tanh (2 \pi d / \lambda)}$$
+$$\frac{\lambda}{T} = \frac{\lambda}{T_{\mathrm{app}}} + V_1, \qquad T_{\mathrm{app}}^2 = \frac{2\pi\lambda}{g\tanh(2\pi d/\lambda)}$$
 
 $$V_{1} = \frac{4 \pi / \lambda}{\sinh (4 \pi d / \lambda)} \int_{- d}^{0} U_{c} (z) \cosh \left[ \frac{4 \pi (z + d)}{\lambda} \right] d z$$
 
-where,  is the wave length, d is the storm water depth, $U_{ c } ( z )$ is the steady state current profile component in the wave direction at elevation z, g is the acceleration of gravity, VI is the effective in-line current velocity and T is the wave period relative to a stationary object.
+where, $\lambda$ is the wave length, d is the storm water depth, $U_{ c } ( z )$ is the steady state current profile component in the wave direction at elevation z, g is the acceleration of gravity, VI is the effective in-line current velocity and T is the wave period relative to a stationary object.
 
 6.9.2 Current Blockage
 
@@ -2367,7 +2469,7 @@ For current profiles where linear stretching is an acceptable approximation, the
 
 $$V_{z} = V_{z}^{\prime} \frac{(z + d)}{(z^{\prime} + d)} \frac{d}{(d + \eta)}$$
 
-where $V_{ z }^{ \prime }$ is the specified current at elevation $z^{ \prime } ,$ d is the storm water depth and  is the distance between the wave surface and the mean water level (where  and z are positive above the mean water level and negative below).
+where $V_{ z }^{ \prime }$ is the specified current at elevation $z^{ \prime } ,$ d is the storm water depth and $\eta$ is the distance between the wave surface and the mean water level (where $\eta$ and z are positive above the mean water level and negative below).
 
 Studies have shown that a nonlinearly stretched current profile may be most appropriate when combined with Doppler-shifted wave kinematics. Nonlinear stretching computes the stretched current Vz for a particle instantaneously at elevation z, based on the speed $V_{ z }^{ \prime }$ specified in the current profile at elevation $z^{ \prime }$ as follows:
 
@@ -3506,7 +3608,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE IS ENTERED AFTER THE '2MET' LINE TO OVERRIDETHE DEAD AND BUOYANCY PROPERTIES.
+GENERAL THIS LINE IS ENTERED AFTER THE '2MET' LINE TO OVERRIDE THE DEAD AND BUOYANCY PROPERTIES.
 
 THESE LINES ARE USED TO INCLUDE DEAD LOAD AND BUOYANCY IN THE MEMBER DISTRIBUTED LOADS. THE USER HAS THE OPTION OF ACCOUNTING FOR BUOYANCY BY EITHER OF TWO METHODS, THE 'MARINE' METHOD OR THE 'RATIONAL' METHOD. IN THE MARINE METHOD THE 'SUBMERGED WEIGHT' OF THE MEMBER IS CALCULATED EQUAL TO THE MEMBER WEIGHT REDUCED BY THE WEIGHT OF THE DISPLACED WATER. THIS DISTRIBUTED LOAD IS APPLIED VERTICALLY. IN THE RATIONAL METHOD MEMBER BUOYANCY IS APPLIED AS A UNIFORM LOAD PERPENDICULAR TO THE MEMBER AND IN A VERTICAL PLANE. IN ADDITION CONCENTRATED LOADS ARE APPLIED TO THE SUBMERGED JOINTS IN THE DIRECTIONS OF THE AXES OF ALL MEMBERS MEETING AT THE RESPECTIVE JOINTS. SEE THE ACCOMPANYING FIGURES.
 
@@ -3533,7 +3635,7 @@ COMMENTARY
 
 
 
-| LINE LABEL | GRAVITY DIRECTION= | PARAMETER OVERRIDEES | PARAMETER OVERRIDEES | BUOYANCY CALCULATION METHOD | BUOY. BELOW MUDLINE | LEAVE BLANK |
+| LINE LABEL | GRAVITY DIRECTION= | PARAMETER OVERRIDES | PARAMETER OVERRIDES | BUOYANCY CALCULATION METHOD | BUOY. BELOW MUDLINE | LEAVE BLANK |
 | --- | --- | --- | --- | --- | --- | --- |
 | LINE LABEL | GRAVITY DIRECTION= | FLOOD CONDITION | WATER WEIGHT DENSITY | BUOYANCY CALCULATION METHOD | BUOY. BELOW MUDLINE | LEAVE BLANK |
 | 2MDL |  |  |  |  |  |  |
@@ -3550,14 +3652,14 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE IS REQUIRED TO SPECIFY THE GENERAL PROPERTIES OF ANAPI 2MET LOAD. THE '2MET' LINE MUST FOLLOW THE 'LOADCN' LINE.  
+GENERAL THIS LINE IS REQUIRED TO SPECIFY THE GENERAL PROPERTIES OF AN API 2MET LOAD. THE '2MET' LINE MUST FOLLOW THE 'LOADCN' LINE.  
 ( 6-11) ENTER THE DIRECTION OF THE WAVE TRAVEL MEASURED IN DEGREES FROM THE GLOBAL X AXIS TOWARD THE GLOBAL Y AXIS.   
-NOTE: WIND AND CURRENT DIRECTION WILL BE CALCULATED RELATIVE TO THISANGLE.  
+NOTE: WIND AND CURRENT DIRECTION WILL BE CALCULATED RELATIVE TO THIS ANGLE.  
 (13-42) ENTER THE LOAD CONDITION SPECIFIC OVERRIDES IF DIFFERENT FROM THE DEFAULT VALUES LISTED ON THE 'LDAPI' OR 'LDOPT' LINE.   
 (13-13) ENTER THE STORM RETURN PERIOD (YEARS) AS EITHER: 'A'......10 YEAR 'B'......25 YEAR 'C'......50 YEAR 'D'.....100 YEAR 'E'.....200 YEAR 'F'...1,000 YEAR 'G'...2,000 YEAR 'H'..10,000 YEAR   
 (15-16) ENTER THE PEAK CASE USED IN COMBINING EXTREME LOAD TYPES: 'WA'...PEAK WAVE 'WI'...PEAK WIND 'CU'...PEAK CURRENT 'EX'...EXTREME CASE (NO FACTORING DOWN LOAD TYPES)   
 (18-20) ENTER 'DIR' IF THE CALCULATED OMNI-DIRECTIONAL WAVE HEIGHT IS TO BE FACTORED USING API 2MET, FIGURE 4.2.2-1.   
-(22-26) ENTER THE CURRENT INLINE ANGLE TOLERANCE. IF THE CALCULATEDCURRENT DIRECTION IS WITHIN THIS TOLERANCE FROM THE WAVEANGLE, THE CURRENT WILL BE ASSUMED INLINE WITH THE WAVE.  
+(22-26) ENTER THE CURRENT INLINE ANGLE TOLERANCE. IF THE CALCULATED CURRENT DIRECTION IS WITHIN THIS TOLERANCE FROM THE WAVE ANGLE, THE CURRENT WILL BE ASSUMED INLINE WITH THE WAVE.  
 (28-28) ENTER 'I' IF THE WIND DIRECTION IS TO BE INLINE WITH THE WAVE ANGLE; OTHERWISE, ENTER 'X' TO USE API 2MET DEFAULTS.
 
 COLUMNS
@@ -3579,9 +3681,9 @@ IF 'BC' IS ENTERED IN COLUMN 71-72, ENTER THE ELEVATION WHERE THE BLOCKING FACTO
 
 
 
-| LINE LABEL | WAVE ANGLE | LOAD CONDITION OVERRIDES | LOAD CONDITION OVERRIDES | LOAD CONDITION OVERRIDES | LOAD CONDITION OVERRIDES | LOAD CONDITION OVERRIDES | LOAD CONDITION OVERRIDES | LOAD CONDITION OVERRIDES | INCLUDE LOAD TYPES | INCLUDE LOAD TYPES | INCLUDE LOAD TYPES | INCLUDE LOAD TYPES | CURRENT OPTIONS | CURRENT OPTIONS | CURRENT OPTIONS | LEAVE BLANK |
+| LINE LABEL | WAVE ANGLE | LOAD CONDITION OVERRIDES | LOAD CONDITION OVERRIDES | LOAD CONDITION OVERRIDES | LOAD CONDITION OVERRIDES | LOAD CONDITION OVERRIDES | LOAD CONDITION OVERRIDES | LOAD CONDITION OVERRIDES | INCLUDED LOAD TYPES | INCLUDED LOAD TYPES | INCLUDED LOAD TYPES | INCLUDED LOAD TYPES | CURRENT OPTIONS | CURRENT OPTIONS | CURRENT OPTIONS | LEAVE BLANK |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | WAVE ANGLE | RETURN PERIOD | PEAK CASE | DIRECTIONAL FACTOR OPTION | CURRENT ONLINE ANGLE | WIND ONLINE OPTION | MLLW | MUDLINE ELEVATION | WAVE | WIND | CURRENT | DEAD | MINIMUM ONLINE CURRENT VELOCITY | FACTOR OR ELEVATION | OPTION | LEAVE BLANK |
+| LINE LABEL | WAVE ANGLE | RETURN PERIOD | PEAK CASE | DIRECTIONAL FACTOR OPTION | CURRENT INLINE ANGLE | WIND INLINE OPTION | MLLW | MUDLINE ELEVATION | WAVE | WIND | CURRENT | DEAD | MINIMUM INLINE CURRENT VELOCITY | FACTOR OR ELEVATION | OPTION | LEAVE BLANK |
 | 2MET |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | 1--4 | 6<--11 | 13 | 15--16 | 18--20 | 22<--26 | 28 | 30<--35 | 37<--42 | 50 | 51 | 52 | 53 | 59--62 | 63--70 | 71--72 | 73--80 |
 | DEFAULT |  | 'LDAPI' | 'LDAPI' |  | 'LDAPI' |  | 'LDOPT' | 'LDOPT' | I' | I' | I' | I' | 0.3 FT/S |  |  |  |
@@ -3597,7 +3699,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE IS ENTERED AFTER THE '2MET' LINE TO OVERRIDEPROPERTIES OF AN API 2MET WAVE LOAD.
+GENERAL THIS LINE IS ENTERED AFTER THE '2MET' LINE TO OVERRIDE PROPERTIES OF AN API 2MET WAVE LOAD.
 
 ( 5- 8) ENTER THE WAVE KINEMATICS FACTOR OVERRIDE USED TO ACCOUNT FOR SPREADING AND WAVE PROFILE IRREGULARITY. IF LEFT BLANK, A FACTOR OF 1.0 WILL BE USED FOR RETURN PERIODS LESS THAN OR EQUAL TO 25 YEARS. FOR ALL OTHER RETURN PERIODS, A FACTOR OF 0.88 WILL BE USED.   
 ( 9-12) ENTER CODE FOR THE TYPE OF WAVE TO BE GENERATED. OPTIONS ARE: 'AIRY'...AIRY WAVE THEORY. 'STOK'...STOKES FIFTH ORDER THEORY. 'STRN'...STREAM FUNCTION THEORY EXCLUDING CURRENT EFFECTS.   
@@ -3624,9 +3726,9 @@ MAXIMUM MOMENT AND SHEAR ARE MAXIMUM ABSOLUTE VALUES. MINIMUMS ARE THE LARGEST V
 ( 75 ) ENTER 'L' IF ONLY LOCAL ACCELERATIONS ARE TO BE CONSIDERED, CONVECTIVE ACCELERATION TERM IS OMITTED. NOTE: THIS OPTION IS NOT APPLICABLE FOR STREAM FUNCTION WAVES.   
 ( 76 ) VARIOUS PRINT OPTIONS MAY BE SPECIFIED AS FOLLOWS: 0 OR BLANK..MINIMUM PRINT.
 
-.AS PER 0 PLUS THE OVERTURNING MOMENT AND SHEAR ARE PRINTED FOR EACH LOAD STEP.   
-.AS PER 1 PLUS A SUM OF FORCES AND MOMENTS ABOUT THE MUDLINE ARE PRINTED FOR EACH LOAD STEP.   
-.AS PER 2 PLUS THE VELOCITIES AND ACCELERATIONS AT THE GRID POINTS ARE PRINTED.
+1......AS PER 0 PLUS THE OVERTURNING MOMENT AND SHEAR ARE PRINTED FOR EACH LOAD STEP.   
+2......AS PER 1 PLUS A SUM OF FORCES AND MOMENTS ABOUT THE MUDLINE ARE PRINTED FOR EACH LOAD STEP.   
+3......AS PER 2 PLUS THE VELOCITIES AND ACCELERATIONS AT THE GRID POINTS ARE PRINTED.
 
 (77-78) IF 'STRE' OR 'STRN' IS IN COLUMNS 11-14, ENTER THE DESIRED ORDER OF THE GENERATED STREAM FUNCTION WAVE. ODD VALUES SHOULD BE USED WITH A MAXIMUM OF 21. IF LEFT BLANK THE ORDER WILL BE SELECTED BASED ON ATKINS.
 
@@ -3649,7 +3751,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE IS ENTERED AFTER THE '2MET' LINE TO OVERRIDEPROPERTIES OF AN API 2MET WIND LOAD AND/OR TO DESIGNATEWIND AREAS TO BE USED.
+GENERAL THIS LINE IS ENTERED AFTER THE '2MET' LINE TO OVERRIDE PROPERTIES OF AN API 2MET WIND LOAD AND/OR TO DESIGNATE WIND AREAS TO BE USED.
 
 ( 5 ) ENTER '1' FOR A DETAILED REPORT ON LOADS FOR EACH WIND AREA.   
 ( 7 ) ENTER 'W' IF THE TUBULAR MEMBER DRAG COEFFICIENTS FOR WIND ARE TO BE THE SAME AS USED FOR THE STEADY STATE CURRENT. ENTER 'I' IF MEMBERS ARE TO BE IGNORED AND ONLY WIND AREAS ARE TO BE CONSIDERED WHEN GENERATING WIND LOADING. LEAVE BLANK IF TUBULAR MEMBERS HAVE A DRAG COEFFICIENT OF 0.5 AND NON-TUBULAR MEMBERS HAVE A DRAG COEFFICIENT OF 1.5.   
@@ -3658,7 +3760,7 @@ GENERAL THIS LINE IS ENTERED AFTER THE '2MET' LINE TO OVERRIDEPROPERTIES OF AN A
 
 
 
-| LINE LABEL | PRINT OPTION | MEMBER LOADING OPTION | WIND DURATION | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED |  |
+| LINE LABEL | PRINT OPTION | MEMBER LOADING OPTION | WIND DURATION | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LINE LABEL | PRINT OPTION | MEMBER LOADING OPTION | WIND DURATION | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 |
 | 2MWI |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
@@ -3777,9 +3879,9 @@ COLUMNS
 
 COMMENTARY
 
-( 1- 4) ENTER 'AREA' ON ALL LINES IN THIS SET. THESE LINES AREPRECEDED BY A HEADER LINE HAVING ONLY THIS ENTRY.ADDITIONAL 'AREA' LINES CAN BE USED AS REQUIRED TO INCREASE THENUMBER OF DISTRIBUTION JOINTS, IF COLUMNS 7-50 ARE LEFT BLANK.  
+( 1- 4) ENTER 'AREA' ON ALL LINES IN THIS SET. THESE LINES ARE PRECEDED BY A HEADER LINE HAVING ONLY THIS ENTRY. ADDITIONAL 'AREA' LINES CAN BE USED AS REQUIRED TO INCREASE THE NUMBER OF DISTRIBUTION JOINTS, IF COLUMNS 7-50 ARE LEFT BLANK.  
 ( 5- 6) ENTER THE ALPHANUMERIC IDENTIFIER DESIGNATING THIS AREA. ALL DEFINED AREAS HAVING THE SAME IDENTIFIER WILL BE LOADED IN ANY LOAD CASE THAT SPECIFIES THAT IDENTIFIER ON THE WIND DEFINITION LINES. IF LEFT BLANK THIS AREA WILL BE LOADED IN ALL LOAD CASES HAVING WIND LOADS.   
-( 7-24) IF THE AREA OPTION IS 'F' OR 'B' IN COLUMN 79 ENTER THE AREA PROJECTIONS. IF THE AREA OPTION IS 'R' ENTER THE TOTAL AREA IN COLUMNS 7-12. COLUMNS 13-24 MUST BE LEFT BLANK. IF THE AREA OPTION IS 'A' ENTER THE TOTAL AREA IN COLUMNS 7-12 AND THE HORIZONTAL AND VERTICAL ANGLES, % AND #, IN COLUMNS 13-24. IF THE AREA OPTION IS 'D' IN COLUMN 79 ENTER THE GLOBAL DIMENSION REQUIRED TO FORM A PROJECTED AREA. IF THE AREA OPTION IS 'W' IN COLUMN 79 ENTER THE WIDTH, HEIGH AND ANGLE BETWEEN OUTWARD NORMAL AND GLOBAL X AXIS MEASURED COUTER CLOCKWISE STARTING FROM GLOBAL X AXIS.   
+( 7-24) IF THE AREA OPTION IS 'F' OR 'B' IN COLUMN 79 ENTER THE AREA PROJECTIONS. IF THE AREA OPTION IS 'R' ENTER THE TOTAL AREA IN COLUMNS 7-12. COLUMNS 13-24 MUST BE LEFT BLANK. IF THE AREA OPTION IS 'A' ENTER THE TOTAL AREA IN COLUMNS 7-12 AND THE HORIZONTAL AND VERTICAL ANGLES, % AND #, IN COLUMNS 13-24. IF THE AREA OPTION IS 'D' IN COLUMN 79 ENTER THE GLOBAL DIMENSION REQUIRED TO FORM A PROJECTED AREA. IF THE AREA OPTION IS 'W' IN COLUMN 79 ENTER THE WIDTH, HEIGHT AND ANGLE BETWEEN OUTWARD NORMAL AND GLOBAL X AXIS MEASURED COUTER CLOCKWISE STARTING FROM GLOBAL X AXIS.   
 (25-45) ENTER THE GLOBAL COORDINATES OF THE CENTROID OF THIS AREA.   
 (46-50) ENTER THE SHAPE FACTOR FOR CALCULATING THE FORCE ON THIS AREA. SOME TYPICAL SHAPE FACTORS (SUGGESTED BY A.B.S.): CYLINDRICAL TUBES _0.5 FLAT SURFACES _1.0 ISOLATED STRUCTURAL SHAPES _1.5
 
@@ -3788,7 +3890,7 @@ COLUMNS
 COMMENTARY
 
 (51-78) ENTER THE NAMES OF THE JOINTS WHERE THE FORCES ON THIS AREA ARE TO BE REACTED. THE JOINT FORCES ARE STATICALLY EQUIVALENT TO THE WIND FORCES ON THIS AREA.   
-( 79 ) ENTER 'F' FOR A FLAT SURFACE. THE FORCE IS PERPENDICULAR TO THE SURFACE. ENTER 'R' FOR A ROUND SURFACE. THE FORCE IS PARALLEL TO THE WIND. ENTER 'A' IF THE SURFACE IS FLAT AND SPECIFIED IN SPHERICAL COORDINATES IN COLUMNS 7-24. ENTER 'B' IF THREE SEPARATE FLAT AREAS ARE DEFINED WITH THE SAME CENTROID. ENTER 'D' IF THE SURFACE IS FLAT AND SPECIFIED AS GLOBAL X, Y, AND Z DIMENSIONS IN COLUMNS 7-24. TWO DIMENSIONS ARE REQUIRED TO FORM A PROJECTED AREA. IF THREE DIMENSIONS ARE ENTERED, THREE SEPARATE PROJECTED AREAS WILL BE CREATED. ENTER 'W' FOR A FLAT SURFACE WITH ORIENTATION TO DEFINE WIND WHICH IS APPLICABLE FOR API 4F ONLY.   
+( 79 ) ENTER 'F' FOR A FLAT SURFACE. THE FORCE IS PERPENDICULAR TO THE SURFACE. ENTER 'R' FOR A ROUND SURFACE. THE FORCE IS PARALLEL TO THE WIND. ENTER 'A' IF THE SURFACE IS FLAT AND SPECIFIED IN SPHERICAL COORDINATES IN COLUMNS 7-24. ENTER 'B' IF THREE SEPARATE FLAT AREAS ARE DEFINED WITH THE SAME CENTROID. ENTER 'D' IF THE SURFACE IS FLAT AND SPECIFIED AS GLOBAL X, Y, AND Z DIMENSIONS IN COLUMNS 7-24. TWO DIMENSIONS ARE REQUIRED TO FORM A PROJECTED AREA. IF THREE DIMENSIONS ARE ENTERED, THREE SEPARATE PROJECTED AREAS WILL BE CREATED. ENTER 'W' FOR A FLAT SURFACE WITH ORIENTATION TO DEFINE WIND WALLS WHICH IS APPLICABLE FOR API 4F ONLY.   
 ( 80 ) IF 'W' IS ENTERED IN COLUMN 79 FOR API 4F WIND WALLS : ENTER 'S' FOR SINGLE SIDED WALL ENTER 'T' FOR THREE SIDED WALLS ENTER 'F' FOR FOUR SIDED WALLS
 
 
@@ -3836,7 +3938,7 @@ LINEAR INTERPOLATION IS DONE FOR OTHER DIAMETERS.
 
 
 
-| LINE LABEL | DEFAULT TABLE SELECTION | DIAMETER | COEFFICIENTS FOR CLEAN MEMBERS | COEFFICIENTS FOR CLEAN MEMBERS | COEFFICIENTS FOR CLEAN MEMBERS | COEFFICIENTS FOR CLEAN MEMBERS | COEFFICIENTS FOR FOLED MEMBERS | COEFFICIENTS FOR FOLED MEMBERS | COEFFICIENTS FOR FOLED MEMBERS | COEFFICIENTS FOR FOLED MEMBERS | DIFFRACTION OPTION | LEAVE BLANK |
+| LINE LABEL | DEFAULT TABLE SELECTION | DIAMETER | COEFFICIENTS FOR CLEAN MEMBERS | COEFFICIENTS FOR CLEAN MEMBERS | COEFFICIENTS FOR CLEAN MEMBERS | COEFFICIENTS FOR CLEAN MEMBERS | COEFFICIENTS FOR FOULED MEMBERS | COEFFICIENTS FOR FOULED MEMBERS | COEFFICIENTS FOR FOULED MEMBERS | COEFFICIENTS FOR FOULED MEMBERS | DIFFRACTION OPTION | LEAVE BLANK |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LINE LABEL | DEFAULT TABLE SELECTION | DIAMETER | NORMAL DRAG COEFFICIENT | TANGENTIAL DRAG COEFFICIENT | NORMAL INERTIA COEFFICIENT | TANGENTIAL INERTIA COEFFICIENT | NORMAL DRAG COEFFICIENT | TANGENTIAL DRAG COEFFICIENT | NORMAL INERTIA COEFFICIENT | TANGENTIAL INERTIA COEFFICIENT | DIFFRACTION OPTION | LEAVE BLANK |
 | CDM |  |  |  |  |  |  |  |  |  |  |  |  |
@@ -3880,7 +3982,7 @@ COMMENTARY
 
 GENERAL
 
-THIS LINE SET ALLOWS THE USER TO SPECIFY THE DECREASE OFMEMBER DIMENSIONS DUE TO CORROSION. CORROSION ZONES ARESPECIFIED AS A FUNCTION OF ELEVATION. AS MANY CORROSION ZONESMAYBE INPUT AS REQUIRED. MEMBERS PIERCING AN INTERFACEBETWEEN TWO ZONES ARE SEGMENTED AT THAT POINT AND ARE GIVENTHE APPROPRIATE CORROSION OVER EACH SEGMENT. THE CORROSIONZONES MAY HAVE GAPS BUT SHOULD NOT OVERLAP.
+THIS LINE SET ALLOWS THE USER TO SPECIFY THE DECREASE OF MEMBER DIMENSIONS DUE TO CORROSION. CORROSION ZONES ARE SPECIFIED AS A FUNCTION OF ELEVATION. AS MANY CORROSION ZONES MAYBE INPUT AS REQUIRED. MEMBERS PIERCING AN INTERFACE BETWEEN TWO ZONES ARE SEGMENTED AT THAT POINT AND ARE GIVEN THE APPROPRIATE CORROSION OVER EACH SEGMENT. THE CORROSION ZONES MAY HAVE GAPS BUT SHOULD NOT OVERLAP.
 
 MEMBERS THAT ARE SPECIFIED AS HAVING NO CORROSION ON THE GROUP OR MEMBER OVERRIDE LINES (LINE SETS 'GRPOV' AND 'MEMOV'), WILL NOT BE MODIFIED BY THIS LINE SET.
 
@@ -3954,7 +4056,7 @@ DIMENSION PROPERTIES MODIFIED BY EFFECTS OF CORROSION
 | LINE LABEL | BOTTOM OF ZONE | TOP OF ZONE | CORROSION OPTION | BOTTOM OF ZONE | TOP OF ZONE | MIN THICKNESS | MAX THICKNESS | MIN CORRODED THICKNESS | MEMBER LOAD OPTION | VERTICAL COORDINATE | OUTPUT MODEL | GRUP NAME | SECT NAME |
 | CORRZ |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | 1--5 | 7<--13 | 15<--21 | 23 | 25<--31 | 33<--39 | 41<--47 | 49<--55 | 57<--63 | 65 | 67 | 69-70 | 71-73 | 74-80 |
-| DEFAULT |  |  | 'F' |  |  |  |  |  | 'C' | 'LOOPT' |  |  |  |
+| DEFAULT |  |  | 'F' |  |  |  |  |  | 'C' | 'LDOPT' |  |  |  |
 | ENGLISH | FT | FT |  | IN OR % | IN OR % | IN | IN | IN |  |  |  |  |  |
 | METRIC | M | M |  | CM OR % | CM OR % | CM | CM | CM |  |  |  |  |  |
 
@@ -3966,13 +4068,13 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THESE LINES ARE USED TO INCLUDE THE EFFECT OF A STEADYHORIZONTAL CURRENT ON THE STRUCTURAL LOADS. THE CURRENT MAYVARY WITH DEPTH AND ITS DIRECTION MAY BE DIFFERENT FROM THATOF THE WAVE.
+GENERAL THESE LINES ARE USED TO INCLUDE THE EFFECT OF A STEADY HORIZONTAL CURRENT ON THE STRUCTURAL LOADS. THE CURRENT MAY VARY WITH DEPTH AND ITS DIRECTION MAY BE DIFFERENT FROM THAT OF THE WAVE.
 
 ( 1- 4) ENTER 'CURR' ON EACH LINE OF THIS SET. THE FIRST LINE IS A HEADER LINE HAVING ONLY THIS ENTRY.   
 ( 5- 8) ENTER THE MINIMUM INLINE CURRENT VALUE TO BE USED FOR FORCE CALCULATION PER API-RP2A 20TH ED. DEFAULT IS INPUT PROFILE. SEE COLUMNS 63-65.   
 ( 9-16) ENTER THE ELEVATION ABOVE THE MUDLINE TO WHICH THIS ENTRY APPLIES. A MAXIMUM OF TWENTY ELEVATIONS MAY BE INPUT. THE DATA MUST BE ENTERED IN ORDER OF INCREASING ELEVATION. SEE COLUMNS 67-69 FOR INPUT OPTIONS.   
 (17-24) ENTER THE CURRENT VELOCITY AT THIS ELEVATION. SEE COLUMNS 63-65.   
-(25-32) ENTER THE DIRECTION OF THE CURRENT. IF LEFT BLANK, THECURRENT DIRECTION WILL BE THE SAME AS ON THE PREVIOUSCURRENT DATA ENTRY. THE CURRENT DIRECTION IS MEASURED FROMTHE GLOBAL REFERENCE AXIS AS SHOWN ON THE ACCOMPANYINGFIGURES.  
+(25-32) ENTER THE DIRECTION OF THE CURRENT. IF LEFT BLANK, THE CURRENT DIRECTION WILL BE THE SAME AS ON THE PREVIOUS CURRENT DATA ENTRY. THE CURRENT DIRECTION IS MEASURED FROM THE GLOBAL REFERENCE AXIS AS SHOWN ON THE ACCOMPANYING FIGURES.  
 (33-40) ENTER THE MUDLINE ELEVATION IF DIFFERENT FROM THE VALUE SPECIFIED ON PREVIOUS INPUT LINES.   
 (41-58) THE BLOCKING FACTOR IS USED TO REPRESENT THE REDUCTION IN CURRENT VELOCITY DUE TO THE PRESENCE OF THE STRUCTURE. THIS IS ACCOMPLISHED IN ONE OF TWO WAYS: THE USER INPUTS THE BLOCKING FACTOR DIRECTLY, OR THE PROGRAM WILL CALCULATE THE BLOCKING FACTOR BASED ON THE CROSS SECTIONAL AREA OF THE STRUCTURE AT A SPECIFIED ELEVATION.
 
@@ -3987,7 +4089,7 @@ COMMENTARY
 (63-65) IF THE CURRENT VELOCITY IS TO BE ENTERED IN FEET/SEC INSTEAD OF KNOTS, ENTER 'FPS' HERE. THIS OPTION IS ONLY APPLICABLE FOR ENGLISH UNITS.   
 (67-69) IF THE ELEVATIONS ARE TO BE ENTERED IN PERCENT OF WATER DEPTH, ENTER 'WDP' HERE.   
 (71-73) IF THE APPARENT WAVE PERIOD IS TO BE USED, ENTER 'AWP' HERE. THIS TAKES INTO ACCOUNT THE DOPPLER EFFECT ON THE WAVE PERIOD DUE TO THE CURRENT.   
-NOTE: WHEN A STREAM FUNCTION WAVE WITH CURRENT INCLUDED ('STRE'WAVE) IS REPEATED, THE COMPONENT OF CURRENT IN THE PLANE OFTHE WAVE IS AUTOMATICALLY INCLUDED IN THE REPEAT LOAD CASE.HOWEVER, ANY TRANSVERSE CURRENT IS NOT INCLUDED IN THE REPEATLOAD CASE. FOR A STREAM FUNCTION WAVE WITH NO CURRENT('STRN' WAVE), THE REPEATED WAVE IS GENERATED WITHOUTCURRENT. THE ABOVE IS NOT TRUE WHEN REPEATING OTHER WAVE TYPES.
+NOTE: WHEN A STREAM FUNCTION WAVE WITH CURRENT INCLUDED ('STRE' WAVE) IS REPEATED, THE COMPONENT OF CURRENT IN THE PLANE OF THE WAVE IS AUTOMATICALLY INCLUDED IN THE REPEAT LOAD CASE. HOWEVER, ANY TRANSVERSE CURRENT IS NOT INCLUDED IN THE REPEAT LOAD CASE. FOR A STREAM FUNCTION WAVE WITH NO CURRENT('STRN' WAVE), THE REPEATED WAVE IS GENERATED WITHOUT CURRENT. THE ABOVE IS NOT TRUE WHEN REPEATING OTHER WAVE TYPES.
 
 
 
@@ -4033,13 +4135,13 @@ ENTER 'R' IF IT IS TO BE CALCULATED BY THE 'RATIONAL' METHOD.
 
 ENTER 'A' IF USING THE 'RATIONAL' METHOD WITH HYDROSTATIC PRESSURE BASED ON API RP 2A EQ. 3.2.5-3.
 
-ENTER 'P' IF USING THE 'RATIONAL' METHOD WITH HYDROSTATICPRESSURE BASED ON API RP 2A EQ. 3.2.5-3 FOR JOINTS ABOVEMUDLINE. FOR JOINTS AT OR BELOW MUDLINE, HYDROSTATIC PRESSUREBASED ON STILL WATER DEPTH.
+ENTER 'P' IF USING THE 'RATIONAL' METHOD WITH HYDROSTATIC PRESSURE BASED ON API RP 2A EQ. 3.2.5-3 FOR JOINTS ABOVE MUDLINE. FOR JOINTS AT OR BELOW MUDLINE, HYDROSTATIC PRESSURE BASED ON STILL WATER DEPTH.
 
 NOTE: THE 'M' METHOD ASSUMES MEMBERS CAN FLOOD UP TO THE MLW.
 
 THE 'R' METHOD IS BASED ON THE ASSUMPTION THAT FLOODED MEMBERS ARE OPEN ENDED AND MEMBERS CAN FLOOD TO THE WATER SURFACE.
 
-THE 'A' AND 'P' METHOD ARE BASED ON THE ASSUMPTION THAT THEMEMBEREND IS CAPPED WHERE THE END FORCE IS BASED ON EXTERNALAND INTERNAL PRESSURE ASSUMING MEMBERS CAN ONLY FLOOD UP TO
+THE 'A' AND 'P' METHOD ARE BASED ON THE ASSUMPTION THAT THEMEMBER END IS CAPPED WHERE THE END FORCE IS BASED ON EXTERNAL AND INTERNAL PRESSURE ASSUMING MEMBERS CAN ONLY FLOOD UP TO
 
 (47-49) ENTER 'BML' TO INCLUDE BUOYANCY OF ELEMENTS BELOW THE MUDLINE.
 
@@ -4049,9 +4151,9 @@ NOTE: OPTION IS IGNORED IF BUOYANCY IS CALCULATED USING 'RATIONAL' METHOD.
 
 
 
-| LINE LABEL | GRAVITY DIRECTION | PARAMETER OVERRIDEES | PARAMETER OVERRIDEES | PARAMETER OVERRIDEES | PARAMETER OVERRIDEES | BUOYANCY CALCULATION METHOD | BUOY. BELOW MUDLINE | INCLUDE MARINE GROWTH ONLY | LEAVE THIS FIELD BLANK |
+| LINE LABEL | GRAVITY DIRECTION | PARAMETER OVERRIDES | PARAMETER OVERRIDES | PARAMETER OVERRIDES | PARAMETER OVERRIDES | BUOYANCY CALCULATION METHOD | BUOY. BELOW MUDLINE | INCLUDE MARINE GROWTH ONLY | LEAVE THIS FIELD BLANK |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | GRAVITY DIRECTION | FLOOD CONDITION | WATER深度 | MUDLINE ELEVATION | WATER WEIGHT DENSITY | BUOYANCY CALCULATION METHOD | BUOY. BELOW MUDLINE | INCLUDE MARINE GROWTH ONLY | LEAVE THIS FIELD BLANK |
+| LINE LABEL | GRAVITY DIRECTION | FLOOD CONDITION | WATER DEPTH | MUDLINE ELEVATION | WATER WEIGHT DENSITY | BUOYANCY CALCULATION METHOD | BUOY. BELOW MUDLINE | INCLUDE MARINE GROWTH ONLY | LEAVE THIS FIELD BLANK |
 | DEAD |  |  |  |  |  |  |  |  |  |
 | 1--4 | 11--12 | 15--17 | 21<--28 | 29<--36 | 37<--44 | 45 | 47--49 | 51--52 | 53----80 |
 | DEFAULT |  |  |  |  |  | 'M' |  |  |  |
@@ -4066,7 +4168,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE SET SPECIFIES THE SET OF JOINTS FOR THENON-STRUCTURAL ELEMENT SET. THIS DATA CONTAINS ALL THE JOINTSWHICH DESCRIBE THE NON-STRUCTURAL ELEMENT SET EXCLUDING THEBOUNDARY JOINTS WHICH ARE DESCRIBED ON THE 'KEEP' LINE SET.SEASTATE DELETES ALL MEMBERS, PLATES, SHELLS, AREAS, ETC.,THAT ARE DEFINED BY THESE JOINTS PLUS THE BOUNDARY JOINTSDEFINED ON THE 'KEEP' LINE SET, FROM THE OUTPUT STRUCTURALFILE.
+GENERAL THIS LINE SET SPECIFIES THE SET OF JOINTS FOR THE NON-STRUCTURAL ELEMENT SET. THIS DATA CONTAINS ALL THE JOINTS WHICH DESCRIBE THE NON-STRUCTURAL ELEMENT SET EXCLUDING THE BOUNDARY JOINTS WHICH ARE DESCRIBED ON THE 'KEEP' LINE SET. SEASTATE DELETES ALL MEMBERS, PLATES, SHELLS, AREAS, ETC.,THAT ARE DEFINED BY THESE JOINTS PLUS THE BOUNDARY JOINTS DEFINED ON THE 'KEEP' LINE SET, FROM THE OUTPUT STRUCTURAL FILE.
 
 ( 1- 6) ENTER 'DELETE' ON ALL LINES IN THIS SET.   
 ( 8-76) ENTER THE JOINT NAMES FOR THIS NON-STRUCTURAL MEMBER SET. REPEAT THIS LINE SET TO DESCRIBE ALL JOINTS.
@@ -4075,11 +4177,11 @@ NOTE: DUMMY NON-STRUCTURAL ELEMENTS JOINTS IN A 'DELETE' SET CANNOT APPEAR IN AN
 
 
 
-| LINE LABEL | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | JOINT 1 | JOINT 2 | JOINT 3 | JOINT 4 | JOINT 5 | JOINT 6 | JOINT 7 | JOINT 8 | JOINT 9 | JOINT 10 | JOINT 11 | JOINT 12 | JOINT 13 | JOINT 14 |  |  |
-| DELETE |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1-- 6 | 8-->11 | 13-->16 | 18-->21 | 23-->26 | 28-->31 | 33-->36 | 38-->41 | 43-->46 | 48-->51 | 53-->56 | 58-->61 | 63-->66 | 68-->71 | 73-->76 | 77--80 |  |
+| LINE LABEL | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | NON-STRUCTURAL ELEMENT SET DESCRIPTION JOINTS | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | JOINT 1 | JOINT 2 | JOINT 3 | JOINT 4 | JOINT 5 | JOINT 6 | JOINT 7 | JOINT 8 | JOINT 9 | JOINT 10 | JOINT 11 | JOINT 12 | JOINT 13 | JOINT 14 | LEAVE BLANK |
+| DELETE |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 6 | 8-->11 | 13-->16 | 18-->21 | 23-->26 | 28-->31 | 33-->36 | 38-->41 | 43-->46 | 48-->51 | 53-->56 | 58-->61 | 63-->66 | 68-->71 | 73-->76 | 77--80 |
 
 
 
@@ -4103,11 +4205,11 @@ NOTE: ALL GROUP AND MEMBER DATA WILL BE ELIMINATED FROM THE SEASTATE OUTPUT DATA
 
 
 
-| LINE LABEL | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | GRUP 1 | GRUP 2 | GRUP 3 | GRUP 4 | GRUP 5 | GRUP 6 | GRUP 7 | GRUP 8 | GRUP 9 | GRUP 10 | GRUP 11 | GRUP 12 | GRUP 13 | GRUP 14 | GRUP 15 | GRUP 16 |  |  |
-| DELGRP |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1-- 6 | 9<--11 | 13<--15 | 17<--19 | 21<--23 | 25<--27 | 29<--31 | 33<--35 | 37<--39 | 41<--43 | 45<--47 | 49<--51 | 53<--55 | 57<--59 | 61<--63 | 65<--67 | 69<--71 | 72--80 |  |
+| LINE LABEL | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | ENTER MEMBER GRUPS TO BE DELETED | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | GRUP 1 | GRUP 2 | GRUP 3 | GRUP 4 | GRUP 5 | GRUP 6 | GRUP 7 | GRUP 8 | GRUP 9 | GRUP 10 | GRUP 11 | GRUP 12 | GRUP 13 | GRUP 14 | GRUP 15 | GRUP 16 | LEAVE BLANK |
+| DELGRP |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 6 | 9<--11 | 13<--15 | 17<--19 | 21<--23 | 25<--27 | 29<--31 | 33<--35 | 37<--39 | 41<--43 | 45<--47 | 49<--51 | 53<--55 | 57<--59 | 61<--63 | 65<--67 | 69<--71 | 72--80 |
 
 
 
@@ -4226,7 +4328,7 @@ THE USER IS LIMITED TO 100 SETS OF NON-STRUCTURAL ELEMENTS.
 
 | LINE LABEL | STRUCTURE NAME | ENTER DESCRIPTIVE INFORMATION |
 | --- | --- | --- |
-| Dummy |  |  |
+| DUMMY |  |  |
 | 1-- 5 | 7--14 | 15--------80 |
 
 
@@ -4246,12 +4348,12 @@ GENERAL THE WEIGHT SELECTION RECORD ALLOWS THE SELECTION OF WEIGHT GROUPS TO BE 
 
 
 
-| LINE LABEL | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | CM VALUE | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | 1ST | 2ND | 3RD | 4TH | 5TH | 6TH | 7TH | 8TH | 9TH | 10TH | 11TH | 12TH | 13TH | 14TH | 15TH | 16TH |  | CM VALUE |  |
-| DYNAMAS |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1--6 | 9<--12 | 13<--16 | 17<--20 | 21<--24 | 25<--28 | 29<--32 | 33<--36 | 37<--40 | 41<--44 | 45<--48 | 49<--52 | 53<--56 | 57<--60 | 61<--64 | 65<--68 | 69<--72 | 73<--76 | 77--80 |  |
-| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 1 |  |  |
+| LINE LABEL | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | WEIGHT GROUP SELECTIONS FOR DYNAMICS | CM VALUE | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | 1ST | 2ND | 3RD | 4TH | 5TH | 6TH | 7TH | 8TH | 9TH | 10TH | 11TH | 12TH | 13TH | 14TH | 15TH | 16TH | CM VALUE | LEAVE BLANK |
+| DYNMAS |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 6 | 9<--12 | 13<--16 | 17<--20 | 21<--24 | 25<--28 | 29<--32 | 33<--36 | 37<--40 | 41<--44 | 45<--48 | 49<--52 | 53<--56 | 57<--60 | 61<--64 | 65<--68 | 69<--72 | 73<--76 | 77--80 |
+| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 1 |  |
 
 
 
@@ -4261,7 +4363,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THE ELEVATION RECORD ALLOWS THE EASY RELOCATION OF FOOTPRINTWEIGHTS BY REFERENCING AN ELEVATION IDENTIFIER.
+GENERAL THE ELEVATION RECORD ALLOWS THE EASY RELOCATION OF FOOTPRINT WEIGHTS BY REFERENCING AN ELEVATION IDENTIFIER.
 
 ( 1- 4) ENTER 'ELEV'.   
 ( 7-10) ENTER A FOUR CHARACTER ELEVATION IDENTIFIER. THIS IDENTIFIER IS USED ON 'WGTFP' OR 'WGTNS' LINES TO REFERENCE THIS ELEVATION. EACH ELEVATION IDENTIFIER MUST BE UNIQUE.   
@@ -4306,7 +4408,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THE EXCLUDE GROUP RECORD SPECIFIES WHICH MEMBER GROUPS CANNOTBE USED IN SELECTING WHICH MEMBERS ARE ELIGIBLE FOR LOADINGFROM THE FOOTPRINT WEIGHT LINES.
+GENERAL THE EXCLUDE GROUP RECORD SPECIFIES WHICH MEMBER GROUPS CANNOT BE USED IN SELECTING WHICH MEMBERS ARE ELIGIBLE FOR LOADING FROM THE FOOTPRINT WEIGHT LINES.
 
 ( 1- 6) ENTER 'EXCGRP'.   
 ( 7-10) ENTER A FOUR CHARACTER WEIGHT GROUP IDENTIFIER. THIS IDENTIFIES THE WEIGHT GROUP TO WHICH THESE EXCLUSIONS APPLY. IF LEFT BLANK, THEN ALL THESE EXCLUSIONS APPLY TO ALL WEIGHT GROUPS WHICH HAVE FOOTPRINTS. A WEIGHT GROUP HAS A FOOTPRINT IF AND ONLY IF THE WEIGHT GROUP IDENTIFIER IS CALLED OUT IN AT LEAST ONE 'WGTFP' LINE.   
@@ -4314,7 +4416,7 @@ GENERAL THE EXCLUDE GROUP RECORD SPECIFIES WHICH MEMBER GROUPS CANNOTBE USED IN 
 
 
 
-| LINE LABEL | WEIGHT GROUP ID | EXCUSED MEMBER GROUPS | EXCUSED MEMBER GROUPS | EXCUSED MEMBER GROUPS | EXCUSED MEMBER GROUPS | EXCUSED MEMBER GROUPS | EXCUSED MEMBER GROUPS | EXCUSED MEMBER GROUPS | EXCUSED MEMBER GROUPS | EXCUSED MEMBER GROUPS | EXCUSED MEMBER GROUPS | EXCUSED MEMBER GROUPS | EXCUSED MEMBER GROUPS | EXCUSED MEMBER GROUPS | EXCUSED MEMBER GROUPS | EXCUSED MEMBER GROUPS | EXCUSED MEMBER GROUPS | EXCUSED MEMBER GROUPS |
+| LINE LABEL | WEIGHT GROUP ID | EXCLUDED MEMBER GROUPS | EXCLUDED MEMBER GROUPS | EXCLUDED MEMBER GROUPS | EXCLUDED MEMBER GROUPS | EXCLUDED MEMBER GROUPS | EXCLUDED MEMBER GROUPS | EXCLUDED MEMBER GROUPS | EXCLUDED MEMBER GROUPS | EXCLUDED MEMBER GROUPS | EXCLUDED MEMBER GROUPS | EXCLUDED MEMBER GROUPS | EXCLUDED MEMBER GROUPS | EXCLUDED MEMBER GROUPS | EXCLUDED MEMBER GROUPS | EXCLUDED MEMBER GROUPS | EXCLUDED MEMBER GROUPS | EXCLUDED MEMBER GROUPS |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LINE LABEL | WEIGHT GROUP ID | 1ST GROUP | 2ND GROUP | 3RD GROUP | 4TH GROUP | 5TH GROUP | 6TH GROUP | 7TH GROUP | 8TH GROUP | 9TH GROUP | 10TH GROUP | 11TH GROUP | 12TH GROUP | 13TH GROUP | 14TH GROUP | 15TH GROUP | 16TH GROUP | 17TH GROUP |
 | EXCGRP |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
@@ -4334,7 +4436,7 @@ THIS LINE SET IS USED IF THE STRUCTURAL MODEL DATA AND/OR LOADING DATA IS TO BE 
 
 THIS LINE IS VERY USEFUL FOR UPDATING AN EXISTING 'SACS IV' DATA FILE BY ADDING ADDITIONAL LOAD CASES, THEREBY GENERATING ONLY THE NEW LOAD CASES AND NOT THOSE THAT ALREADY EXIST.
 
-THIS LINE MAY BE PLACED ANYWHERE AFTER THE SACS IV 'OPTIONS'LINE. THE PROGRAM READS THE FILE AND MERGES IT WITH THELINES IN THE 'SEASTATE' INPUT FILE.
+THIS LINE MAY BE PLACED ANYWHERE AFTER THE SACS IV 'OPTIONS 'LINE. THE PROGRAM READS THE FILE AND MERGES IT WITH THE LINES IN THE 'SEASTATE' INPUT FILE.
 
 ( 1- 4) ENTER 'FILE'.
 
@@ -4386,7 +4488,7 @@ COMMENTARY
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | GNTRF |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | 1--5 | 9--10 | 11--->13 | 14<-->20 | 21<-->26 | 27<-->32 | 33<-->38 | 40<-->45 | 46<-->51 | 52<-->54 | 55<-->58 | 59<-->60 | 61<-->62 | 63 | 64<-->69 | 70<-->73 | 75-->80 |
-| DEFAULT |  |  |  |  |  | 'LOOPT' | 'LOOPT' |  | 18 | 'AIRY' |  |  |  |  | 1 |  |
+| DEFAULT |  |  |  |  |  | 'LDOPT' | 'LDOPT' |  | 18 | 'AIRY' |  |  |  |  | 1 |  |
 | ENGLISH |  |  |  | SEC | SEC | FT | FT | DEG |  |  |  |  |  | FT |  | FT |
 | METRIC |  |  |  | SEC | SEC | M | M | DEG |  |  |  |  |  | M |  | M |
 
@@ -4451,7 +4553,7 @@ ENTER 'N' IF THIS GROUP OF MEMBERS IS TO BE NON-FLOODED.
 
 
 
-| LINE LABEL | APPLY TO ALL SEGMENTS OPTION | GROUP IDEN. | MARINE GROWTH REYNOLD'S OPTIONS | FLOOD COND. | MATERIAL WEIGHT DENSITY | DIMENSION OVERRIDEES | DIMENSION OVERRIDEES | DIMENSION OVERRIDEES | DIMENSION OVERRIDEES | HYDRODYNAMIC COEFFICIENT OVERRIDEES | HYDRODYNAMIC COEFFICIENT OVERRIDEES | HYDRODYNAMIC COEFFICIENT OVERRIDEES | HYDRODYNAMIC COEFFICIENT OVERRIDEES | HYDRODYNAMIC COEFFICIENT OVERRIDEES | HYDRODYNAMIC COEFFICIENT OVERRIDEES | FACT OPT | CORROSION OPTION |
+| LINE LABEL | APPLY TO ALL SEGMENTS OPTION | GROUP IDEN. | MARINE GROWTH REYNOLD'S OPTIONS | FLOOD COND. | MATERIAL WEIGHT DENSITY | DIMENSION OVERRIDES | DIMENSION OVERRIDES | DIMENSION OVERRIDES | DIMENSION OVERRIDES | HYDRODYNAMIC COEFFICIENT OVERRIDES | HYDRODYNAMIC COEFFICIENT OVERRIDES | HYDRODYNAMIC COEFFICIENT OVERRIDES | HYDRODYNAMIC COEFFICIENT OVERRIDES | HYDRODYNAMIC COEFFICIENT OVERRIDES | HYDRODYNAMIC COEFFICIENT OVERRIDES | FACT OPT | CORROSION OPTION |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LINE LABEL | APPLY TO ALL SEGMENTS OPTION | GROUP IDEN. | MARINE GROWTH REYNOLD'S OPTIONS | FLOOD COND. | MATERIAL WEIGHT DENSITY | CROSS SECTION AREA | DISPL. AREA | DIMENSION FOR FORCES IN: | DIMENSION FOR FORCES IN: | NORMAL DRAG | NORMAL DRAG | NORMAL INERTIA | NORMAL INERTIA | TANGENTIAL | TANGENTIAL | FACT OPT | CORROSION OPTION |
 | LINE LABEL | APPLY TO ALL SEGMENTS OPTION | GROUP IDEN. | MARINE GROWTH REYNOLD'S OPTIONS | FLOOD COND. | MATERIAL WEIGHT DENSITY | CROSS SECTION AREA | DISPL. AREA | LOCAL Y DIR. | LOCAL Z DIR. | Y DIR. | Z DIR. | Y DIR. | Z DIR. | DRAG | INERTIA | FACT OPT | CORROSION OPTION |
@@ -4494,7 +4596,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THE WEIGHT SELECTION RECORD ALLOWS THE SELECTION OF WEIGHTGROUPS TO BE INCLUDED IN SPECIFIC LOAD CASES
+GENERAL THE WEIGHT SELECTION RECORD ALLOWS THE SELECTION OF WEIGHT GROUPS TO BE INCLUDED IN SPECIFIC LOAD CASES
 
 ( 1- 6) ENTER 'INCWGT'.   
 ( 9-12) ENTER A FOUR CHARACTER WEIGHT GROUP. THIS GROUP MUST BE THE SAME AS ENTERED ON THE WGTNS, WGTMEM, OR WGTFP LINES.   
@@ -4523,11 +4625,11 @@ GENERAL THIS LINE SET SPECIFIES THE BOUNDARY JOINTS FOR THE NON-STRUCTURAL ELEME
 
 
 
-| LINE LABEL | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | JOINT 1 | JOINT 2 | JOINT 3 | JOINT 4 | JOINT 5 | JOINT 6 | JOINT 7 | JOINT 8 | JOINT 9 | JOINT 10 | JOINT 11 | JOINT 12 | JOINT 13 | JOINT 14 |  |  |
-| KEEP |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1--4 | 8-->11 | 13-->16 | 18-->21 | 23-->26 | 28-->31 | 33-->36 | 38-->41 | 43-->46 | 48-->51 | 53-->56 | 58-->61 | 63-->66 | 68-->71 | 73-->76 | 77--80 |  |
+| LINE LABEL | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | NON-STRUCTURAL ELEMENT SET BOUNDARY JOINTS | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | JOINT 1 | JOINT 2 | JOINT 3 | JOINT 4 | JOINT 5 | JOINT 6 | JOINT 7 | JOINT 8 | JOINT 9 | JOINT 10 | JOINT 11 | JOINT 12 | JOINT 13 | JOINT 14 | LEAVE BLANK |
+| KEEP |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 4 | 8-->11 | 13-->16 | 18-->21 | 23-->26 | 28-->31 | 33-->36 | 38-->41 | 43-->46 | 48-->51 | 53-->56 | 58-->61 | 63-->66 | 68-->71 | 73-->76 | 77--80 |
 
 
 
@@ -4537,9 +4639,9 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE IS USED TO FACTOR LOAD CASES BASED ON ANALYSISTYPE. THIS LINE CAN BE REPEATED AS OFTEN AS NECESSARY TOFACTOR ANY OR ALL OF THE LOAD CASES. THIS LINE SHOULDFOLLOW THE LCSEL LINE.
+GENERAL THIS LINE IS USED TO FACTOR LOAD CASES BASED ON ANALYSIS TYPE. THIS LINE CAN BE REPEATED AS OFTEN AS NECESSARY TO FACTOR ANY OR ALL OF THE LOAD CASES. THIS LINE SHOULD FOLLOW THE LCSEL LINE.
 
-( 7- 8) ENTER THE FUNCTION FOR THE LOAD CASE FACTORSFROM THE FOLLOWING:' ' - LEAVE BLANK FOR STANDARD AND CONVERT TO MASS'ST' - USE FOR STANDARD STATIC AND/OR PSI ANALYSIS'DY' - CONVERT TO MASS FOR DYNAMIC CHARACTERISTICS'PD' - DESIGNATES GRAVITY LOAD CASES USED TO DETERMINEP-DELTA EFFECTS FOR SECOND ORDER ANALYSIS AND/ORMOMENT MAGNIFIERS FOR CONCRETE FIRST ORDER ANALYSISLEAVE FUNCTION BLANK IF THE LOAD CASES LISTED ARE TO BE USEDFOR BOTH STANDARD 'ST' AND DYNAMIC 'DY' FUNCTIONS.
+( 7- 8) ENTER THE FUNCTION FOR THE LOAD CASE FACTORS FROM THE FOLLOWING:' ' - LEAVE BLANK FOR STANDARD AND CONVERT TO MASS 'ST' - USE FOR STANDARD STATIC AND/OR PSI ANALYSIS 'DY' - CONVERT TO MASS FOR DYNAMIC CHARACTERISTICS 'PD' - DESIGNATES GRAVITY LOAD CASES USED TO DETERMINE P-DELTA EFFECTS FOR SECOND ORDER ANALYSIS AND/OR MOMENT MAGNIFIERS FOR CONCRETE FIRST ORDER ANALYSIS LEAVE FUNCTION BLANK IF THE LOAD CASES LISTED ARE TO BE USED FOR BOTH STANDARD 'ST' AND DYNAMIC 'DY' FUNCTIONS.
 
 (11-16) ENTER THE LOAD CASE FACTOR FOR THESE LOAD CASES. LEAVE BLANK FOR DEFAULT OF 1.0.   
 (17-75) ENTER THE LOAD CASE IDENTIFIERS FOR ALL LOAD CASES TO BE SELECTED. THE LOAD CASES CAN BE IN ANY ORDER.
@@ -4590,9 +4692,9 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE IS A REPLACEMENT FOR THE LDCASE LINE AND MAY BEUSED TO SPECIFY THE LOAD CASES IN THE SACS IV INPUT FILE THATARE TO BE USED FOR A PARTICULAR ANALYSIS. THIS LINE CAN BEREPEATED AS OFTEN AS NECESSARY TO SELECT ANY OR ALL OF THELOAD CASES AND SHOULD FOLLOW THE 'OPTIONS' LINE IN THE SACSMODEL FILE. NOTE: THIS LINE SHOULD NOT BE USED INCONJUNCTION WITH THE LDCASE LINE.
+GENERAL THIS LINE IS A REPLACEMENT FOR THE LDCASE LINE AND MAY BE USED TO SPECIFY THE LOAD CASES IN THE SACS IV INPUT FILE THAT ARE TO BE USED FOR A PARTICULAR ANALYSIS. THIS LINE CAN BE REPEATED AS OFTEN AS NECESSARY TO SELECT ANY OR ALL OF THE LOAD CASES AND SHOULD FOLLOW THE 'OPTIONS' LINE IN THE SACS MODEL FILE. NOTE: THIS LINE SHOULD NOT BE USED IN CONJUNCTION WITH THE LDCASE LINE.
 
-( 7- 8) ENTER THE FUNCTION FOR THE LOAD CASE SELECTION.= ' - LEAVE BLANK FOR STANDARD AND CONVERT TO MASS'ST' - USE FOR STANDARD STATIC AND/OR PSI ANALYSIS'GP' - USE FOR GAP ELEMENT ANALYSIS'DY' - CONVERT TO MASS FOR DYNAMIC CHARACTERISTICS'PD' - DESIGNATES GRAVITY LOAD CASES USED TO DETERMINEP-DELTA EFFECTS FOR SECOND ORDER ANALYSIS AND/ORMOMENT MAGNIFIERS FOR CONCRETE FIRST ORDER ANALYSISLEAVE FUNCTION BLANK IF THE LOAD CASES LISTED ARE TO BE USEDFOR BOTH STANDARD 'ST' AND DYNAMIC 'DY' FUNCTIONS.
+( 7- 8) ENTER THE FUNCTION FOR THE LOAD CASE SELECTION.= ' - LEAVE BLANK FOR STANDARD AND CONVERT TO MASS 'ST' - USE FOR STANDARD STATIC AND/OR PSI ANALYSIS 'GP' - USE FOR GAP ELEMENT ANALYSIS 'DY' - CONVERT TO MASS FOR DYNAMIC CHARACTERISTICS 'PD' - DESIGNATES GRAVITY LOAD CASES USED TO DETERMINE P-DELTA EFFECTS FOR SECOND ORDER ANALYSIS AND/OR MOMENT MAGNIFIERS FOR CONCRETE FIRST ORDER ANALYSIS LEAVE FUNCTION BLANK IF THE LOAD CASES LISTED ARE TO BE USED FOR BOTH STANDARD 'ST' AND DYNAMIC 'DY' FUNCTIONS.
 
 (17-75) ENTER THE LOAD CASE IDENTIFIERS FOR ALL LOAD CASES TO BE SELECTED. THE LOAD CASES CAN BE IN ANY ORDER.
 
@@ -4616,10 +4718,10 @@ COMMENTARY
 (10-15) ENTER THE SITE LONGITUDE OF THE STRUCTURE.   
 (17-22) ENTER THE SITE ORIENTATION. THIS IS THE ANGLE BETWEEN THE SACS GLOBAL X AXIS AND TRUE NORTH. A POSTIVE ANGLE IS MEASURED TOWARD SACS GLOBAL Y AXIS.   
 ( 32 ) ENTER THE STORM RETURN PERIOD (YEARS) AS EITHER: 'A'......10 YEAR 'B'.. ...25 YEAR 'C'......50 YEAR 'D'.....100 YEAR 'E'.....200 YEAR 'F'...1,000 YEAR 'G'...2,000 YEAR 'H'..10,000 YEAR   
-NOTE: THE RETURN PERIOD AND PEAK CASE CAN BE OVERRIDDEN ON THE'2MET' LINE.  
+NOTE: THE RETURN PERIOD AND PEAK CASE CAN BE OVERRIDDEN ON THE '2MET' LINE.  
 (34-35) ENTER THE DEFALUT PEAK CASE USED IN COMBINING EXTREME LOAD TYPES. 'WA'...PEAK WAVE 'WI'...PEAK WIND 'CU'...PEAK CURRENT 'EX'...EXTREME CASE (NO FACTORING DOWN LOAD TYPES)   
 (37-39) ENTER 'DIR' IF THE CALCULATED OMNI-DIRECTIONAL WAVE HEIGHT IS TO BE FACTORED USING API 2MET, FIGURE 4.2.2-1. ENTER 'OMN' IF THE CALCULTED WAVE HEIGHT IS NOT TO BE FACTORED.   
-(41-45) ENTER THE CURRENT INLINE ANGLE TOLERANCE. IF THE CALCULATEDCURRENT DIRECTION IS WITHIN THIS TOLERANCE FROM THE WAVEHEADING, THE CURRENT WILL BE ASSUMED INLINE WITH THE WAVE.  
+(41-45) ENTER THE CURRENT INLINE ANGLE TOLERANCE. IF THE CALCULATED CURRENT DIRECTION IS WITHIN THIS TOLERANCE FROM THE WAVE HEADING, THE CURRENT WILL BE ASSUMED INLINE WITH THE WAVE.  
 ( 47 ) ENTER 'I' IF THE WIND DIRECTION IS INLINE WITH THE WAVE ANGLE.
 
 COLUMNS
@@ -4637,9 +4739,9 @@ COMMENTARY
 
 
 
-| LINE LABEL | INPUT OPTIONS | INPUT OPTIONS | DEFAULT 2MET PARAMETERS | DEFAULT 2MET PARAMETERS | DEFAULT 2MET PARAMETERS | DEFAULT 2MET PARAMETERS | DEFAULT 2MET PARAMETERS | DEFAULT WAVE PARAMETERS | DEFAULT WAVE PARAMETERS | DEFAULT WAVE PARAMETERS | DEFAULT WAVE PARAMETERS | DEFAULT WAVE PARAMETERS | DEFAULT WAVE PARAMETERS | DEFAULT WAVE PARAMETERS | PRINT DECKEighthtREQS. |
+| LINE LABEL | INPUT OPTIONS | INPUT OPTIONS | DEFAULT 2MET PARAMETERS | DEFAULT 2MET PARAMETERS | DEFAULT 2MET PARAMETERS | DEFAULT 2MET PARAMETERS | DEFAULT 2MET PARAMETERS | DEFAULT WAVE PARAMETERS | DEFAULT WAVE PARAMETERS | DEFAULT WAVE PARAMETERS | DEFAULT WAVE PARAMETERS | DEFAULT WAVE PARAMETERS | DEFAULT WAVE PARAMETERS | DEFAULT WAVE PARAMETERS | PRINT DECK HEIGHT REQS. |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | SITE LONGITUDE | SITE ORIENTATION | RETURN PERIOD | PEAK DESIGN CASE | DIRECT.FACTOR | CURRENTINLINE ANGLE | WINDINLINE OPTION | WAVE TYPE | INPUT MODE | CREST POSITION | WAVE STEP SIZE | DYNAMIC STEPS | STATIC STEPS | CRITICAL POSITION | PRINT DECKEighthtREQS. |
+| LINE LABEL | SITE LONGITUDE | SITE ORIENTATION | RETURN PERIOD | PEAK DESIGN CASE | DIRECT.FACTOR | CURRENTINLINE ANGLE | WINDINLINE OPTION | WAVE TYPE | INPUT MODE | CREST POSITION | WAVE STEP SIZE | DYNAMIC STEPS | STATIC STEPS | CRITICAL POSITION | PRINT DECK HEIGHT REQS. |
 | LDAPI |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | 1--5 | 10<--15 | 17<--22 | 32 | 34--35 | 37--39 | 41<--45 | 47 | 53--56 | 57--57 | 58<--64 | 65<--70 | 71--->72 | 73--->74 | 75--76 | 77--78 |
 | DEFAULT |  |  | A | WA | DIR |  |  | STRN | L |  |  |  |  | MM |  |
@@ -4664,7 +4766,7 @@ COMMENTARY
 
 (13-14) GLOBAL FLOOD OPTION.
 
-'FL' CAUSES ALL MEMBERS TO BE FLOODED UNLESS OVERRIDDENLATER BY A GROUP OR MEMBER OVERRIDE LINE SET.'NF' CAUSES ALL MEMBERS TO BE NON-FLOODED UNLESSOVERRIDDEN. THIS IS THE DEFAULT.
+'FL' CAUSES ALL MEMBERS TO BE FLOODED UNLESS OVERRIDDEN LATER BY A GROUP OR MEMBER OVERRIDE LINE SET.'NF' CAUSES ALL MEMBERS TO BE NON-FLOODED UNLESS OVERRIDDEN. THIS IS THE DEFAULT.
 
 (15-16) VERTICAL COORDINATE SPECIFICATION.
 
@@ -4703,10 +4805,10 @@ ENTER 'TRL' FOR SEASTATE TO GENERATE STATIC BASE SHEAR AND OVERTURNING MOMENT TR
 
 | LINE LABEL | INPUT AND OUTPUT OPTIONS | INPUT AND OUTPUT OPTIONS | INPUT AND OUTPUT OPTIONS | INPUT AND OUTPUT OPTIONS | INPUT AND OUTPUT OPTIONS | PHYSICAL PARAMETERS | PHYSICAL PARAMETERS | PHYSICAL PARAMETERS | PHYSICAL PARAMETERS | GLOBALCOORD.OUTPUT | UNITS | ANALYSIS OPTIONS | HYDROSTATICOPTIONS | HYDROSTATICOPTIONS | COMB.LOADS MADEBASIC | REPORT OPTIONS | REPORT OPTIONS | REPORT OPTIONS | VERS5.2OPTION | KILLAREAMES-SAGES |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | CREATEFILE | INPUT ECHO | OUTPUTPRINT | MEMBERFLOOD | VERT.COORD. | WATERWEIGHTDENSITY | STRUCTUREWEIGHTDENSITY | MUDLINEELEV. | WATERDEPTH | GLOBALCOORD.OUTPUT | UNITS | ANALYSIS OPTIONS | SACSHYDRO | FLOODANAL. | COMB.LOADS MADEBASIC | MEMBERSUMMARY | MODELPRINT | SEASDATAPRINT | VERS5.2OPTION | KILLAREAMES-SAGES |
+| LINE LABEL | CREATEFILE | INPUT ECHO | OUTPUTPRINT | MEMBERFLOOD | VERT.COORD. | WATERWEIGHTDENSITY | STRUCTUREWEIGHTDENSITY | MUDLINEELEV. | WATERDEPTH | GLOBALCOORD.OUTPUT | UNITS | ANALYSIS OPTIONS | SACSHYDRO | FLOODANAL. | COMB.LOADS MADEBASIC | MEMBER DATA SUMMARY | MODELPRINT | SEASDATAPRINT | VERS5.2OPTION | KILLAREAMES-SAGES |
 | LDOPT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | 1-- 5 | 7-- 8 | 9--10 | 11--12 | 13--14 | 15--16 | 17<--24 | 25<--32 | 33<--40 | 41<--48 | 49--52 | 53--54 | 56--58 | 59--61 | 62--64 | 65--67 | 68--70 | 71--72 | 73--74 | 78 | 79 |
-| DEFAULT |  |  |  | 'NF' | ' +2' | 64.2 ENGL. | 490. ENGL. |  |  | 'GLOB' |  |  |  |  |  |  |  |  |  |  |
+| DEFAULT |  |  |  | 'NF' | '+Z' | 64.2 ENGL. | 490. ENGL. |  |  | 'GLOB' |  |  |  |  |  |  |  |  |  |  |
 | ENGLISH |  |  |  |  |  | LB/CU.FT | LB/CU.FT | FT | FT |  |  |  |  |  |  |  |  |  |  |  |
 | METRIC |  |  |  |  |  | TONNE/CU.M | TONNE/CU.M | M | M |  |  |  |  |  |  |  |  |  |  |  |
 
@@ -4744,7 +4846,7 @@ COLUMNS
 
 COMMENTARY
 
-LOCATION THIS HEADER LINE IS THE FIRST LINE OF EACH BASIC LOADCONDITION IN THE DATA SET.
+LOCATION THIS HEADER LINE IS THE FIRST LINE OF EACH BASIC LOAD CONDITION IN THE DATA SET.
 
 GENERAL BASIC LOAD CONDITIONS CAN BE NAMED USING 1 TO 4 ALPHANUMERIC CHARACTERS. LOAD CASE NAMES CAN BE IN ANY SEQUENCE.
 
@@ -4773,7 +4875,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE ALLOWS THE USER TO INPUT A LOAD CONDITIONDESCRIPTION FOR EACH LOAD CASE. THIS IS USED AS TITLEINFORMATION IN THE SEASTATE PROGRAM AND IS CONVERTED INTO'COMMENT' IN THE OUTPUT SEASTATE FILE. THIS LINE CAN BEPLACED ANYWHERE IN THE DATA FILE (NORMALLY THEY ARE PLACEDIMMEDIATELY AFTER THE CORRESPONDING 'LOADCN' LINE). ONLYONE 'LOADLB' LINE IS ALLOWED PER LOAD CONDITION.
+GENERAL THIS LINE ALLOWS THE USER TO INPUT A LOAD CONDITION DESCRIPTION FOR EACH LOAD CASE. THIS IS USED AS TITLE INFORMATION IN THE SEASTATE PROGRAM AND IS CONVERTED INTO 'COMMENT' IN THE OUTPUT SEASTATE FILE. THIS LINE CAN BE PLACED ANYWHERE IN THE DATA FILE (NORMALLY THEY ARE PLACED IMMEDIATELY AFTER THE CORRESPONDING 'LOADCN' LINE). ONLY ONE 'LOADLB' LINE IS ALLOWED PER LOAD CONDITION.
 
 ( 1- 6) ENTER 'LOADLB'.   
 ( 7-10) ENTER THE LOAD CONDITION NAME.   
@@ -4794,7 +4896,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS DATA IS USED TO REPEAT A PREVIOUSLY DEFINED LOAD CASEEXCEPT THAT THE DIRECTION SPECIFIED FOR WAVE, WIND, ANDCURRENT IS CHANGED TO THE NEW DIRECTION SPECIFIED. THISIS THE ONLY LINE CONTAINED IN THE LOAD CASE THAT IS TO BECREATED. ONLY SEASTATE LOADS ARE REPEATED IN THE NEW LOADCASE.
+GENERAL THIS DATA IS USED TO REPEAT A PREVIOUSLY DEFINED LOAD CASE EXCEPT THAT THE DIRECTION SPECIFIED FOR WAVE, WIND, AND CURRENT IS CHANGED TO THE NEW DIRECTION SPECIFIED. THIS IS THE ONLY LINE CONTAINED IN THE LOAD CASE THAT IS TO BE CREATED. ONLY SEASTATE LOADS ARE REPEATED IN THE NEW LOAD CASE.
 
 ( 1- 6) ENTER 'LOADRP'.   
 (11-16) ENTER THE NEW DIRECTION.   
@@ -4873,7 +4975,7 @@ ENTER 'N' IF THIS MEMBER IS TO BE NON-FLOODED.
 
 
 
-| LINE LABEL | MEMBER ENDS | MEMBER ENDS | MARINE GROWTH REYNOLD'S OPTIONS | FLOOD COND. | MATERIAL WEIGHT DENSITY | DIMENSION OVERRIDEES | DIMENSION OVERRIDEES | DIMENSION OVERRIDEES | DIMENSION OVERRIDEES | HYDRODYNAMIC COEFFICIENT OVERRIDEES | HYDRODYNAMIC COEFFICIENT OVERRIDEES | HYDRODYNAMIC COEFFICIENT OVERRIDEES | HYDRODYNAMIC COEFFICIENT OVERRIDEES | HYDRODYNAMIC COEFFICIENT OVERRIDEES | HYDRODYNAMIC COEFFICIENT OVERRIDEES | FACT OPT | CORROSION OPTION |
+| LINE LABEL | MEMBER ENDS | MEMBER ENDS | MARINE GROWTH REYNOLD'S OPTIONS | FLOOD COND. | MATERIAL WEIGHT DENSITY | DIMENSION OVERRIDES | DIMENSION OVERRIDES | DIMENSION OVERRIDES | DIMENSION OVERRIDES | HYDRODYNAMIC COEFFICIENT OVERRIDES | HYDRODYNAMIC COEFFICIENT OVERRIDES | HYDRODYNAMIC COEFFICIENT OVERRIDES | HYDRODYNAMIC COEFFICIENT OVERRIDES | HYDRODYNAMIC COEFFICIENT OVERRIDES | HYDRODYNAMIC COEFFICIENT OVERRIDES | FACT OPT | CORROSION OPTION |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LINE LABEL | START JOINT | END JOINT | MARINE GROWTH REYNOLD'S OPTIONS | FLOOD COND. | MATERIAL WEIGHT DENSITY | CROSS SECTION AREA | DISPL. AREA | DIMENSION FOR FORCES IN: | DIMENSION FOR FORCES IN: | NORMAL DRAG | NORMAL DRAG | NORMAL INERTIA | NORMAL INERTIA | TANGENTIAL | TANGENTIAL | FACT OPT | CORROSION OPTION |
 | LINE LABEL | START JOINT | END JOINT | MARINE GROWTH REYNOLD'S OPTIONS | FLOOD COND. | MATERIAL WEIGHT DENSITY | CROSS SECTION AREA | DISPL. AREA | LOCAL Y DIR. | LOCAL Z DIR. | Y DIR. | Z DIR. | Y DIR. | Z DIR. | DRAG | INERTIA | FACT OPT | CORROSION OPTION |
@@ -4893,7 +4995,7 @@ COMMENTARY
 
 GENERAL
 
-THIS LINE SET IS USED TO SPECIFY THE PARAMETERS THATCHARACTERIZE THE OVERALL PROPERTIES OF THE MUD FLOW. IT ISFOLLOWED BY A 'MFLO2' LINE SET WHERE THE MUD FLOW PROFILEDEFINITION IS SPECIFIED. FOR ANY LOAD CASE HAVING MUD FLOW,THE MUDLINE ELEVATION AND WATER DEPTH ARE AUTOMATICALLYADJUSTED FOR WAVE GENERATION, AND FOR CALCULATING FORCES DUETO CURRENT AND BUOYANCY. THE NEW MUDLINE IS AT THE TOP OF THEMUD FLOW; THE WATER DEPTH IS SUCH THAT THE STILL WATERSURFACE IS UNCHANGED.
+THIS LINE SET IS USED TO SPECIFY THE PARAMETERS THAT CHARACTERIZE THE OVERALL PROPERTIES OF THE MUD FLOW. IT IS FOLLOWED BY A 'MFLO2' LINE SET WHERE THE MUD FLOW PROFILE DEFINITION IS SPECIFIED. FOR ANY LOAD CASE HAVING MUD FLOW,THE MUDLINE ELEVATION AND WATER DEPTH ARE AUTOMATICALLY ADJUSTED FOR WAVE GENERATION, AND FOR CALCULATING FORCES DUE TO CURRENT AND BUOYANCY. THE NEW MUDLINE IS AT THE TOP OF THE MUD FLOW; THE WATER DEPTH IS SUCH THAT THE STILL WATER SURFACE IS UNCHANGED.
 
 ( 1- 4)
 
@@ -4913,7 +5015,7 @@ ENTER THE ANGLE THAT THE MUD FLOW MAKES WITH THE HORIZONTAL. THE POSITIVE DIRECT
 
 (33-48)
 
-ENTER THE CRITICAL INCIDENCE ANGLES OF THE FLOW PAST A MEMBERAS DEFINED ON THE ACCOMPANYING FIGURE, WHICH IS A NORMALIZEDPLOT SHOWING THE MUD LOAD AS A FUNCTION OF INCIDENCE ANGLE.
+ENTER THE CRITICAL INCIDENCE ANGLES OF THE FLOW PAST A MEMBER AS DEFINED ON THE ACCOMPANYING FIGURE, WHICH IS A NORMALIZED PLOT SHOWING THE MUD LOAD AS A FUNCTION OF INCIDENCE ANGLE.
 
 (49-56)
 
@@ -5010,7 +5112,7 @@ COMMENTARY
 | LINE LABEL | BOTTOM OF ZONE | TOP OF ZONE | MARINE GROWTH THICKNESS | MUDLINE ELEVATION | SURFACE ROUGHNESS | DRY DENSITY OF MARINE GROWTH | NORMAL DRAG COEFFICIENT | NORMAL MASS COEFFICIENT | LEAVE THIS FIELD BLANK |
 | MGROV |  |  |  |  |  |  |  |  |  |
 | 1--5 | 9<--16 | 17<--24 | 25<--32 | 33<--40 | 41<--48 | 49<--56 | 57<--64 | 65<--72 | 73--80 |
-| DEFAULT |  |  |  | 'LOOPT' | 0.0001 ENGL |  |  |  |  |
+| DEFAULT |  |  |  | 'LDOPT' | 0.0001 ENGL |  |  |  |  |
 | ENGLISH | FT | FT | IN | FT | IN | LB/CU.FT |  |  |  |
 | METRIC | M | M | CM | M | CM | TONNE/CU.M |  |  |  |
 
@@ -5060,7 +5162,7 @@ GENERAL THE MOVING LOAD GROUP RECORD SPECIFIES WHICH MEMBER GROUPS CAN BE USED T
 
 
 
-| LINE LABEL | MOVING LOAD GROUP ID | INCLUDE MEMBER GROUPS | INCLUDE MEMBER GROUPS | INCLUDE MEMBER GROUPS | INCLUDE MEMBER GROUPS | INCLUDE MEMBER GROUPS | INCLUDE MEMBER GROUPS | INCLUDE MEMBER GROUPS | INCLUDE MEMBER GROUPS | INCLUDE MEMBER GROUPS | INCLUDE MEMBER GROUPS | INCLUDE MEMBER GROUPS | INCLUDE MEMBER GROUPS | INCLUDE MEMBER GROUPS | INCLUDE MEMBER GROUPS | INCLUDE MEMBER GROUPS | INCLUDE MEMBER GROUPS |
+| LINE LABEL | MOVING LOAD GROUP ID | INCLUDED MEMBER GROUPS | INCLUDED MEMBER GROUPS | INCLUDED MEMBER GROUPS | INCLUDED MEMBER GROUPS | INCLUDED MEMBER GROUPS | INCLUDED MEMBER GROUPS | INCLUDED MEMBER GROUPS | INCLUDED MEMBER GROUPS | INCLUDED MEMBER GROUPS | INCLUDED MEMBER GROUPS | INCLUDED MEMBER GROUPS | INCLUDED MEMBER GROUPS | INCLUDED MEMBER GROUPS | INCLUDED MEMBER GROUPS | INCLUDED MEMBER GROUPS | INCLUDED MEMBER GROUPS |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LINE LABEL | MOVING LOAD GROUP ID | 1ST GROUP | 2ND GROUP | 3RD GROUP | 4TH GROUP | 5TH GROUP | 6TH GROUP | 7TH GROUP | 8TH GROUP | 9TH GROUP | 10TH GROUP | 11TH GROUP | 12TH GROUP | 13TH GROUP | 14TH GROUP | 15TH GROUP | 16TH GROUP |
 | MOVGRP |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
@@ -5101,7 +5203,7 @@ GENERAL THE MOVING LOAD STEP RECORD ALLOWS THE SPECIFICATION OF THE MOVING LOAD 
 ( 1- 6) ENTER 'MOVSTP'.   
 ( 8-14) ENTER A SEVEN CHARACTER MOVING LOAD IDENTIFIER. THIS IDENTIFIER MUST BE THE SAME AS ENTERED ON THE 'MOVLOD' AND 'MOVGRP' LINES.   
 (16-19) ENTER THE NUMBER OF STEPS FOR THIS PORTION OF THE MOVING LOAD GENERATION. THE NUMBER OF LOAD CASES WILL BE EQUAL TO THE NUMBER OF STEPS. THE ORIGINAL LOAD POSITION WILL ALSO BE INCLUDED.   
-(21-27) ENTER THE STEP SIZE FOR THIS PORTION OF THE MOVING LOADGENERATION. THE FIRST LOCATION OF THE MOVING LOAD WILL BE THELOCATION SPECIFIED BY JOINTS IN THE LOAD CASES ON THE'MOVLOD' LINE.  
+(21-27) ENTER THE STEP SIZE FOR THIS PORTION OF THE MOVING LOAD GENERATION. THE FIRST LOCATION OF THE MOVING LOAD WILL BE THE LOCATION SPECIFIED BY JOINTS IN THE LOAD CASES ON THE 'MOVLOD' LINE.  
 (29-52) ENTER EITHER THE JOINT IDENTIFIERS TO DESIGNATE THE DIRECTION OR ENTER AN XYZ DIRECTION. THE VALUES FOR THE XYZ DIRECTION ARE ONLY RELATIVE VALUES USED TO SPECIFY DIRECTION. FOR EXAMPLE, X=1.0, Y=0.0 AND Z=0.0 WILL SPECIFY LOADS MOVING IN THE POSITIVE X DIRECTION. WHEN USING JOINT IDENTIFIERS, THE MOTION IS IN THE DIRECTION FROM THE FIRST JOINT TOWARD THE SECOND JOINT.
 
 
@@ -5155,10 +5257,10 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE IS USED TO SPECIFY THE DIRECTION AND VELOCITY INTHE FOLLOWING RAO LINES.
+GENERAL THIS LINE IS USED TO SPECIFY THE DIRECTION AND VELOCITY IN THE FOLLOWING RAO LINES.
 
 ( 1- 8) ENTER 'RAO HEAD'.   
-( 9-15) ENTER THE DIRECTION OF THIS TRANSFER FUNCTION. SEE THE WAVEANGLE ON THE 'WAVE' LINE FOR DIRECTION DEFINITIONS.  
+( 9-15) ENTER THE DIRECTION OF THIS TRANSFER FUNCTION. SEE THE WAVE ANGLE ON THE 'WAVE' LINE FOR DIRECTION DEFINITIONS.  
 (16-22) ENTER THE VELOCITY IF VELOCITY DEPENDENT RAO'S ARE BEING DEFINED. OTHERWISE, LEAVE BLANK.   
 (24-25) IF THE RAO'S HAVE A PLANE OF SYMMETRY, ENTER 'XZ' OR 'YZ' TO DESIGNATE THIS PLANE. FOR THE 'XZ' PLANE OF SYMMETRY, ALL DIRECTIONS MUST BE IN THE 0 TO 180 DEGREE RANGE AND FOR THE 'YZ' PLANE, ALL DIRECTIONS MUST BE IN THE -90 TO +90 DEGREE RANGE.   
 (27-29) ENTER 'FPS' IF THE ENGLISH UNITS FOR VELOCITY ARE INPUT IN FEET PER SECOND.   
@@ -5184,7 +5286,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE IS USED TO DEFINE THE RESPONSE AMPLITUDE OPERATORFOR THE RIGID BODY MOTIONS DUE TO WAVE LOADINGS. EACH OF THEAMPLITUDE VALUES REPRESENTS THE SINGLE AMPLITUDE DUE TO AUNIT WAVE HEIGHT.
+GENERAL THIS LINE IS USED TO DEFINE THE RESPONSE AMPLITUDE OPERATOR FOR THE RIGID BODY MOTIONS DUE TO WAVE LOADINGS. EACH OF THE AMPLITUDE VALUES REPRESENTS THE SINGLE AMPLITUDE DUE TO A UNIT WAVE HEIGHT.
 
 ( 5 ) ENTER THE AMPLITUDE TYPE FROM THE FOLLOWING SELECTIONS:
 
@@ -5195,7 +5297,7 @@ GENERAL THIS LINE IS USED TO DEFINE THE RESPONSE AMPLITUDE OPERATORFOR THE RIGID
 
 ( 6 ) SELECT EITHER 'F' FOR FREQUENCY OR 'P' FOR PERIOD FOR THE INDEPENDENT VARIABLE.   
 ( 7-12) ENTER THE FREQUENCY OR PERIOD FOR THESE RESPONSE AMPLITUDE OPERATORS. THE RAO'S SHOULD BE INPUT IN ORDER OF INCREASING FREQUENCIES OR DECREASING PERIODS.   
-(13-78) ENTER THE AMPLITUDES AND PHASE ANGLES FOR THE 6 RIGID BODYDEGREES OF FREEDOM FOR A UNIT WAVE AMPLITUDE FOR THISFREQUENCY OR PERIOD.
+(13-78) ENTER THE AMPLITUDES AND PHASE ANGLES FOR THE 6 RIGID BODY DEGREES OF FREEDOM FOR A UNIT WAVE AMPLITUDE FOR THIS FREQUENCY OR PERIOD.
 
 
 
@@ -5226,11 +5328,11 @@ NOTE: MEMBER GRUPS INCLUDED IN THIS SPECIAL REPORT CANNOT BE INCLUDED IN OTHER S
 
 
 
-| LINE LABEL | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | GRUP 1 | GRUP 2 | GRUP 3 | GRUP 4 | GRUP 5 | GRUP 6 | GRUP 7 | GRUP 8 | GRUP 9 | GRUP 10 | GRUP 11 | GRUP 12 | GRUP 13 | GRUP 14 | GRUP 15 | GRUP 16 |  |  |
-| REPRGP |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1-- 6 | 9<--11 | 13<--15 | 17<--19 | 21<--23 | 25<--27 | 29<--31 | 33<--35 | 37<--39 | 41<--43 | 45<--47 | 49<--51 | 53<--55 | 57<--59 | 61<--63 | 65<--67 | 69<--71 | 72--80 |  |
+| LINE LABEL | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | ENTER MEMBER GRUPS FOR THIS SPECIAL REPORT | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | GRUP 1 | GRUP 2 | GRUP 3 | GRUP 4 | GRUP 5 | GRUP 6 | GRUP 7 | GRUP 8 | GRUP 9 | GRUP 10 | GRUP 11 | GRUP 12 | GRUP 13 | GRUP 14 | GRUP 15 | GRUP 16 | LEAVE BLANK |
+| REPGRP |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 6 | 9<--11 | 13<--15 | 17<--19 | 21<--23 | 25<--27 | 29<--31 | 33<--35 | 37<--39 | 41<--43 | 45<--47 | 49<--51 | 53<--55 | 57<--59 | 61<--63 | 65<--67 | 69<--71 | 72--80 |
 
 
 
@@ -5240,7 +5342,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE IS USED TO SPECIFY THE TITLE TO BE USED FOR THISSPECIAL REPORT. THE SPECIAL REPORTS FOR THE MEMBERS SELECTEDUSING THE 'REPGRP' AND 'REPMEM' LINES ARE GENERATED FOR EACHLOAD CONDITION. ONLY ONE 'REPLBL' LINE CAN BE USED WITH EACHSPECIAL REPORT MEMBER SET.
+GENERAL THIS LINE IS USED TO SPECIFY THE TITLE TO BE USED FOR THIS SPECIAL REPORT. THE SPECIAL REPORTS FOR THE MEMBERS SELECTED USING THE 'REPGRP' AND 'REPMEM' LINES ARE GENERATED FOR EACH LOAD CONDITION. ONLY ONE 'REPLBL' LINE CAN BE USED WITH EACH SPECIAL REPORT MEMBER SET.
 
 ( 1- 6) ENTER 'REPLBL'.   
 ( 8-15) ENTER THE REPORT NAME.   
@@ -5289,7 +5391,7 @@ GENERAL
 
 SEASTATE ALLOWS THE USER TO SPECIFY SPECIAL LOAD REPORTS FOR SELECTED MEMBERS AND MEMBER 'GRUPS'. THE SPECIAL REPORTING IS CONTROLLED BY THE 'REPLBL', 'REPGRP', AND 'REPMEM' LINES. USERS CAN CREATE AS MANY SPECIAL REPORT MEMBER SETS AS REQUIRED FOR THE STRUCTURE. THE 'REPLBL' LINE SPECIFIES THE TITLE OF THE SPECIAL REPORT SET. THE 'REPGRP' LINE SPECIFIES THE MEMBER 'GRUPS' THAT ARE INCLUDED IN THE SPECIAL REPORT SET. THE 'REPMEM' LINE SPECIFIES THE INDIVIDUAL MEMBERS THAT ARE INCLUDED IN THE SPECIAL REPORT SET. INDIVIDUAL MEMBERS OR MEMBER 'GRUPS' CAN ONLY BE INCLUDED IN ONE SPECIAL REPORT.
 
-A REPORT HEADER LINE IS REQUIRED WITH EACH SPECIAL REPORTMEMBER SET.
+A REPORT HEADER LINE IS REQUIRED WITH EACH SPECIAL REPORT MEMBER SET.
 
 ( 1- 6) ENTER 'REPORT'.   
 ( 7-80) LEAVE BLANK.
@@ -5299,7 +5401,7 @@ A REPORT HEADER LINE IS REQUIRED WITH EACH SPECIAL REPORTMEMBER SET.
 | LINE LABEL | LEAVE BLANK |
 | --- | --- |
 | REPORT |  |
-| 1--6 | 7- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+| 1--6 | 7------------------------80 |
 
 
 
@@ -5311,13 +5413,13 @@ COMMENTARY
 
 GENERAL
 
-THIS LINE SET IS USED IF THE USER WISHES TO HAVE DRAGCOEFFICIENTS THAT DEPEND ON REYNOLD'S NUMBER. THE PROGRAM HASA BUILT IN TABLE WHICH THE USER MAY USE, OR HE MAY SPECIFYHIS OWN.
+THIS LINE SET IS USED IF THE USER WISHES TO HAVE DRAG COEFFICIENTS THAT DEPEND ON REYNOLD'S NUMBER. THE PROGRAM HAS A BUILT IN TABLE WHICH THE USER MAY USE, OR HE MAY SPECIFY HIS OWN.
 
 THIS LINE SET, IF USED, MUST BE INPUT IMMEDIATELY AFTER THE 'CDM' LINES, WHERE DRAG COEFFICIENTS ARE INPUT. THE PROCEDURE USED IS TO INPUT FACTORS BY WHICH TO MULTIPLY THESE COEFFICIENTS. IF THE DRAG COEFFICIENTS ARE INPUT ON THE 'CDM' LINES WITH A VALUE OF 1.0, THEN THE FACTORS INPUT HERE WILL BE THE ACTUAL DRAG COEFFICIENTS.
 
 ( 1- 6)
 
-ENTER 'REYFAC' ON THIS LINE. THIS LINE IS PRECEDED BY AHEADER LINE HAVING ONLY THIS ENTRY. IF THE USER WISHES TOSPECIFY HIS OWN TABLE, THIS LINE WILL BE FOLLOWED BY A'REYFAC' LINE SET WITH REYNOLD'S NUMBER DEPENDENT DRAGCOEFFICIENT DATA LINES.
+ENTER 'REYFAC' ON THIS LINE. THIS LINE IS PRECEDED BY A HEADER LINE HAVING ONLY THIS ENTRY. IF THE USER WISHES TO SPECIFY HIS OWN TABLE, THIS LINE WILL BE FOLLOWED BY A 'REYFAC' LINE SET WITH REYNOLD'S NUMBER DEPENDENT DRAG COEFFICIENT DATA LINES.
 
 ( 9-12)
 
@@ -5325,7 +5427,7 @@ ENTER 'HEAD'
 
 (15-17)
 
-ENTER 'STD' TO USE THE PROGRAM SUPPLIED STANDARD TABLE OFDRAG COEFFICIENT FACTOR VERSUS REYNOLD'S NUMBER. IF THISOPTION IS SELECTED, THE 'REYFAC' LINE SET WITH REYNOLD'SNUMBER DEPENDENT DRAG COEFFICIENT DATA LINES IS NOT INPUT.THE STANDARD TABLE USED IS LISTED BELOW.
+ENTER 'STD' TO USE THE PROGRAM SUPPLIED STANDARD TABLE OF DRAG COEFFICIENT FACTOR VERSUS REYNOLD'S NUMBER. IF THIS OPTION IS SELECTED, THE 'REYFAC' LINE SET WITH REYNOLD'S NUMBER DEPENDENT DRAG COEFFICIENT DATA LINES IS NOT INPUT. THE STANDARD TABLE USED IS LISTED BELOW.
 
 
 
@@ -5364,7 +5466,7 @@ COMMENTARY
 
 GENERAL
 
-THESE LINES ARE USED TO INPUT UP TO 20 DATA POINTS TO DEFINETHE CURVE OF DRAG DEPENDENCE ON REYNOLD'S NUMBER. THESELINES, IF USED, FOLLOW IMMEDIATELY AFTER THE 'REYFAC' LINESPECIFYING REYNOLD'S NUMBER DEPENDENT DRAG COEFFICIENTFACTORS. THE ENTRIES ON THIS LINE ARE FACTORS BY WHICH THENORMAL DRAG COEFFICIENTS ON THE 'CDM' LINES ARE MULTIPLIED TOGIVE THE MODIFIED DRAG COEFFICIENTS. IF THE DRAGCOEFFICIENTS ON THE 'CDM' LINE SET ARE 1.0 THEN THE ENTRIESHERE ARE THE ACTUAL DRAG COEFFICIENTS. NO MODIFICATION OFTANGENTIAL DRAG COEFFICIENTS IS DONE.
+THESE LINES ARE USED TO INPUT UP TO 20 DATA POINTS TO DEFINE THE CURVE OF DRAG DEPENDENCE ON REYNOLD'S NUMBER. THESE LINES, IF USED, FOLLOW IMMEDIATELY AFTER THE 'REYFAC' LINE SPECIFYING REYNOLD'S NUMBER DEPENDENT DRAG COEFFICIENT FACTORS. THE ENTRIES ON THIS LINE ARE FACTORS BY WHICH THE NORMAL DRAG COEFFICIENTS ON THE 'CDM' LINES ARE MULTIPLIED TO GIVE THE MODIFIED DRAG COEFFICIENTS. IF THE DRAG COEFFICIENTS ON THE 'CDM' LINE SET ARE 1.0 THEN THE ENTRIES HERE ARE THE ACTUAL DRAG COEFFICIENTS. NO MODIFICATION OF TANGENTIAL DRAG COEFFICIENTS IS DONE.
 
 ( 1- 6)
 
@@ -5482,7 +5584,7 @@ COMMENTARY
 
 GENERAL
 
-THE SURFACE IDENTIFIER LINE ALLOWS THE DESCRIPTION OF ABOUNDED DEFINED AREA WHERE LOAD AND MASS IS DISTRIBUTED TOMEMBERS WITHIN THIS AREA.
+THE SURFACE IDENTIFIER LINE ALLOWS THE DESCRIPTION OF A BOUNDED DEFINED AREA WHERE LOAD AND MASS IS DISTRIBUTED TO MEMBERS WITHIN THIS AREA.
 
 ( 1- 6) ENTER 'SURFID'.   
 ( 8-14) ENTER A SEVEN CHARACTER SURFACE IDENTIFIER. THIS IDENTIFIER IS USED SELECT WHICH AREAS ARE TO BE USED FOR DIFFERENT LOAD AND MASS DISTRIBUTIONS.   
@@ -5512,7 +5614,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THE SURFACE WEIGHT RECORD ALLOWS THE DESCRIPTION OFNON-STRUCTURAL WEIGHTS DEFINED BY PRESSURE LOADING ON DEFINEDSURFACE AREAS.
+GENERAL THE SURFACE WEIGHT RECORD ALLOWS THE DESCRIPTION OF NON-STRUCTURAL WEIGHTS DEFINED BY PRESSURE LOADING ON DEFINED SURFACE AREAS.
 
 ( 1- 6) ENTER 'SURFWT'.   
 ( 7-10) ENTER A FOUR CHARACTER WEIGHT GROUP IDENTIFIER. THIS IDENTIFIER IS USED TO SELECT WHICH WEIGHTS ARE TO BE USED FOR DIFFERENT LOAD CASES. ANY NUMBER OF WEIGHTS CAN HAVE THE SAME IDENTIFIER.   
@@ -5544,9 +5646,9 @@ COMMENTARY
 
 GENERAL
 
-THIS LINE IS USED TO SPECIFY THE ANGULAR AND TRANSLATIONALCOMPONENTS OF THE MODEL'S VELOCITIES ABOUT THE GLOBAL AXES.THESE VELOCITIES ARE USED TO CALCULATE DRAG LOADS ON THEVARIOUS COMPONENTS OF THE SACS MODEL. THESE VELOCITIES CANBE USED WITH IN THE SAME LOAD CASE WITH WAVE, CURRENTS, ETC.
+THIS LINE IS USED TO SPECIFY THE ANGULAR AND TRANSLATIONAL COMPONENTS OF THE MODEL'S VELOCITIES ABOUT THE GLOBAL AXES. THESE VELOCITIES ARE USED TO CALCULATE DRAG LOADS ON THE VARIOUS COMPONENTS OF THE SACS MODEL. THESE VELOCITIES CAN BE USED WITH IN THE SAME LOAD CASE WITH WAVE, CURRENTS, ETC.
 
-SEASTATE GENERATES STRUCTURAL LOADS FROM THESE VELOCITYCOMPONENTS IN THE OPPOSITE DIRECTION TO THE IMPOSEDVELOCITY.
+SEASTATE GENERATES STRUCTURAL LOADS FROM THESE VELOCITY COMPONENTS IN THE OPPOSITE DIRECTION TO THE IMPOSED VELOCITY.
 
 ( 1- 5) ENTER 'VELOC'   
 (10-30) ENTER THE TRANSLATION VELOCITY COMPONENTS ABOUT THE GLOBAL X, Y AND Z AXES.   
@@ -5577,7 +5679,7 @@ GENERAL THIS LINE IS USED TO GENERATE FORCES DUE TO WAVES.
 ( 1- 4) ENTER 'WAVE'. THE FIRST LINE IS A HEADER WITH ONLY THIS ENTRY.
 
 ( 5- 8) ENTER THE WAVE KINEMATICS FACTOR USED TO ACCOUNT FOR SPREADING AND WAVE PROFILE IRREGULARITY.   
-( 9-12) ENTER CODE FOR THE TYPE OF WAVE TO BE GENERATED. OPTIONS ARE: 'AIRY'...AIRY WAVE THEORY. 'AIRC'...CLASSICAL AIRY WAVE THEORY (NO CREST OR TROUGH). 'STOK'...STOKES FIFTH ORDER THEORY. 'STRE'...STREAM FUNCTION THEORY INCLUDING CURRENT EFFECTS. 'STRN'...STREAM FUNCTION THEORY EXCLUDING CURRENT EFFECTS. 'CNOI'...CNOIDAL WAVE THEORY 'SOLI'...SOLITARY WAVE THEORY 'LINE'...THE WAVE DESCRIPTION WILL BE INPUT ON LINES BY TH USER. ADDITIONAL 'WAVE' LINES MUST FOLLOW. 'REPT'...REPEAT WAVE ONLY FROM PREVIOUS LOAD CONDITION. THE USER MAY ENTER NEW VALUES FOR ALL INPUT PARAMETERS FROM COLUMN 39. REPEAT OF 'STRE' INCLUDES REPEAT OF CURRENT PROFILE.   
+( 9-12) ENTER CODE FOR THE TYPE OF WAVE TO BE GENERATED. OPTIONS ARE: 'AIRY'...AIRY WAVE THEORY. 'AIRC'...CLASSICAL AIRY WAVE THEORY (NO CREST OR TROUGH). 'STOK'...STOKES FIFTH ORDER THEORY. 'STRE'...STREAM FUNCTION THEORY INCLUDING CURRENT EFFECTS. 'STRN'...STREAM FUNCTION THEORY EXCLUDING CURRENT EFFECTS. 'CNOI'...CNOIDAL WAVE THEORY 'SOLI'...SOLITARY WAVE THEORY 'LINE'...THE WAVE DESCRIPTION WILL BE INPUT ON LINES BY THE USER. ADDITIONAL 'WAVE' LINES MUST FOLLOW. 'REPT'...REPEAT WAVE ONLY FROM PREVIOUS LOAD CONDITION. THE USER MAY ENTER NEW VALUES FOR ALL INPUT PARAMETERS FROM COLUMN 39. REPEAT OF 'STRE' INCLUDES REPEAT OF CURRENT PROFILE.   
 (13-18) ENTER THE VERTICAL DISTANCE FROM THE CREST TO THE TROUGH.   
 (25-38) ENTER EITHER THE PERIOD OR THE WAVE LENGTH, BUT NOT BOTH. FOR A SOLITARY WAVE ENTER THE LENGTH OF THE REGION OF INTEREST OF THE WAVE IN COLUMNS 31-38 (MINIMUM OF TWICE THE LARGEST WIDTH OF THE STRUCTURE). FOR A STREAM FUNCTION WAVE THE PERIOD MUST BE ENTERED.   
 (39-44) ENTER THE DIRECTION OF WAVE TRAVEL MEASURED IN DEGREES FROM THE GLOBAL AXIS. SEE THE FIGURES ON THE FACING PAGE.   
@@ -5599,23 +5701,23 @@ MAXIMUM MOMENT AND SHEAR ARE MAXIMUM ABSOLUTE VALUES. MINIMUMS ARE THE LARGEST V
 ( 75 ) ENTER 'L' IF ONLY LOCAL ACCELERATIONS ARE TO BE CONSIDERED, CONVECTIVE ACCELERATION TERM IS OMITTED. NOTE: THIS OPTION IS NOT APPLICABLE FOR STREAM FUNCTION WAVES.   
 ( 76 ) VARIOUS PRINT OPTIONS MAY BE SPECIFIED AS FOLLOWS: 0 OR BLANK..MINIMUM PRINT.
 
-.AS PER 0 PLUS THE OVERTURNING MOMENT AND SHEAR ARE PRINTED FOR EACH LOAD STEP.   
-.AS PER 1 PLUS A SUM OF FORCES AND MOMENTS ABOUT THE MUDLINE ARE PRINTED FOR EACH LOAD STEP.   
+1......AS PER 0 PLUS THE OVERTURNING MOMENT AND SHEAR ARE PRINTED FOR EACH LOAD STEP.   
+2......AS PER 1 PLUS A SUM OF FORCES AND MOMENTS ABOUT THE MUDLINE ARE PRINTED FOR EACH LOAD STEP.   
 3. .AS PER 2 PLUS THE VELOCITIES AND ACCELERATIONS AT THE GRID POINTS ARE PRINTED.
 
 (77-78) IF 'STRE' OR 'STRN' IS IN COLUMNS 9-12 ENTER THE DESIRED ORDER OF THE GENERATED STREAM FUNCTION WAVE. ODD VALUES SHOULD BE USED WITH A MAXIMUM OF 21. IF LEFT BLANK THE ORDER WILL BE SELECTED BASED ON ATKINS.
 
 
 
-| LINE LABEL | WAVE DEFINITION PARAMETERS | WAVE DEFINITION PARAMETERS | WAVE DEFINITION PARAMETERS | WAVE DEFINITION PARAMETERS | WAVE DEFINITION PARAMETERS | WAVE DEFINITION PARAMETERS | WAVE DEFINITION PARAMETERS | MUDLINE ELEVATION | WAVE POSITION PARAMETERS | WAVE POSITION PARAMETERS | WAVE POSITION PARAMETERS | WAVE POSITION PARAMETERS | WAVE POSITION PARAMETERS | WAVE POSITION PARAMETERS | WAVE POSITION PARAMETERS | MEMBER SEGMENTATION | MEMBER SEGMENTATION | LOCAL ACCEL ONLY | PRINT OPTION | ORDER OF STREAM FUNC. |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | WAVE CHARACTERISTIC | WAVE CHARACTERISTIC | WAVE CHARACTERISTIC | STILL WATER深度 | WAVE CHARACTERISTIC | WAVE CHARACTERISTIC | WAVE CHARACTERISTIC | MUDLINE ELEVATION | INPUT MODE | CREST POSITION | STEP SIZE | DYN. STEPS | STATIC STEPS | CRITICAL POSITION | MAX | MIN |  | LOCAL ACCEL ONLY | PRINT OPTION |  |
-| LINE LABEL | KINEMAT FACTOR | WAVE TYPE | WAVE HEIGHT | STILL WATER深度 | WAVE PERIOD | WAVE LENGTH | WAVE ANGLE | MUDLINE ELEVATION | INPUT MODE | CREST POSITION | STEP SIZE | DYN. STEPS | STATIC STEPS | CRITICAL POSITION | MAX | MIN |  | LOCAL ACCEL ONLY | PRINT OPTION |  |
-| WAVE |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1--4 | 5<--8 | 9--12 | 13<--18 | 19<--24 | 25<--30 | 31<--38 | 39<--44 | 45<--50 | 51 | 52<--58 | 59<--64 | 65<-->66 | 67<-->68 | 69<-->70 | 71<-->72 | 73<-->74 | 75 | 76 | 77<-->78 |  |
-| DEFAULT | 1 |  |  | 'LOOPT' |  |  |  | 'LOOPT' |  |  |  |  |  |  | 10 | 1 |  |  | AUTO. |  |
-| ENGLISH |  |  | FT | FT | SEC | FT | DEG | FT |  | FT, DEG, SEC | FT, DEG, SEC |  |  |  |  |  |  |  |  |  |
-| METRIC |  |  | M | M | SEC | M | DEG | M |  | M, DEG, SEC | M, DEG, SEC |  |  |  |  |  |  |  |  |  |
+| LINE LABEL | WAVE DEFINITION PARAMETERS | WAVE DEFINITION PARAMETERS | WAVE DEFINITION PARAMETERS | WAVE DEFINITION PARAMETERS | WAVE DEFINITION PARAMETERS | WAVE DEFINITION PARAMETERS | WAVE DEFINITION PARAMETERS | MUDLINE ELEVATION | WAVE POSITION PARAMETERS | WAVE POSITION PARAMETERS | WAVE POSITION PARAMETERS | WAVE POSITION PARAMETERS | WAVE POSITION PARAMETERS | WAVE POSITION PARAMETERS | MEMBER SEGMENTATION | MEMBER SEGMENTATION | LOCAL ACCEL ONLY | PRINT OPTION | ORDER OF STREAM FUNC. |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | WAVE CHARACTERISTIC | WAVE CHARACTERISTIC | WAVE CHARACTERISTIC | STILL WATER DEPTH | WAVE CHARACTERISTIC | WAVE CHARACTERISTIC | WAVE CHARACTERISTIC | MUDLINE ELEVATION | INPUT MODE | CREST POSITION | STEP SIZE | DYN. STEPS | STATIC STEPS | CRITICAL POSITION | MAX | MIN | LOCAL ACCEL ONLY | PRINT OPTION | ORDER OF STREAM FUNC. |
+| LINE LABEL | KINEMAT FACTOR | WAVE TYPE | WAVE HEIGHT | STILL WATER DEPTH | WAVE PERIOD | WAVE LENGTH | WAVE ANGLE | MUDLINE ELEVATION | INPUT MODE | CREST POSITION | STEP SIZE | DYN. STEPS | STATIC STEPS | CRITICAL POSITION | MAX | MIN | LOCAL ACCEL ONLY | PRINT OPTION | ORDER OF STREAM FUNC. |
+| WAVE |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 4 | 5<-- 8 | 9--12 | 13<--18 | 19<--24 | 25<--30 | 31<--38 | 39<--44 | 45<--50 | 51 | 52<--58 | 59<--64 | 65-->66 | 67-->68 | 69--70 | 71-->72 | 73-->74 | 75 | 76 | 77-->78 |
+| DEFAULT | 1 |  |  | 'LDOPT' |  |  |  | 'LDOPT' |  |  |  |  |  |  | 10 | 1 |  |  | AUTO. |
+| ENGLISH |  |  | FT | FT | SEC | FT | DEG | FT |  | FT,DEG,SEC | FT,DEG,SEC |  |  |  |  |  |  |  |  |
+| METRIC |  |  | M | M | SEC | M | DEG | M |  | M,DEG,SEC | M,DEG,SEC |  |  |  |  |  |  |  |  |
 
 
 
@@ -5659,7 +5761,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THE ADDITIONAL FOOTPRINT WEIGHT RECORD ALLOWS THE DESCRIPTIONOF WEIGHT FACTORS, RADII OF GYRATION, DENSITY, ANDORIENTATION OF THE PRECEDING FOOTPRINT WEIGHT LINE.
+GENERAL THE ADDITIONAL FOOTPRINT WEIGHT RECORD ALLOWS THE DESCRIPTION OF WEIGHT FACTORS, RADII OF GYRATION, DENSITY, AND ORIENTATION OF THE PRECEDING FOOTPRINT WEIGHT LINE.
 
 ( 1- 6) ENTER 'WGTFP2'.   
 (11-22) ENTER THE WEIGHT FACTORS IN THE 3 DIRECTIONS. LEAVE BLANK FOR DEFAULTS.   
@@ -5671,7 +5773,7 @@ GENERAL THE ADDITIONAL FOOTPRINT WEIGHT RECORD ALLOWS THE DESCRIPTIONOF WEIGHT F
 
 
 
-| LINE LABEL | WEIGHT FACTORS | WEIGHT FACTORS | WEIGHT FACTORS | Z TOLERANCE | RADI OF GYRATION | RADI OF GYRATION | RADI OF GYRATION | RADI OF GYRATION | DENSITY | ORIENTATION ANGLE | LEAVE BLANK |
+| LINE LABEL | WEIGHT FACTORS | WEIGHT FACTORS | WEIGHT FACTORS | Z TOLERANCE | RADII OF GYRATION | RADII OF GYRATION | RADII OF GYRATION | RADII OF GYRATION | DENSITY | ORIENTATION ANGLE | LEAVE BLANK |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LINE LABEL | X FACTOR | Y FACTOR | Z FACTOR | Z TOLERANCE | GLOBAL OR LOCAL | X AXIS | Y AXIS | Z AXIS | DENSITY | ORIENTATION ANGLE | LEAVE BLANK |
 | WGTFP2 |  |  |  |  |  |  |  |  |  |  |  |
@@ -5688,7 +5790,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THE ADDED JOINT WEIGHT RECORD ALLOWS THE DESCRIPTION OFNON-STRUCTURAL WEIGHTS ATTACHED TO A SINGLE JOINT.
+GENERAL THE ADDED JOINT WEIGHT RECORD ALLOWS THE DESCRIPTION OF NON-STRUCTURAL WEIGHTS ATTACHED TO A SINGLE JOINT.
 
 ( 1- 5) ENTER 'WGTJT'.   
 ( 7-10) ENTER A FOUR CHARACTER WEIGHT GROUP IDENTIFIER. THIS IDENTIFIER IS USED SELECT WHICH WEIGHTS ARE TO BE USED FOR DIFFERENT LOAD CASES. ANY NUMBER OF WEIGHTS CAN HAVE THE SAME IDENTIFIER.   
@@ -5702,7 +5804,7 @@ GENERAL THE ADDED JOINT WEIGHT RECORD ALLOWS THE DESCRIPTION OFNON-STRUCTURAL WE
 
 
 
-| LINE LABEL | WEIGHT GROUP ID | WEIGHT | WEIGHT ID | JOINT NAME | DENSITY | RADI OF GYRATION | RADI OF GYRATION | RADI OF GYRATION | WEIGHT FACTORS | WEIGHT FACTORS | WEIGHT FACTORS | COMMENTS |
+| LINE LABEL | WEIGHT GROUP ID | WEIGHT | WEIGHT ID | JOINT NAME | DENSITY | RADII OF GYRATION | RADII OF GYRATION | RADII OF GYRATION | WEIGHT FACTORS | WEIGHT FACTORS | WEIGHT FACTORS | COMMENTS |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LINE LABEL | WEIGHT GROUP ID | WEIGHT | WEIGHT ID | JOINT NAME | DENSITY | X AXIS | Y AXIS | Z AXIS | X FACTOR | Y FACTOR | Z FACTOR | COMMENTS |
 | WGTJT |  |  |  |  |  |  |  |  |  |  |  |  |
@@ -5720,11 +5822,11 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THE CONCENTRATED MEMBER WEIGHT RECORD ALLOWS THE DESCRIPTIONOF MEMBER CONCENTRATED WEIGHTS.
+GENERAL THE CONCENTRATED MEMBER WEIGHT RECORD ALLOWS THE DESCRIPTION OF MEMBER CONCENTRATED WEIGHTS.
 
 ( 1- 6) ENTER 'WGTMEM'.   
 ( 7-10) ENTER A FOUR CHARACTER WEIGHT GROUP IDENTIFIER. THIS IDENTIFIER IS USED SELECT WHICH WEIGHTS ARE TO BE USED FOR DIFFERENT LOAD CASES. ANY NUMBER OF WEIGHTS CAN HAVE THE SAME IDENTIFIER.   
-(11-18) ENTER THE MEMBER JOINT NAMES. THESE CAN BE REVERSED TO LOCATETHE WEIGHT FROM THE OPPOSITE END OF THE MEMBER.  
+(11-18) ENTER THE MEMBER JOINT NAMES. THESE CAN BE REVERSED TO LOCATE THE WEIGHT FROM THE OPPOSITE END OF THE MEMBER.  
 (19-25) ENTER THE DISTANCE FROM JOINT A TO THE CONCENTRATED WEIGHT.   
 (26-32) ENTER THE CONCENTRATED WEIGHT VALUE.   
 (47-58) ENTER THE WEIGHT FACTORS IN THE THREE DIRECTIONS. LEAVE BLANK FOR DEFAULTS.   
@@ -5735,9 +5837,9 @@ GENERAL THE CONCENTRATED MEMBER WEIGHT RECORD ALLOWS THE DESCRIPTIONOF MEMBER CO
 
 
 
-| LINE LABEL | WEIGHT GROUP ID | MEMBER JOINT NAMES | MEMBER JOINT NAMES | CONCENTRATED WEIGHT DATA | CONCENTRATED WEIGHT DATA | LOAD DIRECTION FACTORS | LOAD DIRECTION FACTORS | LOAD DIRECTION FACTORS | COORDATE SYSTEM FOR WEIGHT GLOBAL OR MEMBER | WEIGHT TYPE | DENSITY | WEIGHT ID |
+| LINE LABEL | WEIGHT GROUP ID | MEMBER JOINT NAMES | MEMBER JOINT NAMES | CONCENTRATED WEIGHT DATA | CONCENTRATED WEIGHT DATA | LOAD DIRECTION FACTORS | LOAD DIRECTION FACTORS | LOAD DIRECTION FACTORS | COORDINATE SYSTEM FOR WEIGHT GLOBAL OR MEMBER | WEIGHT TYPE | DENSITY | WEIGHT ID |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | WEIGHT GROUP ID | JOINT A | JOINT B | DISTANCE FROM END A TO CONCENTRATED WEIGHT | CONCENTRATED WEIGHT VALUE | X FACTOR | Y FACTOR | Z FACTOR | COORDATE SYSTEM FOR WEIGHT GLOBAL OR MEMBER | WEIGHT TYPE | DENSITY | WEIGHT ID |
+| LINE LABEL | WEIGHT GROUP ID | JOINT A | JOINT B | DISTANCE FROM END A TO CONCENTRATED WEIGHT | CONCENTRATED WEIGHT VALUE | X FACTOR | Y FACTOR | Z FACTOR | COORDINATE SYSTEM FOR WEIGHT GLOBAL OR MEMBER | WEIGHT TYPE | DENSITY | WEIGHT ID |
 | WGTMEM |  |  |  |  |  |  |  |  |  | CONC |  |  |
 | 1--6 | 7<--10 | 11-->14 | 15-->18 | 19<--25 | 26<--32 | 47<--50 | 51<--54 | 55<--58 | 59--62 | 63--66 | 67<--72 | 73--80 |
 | DEFAULT |  |  |  |  |  | 1 | 1 | 1 | 'GLOB' |  |  |  |
@@ -5757,7 +5859,7 @@ GENERAL THE DISTRIBUTED MEMBER WEIGHT RECORD ALLOWS THE DESCRIPTION OF MEMBER DI
 
 ( 1- 5) ENTER 'WGTMEM'.   
 ( 7-10) ENTER A FOUR CHARACTER WEIGHT GROUP IDENTIFIER. THIS IDENTIFIER IS USED SELECT WHICH WEIGHTS ARE TO BE USED FOR DIFFERENT LOAD CASES. ANY NUMBER OF WEIGHTS CAN HAVE THE SAME IDENTIFIER.   
-(11-18) ENTER THE MEMBER JOINT NAMES. THESE CAN BE REVERSED TO LOCATETHE WEIGHT FROM THE OPPOSITE END OF THE MEMBER.  
+(11-18) ENTER THE MEMBER JOINT NAMES. THESE CAN BE REVERSED TO LOCATE THE WEIGHT FROM THE OPPOSITE END OF THE MEMBER.  
 (19-25) ENTER THE DISTANCE FROM JOINT A TO BEGINNING OF THE DISTRIBUTED WEIGHT.   
 (26-32) ENTER THE BEGINNING DISTRIBUTED WEIGHT VALUE.   
 (33-39) ENTER THE DISTANCE OVER WHICH THE DISTRIBUTED WEIGHT ACTS. IF LEFT BLANK, THE DISTANCE WILL BE TO THE END OF MEMBER.   
@@ -5794,7 +5896,7 @@ GENERAL THE ADDED WEIGHT RECORD ALLOWS THE DESCRIPTION OF NON-STRUCTURAL WEIGHTS
 ( 7-10) ENTER A FOUR CHARACTER WEIGHT GROUP IDENTIFIER. THIS IDENTIFIER IS USED TO SELECT WHICH WEIGHTS ARE USED FOR DIFFERENT LOAD CASES. ANY NUMBER OF WEIGHTS CAN HAVE THE SAME IDENTIFIER.   
 (11-17) ENTER THE WEIGHT.   
 (18-25) ENTER THE WEIGHT IDENTIFIER. THIS WILL BE USED FOR REPORTING PURPOSES.   
-(26-29) ENTER THE ELEVATION IDENTIFIER FROM AN 'ELEV' LINE. THISELEVATION WILL BE ADDED TO THE Z COORDINATE OF THE WEIGHTCOORDINATE. LEAVE BLANK FOR NO ADDITION. THIS FEATURE ENABLESTHE USER TO EASILY MOVE THE WEIGHTS WITH ONLY A CHANGE INELEVATION.  
+(26-29) ENTER THE ELEVATION IDENTIFIER FROM AN 'ELEV' LINE. THIS ELEVATION WILL BE ADDED TO THE Z COORDINATE OF THE WEIGHT COORDINATE. LEAVE BLANK FOR NO ADDITION. THIS FEATURE ENABLES THE USER TO EASILY MOVE THE WEIGHTS WITH ONLY A CHANGE IN ELEVATION.  
 ( 30 ) ENTER THE TYPE OF COORDINATES: 'A' - ABSOLUTE. 'R' - RELATIVE TO 1ST JOINT.   
 (31-48) ENTER THE COORDINATES.   
 (49-80) ENTER THE JOINTS TO WHICH THE LOADS ARE TO BE DISTRIBUTED.
@@ -5819,7 +5921,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THE ADDITIONAL WEIGHT RECORD ALLOWS THE DESCRIPTION OF WEIGHTFACTORS AND RADII OF GYRATION. THIS LINE FOLLOWS IMMEDIATELYAFTER THE WGTNS LINE.
+GENERAL THE ADDITIONAL WEIGHT RECORD ALLOWS THE DESCRIPTION OF WEIGHT FACTORS AND RADII OF GYRATION. THIS LINE FOLLOWS IMMEDIATELY AFTER THE WGTNS LINE.
 
 ( 1- 6) ENTER 'WGTNS2'.   
 (11-22) ENTER THE WEIGHT FACTORS IN THE 3 DIRECTIONS. LEAVE BLANK FOR DEFAULTS.   
@@ -5829,7 +5931,7 @@ GENERAL THE ADDITIONAL WEIGHT RECORD ALLOWS THE DESCRIPTION OF WEIGHTFACTORS AND
 
 
 
-| LINE LABEL | WEIGHT FACTORS | WEIGHT FACTORS | WEIGHT FACTORS | DENSITY | RADI OF GYRATION | RADI OF GYRATION | RADI OF GYRATION | RADI OF GYRATION | LEAVE BLANK |
+| LINE LABEL | WEIGHT FACTORS | WEIGHT FACTORS | WEIGHT FACTORS | DENSITY | RADII OF GYRATION | RADII OF GYRATION | RADII OF GYRATION | RADII OF GYRATION | LEAVE BLANK |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LINE LABEL | X FACTOR | Y FACTOR | Z FACTOR | DENSITY | GLOBAL OR LOCAL | X AXIS | Y AXIS | Z AXIS | LEAVE BLANK |
 | WGTNS2 |  |  |  |  |  |  |  |  |  |
@@ -5867,12 +5969,12 @@ COMMENTARY
 
 
 
-| LINE LABEL | PRINT OPTION | WATER DEPTHOR ORIGIN ELEV. OPTION | MEMBER LOADING OPTION | WIND LOAD DATA | WIND LOAD DATA | WIND LOAD DATA | WIND LOAD DATA | WATER DEPTHOR ORIGIN ELEV. | HEIGHT VARIATION | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED |  |
+| LINE LABEL | PRINT OPTION | WATER DEPTHOR ORIGIN ELEV. OPTION | MEMBER LOADING OPTION | WIND LOAD DATA | WIND LOAD DATA | WIND LOAD DATA | WIND LOAD DATA | WATER DEPTHOR ORIGIN ELEV. | HEIGHT VARIATION | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERSALL ENTRIES ARE LEFT JUSTIFIED | WIND AREA IDENTIFIERS ALL ENTRIES ARE LEFT JUSTIFIED |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LINE LABEL | PRINT OPTION | WATER DEPTHOR ORIGIN ELEV. OPTION | MEMBER LOADING OPTION | VELOCITY UNITS | VELOCITY | REF.HEIGHT TIME OR PRESSURE | DIRECTION | WATER DEPTHOR ORIGIN ELEV. | HEIGHT VARIATION | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 |
 | WIND |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | 1-- 4 | 5 | 6 | 7 | 8 | 9<-16 | 17<-24 | 25<-32 | 33<-40 | 41<-44 | 45<-46 | 47<-48 | 49<-50 | 51<-52 | 53<-54 | 55<-56 | 57<-58 | 59<-60 | 61<-62 | 63<-64 | 65<-66 | 67<-68 | 69<-70 | 71<-72 | 73<-74 | 75<-76 | 77<-78 | 79----80 |
-| DEFAULT |  | 'D' |  |  |  | SEE NOTE |  | 'LOOPT' |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| DEFAULT |  | 'D' |  |  |  | SEE NOTE |  | 'LDOPT' |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | ENGLISH |  |  |  |  | SEE COLUMN 8 | SEE NOTE | DEG | FT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | METRIC |  |  |  |  | M/SEC | SEE NOTE | DEG | M |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
@@ -5886,7 +5988,7 @@ COMMENTARY
 
 GENERAL
 
-THIS DATA RECORD SET ALLOWS THE USER TO SPECIFY ELEVATIONZONES WHERE THE MEMBERS HAVE NO WIND LOADS.
+THIS DATA RECORD SET ALLOWS THE USER TO SPECIFY ELEVATION ZONES WHERE THE MEMBERS HAVE NO WIND LOADS.
 
 (11-18)
 
@@ -5937,7 +6039,7 @@ GENERAL THIS LINE ENABLES THE USER TO GENERATE NEW WEIGHT GROUPS, EACH DEFINED A
 (16-21) ENTER THE FRACTION OF THE FIRST WEIGHT GROUP TO BE INCLUDED IN THIS COMBINED GROUP.   
 (22-71) REPEAT AS NECESSARY FOR THE REMAINING COMPONENTS MAKING UP THIS COMBINATION.
 
-THIS LINE MAY BE REPEATED TO ENTER A TOTAL OF FORTY EIGHTWEIGHT GROUPS FOR EACH COMBINATION. EACH ADDITIONAL WTCMBLINE MUST HAVE THE COMBINED WEIGHT GROUP SPECIFIED IN COLUMNS7-10.
+THIS LINE MAY BE REPEATED TO ENTER A TOTAL OF FORTY EIGHT WEIGHT GROUPS FOR EACH COMBINATION. EACH ADDITIONAL WTCMB LINE MUST HAVE THE COMBINED WEIGHT GROUP SPECIFIED IN COLUMNS 7-10.
 
 
 
@@ -5960,7 +6062,7 @@ GENERAL
 
 THE 'WTSTR' LINE CALCULATES THE DEAD WEIGHT (MASS) FOR ALL STRUCTURAL ELEMENTS. WHEN THE 'WTSTR' LINE IS USED WITHIN A WEIGHT GROUP TO CALCULATE THE WEIGHT (MASS) OF THE STRUCTURE, ALL MARINE GROWTH DRY WEIGHT WILL BE INCLUDED. BUOYANCY EFFECTS, THE MASS OF ENTRAPPED WATER AND THE ADDED MASS OF WATER ARE IGNORED.
 
-THE 'WTSTR' LINE IS BEST USED FOR INERTIA LOAD GENERATINGPURPOSES. FOR OFFSHORE STRUCTURES, IT IS NOT RECOMMENDED TOUSE THE 'WTSTR' LINE WITHIN WEIGHT GROUP(S) AND/OR WEIGHTCOMBINATION(S) TO CALCULATE THE DEAD LOADS. INSTEAD, INCLUDETHE 'DEAD' LINE WITHIN LOAD CONDITIONS TO HAVE THE BUOYANCYEFFECTS PROPERLY CONSIDERED.
+THE 'WTSTR' LINE IS BEST USED FOR INERTIA LOAD GENERATING PURPOSES. FOR OFFSHORE STRUCTURES, IT IS NOT RECOMMENDED TO USE THE 'WTSTR' LINE WITHIN WEIGHT GROUP(S) AND/OR WEIGHT COMBINATION(S) TO CALCULATE THE DEAD LOADS. INSTEAD, INCLUDE THE 'DEAD' LINE WITHIN LOAD CONDITIONS TO HAVE THE BUOYANCY EFFECTS PROPERLY CONSIDERED.
 
 ( 1- 5) ENTER 'WTSTR'.   
 ( 7-10) ENTER A FOUR CHARACTER WEIGHT GROUP IDENTIFIER. THIS IDENTIFIER IS USED TO SELECT WHICH WEIGHTS ARE USED FOR DIFFERENT LOAD CASES. ANY NUMBER OF WEIGHTS CAN HAVE THE SAME IDENTIFIER.
@@ -5980,7 +6082,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE SET IS USED TO DEFINE THE ZONE BOUNDARY FOR FLOOR LOADS.ADDITIONAL LINES MAY BE USED TO WITH THE SAME ZONE LABEL.
+GENERAL THIS LINE SET IS USED TO DEFINE THE ZONE BOUNDARY FOR FLOOR LOADS. ADDITIONAL LINES MAY BE USED TO WITH THE SAME ZONE LABEL.
 
 (1-5) ENTER 'ZONBD'   
 (7-21) ENTER THE ZONE LABEL.   
@@ -6003,7 +6105,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE SET IS USED TO DEFINE AN OPENING BOUNDARY FOR FLOOR LOADS.ADDITIONAL LINES MAY BE USED TO WITH THE SAME ZONE LABEL AND OPENING LABEL.
+GENERAL THIS LINE SET IS USED TO DEFINE AN OPENING BOUNDARY FOR FLOOR LOADS. ADDITIONAL LINES MAY BE USED TO WITH THE SAME ZONE LABEL AND OPENING LABEL.
 
 (1-5) ENTER 'ZONEH'   
 (7-21) ENTER THE ZONE LABEL.   
@@ -6027,7 +6129,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE SET IS USED TO DEFINE THE MEMBER GROUPS THAT ARE IGNORED FOR FLOOR LOADPANEL FORMATION. ADDITIONAL LINES MAY BE USED TO WITH THE SAME ZONE LABEL.
+GENERAL THIS LINE SET IS USED TO DEFINE THE MEMBER GROUPS THAT ARE IGNORED FOR FLOOR LOAD PANEL FORMATION. ADDITIONAL LINES MAY BE USED TO WITH THE SAME ZONE LABEL.
 
 (1-5)
 
@@ -6043,12 +6145,12 @@ ENTER THE MEMBER GROUPS TO BE IGNORED.
 
 
 
-| LINE LABEL | ZONE LABEL | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | ZONE LABEL | GROUP 1 | GROUP 2 | GROUP 3 | GROUP 4 | GROUP 5 | GROUP 6 | GROUP 7 | GROUP 8 | GROUP 9 | GROUP 10 | GROUP 11 | GROUP 12 | GROUP 13 | GROUP 14 | GROUP 15 |  |
-| ZONIG |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1-- 5 | 7<--21 | 23<--25 | 27<--29 | 31<--33 | 35<--37 | 39<--41 | 43<--45 | 47<--49 | 51<--53 | 55<--57 | 59<--61 | 63<--65 | 67<--69 | 71<--73 | 75<--77 | 79<--81 |  |
-| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| LINE LABEL | ZONE LABEL | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | ZONE LABEL | GROUP 1 | GROUP 2 | GROUP 3 | GROUP 4 | GROUP 5 | GROUP 6 | GROUP 7 | GROUP 8 | GROUP 9 | GROUP 10 | GROUP 11 | GROUP 12 | GROUP 13 | GROUP 14 | GROUP 15 |
+| ZONIG |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 5 | 7<--21 | 23<--25 | 27<--29 | 31<--33 | 35<--37 | 39<--41 | 43<--45 | 47<--49 | 51<--53 | 55<--57 | 59<--61 | 63<--65 | 67<--69 | 71<--73 | 75<--77 | 79<--81 |
+| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
 
 
@@ -6058,7 +6160,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE SET IS USED TO DEFINE THE MEMBERS THAT ARE IGNORED FOR FLOOR LOADPANEL FORMATION. ADDITIONAL LINES MAY BE USED TO WITH THE SAME ZONE LABEL.
+GENERAL THIS LINE SET IS USED TO DEFINE THE MEMBERS THAT ARE IGNORED FOR FLOOR LOAD PANEL FORMATION. ADDITIONAL LINES MAY BE USED TO WITH THE SAME ZONE LABEL.
 
 (1-5) ENTER 'ZONIM'   
 (7-21) ENTER THE ZONE LABEL.   
@@ -6109,7 +6211,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE SET IS USED TO DEFINE THE MEMBER GROUPS THAT ARE IGNORED FOR FLOOR LOADLOAD TRANSFER. ADDITIONAL LINES MAY BE USED TO WITH THE SAME ZONE LABEL.
+GENERAL THIS LINE SET IS USED TO DEFINE THE MEMBER GROUPS THAT ARE IGNORED FOR FLOOR LOAD LOAD TRANSFER. ADDITIONAL LINES MAY BE USED TO WITH THE SAME ZONE LABEL.
 
 (1-5)
 
@@ -6125,12 +6227,12 @@ ENTER THE MEMBER GROUPS TO BE IGNORED.
 
 
 
-| LINE LABEL | ZONE LABEL | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | ZONE LABEL | GROUP 1 | GROUP 2 | GROUP 3 | GROUP 4 | GROUP 5 | GROUP 6 | GROUP 7 | GROUP 8 | GROUP 9 | GROUP 10 | GROUP 11 | GROUP 12 | GROUP 13 | GROUP 14 | GROUP 15 |  |
-| ZONVG |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1-- 5 | 7<--21 | 23<--25 | 27<--29 | 31<--33 | 35<--37 | 39<--41 | 43<--45 | 47<--49 | 51<--53 | 55<--57 | 59<--61 | 63<--65 | 67<--69 | 71<--73 | 75<--77 | 79<--81 |  |
-| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| LINE LABEL | ZONE LABEL | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS | MEMBER GROUPS |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | ZONE LABEL | GROUP 1 | GROUP 2 | GROUP 3 | GROUP 4 | GROUP 5 | GROUP 6 | GROUP 7 | GROUP 8 | GROUP 9 | GROUP 10 | GROUP 11 | GROUP 12 | GROUP 13 | GROUP 14 | GROUP 15 |
+| ZONVG |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 5 | 7<--21 | 23<--25 | 27<--29 | 31<--33 | 35<--37 | 39<--41 | 43<--45 | 47<--49 | 51<--53 | 55<--57 | 59<--61 | 63<--65 | 67<--69 | 71<--73 | 75<--77 | 79<--81 |
+| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
 
 
@@ -6140,7 +6242,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE SET IS USED TO DEFINE THE MEMBERS THAT ARE IGNORED FOR FLOOR LOADLOAD TRANSFER. ADDITIONAL LINES MAY BE USED TO WITH THE SAME ZONE LABEL.
+GENERAL THIS LINE SET IS USED TO DEFINE THE MEMBERS THAT ARE IGNORED FOR FLOOR LOAD LOAD TRANSFER. ADDITIONAL LINES MAY BE USED TO WITH THE SAME ZONE LABEL.
 
 (1-5) ENTER 'ZONVM'   
 (7-21) ENTER THE ZONE LABEL.   
@@ -6166,7 +6268,7 @@ COMMENTARY
 
 GENERAL
 
-THIS LINE SET SPECIFIES THE HORIZONTAL FLUID DRAG PRESSURESAT THE GRID POINTS. IT IS USED IF LINE SET USER 1 HAS 'PRES'ENTERED IN COLUMNS 27-30.
+THIS LINE SET SPECIFIES THE HORIZONTAL FLUID DRAG PRESSURES AT THE GRID POINTS. IT IS USED IF LINE SET USER 1 HAS 'PRES 'ENTERED IN COLUMNS 27-30.
 
 PRESSURES ARE ENTERED FOR THE FIRST STATION STARTING AT THE MUDLINE. THE LINE IS REPEATED AS NECESSARY UNTIL 'NVG' PRESSURES (LINE SET USER 1) HAVE BEEN ENTERED. THEN ANOTHER SET OF LINES IS CREATED FOR THE SECOND STATION IN A SIMILAR WAY, BUT NO PRESSURE IS ENTERED FOR GRID POINTS LYING ABOVE THE SURFACE. THIS PROCESS IS CONTINUED UNTIL 'NHG' (LINE SET USER 1) SETS OF LINES HAVE BEEN ENTERED.
 
@@ -6177,15 +6279,15 @@ PRESSURES ARE ENTERED FOR THE FIRST STATION STARTING AT THE MUDLINE. THE LINE IS
 
 
 
-| LINE LABEL | LOAD CONDITION | LINE LABEL | HORIZONTAL DRAG PRESSURES AT GRID POINTS | HORIZONTAL DRAG PRESSURES AT GRID POINTS | HORIZONTAL DRAG PRESSURES AT GRID POINTS | HORIZONTAL DRAG PRESSURES AT GRID POINTS | HORIZONTAL DRAG PRESSURES AT GRID POINTS | HORIZONTAL DRAG PRESSURES AT GRID POINTS | HORIZONTAL DRAG PRESSURES AT GRID POINTS | HORIZONTAL DRAG PRESSURES AT GRID POINTS | HORIZONTAL DRAG PRESSURES AT GRID POINTS | HORIZONTAL DRAG PRESSURES AT GRID POINTS | HORIZONTAL DRAG PRESSURES AT GRID POINTS | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION |  |  |
-| WAVE |  | DRAG |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1-- 4 | 6--> 8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |  |
-| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| ENGLISH |  |  | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT |  |  |
-| METRIC(KN) |  |  | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M |  |  |
-| METRIC(KG) |  |  | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M |  |  |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | HORIZONTAL DRAG PRESSURES AT GRID POINTS | HORIZONTAL DRAG PRESSURES AT GRID POINTS | HORIZONTAL DRAG PRESSURES AT GRID POINTS | HORIZONTAL DRAG PRESSURES AT GRID POINTS | HORIZONTAL DRAG PRESSURES AT GRID POINTS | HORIZONTAL DRAG PRESSURES AT GRID POINTS | HORIZONTAL DRAG PRESSURES AT GRID POINTS | HORIZONTAL DRAG PRESSURES AT GRID POINTS | HORIZONTAL DRAG PRESSURES AT GRID POINTS | HORIZONTAL DRAG PRESSURES AT GRID POINTS | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION | LEAVE BLANK |
+| WAVE |  | DRAG |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 4 | 6--> 8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |
+| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| ENGLISH |  |  | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT |  |
+| METRIC(KN) |  |  | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M |  |
+| METRIC(KG) |  |  | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M |  |
 
 
 
@@ -6197,7 +6299,7 @@ COMMENTARY
 
 GENERAL
 
-THIS LINE SET SPECIFIES THE HORIZONTAL FLUID PARTICLEVELOCITIES AT THE GRID POINTS. IT IS NOT USED IF LINE SETUSER 1 HAS 'PRES' ENTERED IN COLUMNS 27-30. IN THAT CASE LINESET USER 14 IS USED TO SPECIFY DRAG PRESSURES.
+THIS LINE SET SPECIFIES THE HORIZONTAL FLUID PARTICLE VELOCITIES AT THE GRID POINTS. IT IS NOT USED IF LINE SET USER 1 HAS 'PRES' ENTERED IN COLUMNS 27-30. IN THAT CASE LINE SET USER 14 IS USED TO SPECIFY DRAG PRESSURES.
 
 VELOCITIES ARE ENTERED FOR THE FIRST STATION STARTING AT THE MUDLINE. THE LINE IS REPEATED AS NECESSARY UNTIL 'NVG' VELOCITIES (LINE SET USER 1) HAVE BEEN ENTERED. THEN ANOTHER SET OF LINES IS CREATED FOR THE SECOND STATION IN A SIMILAR WAY, BUT NO VELOCITY IS ENTERED FOR GRID POINTS LYING ABOVE THE SURFACE. THIS PROCESS IS CONTINUED UNTIL 'NHG' (LINE SET USER 1) SETS OF LINES HAVE BEEN ENTERED.
 
@@ -6208,14 +6310,14 @@ VELOCITIES ARE ENTERED FOR THE FIRST STATION STARTING AT THE MUDLINE. THE LINE I
 
 
 
-| LINE LABEL | LOAD CONDITION | LINE LABEL | HORIZONTAL VELOCITIES AT GRID POINTS | HORIZONTAL VELOCITIES AT GRID POINTS | HORIZONTAL VELOCITIES AT GRID POINTS | HORIZONTAL VELOCITIES AT GRID POINTS | HORIZONTAL VELOCITIES AT GRID POINTS | HORIZONTAL VELOCITIES AT GRID POINTS | HORIZONTAL VELOCITIES AT GRID POINTS | HORIZONTAL VELOCITIES AT GRID POINTS | HORIZONTAL VELOCITIES AT GRID POINTS | HORIZONTAL VELOCITIES AT GRID POINTS | HORIZONTAL VELOCITIES AT GRID POINTS | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION |  |  |
-| WAVE |  | DRAG |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1--4 | 6--->8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |  |
-| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| ENGLISH |  |  | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC |  |  |
-| METRIC |  |  | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC |  |  |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | HORIZONTAL VELOCITIES AT GRID POINTS | HORIZONTAL VELOCITIES AT GRID POINTS | HORIZONTAL VELOCITIES AT GRID POINTS | HORIZONTAL VELOCITIES AT GRID POINTS | HORIZONTAL VELOCITIES AT GRID POINTS | HORIZONTAL VELOCITIES AT GRID POINTS | HORIZONTAL VELOCITIES AT GRID POINTS | HORIZONTAL VELOCITIES AT GRID POINTS | HORIZONTAL VELOCITIES AT GRID POINTS | HORIZONTAL VELOCITIES AT GRID POINTS | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION | LEAVE BLANK |
+| WAVE |  | DRAG |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 4 | 6--> 8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |
+| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| ENGLISH |  |  | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC |  |
+| METRIC |  |  | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC |  |
 
 
 
@@ -6227,7 +6329,7 @@ COMMENTARY
 
 GENERAL
 
-THIS LINE SET SPECIFIES THE VERTICAL FLUID DRAG PRESSURES ATTHE GRID POINTS. IT IS USED IF LINE SET USER 1 HAS 'PRES'ENTERED IN COLUMNS 27-30. THIS SET CAN ONLY BE USED IF LINESET USER 1 HAS 'V' ENTERED IN COLUMN 9.
+THIS LINE SET SPECIFIES THE VERTICAL FLUID DRAG PRESSURES AT THE GRID POINTS. IT IS USED IF LINE SET USER 1 HAS 'PRES 'ENTERED IN COLUMNS 27-30. THIS SET CAN ONLY BE USED IF LINE SET USER 1 HAS 'V' ENTERED IN COLUMN 9.
 
 PRESSURES ARE ENTERED FOR THE FIRST STATION STARTING AT THE MUDLINE. THE LINE IS REPEATED AS NECESSARY UNTIL 'NVG' PRESSURES (LINE SET USER 1) HAVE BEEN ENTERED. THEN ANOTHER SET OF LINES IS CREATED FOR THE SECOND STATION IN A SIMILAR WAY, BUT NO PRESSURE IS ENTERED FOR GRID POINTS LYING ABOVE THE SURFACE. THIS PROCESS IS CONTINUED UNTIL 'NHG' (LINE SET USER 1) SETS OF LINES HAVE BEEN ENTERED.
 
@@ -6238,15 +6340,15 @@ PRESSURES ARE ENTERED FOR THE FIRST STATION STARTING AT THE MUDLINE. THE LINE IS
 
 
 
-| LINE LABEL | LOAD CONDITION | LINE LABEL | VERTICAL DRAG PRESSURES AT GRID POINTS | VERTICAL DRAG PRESSURES AT GRID POINTS | VERTICAL DRAG PRESSURES AT GRID POINTS | VERTICAL DRAG PRESSURES AT GRID POINTS | VERTICAL DRAG PRESSURES AT GRID POINTS | VERTICAL DRAG PRESSURES AT GRID POINTS | VERTICAL DRAG PRESSURES AT GRID POINTS | VERTICAL DRAG PRESSURES AT GRID POINTS | VERTICAL DRAG PRESSURES AT GRID POINTS | VERTICAL DRAG PRESSURES AT GRID POINTS | VERTICAL DRAG PRESSURES AT GRID POINTS | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION |  |  |
-| WAVE |  | DRAG |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1-- 4 | 6--> 8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |  |
-| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| ENGLISH |  |  | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT |  |  |
-| METRIC(KN) |  |  | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M |  |  |
-| METRIC(KG) |  |  | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M |  |  |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | VERTICAL DRAG PRESSURES AT GRID POINTS | VERTICAL DRAG PRESSURES AT GRID POINTS | VERTICAL DRAG PRESSURES AT GRID POINTS | VERTICAL DRAG PRESSURES AT GRID POINTS | VERTICAL DRAG PRESSURES AT GRID POINTS | VERTICAL DRAG PRESSURES AT GRID POINTS | VERTICAL DRAG PRESSURES AT GRID POINTS | VERTICAL DRAG PRESSURES AT GRID POINTS | VERTICAL DRAG PRESSURES AT GRID POINTS | VERTICAL DRAG PRESSURES AT GRID POINTS | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION | LEAVE BLANK |
+| WAVE |  | DRAG |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 4 | 6--> 8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |
+| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| ENGLISH |  |  | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT |  |
+| METRIC(KN) |  |  | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M |  |
+| METRIC(KG) |  |  | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M |  |
 
 
 
@@ -6258,7 +6360,7 @@ COMMENTARY
 
 GENERAL
 
-THIS LINE SET SPECIFIES THE VERTICAL FLUID PARTICLEVELOCITIES AT THE GRID POINTS. IT IS NOT USED IF LINE SETUSER 1 HAS 'PRES' ENTERED IN COLUMNS 27-30. IN THAT CASE LINESET USER 18 IS USED TO SPECIFY DRAG PRESSURES. THIS SET CANONLY BE USED IF LINE SET USER 1 HAS 'V' ENTERED IN COLUMN 9.
+THIS LINE SET SPECIFIES THE VERTICAL FLUID PARTICLE VELOCITIES AT THE GRID POINTS. IT IS NOT USED IF LINE SET USER 1 HAS 'PRES' ENTERED IN COLUMNS 27-30. IN THAT CASE LINE SET USER 18 IS USED TO SPECIFY DRAG PRESSURES. THIS SET CAN ONLY BE USED IF LINE SET USER 1 HAS 'V' ENTERED IN COLUMN 9.
 
 VELOCITIES ARE ENTERED FOR THE FIRST STATION STARTING AT THE MUDLINE. THE LINE IS REPEATED AS NECESSARY UNTIL 'NVG' VELOCITIES (LINE SET USER 1) HAVE BEEN ENTERED. THEN ANOTHER SET OF LINES IS CREATED FOR THE SECOND STATION IN A SIMILAR WAY, BUT NO VELOCITY IS ENTERED FOR GRID POINTS LYING ABOVE THE SURFACE. THIS PROCESS IS CONTINUED UNTIL 'NHG' (LINE SET USER 1) SETS OF LINES HAVE BEEN ENTERED.
 
@@ -6269,22 +6371,24 @@ VELOCITIES ARE ENTERED FOR THE FIRST STATION STARTING AT THE MUDLINE. THE LINE I
 
 
 
-| LINE LABEL | LOAD CONDITION | LINE LABEL | VERTICAL VELOCITIES AT GRID POINTS | VERTICAL VELOCITIES AT GRID POINTS | VERTICAL VELOCITIES AT GRID POINTS | VERTICAL VELOCITIES AT GRID POINTS | VERTICAL VELOCITIES AT GRID POINTS | VERTICAL VELOCITIES AT GRID POINTS | VERTICAL VELOCITIES AT GRID POINTS | VERTICAL VELOCITIES AT GRID POINTS | VERTICAL VELOCITIES AT GRID POINTS | VERTICAL VELOCITIES AT GRID POINTS | VERTICAL VELOCITIES AT GRID POINTS | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION |  |  |
-| WAVE |  | DRAG |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1--4 | 6--->8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |  |
-| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| ENGLISH |  |  | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC |  |  |
-| METRIC |  |  | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC |  |  |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | VERTICAL VELOCITIES AT GRID POINTS | VERTICAL VELOCITIES AT GRID POINTS | VERTICAL VELOCITIES AT GRID POINTS | VERTICAL VELOCITIES AT GRID POINTS | VERTICAL VELOCITIES AT GRID POINTS | VERTICAL VELOCITIES AT GRID POINTS | VERTICAL VELOCITIES AT GRID POINTS | VERTICAL VELOCITIES AT GRID POINTS | VERTICAL VELOCITIES AT GRID POINTS | VERTICAL VELOCITIES AT GRID POINTS | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION | LEAVE BLANK |
+| WAVE |  | DRAG |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 4 | 6--> 8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |
+| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| ENGLISH |  |  | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC |  |
+| METRIC |  |  | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC |  |
 
 
+
+USER DEFINED WAVE - OVERALL PARAMETERS - USER 1
 
 COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE IS PRECEDED BY THE 'WAVE' LOAD GENERATION LINE ANDIS USED IF THAT SET HAS 'LINE' AS THE ENTRY UNDER 'WAVETYPE', COLUMNS 9-12.
+GENERAL THIS LINE IS PRECEDED BY THE 'WAVE' LOAD GENERATION LINE AND IS USED IF THAT SET HAS 'LINE' AS THE ENTRY UNDER 'WAVE TYPE', COLUMNS 9-12.
 
 ( 1- 4) ENTER 'WAVE'.   
 ( 6- 8) ENTER THE LOAD CONDITION NAME. THIS ENTRY IS NOT REQUIRED IF THIS LINE SET IS INCLUDED WITHIN THE APPROPRIATE 'LOAD' SECTION OF THE 'SACS IV' INPUT DATA.   
@@ -6329,14 +6433,14 @@ ACCELERATIONS ARE ENTERED FOR THE FIRST STATION STARTING AT THE MUDLINE. THE LIN
 
 
 
-| LINE LABEL | LOAD CONDITION | LINE LABEL | HORIZONTAL ACCELERATIONS AT GRID POINTS | HORIZONTAL ACCELERATIONS AT GRID POINTS | HORIZONTAL ACCELERATIONS AT GRID POINTS | HORIZONTAL ACCELERATIONS AT GRID POINTS | HORIZONTAL ACCELERATIONS AT GRID POINTS | HORIZONTAL ACCELERATIONS AT GRID POINTS | HORIZONTAL ACCELERATIONS AT GRID POINTS | HORIZONTAL ACCELERATIONS AT GRID POINTS | HORIZONTAL ACCELERATIONS AT GRID POINTS | HORIZONTAL ACCELERATIONS AT GRID POINTS | HORIZONTAL ACCELERATIONS AT GRID POINTS | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION |  |  |
-| WAVE |  | INER |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1--4 | 6--->8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |  |
-| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| ENGLISH |  |  | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 |  |  |
-| METRIC |  |  | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 |  |  |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | HORIZONTAL ACCELERATIONS AT GRID POINTS | HORIZONTAL ACCELERATIONS AT GRID POINTS | HORIZONTAL ACCELERATIONS AT GRID POINTS | HORIZONTAL ACCELERATIONS AT GRID POINTS | HORIZONTAL ACCELERATIONS AT GRID POINTS | HORIZONTAL ACCELERATIONS AT GRID POINTS | HORIZONTAL ACCELERATIONS AT GRID POINTS | HORIZONTAL ACCELERATIONS AT GRID POINTS | HORIZONTAL ACCELERATIONS AT GRID POINTS | HORIZONTAL ACCELERATIONS AT GRID POINTS | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION | LEAVE BLANK |
+| WAVE |  | INER |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 4 | 6--> 8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |
+| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| ENGLISH |  |  | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 |  |
+| METRIC |  |  | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 |  |
 
 
 
@@ -6361,15 +6465,15 @@ PRESSURES ARE ENTERED FOR THE FIRST STATION STARTING AT THE MUDLINE. THE LINE IS
 
 
 
-| LINE LABEL | LOAD CONDITION | LINE LABEL | HORIZONTAL INERTIA PRESSURES AT GRID POINTS | HORIZONTAL INERTIA PRESSURES AT GRID POINTS | HORIZONTAL INERTIA PRESSURES AT GRID POINTS | HORIZONTAL INERTIA PRESSURES AT GRID POINTS | HORIZONTAL INERTIA PRESSURES AT GRID POINTS | HORIZONTAL INERTIA PRESSURES AT GRID POINTS | HORIZONTAL INERTIA PRESSURES AT GRID POINTS | HORIZONTAL INERTIA PRESSURES AT GRID POINTS | HORIZONTAL INERTIA PRESSURES AT GRID POINTS | HORIZONTAL INERTIA PRESSURES AT GRID POINTS | HORIZONTAL INERTIA PRESSURES AT GRID POINTS | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION |  |  |
-| WAVE |  | INER |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1-- 4 | 6--> 8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |  |
-| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| ENGLISH |  |  | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT |  |  |
-| METRIC (KN) |  |  | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M |  |  |
-| METRIC (KG) |  |  | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M |  |  |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | HORIZONTAL INERTIA PRESSURES AT GRID POINTS | HORIZONTAL INERTIA PRESSURES AT GRID POINTS | HORIZONTAL INERTIA PRESSURES AT GRID POINTS | HORIZONTAL INERTIA PRESSURES AT GRID POINTS | HORIZONTAL INERTIA PRESSURES AT GRID POINTS | HORIZONTAL INERTIA PRESSURES AT GRID POINTS | HORIZONTAL INERTIA PRESSURES AT GRID POINTS | HORIZONTAL INERTIA PRESSURES AT GRID POINTS | HORIZONTAL INERTIA PRESSURES AT GRID POINTS | HORIZONTAL INERTIA PRESSURES AT GRID POINTS | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION | LEAVE BLANK |
+| WAVE |  | INER |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 4 | 6--> 8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |
+| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| ENGLISH |  |  | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT |  |
+| METRIC(KN) |  |  | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M |  |
+| METRIC(KG) |  |  | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M |  |
 
 
 
@@ -6392,14 +6496,14 @@ ACCELERATIONS ARE ENTERED FOR THE FIRST STATION STARTING AT THE MUDLINE. THE LIN
 
 
 
-| LINE LABEL | LOAD CONDITION | LINE LABEL | VERTICAL ACCELERATIONS AT GRID POINTS | VERTICAL ACCELERATIONS AT GRID POINTS | VERTICAL ACCELERATIONS AT GRID POINTS | VERTICAL ACCELERATIONS AT GRID POINTS | VERTICAL ACCELERATIONS AT GRID POINTS | VERTICAL ACCELERATIONS AT GRID POINTS | VERTICAL ACCELERATIONS AT GRID POINTS | VERTICAL ACCELERATIONS AT GRID POINTS | VERTICAL ACCELERATIONS AT GRID POINTS | VERTICAL ACCELERATIONS AT GRID POINTS | VERTICAL ACCELERATIONS AT GRID POINTS | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION |  |  |
-| WAVE |  | INER |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1--4 | 6--->8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |  |
-| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| ENGLISH |  |  | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 |  |  |
-| METRIC |  |  | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 |  |  |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | VERTICAL ACCELERATIONS AT GRID POINTS | VERTICAL ACCELERATIONS AT GRID POINTS | VERTICAL ACCELERATIONS AT GRID POINTS | VERTICAL ACCELERATIONS AT GRID POINTS | VERTICAL ACCELERATIONS AT GRID POINTS | VERTICAL ACCELERATIONS AT GRID POINTS | VERTICAL ACCELERATIONS AT GRID POINTS | VERTICAL ACCELERATIONS AT GRID POINTS | VERTICAL ACCELERATIONS AT GRID POINTS | VERTICAL ACCELERATIONS AT GRID POINTS | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION | LEAVE BLANK |
+| WAVE |  | INER |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 4 | 6--> 8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |
+| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| ENGLISH |  |  | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 |  |
+| METRIC |  |  | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 |  |
 
 
 
@@ -6411,7 +6515,7 @@ COMMENTARY
 
 GENERAL
 
-THIS LINE SET SPECIFIES THE VERTICAL FLUID INERTIA PRESSURESAT THE GRID POINTS. IT IS USED IF LINE SET USER 1 HAS 'PRES'ENTERED IN COLUMNS 27-30. THIS SET CAN ONLY BE USED IF LINESET USER 1 HAS 'V' ENTERED IN COLUMN 9.
+THIS LINE SET SPECIFIES THE VERTICAL FLUID INERTIA PRESSURES AT THE GRID POINTS. IT IS USED IF LINE SET USER 1 HAS 'PRES 'ENTERED IN COLUMNS 27-30. THIS SET CAN ONLY BE USED IF LINE SET USER 1 HAS 'V' ENTERED IN COLUMN 9.
 
 PRESSURES ARE ENTERED FOR THE FIRST STATION STARTING AT THE MUDLINE. THE LINE IS REPEATED AS NECESSARY UNTIL 'NVG' PRESSURES (LINE SET USER 1) HAVE BEEN ENTERED. THEN ANOTHER SET OF LINES IS CREATED FOR THE SECOND STATION IN A SIMILAR WAY, BUT NO PRESSURE IS ENTERED FOR GRID POINTS LYING ABOVE THE SURFACE. THIS PROCESS IS CONTINUED UNTIL 'NHG' (LINE SET USER 1) SETS OF LINES HAVE BEEN ENTERED.
 
@@ -6422,15 +6526,15 @@ PRESSURES ARE ENTERED FOR THE FIRST STATION STARTING AT THE MUDLINE. THE LINE IS
 
 
 
-| LINE LABEL | LOAD CONDITION | LINE LABEL | VERTICAL INERTIA PRESSURES AT GRID POINTS | VERTICAL INERTIA PRESSURES AT GRID POINTS | VERTICAL INERTIA PRESSURES AT GRID POINTS | VERTICAL INERTIA PRESSURES AT GRID POINTS | VERTICAL INERTIA PRESSURES AT GRID POINTS | VERTICAL INERTIA PRESSURES AT GRID POINTS | VERTICAL INERTIA PRESSURES AT GRID POINTS | VERTICAL INERTIA PRESSURES AT GRID POINTS | VERTICAL INERTIA PRESSURES AT GRID POINTS | VERTICAL INERTIA PRESSURES AT GRID POINTS | VERTICAL INERTIA PRESSURES AT GRID POINTS | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION |  |  |
-| WAVE |  | INER |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1-- 4 | 6--> 8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |  |
-| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| ENGLISH |  |  | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT |  |  |
-| METRIC (KN) |  |  | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M |  |  |
-| METRIC (KG) |  |  | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M |  |  |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | VERTICAL INERTIA PRESSURES AT GRID POINTS | VERTICAL INERTIA PRESSURES AT GRID POINTS | VERTICAL INERTIA PRESSURES AT GRID POINTS | VERTICAL INERTIA PRESSURES AT GRID POINTS | VERTICAL INERTIA PRESSURES AT GRID POINTS | VERTICAL INERTIA PRESSURES AT GRID POINTS | VERTICAL INERTIA PRESSURES AT GRID POINTS | VERTICAL INERTIA PRESSURES AT GRID POINTS | VERTICAL INERTIA PRESSURES AT GRID POINTS | VERTICAL INERTIA PRESSURES AT GRID POINTS | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION | LEAVE BLANK |
+| WAVE |  | INER |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 4 | 6--> 8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |
+| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| ENGLISH |  |  | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT |  |
+| METRIC(KN) |  |  | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M |  |
+| METRIC(KG) |  |  | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M |  |
 
 
 
@@ -6476,14 +6580,14 @@ GENERAL THIS LINE SET SPECIFIES THE HORIZONTAL PARTICLE VELOCITIES AT THE SURFAC
 
 
 
-| LINE LABEL | LOAD CONDITION | LINE LABEL | HORIZONTAL VELOCITIES AT SURFACE STATION POINTS | HORIZONTAL VELOCITIES AT SURFACE STATION POINTS | HORIZONTAL VELOCITIES AT SURFACE STATION POINTS | HORIZONTAL VELOCITIES AT SURFACE STATION POINTS | HORIZONTAL VELOCITIES AT SURFACE STATION POINTS | HORIZONTAL VELOCITIES AT SURFACE STATION POINTS | HORIZONTAL VELOCITIES AT SURFACE STATION POINTS | HORIZONTAL VELOCITIES AT SURFACE STATION POINTS | HORIZONTAL VELOCITIES AT SURFACE STATION POINTS | HORIZONTAL VELOCITIES AT SURFACE STATION POINTS | HORIZONTAL VELOCITIES AT SURFACE STATION POINTS | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION |  |  |
-| WAVE |  | SURD |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1--4 | 6--->8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |  |
-| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| ENGLISH |  |  | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC |  |  |
-| METRIC |  |  | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC |  |  |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | HORIZONTAL VELOCITIES AT SURFACE STATION POINTS | HORIZONTAL VELOCITIES AT SURFACE STATION POINTS | HORIZONTAL VELOCITIES AT SURFACE STATION POINTS | HORIZONTAL VELOCITIES AT SURFACE STATION POINTS | HORIZONTAL VELOCITIES AT SURFACE STATION POINTS | HORIZONTAL VELOCITIES AT SURFACE STATION POINTS | HORIZONTAL VELOCITIES AT SURFACE STATION POINTS | HORIZONTAL VELOCITIES AT SURFACE STATION POINTS | HORIZONTAL VELOCITIES AT SURFACE STATION POINTS | HORIZONTAL VELOCITIES AT SURFACE STATION POINTS | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION | LEAVE BLANK |
+| WAVE |  | SURD |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 4 | 6--> 8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |
+| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| ENGLISH |  |  | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC |  |
+| METRIC |  |  | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC |  |
 
 
 
@@ -6502,15 +6606,15 @@ GENERAL THIS LINE SET SPECIFIES THE VERTICAL DRAG PRESSURES AT THE SURFACE STATI
 
 
 
-| LINE LABEL | LOAD CONDITION | LINE LABEL | VERTICAL DRAG PRESSURES AT SURFACE STATION POINTS | VERTICAL DRAG PRESSURES AT SURFACE STATION POINTS | VERTICAL DRAG PRESSURES AT SURFACE STATION POINTS | VERTICAL DRAG PRESSURES AT SURFACE STATION POINTS | VERTICAL DRAG PRESSURES AT SURFACE STATION POINTS | VERTICAL DRAG PRESSURES AT SURFACE STATION POINTS | VERTICAL DRAG PRESSURES AT SURFACE STATION POINTS | VERTICAL DRAG PRESSURES AT SURFACE STATION POINTS | VERTICAL DRAG PRESSURES AT SURFACE STATION POINTS | VERTICAL DRAG PRESSURES AT SURFACE STATION POINTS | VERTICAL DRAG PRESSURES AT SURFACE STATION POINTS | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION |  |  |
-| WAVE |  | SURD |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1-- 4 | 6--> 8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |  |
-| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| ENGLISH |  |  | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT |  |  |
-| METRIC(KN) |  |  | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M |  |  |
-| METRIC(KG) |  |  | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M |  |  |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | VERTICAL DRAG PRESSURES AT SURFACE STATION POINTS | VERTICAL DRAG PRESSURES AT SURFACE STATION POINTS | VERTICAL DRAG PRESSURES AT SURFACE STATION POINTS | VERTICAL DRAG PRESSURES AT SURFACE STATION POINTS | VERTICAL DRAG PRESSURES AT SURFACE STATION POINTS | VERTICAL DRAG PRESSURES AT SURFACE STATION POINTS | VERTICAL DRAG PRESSURES AT SURFACE STATION POINTS | VERTICAL DRAG PRESSURES AT SURFACE STATION POINTS | VERTICAL DRAG PRESSURES AT SURFACE STATION POINTS | VERTICAL DRAG PRESSURES AT SURFACE STATION POINTS | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION | LEAVE BLANK |
+| WAVE |  | SURD |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 4 | 6--> 8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |
+| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| ENGLISH |  |  | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT | LB/SQ.FT |  |
+| METRIC(KN) |  |  | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M | KN/SQ.M |  |
+| METRIC(KG) |  |  | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M | KG/SQ.M |  |
 
 
 
@@ -6529,14 +6633,14 @@ GENERAL THIS LINE SET SPECIFIES THE VERTICAL PARTICLE VELOCITIES AT THE SURFACE 
 
 
 
-| LINE LABEL | LOAD CONDITION | LINE LABEL | VERTICAL VELOCITIES AT SURFACE STATION POINTS | VERTICAL VELOCITIES AT SURFACE STATION POINTS | VERTICAL VELOCITIES AT SURFACE STATION POINTS | VERTICAL VELOCITIES AT SURFACE STATION POINTS | VERTICAL VELOCITIES AT SURFACE STATION POINTS | VERTICAL VELOCITIES AT SURFACE STATION POINTS | VERTICAL VELOCITIES AT SURFACE STATION POINTS | VERTICAL VELOCITIES AT SURFACE STATION POINTS | VERTICAL VELOCITIES AT SURFACE STATION POINTS | VERTICAL VELOCITIES AT SURFACE STATION POINTS | VERTICAL VELOCITIES AT SURFACE STATION POINTS | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION |  |  |
-| WAVE |  | SURD |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1--4 | 6--->8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |  |
-| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| ENGLISH |  |  | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC |  |  |
-| METRIC |  |  | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC |  |  |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | VERTICAL VELOCITIES AT SURFACE STATION POINTS | VERTICAL VELOCITIES AT SURFACE STATION POINTS | VERTICAL VELOCITIES AT SURFACE STATION POINTS | VERTICAL VELOCITIES AT SURFACE STATION POINTS | VERTICAL VELOCITIES AT SURFACE STATION POINTS | VERTICAL VELOCITIES AT SURFACE STATION POINTS | VERTICAL VELOCITIES AT SURFACE STATION POINTS | VERTICAL VELOCITIES AT SURFACE STATION POINTS | VERTICAL VELOCITIES AT SURFACE STATION POINTS | VERTICAL VELOCITIES AT SURFACE STATION POINTS | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION | LEAVE BLANK |
+| WAVE |  | SURD |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 4 | 6--> 8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |
+| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| ENGLISH |  |  | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC | FT/SEC |  |
+| METRIC |  |  | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC | M/SEC |  |
 
 
 
@@ -6555,14 +6659,14 @@ GENERAL THIS LINE SET SPECIFIES THE WAVE SURFACE ELEVATION AT THE GRID STATIONS.
 
 
 
-| LINE LABEL | LOAD CONDITION | LINE LABEL | ELEVATIONS OF WAVE SURFACE AT GRID STATIONS | ELEVATIONS OF WAVE SURFACE AT GRID STATIONS | ELEVATIONS OF WAVE SURFACE AT GRID STATIONS | ELEVATIONS OF WAVE SURFACE AT GRID STATIONS | ELEVATIONS OF WAVE SURFACE AT GRID STATIONS | ELEVATIONS OF WAVE SURFACE AT GRID STATIONS | ELEVATIONS OF WAVE SURFACE AT GRID STATIONS | ELEVATIONS OF WAVE SURFACE AT GRID STATIONS | ELEVATIONS OF WAVE SURFACE AT GRID STATIONS | ELEVATIONS OF WAVE SURFACE AT GRID STATIONS | ELEVATIONS OF WAVE SURFACE AT GRID STATIONS | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION |  |  |
-| WAVE |  | SURF |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1--4 | 6--->8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |  |
-| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| ENGLISH |  |  | FT | FT | FT | FT | FT | FT | FT | FT | FT | FT |  |  |
-| METRIC |  |  | M | M | M | M | M | M | M | M | M | M |  |  |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | ELEVATIONS OF WAVE SURFACE AT GRID STATIONS | ELEVATIONS OF WAVE SURFACE AT GRID STATIONS | ELEVATIONS OF WAVE SURFACE AT GRID STATIONS | ELEVATIONS OF WAVE SURFACE AT GRID STATIONS | ELEVATIONS OF WAVE SURFACE AT GRID STATIONS | ELEVATIONS OF WAVE SURFACE AT GRID STATIONS | ELEVATIONS OF WAVE SURFACE AT GRID STATIONS | ELEVATIONS OF WAVE SURFACE AT GRID STATIONS | ELEVATIONS OF WAVE SURFACE AT GRID STATIONS | ELEVATIONS OF WAVE SURFACE AT GRID STATIONS | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION | LEAVE BLANK |
+| WAVE |  | SURF |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 4 | 6--> 8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |
+| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| ENGLISH |  |  | FT | FT | FT | FT | FT | FT | FT | FT | FT | FT |  |
+| METRIC |  |  | M | M | M | M | M | M | M | M | M | M |  |
 
 
 
@@ -6581,14 +6685,14 @@ GENERAL THIS LINE SET SPECIFIES THE HORIZONTAL PARTICLE ACCELERATIONS AT THE SUR
 
 
 
-| LINE LABEL | LOAD CONDITION | LINE LABEL | HORIZONTAL ACCELERATIONS AT SURFACE STATION POINTS | HORIZONTAL ACCELERATIONS AT SURFACE STATION POINTS | HORIZONTAL ACCELERATIONS AT SURFACE STATION POINTS | HORIZONTAL ACCELERATIONS AT SURFACE STATION POINTS | HORIZONTAL ACCELERATIONS AT SURFACE STATION POINTS | HORIZONTAL ACCELERATIONS AT SURFACE STATION POINTS | HORIZONTAL ACCELERATIONS AT SURFACE STATION POINTS | HORIZONTAL ACCELERATIONS AT SURFACE STATION POINTS | HORIZONTAL ACCELERATIONS AT SURFACE STATION POINTS | HORIZONTAL ACCELERATIONS AT SURFACE STATION POINTS | HORIZONTAL ACCELERATIONS AT SURFACE STATION POINTS | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION |  |  |
-| WAVE |  | SURI |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1--4 | 6--->8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |  |
-| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| ENGLISH |  |  | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 |  |  |
-| METRIC |  |  | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 |  |  |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | HORIZONTAL ACCELERATIONS AT SURFACE STATION POINTS | HORIZONTAL ACCELERATIONS AT SURFACE STATION POINTS | HORIZONTAL ACCELERATIONS AT SURFACE STATION POINTS | HORIZONTAL ACCELERATIONS AT SURFACE STATION POINTS | HORIZONTAL ACCELERATIONS AT SURFACE STATION POINTS | HORIZONTAL ACCELERATIONS AT SURFACE STATION POINTS | HORIZONTAL ACCELERATIONS AT SURFACE STATION POINTS | HORIZONTAL ACCELERATIONS AT SURFACE STATION POINTS | HORIZONTAL ACCELERATIONS AT SURFACE STATION POINTS | HORIZONTAL ACCELERATIONS AT SURFACE STATION POINTS | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION | LEAVE BLANK |
+| WAVE |  | SURI |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 4 | 6--> 8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |
+| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| ENGLISH |  |  | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 |  |
+| METRIC |  |  | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 |  |
 
 
 
@@ -6634,14 +6738,14 @@ GENERAL THIS LINE SET SPECIFIES THE VERTICAL PARTICLE ACCELERATIONS AT THE SURFA
 
 
 
-| LINE LABEL | LOAD CONDITION | LINE LABEL | VERTICAL ACCELERATIONS AT SURFACE STATION POINTS | VERTICAL ACCELERATIONS AT SURFACE STATION POINTS | VERTICAL ACCELERATIONS AT SURFACE STATION POINTS | VERTICAL ACCELERATIONS AT SURFACE STATION POINTS | VERTICAL ACCELERATIONS AT SURFACE STATION POINTS | VERTICAL ACCELERATIONS AT SURFACE STATION POINTS | VERTICAL ACCELERATIONS AT SURFACE STATION POINTS | VERTICAL ACCELERATIONS AT SURFACE STATION POINTS | VERTICAL ACCELERATIONS AT SURFACE STATION POINTS | VERTICAL ACCELERATIONS AT SURFACE STATION POINTS | VERTICAL ACCELERATIONS AT SURFACE STATION POINTS | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION |  |  |
-| WAVE |  | SURI |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1--4 | 6--->8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |  |
-| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| ENGLISH |  |  | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 |  |  |
-| METRIC |  |  | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 |  |  |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | VERTICAL ACCELERATIONS AT SURFACE STATION POINTS | VERTICAL ACCELERATIONS AT SURFACE STATION POINTS | VERTICAL ACCELERATIONS AT SURFACE STATION POINTS | VERTICAL ACCELERATIONS AT SURFACE STATION POINTS | VERTICAL ACCELERATIONS AT SURFACE STATION POINTS | VERTICAL ACCELERATIONS AT SURFACE STATION POINTS | VERTICAL ACCELERATIONS AT SURFACE STATION POINTS | VERTICAL ACCELERATIONS AT SURFACE STATION POINTS | VERTICAL ACCELERATIONS AT SURFACE STATION POINTS | VERTICAL ACCELERATIONS AT SURFACE STATION POINTS | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION | LEAVE BLANK |
+| WAVE |  | SURI |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 4 | 6--> 8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |
+| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| ENGLISH |  |  | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 | FT/SEC**2 |  |
+| METRIC |  |  | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 | M/SEC**2 |  |
 
 
 
@@ -6678,7 +6782,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE SET SPECIFIES THE STATIONS ALONG THE WAVE WHEREGRID POINTS ARE DEFINED.
+GENERAL THIS LINE SET SPECIFIES THE STATIONS ALONG THE WAVE WHERE GRID POINTS ARE DEFINED.
 
 ( 1- 4) ENTER 'WAVE' ON EACH LINE OF THIS SET.   
 ( 6- 8) ENTER THE LOAD CONDITION NAME. THIS ENTRY MAY BE OMITTED IF THESE LINES ARE PLACED WITHIN THE APPROPRIATE 'LOAD' SECTION OF THE 'SACS IV' INPUT DATA.   
@@ -6687,14 +6791,14 @@ GENERAL THIS LINE SET SPECIFIES THE STATIONS ALONG THE WAVE WHEREGRID POINTS ARE
 
 
 
-| LINE LABEL | LOAD CONDITION | LINE LABEL | LOCATIONS OF GRID STATIONS | LOCATIONS OF GRID STATIONS | LOCATIONS OF GRID STATIONS | LOCATIONS OF GRID STATIONS | LOCATIONS OF GRID STATIONS | LOCATIONS OF GRID STATIONS | LOCATIONS OF GRID STATIONS | LOCATIONS OF GRID STATIONS | LOCATIONS OF GRID STATIONS | LOCATIONS OF GRID STATIONS | LOCATIONS OF GRID STATIONS | LEAVE BLANK |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION |  |  |
-| WAVE |  | XLOC |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1-- 4 | 6---> 8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |  |
-| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| ENGLISH |  |  | FT | FT | FT | FT | FT | FT | FT | FT | FT | FT |  |  |
-| METRIC |  |  | M | M | M | M | M | M | M | M | M | M |  |  |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | LOCATIONS OF GRID STATIONS | LOCATIONS OF GRID STATIONS | LOCATIONS OF GRID STATIONS | LOCATIONS OF GRID STATIONS | LOCATIONS OF GRID STATIONS | LOCATIONS OF GRID STATIONS | LOCATIONS OF GRID STATIONS | LOCATIONS OF GRID STATIONS | LOCATIONS OF GRID STATIONS | LOCATIONS OF GRID STATIONS | LEAVE BLANK |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | LOAD CONDITION | LINE LABEL | FIRST STATION | SECOND STATION | THIRD STATION | FOURTH STATION | FIFTH STATION | SIXTH STATION | SEVENTH STATION | EIGHTH STATION | NINTH STATION | TENTH STATION | LEAVE BLANK |
+| WAVE |  | XLOC |  |  |  |  |  |  |  |  |  |  |  |
+| 1-- 4 | 6--> 8 | 11--14 | 15<--20 | 21<--26 | 27<--32 | 33<--38 | 39<--44 | 45<--50 | 51<--56 | 57<--62 | 63<--68 | 69<--74 | 75--80 |
+| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| ENGLISH |  |  | FT | FT | FT | FT | FT | FT | FT | FT | FT | FT |  |
+| METRIC |  |  | M | M | M | M | M | M | M | M | M | M |  |
 
 
 
@@ -6704,7 +6808,7 @@ COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE SET SPECIFIES THE LEVELS WHERE GRID POINTS AREDEFINED.
+GENERAL THIS LINE SET SPECIFIES THE LEVELS WHERE GRID POINTS ARE DEFINED.
 
 ( 1- 4) ENTER 'WAVE' ON EACH LINE OF THIS SET.   
 ( 6- 8) ENTER THE LOAD CONDITION NAME. THIS ENTRY MAY BE OMITTED IF THESE LINES ARE PLACED WITHIN THE APPROPRIATE 'LOAD' SECTION OF THE 'SACS IV' INPUT DATA.   

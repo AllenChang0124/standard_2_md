@@ -22,8 +22,8 @@ TABLE OF CONTENTS
 
 1.3.1 Chord and Brace Determination .. . 6   
 1.3.2 Joint Local Coordinate System ... 6   
-1.3.3 Joint Classification...   
-1.3.4 Allowable Stresses ...   
+1.3.3 Joint Classification... 7   
+1.3.4 Allowable Stresses ... 7   
 1.3.5 Joint Redesign Procedure.... . 8   
 1.3.6 Grouted Elements ..... 9
 
@@ -129,7 +129,7 @@ TABLE OF CONTENTS
 
 5 INPUT LINES... .52
 
-1 INTRODUCTION
+# 1 INTRODUCTION
 
 ## 1.1 OVERVIEW
 
@@ -165,7 +165,7 @@ f. Change the allowable stress modifier of any load condition or combination for
 
 The Joint Can design program performs an analysis on all intersections of members which are designated as tubular (TUB) on the SACS Section Property input lines and tubular sections defined on Group Property input lines. The actual geometry, dimensions, internal loads, material properties, cross sectional properties, yield stress and allowable stress increases for each joint can are obtained from the common solution file (e.g. SACCSF.xxx). However, the user has the option to change the yield stress, change allowable stress modifier and designate new load combinations in the JOINT CAN input file.
 
-1.3.1 Chord and Brace Determination
+### 1.3.1 Chord and Brace Determination
 
 The program determines the chord and brace members by the following procedure:
 
@@ -178,51 +178,51 @@ Note: The user can control the chord selection by increasing a member diameter o
 6. If the brace is not perpendicular to the chord member, the chord member which forms the smallest angle with the brace is used for the can design.   
 7. For multiple brace to chord connections, the program will allow a 15 degree out-of-plane tolerance in the determination of K and Cross Joint connections.
 
-1.3.2 Joint Local Coordinate System
+### 1.3.2 Joint Local Coordinate System
 
 After the brace and chord are determined, the internal loads for each member are transformed into the joint local coordinate system such that the transverse shears and bending moments lie in plane and perpendicular to the plane formed by the chord and brace connection (see figure below).
 
 ![](SACS2024_JointCan/f53a8b006977a8c482f9733f60e78d46981e66fda2659634200bcc9369916856.jpg)  
 Joint Coordinate System
 
-1.3.3 Joint Classification
+### 1.3.3 Joint Classification
 
 For a particular load case, each brace is classified as a percentage of a ‘K’, ‘X’ and ‘T&Y’ joint as follows:
 
 1. If a ‘K’ joint type is possible, the amount of the brace load transferred as a ‘K’ joint is ratioed to the total brace load to determine the percent K-brace. The program then determines if a cross or ‘X’ joint is possible and determines what percentage of the remaining load is transferred as a cross or ‘X’ joint. Any remaining load is transferred as a ‘T&Y’ type joint and is ratioed to the total brace load to determine the percent ‘T&Y’ joint.
 
-1.3.4 Allowable Stresses
+### 1.3.4 Allowable Stresses
 
 Allowable stresses are calculated for each possible joint type (K, X or T). A weighted average of the allowable stresses is taken based on the percentage of load transferred as a ‘K’ joint, cross joint or ‘T&Y’ joint, respectively (see figure below).
 
 ![](SACS2024_JointCan/a09e0e085185e0db4aef51e995102385de12a9cda497f10a60361e2d16e2e3fd.jpg)  
-Joint Classification for Use in $\mathrm{ V }_{ \mathbf{ p } }$ Calculation
+Joint Classification for Use in $V_p$ Calculation
 
-Values for $\mathsf{ V }_{ \mathsf{ p } }$ are interpolated based on the percentage of load that is transferred through the joint as a $' | \langle{ \boldsymbol{ \mathsf{ K } } }^{ \prime } , \mathsf{ \Lambda }^{ \prime } \mathsf{ T } \& \mathsf{ Y }^{ \prime }$ or a cross joint.
+Values for $V_p$ are interpolated based on the percentage of load that is transferred through the joint as a ‘K’, ‘T&Y’ or a cross joint.
 
-1.3.5 Joint Redesign Procedure
+### 1.3.5 Joint Redesign Procedure
 
 The punching shear stresses and unity checks are calculated for each brace-chord combination for each load condition. The most critical brace-chord combination of each joint is determined.
 
 The chord wall thickness is then increased or decreased depending if the critical unity check is greater than 1.0 or less than a user specified value (unless the increase chord thickness only option is specified in the input file). The shear stresses and unity check ratio is recalculated. The chord wall thickness is changed until the highest unity check is in the specified range for the most critical connection. Stresses, allowables and unity checks for all remaining brace-chord combinations are then recalculated for each load condition. If all of the recalculated unity checks are less than 1.0 the program reports the final chord thickness and corresponding diameter along with the critical unity check ratio.
 
-1.3.6 Grouted Elements
+### 1.3.6 Grouted Elements
 
 The following technique is used for the analysis and redesign of grouted connections.
 
 1. The internal moments for the chord (jacket leg) are found by ratioing the internal moments of the combined grouted leg and pile by the ratio of the moment of inertia of the jacket leg (calculated by the outside diameter and wall thickness from the ‘SECT’ input line) and the composite grouted leg and pile moment of inertia.
 
-$$M_{\mathrm{L e g}} = \frac{I_{\mathrm{L e g}}}{I_{\mathrm{c o m p o s i t e}}} M_{\mathrm{c o m p o s i t e}}$$
+$$M_{\mathrm{Leg}} = \frac{I_{\mathrm{Leg}}}{I_{\mathrm{composite}}} M_{\mathrm{composite}}$$
 
 2. The axial load for the chord member (jacket leg) is found by ratioing the axial load of the combined grouted leg and pile by the ratio of the cross sectional area of the jacket leg (calculated by the outside diameter and wall thickness from the ‘SECT’ input line) and the composite grouted leg and pile cross sectional area.
 
-$$F_{\mathrm{L e g}} = \frac{A_{\mathrm{L e g}}}{A_{\mathrm{c o m p o s i t e}}} F_{\mathrm{c o m p o s i t e}}$$
+$$F_{\mathrm{Leg}} = \frac{A_{\mathrm{Leg}}}{A_{\mathrm{composite}}} F_{\mathrm{composite}}$$
 
 3. The jacket leg wall thickness is increased or decreased depending if the critical unity check is greater than 1.0 or less than a user specified value (unless the increase chord thickness only option is specified in the input file). The calculation of the internal loads for the jacket leg as described above is repeated for each change in the chord wall thickness.
 
 Note: For grouted jacket legs, the user must input the leg and pile outside diameters and wall thickness separately on the section property ‘SECT’ input line.
 
-2 JOINT CAN INPUT DATA
+# 2 JOINT CAN INPUT DATA
 
 The Joint Can program requires a SACS common solution file containing member internal loads and a Joint Can input file for punching shear, effective strength, simplified fatigue analysis, earthquake punching check and ultimate strength check. The Joint Can input file allows the user to specify basic analysis options, designate the analysis type and code to use and override various properties.
 
@@ -234,43 +234,44 @@ Enter the units in columns 12-13. Enter the minimum and maximum gap to be used f
 
 Note: Negative value for minimum or maximum gap indicates an overlapped joint.
 
-2.1.1 Overlapping Brace Check
+### 2.1.1 Overlapping Brace Check
 
 Enter ‘B’ in column 32 if overlapping braces are to be checked to ensure that the axial load may be transferred directly through one brace to another via their common weld.
 
 Note: Overlapping braces are members with a negative gap.
 
-2.1.2 Weld Allowable Stress
+### 2.1.2 Weld Allowable Stress
 
 By default, the allowable stress for weld material is assumed to be the same as the connection steel. The weld allowable stress used for brace on brace check may be specified using the WELD line.
 
 Specify the allowable stress in columns 7-14. The following specifies an allowable of 70.0 ksi.
 
 ```txt
-1 2 3 4 5 6 7 8 123456789012345678901234567890123456789012345678901234567890  
-1 JCNOPT API EN B  
-# 2 WELD 70.0
+               1         2         3         4         5         6         7         8
+      12345678901234567890123456789012345678901234567890123456789012345678901234567890
+1     JCNOPT API EN                  B
+2     WELD      70.0
 ```
 
-2.1.3 Effective Thickness of Grouted Elements
+### 2.1.3 Effective Thickness of Grouted Elements
 
 By default, the thickness of the outside tubular (leg) is used as the chord thickness when analyzing the capacity of a grouted connection. The effective thickness of grouted elements may be determined based on the properties of both the outer and inner tubular members and used for the analysis and redesign of grouted connections. Enter one of the following effective thickness options in column 33:
 
 Option 1, selected by inputting ‘1’, the effective thickness is based on the moment of inertia of the cross section of the element as follows:
 
-$$t_{e f f} = \frac{D_{L e g} - \left(D_{L e g}^{4} - I_{c o m p} \frac{64}{\pi}\right)^{1 / 4}}{2}$$
+$$t_{\mathrm{eff}} = \frac{D_{\mathrm{Leg}} - \left(D_{\mathrm{Leg}}^{4} - I_{\mathrm{comp}} \frac{64}{\pi}\right)^{1 / 4}}{2}$$
 
-where: $\mathsf{ D }_{ \mathsf{ I e g } }$ is the outside diameter of the larger tube (leg). Icomp is the moment of inertia of the composite section
+where: $D_{\mathrm{Leg}}$ is the outside diameter of the larger tube (leg). $I_{\mathrm{comp}}$ is the moment of inertia of the composite section
 
-$$I_{c o m p} = \frac{\pi}{64} \left[ \left(D_{L e g}^{4} + D_{P i l e}^{4}\right) - \left(d_{L e g}^{4} + d_{P i l e}^{4}\right) \right]$$
+$$I_{\mathrm{comp}} = \frac{\pi}{64} \left[ \left(D_{\mathrm{Leg}}^{4} + D_{\mathrm{Pile}}^{4}\right) - \left(d_{\mathrm{Leg}}^{4} + d_{\mathrm{Pile}}^{4}\right) \right]$$
 
-where: ${ \mathsf{ d } }_{ \mathsf{ I e g } }$ and $\mathsf{ d }_{ \mathsf{ p i l e } }$ are the inside diameter of the leg and pile, respectively
+where: $d_{\mathrm{Leg}}$ and $d_{\mathrm{Pile}}$ are the inside diameter of the leg and pile, respectively
 
-Option 2 uses the moment of inertias of the walls instead of the composite section moment of inertia and is selected by specifying $_ 2 \prime$ in column 33.
+Option 2 uses the moment of inertias of the walls instead of the composite section moment of inertia and is selected by specifying ‘2’ in column 33.
 
-$$t_{e f f} = \left(12 \times I_{e f f}\right)^{1 / 3}$$
+$$t_{\mathrm{eff}} = \left(12 \times I_{\mathrm{eff}}\right)^{1 / 3}$$
 
-$$I_{e f f} = \frac{1}{12} \big (t_{L e g}^{3} + t_{P i l e}^{3} \big) + \big (t_{L e g} \times y_{L e g}^{2} + t_{P i l e} \times y_{P i l e}^{2} \big)$$
+$$I_{\mathrm{eff}} = \frac{1}{12} \big (t_{\mathrm{Leg}}^{3} + t_{\mathrm{Pile}}^{3} \big) + \big (t_{\mathrm{Leg}} \times y_{\mathrm{Leg}}^{2} + t_{\mathrm{Pile}} \times y_{\mathrm{Pile}}^{2} \big)$$
 
 where t and y are defined in the figure below:
 
@@ -278,7 +279,7 @@ where t and y are defined in the figure below:
 
 Option 3 uses the sum of the square root of the squares of the leg and pile thickness and is selected by specifying ‘3’ in column 33. Note that API RP2A WSD 21ST SUP3 2007, ISO 19902:2007/2020, and Norsok N-004, 2004 all choose this option to calculate the effective thickness. Therefore, this option is not activated for these codes.
 
-2.1.4 Effective Thickness Limit
+### 2.1.4 Effective Thickness Limit
 
 A chord effective thickness limit expressed as a factor of the actual chord thickness may be specified in columns 76-79 on the JCNOPT input line. The default limit is 1.75.
 
@@ -286,13 +287,15 @@ The following designates that option 1 is to be used for grouted elements and th
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 | JCNOPT LRFDEN | 1 |  |  |  |  | 2.0 |
+```txt
+               1         2         3         4         5         6         7         8
+      12345678901234567890123456789012345678901234567890123456789012345678901234567890
+1     JCNOPT LRFDEN                   1                                           2.0
+```
 
 
 
-2.1.5 Allowable Punching Shear Stress Limit
+### 2.1.5 Allowable Punching Shear Stress Limit
 
 By default, the allowable punching shear stress for API codes is limited to the allowable shear stress in the chord. Enter ‘N’ in column 51 if the allowable punching shear stress is not to be limited.
 
@@ -302,7 +305,7 @@ By default, when calculating the allowable punching stress factor (equation 6.56
 
 The Joint Can analysis option is designated in columns 8-11 on the JCNOPT line. Various types of analyses are available by designating the appropriate option.
 
-2.2.1 API Punching Shear Check
+### 2.2.1 API Punching Shear Check
 
 For standard Working Stress Design punching shear check per API, select one of the following options:
 
@@ -319,17 +322,18 @@ For Ultimate Strength punching check per API, select:
 
 1. ‘LRFD’ - API LRFD 1st Edition
 
-2.2.2 Overriding LRFD Resistance Factors
+### 2.2.2 Overriding LRFD Resistance Factors
 
 The default resistance factors used in the API LRFD punching check may be overridden by the user using the RSFAC line. The following overrides the resistance factor for T&Y joints.
 
 ```txt
-1 2 3 4 5 6 7 8 123456789012345678901234567890123456789012345678901234567890  
-JCNOPT LRFDEN  
-2 RSFAC 0.85 0.90 0.90 0.90 
+               1         2         3         4         5         6         7         8
+      12345678901234567890123456789012345678901234567890123456789012345678901234567890
+1     JCNOPT LRFDEN
+2     RSFAC 0.85 0.90 0.90 0.90
 ```
 
-2.2.3 European Punching Shear Checks
+### 2.2.3 European Punching Shear Checks
 
 The program supports various other punching shear analyses and code check options as follows:
 
@@ -346,7 +350,7 @@ The program supports various other punching shear analyses and code check option
 
 11. ‘EC05’ – Eurocode EN 1993-1-8 (2005)
 
-2.2.4 Simplified Fatigue Check
+### 2.2.4 Simplified Fatigue Check
 
 The API Simplified Fatigue analysis is invoked by specifying one of the following in columns 8-11.
 
@@ -357,18 +361,18 @@ The API Simplified Fatigue analysis is invoked by specifying one of the followin
 
 The appropriate load cases containing the reference level wave should be specified on the LCSEL input line.
 
-The load path dependent SCF’s are calculated automatically based on the option input into columns 37- 39 on the FATIGUE line. The water depth, water line member elevation, fatigue life and weld classification should be specified in columns 9-16, 17-24, 27-30 and 33-36, respectively, on the FATIGUE input line.
+The load path dependent SCF’s are calculated automatically based on the option input into columns 37-39 on the FATIGUE line. The water depth, water line member elevation, fatigue life and weld classification should be specified in columns 9-16, 17-24, 27-30 and 33-36, respectively, on the FATIGUE input line.
 
 The following shows the input for simplified fatigue using API 20th Edition. Load cases ‘SF00’, ‘SF45’ and ‘SF90’ contain reference level waves used to calculate fatigue stress. The water depth is 150.0 feet, the water line elevation is -20 and design life is 15 years.
 
 ```txt
-1 2 3 4 5 6 7 8  
-123456789012345678901234567890123456789012345678901234567890  
-JCNOPT FTG EN  
-2 LCSEL SF00 SF45 SF90 
+               1         2         3         4         5         6         7         8
+      12345678901234567890123456789012345678901234567890123456789012345678901234567890
+1     JCNOPT FTG EN
+2     LCSEL           SF00 SF45 SF90
 ```
 
-2.2.5 Earthquake Joint Check
+### 2.2.5 Earthquake Joint Check
 
 The program can check joint can capacity due to combined earthquake and static stresses per API guidelines. Specifying ‘EQ22’ for API RP2A WSD 22nd Edition, ‘EQK’ for API RP2A WSD 21st Edition with Supplements 1 to 3, 'EQ21' for API RP2A WSD 21st Edition, ‘EQLR’ for LRFD code or ‘EQIS’/’EQI2’ for ISO 19902 (2007/2020) code.
 
@@ -377,48 +381,52 @@ Joint Can is executed after the earthquake and static stresses are combined usin
 For example, the following designates that an API LRFD earthquake check is to be performed for load cases 3 and 4.
 
 ```txt
-1 2 3 4 5 6 7 8 123456789012345678901234567890123456789012345678901234567890 1 JCNOPT EQLREN 2 LCSEL 3 4 
+               1         2         3         4         5         6         7         8
+      12345678901234567890123456789012345678901234567890123456789012345678901234567890
+1     JCNOPT EQLREN
+2     LCSEL              3    4
 ```
 
-2.2.6 Simplified and MSL Ultimate Strength Check
+### 2.2.6 Simplified and MSL Ultimate Strength Check
 
 Simplified ultimate strength check and MSL ultimate strength check analysis may be performed by specifying ‘SUS ’ or ‘MSL ’, respectively, in columns 8-11 of the JCNOPT line.
 
 For MSL check, additional input including the Qu option, ultimate tension value and reassessment values option must be designated on the JCNOPT line. Enter ‘C’ or ‘M’ in column 36 for characteristic Qu factor or mean strength Qu factor, respectively. Enter ‘U’ in column 36 for ultimate tension values and/or ‘R’ in column 37 for reassessment values.
 
-2.2.7 Overriding MSL Assessment Factors
+### 2.2.7 Overriding MSL Assessment Factors
 
 The default assessment factors used in the MSL ultimate strength check may be overridden using the GMFAC line. The following overrides the gamma factors for axial and in-plane bending. The first factor in GMFAC line can be used as the resistant factor of Norsok N-004, Rev 3, 2013 and the material factor of Danish code.
 
 ```txt
-1 2 3 4 5 6 7 8 123456789012345678901234567890123456789012345678901234567890  
-1 JCNOPT MSL EN CUR  
-2 GMFAC 0.95 0.95 
+               1         2         3         4         5         6         7         8
+      12345678901234567890123456789012345678901234567890123456789012345678901234567890
+1     JCNOPT MSL EN                     CUR
+2     GMFAC 0.95 0.95
 ```
 
-2.2.8 Selecting Members
+### 2.2.8 Selecting Members
 
 By default all members are considered unless members are specified on the MSLC line. When using the MSLC line, only those members specified are considered for the ultimate strength analysis.
 
-2.2.9 Designating Initial Load Cases
+### 2.2.9 Designating Initial Load Cases
 
 The first load case in each direction can be specified using the INITLC line.
 
 Note: The INITLC line is not required if the analysis contains only one wave direction.
 
-2.2.10 Low Level Earthquake Analysis
+### 2.2.10 Low Level Earthquake Analysis
 
 For low level earthquake loads, analysis may use API WSD (working stress design) or API LRFD (load and resistance factor design). API WSD is specified by putting ‘LLEW’ in columns 8-11 of the JCNOPT line; API LRFD design is specified by putting ‘LLEL’ in columns 8-11 of the JCNOPT line. For low level earthquake analysis per API, the user must input rare intense earthquake data in the dynamic response input file. The resulting data must be combined so that load cases 1 and 2 are the rare intense seismic loads and load case 3 contains the dead loads. The dead load case, 3, used in the low level earthquake analysis is specified using the ‘DLOAD’ line, where ‘3’ is entered in columns 7-10. The following input specifies low level earthquake analysis with API WSD is to be used, with load case 1 and 2 having a 70% increase in allowable stress.
 
 ```txt
-1 2 3 4 5 6 7 8  
-1234567890123456789012345678901234567890123456789012345678901234567890  
-JCNOPT LLEWEN  
-LCSEL IN 1 2  
-AMOD  
-AMOD 1 1.7 2 1.7  
-DLOAD 3  
-END 
+               1         2         3         4         5         6         7         8
+      12345678901234567890123456789012345678901234567890123456789012345678901234567890
+1     JCNOPT LLEWEN
+2     LCSEL IN           1    2
+3     AMOD
+4     AMOD      1   1.7   2   1.7
+5     DLOAD    3
+6     END
 ```
 
 ## 2.3 RECTANGULAR HOLLOW SECTION JOINT CHECK
@@ -433,7 +441,7 @@ Note: K/KT overlap joints are not supported.
 
 Output reports are designated in columns 56-69 on the JCNOPT line.
 
-2.4.1 Punching Check Report
+### 2.4.1 Punching Check Report
 
 Enter one of the following report levels in columns 56-57 for reporting punching check results:
 
@@ -444,7 +452,7 @@ Enter one of the following report levels in columns 56-57 for reporting punching
 
 Note: If ‘UC’ is selected, enter the UC limit in columns 58-61.
 
-2.4.2 Strength Check Report
+### 2.4.2 Strength Check Report
 
 SACS support the 50% strength check in the original API RP2A ASD 21st Edition and the new methodology of API RP2A ASD 21st Edition Supplement 3 2007. (See more details in Commentary 3.1.3.) By default, the latest method is applied.
 
@@ -454,21 +462,21 @@ For ISO 19902:2007(E), the strength check follows the methodology in Section 14.
 
 For Norsok N-004 code, there is no specification on connection's minimum strength check. The option is ignored.
 
-2.4.3 Load Path Report
+### 2.4.3 Load Path Report
 
 The load path report details the connection classification for each load case and is activated by entering ‘PT’ in columns 64-65.
 
-2.4.4 SCF Report
+### 2.4.4 SCF Report
 
 The SCFs used for simplified fatigue analysis may be printed be specifying ‘PT’ in columns 66-67.
 
-2.4.5 Chord Load Transfer Report
+### 2.4.5 Chord Load Transfer Report
 
 The Joint Can program can check to ensure that chords resist general collapse per API specifications when load is transferred across. Enter ‘LT’ in columns 68-69 (or manually selecting the second option on ‘Closed Ring Analysis Option’) to receive the Chord Load Transfer Report.
 
-2.4.6 Crushing Check Analysis Report
+### 2.4.6 Crushing Check Analysis Report
 
-The Joint Can program can check to ensure that whether a chord fails under the action of all of the braces and the chord stress itself. Enter ‘JC’ in columns 68-69 (or manually selecting the third option on ‘Closed Ring Analysis Option’) to receive the Crushing Check Analysis Report. Per this selection, a subsequent option line is generated that allows the users to (1) request a summary report of crushing check analysis by entering ‘SR’ in columns 71-72 (or manually selecting the first option on ‘JointCan Crushing Check Report Option’), (2) request a detailed report of crushing check analysis by entering ‘SR’ in columns 71-72 (or manually selecting the second option on ‘JointCan Crushing Check Report Option’), or (3) request summary and detailed reports of crushing check analysis by entering ‘BR’ in columns 71- 72 (or manually selecting the third option on ‘JointCan Crushing Check Report Option’).
+The Joint Can program can check to ensure that whether a chord fails under the action of all of the braces and the chord stress itself. Enter ‘JC’ in columns 68-69 (or manually selecting the third option on ‘Closed Ring Analysis Option’) to receive the Crushing Check Analysis Report. Per this selection, a subsequent option line is generated that allows the users to (1) request a summary report of crushing check analysis by entering ‘SR’ in columns 71-72 (or manually selecting the first option on ‘JointCan Crushing Check Report Option’), (2) request a detailed report of crushing check analysis by entering ‘SR’ in columns 71-72 (or manually selecting the second option on ‘JointCan Crushing Check Report Option’), or (3) request summary and detailed reports of crushing check analysis by entering ‘BR’ in columns 71-72 (or manually selecting the third option on ‘JointCan Crushing Check Report Option’).
 
 ## 2.5 REDESIGN PARAMETERS
 
@@ -482,10 +490,11 @@ The following sample stipulates that redesign is to be performed allowing only t
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 1234567890 |
-| JCNOPT API EN | JCNOPT API EN | JCNOPT API EN | JCNOPT API EN | AID0.125 | AID0.125 | AID0.125 | AID0.125 | AID0.125 |
+```txt
+               1         2         3         4         5         6         7         8
+      12345678901234567890123456789012345678901234567890123456789012345678901234567890
+1     JCNOPT API EN                        AID0.125
+```
 
 
 
@@ -493,33 +502,37 @@ The following sample stipulates that redesign is to be performed allowing only t
 
 By default, the yield stress specified in the model is used for punching analyses. The yield stress used for joint punching analysis purposes may be modified in several ways in the Joint Can input file.
 
-2.6.1 Specifying a Default Yield Stress
+### 2.6.1 Specifying a Default Yield Stress
 
 A default yield stress may specified in columns 14-19 on the JCNOPT line. This value overrides any values in the SACS model.
 
-2.6.2 Changing a Global Yield Stress
+### 2.6.2 Changing a Global Yield Stress
 
-Any yield stress specified in the SACS model can be changed for the punching analysis with the UMOD input line. For example, for high strength steel, the design joint strength can be changed to 2/3 of the
-
-tensile strength on the UMOD input line. In the following, 50ksi is changed to 46.67ksi for the purposes of punching check.
+Any yield stress specified in the SACS model can be changed for the punching analysis with the UMOD input line. For example, for high strength steel, the design joint strength can be changed to 2/3 of the tensile strength on the UMOD input line. In the following, 50ksi is changed to 46.67ksi for the purposes of punching check.
 
 ```txt
-1 2 3 4 5 6 7 8 123456789012345678901234567890123456789012345678901234567890 1 JCNOPT API EN T AID0.125 2 UMOD 50.0 46.67 
+               1         2         3         4         5         6         7         8
+      12345678901234567890123456789012345678901234567890123456789012345678901234567890
+1     JCNOPT API EN                    T   AID0.125
+2     UMOD  50.0 46.67
 ```
 
 Note: Enter ‘T’ in column 34 on the JCNOPT line if all yield stress overrides are to be applied only to the chord for the purposes of strength check.
 
-2.6.3 Changing Member Group Yield Stress
+### 2.6.3 Changing Member Group Yield Stress
 
 The yield for an entire member group can be modified for the purpose of checking joint capacity, by using the GMOD input line. Overrides specified on the GMOD input line take precedence over those specified on the UMOD input line.
 
 The following changes the yield stress for groups ‘TTT’ and ‘SSS’ to 50.0 for punching analysis purposes.
 
 ```txt
-1 2 3 4 5 6 7 8 123456789012345678901234567890123456789012345678901234567890 1 JCNOPT API EN T AID0.125 2 GMOD 50.0 TTT SSS 
+               1         2         3         4         5         6         7         8
+      12345678901234567890123456789012345678901234567890123456789012345678901234567890
+1     JCNOPT API EN                    T   AID0.125
+2     GMOD  50.0 TTT SSS
 ```
 
-2.6.4 Changing Joint Yield Stress
+### 2.6.4 Changing Joint Yield Stress
 
 The yield stress for specific joints can be modified by using the JMOD input line. Overrides specified on the JMOD input line take precedence over all other yield stress overrides.
 
@@ -529,23 +542,28 @@ The BRCOVR line can be used to override the effective chord length, chord can th
 
 ## 2.8 LOAD CASE DATA
 
-2.8.1 Selecting Output Load Case
+### 2.8.1 Selecting Output Load Case
 
 The LCSEL line can be used to specify which of the existing load cases in the common solution file are to be included or excluded for checking the joint adequacy. Specify ‘IN’ in columns 7-8 to include the listed load cases or ‘EX’ to exclude the listed load cases. In the following, joint capacity is to be checked only for load cases ‘OP00’, ‘OP45’ and ‘OP90’.
 
 ```txt
-1 2 3 4 5 6 7 8 123456789012345678901234567890123456789012345678901234567890 1 LCSEL IN OP00 OP45 OP90 
+               1         2         3         4         5         6         7         8
+      12345678901234567890123456789012345678901234567890123456789012345678901234567890
+1     LCSEL IN        OP00 OP45 OP90
 ```
 
-2.8.2 Allowable Stress Modifier
+### 2.8.2 Allowable Stress Modifier
 
 For any load case, the allowable stress modifier may be specified using the AMOD line. In the following, a 1.33 allowable stress modifier is used for load cases ‘OP00’, ‘OP45’ and ‘OP90’.
 
 ```txt
-1 2 3 4 5 6 7 8 123456789012345678901234567890123456789012345678901234567890 1 LCSEL IN OP00 OP45 OP90 
+               1         2         3         4         5         6         7         8
+      12345678901234567890123456789012345678901234567890123456789012345678901234567890
+1     LCSEL IN        OP00 OP45 OP90
+2     AMOD   OP00 1.33 OP45 1.33 OP90
 ```
 
-2.8.3 Creating New Load Combinations
+### 2.8.3 Creating New Load Combinations
 
 The user can create load combinations for the purpose of joint check using the LCOMB input line in the Joint Can input file. These combinations are defined as linear combinations of load conditions contained in the common solution file.
 
@@ -554,28 +572,32 @@ The user can create load combinations for the purpose of joint check using the L
 By default, all joint connections are analyzed. Specific joints may be selected for analysis using the JSLC line. The following designates that only joints 302, 401 and 567 are to be analyzed.
 
 ```txt
-1 2 3 4 5 6 7 8 1 23456789012345678901234567890123456789012345678901234567890 1 JSLC 302 401 567 
+               1         2         3         4         5         6         7         8
+      12345678901234567890123456789012345678901234567890123456789012345678901234567890
+1     JSLC   302 401 567
 ```
 
-## 2.10MISCELLANEOUS OPTIONS
+## 2.10 MISCELLANEOUS OPTIONS
 
-2.10.1 Calculating Stress at Chord Face
+### 2.10.1 Calculating Stress at Chord Face
 
 By default, brace stresses are evaluated at the actual end of the brace. When members do not contain offsets, brace stresses may be calculated at the face of the chord using the RELIEF line.
 
 Note: This feature is not required if braces are offset such that the member end is at the chord surface.
 
-2.10.2 Overriding Chord Thickness
+### 2.10.2 Overriding Chord Thickness
 
 For any connection, the default chord thickness is determined from the properties contained in the model. The thickness of the chord may be overridden for a joint using the TCHORD line.
 
 The following designates that the chord thickness used for joint check is to be 1.75 for joints 101 and 102.
 
 ```txt
-1 2 3 4 5 6 7 8 1 23456789012345678901234567890123456789012345678901234567890 1 TCHORD 1011.75 1021.75
+               1         2         3         4         5         6         7         8
+      12345678901234567890123456789012345678901234567890123456789012345678901234567890
+1     TCHORD      1011.75   1021.75
 ```
 
-2.10.3 Overriding Brace/Chord Angle Limit
+### 2.10.3 Overriding Brace/Chord Angle Limit
 
 By default, the chord adjacent to the brace is evaluated for checking the connection. For braces normal to the chord, both chord members are evaluated.
 
@@ -584,10 +606,10 @@ When determining if a brace is normal to the chord, the angle between the brace 
 By default 85 degrees is used for the Brace/Chord Angle Limit. Enter the minimum angle used to determine if a brace is normal to the chord on the MAXANG line. The following designates that any brace with an angle greater than 75.0 degrees is to be checked using both chords (i.e. is considered normal to the chord). For specified angles less than 85.0 degrees, the limit is the minimum chord angle above which both chord members are evaluated. For specified angles greater than 95.0 degrees, the limit is the maximum chord angle below which both chord members are evaluated.
 
 ```txt
-1 2 3 4 5 6 7 8 
+               1         2         3         4         5         6         7         8
+      12345678901234567890123456789012345678901234567890123456789012345678901234567890
+1     MAXANG          75.0
 ```
-
-12345678901234567890123456789012345678901234567890123456789012345678901234567890 1 MAXANG 75.0
 
 Note: Enter 180.0 if both chords are to be evaluated for any brace.
 
@@ -1500,9 +1522,9 @@ DATE 09-JUL-2020 TIME 15:57:06 JCN PAGE 11
 
 
 
-5 INPUT LINES
+# 5 INPUT LINES
 
-ALLOWABLE STRESS MODIFIER/MATERIAL FACTOR
+## ALLOWABLE STRESS MODIFIER/MATERIAL FACTOR
 
 COLUMNS
 
@@ -1538,11 +1560,11 @@ FOR AISC/API WSD OR NORSOK/NPD, ENTER THE LOAD CASE NAMES AND THE APPROPRIATE AL
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LINE LABEL | LOAD CASE NAME | ALLOWABLE OR MATERIAL FACTOR | LOAD CASE NAME | ALLOWABLE OR MATERIAL FACTOR | LOAD CASE NAME | ALLOWABLE OR MATERIAL FACTOR | LOAD CASE NAME | ALLOWABLE OR MATERIAL FACTOR | LOAD CASE NAME | ALLOWABLE OR MATERIAL FACTOR | LOAD CASE NAME | ALLOWABLE OR MATERIAL FACTOR | LOAD CASE NAME | ALLOWABLE OR MATERIAL FACTOR |
 | AMOD |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1--4 | 8-->11 | 13<!---17 | 18-->21 | 23<!---27 | 28-->31 | 33<!---37 | 38-->41 | 43<!---47 | 48-->51 | 53<!---57 | 58-->61 | 63<!---67 | 68-->71 | 73<!---77 |
+| 1-4 | 8-11 | 13-17 | 18-21 | 23-27 | 28-31 | 33-37 | 38-41 | 43-47 | 48-51 | 53-57 | 58-61 | 63-67 | 68-71 | 73-77 |
 
 
 
-BRACE/CHORD OVERRIDE
+## BRACE/CHORD OVERRIDE
 
 COLUMNS
 
@@ -1561,14 +1583,14 @@ GENERAL THIS LINE IS USED TO OVERRIDE THE JOINT CHORD EFFECTIVE LENGTH, CHORD ME
 | LINE LABEL | COMMON JOINT | CONNECTING JOINT | EFFECTIVE CHORD LENGTH | CHORD MEMBER THICKNESS | CHORD CAN THICKNESS | LEAVE THIS FIELD BLANK |
 | --- | --- | --- | --- | --- | --- | --- |
 | BRCOVR |  |  |  |  |  |  |
-| 1--6 | 8-->11 | 13-->16 | 18<!--24 | 25<!--31 | 32<!--38 | 39--------80 |
+| 1-6 | 8-11 | 13-16 | 18-24 | 25-31 | 32-38 | 39-80 |
 | DEFAULT |  |  |  |  |  |  |
 | ENGLISH |  |  | FT | IN | IN |  |
 | METRIC |  |  | M | CM | CM |  |
 
 
 
-DEAD LOAD CASE LINE
+## DEAD LOAD CASE LINE
 
 COLUMNS
 
@@ -1584,11 +1606,11 @@ GENERAL THIS LINE SET IS USED TO SPECIFY THE DEAD LOAD CASE FOR USE IN THE LOW L
 | LINE LABEL | DEAD LOAD CASE | LEAVE BLANK |
 | --- | --- | --- |
 | DLOAD |  |  |
-| 1-- 5 | 7-->10 | 11--------80 |
+| 1-5 | 7-10 | 11-80 |
 
 
 
-END LINE
+## END LINE
 
 COLUMNS
 
@@ -1596,18 +1618,18 @@ COMMENTARY
 
 LOCATION THIS LINE IS THE LAST LINE FOR ANY JOINT CAN DATA SET.
 
-GENERAL THE 'END' LINE TERMINATES THE DATA READ BY THE JOINT CANPROGRAM.
+GENERAL THE 'END' LINE TERMINATES THE DATA READ BY THE JOINT CAN PROGRAM.
 
 
 
 | LINE LABEL | REMAINDER OF THIS LINE LEFT BLANK |
 | --- | --- |
 | END |  |
-| 1-- 3 | 4-80 |
+| 1-3 | 4-80 |
 
 
 
-SIMPLIFIED FATIGUE PARAMETERS
+## SIMPLIFIED FATIGUE PARAMETERS
 
 COLUMNS
 
@@ -1641,14 +1663,14 @@ WHERE SP100 IS THE 100 YEAR LIFE CURVE, T IS DESIGN LIFE AND M IS 4.38 FOR SMOOT
 | LINE LABEL | WATER DEPTH | Z COORD FOR WATERLINE MEMBERS | DESIGN FATIGUE LIFE | WELD CLASSIFICATION | SCF OPTION | LEAVE BLANK |
 | --- | --- | --- | --- | --- | --- | --- |
 | FATIGUE |  |  |  |  |  |  |
-| 1--7 | 9<-16 | 17<-24 | 27<-30 | 33--36 | 37--39 | 40- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+| 1-7 | 9-16 | 17-24 | 27-30 | 33-36 | 37-39 | 40-80 |
 | DEFAULT |  |  |  | 'ROUG' | 'API' |  |
 | ENGLISH | FT | FT | YEARS |  |  |  |
 | METRIC | M | M | YEARS |  |  |  |
 
 
 
-DANISH OR NORSOK GAMMA M FACTOR & MSL ASSESSMENT FACTORS OF SAFETY
+## DANISH OR NORSOK GAMMA M FACTOR & MSL ASSESSMENT FACTORS OF SAFETY
 
 COLUMNS
 
@@ -1656,7 +1678,7 @@ COMMENTARY
 
 GENERAL
 
-THIS INPUT LINE ENABLES THE USER TO OVERRIDE THE DANISH CODEGAMMA M FACTOR OR THE MSL ASSESSMENT FACTORS OF SAFETY.
+THIS INPUT LINE ENABLES THE USER TO OVERRIDE THE DANISH CODE GAMMA M FACTOR OR THE MSL ASSESSMENT FACTORS OF SAFETY.
 
 ( 6-10)
 
@@ -1680,12 +1702,12 @@ ENTER THE ASSESSMENT FACTOR OF SAFETY FOR THE CHORD LOAD FACTOR GAMMA FUNCTION.
 | --- | --- | --- | --- | --- | --- |
 | LINE LABEL | MSL AXIAL OR DANISH OR NORSOK GAMMA | IN-PLANE BENDING GAMMA 2 | OUT-OF-PLANE BENDING GAMMA 3 | CHORD FACTOR GAMMA Q | LEAVE BLANK |
 | GMFAC |  |  |  |  |  |
-| 1--5 | 6<--10 | 11<--15 | 16<--20 | 21<--25 | 26-----80 |
+| 1-5 | 6-10 | 11-15 | 16-20 | 21-25 | 26-80 |
 | DEFAULT | 1.0 OR 1.34 OR 1.15 | 1 | 1 | 1 |  |
 
 
 
-PUNCHING SHEAR GRUP MODIFICATION LINE
+## PUNCHING SHEAR GRUP MODIFICATION LINE
 
 COLUMNS
 
@@ -1705,19 +1727,19 @@ ENTER THE APPLICABLE GRUP LABELS FOR THE NEW YIELD STRESS. DO NOT SKIP ANY FIELD
 
 
 
-| LINE LABEL | GRUP YIELD STRESS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | GRUP YIELD STRESS | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP |
-| GMOD |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1--4 | 5<-10 | 12--14 | 16--18 | 20--22 | 24--26 | 28--30 | 32--34 | 36--38 | 40--42 | 44--46 | 48--50 | 52--54 | 56--58 | 60--62 | 64--66 | 68--70 |  |
-| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| ENGLISH | KSI |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| METRIC (KN) | KN/SQ.CM |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| METRIC (KG) | KG/SQ.CM |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| LINE LABEL | GRUP YIELD STRESS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS | APPLICABLE GRUP LABELS |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | GRUP YIELD STRESS | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP | GRUP |
+| GMOD |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| 1-4 | 5-10 | 12-14 | 16-18 | 20-22 | 24-26 | 28-30 | 32-34 | 36-38 | 40-42 | 44-46 | 48-50 | 52-54 | 56-58 | 60-62 | 64-66 | 68-70 |
+| DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| ENGLISH | KSI |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| METRIC (KN) | KN/SQ.CM |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| METRIC (KG) | KG/SQ.CM |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
 
 
-SIMPLIFIED ULTIMATE STRENGTH INITIAL LOAD CASE
+## SIMPLIFIED ULTIMATE STRENGTH INITIAL LOAD CASE
 
 COLUMNS
 
@@ -1725,7 +1747,7 @@ COMMENTARY
 
 GENERAL
 
-THIS LINE REPLACES THE LCDIR LINE AND IS USED ONLY INCONJUNCTION WITH THE SIMPLIFIED ULTIMATE STRENGTH ANALYSIS.IT IS USED TO SPECIFY WHICH LOAD CASES ARE INITIAL CASES OFEACH WAVE DIRECTION. IF ONLY ONE WAVE DIRECTION IS BEINGANALYZED, THEN THIS LINE MAY BE OMITTED.
+THIS LINE REPLACES THE LCDIR LINE AND IS USED ONLY IN CONJUNCTION WITH THE SIMPLIFIED ULTIMATE STRENGTH ANALYSIS. IT IS USED TO SPECIFY WHICH LOAD CASES ARE INITIAL CASES OF EACH WAVE DIRECTION. IF ONLY ONE WAVE DIRECTION IS BEING ANALYZED, THEN THIS LINE MAY BE OMITTED.
 
 ( 1- 6) ENTER 'INITLC' ON EACH LINE OF THIS SET. NO HEADER LINE IS REQUIRED.
 
@@ -1737,17 +1759,17 @@ THIS LINE REPLACES THE LCDIR LINE AND IS USED ONLY INCONJUNCTION WITH THE SIMPLI
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LINE LABEL | FIRST WAVE DIRECTION | SECOND WAVE DIRECTION | THIRD WAVE DIRECTION | FOURTH WAVE DIRECTION | FIFTH WAVE DIRECTION | SIXTH WAVE DIRECTION | SEVENTH WAVE DIRECTION | EIGHT WAVE DIRECTION | NINTH WAVE DIRECTION | TENTH WAVE DIRECTION | ELEVENTH WAVE DIRECTION | TWELVTH WAVE DIRECTION | THIRTEENTH WAVE DIRECTION | FOURTHTEENTH WAVE DIRECTION |
 | INITLC |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1--6 | 9--12 | 14--17 | 19--22 | 24--27 | 29--32 | 34--37 | 39--42 | 44--47 | 49--52 | 54--57 | 59--62 | 64--67 | 69--72 | 74--77 |
+| 1-6 | 9-12 | 14-17 | 19-22 | 24-27 | 29-32 | 34-37 | 39-42 | 44-47 | 49-52 | 54-57 | 59-62 | 64-67 | 69-72 | 74-77 |
 
 
 
-JOINT CAN OPTION LINE (PART 1)
+## JOINT CAN OPTION LINE (PART 1)
 
 COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE IS USED TO SPECIFY THE TYPE OF ANALYSIS, CODECHECK, AND REDESIGN PARAMETERS TO BE USED.
+GENERAL THIS LINE IS USED TO SPECIFY THE TYPE OF ANALYSIS, CODE CHECK, AND REDESIGN PARAMETERS TO BE USED.
 
 ( 8-11) ENTER THE DESIRED CODE. OPTIONS ARE:
 
@@ -1845,7 +1867,7 @@ COMMENTARY
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LINE LABEL | JOINT CHECK OPTION | UNITS | YIELD STRESS | MIN GAP | MAX GAP | BRACE ON BRACE OPT | EFF. THICK OPT | SY OVER RIDE OPT | C OR M | ULT OPT | RE- ASSESS OPTION | REDESIGN OPTION | CHORD OPTIONS | THICK INCREM | DIAM INCREM | SEE JCNOPT LINE PART 2 |
 | JCNOPT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1--6 | 8--11 | 12--13 | 14<--19 | 20<--25 | 26<--31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39--40 | 41<--45 | 46<--50 | 51--80 |
+| 1-6 | 8-11 | 12-13 | 14-19 | 20-25 | 26-31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39-40 | 41-45 | 46-50 | 51-80 |
 | DEFAULT |  |  |  | -100 | 1000 |  |  |  | C |  |  |  | 'ID' | 0.125 | 0.5 |  |
 | ENGLISH |  |  | KSI | IN | IN |  |  |  |  |  |  |  |  | IN | IN |  |
 | METRIC KN |  |  | KN/SQCM | CM | CM |  |  |  |  |  |  |  |  | CM | CM |  |
@@ -1853,13 +1875,13 @@ COMMENTARY
 
 
 
-JOINT CAN OPTION LINE (PART 2)
+## JOINT CAN OPTION LINE (PART 2)
 
 COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE IS USED TO SPECIFY THE TYPE OF ANALYSIS, CODECHECK, AND REDESIGN PARAMETERS TO BE USED.
+GENERAL THIS LINE IS USED TO SPECIFY THE TYPE OF ANALYSIS, CODE CHECK, AND REDESIGN PARAMETERS TO BE USED.
 
 ( 51 ) FOR ORIGINAL API 21ST ED., ENTER 'N' IF THE ALLOWABLE PUNCHING STRESS IS NOT LIMITED TO THE ALLOWABLE CHORD SHEAR STRESS. FOR API 21ST SUP 3, NORSOK, AND ISO CODES, LEAVE BLANK TO APPLY MIN. CAN EXT. LENGTH REQUIREMENT ON EFF. TOTAL LENGTH Lc; ENTER 'L' TO APPLY MIN. CAN EXT. ON Lc IF MODELED CAN LENGTH CANNOT MEET THE REQUIREMENT; ENTER 'M' TO USE THE MODELED LENGTH AND IGNORE THE REQUIREMENT ON CAN EXT.   
 ( 52 ) ENTER 'A' TO USE INTERPOLATION OF BRACE AXIAL CAPACITIES FOR MIXED CLASS CONNECTIONS (DEFAULT). ENTER 'R' TO USE THE ALTERNATIVE RATIO OF BRACE AXIAL LOADS AND CAPACITIES. API-RP2A 21 SUPPLEMENT 2 ONLY (C4.2.4).   
@@ -1881,25 +1903,25 @@ COMMENTARY
 
 
 
-| LINE LABEL | SEE JCNOPT LINE PART 1 | ALLOWABLE | ALLOWABLE | OUTPUT OPTIONS | OUTPUT OPTIONS | OUTPUT OPTIONS | OUTPUT OPTIONS | OUTPUT OPTIONS | OUTPUT OPTIONS | OUTPUT OPTIONS | OUTPUT OPTIONS | OUTPUT OPTIONS | OUTPUT OPTIONS | EFF THICK LIMIT |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| LINE LABEL | SEE JCNOPT LINE PART 1 | LIMIT | OPT | UC ORDER | JOINT CAN | UNITY CHECK LEVEL | STRNTH ANAL | LOAD PATH | SCF | CLOSED RING ANALYSIS | WARN | CRUSH CHECK REPORT |  |  |
-| JCNOPT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1--6 | 8----50 | 51 | 52 | 54--55 | 56--57 | 58<--61 | 62--63 | 64--65 | 66--67 | 68--69 | 70 | 71--72 | 76<--79 |  |
-| DEFAULT |  |  |  |  | 'FL' |  |  |  |  |  |  |  | 1.75 |  |
-| ENGLISH |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| METRIC KN |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| METRIC KG |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| LINE LABEL | SEE JCNOPT LINE PART 1 | ALLOWABLE | ALLOWABLE | OUTPUT OPTIONS | OUTPUT OPTIONS | OUTPUT OPTIONS | OUTPUT OPTIONS | OUTPUT OPTIONS | OUTPUT OPTIONS | OUTPUT OPTIONS | OUTPUT OPTIONS | OUTPUT OPTIONS | EFF THICK LIMIT |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LINE LABEL | SEE JCNOPT LINE PART 1 | LIMIT | OPT | UC ORDER | JOINT CAN | UNITY CHECK LEVEL | STRNTH ANAL | LOAD PATH | SCF | CLOSED RING ANALYSIS | WARN | CRUSH CHECK REPORT | EFF THICK LIMIT |
+| JCNOPT |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| 1-6 | 8-50 | 51 | 52 | 54-55 | 56-57 | 58-61 | 62-63 | 64-65 | 66-67 | 68-69 | 70 | 71-72 | 76-79 |
+| DEFAULT |  |  |  |  | 'FL' |  |  |  |  |  |  |  | 1.75 |
+| ENGLISH |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| METRIC KN |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| METRIC KG |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
 
 
-PUNCHING SHEAR JOINT MODIFICATION LINE
+## PUNCHING SHEAR JOINT MODIFICATION LINE
 
 COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE SET IS USED TO MODIFY THE YIELD STRESS FORSPECIFIED JOINTS FOR PUNCHING SHEAR ANALYSIS. THIS INPUTSHOULD BE EITHER A NEW YIELD STRESS OR TWO-THIRDS OF THETENSILE STRENGTH. THE DEFAULT VALUE WILL BE THE YIELD STRESSFROM THE SACS IV MODEL. UNLIMITED JMOD LINES ARE ALLOWED PERANALYSIS. A BLANK HEADER LINE IS NOT REQUIRED.
+GENERAL THIS LINE SET IS USED TO MODIFY THE YIELD STRESS FOR SPECIFIED JOINTS FOR PUNCHING SHEAR ANALYSIS. THIS INPUT SHOULD BE EITHER A NEW YIELD STRESS OR TWO-THIRDS OF THE TENSILE STRENGTH. THE DEFAULT VALUE WILL BE THE YIELD STRESS FROM THE SACS IV MODEL. UNLIMITED JMOD LINES ARE ALLOWED PER ANALYSIS. A BLANK HEADER LINE IS NOT REQUIRED.
 
 ( 5-10) ENTER YIELD STRESS. IF LEFT BLANK OR ZERO, THE PUNCHING SHEAR ANALYSIS WILL BE OMITTED FOR THE SPECIFIED JOINTS.   
 (12-80) ENTER THE APPLICABLE JOINT NAMES FOR THE NEW YIELD STRESS. DO NOT SKIP ANY FIELDS FOR THIS WILL TERMINATE THE INPUT FOR THIS LINE.
@@ -1910,7 +1932,7 @@ GENERAL THIS LINE SET IS USED TO MODIFY THE YIELD STRESS FORSPECIFIED JOINTS FOR
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LINE LABEL | YIELD STRESS | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 |
 | JMOD |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1-- 4 | 5<--10 | 12--->15 | 17--->20 | 22--->25 | 27--->30 | 32--->35 | 37--->40 | 42--->45 | 47--->50 | 52--->55 | 57--->60 | 62--->65 | 67--->70 | 72--->75 | 77--->80 |
+| 1-4 | 5-10 | 12-15 | 17-20 | 22-25 | 27-30 | 32-35 | 37-40 | 42-45 | 47-50 | 52-55 | 57-60 | 62-65 | 67-70 | 72-75 | 77-80 |
 | DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | ENGLISH | KSI |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | METRIC (KN) | KN/SQ.CM |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
@@ -1918,13 +1940,13 @@ GENERAL THIS LINE SET IS USED TO MODIFY THE YIELD STRESS FORSPECIFIED JOINTS FOR
 
 
 
-JOINT SELECTION LINES
+## JOINT SELECTION LINES
 
 COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE ENABLES THE USER TO CHOOSE SPECIFIC JOINTS FORANALYSIS. IF THIS LINE SET IS USED ONLY THOSE JOINTS NAMED ONTHESE LINES WILL BE ANALYZED. IF, HOWEVER, A JOINT ISEXCLUDED FROM ANALYSIS BY INPUTTING A ZERO 'FY' ON THE 'JMOD'LINE THEN IT WILL NOT BE ANALYZED EVEN IF IT IS INPUT ON THISLINE.
+GENERAL THIS LINE ENABLES THE USER TO CHOOSE SPECIFIC JOINTS FOR ANALYSIS. IF THIS LINE SET IS USED ONLY THOSE JOINTS NAMED ON THESE LINES WILL BE ANALYZED. IF, HOWEVER, A JOINT IS EXCLUDED FROM ANALYSIS BY INPUTTING A ZERO 'FY' ON THE 'JMOD' LINE THEN IT WILL NOT BE ANALYZED EVEN IF IT IS INPUT ON THIS LINE.
 
 ( 1- 4) ENTER 'JSLC'.   
 ( 6- 6) (OPTIONAL) ENTER 'G' TO SPECIFY "FULLY GROUTED" JOINTS.   
@@ -1935,11 +1957,11 @@ GENERAL THIS LINE ENABLES THE USER TO CHOOSE SPECIFIC JOINTS FORANALYSIS. IF THI
 | LINE LABEL |  | JOINT 1 | JOINT 2 | JOINT 3 | JOINT 4 | JOINT 5 | JOINT 6 | JOINT 7 | JOINT 8 | JOINT 9 | JOINT 10 | JOINT 11-18 | Blank |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | JSLC | G |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1-- 4 | 6 | 7-->10 | 11-->14 | 15-->18 | 19-->22 | 23-->26 | 27-->30 | 31-->34 | 35-->38 | 39-->42 | 43-->46 | 47-->78 | 79--80 |
+| 1-4 | 6 | 7-10 | 11-14 | 15-18 | 19-22 | 23-26 | 27-30 | 31-34 | 35-38 | 39-42 | 43-46 | 47-78 | 79-80 |
 
 
 
-LOAD COMBINATION INPUT
+## LOAD COMBINATION INPUT
 
 COLUMNS COMMENTARY
 
@@ -1961,18 +1983,18 @@ THIS LINE MAY BE REPEATED TO ENTER A TOTAL OF FORTY EIGHT LOAD COMPONENTS FOR EA
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LINE LABEL | COMBINATION NAME | LOAD CASE NAME | LOAD FACTOR | LOAD CASE NAME | LOAD FACTOR | LOAD CASE NAME | LOAD FACTOR | LOAD CASE NAME | LOAD FACTOR | LOAD CASE NAME | LOAD FACTOR | LOAD CASE NAME | LOAD FACTOR |
 | LCOMB |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1--5 | 7-->10 | 12-->15 | 16<-->21 | 22-->25 | 26<-->31 | 32-->35 | 36<-->41 | 42-->45 | 46<-->51 | 52-->55 | 56<-->61 | 62-->65 | 66<-->71 |
+| 1-5 | 7-10 | 12-15 | 16-21 | 22-25 | 26-31 | 32-35 | 36-41 | 42-45 | 46-51 | 52-55 | 56-61 | 62-65 | 66-71 |
 | DEFAULT |  |  | 1 |  | 1 |  | 1 |  | 1 |  | 1 |  | 1 |
 
 
 
-JOINT CAN LOAD CASE SELECTION
+## JOINT CAN LOAD CASE SELECTION
 
 COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE IS A REPLACEMENT FOR THE 'LDCASE' LINE AND MAY BEUSED TO SPECIFY THE LOAD CASES IN THE SACS IV INPUT FILE THATARE TO BE USED IN JOINT CAN. THIS LINE CAN BE REPEATED ASOFTEN AS NECESSARY TO SELECT ANY OR ALL OF THE LOAD CASES.
+GENERAL THIS LINE IS A REPLACEMENT FOR THE 'LDCASE' LINE AND MAY BE USED TO SPECIFY THE LOAD CASES IN THE SACS IV INPUT FILE THAT ARE TO BE USED IN JOINT CAN. THIS LINE CAN BE REPEATED AS OFTEN AS NECESSARY TO SELECT ANY OR ALL OF THE LOAD CASES.
 
 ( 7- 8) ENTER THE FUNCTION FOR THE LOAD CASE SELECTION: 'IN' - INCLUDE THESE LOAD CASES IN CODE CHECK AND OUTPUT REPORTS. 'EX' - EXCLUDE THESE LOAD CASES FROM CODE CHECK AND OUTPUT REPORTS.   
 (17-75) ENTER THE LOAD CASE IDENTIFIERS FOR ALL LOAD CASES TO BE SELECTED. THE LOAD CASES CAN BE IN ANY ORDER.
@@ -1983,12 +2005,12 @@ GENERAL THIS LINE IS A REPLACEMENT FOR THE 'LDCASE' LINE AND MAY BEUSED TO SPECI
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LINE LABEL | FUNCTION | 1ST | 2ND | 3RD | 4TH | 5TH | 6TH | 7TH | 8TH | 9TH | 10TH | 11TH | 12TH |
 | LCSEL |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1-- 5 | 7-- 8 | 17-->20 | 22-->25 | 27-->30 | 32-->35 | 37-->40 | 42-->45 | 47-->50 | 52-->55 | 57-->60 | 62-->65 | 67-->70 | 72-->75 |
+| 1-5 | 7-8 | 17-20 | 22-25 | 27-30 | 32-35 | 37-40 | 42-45 | 47-50 | 52-55 | 57-60 | 62-65 | 67-70 | 72-75 |
 | DEFAULT | 'IN' |  |  |  |  |  |  |  |  |  |  |  |  |
 
 
 
-BRACE/CHORD ANGLE LIMIT
+## BRACE/CHORD ANGLE LIMIT
 
 COLUMNS
 
@@ -1996,25 +2018,25 @@ COMMENTARY
 
 GENERAL
 
-THIS LINE IS USED TO SET THE BRACE TO CHORD ANGLE LIMIT THATIS USED TO SELECT THE CHORD STRESS TO BE USED IN THE PUNCHINGSHEAR CALCULATION. BY DEFAULT IF THE BRACE TO CHORD ANGLE ISLESS THAN 85 DEGREES THEN THE CHORD MEMBER ADJACENT TO THEBRACE IS SELECTED. IF NOT THEN BOTH CHORD MEMBERS ARE USED INTHE PUNCHING SHEAR CALCULATION AND THE HIGHEST UNITY CHECK ISREPORTED.
+THIS LINE IS USED TO SET THE BRACE TO CHORD ANGLE LIMIT THAT IS USED TO SELECT THE CHORD STRESS TO BE USED IN THE PUNCHING SHEAR CALCULATION. BY DEFAULT IF THE BRACE TO CHORD ANGLE IS LESS THAN 85 DEGREES THEN THE CHORD MEMBER ADJACENT TO THE BRACE IS SELECTED. IF NOT THEN BOTH CHORD MEMBERS ARE USED IN THE PUNCHING SHEAR CALCULATION AND THE HIGHEST UNITY CHECK IS REPORTED.
 
 (11-20)
 
-ENTER THE BRACE ANGLE LIMIT THAT ALLOWS THE USE OF BOTH CHORDMEMBERS IN CALCULATING THE UNITY CHECKS. AN ANGLE BETWEEN 95AND 180 DEGREES CAN BE ENTERED WHICH LIMITS THE SECOND CHORDMEMBER SELECTION.
+ENTER THE BRACE ANGLE LIMIT THAT ALLOWS THE USE OF BOTH CHORD MEMBERS IN CALCULATING THE UNITY CHECKS. AN ANGLE BETWEEN 95 AND 180 DEGREES CAN BE ENTERED WHICH LIMITS THE SECOND CHORD MEMBER SELECTION.
 
 
 
 | LINE LABEL | BRACE CHORD ANGLE LIMIT | LEAVE THIS FIELD BLANK |
 | --- | --- | --- |
 | MAXANG |  |  |
-| 1-- 6 | 11<-20 | 21---------80 |
+| 1-6 | 11-20 | 21-80 |
 | DEFAULT |  |  |
 | ENGLISH | DEG |  |
 | METRIC | DEG |  |
 
 
 
-SIMPLIFIED ULTIMATE STRENGTH MEMBER SELECTION
+## SIMPLIFIED ULTIMATE STRENGTH MEMBER SELECTION
 
 COLUMNS
 
@@ -2035,11 +2057,11 @@ GENERAL THIS IS NORMALLY USED TO SELECT CRITICAL MEMBERS FOR THE SIMPLIFIED ULTI
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LINE LABEL | JOINT 1 | JOINT 2 | JOINT 1 | JOINT 2 | JOINT 1 | JOINT 2 | JOINT 1 | JOINT 2 | JOINT 1 | JOINT 2 | JOINT 1 | JOINT 2 |
 | MSLC |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1--4 | 9-->12 | 14-->17 | 20-->23 | 25-->28 | 31-->34 | 36-->39 | 42-->45 | 47-->50 | 53-->56 | 58-->61 | 64-->67 | 69-->72 |
+| 1-4 | 9-12 | 14-17 | 20-23 | 25-28 | 31-34 | 36-39 | 42-45 | 47-50 | 53-56 | 58-61 | 64-67 | 69-72 |
 
 
 
-STRESS RELIEF TO SURFACE LINE
+## STRESS RELIEF TO SURFACE LINE
 
 COLUMNS
 
@@ -2054,11 +2076,11 @@ THIS LINE IS USED TO EVALUATE THE PUNCHING SHEAR STRESS AT THE SURFACE OF THE CH
 | LINE LABEL | LEAVE THIS FIELD BLANK |
 | --- | --- |
 | RELIEF |  |
-| 1--6 | 7- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+| 1-6 | 7-80 |
 
 
 
-ISO 19902 PARTIAL RESISTANCE FACTORS (USER DEFINED)
+## ISO 19902 PARTIAL RESISTANCE FACTORS (USER DEFINED)
 
 COLUMNS
 
@@ -2076,18 +2098,18 @@ GENERAL THIS INPUT LINE ENABLES THE USER TO OVERRIDE THE ISO 19902 (2007) CODE G
 | --- | --- | --- | --- | --- |
 | LINE LABEL | GAMMA_rj | GAMMA_zj | MINIMUM STRENGTH OPTION | LEAVE BLANK |
 | RFISO |  |  |  |  |
-| 1--5 | 6<--10 | 11<--15 | 16--17 | 18--------80 |
+| 1-5 | 6-10 | 11-15 | 16-17 | 18-80 |
 | DEFAULT | 1.05 | 1.17 | 'IS' |  |
 
 
 
-LRFD RESISTANCE FACTOR DATA
+## LRFD RESISTANCE FACTOR DATA
 
 COLUMNS
 
 COMMENTARY
 
-GENERAL THIS LINE ENABLES THE USER TO OVERRIDE THE LRFD RESISTANCEFACTORS AS SPECIFIED IN THE API RP 2A-LRFD.
+GENERAL THIS LINE ENABLES THE USER TO OVERRIDE THE LRFD RESISTANCE FACTORS AS SPECIFIED IN THE API RP 2A-LRFD.
 
 ( 6-25) ENTER THE CONNECTION RESISTANCE FACTORS FOR THE T AND Y TYPE JOINTS. IF ANY ITEM IS ENTER A ZERO OR LEFT BLANK, THEN THE DEFAULT VALUES WILL BE USED.   
 (26-45) ENTER THE CONNECTION RESISTANCE FACTORS FOR THE X TYPE JOINTS.   
@@ -2100,12 +2122,12 @@ GENERAL THIS LINE ENABLES THE USER TO OVERRIDE THE LRFD RESISTANCEFACTORS AS SPE
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LINE LABEL | AXIAL TENS. | AXIAL COMP. | IN-PL BEND. | OUT-OF-PLANE BEND. | AXIAL TENS. | AXIAL COMP. | IN-PL BEND. | OUT-OF-PLANE BEND. | AXIAL TENS. | AXIAL COMP. | IN-PL BEND. | OUT-OF-PLANE BEND. | YIELD STRESS RESISTANCE FACTOR | LEAVE BLANK |
 | RSFAC |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1--5 | 6<--10 | 11<--15 | 16<--20 | 21<--25 | 26<--30 | 31<--35 | 36<--40 | 41<--45 | 46<--50 | 51<--55 | 56<--60 | 61<--65 | 66<--70 | 71--80 |
+| 1-5 | 6-10 | 11-15 | 16-20 | 21-25 | 26-30 | 31-35 | 36-40 | 41-45 | 46-50 | 51-55 | 56-60 | 61-65 | 66-70 | 71-80 |
 | DEFAULT | 0.9 | 0.95 | 0.95 | 0.95 | 0.9 | 0.95 | 0.95 | 0.95 | 0.95 | 0.95 | 0.95 | 0.95 | 0.95 |  |
 
 
 
-PUNCHING SHEAR CHORD THICKNESS DATA
+## PUNCHING SHEAR CHORD THICKNESS DATA
 
 COLUMNS
 
@@ -2123,14 +2145,14 @@ GENERAL THIS INPUT LINE IS USED TO OVERRIDE THE CHORD THICKNESS FOR SPECIFIED JO
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LINE LABEL | JOINT NAME | CHORD THICKNESS | JOINT NAME | CHORD THICKNESS | JOINT NAME | CHORD THICKNESS | JOINT NAME | CHORD THICKNESS | JOINT NAME | CHORD THICKNESS | JOINT NAME | CHORD THICKNESS | JOINT NAME | CHORD THICKNESS |
 | TCHORD |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 1-- 6 | 12--->15 | 16<-->20 | 22--->25 | 26<-->30 | 32--->35 | 36<-->40 | 42--->45 | 46<-->50 | 52--->55 | 56<-->60 | 62--->65 | 66<-->70 | 72--->75 | 76<-->80 |
+| 1-6 | 12-15 | 16-20 | 22-25 | 26-30 | 32-35 | 36-40 | 42-45 | 46-50 | 52-55 | 56-60 | 62-65 | 66-70 | 72-75 | 76-80 |
 | DEFAULT |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | ENGLISH |  | IN |  | IN |  | IN |  | IN |  | IN |  | IN |  | IN |
 | METRIC |  | CM |  | CM |  | CM |  | CM |  | CM |  | CM |  | CM |
 
 
 
-YIELD STRESS MODIFICATION LINE
+## YIELD STRESS MODIFICATION LINE
 
 COLUMNS
 
@@ -2155,7 +2177,7 @@ GENERAL THIS LINE SET IS USED TO REPLACE THE SACS IV MODEL YIELD STRESS WITH A N
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | LINE LABEL | SACS SY | JCAN SY | SACS SY | JCAN SY | SACS SY | JCAN SY | SACS SY | JCAN SY | SACS SY | JCAN SY |
 | UMOD |  |  |  |  |  |  |  |  |  |  |
-| 1-- 4 | 5<--10 | 11<--16 | 17<--22 | 23<--28 | 29<--34 | 35<--40 | 41<--46 | 47<--52 | 53<--58 | 59<--64 |
+| 1-4 | 5-10 | 11-16 | 17-22 | 23-28 | 29-34 | 35-40 | 41-46 | 47-52 | 53-58 | 59-64 |
 | DEFAULT |  |  |  |  |  |  |  |  |  |  |
 | ENGLISH | KSI | KSI | KSI | KSI | KSI | KSI | KSI | KSI | KSI | KSI |
 | METRIC (KN) | KN/SQ.CM | KN/SQ.CM | KN/SQ.CM | KN/SQ.CM | KN/SQ.CM | KN/SQ.CM | KN/SQ.CM | KN/SQ.CM | KN/SQ.CM | KN/SQ.CM |
@@ -2163,7 +2185,7 @@ GENERAL THIS LINE SET IS USED TO REPLACE THE SACS IV MODEL YIELD STRESS WITH A N
 
 
 
-PUNCHING SHEAR WELD ALLOWABLE LINE
+## PUNCHING SHEAR WELD ALLOWABLE LINE
 
 COLUMNS
 
@@ -2179,7 +2201,7 @@ GENERAL THIS LINE SET IS USED TO SPECIFY THE WELD ALLOWABLE STRESS FOR OVERLAPPE
 | LINE LABEL | WELD ALLOWABLE STRESS | LEAVE BLANK |
 | --- | --- | --- |
 | WELD |  |  |
-| 1-- 4 | 7<--14 | 15--------80 |
+| 1-4 | 7-14 | 15-80 |
 | DEFAULT |  |  |
 | ENGLISH | KSI |  |
 | METRIC (KN) | KN/SQ.CM |  |
