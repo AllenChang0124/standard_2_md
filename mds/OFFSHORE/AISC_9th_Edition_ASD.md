@@ -1,3 +1,5 @@
+<!-- OCR corrected against raw/pdfs/AISC_9th_Edition_ASD.pdf on 2026-10-02. Audit and original backup: ../../outputs/aisc-asd-ocr-audit-2026-10-02/ -->
+
 Manual of 
 
 # STEEL CONSTRUCTION
@@ -8,21 +10,289 @@ NINTH EDITION
 
 ## PART 5 Specifications and Codes
 
-<table><tr><td>CROSS-REFERENCE TO THE 1978 AISC SPECIFICATION</td><td>5-2</td><td>-5-9</td></tr><tr><td>SPECIFICATION FOR STRUCTURAL STEEL BUILDINGS—ALLOWABLE STRESS DESIGN AND PLASTIC DESIGN</td><td>5-11</td><td>-5-220</td></tr><tr><td>Specification</td><td>5-24</td><td>-5-97</td></tr><tr><td>Appendix</td><td>5-98</td><td>-5-116</td></tr><tr><td>Numerical Values</td><td>5-117</td><td>-5-122</td></tr><tr><td>Commentary</td><td>5-123</td><td>-5-220</td></tr><tr><td>AISC CODE OF STANDARD PRACTICE</td><td>5-223</td><td>-5-261</td></tr><tr><td>SPECIFICATION FOR STRUCTURAL JOINTSUSING ASTM A325 OR A490 BOLTS</td><td>5-263</td><td>-5-307</td></tr><tr><td>SPECIFICATION FOR ALLOWABLE STRESS DESIGNOF SINGLE-ANGLE MEMBERS</td><td>5-309</td><td>-5-323</td></tr><tr><td>AISC QUALITY CERTIFICATION PROGRAM</td><td>5-325</td><td>-5-329</td></tr></table>
+| CROSS-REFERENCE TO THE 1978 AISC SPECIFICATION | 5-2 | -5-9 |
+| --- | --- | --- |
+| SPECIFICATION FOR STRUCTURAL STEEL BUILDINGS—ALLOWABLE STRESS DESIGN AND PLASTIC DESIGN | 5-11 | -5-220 |
+| Specification | 5-24 | -5-97 |
+| Appendix | 5-98 | -5-116 |
+| Numerical Values | 5-117 | -5-122 |
+| Commentary | 5-123 | -5-220 |
+| AISC CODE OF STANDARD PRACTICE | 5-223 | -5-261 |
+| SPECIFICATION FOR STRUCTURAL JOINTS USING ASTM A325 OR A490 BOLTS | 5-263 | -5-307 |
+| SPECIFICATION FOR ALLOWABLE STRESS DESIGN OF SINGLE-ANGLE MEMBERS | 5-309 | -5-323 |
+| AISC QUALITY CERTIFICATION PROGRAM | 5-325 | -5-329 |
 
 Cross Reference to the 1978 AISC Specification for the Design, Fabrication and Erection of Structural Steel for Buildings 
 
 This table provides a cross-reference of the 1989 Specification for Structural Steel Buildings—Allowable Stress Design and Plastic Design alphanumeric section designations and their headings, to the 1978 Specification section numbers. A “—” indicates there was no specific section in the 1978 Specification corresponding to that 1989 Specification section. 
 
-<table><tr><td colspan="2">1989 Spec.</td><td>1978 Spec.</td></tr><tr><td colspan="2">Chapter A GENERAL PROVISIONS</td><td></td></tr><tr><td>A1</td><td>Scope</td><td></td></tr><tr><td>A2</td><td>Limits of Applicability</td><td></td></tr><tr><td>A2.1</td><td>Structural Steel Defined</td><td>—</td></tr><tr><td>A2.2</td><td>Types of Construction</td><td>1.2</td></tr><tr><td>A3</td><td>Material</td><td>1.4</td></tr><tr><td>A3.1</td><td>Structural Steel</td><td></td></tr><tr><td>A3.1a</td><td>ASTM designations</td><td>1.4.1.1</td></tr><tr><td>A3.1b</td><td>Unidentified steel</td><td>1.4.1.2</td></tr><tr><td>A3.1c</td><td>Heavy shapes</td><td>new</td></tr><tr><td>A3.2</td><td>Steel Castings and Forgings</td><td>1.4.2, 1.5.4</td></tr><tr><td>A3.3</td><td>Rivets</td><td>1.4.3</td></tr><tr><td>A3.4</td><td>Bolts, Washers and Nuts</td><td>1.4.4</td></tr><tr><td>A3.5</td><td>Anchor Bolts and Threaded Rods</td><td>—</td></tr><tr><td>A3.6</td><td>Filler Metal and Flux for Welding</td><td>1.4.5</td></tr><tr><td>A3.7</td><td>Stud Shear Connectors</td><td>1.4.6</td></tr><tr><td>A4</td><td>Loads and Forces</td><td>1.3.7</td></tr><tr><td>A4.1</td><td>Dead Load and Live Load</td><td>1.3.1/2</td></tr><tr><td>A4.2</td><td>Impact</td><td>1.3.3</td></tr><tr><td>A4.3</td><td>Crane Runway Horizontal Forces</td><td>1.3.4</td></tr><tr><td>A4.4</td><td>Wind</td><td>1.3.5</td></tr><tr><td>A4.5</td><td>Other Forces</td><td>1.3.6</td></tr><tr><td>A5</td><td>Design Basis</td><td></td></tr><tr><td>A5.1</td><td>Allowable Stresses</td><td>1.5*</td></tr><tr><td>A5.2</td><td>Wind and Seismic Stresses</td><td>1.5.6</td></tr><tr><td>A5.3</td><td>Structural Analysis</td><td>—</td></tr><tr><td>A5.4</td><td>Design for Serviceability and other Considerations</td><td>—</td></tr><tr><td>A6</td><td>Referenced Codes and Standards</td><td>—</td></tr><tr><td>A7</td><td>Design Documents</td><td></td></tr><tr><td>A7.1</td><td>Plans</td><td>1.1.1</td></tr><tr><td>A7.2</td><td>Standard Symbols and Nomenclature</td><td>1.1.4*</td></tr><tr><td>A7.3</td><td>Notation for Welding</td><td>1.1.3</td></tr><tr><td colspan="3">* first paragraph only</td></tr></table>
+| 1989 Spec. |  | 1978 Spec. |
+| --- | --- | --- |
+| Chapter A GENERAL PROVISIONS |  |  |
+| A1 | Scope |  |
+| A2 | Limits of Applicability |  |
+| A2.1 | Structural Steel Defined | — |
+| A2.2 | Types of Construction | 1.2 |
+| A3 | Material | 1.4 |
+| A3.1 | Structural Steel |  |
+| A3.1a | ASTM designations | 1.4.1.1 |
+| A3.1b | Unidentified steel | 1.4.1.2 |
+| A3.1c | Heavy shapes | new |
+| A3.2 | Steel Castings and Forgings | 1.4.2, 1.5.4 |
+| A3.3 | Rivets | 1.4.3 |
+| A3.4 | Bolts, Washers and Nuts | 1.4.4 |
+| A3.5 | Anchor Bolts and Threaded Rods | — |
+| A3.6 | Filler Metal and Flux for Welding | 1.4.5 |
+| A3.7 | Stud Shear Connectors | 1.4.6 |
+| A4 | Loads and Forces | 1.3.7 |
+| A4.1 | Dead Load and Live Load | 1.3.1/2 |
+| A4.2 | Impact | 1.3.3 |
+| A4.3 | Crane Runway Horizontal Forces | 1.3.4 |
+| A4.4 | Wind | 1.3.5 |
+| A4.5 | Other Forces | 1.3.6 |
+| A5 | Design Basis |  |
+| A5.1 | Allowable Stresses | 1.5* |
+| A5.2 | Wind and Seismic Stresses | 1.5.6 |
+| A5.3 | Structural Analysis | — |
+| A5.4 | Design for Serviceability and other Considerations | — |
+| A6 | Referenced Codes and Standards | — |
+| A7 | Design Documents |  |
+| A7.1 | Plans | 1.1.1 |
+| A7.2 | Standard Symbols and Nomenclature | 1.1.4* |
+| A7.3 | Notation for Welding | 1.1.3 |
+| * first paragraph only |  |  |
 
-<table><tr><td colspan="2">1989 Spec.</td><td>1978 Spec.</td></tr><tr><td colspan="2">Chapter B DESIGN REQUIREMENTS</td><td></td></tr><tr><td>B1</td><td>Gross Area</td><td>1.14.1*/3</td></tr><tr><td>B2</td><td>Net Area</td><td>1.14.1**/41.14.2.1</td></tr><tr><td>B3</td><td>Effective Net Area</td><td>1.14.2.2/3</td></tr><tr><td>B4</td><td>Stability</td><td>1.8.1+</td></tr><tr><td>B5</td><td>Local Buckling</td><td>1.9</td></tr><tr><td>B5.1</td><td>Classification of Steel Sections</td><td>1.9.1++/2</td></tr><tr><td>B5.2</td><td>Slender Compression Elements</td><td>1.9.1+++</td></tr><tr><td>B6</td><td>Rotational Restraint at Points of Support</td><td>1.10.11</td></tr><tr><td>B7</td><td>Limiting Slenderness Ratios</td><td>1.8.4</td></tr><tr><td>B8</td><td>Simple Spans</td><td>1.12.1</td></tr><tr><td>B9</td><td>End Restraint</td><td>1.12.2</td></tr><tr><td>B10</td><td>Proportions of Beams and Girders</td><td>1.10.1/3/4</td></tr><tr><td>B11</td><td>Proportioning of Crane Girders</td><td>1.10.9</td></tr><tr><td colspan="2">Chapter C FRAMES AND OTHER STRUCTURES</td><td></td></tr><tr><td>C1</td><td>General</td><td>—</td></tr><tr><td>C2</td><td>Frame Stability</td><td></td></tr><tr><td>C2.1</td><td>Braced Frames</td><td>1.8.2</td></tr><tr><td>C2.2</td><td>Unbraced Frames</td><td>1.8.3</td></tr><tr><td colspan="2">Chapter D TENSION MEMBERS</td><td></td></tr><tr><td>D1</td><td>Allowable Stress</td><td>1.5.1.1</td></tr><tr><td>D2</td><td>Built-up Members</td><td>1.18.3</td></tr><tr><td>D3</td><td>Pin-Connected Members</td><td>—</td></tr><tr><td>D3.1</td><td>Allowable Stress</td><td>1.5.1.1</td></tr><tr><td>D3.2</td><td>Pin-connected Plates</td><td>1.14.5***</td></tr><tr><td>D3.3</td><td>Eyebars</td><td>1.14.5++++</td></tr><tr><td colspan="3">* except net** except gross*** except first two paragraphs+ first paragraph only++ except last paragraph+++ last paragraph only++++ first two paragraphs only</td></tr><tr><td>Chapter E</td><td>COLUMNS AND OTHER COMPRESSION MEMBERS</td><td></td></tr><tr><td>E1</td><td>Effective Length and Slenderness Ratio</td><td>1.8.1**</td></tr><tr><td>E2</td><td>Allowable Stress</td><td>1.5.1.3.1/2</td></tr><tr><td>E3</td><td>Flexural-torsional Buckling</td><td>—</td></tr><tr><td>E4</td><td>Built-up Members</td><td>1.18.2</td></tr><tr><td>E5</td><td>Pin-connected Compression Members</td><td>—</td></tr><tr><td>E6</td><td>Column Web Shear</td><td>1.15.5.5</td></tr><tr><td>Chapter F</td><td>BEAMS AND OTHER FLEXURAL MEMBERS</td><td></td></tr><tr><td>F1</td><td>Allowable Stress: Strong Axis Bending of I-Shaped Members and Channels</td><td>—</td></tr><tr><td>F1.1</td><td>Members with Compact Sections</td><td>1.5.1.4.1+++</td></tr><tr><td>F1.2</td><td>Members with Noncompact Sections</td><td>1.5.1.4.2/5(2b)</td></tr><tr><td>F1.3</td><td>Members with Compact or Noncompact Sections with Unbraced Length Greater than <eq>L_c</eq></td><td>1.5.1.4.5*</td></tr><tr><td rowspan="2">F2</td><td rowspan="2">Allowable Stress: Weak Axis Bending of I-Shaped Members, Solid Bars and Rectangular Plates</td><td>1.5.1.4.3</td></tr><tr><td>1.10.5.2*</td></tr><tr><td>F2.1</td><td>Members with Compact Sections</td><td>1.5.1.4.3+</td></tr><tr><td>F2.2</td><td>Members with Noncompact Sections</td><td>1.5.1.4.3++/5(2b)</td></tr><tr><td>F3</td><td>Allowable Stress: Bending of Box Members, Rectangular Tubes and Circular Tubes</td><td>—</td></tr><tr><td>F3.1</td><td>Members with Compact Sections</td><td>1.5.1.4.1***/3**</td></tr><tr><td>F3.2</td><td>Members with Noncompact Sections</td><td>1.5.1.4.4</td></tr><tr><td>F4</td><td>Allowable Shear Stress</td><td>1.5.1.2.1, 1.10.5.2+</td></tr><tr><td>F5</td><td>Transverse Stiffeners</td><td>1.10.5.3*</td></tr><tr><td>F6</td><td>Built-up Members</td><td>1.18.1</td></tr><tr><td>F7</td><td>Web-tapered Members</td><td>Appendix D</td></tr><tr><td>Chapter G</td><td>PLATE GIRDERS</td><td>1.10</td></tr><tr><td>G1</td><td>Web Slenderness Limitations</td><td>1.10.2</td></tr><tr><td colspan="3">* except last paragraph ** last paragraph only *** first paragraph and Item 6. only + first paragraph only ++ second paragraph only +++ first and last paragraph only</td></tr></table>
+| 1989 Spec. |  | 1978 Spec. |
+| --- | --- | --- |
+| Chapter B DESIGN REQUIREMENTS |  |  |
+| B1 | Gross Area | 1.14.1*/3 |
+| B2 | Net Area | 1.14.1**/41.14.2.1 |
+| B3 | Effective Net Area | 1.14.2.2/3 |
+| B4 | Stability | 1.8.1+ |
+| B5 | Local Buckling | 1.9 |
+| B5.1 | Classification of Steel Sections | 1.9.1++/2 |
+| B5.2 | Slender Compression Elements | 1.9.1+++ |
+| B6 | Rotational Restraint at Points of Support | 1.10.11 |
+| B7 | Limiting Slenderness Ratios | 1.8.4 |
+| B8 | Simple Spans | 1.12.1 |
+| B9 | End Restraint | 1.12.2 |
+| B10 | Proportions of Beams and Girders | 1.10.1/3/4 |
+| B11 | Proportioning of Crane Girders | 1.10.9 |
+| Chapter C FRAMES AND OTHER STRUCTURES |  |  |
+| C1 | General | — |
+| C2 | Frame Stability |  |
+| C2.1 | Braced Frames | 1.8.2 |
+| C2.2 | Unbraced Frames | 1.8.3 |
+| Chapter D TENSION MEMBERS |  |  |
+| D1 | Allowable Stress | 1.5.1.1 |
+| D2 | Built-up Members | 1.18.3 |
+| D3 | Pin-Connected Members | — |
+| D3.1 | Allowable Stress | 1.5.1.1 |
+| D3.2 | Pin-connected Plates | 1.14.5*** |
+| D3.3 | Eyebars | 1.14.5++++ |
+| Chapter E | COLUMNS AND OTHER COMPRESSION MEMBERS |  |
+| E1 | Effective Length and Slenderness Ratio | 1.8.1** |
+| E2 | Allowable Stress | 1.5.1.3.1/2 |
+| E3 | Flexural-torsional Buckling | — |
+| E4 | Built-up Members | 1.18.2 |
+| E5 | Pin-connected Compression Members | — |
+| E6 | Column Web Shear | 1.15.5.5 |
+| Chapter F | BEAMS AND OTHER FLEXURAL MEMBERS |  |
+| F1 | Allowable Stress: Strong Axis Bending of I-Shaped Members and Channels | — |
+| F1.1 | Members with Compact Sections | 1.5.1.4.1+++ |
+| F1.2 | Members with Noncompact Sections | 1.5.1.4.2/5(2b) |
+| F1.3 | Members with Compact or Noncompact Sections with Unbraced Length Greater than $L_c$ | 1.5.1.4.5* |
+| F2 | Allowable Stress: Weak Axis Bending of I-Shaped Members, Solid Bars and Rectangular Plates | 1.5.1.4.3 |
+| F2 | Allowable Stress: Weak Axis Bending of I-Shaped Members, Solid Bars and Rectangular Plates | 1.10.5.2* |
+| F2.1 | Members with Compact Sections | 1.5.1.4.3+ |
+| F2.2 | Members with Noncompact Sections | 1.5.1.4.3++/5(2b) |
+| F3 | Allowable Stress: Bending of Box Members, Rectangular Tubes and Circular Tubes | — |
+| F3.1 | Members with Compact Sections | 1.5.1.4.1***/3** |
+| F3.2 | Members with Noncompact Sections | 1.5.1.4.4 |
+| F4 | Allowable Shear Stress | 1.5.1.2.1, 1.10.5.2+ |
+| F5 | Transverse Stiffeners | 1.10.5.3* |
+| F6 | Built-up Members | 1.18.1 |
+| F7 | Web-tapered Members | Appendix D |
+| Chapter G | PLATE GIRDERS | 1.10 |
+| G1 | Web Slenderness Limitations | 1.10.2 |
 
-<table><tr><td colspan="2">1989 Spec.</td><td>1978 Spec.</td></tr><tr><td>G2</td><td>Allowable Bending Stress</td><td>1.10.6</td></tr><tr><td>G3</td><td>Allowable Shear Stress with Tension Field Action</td><td>1.10.5.2**</td></tr><tr><td>G4</td><td>Transverse Stiffeners</td><td>1.10.5.3*/4</td></tr><tr><td>G5</td><td>Combined Shear and Tension Stress</td><td>1.10.7</td></tr><tr><td>Chapter H</td><td>COMBINED STRESSES</td><td>1.6</td></tr><tr><td>H1</td><td>Axial Compression and Bending</td><td>1.6.1</td></tr><tr><td>H2</td><td>Axial Tension and Bending</td><td>1.6.2</td></tr><tr><td>Chapter I</td><td>COMPOSITE CONSTRUCTION</td><td>1.11</td></tr><tr><td>I1</td><td>Definition</td><td>1.11.1</td></tr><tr><td>I2</td><td>Design Assumptions</td><td>1.11.2</td></tr><tr><td>I3</td><td>End Shear</td><td>1.11.3</td></tr><tr><td>I4</td><td>Shear Connectors</td><td>1.11.4</td></tr><tr><td>I5</td><td>Composite Beams or Girders with Formed Steel Deck</td><td>1.11.5</td></tr><tr><td>I5.1</td><td>General</td><td>1.11.5.1</td></tr><tr><td>I5.2</td><td>Deck Ribs Oriented Perpendicular to Steel Beam or Girder</td><td>1.11.5.2</td></tr><tr><td>I5.3</td><td>Deck Ribs Oriented Parallel to Steel Beam or Girder</td><td>1.11.5.3</td></tr><tr><td>I6</td><td>Special Cases</td><td>1.11.6</td></tr><tr><td>Chapter J</td><td>CONNECTIONS, JOINTS AND FASTENERS</td><td>1.15</td></tr><tr><td>J1</td><td>General Provisions</td><td>—</td></tr><tr><td>J1.1</td><td>Design Basis</td><td>—</td></tr><tr><td>J1.2</td><td>Simple Connections</td><td>1.15.4</td></tr><tr><td>J1.3</td><td>Moment Connections</td><td>1.15.5.1</td></tr><tr><td>J1.4</td><td>Compression Members with Bearing Joints</td><td>1.15.8</td></tr><tr><td>J1.5</td><td>Connections of Tension and Compression Members in Trusses</td><td>1.15.7</td></tr><tr><td>J1.6</td><td>Minimum Connections</td><td>1.15.1</td></tr><tr><td>J1.7</td><td>Splices in Heavy Sections</td><td>new</td></tr><tr><td>J1.8</td><td>Beam Copes and Weld Access Holes</td><td>new</td></tr><tr><td>J1.9</td><td>Placement of Welds, Bolts and Rivets</td><td>1.15.3</td></tr><tr><td>J1.10</td><td>Bolts in Combination with Welds</td><td>1.15.10</td></tr><tr><td colspan="3">* last paragraph only** first paragraph only</td></tr><tr><td>J1.11</td><td>High-Strength Bolts in Slip-Critical Connections in Combination with Rivets</td><td>1.15.11</td></tr><tr><td>J1.12</td><td>Limitations on Bolted and Welded Connections</td><td>1.15.12</td></tr><tr><td>J2</td><td>Welds</td><td>1.17.1</td></tr><tr><td>J2.1</td><td>Groove Welds</td><td>—</td></tr><tr><td>J2.1a</td><td>Effective Area</td><td>1.14.6.1</td></tr><tr><td>J2.1b</td><td>Limitations</td><td>1.17.2*</td></tr><tr><td>J2.2</td><td>Fillet Welds</td><td>—</td></tr><tr><td>J2.2a</td><td>Effective Area</td><td>1.14.6.2</td></tr><tr><td>J2.2b</td><td>Limitations</td><td>1.17.2**</td></tr><tr><td></td><td></td><td>1.17.3</td></tr><tr><td></td><td></td><td>1.17.4</td></tr><tr><td></td><td></td><td>1.17.5</td></tr><tr><td></td><td></td><td>1.17.6</td></tr><tr><td></td><td></td><td>1.17.7</td></tr><tr><td></td><td></td><td>1.17.8</td></tr><tr><td>J2.3</td><td>Plug and Slot Welds</td><td>—</td></tr><tr><td>J2.3a</td><td>Effective Area</td><td>1.14.6.3</td></tr><tr><td>J2.3b</td><td>Limitations</td><td>1.17.9</td></tr><tr><td>J2.4</td><td>Allowable Stresses</td><td>1.5.3</td></tr><tr><td>J2.5</td><td>Combination of Welds</td><td>1.15.9</td></tr><tr><td>J2.6</td><td>Mixed Weld Metal</td><td>new</td></tr><tr><td>J2.7</td><td>Preheat for Heavy Shapes</td><td>new</td></tr><tr><td>J3</td><td>Bolts, Threaded Parts and Rivets</td><td>1.16</td></tr><tr><td>J3.1</td><td>High-strength Bolts</td><td>1.16.1</td></tr><tr><td>J3.2</td><td>Size and Use of Holes</td><td>1.23.4.1/2+/ 3/4/5</td></tr><tr><td>J3.3</td><td>Effective Bearing Area</td><td>1.16.2</td></tr><tr><td>J3.4</td><td>Allowable Tension and Shear</td><td>1.5.2.1/2</td></tr><tr><td>J3.5</td><td>Combined Tension and Shear in Bearing-type Connections</td><td>1.6.3+++</td></tr><tr><td>J3.6</td><td>Combined Tension and Shear in Slip-critical Joints</td><td>1.6.3++</td></tr><tr><td>J3.7</td><td>Allowable Bearing at Bolt Holes</td><td>1.5.1.5.3</td></tr><tr><td>J3.8</td><td>Minimum Spacing</td><td>1.16.4</td></tr><tr><td>J3.9</td><td>Minimum Edge Distance</td><td>1.16.5</td></tr><tr><td>J3.10</td><td>Maximum Edge Distance &amp; Spacing</td><td>1.16.6</td></tr><tr><td>J3.11</td><td>Long Grips</td><td>1.16.3</td></tr><tr><td>J4</td><td>Allowable Shear Rupture</td><td>1.5.1.2.2</td></tr><tr><td colspan="3">* excluding fillet weld references** excluding groove weld references+ first paragraph only++ last paragraph only+++ except last paragraph</td></tr></table>
+* except net** except gross*** except first two paragraphs+ first paragraph only++ except last paragraph+++ last paragraph only++++ first two paragraphs only
 
-<table><tr><td colspan="2">1989 Spec.</td><td>1978 Spec.</td></tr><tr><td>J5</td><td>Connecting Elements</td><td></td></tr><tr><td>J5.1</td><td>Eccentric Connections</td><td>1.15.2</td></tr><tr><td>J5.2</td><td>Allowable Shear Rupture</td><td>1.5.1.2.2</td></tr><tr><td>J6</td><td>Fillers</td><td>1.15.6</td></tr><tr><td>J7</td><td>Splices</td><td>1.10.8</td></tr><tr><td>J8</td><td>Allowable Bearing Stress</td><td>1.5.1.5.1/2</td></tr><tr><td>J9</td><td>Column Bases and Bearing on Masonry and Concrete</td><td>1.5.5, 1.21.1</td></tr><tr><td>J10</td><td>Anchor Bolts</td><td>1.22</td></tr><tr><td colspan="3">Chapter K SPECIAL DESIGN CONSIDERATIONS</td></tr><tr><td>K1</td><td>Webs and Flanges Under Concentrated Forces</td><td>—</td></tr><tr><td>K1.1</td><td>Design Basis</td><td>—</td></tr><tr><td>K1.2</td><td>Local Flange Bending</td><td>1.15.5.3*</td></tr><tr><td>K1.3</td><td>Local Web Yielding</td><td>1.10.10.1</td></tr><tr><td>K1.4</td><td>Web Crippling</td><td>1.10.10.2</td></tr><tr><td>K1.5</td><td>Sidesway Web Buckling</td><td>—</td></tr><tr><td>K1.6</td><td>Compression Buckling of the Web</td><td>1.15.5.3**</td></tr><tr><td>K1.7</td><td>Compression Members with Web Panels Subject to High Shear</td><td>1.5.1.2.1</td></tr><tr><td>K1.8</td><td>Stiffener Requirements for Concentrated Loads</td><td>1.10.5.1, 1.15.5.4, 1.15.5.2</td></tr><tr><td>K2</td><td>Ponding</td><td>1.13.3</td></tr><tr><td>K3</td><td>Torsion</td><td>—</td></tr><tr><td>K4</td><td>Fatigue</td><td>1.7.1*** 1.7.2</td></tr><tr><td colspan="3">Chapter L SERVICEABILITY DESIGN CONSIDERATIONS</td></tr><tr><td>L1</td><td>Camber</td><td>1.19</td></tr><tr><td>L2</td><td>Expansion and Contraction</td><td>1.20</td></tr><tr><td>L3</td><td>Deflection, Vibration and Drift</td><td></td></tr><tr><td>L3.1</td><td>Deflection</td><td>1.13.1</td></tr><tr><td>L3.2</td><td>Vibration</td><td>1.13.2</td></tr><tr><td>L4</td><td>Connection Slip</td><td>—</td></tr><tr><td>L5</td><td>Corrosion</td><td>—</td></tr><tr><td colspan="3">Chapter M FABRICATION, ERECTION AND QUALITY CONTROL</td></tr><tr><td colspan="3">* only information pertinent to Equation (K1-1) ** only information pertinent to Equation (K1-8) *** last paragraph only</td></tr></table>
+* except last paragraph ** last paragraph only *** first paragraph and Item 6. only + first paragraph only ++ second paragraph only +++ first and last paragraph only
 
-<table><tr><td colspan="2">1989 Spec.</td><td>1978 Spec.</td></tr><tr><td>M1</td><td>Shop Drawings</td><td>1.1.2</td></tr><tr><td>M2</td><td>Fabrication</td><td>1.23</td></tr><tr><td>M2.1</td><td>Cambering, Curving and Straightening</td><td>1.23.1</td></tr><tr><td>M2.2</td><td>Thermal Cutting</td><td>1.23.2</td></tr><tr><td>M2.3</td><td>Planing of Edges</td><td>1.23.3</td></tr><tr><td>M2.4</td><td>Welded Construction</td><td>1.23.6</td></tr><tr><td>M2.5</td><td>High-strength Bolted Construction-Assembly</td><td>1.23.4.2+1.23.5++</td></tr><tr><td>M2.6</td><td>Compression Joints</td><td>1.23.7</td></tr><tr><td>M2.7</td><td>Dimensional Tolerances</td><td>1.23.8</td></tr><tr><td>M2.8</td><td>Finishing of Column Bases</td><td>1.21.3</td></tr><tr><td>M3</td><td>Shop Painting</td><td>1.24</td></tr><tr><td>M3.1</td><td>General Requirements</td><td>1.24.1</td></tr><tr><td>M3.2</td><td>Inaccessible Surfaces</td><td>1.24.2</td></tr><tr><td>M3.3</td><td>Contact Surfaces</td><td>1.24.3</td></tr><tr><td>M3.4</td><td>Finished Surfaces</td><td>1.24.4</td></tr><tr><td>M3.5</td><td>Surfaces Adjacent to Field Welds</td><td>1.24.5</td></tr><tr><td>M4</td><td>Erection</td><td>1.25</td></tr><tr><td>M4.1</td><td>Alignment of Column Bases</td><td>1.21.2</td></tr><tr><td>M4.2</td><td>Bracing</td><td>1.25.1</td></tr><tr><td>M4.3</td><td>Alignment</td><td>1.25.3</td></tr><tr><td>M4.4</td><td>Fit of Column Compression Joints</td><td>1.25.4</td></tr><tr><td>M4.5</td><td>Field Welding</td><td>1.25.5</td></tr><tr><td>M4.6</td><td>Field Painting</td><td>1.25.6</td></tr><tr><td>M4.7</td><td>Field Connections</td><td>1.25.2</td></tr><tr><td>M5</td><td>Quality Control</td><td>1.26.1</td></tr><tr><td>M5.1</td><td>Cooperation</td><td>1.26.2</td></tr><tr><td>M5.2</td><td>Rejections</td><td>1.26.3</td></tr><tr><td>M5.3</td><td>Inspection of Welding</td><td>1.26.4</td></tr><tr><td>M5.4</td><td>Inspection of Slip-critical, High-strength Bolted Connections</td><td>—</td></tr><tr><td>M5.5</td><td>Identification of Steel</td><td>1.26.5</td></tr><tr><td colspan="2">Chapter N PLASTIC DESIGN</td><td>Part 2</td></tr><tr><td>N1</td><td>Scope</td><td>2.1</td></tr><tr><td>N2</td><td>Structural Steel</td><td>2.2</td></tr><tr><td>N3</td><td>Basis for Maximum Strength Determination</td><td>2.3</td></tr><tr><td>N3.1</td><td>Stability of Braced Frames</td><td>2.3.1</td></tr><tr><td>N3.2</td><td>Stability of Unbraced Frames</td><td>2.3.2</td></tr><tr><td>N4</td><td>Columns</td><td>2.4</td></tr><tr><td colspan="3">+ last paragraph++ except last paragraph</td></tr><tr><td colspan="3">Specification for Structural Steel Buildings</td></tr><tr><td colspan="3">Allowable Stress Design and Plastic DesignJune 1, 1989</td></tr><tr><td colspan="3">with Commentary</td></tr><tr><td colspan="3">AMERICAN INSTITUTE OF STEEL CONSTRUCTION, INC.400 North Michigan AvenueChicago, Illinois 60611—4185</td></tr><tr><td colspan="3">AMERICAN INSTITUTE OF STEEL CONSTRUCTION</td></tr></table>
+| 1989 Spec. |  | 1978 Spec. |
+| --- | --- | --- |
+| G2 | Allowable Bending Stress | 1.10.6 |
+| G3 | Allowable Shear Stress with Tension Field Action | 1.10.5.2** |
+| G4 | Transverse Stiffeners | 1.10.5.3*/4 |
+| G5 | Combined Shear and Tension Stress | 1.10.7 |
+| Chapter H | COMBINED STRESSES | 1.6 |
+| H1 | Axial Compression and Bending | 1.6.1 |
+| H2 | Axial Tension and Bending | 1.6.2 |
+| Chapter I | COMPOSITE CONSTRUCTION | 1.11 |
+| I1 | Definition | 1.11.1 |
+| I2 | Design Assumptions | 1.11.2 |
+| I3 | End Shear | 1.11.3 |
+| I4 | Shear Connectors | 1.11.4 |
+| I5 | Composite Beams or Girders with Formed Steel Deck | 1.11.5 |
+| I5.1 | General | 1.11.5.1 |
+| I5.2 | Deck Ribs Oriented Perpendicular to Steel Beam or Girder | 1.11.5.2 |
+| I5.3 | Deck Ribs Oriented Parallel to Steel Beam or Girder | 1.11.5.3 |
+| I6 | Special Cases | 1.11.6 |
+| Chapter J | CONNECTIONS, JOINTS AND FASTENERS | 1.15 |
+| J1 | General Provisions | — |
+| J1.1 | Design Basis | — |
+| J1.2 | Simple Connections | 1.15.4 |
+| J1.3 | Moment Connections | 1.15.5.1 |
+| J1.4 | Compression Members with Bearing Joints | 1.15.8 |
+| J1.5 | Connections of Tension and Compression Members in Trusses | 1.15.7 |
+| J1.6 | Minimum Connections | 1.15.1 |
+| J1.7 | Splices in Heavy Sections | new |
+| J1.8 | Beam Copes and Weld Access Holes | new |
+| J1.9 | Placement of Welds, Bolts and Rivets | 1.15.3 |
+| J1.10 | Bolts in Combination with Welds | 1.15.10 |
+| * last paragraph only** first paragraph only |  |  |
+| J1.11 | High-Strength Bolts in Slip-Critical Connections in Combination with Rivets | 1.15.11 |
+| J1.12 | Limitations on Bolted and Welded Connections | 1.15.12 |
+| J2 | Welds | 1.17.1 |
+| J2.1 | Groove Welds | — |
+| J2.1a | Effective Area | 1.14.6.1 |
+| J2.1b | Limitations | 1.17.2* |
+| J2.2 | Fillet Welds | — |
+| J2.2a | Effective Area | 1.14.6.2 |
+| J2.2b | Limitations | 1.17.2** |
+|  |  | 1.17.3 |
+|  |  | 1.17.4 |
+|  |  | 1.17.5 |
+|  |  | 1.17.6 |
+|  |  | 1.17.7 |
+|  |  | 1.17.8 |
+| J2.3 | Plug and Slot Welds | — |
+| J2.3a | Effective Area | 1.14.6.3 |
+| J2.3b | Limitations | 1.17.9 |
+| J2.4 | Allowable Stresses | 1.5.3 |
+| J2.5 | Combination of Welds | 1.15.9 |
+| J2.6 | Mixed Weld Metal | new |
+| J2.7 | Preheat for Heavy Shapes | new |
+| J3 | Bolts, Threaded Parts and Rivets | 1.16 |
+| J3.1 | High-strength Bolts | 1.16.1 |
+| J3.2 | Size and Use of Holes | 1.23.4.1/2+/ 3/4/5 |
+| J3.3 | Effective Bearing Area | 1.16.2 |
+| J3.4 | Allowable Tension and Shear | 1.5.2.1/2 |
+| J3.5 | Combined Tension and Shear in Bearing-type Connections | 1.6.3+++ |
+| J3.6 | Combined Tension and Shear in Slip-critical Joints | 1.6.3++ |
+| J3.7 | Allowable Bearing at Bolt Holes | 1.5.1.5.3 |
+| J3.8 | Minimum Spacing | 1.16.4 |
+| J3.9 | Minimum Edge Distance | 1.16.5 |
+| J3.10 | Maximum Edge Distance & Spacing | 1.16.6 |
+| J3.11 | Long Grips | 1.16.3 |
+| J4 | Allowable Shear Rupture | 1.5.1.2.2 |
+
+* excluding fillet weld references** excluding groove weld references+ first paragraph only++ last paragraph only+++ except last paragraph
+
+| 1989 Spec. |  | 1978 Spec. |
+| --- | --- | --- |
+| J5 | Connecting Elements |  |
+| J5.1 | Eccentric Connections | 1.15.2 |
+| J5.2 | Allowable Shear Rupture | 1.5.1.2.2 |
+| J6 | Fillers | 1.15.6 |
+| J7 | Splices | 1.10.8 |
+| J8 | Allowable Bearing Stress | 1.5.1.5.1/2 |
+| J9 | Column Bases and Bearing on Masonry and Concrete | 1.5.5, 1.21.1 |
+| J10 | Anchor Bolts | 1.22 |
+| Chapter K SPECIAL DESIGN CONSIDERATIONS |  |  |
+| K1 | Webs and Flanges Under Concentrated Forces | — |
+| K1.1 | Design Basis | — |
+| K1.2 | Local Flange Bending | 1.15.5.3* |
+| K1.3 | Local Web Yielding | 1.10.10.1 |
+| K1.4 | Web Crippling | 1.10.10.2 |
+| K1.5 | Sidesway Web Buckling | — |
+| K1.6 | Compression Buckling of the Web | 1.15.5.3** |
+| K1.7 | Compression Members with Web Panels Subject to High Shear | 1.5.1.2.1 |
+| K1.8 | Stiffener Requirements for Concentrated Loads | 1.10.5.1, 1.15.5.4, 1.15.5.2 |
+| K2 | Ponding | 1.13.3 |
+| K3 | Torsion | — |
+| K4 | Fatigue | 1.7.1*** 1.7.2 |
+| Chapter L SERVICEABILITY DESIGN CONSIDERATIONS |  |  |
+| L1 | Camber | 1.19 |
+| L2 | Expansion and Contraction | 1.20 |
+| L3 | Deflection, Vibration and Drift |  |
+| L3.1 | Deflection | 1.13.1 |
+| L3.2 | Vibration | 1.13.2 |
+| L4 | Connection Slip | — |
+| L5 | Corrosion | — |
+| Chapter M FABRICATION, ERECTION AND QUALITY CONTROL |  |  |
+
+* only information pertinent to Equation (K1-1) ** only information pertinent to Equation (K1-8) *** last paragraph only
+
+| 1989 Spec. |  | 1978 Spec. |
+| --- | --- | --- |
+| M1 | Shop Drawings | 1.1.2 |
+| M2 | Fabrication | 1.23 |
+| M2.1 | Cambering, Curving and Straightening | 1.23.1 |
+| M2.2 | Thermal Cutting | 1.23.2 |
+| M2.3 | Planing of Edges | 1.23.3 |
+| M2.4 | Welded Construction | 1.23.6 |
+| M2.5 | High-strength Bolted Construction-Assembly | 1.23.4.2+1.23.5++ |
+| M2.6 | Compression Joints | 1.23.7 |
+| M2.7 | Dimensional Tolerances | 1.23.8 |
+| M2.8 | Finishing of Column Bases | 1.21.3 |
+| M3 | Shop Painting | 1.24 |
+| M3.1 | General Requirements | 1.24.1 |
+| M3.2 | Inaccessible Surfaces | 1.24.2 |
+| M3.3 | Contact Surfaces | 1.24.3 |
+| M3.4 | Finished Surfaces | 1.24.4 |
+| M3.5 | Surfaces Adjacent to Field Welds | 1.24.5 |
+| M4 | Erection | 1.25 |
+| M4.1 | Alignment of Column Bases | 1.21.2 |
+| M4.2 | Bracing | 1.25.1 |
+| M4.3 | Alignment | 1.25.3 |
+| M4.4 | Fit of Column Compression Joints | 1.25.4 |
+| M4.5 | Field Welding | 1.25.5 |
+| M4.6 | Field Painting | 1.25.6 |
+| M4.7 | Field Connections | 1.25.2 |
+| M5 | Quality Control | 1.26.1 |
+| M5.1 | Cooperation | 1.26.2 |
+| M5.2 | Rejections | 1.26.3 |
+| M5.3 | Inspection of Welding | 1.26.4 |
+| M5.4 | Inspection of Slip-critical, High-strength Bolted Connections | — |
+| M5.5 | Identification of Steel | 1.26.5 |
+| Chapter N PLASTIC DESIGN |  | Part 2 |
+| N1 | Scope | 2.1 |
+| N2 | Structural Steel | 2.2 |
+| N3 | Basis for Maximum Strength Determination | 2.3 |
+| N3.1 | Stability of Braced Frames | 2.3.1 |
+| N3.2 | Stability of Unbraced Frames | 2.3.2 |
+| N4 | Columns | 2.4 |
+| + last paragraph++ except last paragraph |  |  |
+
+| 1989 Spec. | Heading | 1978 Spec. |
+| --- | --- | --- |
+| N5 | Shear | 2.5 |
+| N6 | Web Crippling | 2.6 |
+| N7 | Minimum Thickness (Width-Thickness Ratios) | 2.7 |
+| N8 | Connections | 2.8 |
+| N9 | Lateral Bracing | 2.9 |
+| N10 | Fabrication | 2.10 |
+| APPENDIX B5 | Local Buckling | App. C |
+| APPENDIX F7 | Web-tapered Members | App. D |
+| APPENDIX K4 | Fatigue | 1.7.1*; App. B |
+
+* first paragraph only
+
+# Specification for Structural Steel Buildings
+
+## Allowable Stress Design and Plastic Design
+
+June 1, 1989
+
+with Commentary
+
+AMERICAN INSTITUTE OF STEEL CONSTRUCTION, INC.
+
+400 North Michigan Avenue
+
+Chicago, Illinois 60611—4185
 
 # PREFACE
 
@@ -655,11 +925,7 @@ a. The center longitudinal axis of the specimens shall be located as near as pra
 
 b. Tests shall be conducted by the producer on material selected from a location representing the top of each ingot or part of an ingot used to produce the product represented by these tests. 
 
-For plates exceeding 2-in. thick used for built-up members with bolted splices and subject to primary tensile stresses due to tension or flexure, material toughness need not be specified. If such members are spliced using full penetration welds, the steel shall be specified in the contract documents to be supplied with Charpy V-Notch testing in accordance with ASTM A6, Supplement 
-
-Sec 
-
-tary Requirement S5. The impact test shall be conducted by the producer in accordance with ASTM A673, Frequency P, and shall meet a minimum average value of 20 ft-lbs. absorbed energy at +70°F. 
+For plates exceeding 2-in. thick used for built-up members with bolted splices and subject to primary tensile stresses due to tension or flexure, material toughness need not be specified. If such members are spliced using full penetration welds, the steel shall be specified in the contract documents to be supplied with Charpy V-Notch testing in accordance with ASTM A6, Supplementary Requirement S5. The impact test shall be conducted by the producer in accordance with ASTM A673, Frequency P, and shall meet a minimum average value of 20 ft-lbs. absorbed energy at +70°F. 
 
 The above supplementary toughness requirements shall also be considered for welded full-penetration joints other than splices in heavy rolled and built-up members subject to primary tensile stresses. 
 
@@ -705,7 +971,7 @@ A449 bolts are permitted only in connections requiring bolt diameters greater th
 
 Manufacturer's certification shall constitute sufficient evidence of conformity with the standards. 
 
-## 5. Anchor Boits and Threaded Rods
+## 5. Anchor Bolts and Threaded Rods
 
 Anchor bolt and threaded rod steel shall conform to one of the following standard specifications: 
 
@@ -729,7 +995,7 @@ Manufacturer's certification shall constitute sufficient evidence of conformity 
 
 ## 6. Filler Metal and Flux for Welding
 
-Welding electrodes and fluxes shall conform to one of the following specifications of the American Welding Society:* 
+Welding electrodes and fluxes shall conform to one of the following specifications of the American Welding Society:[^a3-weld] 
 
 Specification for Covered Carbon Steel Arc Welding Electrodes, AWS A5.1 
 
@@ -767,7 +1033,7 @@ The live load, including snow load if any, shall be that stipulated by the appli
 
 ## 2. Impact
 
-For structures carrying live loads* which induce impact, the assumed live load shall be increased sufficiently to provide for same. 
+For structures carrying live loads* which induce impact, the assumed live load shall be increased sufficiently to provide for same.[^a4-crane] 
 
 If not otherwise specified, the increase shall be not less than: 
 
@@ -804,7 +1070,7 @@ For provisions pertaining to plastic design, refer to Chapter N.
 
 ## 2. Wind and Seismic Stresses
 
-Allowable stresses may be increased $\frac{1}{3}$ above the values otherwise provided when produced by wind or seismic loading, acting alone or in combination with the design dead and live loads, provided the required section computed on this basis is not less than that required for the design dead and live load and impact (if any) computed without the $\frac{1}{3}$ stress increase, and further provided that stresses are not otherwise* required to be calculated on the basis of reduction factors applied to design loads in combinations. The above stress increase does not apply to allowable stress ranges provided in Appendix K4. 
+Allowable stresses may be increased $\frac{1}{3}$ above the values otherwise provided when produced by wind or seismic loading, acting alone or in combination with the design dead and live loads, provided the required section computed on this basis is not less than that required for the design dead and live load and impact (if any) computed without the $\frac{1}{3}$ stress increase, and further provided that stresses are not otherwise[^a5-loads] required to be calculated on the basis of reduction factors applied to design loads in combinations. The above stress increase does not apply to allowable stress ranges provided in Appendix K4. 
 
 ## 3. Structural Analysis
 
@@ -822,7 +1088,18 @@ American National Standards Institute
 ANSI B18.1-72
 ANSI A58.1-82 
 
-<table><tr><td>ASTM A6-87d</td><td>ASTM A27-87</td><td>ASTM A36-87</td></tr><tr><td>ASTM A53-88</td><td>ASTM A148-84</td><td>ASTM A242-87</td></tr><tr><td>ASTM A307-86a</td><td>ASTM A325-86</td><td>ASTM A354-86</td></tr><tr><td>ASTM A441-85</td><td>ASTM A449-87</td><td>ASTM A490-85</td></tr><tr><td>ASTM A500-84</td><td>ASTM A501-84</td><td>ASTM A514-87a</td></tr><tr><td>ASTM A529-85</td><td>ASTM A563-84</td><td>ASTM A570-85</td></tr><tr><td>ASTM A572-85</td><td>ASTM A588-87</td><td>ASTM A606-85</td></tr><tr><td>ASTM A607-85</td><td>ASTM A618-84</td><td>ASTM A668-85a</td></tr><tr><td>ASTM A687-84</td><td>ASTM C33-86</td><td>ASTM C330-87</td></tr><tr><td>ASTM F436-86</td><td>ASTM A502-83A</td><td>ASTM A709-87b</td></tr><tr><td>ASTM A852-85</td><td></td><td></td></tr></table>
+| ASTM A6-87d | ASTM A27-87 | ASTM A36-87 |
+| --- | --- | --- |
+| ASTM A53-88 | ASTM A148-84 | ASTM A242-87 |
+| ASTM A307-86a | ASTM A325-86 | ASTM A354-86 |
+| ASTM A441-85 | ASTM A449-87 | ASTM A490-85 |
+| ASTM A500-84 | ASTM A501-84 | ASTM A514-87a |
+| ASTM A529-85 | ASTM A563-84 | ASTM A570-85 |
+| ASTM A572-85 | ASTM A588-87 | ASTM A606-85 |
+| ASTM A607-85 | ASTM A618-84 | ASTM A668-85a |
+| ASTM A687-84 | ASTM C33-86 | ASTM C330-87 |
+| ASTM F436-86 | ASTM A502-83A | ASTM A709-87b |
+| ASTM A852-85 |  |  |
 
 American Welding Society
 AWS D1.1-88    AWS A5.1-81    AWS A5.5-81
@@ -874,7 +1151,9 @@ The width of a bolt or rivet hole shall be taken as $\frac{1}{16}$ in. greater t
 
 For a chain of holes extending across a part in any diagonal or zigzag line, the net width of the part shall be obtained by deducting from the gross width the sum of the diameters or slot dimensions as provided in Sect. J3.2, of all holes in the chain, and adding, for each gage space in the chain, the quantity 
 
-## $s^2 /4g$
+$$
+\frac{s^2}{4g}
+$$
 
 where 
 
@@ -916,7 +1195,11 @@ $A_{g} =$ gross area of member, in.2
 
 Unless a larger coefficient is justified by tests or other criteria, the following values of U shall be used: 
 
-a. W, M or S shapes with flange widths not less than $\frac{2}{3}$ the depth, and structural tees cut from these shapes, provided the connection is to the flanges. Bolted or riveted connections shall have no fewer than three fasteners per line in the direction of stress $U = 0.90$ b. W, M or S shapes not meeting the conditions of subparagraph a, structural tees cut from these shapes and all other shapes, including built-up cross sections. Bolted or riveted connections shall have no fewer than three fasteners per line in the direction of stress .... U = 0.85 c. All members with bolted or riveted connections having only two fasteners per line in the direction of stress $U = 0.75$ 
+a. W, M or S shapes with flange widths not less than $\frac{2}{3}$ the depth, and structural tees cut from these shapes, provided the connection is to the flanges. Bolted or riveted connections shall have no fewer than three fasteners per line in the direction of stress $U = 0.90$
+
+b. W, M or S shapes not meeting the conditions of subparagraph a, structural tees cut from these shapes and all other shapes, including built-up cross sections. Bolted or riveted connections shall have no fewer than three fasteners per line in the direction of stress .... $U = 0.85$
+
+c. All members with bolted or riveted connections having only two fasteners per line in the direction of stress $U = 0.75$ 
 
 When load is transmitted by transverse welds to some but not all of the cross-sectional elements of W, M or S shapes and structural tees cut from these shapes, $A_{e}$ shall be taken as the area of the directly connected elements. 
 
@@ -924,7 +1207,7 @@ When the load is transmitted to a plate by longitudinal welds along both edges a
 
 Unless a larger coefficient can be justified by tests or other criteria, the following values of U shall be used: 
 
-a. When $l > 2\mathrm{w}$ ... $U = 1,0$ 
+a. When $l > 2\mathrm{w}$ ... $U = 1.0$ 
 
 b. When 2w > l > 1.5w .... U = 0.87 
 
@@ -977,10 +1260,39 @@ For tapered flanges of rolled sections, the thickness is the nominal value halfw
 For the design of flexural and compressive sections with slender compressive elements see Appendix B5. 
 
 
+TABLE B5.1
+
 Limiting Width-Thickness Ratios for Compression Elements
 
 
-<table><tr><td rowspan="2">Description of Element</td><td rowspan="2">Width-Thick-ness Ratio</td><td colspan="2">Limiting Width-Thickness Ratios</td></tr><tr><td>Compact</td><td>Noncompact<eq>^{\mathrm{c}}</eq></td></tr><tr><td>Flanges of I-shaped rolled beams and channels in flexure<eq>^{\mathrm{a}}</eq></td><td>b/t</td><td><eq>65/\sqrt{F_{y}}</eq></td><td><eq>95/\sqrt{F_{y}}</eq></td></tr><tr><td>Flanges of I-shaped welded beams in flexure</td><td>b/t</td><td><eq>65/\sqrt{F_{y}}</eq></td><td><eq>95/\sqrt{F_{y}/k_{c}}</eq><eq>^{\mathrm{a}}</eq></td></tr><tr><td>Outstanding legs of pairs of angles in continuous contact; angles or plates projecting from rolled beams or columns; stiffeners on plate girders</td><td>b/t</td><td>NA</td><td><eq>95/\sqrt{F_{y}}</eq></td></tr><tr><td>Angles or plates projecting from girders, built-up columns or other compression members; compression flanges of plate girders</td><td>b/t</td><td>NA</td><td><eq>95/\sqrt{F_{y}/k_{c}}</eq></td></tr><tr><td>Stems of tees</td><td>d/t</td><td>NA</td><td><eq>127/\sqrt{F_{y}}</eq></td></tr><tr><td>Unstiffened elements simply supported along one edge, such as legs of single-angle struts, legs of double-angle struts with separators and cross or star-shaped cross sections</td><td>b/t</td><td>NA</td><td><eq>76/\sqrt{F_{y}}</eq></td></tr><tr><td>Flanges of square and rectangular box and hollow structural sections of uniform thickness subject to bending or compression<eq>^{\mathrm{d}}</eq>; flange cover plates and diaphragm plates between lines of fasteners or welds</td><td>b/t</td><td><eq>190/\sqrt{F_{y}}</eq></td><td><eq>238/\sqrt{F_{y}}</eq></td></tr><tr><td>. Unsupported width of cover plates perforated with a succession of access holes<eq>^{\mathrm{b}}</eq></td><td>b/t</td><td>NA</td><td><eq>317/\sqrt{F_{y}}</eq></td></tr><tr><td>All other uniformly compressed stiffened elements, i.e., supported along two edges</td><td>b/th/tw</td><td>NA</td><td><eq>253/\sqrt{F_{y}}</eq></td></tr><tr><td rowspan="2">Webs in flexural compression<eq>^{\mathrm{a}}</eq></td><td>d/t</td><td><eq>640/\sqrt{F_{y}}</eq></td><td>—</td></tr><tr><td>h/tw</td><td>—</td><td><eq>760/\sqrt{F_{b}}</eq></td></tr><tr><td rowspan="2">Webs in combined flexural and axial compression</td><td>d/tw</td><td>for<eq>f_{a}/F_{y} \leq 0.16</eq><eq>\frac{640}{\sqrt{F_{y}}} \left(1 - 3.74 \frac{f_{a}}{F_{y}}\right)</eq>for<eq>f_{a}/F_{y} &gt; 0.16</eq><eq>257/\sqrt{F_{y}}</eq></td><td>—</td></tr><tr><td>h/tw</td><td>—</td><td><eq>760/\sqrt{F_{b}}</eq></td></tr><tr><td>Circular hollow sectionsIn axial compressionIn flexure</td><td>D/t</td><td><eq>3,300/F_{y}</eq><eq>3,300/F_{y}</eq></td><td>——</td></tr><tr><td colspan="4"><eq>^{\mathrm{a}}</eq>For hybrid beams, use the yield strength of the flange <eq>F_{y}</eq>, instead of <eq>F_{y}</eq>.<eq>^{\mathrm{b}}</eq>Assumes net area of plate at widest hole.<eq>^{\mathrm{c}}</eq>For design of slender sections that exceed the noncompact limits see Appendix B5.<eq>^{\mathrm{d}}</eq>See also Sect. F3.1.<eq>^{\mathrm{e}}k_{c} = \frac{4.05}{(h/t)^{0.48}}</eq> if h/t &gt; 70, otherwise <eq>k_{c} = 1.0</eq>.</td></tr></table>
+| Description of Element | Width-Thickness Ratio | Compact | Noncompact$^{c}$ |
+| --- | --- | --- | --- |
+| Flanges of I-shaped rolled beams and channels in flexure$^{a}$ | $b/t$ | $65/\sqrt{F_y}$ | $95/\sqrt{F_y}$ |
+| Flanges of I-shaped welded beams in flexure | $b/t$ | $65/\sqrt{F_y}$ | $95/\sqrt{F_y/k_c}{}^{e}$ |
+| Outstanding legs of pairs of angles in continuous contact; angles or plates projecting from rolled beams or columns; stiffeners on plate girders | $b/t$ | NA | $95/\sqrt{F_y}$ |
+| Angles or plates projecting from girders, built-up columns or other compression members; compression flanges of plate girders | $b/t$ | NA | $95/\sqrt{F_y/k_c}$ |
+| Stems of tees | $d/t$ | NA | $127/\sqrt{F_y}$ |
+| Unstiffened elements simply supported along one edge, such as legs of single-angle struts, legs of double-angle struts with separators and cross or star-shaped cross sections | $b/t$ | NA | $76/\sqrt{F_y}$ |
+| Flanges of square and rectangular box and hollow structural sections of uniform thickness subject to bending or compression$^{d}$; flange cover plates and diaphragm plates between lines of fasteners or welds | $b/t$ | $190/\sqrt{F_y}$ | $238/\sqrt{F_y}$ |
+| Unsupported width of cover plates perforated with a succession of access holes$^{b}$ | $b/t$ | NA | $317/\sqrt{F_y}$ |
+| All other uniformly compressed stiffened elements, i.e., supported along two edges | $b/t$ or $h/t_w$ | NA | $253/\sqrt{F_y}$ |
+| Webs in flexural compression$^{a}$ | $d/t$ | $640/\sqrt{F_y}$ | — |
+| Webs in flexural compression$^{a}$ | $h/t_w$ | — | $760/\sqrt{F_b}$ |
+| Webs in combined flexural and axial compression; $f_a/F_y \leq 0.16$ | $d/t_w$ | $\frac{640}{\sqrt{F_y}}(1-3.74f_a/F_y)$ | — |
+| Webs in combined flexural and axial compression; $f_a/F_y > 0.16$ | $d/t_w$ | $257/\sqrt{F_y}$ | — |
+| Webs in combined flexural and axial compression | $h/t_w$ | — | $760/\sqrt{F_b}$ |
+| Circular hollow sections in axial compression | $D/t$ | $3,300/F_y$ | — |
+| Circular hollow sections in flexure | $D/t$ | $3,300/F_y$ | — |
+
+$^{a}$ For hybrid beams, use the yield strength of the flange $F_{yf}$, instead of $F_y$.
+
+$^{b}$ Assumes net area of plate at widest hole.
+
+$^{c}$ For design of slender sections that exceed the noncompact limits see Appendix B5.
+
+$^{d}$ See also Sect. F3.1.
+
+$^{e}$ $k_c = 4.05/(h/t)^{0.46}$ if $h/t > 70$, otherwise $k_c = 1.0$.
 
 ## B6. ROTATIONAL RESTRAINT AT POINTS OF SUPPORT
 
@@ -1005,7 +1317,7 @@ When designed on the assumption of full or partial end restraint due to continuo
 Rolled or welded shapes, plate girders and cover-plated beams shall, in general, be proportioned by the moment of inertia of the gross section. No deduction shall be made for shop or field bolt or rivet holes in either flange provided that 
 
 $$
-0. 5 F _ {u} A _ {f n} \geq 0. 6 F _ {y} A _ {f g}\tag{B10-1}
+0.5 F _ {u} A _ {f n} \geq 0.6 F _ {y} A _ {f g}\tag{B10-1}
 $$
 
 where $A_{fg}$ is the gross flange area and $A_{fn}$ is the net flange area, calculated in accordance with the provisions of Sects. B1 and B2. 
@@ -1013,7 +1325,7 @@ where $A_{fg}$ is the gross flange area and $A_{fn}$ is the net flange area, cal
 If 
 
 $$
-0. 5 F _ {u} A _ {f n} <   0. 6 F _ {y} A _ {f g}\tag{B10-2}
+0.5 F _ {u} A _ {f n} <   0.6 F _ {y} A _ {f g}\tag{B10-2}
 $$
 
 the member flexural properties shall be based on an effective tension flange area $A_{fe}$ 
@@ -1022,7 +1334,7 @@ $$
 A _ {f e} = \frac {5}{6} \frac {F _ {u}}{F _ {y}} A _ {f n}\tag{B10-3}
 $$
 
-Hybrid girders may be proportioned by the moment of inertia of their gross section, $^{*}$ subject to the applicable provisions in Sect. G1, provided they are not required to resist an axial force greater than $0.15F_{y}$ times the area of the gross section, where $F_{y}$ is the yield stress of the flange material. To qualify as hybrid girders, the flanges at any given section shall have the same cross-sectional area and be made of the same grade of steel. 
+Hybrid girders may be proportioned by the moment of inertia of their gross section, [^b10-hybrid] subject to the applicable provisions in Sect. G1, provided they are not required to resist an axial force greater than $0.15F_{y}$ times the area of the gross section, where $F_{y}$ is the yield stress of the flange material. To qualify as hybrid girders, the flanges at any given section shall have the same cross-sectional area and be made of the same grade of steel. 
 
 Flanges of welded beams or girders may be varied in thickness or width by splicing a series of plates or by the use of cover plates. 
 
@@ -1151,7 +1463,7 @@ $$
 On the gross section of axially loaded compression members, when $Kl / r$ exceeds $C_c$ , the allowable stress is: 
 
 $$
-F _ {a} = \frac {1 2 \pi^ {2} E}{2 3 (K l / r) ^ {2}}\tag{E2-2}
+F _ {a} = \frac {12 \pi^ {2} E}{23 (K l / r) ^ {2}}\tag{E2-2}
 $$
 
 ## E3. FLEXURAL-TORSIONAL BUCKLING
@@ -1180,7 +1492,7 @@ Open sides of compression members built up from plates or shapes shall be provid
 
 Lacing, including flat bars, angles, channels or other shapes employed as lacing, shall be so spaced that the ratio $l/r$ of the flange included between their connections shall not exceed $\frac{3}{4}$ times the governing ratio for the member as a whole. Lacing shall be proportioned to resist a shearing stress normal to the axis of the member equal to 2% of the total compressive stress in the member. The ratio $l/r$ for lacing bars arranged in single systems shall not exceed 140. For double lacing this ratio shall not exceed 200. Double lacing bars shall be joined at their intersections. For lacing bars in compression the unsupported length of the lacing bar shall be taken as the distance between fasteners or welds connecting it to the components of the built-up member for single lacing, and 70% of that distance for double lacing. The inclination of lacing bars to the axis of the member shall preferably be not less than $60^{\circ}$ for single lacing and $45^{\circ}$ for double lacing. When the distance between the lines of fasteners or welds in the flanges is more than 15 in., the lacing preferably shall be double or be made of angles. 
 
-The function of tie plates and lacing may be performed by continuous cover plates perforated with access holes. The unsupported width of such plates at access holes, as defined in Sect. B5, is assumed available to resist axial stress, provided that: the width-to-thickness ratio conforms to the limitations of Sect. B5; the ratio of length (in direction of stress) to width of holes shall not exceed 2; the clear distance between holes in the direction of stress shall be not less than the transverse distance between nearest lines of connecting fasteners or welds; and the periphery of the holes at all points shall have a minimum radius of $1^{1/2}$ in. 
+The function of tie plates and lacing may be performed by continuous cover plates perforated with access holes. The unsupported width of such plates at access holes, as defined in Sect. B5, is assumed available to resist axial stress, provided that: the width-to-thickness ratio conforms to the limitations of Sect. B5; the ratio of length (in direction of stress) to width of holes shall not exceed 2; the clear distance between holes in the direction of stress shall be not less than the transverse distance between nearest lines of connecting fasteners or welds; and the periphery of the holes at all points shall have a minimum radius of $1\frac{1}{2}$ in. 
 
 ## E5. PIN-CONNECTED COMPRESSION MEMBERS
 
@@ -1198,20 +1510,20 @@ Beams shall be distinguished from plate girders on the basis of the web slendern
 
 This chapter applies to singly or doubly symmetric beams including hybrid beams and girders loaded in the plane of symmetry. It also applies to channels loaded in a plane passing through the shear center parallel to the web or restrained against twisting at load points and points of support. For members subject to combined flexural and axial force, see Sect. H1. 
 
-## F1. ALLOWABLE STRESS: STRONG AXIS BENDING OF I-SHAPED MEMBERS AND CHANNELS (*) AB MPa
+## F1. ALLOWABLE STRESS: STRONG AXIS BENDING OF I-SHAPED MEMBERS AND CHANNELS 
 
 ## 1. Members with Compact Sections
 
-For members with compact sections as defined in Sect. B5.1 (excluding hybrid beams and members with yield points greater than 65 ksi)* symmetrical about, and loaded in, the plane of their minor axis the allowable stress is 
+For members with compact sections as defined in Sect. B5.1 (excluding hybrid beams and members with yield points greater than 65 ksi) symmetrical about, and loaded in, the plane of their minor axis the allowable stress is 
 
 $$
-F _ {b} = 0. 6 \dot {6} F _ {y}\tag{F1-1}
+F _ {b} = 0.66 F _ {y}\tag{F1-1}
 $$
 
 provided the flanges are connected continuously to the web or webs and the laterally unsupported length of the compression flange $L_{b}$ does not exceed the value of $L_{c}$ , as given by the smaller of: 
 
 $$
-\frac {7 6 b _ {f}}{\sqrt {F _ {y}}} \text { or } \frac {2 0 , 0 0 0}{(d / A _ {f}) F _ {y}}\tag{F1-2}
+\frac {76 b _ {f}}{\sqrt {F _ {y}}} \text { or } \frac {20,000}{(d / A _ {f}) F _ {y}}\tag{F1-2}
 $$
 
 Members (including composite members and excluding hybrid members and members with yield points greater than 65 ksi) which meet the requirements for compact sections and are continuous over supports or rigidly framed to columns, may be proportioned for $\frac{9}{10}$ of the negative moments produced by gravity loading when such moments are maximum at points of support, provided that, for such members, the maximum positive moment is increased by $\frac{1}{10}$ of the average negative moments. This reduction shall not apply to moments produced by loading on cantilevers. If the negative moment is resisted by a column rigidly framed to the beam or girder, the $\frac{1}{10}$ reduction is permitted in proportioning the column for the combined axial and bending loading, provided that the stress $f_{a}$ due to any concurrent axial load on the member, does not exceed $0.15F_{a}$ . 
@@ -1221,25 +1533,25 @@ Members (including composite members and excluding hybrid members and members wi
 For members meeting the requirements of Sect. F1.1 except that their flanges are noncompact (excluding built-up members and members with yield points greater than 65 ksi), the allowable stress is 
 
 $$
-F _ {b} = F _ {y} \left[ 0. 7 9 - 0. 0 0 2 \frac {b _ {f}}{2 t _ {f}} \sqrt {F _ {y}} \right]\tag{F1-3}
+F _ {b} = F _ {y} \left[ 0.79 - 0.002 \frac {b _ {f}}{2 t _ {f}} \sqrt {F _ {y}} \right]\tag{F1-3}
 $$
 
 For built-up members meeting the requirements of Sect. F1.1 except that their flanges are noncompact and their webs are compact or noncompact, (excluding hybrid girders and members with yield points greater than 65 ksi) the allowable stress is 
 
 $$
-F _ {b} = F _ {y} \left[ 0. 7 9 - 0. 0 0 2 \frac {b _ {f}}{2 t _ {f}} \sqrt {\frac {F _ {y}}{k _ {c}}} \right]\tag{F1-4}
+F _ {b} = F _ {y} \left[ 0.79 - 0.002 \frac {b _ {f}}{2 t _ {f}} \sqrt {\frac {F _ {y}}{k _ {c}}} \right]\tag{F1-4}
 $$
 
 where 
 
 $$
-k _ {c} = \frac {4 . 0 5}{(h / t _ {w}) ^ {0 . 4 6}} \text {   if   } h / t _ {w} > 7 0, \text {   otherwise   } k _ {c} = 1. 0.
+k _ {c} = \frac {4.05}{(h / t _ {w}) ^ {0.46}} \text {   if   } h / t _ {w} > 70, \text {   otherwise   } k _ {c} = 1.0.
 $$
 
 For members with a noncompact section (Sect. B5), but not included above, and loaded through the shear center and braced laterally in the region of compression stress at intervals not exceeding $76b_{f}/\sqrt{F_{y}}$ , the allowable stress is 
 
 $$
-F _ {b} = 0. 6 0 F _ {y}\tag{F1-5}
+F _ {b} = 0.60 F _ {y}\tag{F1-5}
 $$
 
 ## 3. Members with Compact or Noncompact Sections with Unbraced Length Greater than $L_{c}$
@@ -1253,27 +1565,27 @@ For channels bent about their major axis, the allowable compressive stress is de
 When 
 
 $$
-\sqrt {\frac {1 0 2 \times 1 0 ^ {3} C _ {b}}{F _ {y}}} \leq \frac {l}{r _ {T}} \leq \sqrt {\frac {5 1 0 \times 1 0 ^ {3} C _ {b}}{F _ {y}}}
+\sqrt {\frac {102 \times 10 ^ {3} C _ {b}}{F _ {y}}} \leq \frac {l}{r _ {T}} \leq \sqrt {\frac {510 \times 10 ^ {3} C _ {b}}{F _ {y}}}
 $$
 
 $$
-F _ {b} = \left[ \frac {2}{3} - \frac {F _ {y} (l / r _ {T}) ^ {2}}{1 5 3 0 \times 1 0 ^ {3} C _ {b}} \right] F _ {y} \leq 0. 6 0 F _ {y}\tag{F1-6}
+F _ {b} = \left[ \frac {2}{3} - \frac {F _ {y} (l / r _ {T}) ^ {2}}{1530 \times 10 ^ {3} C _ {b}} \right] F _ {y} \leq 0.60 F _ {y}\tag{F1-6}
 $$
 
 When 
 
 $$
-\frac {l}{r _ {T}} \geq \sqrt {\frac {5 1 0 \times 1 0 ^ {3} C _ {b}}{F _ {y}}}:
+\frac {l}{r _ {T}} \geq \sqrt {\frac {510 \times 10 ^ {3} C _ {b}}{F _ {y}}}:
 $$
 
 $$
-F _ {b} = \frac {1 7 0 \times 1 0 ^ {3} C _ {b}}{(l / r _ {T}) ^ {2}} \leq 0. 6 0 F _ {y}\tag{F1-7}
+F _ {b} = \frac {170 \times 10 ^ {3} C _ {b}}{(l / r _ {T}) ^ {2}} \leq 0.60 F _ {y}\tag{F1-7}
 $$
 
 For any value of $l / r_T$ : 
 
 $$
-F _ {b} = \frac {1 2 \times 1 0 ^ {3} C _ {b}}{l d / A _ {f}} \leq 0. 6 0 F _ {y}\tag{F1-8}
+F _ {b} = \frac {12 \times 10 ^ {3} C _ {b}}{l d / A _ {f}} \leq 0.60 F _ {y}\tag{F1-8}
 $$
 
 where 
@@ -1284,9 +1596,10 @@ $r_{T}$ = radius of gyration of a section comprising the compression flange plus
 
 $A_{f} =$ area of the compression flange, in.2 
 
-$C_{b}=1.75+1.05(M_{1}/M_{2})+0.3(M_{1}/M_{2})^{2}$ , but not more than 2.3 $^{*}$ , where $M_{1}$ is the smaller and $M_{2}$ the larger bending moment at the ends of the unbraced length, taken about the strong axis of the member, and where $M_{1}/M_{2}$ , the ratio of end moments, is positive when $M_{1}$ and $M_{2}$ have the same sign (reverse curvature bending) and negative when they are of opposite signs (single curvature bending). When the bending moment at any point within an unbraced length is larger than that at both ends of this length, the value of $C_{b}$ shall be taken as unity. When computing $F_{bx}$ to be used in Equation (H1-1), $C_{b}$ may be computed by the equation given above for frames subject to joint translation, and it shall be taken as unity for frames braced against joint translation. $C_{b}$ may conservatively be taken as unity for cantilever beams. $^{**}$ 
+$C_{b}=1.75+1.05(M_{1}/M_{2})+0.3(M_{1}/M_{2})^{2}$ , but not more than 2.3[^f1-cb-1] , where $M_{1}$ is the smaller and $M_{2}$ the larger bending moment at the ends of the unbraced length, taken about the strong axis of the member, and where $M_{1}/M_{2}$ , the ratio of end moments, is positive when $M_{1}$ and $M_{2}$ have the same sign (reverse curvature bending) and negative when they are of opposite signs (single curvature bending). When the bending moment at any point within an unbraced length is larger than that at both ends of this length, the value of $C_{b}$ shall be taken as unity. When computing $F_{bx}$ to be used in Equation (H1-1), $C_{b}$ may be computed by the equation given above for frames subject to joint translation, and it shall be taken as unity for frames braced against joint translation. $C_{b}$ may conservatively be taken as unity for cantilever beams.[^f1-cb-2] 
 
 For hybrid plate girders, $F_{y}$ for Equations (F1-6) and (F1-7) is the yield stress of the compression flange. Equation (F1-8) shall not apply to hybrid girders. Sect. F1.3 does not apply to tee sections if the stem is in compression anywhere along the unbraced length. 
+
 
 ## F2. ALLOWABLE STRESS: WEAK AXIS BENDING OF I-SHAPED MEMBERS, SOLID BARS AND RECTANGULAR PLATES
 
@@ -1297,7 +1610,7 @@ For hybrid plate girders, $F_{y}$ for Equations (F1-6) and (F1-7) is the yield s
 For doubly symmetrical I- and H-shape members with compact flanges (Sect. B5) continuously connected to the web and bent about their weak axes (except members with yield points greater than 65 ksi); solid round and square bars; and solid rectangular sections bent about their weaker axes, the allowable stress is 
 
 $$
-F _ {b} = 0. 7 5 F _ {y}\tag{F2-1}
+F _ {b} = 0.75 F _ {y}\tag{F2-1}
 $$
 
 ## 2. Members With Noncompact Sections
@@ -1305,13 +1618,13 @@ $$
 For members not meeting the requirements for compact sections of Sect. B5 and not covered in Sect. F3, bent about their minor axis, the allowable stress is 
 
 $$
-F _ {b} = 0. 6 0 F _ {y}\tag{F2-2}
+F _ {b} = 0.60 F _ {y}\tag{F2-2}
 $$
 
 Doubly symmetrical I- and H-shape members bent about their weak axes (except members with yield points greater than 65 ksi) with noncompact flanges (Sect. B5) continuously connected to the web may be designed on the basis of an allowable stress of 
 
 $$
-F _ {b} = F _ {y} \left[ 1. 0 7 5 - 0. 0 0 5 \left(\frac {b _ {f}}{2 t _ {f}}\right) \sqrt {F _ {y}} \right]\tag{F2-3}
+F _ {b} = F _ {y} \left[ 1.075 - 0.005 \left(\frac {b _ {f}}{2 t _ {f}}\right) \sqrt {F _ {y}} \right]\tag{F2-3}
 $$
 
 ## F3. ALLOWABLE STRESS: BENDING OF BOX MEMBERS, RECTANGULAR TUBES AND CIRCULAR TUBES
@@ -1321,13 +1634,13 @@ $$
 For members bent about their strong or weak axes, members with compact sections as defined in Sect. B5 and flanges continuously connected to the webs, the allowable stress is 
 
 $$
-F _ {b} = 0. 6 6 F _ {y}\tag{F3-1}
+F _ {b} = 0.66 F _ {y}\tag{F3-1}
 $$
 
 To be classified as a compact section, a box-shaped member shall have, in addition to the requirements in Sect. B5, a depth not greater than 6 times the width, a flange thickness not greater than 2 times the web thickness and a laterally unsupported length $L_{b}$ less than or equal to 
 
 $$
-L _ {c} = \left(1, 9 5 0 + 1, 2 0 0 \frac {M _ {1}}{M _ {2}}\right) \frac {b}{F _ {y}}\tag{F3-2}
+L _ {c} = \left(1,950 + 1,200 \frac {M _ {1}}{M _ {2}}\right) \frac {b}{F _ {y}}\tag{F3-2}
 $$
 
 AMERICAN INSTITUTE OF STEEL CONSTRUCTION 
@@ -1339,7 +1652,7 @@ except that it need not be less than 1,200 (b/Fy), where $M_{1}$ is the smaller 
 For box-type and tubular flexural members that meet the noncompact section requirements of Sect. B5, the allowable stress is 
 
 $$
-F _ {b} = 0. 6 0 F _ {y}\tag{F3-3}
+F _ {b} = 0.60 F _ {y}\tag{F3-3}
 $$
 
 Lateral bracing is not required for a box section whose depth is less than 6 times its width. Lateral-support requirements for box sections of larger depth-to-width ratios must be determined by special analysis. 
@@ -1349,24 +1662,24 @@ Lateral bracing is not required for a box section whose depth is less than 6 tim
 For $h/t_{w} \leq 380/\sqrt{F_{y}}$ , on the overall depth times the web thickness, the allowable shear stress is 
 
 $$
-F _ {v} = 0. 4 0 F _ {y}\tag{F4-1}
+F _ {v} = 0.40 F _ {y}\tag{F4-1}
 $$
 
-For $h/t_{w} > 380/\sqrt{F_{y,i}}$ , the allowable shear stress is on the clear distance between flanges times the web thickness is 
+For $h/t_{w} > 380/\sqrt{F_{yf}}$ , the allowable shear stress is on the clear distance between flanges times the web thickness is 
 
 $$
-F _ {v} = \frac {F _ {y}}{2 . 8 9} (C _ {v}) \leq 0. 4 0 F _ {y}
+F_{v} = \frac{F_{y}}{2.89} C_{v} \leq 0.40 F_{y}\tag{F4-2}
 $$
 
 where 
 
 $$
-\begin{array}{r l} C _ {v} & = \frac {4 5 , 0 0 0 k _ {v}}{F _ {y} (h / t _ {w}) ^ {2}} \text { when } C _ {v} \text { is   less   than } 0. 8 \\ & = \frac {1 9 0}{h / t _ {w}} \sqrt {\frac {k _ {v}}{F _ {y}}} \text { when } C _ {v} \text { is   more   than } 0. 8 \\ k _ {v} & = 4. 0 0 + \frac {5 . 3 4}{(a / h) ^ {2}} \text { when } a / h \text { is   less   than } 1. 0 \\ & = 5. 3 4 + \frac {4 . 0 0}{(a / h) ^ {2}} \text { when } a / h \text { is   more   than } 1. 0 \end{array}\tag{F4-2}
+\begin{array}{r l} C _ {v} & = \frac {45,000 k _ {v}}{F _ {y} (h / t _ {w}) ^ {2}} \text { when } C _ {v} \text { is   less   than } 0.8 \\ & = \frac {190}{h / t _ {w}} \sqrt {\frac {k _ {v}}{F _ {y}}} \text { when } C _ {v} \text { is   more   than } 0.8 \\ k _ {v} & = 4.00 + \frac {5.34}{(a / h) ^ {2}} \text { when } a / h \text { is   less   than } 1.0 \\ & = 5.34 + \frac {4.00}{(a / h) ^ {2}} \text { when } a / h \text { is   more   than } 1.0 \end{array}
 $$
 
 $t_w =$ thickness of web, in. 
 
-$a^{n} = \text{clear distance between transverse stiffeners, in.}$ 
+$a =$ clear distance between transverse stiffeners, in. 
 
 h = clear distance between flanges at the section under investigation, in. 
 
@@ -1380,10 +1693,10 @@ An alternative design method for plate girders utilizing tension field action is
 
 Intermediate stiffeners are required when the ratio $h/t_{w}$ is greater than 260 and the maximum web shear stress $f_{v}$ is greater than that permitted by Equation (F4-2). 
 
-The spacing of intermediate stiffeners, when required, shall be such that the web shear stress will not exceed the value for $F_{\nu}$ given by Equation (F4-2) or (G3-1), as applicable, and 
+The spacing of intermediate stiffeners, when required, shall be such that the web shear stress will not exceed the value for $F_{v}$ given by Equation (F4-2) or (G3-1), as applicable, and 
 
 $$
-\frac {a}{h} \leqslant \left[ \frac {2 6 0}{(h / t _ {w})} \right] ^ {2} \text { and } 3. 0\tag{F5-1}
+\frac {a}{h} \leqslant \left[ \frac {260}{(h / t _ {w})} \right] ^ {2} \text { and } 3.0\tag{F5-1}
 $$
 
 ## F6. BUILT-UP MEMBERS
@@ -1407,13 +1720,13 @@ For allowable shear stress and transverse stiffener design see appropriate secti
 When no transverse stiffeners are provided or when transverse stiffeners are spaced more than $1\frac{1}{2}$ times the distance between flanges 
 
 $$
-\frac {h}{t _ {w}} \leq \frac {1 4 , 0 0 0}{\sqrt {F _ {y f} (F _ {y f} + 1 6 . 5)}}\tag{G1-1}
+\frac {h}{t _ {w}} \leq \frac {14,000}{\sqrt {F _ {y f} (F _ {y f} + 16.5)}}\tag{G1-1}
 $$
 
 When transverse stiffeners are provided, spaced not more than $1\frac{1}{2}$ times the distance between flanges 
 
 $$
-\frac {h}{t _ {w}} \leq \frac {2 , 0 0 0}{\sqrt {F _ {y f}}}\tag{G1-2}
+\frac {h}{t _ {w}} \leq \frac {2,000}{\sqrt {F _ {y f}}}\tag{G1-2}
 $$
 
 ## G2. ALLOWABLE BENDING STRESS
@@ -1431,11 +1744,11 @@ where
 $F_{b}$ = applicable bending stress given in Chapter F, ksi 
 
 $$
-R _ {P G} = 1 - 0. 0 0 0 5 \frac {A _ {w}}{A _ {f}} \left(\frac {h}{t} - \frac {7 6 0}{\sqrt {F _ {b}}}\right) \leq 1. 0
+R _ {P G} = 1 - 0.0005 \frac {A _ {w}}{A _ {f}} \left(\frac {h}{t} - \frac {760}{\sqrt {F _ {b}}}\right) \leq 1.0
 $$
 
 $$
-R _ {e} = \frac {1 2 + \left(\frac {A _ {w}}{A _ {f}}\right) (3 \alpha - \alpha^ {3})}{1 2 + 2 \left(\frac {A _ {w}}{A _ {f}}\right)} \leq 1. 0
+R _ {e} = \frac {12 + \left(\frac {A _ {w}}{A _ {f}}\right) (3 \alpha - \alpha^ {3})}{12 + 2 \left(\frac {A _ {w}}{A _ {f}}\right)} \leq 1.0
 $$
 
 (non-hybrid girders, $R_{e} = 1.0$ ) 
@@ -1445,18 +1758,21 @@ $A_{w}$ = area of web at the section under investigation, in. $^{2}$
 $A_{f} =$ area of compression flange, in.2 
 
 $$
-\alpha = 0. 6 F _ {y w} / F _ {b} \leq 1. 0
+\alpha = 0.6 F _ {y w} / F _ {b} \leq 1.0
 $$
 
 ## G3. ALLOWABLE SHEAR STRESS WITH TENSION FIELD ACTION
 
 Except as herein provided, the largest average web shear, $f_{v}$ , in kips per sq. in., computed for any condition of complete or partial loading, shall not exceed the value given by Equation (F4-2). 
 
-Alternatively, for girders other than hybrid girders, if intermediate stiffeners are provided and spaced to satisfy the provisions of Sect. G4 and if $C_{\nu} \leq 1$ , the allowable shear including tension field action given by Equation (G3-1) is permitted in lieu of the value given by Equation (F4-2). 
+Alternatively, for girders other than hybrid girders, if intermediate stiffeners are provided and spaced to satisfy the provisions of Sect. G4 and if $C_{v} \leq 1$ , the allowable shear including tension field action given by Equation (G3-1) is permitted in lieu of the value given by Equation (F4-2). 
 
 $$
-F _ {\nu} = \frac {F _ {y}}{2 . 8 9} \left[ C _ {\nu} + \frac {1 - C _ {\nu}}{1 . 1 5 \sqrt {1 + (a / h) ^ {2}}} \right] \leq 0. 4 0 F _ {y},\tag{G3-1)*}
+F_{v} = \frac {F _ {y}}{2.89} \left[ C_{v} + \frac {1 - C_{v}}{1.15 \sqrt {1 + (a / h) ^ {2}}} \right] \leq 0.40 F _ {y},\tag{G3-1}
 $$
+
+[^g3-1]
+
 
 ## G4. TRANSVERSE STIFFENERS
 
@@ -1469,18 +1785,18 @@ Bolts and rivets connecting stiffeners to the girder web shall be spaced not mor
 The moment of inertia, $I_{st}$ , of a pair of intermediate stiffeners, or a single intermediate stiffener, with reference to an axis in the plane of the web, shall be limited as follows 
 
 $$
-I _ {s t} \geq \left(\frac {h}{5 0}\right) ^ {4}\tag{G4-1}
+I _ {s t} \geq \left(\frac {h}{50}\right) ^ {4}\tag{G4-1}
 $$
 
 The gross area (total area, when stiffeners are furnished in pairs), in sq. in., of intermediate stiffeners spaced as required for Equation (G3-1) shall be not less than 
 
 $$
-A _ {s t} = \frac {1 - C _ {\nu}}{2} \left[ \frac {a}{h} - \frac {(a / h) ^ {2}}{\sqrt {1 + (a / h) ^ {2}}} \right] Y D h t\tag{G4-2}
+A _ {s t} = \frac {1 - C_{v}}{2} \left[ \frac {a}{h} - \frac {(a / h) ^ {2}}{\sqrt {1 + (a / h) ^ {2}}} \right] Y D h t\tag{G4-2}
 $$
 
 where 
 
-$C_{\nu}, a, h,$ and $t$ are as defined in Sect. F4 
+$C_{v}, a, h,$ and $t$ are as defined in Sect. F4 
 
 Y = ratio of yield stress of web steel to yield stress of stiffener steel 
 
@@ -1495,7 +1811,7 @@ When the greatest shear stress $f_{v}$ in a panel is less than that permitted by
 Intermediate stiffeners required by Equation (G3-1) shall be connected for a total shear transfer, in kips per linear inch of single stiffener or pair of stiffeners, not less than 
 
 $$
-f _ {v s} = h \sqrt {\left(\frac {F _ {y}}{3 4 0}\right) ^ {3}}\tag{G4-3}
+f _ {v s} = h \sqrt {\left(\frac {F _ {y}}{340}\right) ^ {3}}\tag{G4-3}
 $$
 
 where $F_{y}$ = yield stress of web steel. 
@@ -1509,14 +1825,14 @@ Intermediate stiffeners may be stopped short of the tension flange, provided bea
 Plate girder webs which depend upon tension field action, as provided in Equation (G3-1), shall be so proportioned that bending tensile stress, due to moment in the plane of the girder web, shall not exceed $0.60F_{y}$ nor 
 
 $$
-\left(0. 8 2 5 - 0. 3 7 5 \frac {f _ {\nu}}{F _ {\nu}}\right) F _ {y}\tag{G5-1}
+\left(0.825 - 0.375 \frac {f_{v}}{F_{v}}\right) F _ {y}\tag{G5-1}
 $$
 
 where 
 
-$f_{\nu} =$ computed average web shear stress (total shear divided by web area), ksi 
+$f_{v} =$ computed average web shear stress (total shear divided by web area), ksi 
 
-$F_{\nu} =$ allowable web shear stress according to Equation (G3-1), ksi 
+$F_{v} =$ allowable web shear stress according to Equation (G3-1), ksi 
 
 The allowable shear stress in the webs of girders having flanges and webs with yield point greater than 65 ksi shall not exceed the values given by Equation (F4-2) if the flexural stress in the flange $f_{b}$ exceeds $0.75F_{b}$ . 
 
@@ -1531,17 +1847,17 @@ This chapter pertains to doubly and singly symmetrical members only. See Chapter
 Members subjected to both axial compression and bending stresses shall be proportioned to satisfy the following requirements: 
 
 $$
-\frac {f _ {a}}{F _ {a}} + \frac {C _ {m x} f _ {b x}}{\left(1 - \frac {f _ {a}}{F _ {e x} ^ {\prime}}\right) F _ {b x}} + \frac {C _ {m y} f _ {b y}}{\left(1 - \frac {f _ {a}}{F _ {e y} ^ {\prime}}\right) F _ {b y}} \leq 1. 0\tag{H1-1}
+\frac {f _ {a}}{F _ {a}} + \frac {C _ {m x} f _ {b x}}{\left(1 - \frac {f _ {a}}{F _ {e x} ^ {\prime}}\right) F _ {b x}} + \frac {C _ {m y} f _ {b y}}{\left(1 - \frac {f _ {a}}{F _ {e y} ^ {\prime}}\right) F _ {b y}} \leq 1.0\tag{H1-1}
 $$
 
 $$
-\frac {f _ {a}}{0 . 6 0 F _ {y}} + \frac {f _ {b x}}{F _ {b x}} + \frac {f _ {b y}}{F _ {b y}} \leq 1. 0\tag{H1-2}
+\frac {f _ {a}}{0.60 F _ {y}} + \frac {f _ {b x}}{F _ {b x}} + \frac {f _ {b y}}{F _ {b y}} \leq 1.0\tag{H1-2}
 $$
 
 When $f_{a} / F_{a} \leq 0.15$ , Equation (H1-3) is permitted in lieu of Equations (H1-1) and (H1-2): 
 
 $$
-\frac {f _ {a}}{F _ {a}} + \frac {f _ {b x}}{F _ {b x}} + \frac {f _ {b y}}{F _ {b y}} \leq 1. 0\tag{H1-3}
+\frac {f _ {a}}{F _ {a}} + \frac {f _ {b x}}{F _ {b x}} + \frac {f _ {b y}}{F _ {b y}} \leq 1.0\tag{H1-3}
 $$
 
 In Equations (H1-1), (H1-2) and (H1-3), the subscripts x and y, combined with subscripts b, m and e, indicate the axis of bending about which a particular stress or design property applies, and 
@@ -1551,7 +1867,7 @@ $F_{a}$ = axial compressive stress that would be permitted if axial force alone 
 $F_{b} =$ compressive bending stress that would be permitted if bending moment alone existed, ksi 
 
 $$
-F _ {e} ^ {\prime} = \frac {1 2 \pi^ {2} E}{2 3 (K l _ {b} / r _ {b}) ^ {2}}
+F _ {e} ^ {\prime} = \frac {12 \pi^ {2} E}{23 (K l _ {b} / r _ {b}) ^ {2}}
 $$
 
 = Euler stress divided by a factor of safety, ksi (In the expression for $F_e'$ , $l_b$ is the actual unbraced length in the plane of bending and $r_b$ is the corresponding radius of gyration. $K$ is the effective length factor in the plane of bending.) As in the case of $F_a$ , $F_b$ and $0.60F_y$ , $F_e'$ may be increased $1/3$ in accordance with Sect. A5.2. 
@@ -1567,7 +1883,7 @@ a. For compression members in frames subject to joint translation (sidesway), $C
 b. For rotationally restrained compression members in frames braced against joint translation and not subject to transverse loading between their supports in the plane of bending, 
 
 $$
-C _ {m} = 0. 6 - 0. 4 \left(M _ {1} / M _ {2}\right)
+C _ {m} = 0.6 - 0.4 \left(M _ {1} / M _ {2}\right)
 $$
 
 where $M_{1}/M_{2}$ is the ratio of the smaller to larger moments at the ends of that portion of the member unbraced in the plane of bending under consideration. $M_{1}/M_{2}$ is positive when the member is bent in reverse curvature, negative when bent in single curvature. 
@@ -1583,7 +1899,7 @@ ii. For members whose ends are unrestrained against rotation in the plane of ben
 Members subject to both axial tension and bending stresses shall be proportioned at all points along their length to satisfy the following equation: 
 
 $$
-\frac {f _ {a}}{F _ {t}} + \frac {f _ {b x}}{F _ {b x}} + \frac {f _ {b y}}{F _ {b y}} \leq 1. 0\tag{H2-1}
+\frac {f _ {a}}{F _ {t}} + \frac {f _ {b x}}{F _ {b x}} + \frac {f _ {b y}}{F _ {b y}} \leq 1.0\tag{H2-1}
 $$
 
 where $f_{b}$ is the computed bending tensile stress, $f_{a}$ is the computed axial tensile stress, $F_{b}$ is the allowable bending stress and $F_{t}$ is the governing allowable tensile stress defined in Sect. D1. 
@@ -1594,7 +1910,7 @@ However the computed bending compressive stress arising from an independent load
 
 ## COMPOSITE CONSTRUCTION
 
-This chapter applies to steel beams supporting a reinforced concrete slab* so interconnected that the beams and the slab act together to resist bending. Simple and continuous composite beams with shear connectors and concrete-encased beams, constructed with or without temporary shores, are included. 
+This chapter applies to steel beams supporting a reinforced concrete slab[^i-composite] so interconnected that the beams and the slab act together to resist bending. Simple and continuous composite beams with shear connectors and concrete-encased beams, constructed with or without temporary shores, are included. 
 
 ## I1. DEFINITION
 
@@ -1648,7 +1964,7 @@ For composite beams constructed without temporary shoring, stresses in the steel
 
 The actual section modulus of the transformed composite section shall be used in calculating the concrete flexural compression stress and, for construction without temporary shores, this stress shall be based upon loading applied after the concrete has reached 75% of its required strength. The stress in the concrete shall not exceed $0.45f_{c}^{\prime}$ . 
 
-## 13. END SHEAR
+## I3. END SHEAR
 
 The web and the end connections of the steel beam shall be designed to carry the total reaction. 
 
@@ -1657,13 +1973,16 @@ The web and the end connections of the steel beam shall be designed to carry the
 Except in the case of encased beams, as defined in Sect. I2.1, the entire horizontal shear at the junction of the steel beam and the concrete slab shall be assumed to be transferred by shear connectors welded to the top flange of the beam and embedded in the concrete. For full composite action with concrete subject to flexural compression, the total horizontal shear to be resisted between the point of maximum positive moment and points of zero moment shall be taken as the smaller value using Equations (I4-1) and (I4-2): 
 
 $$
-V _ {h} = 0. 8 5 f _ {c} ^ {\prime} A _ {c} / 2\tag{I4-1)*}
+V _ {h} = 0.85 f _ {c} ^ {\prime} A _ {c} / 2\tag{I4-1}
 $$
+
+[^i4-1]
+
 
 and 
 
 $$
-V _ {h} = F _ {y} A _ {s} / 2\tag{14-2}
+V _ {h} = F _ {y} A _ {s} / 2\tag{I4-2}
 $$
 
 where 
@@ -1708,15 +2027,22 @@ The connectors required each side of the point of maximum moment in an area of p
 Table I4.1
 
 
-
 Allowable Horizontal
-
 
 
 Shear Load for One Connector (q), kips $^{a}$
 
 
-<table><tr><td rowspan="2">Connectorb</td><td colspan="3">Specified Compressive Strength of Concrete (<eq>f_c&#x27;</eq>), ksi</td></tr><tr><td>3.0.</td><td>3.5</td><td>≥4.0</td></tr><tr><td><eq>1/2&#x27;&#x27;</eq> dia. × <eq>2&#x27;&#x27;</eq> hooked or headed stud</td><td>5.1</td><td>5.5</td><td>5.9</td></tr><tr><td><eq>5/8&#x27;&#x27;</eq> dia. × <eq>2^{1/2}&#x27;&#x27;</eq> hooked or headed stud</td><td>8.0</td><td>8.6</td><td>9.2</td></tr><tr><td><eq>3/4&#x27;&#x27;</eq> dia. × <eq>3&#x27;&#x27;</eq> hooked or headed stud</td><td>11.5</td><td>12.5</td><td>13.3</td></tr><tr><td><eq>7/8&#x27;&#x27;</eq> dia. × <eq>3^{1/2}&#x27;&#x27;</eq> hooked or headed stud</td><td>15.6</td><td>16.8</td><td>18.0</td></tr><tr><td>Channel C3 × 4.1</td><td><eq>4.3w^c</eq></td><td><eq>4.7w^c</eq></td><td><eq>5.0w^c</eq></td></tr><tr><td>Channel C4 × 5.4</td><td><eq>4.6w^c</eq></td><td><eq>5.0w^c</eq></td><td><eq>5.3w^c</eq></td></tr><tr><td>Channel C5 × 6.7</td><td><eq>4.9w^c</eq></td><td><eq>5.3w^c</eq></td><td><eq>5.6w^c</eq></td></tr></table>
+| Connector$^{b}$ | Specified Compressive Strength of Concrete ($f_c^{\prime}$): 3.0 ksi | 3.5 ksi | ≥4.0 ksi |
+| --- | --- | --- | --- |
+
+| $1/2''$ dia. × $2''$ hooked or headed stud | 5.1 | 5.5 | 5.9 |
+| $5/8''$ dia. × $2\frac{1}{2}''$ hooked or headed stud | 8.0 | 8.6 | 9.2 |
+| $3/4''$ dia. × $3''$ hooked or headed stud | 11.5 | 12.5 | 13.3 |
+| $7/8''$ dia. × $3\frac{1}{2}''$ hooked or headed stud | 15.6 | 16.8 | 18.0 |
+| Channel C3 × 4.1 | $4.3w$ $^{c}$ | $4.7w$ $^{c}$ | $5.0w$ $^{c}$ |
+| Channel C4 × 5.4 | $4.6w$ $^{c}$ | $5.0w$ $^{c}$ | $5.3w$ $^{c}$ |
+| Channel C5 × 6.7 | $4.9w$ $^{c}$ | $5.3w$ $^{c}$ | $5.6w$ $^{c}$ |
 
 $^{a}$ Applicable only to concrete made with ASTM C33 aggregates. $^{b}$ The allowable horizontal loads tabulated are also permitted for studs longer than shown. $^{c}$ w = length of channel, in. 
 
@@ -1724,11 +2050,14 @@ $^{a}$ Applicable only to concrete made with ASTM C33 aggregates. $^{b}$ The all
 Table I4.2
 
 
-
 Coefficients for Use with Concrete Made with C330 Aggregates
 
 
-<table><tr><td rowspan="2">Specified CompressiveStrength of Concrete (<eq>f_c&#x27;</eq>)</td><td colspan="7">Air Dry Unit Weight of Concrete, pcf</td></tr><tr><td>90</td><td>95</td><td>100</td><td>105</td><td>110</td><td>115</td><td>120</td></tr><tr><td>≤4.0 ksi</td><td>0.73</td><td>0.76</td><td>0.78</td><td>0.81</td><td>0.83</td><td>0.86</td><td>0.88</td></tr><tr><td>≥5.0 ksi</td><td>0.82</td><td>0.85</td><td>0.87</td><td>0.91</td><td>0.93</td><td>0.96</td><td>0.99</td></tr></table>
+| Specified CompressiveStrength of Concrete ($f_c'$) | Air Dry Unit Weight of Concrete, pcf |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Specified CompressiveStrength of Concrete ($f_c'$) | 90 | 95 | 100 | 105 | 110 | 115 | 120 |
+| ≤4.0 ksi | 0.73 | 0.76 | 0.78 | 0.81 | 0.83 | 0.86 | 0.88 |
+| ≥5.0 ksi | 0.82 | 0.85 | 0.87 | 0.91 | 0.93 | 0.96 | 0.99 |
 
 required between any concentrated load in that area and the nearest point of zero moment, shall be not less than that determined by Equation (I4-5). 
 
@@ -1748,7 +2077,7 @@ $$
 
 For a continuous beam, connectors required in the region of negative bending may be uniformly distributed between the point of maximum moment and each point of zero moment. 
 
-Shear connectors shall have at least 1 in. of lateral concrete cover, except for connectors installed in the ribs of formed steel decks. Unless located directly over the web, the diameter of studs shall not be greater than $2^{1/2}$ times the thickness of the flange to which they are welded. The minimum center-to-center spacing of stud connectors shall be 6 diameters along the longitudinal axis of the supporting composite beam and 4 diameters transverse to the longitudinal axis of the supporting composite beam. The maximum center-to-center spacing of stud connectors shall not exceed 8 times the total slab thickness. 
+Shear connectors shall have at least 1 in. of lateral concrete cover, except for connectors installed in the ribs of formed steel decks. Unless located directly over the web, the diameter of studs shall not be greater than $2\frac{1}{2}$ times the thickness of the flange to which they are welded. The minimum center-to-center spacing of stud connectors shall be 6 diameters along the longitudinal axis of the supporting composite beam and 4 diameters transverse to the longitudinal axis of the supporting composite beam. The maximum center-to-center spacing of stud connectors shall not exceed 8 times the total slab thickness. 
 
 ## I5. COMPOSITE BEAMS OR GIRDERS WITH FORMED STEEL DECK
 
@@ -1775,14 +2104,14 @@ Composite construction of concrete slabs on formed steel deck connected to steel
 3. The allowable horizontal shear load per stud connector q shall be the value stipulated in Sect. I4 (Tables I4.1 and I4.2) multiplied by the following reduction factor: 
 
 $$
-\left(\frac {0 . 8 5}{\sqrt {N _ {r}}}\right) \left(\frac {w _ {r}}{h _ {r}}\right) \left(\frac {H _ {s}}{h _ {r}} - 1. 0\right) \leq 1. 0\tag{I5-1}
+\left(\frac {0.85}{\sqrt {N _ {r}}}\right) \left(\frac {w _ {r}}{h _ {r}}\right) \left(\frac {H _ {s}}{h _ {r}} - 1.0\right) \leq 1.0\tag{I5-1}
 $$
 
 where 
 
 $h_r$ = nominal rib height, in. 
 
-$\dot{H}_{s} = \text{length of stud connector after welding, in., not to exceed the value } (h_{r} + 3) \text{ in computations, although the actual length may be greater}$ 
+$H_{s} = \text{length of stud connector after welding, in., not to exceed the value } (h_{r} + 3) \text{ in computations, although the actual length may be greater}$ 
 
 $N_{r}$ = number of stud connectors on a beam in one rib, not to exceed 3 in computations, although more than 3 studs may be installed. 
 
@@ -1801,7 +2130,7 @@ $w_{r} =$ average width of concrete rib, in. (see Sect. I5.1, subparagraph 2)
 4. The allowable horizontal shear load per stud connector q shall be the value stipulated in Sect. I4 (Tables I4.1 and I4.2), except when the ratio $w_{r}/h_{r}$ is less than 1.5, the allowable load shall be multiplied by the following reduction factor: 
 
 $$
-0. 6 \left(\frac {w _ {r}}{h _ {r}}\right) \left(\frac {H _ {s}}{h _ {r}} - 1. 0\right) \leq 1. 0\tag{I5-2}
+0.6 \left(\frac {w _ {r}}{h _ {r}}\right) \left(\frac {H _ {s}}{h _ {r}} - 1.0\right) \leq 1.0\tag{I5-2}
 $$
 
 where $h_{r}$ and $H_{s}$ are as defined in Sect. I5.2 and $w_{r}$ is the average width of concrete rib or haunch (see Sect. I5.1, subparagraph 2, and Sect. I5.3, subparagraph 3). 
@@ -1844,11 +2173,11 @@ The connections at ends of tension or compression members in trusses shall devel
 
 ## 6. Minimum Connections
 
-Connections carrying calculated stresses, except for lacing, sag bars and girls, shall be designed to support not less than 6 kips. 
+Connections carrying calculated stresses, except for lacing, sag bars and girts, shall be designed to support not less than 6 kips. 
 
 ## 7. Splices in Heavy Sections
 
-This section applies to ASTM A6 Group 4 and 5 rolled shapes, or shapes built-up by welding plates more than 2 in. thick together to form the cross section*, and where the cross section is to be spliced and subject to primary tensile stresses due to tension or flexure. 
+This section applies to ASTM A6 Group 4 and 5 rolled shapes, or shapes built-up by welding plates more than 2 in. thick together to form the cross section[^j1-heavy], and where the cross section is to be spliced and subject to primary tensile stresses due to tension or flexure. 
 
 When tensile forces in these sections are to be transmitted through splices by full-penetration groove welds, material notch-toughness requirements as given in Sect. A3.1c, weld access holes details as given in Sect. J1.8, compatible welding procedures as given in Sect. J2.6, welding preheat requirements as given in Sect. J2.7 and thermal cut surface preparation and inspection requirements as given in Sect. M2.2 apply. 
 
@@ -1930,27 +2259,44 @@ The minimum effective throat thickness of a partial-penetration groove weld shal
 Effective Throat Thickness of Partial-penetration Groove Welds
 
 
-<table><tr><td>Welding Process</td><td>Welding Position</td><td>Included Angle at Root of Groove</td><td>Effective Throat Thickness</td></tr><tr><td rowspan="3">Shielded metal arc Submerged arcGas metal arcFlux-cored arc</td><td rowspan="3">All</td><td>J or U joint</td><td rowspan="2">Depth of chamfer</td></tr><tr><td>Bevel or V joint ≥ 60°</td></tr><tr><td>Bevel or V joint &lt; 60° but ≥ 45°</td><td>Depth of chamfer minus 1/8-in.</td></tr></table>
+| Welding Process | Welding Position | Included Angle at Root of Groove | Effective Throat Thickness |
+| --- | --- | --- | --- |
+| Shielded metal arc Submerged arcGas metal arcFlux-cored arc | All | J or U joint | Depth of chamfer |
+| Shielded metal arc Submerged arcGas metal arcFlux-cored arc | All | Bevel or V joint ≥ 60° | Depth of chamfer |
+| Shielded metal arc Submerged arcGas metal arcFlux-cored arc | All | Bevel or V joint < 60° but ≥ 45° | Depth of chamfer minus 1/8-in. |
 
 
 TABLE J2.2
 
 
-
 Effective Throat Thickness of Flare Groove Welds
 
 
-<table><tr><td>.Type of Weld</td><td>Radius (R) of Bar or Bend</td><td>Effective Throat Thickness</td></tr><tr><td>Flare bevel groove</td><td>All</td><td><eq>\frac{5}{16}R</eq></td></tr><tr><td>Flare V-groove</td><td>All</td><td><eq>1/2R^a</eq></td></tr><tr><td colspan="3"><eq>^a</eq>Use <eq>\frac{3}{8}R</eq> for Gas Metal Arc Welding (except short circuiting transfer process) when <eq>R \geq 1/2</eq>-in.</td></tr></table>
+| .Type of Weld | Radius (R) of Bar or Bend | Effective Throat Thickness |
+| --- | --- | --- |
+| Flare bevel groove | All | $\frac{5}{16}R$ |
+| Flare V-groove | All | $1/2R^a$ |
+
+$^a$Use $\frac{3}{8}R$ for Gas Metal Arc Welding (except short circuiting transfer process) when $R \geq 1/2$-in.
 
 
 TABLE J2.3
 
 
-
 Minimum Effective Throat Thickness of Partial-penetration Groove Welds
 
 
-<table><tr><td>Material Thickness of Thicker Part Joined (in.)</td><td>Minimum Effective Throat <eq>Thickness^a</eq> (in.)</td></tr><tr><td>To 1/4 inclusiveOver 1/4 to 1/2Over 1/2 to 3/4Over 3/4 to 11/2Over 11/2 to 21/4Over 21/4 to 6Over 6</td><td>1/83/161/45/163/81/25/8</td></tr><tr><td colspan="2"><eq>^aSee Sect. J2.</eq></td></tr></table>
+| Material Thickness of Thicker Part Joined (in.) | Minimum Effective Throat Thickness$^{a}$ (in.) |
+| --- | --- |
+| To 1/4 inclusive | 1/8 |
+| Over 1/4 to 1/2 | 3/16 |
+| Over 1/2 to 3/4 | 1/4 |
+| Over 3/4 to 1 1/2 | 5/16 |
+| Over 1 1/2 to 2 1/4 | 3/8 |
+| Over 2 1/4 to 6 | 1/2 |
+| Over 6 | 5/8 |
+
+$^{a}$ See Sect. J2.
 
 ## 2. Fillet Welds
 
@@ -1978,11 +2324,17 @@ The maximum size of fillet welds that is permitted along edges of connected part
 TABLE J2.4
 
 
-
 Minimum Size of Fillet Welds
 
 
-<table><tr><td>Material Thickness of Thicker Part Joined (in.)</td><td>Minimum Size of Fillet Welda (in.)</td></tr><tr><td>To 1/4 inclusiveOver 1/4 to 1/2Over 1/2 to 3/4Over 3/4</td><td>1/83/161/45/16</td></tr><tr><td colspan="2">aLeg dimension of fillet welds. Single-pass welds must be used.</td></tr></table>
+| Material Thickness of Thicker Part Joined (in.) | Minimum Size of Fillet Weld$^{a}$ (in.) |
+| --- | --- |
+| To 1/4 inclusive | 1/8 |
+| Over 1/4 to 1/2 | 3/16 |
+| Over 1/2 to 3/4 | 1/4 |
+| Over 3/4 | 5/16 |
+
+$^{a}$ Leg dimension of fillet welds. Single-pass welds must be used.
 
 The minimum effective length of fillet welds designed on the basis of strength shall be not less than 4 times the nominal size, or else the size of the weld shall be considered not to exceed $\frac{1}{4}$ of its effective length. If longitudinal fillet welds are used alone in end connections of flat bar tension members, the length of each fillet weld shall be not less than the perpendicular distance between them. The transverse spacing of longitudinal fillet welds used in end connections of tension members shall not exceed 8 in., unless the member is designed on the basis of effective net area in accordance with Sect. B3. 
 
@@ -2036,11 +2388,28 @@ AMERICAN INSTITUTE OF STEEL CONSTRUCTION
 TABLE J2.5
 
 
-
 Allowable Stress on Welds $^{f}$
 
 
-<table><tr><td>Type of Weld and Stressa</td><td>Allowable Stress</td><td>Required Weld Strength Levelb,c</td></tr><tr><td colspan="3">Complete-penetration Groove Welds</td></tr><tr><td>Tension normal to effective area</td><td>Same as base metal</td><td>“Matching” weld metal shall be used.</td></tr><tr><td>Compression normal to effective area</td><td>Same as base metal</td><td rowspan="3">Weld metal with a strength level equal to or less than “matching” weld metal is permitted.</td></tr><tr><td>Tension or compression parallel to axis of weld</td><td>Same as base metal</td></tr><tr><td>Shear on effective area</td><td>0.30 × nominal tensile strength of weld metal (ksi)</td></tr><tr><td colspan="3">Partial-penetration Groove Weldsd</td></tr><tr><td>Compression normal to effective area</td><td>Same as base metal</td><td rowspan="4">Weld metal with a strength level equal to or less than “matching” weld metal is permitted.</td></tr><tr><td>Tension or compression parallel to axis of welde</td><td>Same as base metal</td></tr><tr><td>Shear parallel to axis of weld</td><td>0.30 × nominal tensile strength of weld metal (ksi)</td></tr><tr><td>Tension normal to effective area</td><td>0.30 × nominal tensile strength of weld metal (ksi), except tensile stress on base metal shall not exceed 0.60 × yield stress of base metal</td></tr><tr><td colspan="3">Fillet Welds</td></tr><tr><td>Shear on effective area</td><td>0.30 × nominal tensile strength of weld metal (ksi)</td><td rowspan="2">Weld metal with a strength level equal to or less than “matching” weld metal is permitted.</td></tr><tr><td>Tension or compression Parallel to axis of welde</td><td>Same as base metal</td></tr><tr><td colspan="3">Plug and Slot Welds</td></tr><tr><td>Shear parallel to faying surfaces (on effective area)</td><td>0.30 × nominal tensile strength of weld metal (ksi)</td><td>Weld metal with a strength level equal to or less than “matching” weld metal is permitted.</td></tr><tr><td colspan="3">aFor definition of effective area, see Sect. J2.bFor “matching” weld metal, see Table 4.1.1, AWS D1.1.cWeld metal one strength level stronger than “matching” weld metal will be permitted.dSee Sect. J2.1b for a limitation on use of partial-penetration groove welded joints.eFillet welds and partial-penetration groove welds joining the component elements of built-up members, such as flange-to-web connections, may be designed without regard to the tensile or compressive stress in these elements parallel to the axis of the welds.fThe design of connected material is governed by Chapters D through G. Also see Commentary Sect. J2.4.</td></tr></table>
+| Type of Weld and Stressa | Allowable Stress | Required Weld Strength Levelb,c |
+| --- | --- | --- |
+| Complete-penetration Groove Welds |  |  |
+| Tension normal to effective area | Same as base metal | “Matching” weld metal shall be used. |
+| Compression normal to effective area | Same as base metal | Weld metal with a strength level equal to or less than “matching” weld metal is permitted. |
+| Tension or compression parallel to axis of weld | Same as base metal | Weld metal with a strength level equal to or less than “matching” weld metal is permitted. |
+| Shear on effective area | 0.30 × nominal tensile strength of weld metal (ksi) | Weld metal with a strength level equal to or less than “matching” weld metal is permitted. |
+| Partial-penetration Groove Weldsd |  |  |
+| Compression normal to effective area | Same as base metal | Weld metal with a strength level equal to or less than “matching” weld metal is permitted. |
+| Tension or compression parallel to axis of welde | Same as base metal | Weld metal with a strength level equal to or less than “matching” weld metal is permitted. |
+| Shear parallel to axis of weld | 0.30 × nominal tensile strength of weld metal (ksi) | Weld metal with a strength level equal to or less than “matching” weld metal is permitted. |
+| Tension normal to effective area | 0.30 × nominal tensile strength of weld metal (ksi), except tensile stress on base metal shall not exceed 0.60 × yield stress of base metal | Weld metal with a strength level equal to or less than “matching” weld metal is permitted. |
+| Fillet Welds |  |  |
+| Shear on effective area | 0.30 × nominal tensile strength of weld metal (ksi) | Weld metal with a strength level equal to or less than “matching” weld metal is permitted. |
+| Tension or compression Parallel to axis of welde | Same as base metal | Weld metal with a strength level equal to or less than “matching” weld metal is permitted. |
+| Plug and Slot Welds |  |  |
+| Shear parallel to faying surfaces (on effective area) | 0.30 × nominal tensile strength of weld metal (ksi) | Weld metal with a strength level equal to or less than “matching” weld metal is permitted. |
+
+aFor definition of effective area, see Sect. J2.bFor “matching” weld metal, see Table 4.1.1, AWS D1.1.cWeld metal one strength level stronger than “matching” weld metal will be permitted.dSee Sect. J2.1b for a limitation on use of partial-penetration groove welded joints.eFillet welds and partial-penetration groove welds joining the component elements of built-up members, such as flange-to-web connections, may be designed without regard to the tensile or compressive stress in these elements parallel to the axis of the welds.fThe design of connected material is governed by Chapters D through G. Also see Commentary Sect. J2.4.
 
 ## J3. BOLTS, THREADED PARTS AND RIVETS
 
@@ -2066,11 +2435,17 @@ e. Long-slotted holes are permitted in only one of the connected parts of either
 TABLE J3.1
 
 
-
 Nominal Hole Dimensions
 
 
-<table><tr><td rowspan="2">Bolt Dia.</td><td colspan="4">Hole Dimensions</td></tr><tr><td>Standard (Dia.)</td><td>Oversize (Dia.)</td><td>Short-slot (Width × length)</td><td>Long-slot (Width × length)</td></tr><tr><td><eq>1/2</eq></td><td><eq>9/16</eq></td><td><eq>5/8</eq></td><td><eq>9/16 \times 11/16</eq></td><td><eq>9/16 \times 11/4</eq></td></tr><tr><td><eq>5/8</eq></td><td><eq>11/16</eq></td><td><eq>13/16</eq></td><td><eq>11/16 \times 7/8</eq></td><td><eq>11/16 \times 19/16</eq></td></tr><tr><td><eq>3/4</eq></td><td><eq>13/16</eq></td><td><eq>15/16</eq></td><td><eq>13/16 \times 1</eq></td><td><eq>13/16 \times 17/8</eq></td></tr><tr><td><eq>7/8</eq></td><td><eq>15/16</eq></td><td><eq>11/16</eq></td><td><eq>15/16 \times 11/8</eq></td><td><eq>15/16 \times 23/16</eq></td></tr><tr><td>1</td><td><eq>11/16</eq></td><td><eq>11/4</eq></td><td><eq>11/16 \times 15/16</eq></td><td><eq>11/16 \times 21/2</eq></td></tr><tr><td><eq>\geq 11/8</eq></td><td><eq>d + 1/16</eq></td><td><eq>d + 5/16</eq></td><td><eq>(d + 1/16) \times (d + 3/8)</eq></td><td><eq>(d + 1/16) \times (2.5 \times d)</eq></td></tr></table>
+| Bolt Dia. | Standard (Dia.) | Oversize (Dia.) | Short-slot (Width × length) | Long-slot (Width × length) |
+| --- | --- | --- | --- | --- |
+| 1/2 | 9/16 | 5/8 | 9/16 × 11/16 | 9/16 × 1 1/4 |
+| 5/8 | 11/16 | 13/16 | 11/16 × 7/8 | 11/16 × 1 9/16 |
+| 3/4 | 13/16 | 15/16 | 13/16 × 1 | 13/16 × 1 7/8 |
+| 7/8 | 15/16 | 1 1/16 | 15/16 × 1 1/8 | 15/16 × 2 3/16 |
+| 1 | 1 1/16 | 1 1/4 | 1 1/16 × 1 5/16 | 1 1/16 × 2 1/2 |
+| ≥ 1 1/8 | $d+1/16$ | $d+5/16$ | $(d+1/16)\times(d+3/8)$ | $(d+1/16)\times(2.5d)$ |
 
 
 AMERICAN INSTITUTE OF STEEL CONSTRUCTION
@@ -2100,7 +2475,20 @@ TABLE J3.2
 
 Allowable Stress on Fasteners, ksi 
 
-<table><tr><td rowspan="4">Description of Fasteners</td><td rowspan="4">Allow-able <eq>Tension^g(F_t)</eq></td><td colspan="5">Allowable <eq>Shear^g(F_v)</eq></td></tr><tr><td colspan="4"><eq>Slip-critical Connections^{e,i}</eq></td><td rowspan="3">Bearing-type <eq>Connec-tions^i</eq></td></tr><tr><td rowspan="2">Standard size Holes</td><td rowspan="2">Oversized and Short-slotted Holes</td><td colspan="2">Long-slotted holes</td></tr><tr><td>Transverse<eq>^1</eq>Load</td><td>Parallel<eq>^1</eq>Load</td></tr><tr><td>A502, Gr. 1, hot-driven rivets</td><td><eq>23.0^a</eq></td><td></td><td></td><td></td><td></td><td><eq>17.5^f</eq></td></tr><tr><td>A502, Gr. 2 and 3, hot-driven rivets</td><td><eq>29.0^a</eq></td><td></td><td></td><td></td><td></td><td><eq>22.0^f</eq></td></tr><tr><td>A307 bolts</td><td><eq>20.0^a</eq></td><td></td><td></td><td></td><td></td><td><eq>10.0^{b,f}</eq></td></tr><tr><td>Threaded parts meeting the requirements of Sects. A3.1 and A3.4 and A449 bolts meeting the requirements of Sect. A3.4, when threads are not excluded from shear planes</td><td><eq>0.33F_u^{a,c,h}</eq></td><td></td><td></td><td></td><td></td><td><eq>0.17F_u^h</eq></td></tr><tr><td>Threaded parts meeting the requirements of Sects. A3.1 and A3.4, and A449 bolts meeting the requirements of Sect. A3.4, when threads are excluded from shear planes</td><td><eq>0.33F_u^{a,h}</eq></td><td></td><td></td><td></td><td></td><td><eq>0.22F_u^h</eq></td></tr><tr><td>A325 bolts, when threads are not excluded from shear planes</td><td><eq>44.0^d</eq></td><td>17.0</td><td>15.0</td><td>12.0</td><td>10.0</td><td><eq>21.0^f</eq></td></tr><tr><td>A325 bolts, when threads are excluded from shear planes</td><td><eq>44.0^d</eq></td><td>17.0</td><td>15.0</td><td>12.0</td><td>10.0</td><td><eq>30.0^f</eq></td></tr><tr><td>A490 bolts, when threads are not excluded from shear planes</td><td><eq>54.0^d</eq></td><td>21.0</td><td>18.0</td><td>15.0</td><td>13.0</td><td><eq>28.0^f</eq></td></tr><tr><td>A490 bolts, when threads are excluded from shear planes</td><td><eq>54.0^d</eq></td><td>21.0</td><td>18.0</td><td>15.0</td><td>13.0</td><td><eq>40.0^f</eq></td></tr><tr><td colspan="7"><eq>^aStatic loading only.</eq><eq>^bThreads permitted in shear planes.</eq><eq>^cThe tensile capacity of the threaded portion of an upset rod, based upon the cross-sectional area at its major thread diameter \( A_b</eq> shall be larger than the nominal body area of the rod before upsetting times <eq>0.60F_y</eq>.<eq>^dFor A325 and A490 bolts subject to tensile fatigue loading, see Appendix K4.3.</eq><eq>^eClass A (slip coefficient 0.33). Clean mill scale and blast-cleaned surfaces with Class A coatings. When specified by the designer, the allowable shear stress, F_v, for slip-critical connections having special faying surface conditions may be increased to the applicable value given in the RCSC Specification.\( ^fWhen bearing-type connections used to splice tension members have a fastener pattern whose length, measured parallel to the line of force, exceeds 50 in., tabulated values shall be reduced by 20%.</eq><eq>^gSee Sect. A5.2</eq><eq>^hSee Table 2, Numerical Values Section for values for specific ASTM steel specifications.\( ^iFor limitations on use of oversized and slotted holes, see Sect. J3.2.</eq><eq>^jDirection of load application relative to long axis of slot.</eq></td></tr></table>
+| Description of Fasteners | Allowable Tension$^{g}$ ($F_t$) | Slip-critical$^{e,i}$: Standard-size Holes | Slip-critical$^{e,i}$: Oversized and Short-slotted Holes | Slip-critical$^{e,i}$: Long-slotted, Transverse$^{j}$ Load | Slip-critical$^{e,i}$: Long-slotted, Parallel$^{j}$ Load | Bearing-type Connections$^{i}$: Shear ($F_v$) |
+| --- | --- | --- | --- | --- | --- | --- |
+
+| A502, Gr. 1, hot-driven rivets | $23.0^a$ |  |  |  |  | $17.5^f$ |
+| A502, Gr. 2 and 3, hot-driven rivets | $29.0^a$ |  |  |  |  | $22.0^f$ |
+| A307 bolts | $20.0^a$ |  |  |  |  | $10.0^{b,f}$ |
+| Threaded parts meeting the requirements of Sects. A3.1 and A3.4 and A449 bolts meeting the requirements of Sect. A3.4, when threads are not excluded from shear planes | $0.33F_u^{a,c,h}$ |  |  |  |  | $0.17F_u^h$ |
+| Threaded parts meeting the requirements of Sects. A3.1 and A3.4, and A449 bolts meeting the requirements of Sect. A3.4, when threads are excluded from shear planes | $0.33F_u^{a,h}$ |  |  |  |  | $0.22F_u^h$ |
+| A325 bolts, when threads are not excluded from shear planes | $44.0^d$ | 17.0 | 15.0 | 12.0 | 10.0 | $21.0^f$ |
+| A325 bolts, when threads are excluded from shear planes | $44.0^d$ | 17.0 | 15.0 | 12.0 | 10.0 | $30.0^f$ |
+| A490 bolts, when threads are not excluded from shear planes | $54.0^d$ | 21.0 | 18.0 | 15.0 | 13.0 | $28.0^f$ |
+| A490 bolts, when threads are excluded from shear planes | $54.0^d$ | 21.0 | 18.0 | 15.0 | 13.0 | $40.0^f$ |
+
+$^{a}$ Static loading only.<br>$^{b}$ Threads permitted in shear planes.<br>$^{c}$ The tensile capacity of the threaded portion of an upset rod, based upon the cross-sectional area at its major thread diameter $A_b$, shall be larger than the nominal body area of the rod before upsetting times $0.60F_y$.<br>$^{d}$ For A325 and A490 bolts subject to tensile fatigue loading, see Appendix K4.3.<br>$^{e}$ Class A (slip coefficient 0.33). Clean mill scale and blast-cleaned surfaces with Class A coatings. When specified by the designer, the allowable shear stress, $F_v$, for slip-critical connections having special faying surface conditions may be increased to the applicable value given in the RCSC Specification.<br>$^{f}$ When bearing-type connections used to splice tension members have a fastener pattern whose length, measured parallel to the line of force, exceeds 50 in., tabulated values shall be reduced by 20%.<br>$^{g}$ See Sect. A5.2.<br>$^{h}$ See Table 2, Numerical Values Section for values for specific ASTM steel specifications.<br>$^{i}$ For limitations on use of oversized and slotted holes, see Sect. J3.2.<br>$^{j}$ Direction of load application relative to long axis of slot.
 
 ## 6. Combined Tension and Shear in Slip-critical Joints
 
@@ -2113,7 +2501,7 @@ On the projected area of bolts and rivets in shear connections with the end dist
 1. In standard-or short-slotted holes with two or more bolts in the line of force, 
 
 $$
-F _ {p} = 1. 2 F _ {u}\tag{J3-1}
+F _ {p} = 1.2 F _ {u}\tag{J3-1}
 $$
 
 where 
@@ -2123,40 +2511,46 @@ $F_{p} =$ allowable bearing stress, ksi
 2. In long-slotted holes with the axis of the slot perpendicular to the direction of load and with two or more bolts in the line of force, 
 
 $$
-F _ {p} = 1. 0 F _ {u}\tag{J3-2}
+F _ {p} = 1.0 F _ {u}\tag{J3-2}
 $$
 
 On the projected area of the bolt or rivet closest to the edge in standard or short-slotted holes with the edge distance less than $1\frac{1}{2}d$ and in all connections with a single bolt in the line of force: 
 
 $$
-F _ {p} = L _ {e} F _ {u} / 2 d \leq 1. 2 F _ {u}\tag{J3-3}
+F _ {p} = L _ {e} F _ {u} / 2 d \leq 1.2 F _ {u}\tag{J3-3}
 $$
 
 
 TABLE J3.3
 
 
-
 Allowable Tension Stress $F_{t}$ for Fasteners in Bearing-type Connections
 
 
-<table><tr><td>Description of Fasteners</td><td>Threads Included in Shear Plane</td><td>Threads Excluded from Shear Plane</td></tr><tr><td>A307 bolts</td><td colspan="2"><eq>26 - 1.8f_{v} \leq 20</eq></td></tr><tr><td>A325 bolts</td><td><eq>\sqrt{(44)^{2} - 4.39f_{v}^{2}}</eq></td><td><eq>\sqrt{(44)^{2} - 2.15f_{v}^{2}}</eq></td></tr><tr><td>A490 bolts</td><td><eq>\sqrt{(54)^{2} - 3.75f_{v}^{2}}</eq></td><td><eq>\sqrt{(54)^{2} - 1.82f_{v}^{2}}</eq></td></tr><tr><td>Threaded parts, A449 bolts over <eq>1\frac{1}{2}</eq>-in. dia.</td><td><eq>0.43F_{u} - 1.8f_{v} \leq 0.33F_{u}</eq></td><td><eq>0.43F_{u} - 1.4f_{v} \leq 0.33F_{u}</eq></td></tr><tr><td>A502 Gr. 1 rivets</td><td colspan="2"><eq>30 - 1.3f_{v} \leq 23</eq></td></tr><tr><td>A502 Gr. 2 rivets</td><td colspan="2"><eq>38 - 1.3f_{v} \leq 29</eq></td></tr></table>
+| Description of Fasteners | Threads Included in Shear Plane | Threads Excluded from Shear Plane |
+| --- | --- | --- |
+| A307 bolts | $26 - 1.8f_{v} \leq 20$ |  |
+| A325 bolts | $\sqrt{(44)^{2} - 4.39f_{v}^{2}}$ | $\sqrt{(44)^{2} - 2.15f_{v}^{2}}$ |
+| A490 bolts | $\sqrt{(54)^{2} - 3.75f_{v}^{2}}$ | $\sqrt{(54)^{2} - 1.82f_{v}^{2}}$ |
+| Threaded parts, A449 bolts over $1\frac{1}{2}$-in. dia. | $0.43F_{u} - 1.8f_{v} \leq 0.33F_{u}$ | $0.43F_{u} - 1.4f_{v} \leq 0.33F_{u}$ |
+| A502 Gr. 1 rivets | $30 - 1.3f_{v} \leq 23$ |  |
+| A502 Gr. 2 rivets | $38 - 1.3f_{v} \leq 29$ |  |
 
 where, 
 
-$L_{e} =$ distance from the free edge to center of the bolt, in. $d_{\cdot} =$ bolt dia., in. 
+$L_{e} =$ distance from the free edge to center of the bolt, in. $d =$ bolt dia., in. 
 
 If deformation around the hole is not a design consideration and adequate spacing and edge distance is as required by Sects. J3.8 and J3.9, the following equation is permitted in lieu of Equation (J3-1): 
 
 $$
-F _ {p} = 1. 5 F _ {u}\tag{J3-4}
+F _ {p} = 1.5 F _ {u}\tag{J3-4}
 $$
 
 and the limit in Equation (J3-3) shall be increased to $1.5F_{u}$ . 
 
 ## 8. Minimum Spacing
 
-The distance between centers of standard, oversized or slotted fastener holes shall not be less than $2\frac{1}{3}$ times the nominal diameter of the fastener* nor less than that required by the following paragraph, if applicable. 
+The distance between centers of standard, oversized or slotted fastener holes shall not be less than $2\frac{1}{3}$ times the nominal diameter of the fastener[^j3-spacing] nor less than that required by the following paragraph, if applicable. 
 
 Along a line of transmitted forces, the distance between centers of holes s shall be not less than 3d when $F_{p}$ is determined by Equations (J3-1) and (J3-2). Otherwise, the distance between centers of holes shall not be less than the following: 
 
@@ -2195,25 +2589,52 @@ Minimum Edge Distance, in.
 TABLE J3.4
 
 
-
 Values of Spacing Increment $C_{1}$ , in.
 
 
-<table><tr><td rowspan="3">NominalDia. ofFastener</td><td rowspan="3">OversizeHoles</td><td colspan="3">Slotted Holes</td></tr><tr><td rowspan="2">Perpendicularto Lineof Force</td><td colspan="2">Parallel to Lineof Force</td></tr><tr><td>Short-slots</td><td>Long-slots<eq>^a</eq></td></tr><tr><td>≤ 7/8</td><td>1/8</td><td>0</td><td>3/16</td><td>11⁄2d - 1/16</td></tr><tr><td>1</td><td>3/16</td><td>0</td><td>1/4</td><td>17/16</td></tr><tr><td>≥11/8</td><td>1/4</td><td>0</td><td>5/16</td><td>11⁄2d - 1/16</td></tr><tr><td colspan="5"><eq>^a</eq>When length of slot is less than maximum allowed in Table J3.1, C1may be reducedby the difference between the maximum and actual slot lengths.</td></tr></table>
+| Nominal Dia. of Fastener | Oversize Holes | Slotted Holes: Perpendicular to Line of Force | Slotted Holes: Parallel, Short-slots | Slotted Holes: Parallel, Long-slots$^{a}$ |
+| --- | --- | --- | --- | --- |
+| ≤ 7/8 | 1/8 | 0 | 3/16 | $1\frac{1}{2}d-1/16$ |
+| 1 | 3/16 | 0 | 1/4 | 1 7/16 |
+| ≥ 1 1/8 | 1/4 | 0 | 5/16 | $1\frac{1}{2}d-1/16$ |
+
+$^{a}$ When length of slot is less than maximum allowed in Table J3.1, $C_1$ may be reduced by the difference between the maximum and actual slot lengths.
 
 ## TABLE J3.5
 
-<table><tr><td>Nominal Bolt or Rivet Dia. (in.)</td><td>At Sheared Edges</td><td>At Rolled Edges of Plates, Shapes or Bars, Gas Cut or Saw-cut <eq>Edges^b</eq></td></tr><tr><td><eq>1/2</eq></td><td><eq>7/8</eq></td><td><eq>3/4</eq></td></tr><tr><td><eq>5/8</eq></td><td><eq>11/8</eq></td><td><eq>7/8</eq></td></tr><tr><td><eq>3/4</eq></td><td><eq>11/4</eq></td><td>1</td></tr><tr><td><eq>7/8</eq></td><td><eq>11/2^c</eq></td><td><eq>11/8</eq></td></tr><tr><td>1</td><td><eq>13/4^c</eq></td><td><eq>11/4</eq></td></tr><tr><td><eq>11/8</eq></td><td>2</td><td><eq>11/2</eq></td></tr><tr><td><eq>11/4</eq></td><td><eq>21/4</eq></td><td><eq>15/8</eq></td></tr><tr><td>Over <eq>11/4</eq></td><td><eq>13/4 \times Dia.</eq></td><td><eq>11/4 \times Dia.</eq></td></tr><tr><td colspan="3"><eq>^a</eq>For oversized or slotted holes, see Table J3.6.<eq>^b</eq>All edge distances in this column may be reduced <eq>1/8</eq>-in. when the hole is at a point where stress does not exceed 25% of the maximum design strength in the element.<eq>^c</eq>These may be <eq>11/4</eq> in. at the ends of beam connection angles.</td></tr></table>
+| Nominal Bolt or Rivet Dia. (in.) | At Sheared Edges | At Rolled Edges of Plates, Shapes or Bars, Gas Cut or Saw-cut Edges$^{b}$ |
+| --- | --- | --- |
+| 1/2 | 7/8 | 3/4 |
+| 5/8 | 1 1/8 | 7/8 |
+| 3/4 | 1 1/4 | 1 |
+| 7/8 | 1 1/2$^{c}$ | 1 1/8 |
+| 1 | 1 3/4$^{c}$ | 1 1/4 |
+| 1 1/8 | 2 | 1 1/2 |
+| 1 1/4 | 2 1/4 | 1 5/8 |
+| Over 1 1/4 | 1 3/4 × Dia. | 1 1/4 × Dia. |
+
+$^{a}$ For oversized or slotted holes, see Table J3.6.
+
+$^{b}$ All edge distances in this column may be reduced 1/8-in. when the hole is at a point where stress does not exceed 25% of the maximum design strength in the element.
+
+$^{c}$ These may be 1 1/4 in. at the ends of beam connection angles.
 
 
 TABLE J3.6
 
 
-
 Values of Edge Distance Increment $C_2$ , in.
 
 
-<table><tr><td rowspan="3">NominalDia. ofFastener(in.)</td><td rowspan="3">OversizedHoles</td><td colspan="3">Slotted Holes</td></tr><tr><td colspan="2">Perpendicularto Edge</td><td rowspan="2">Parallel toEdge</td></tr><tr><td>Short Slots</td><td>Long Slots<eq>^a</eq></td></tr><tr><td>≤7/8</td><td>1/16</td><td>1/8</td><td rowspan="3">3/4d</td><td rowspan="3">0</td></tr><tr><td>1</td><td>1/8</td><td>1/8</td></tr><tr><td>≤11/8</td><td>1/8</td><td>3/16</td></tr><tr><td colspan="5"><eq>^aWhen length of slot is less than maximum allowable (see Table J3.1), C_2 may be reduced by one-half the difference between the maximum and actual slot lengths.</eq></td></tr></table>
+| Nominal Dia. of Fastener (in.) | Oversized Holes | Slotted Holes: Perpendicular, Short Slots | Slotted Holes: Perpendicular, Long Slots$^{a}$ | Slotted Holes: Parallel to Edge |
+| --- | --- | --- | --- | --- |
+| ≤ 7/8 | 1/16 | 1/8 | $3d/4$ | 0 |
+| 1 | 1/8 | 1/8 | $3d/4$ | 0 |
+| ≤ 1 1/8 | 1/8 | 3/16 | $3d/4$ | 0 |
+
+$^{a}$ When length of slot is less than maximum allowable (see Table J3.1), $C_2$ may be reduced by one-half the difference between the maximum and actual slot lengths.
+
+<!-- OCR audit: the last-row inequality is printed as ≤ in the supplied PDF (p. 40, left; 5-76); retained pending source clarification. -->
 
 The distance from the center of an oversized or slotted hole to an edge of a connected part shall be not less than required for a standard hole plus the applicable increment $C_{2}$ from Table J3.6. 
 
@@ -2232,25 +2653,37 @@ A307 bolts which carry calculated stress, with a grip exceeding five diameters, 
 At beam end connections where the top flange is coped, and in similar situations where failure might occur by shear along a plane through the fasteners, or by a combination of shear along a plane through the fasteners plus tension along a perpendicular plane: 
 
 $$
-F _ {\nu} = 0. 3 0 F _ {u}\tag{J4-1}
+F_{v} = 0.30 F _ {u}\tag{J4-1}
 $$
 
 
 TABLE J3.7
-Minimum Pretension for Fully-tightened Bolts, kips $^{4}$
+Minimum Pretension for Fully-tightened Bolts, kips $^{a}$
 
 
-<table><tr><td>Bolt Size, in.</td><td>A325 Bolts</td><td>A490 Bolts</td></tr><tr><td><eq>\frac{1}{2}</eq></td><td>12</td><td>15</td></tr><tr><td><eq>\frac{5}{8}</eq></td><td>19</td><td>24</td></tr><tr><td><eq>\frac{3}{4}</eq></td><td>28</td><td>35</td></tr><tr><td><eq>\frac{7}{8}</eq></td><td>39</td><td>49</td></tr><tr><td>1</td><td>51</td><td>64</td></tr><tr><td><eq>1\frac{1}{8}</eq></td><td>56</td><td>80</td></tr><tr><td><eq>1\frac{1}{4}</eq></td><td>71</td><td>102</td></tr><tr><td><eq>1\frac{3}{8}</eq></td><td>85</td><td>121</td></tr><tr><td><eq>1\frac{1}{2}</eq></td><td>103</td><td>148</td></tr><tr><td colspan="3"><eq>^a</eq>Equal to 0.70 of minimum tensile strength of bolts, rounded off to nearest kip, as specified in ASTM specifications for A325 and A490 bolts with UNC threads.</td></tr></table>
+| Bolt Size, in. | A325 Bolts | A490 Bolts |
+| --- | --- | --- |
+| $\frac{1}{2}$ | 12 | 15 |
+| $\frac{5}{8}$ | 19 | 24 |
+| $\frac{3}{4}$ | 28 | 35 |
+| $\frac{7}{8}$ | 39 | 49 |
+| 1 | 51 | 64 |
+| $1\frac{1}{8}$ | 56 | 80 |
+| $1\frac{1}{4}$ | 71 | 102 |
+| $1\frac{3}{8}$ | 85 | 121 |
+| $1\frac{1}{2}$ | 103 | 148 |
+
+$^a$Equal to 0.70 of minimum tensile strength of bolts, rounded off to nearest kip, as specified in ASTM specifications for A325 and A490 bolts with UNC threads.
 
 acting on the net shear area $A_{v}$ and, 
 
 $$
-F _ {t} = 0. 5 0 F _ {u}\tag{J4-2}
+F _ {t} = 0.50 F _ {u}\tag{J4-2}
 $$
 
 acting on the net tension area $A_{t}$ . 
 
-The minimum net failure path on the periphery of welded connections shall be checked.* 
+The minimum net failure path on the periphery of welded connections shall be checked.[^j4-path] 
 
 ## J5. CONNECTING ELEMENTS
 
@@ -2279,13 +2712,16 @@ Groove welded splices in plate girders and beams shall develop the full strength
 On contact area of milled surfaces and ends of fitted bearing stiffeners; on projected area of pins in reamed, drilled or bored holes: 
 
 $$
-F _ {p} = 0. 9 0 F _ {y} ^ {*}\tag{J8-1}
+F_p = 0.90F_y\tag{J8-1}
 $$
+
+[^j8-1]
+
 
 Expansion rollers and rockers, kips per lin. in.: 
 
 $$
-F _ {p} = \left(\frac {F _ {y} - 1 3}{2 0}\right) 0. 6 6 d\tag{J8-2}
+F _ {p} = \left(\frac {F _ {y} - 13}{20}\right) 0.66 d\tag{J8-2}
 $$
 
 where d is the diameter of roller or rocker, in. 
@@ -2335,37 +2771,31 @@ For column webs subject to high shears, see Sect. K1.7; for bearing stiffeners, 
 A pair of stiffeners shall be provided opposite the tension flange or flange plate of the beam or girder framing into the member when the thickness of the member flange $t_{f}$ is less than 
 
 $$
-0. 4 \sqrt {\frac {P _ {b f}}{F _ {y c}}}\tag{K1-1}
+0.4 \sqrt {\frac {P _ {b f}}{F _ {y c}}}\tag{K1-1}
 $$
 
 where 
 
 $F_{yc} =$ column yield stress, ksi 
 
-$P_{bf} = \text{the computed force delivered by the flange or moment connection plate multiplied by } 5/3, \text{ when the computed force is due to live and dead load only, or by } 4/3, * \text{ when the computed force is due to live and dead load in conjunction with wind or earthquake forces, kips}$ 
+$P_{bf} = \text{the computed force delivered by the flange or moment connection plate multiplied by } 5/3, \text{ when the computed force is due to live and dead load only, or by } 4/3, \text{ when the computed force is due to live and dead load in conjunction with wind or earthquake forces, kips}$ [^k1-factor]
 
 If the length of loading measured across the member flange is less than 0.15b, where b is the member flange width, Equation (K1-1) need not be checked. 
 
-Ser.1,14] WERS AND FLANGE UNDER CONCENTRATED FORCES 5-81 
-
 ## 3. Local Web Yielding
 
-$$
-(c o m p r e s i o n l o c t e d e / \text {ème})
-$$
-
-Bearing stiffeners shall be provided if the compressive stress at the web toe of the fillets resulting from concentrated loads exceeds $0.66F_{v}$ . 
+Bearing stiffeners shall be provided if the compressive stress at the web toe of the fillets resulting from concentrated loads exceeds $0.66F_{y}$ . 
 
 a. When the force to be resisted is a concentrated load producing tension or compression, applied at a distance from the member end that is greater than the depth of the member, 
 
 $$
-\frac {R}{t _ {w} (N + 5 k)} \leq 0. 6 6 F _ {y}\tag{K1-2}
+\frac {R}{t _ {w} (N + 5 k)} \leq 0.66 F _ {y}\tag{K1-2}
 $$
 
 b. When the force to be resisted is a concentrated load applied at or near the end of the member, 
 
 $$
-\frac {R}{t _ {w} (N + 2 . 5 k)} \leq 0. 6 6 F _ {y}\tag{K1-3}
+\frac {R}{t _ {w} (N + 2.5 k)} \leq 0.66 F _ {y}\tag{K1-3}
 $$
 
 where 
@@ -2380,22 +2810,18 @@ k = distance from outer face of flange to web toe of fillet, in.
 
 ## 4. Web Crippling
 
-$$
-(f ^ {\prime} \text {   l'ambemont   local   de   l'âme   })
-$$
-
 Bearing stiffeners shall be provided in the webs of members under concentrated loads, when the compressive force exceeds the following limits: 
 
 a. When the concentrated load is applied at a distance not less than d/2 from the end of the member: 
 
 $$
-R = 6 7. 5 t _ {w} ^ {2} \left[ 1 + 3 \left(\frac {N}{d}\right) \left(\frac {t _ {w}}{t _ {f}}\right) ^ {1. 5} \right] \sqrt {F _ {y w} t _ {f} / t _ {w}}.\tag{K1-4}
+R = 67.5 t _ {w} ^ {2} \left[ 1 + 3 \left(\frac {N}{d}\right) \left(\frac {t _ {w}}{t _ {f}}\right) ^ {1.5} \right] \sqrt {F _ {y w} t _ {f} / t _ {w}}.\tag{K1-4}
 $$
 
 b. When the concentrated load is applied less than a distance d/2 from the end of the member: 
 
 $$
-R = 3 4 t _ {w} ^ {2} \left[ 1 + 3 \left(\frac {N}{d}\right) \left(\frac {t _ {w}}{t _ {f}}\right) ^ {1. 5} \right] \sqrt {F _ {y w} t _ {f} / t _ {w}}\tag{K1-5}
+R = 34 t _ {w} ^ {2} \left[ 1 + 3 \left(\frac {N}{d}\right) \left(\frac {t _ {w}}{t _ {f}}\right) ^ {1.5} \right] \sqrt {F _ {y w} t _ {f} / t _ {w}}\tag{K1-5}
 $$
 
 where 
@@ -2410,24 +2836,18 @@ If stiffeners are provided and extend at least one-half the web depth, Equations
 
 ## 5. Sidesway Web Buckling
 
-$$
-(f \text { lembemont   de   f'ème   ou   déverdement })
-$$
-
 Bearing stiffeners shall be provided in the webs of members with flanges not restrained against relative movement by stiffeners or lateral bracing and subject to concentrated compressive loads, when the compressive force exceeds the following limits: 
-
-[Ché] 
 
 a. If the loaded flange is restrained against rotation and $(d_{c}/t_{w})/(l/b_{f})$ is less than 2.3: 
 
 $$
-R = \frac {6 , 8 0 0 t _ {w} ^ {3}}{h} \left[ 1 + 0. 4 \left(\frac {d _ {c} / t _ {w}}{l / b _ {f}}\right) ^ {3} \right]\tag{K1-6}
+R = \frac {6,800 t _ {w} ^ {3}}{h} \left[ 1 + 0.4 \left(\frac {d _ {c} / t _ {w}}{l / b _ {f}}\right) ^ {3} \right]\tag{K1-6}
 $$
 
 b. If the loaded flange is not restrained against rotation and $(d_{c}/t_{w})/(l/b_{f})$ is less than 1.7: 
 
 $$
-R = \frac {6 , 8 0 0 t _ {w} ^ {3}}{h} \left[ 0. 4 \left(\frac {d _ {c} / t _ {w}}{l / b _ {f}}\right) ^ {3} \right]\tag{K1-7}
+R = \frac {6,800 t _ {w} ^ {3}}{h} \left[ 0.4 \left(\frac {d _ {c} / t _ {w}}{l / b _ {f}}\right) ^ {3} \right]\tag{K1-7}
 $$
 
 where 
@@ -2440,12 +2860,12 @@ $d_{c}=d-2k=$ web depth clear of fillets, in.
 
 Equations (K1-6) and (K1-7) need not be checked providing $(d_{c}/t_{w})/(l/b_{f})$ exceeds 2.3 or 1.7, respectively, or for webs subject to uniformly distributed load. 
 
-## 6. Compression Buckling of the Web (flémbement global de l'ème)
+## 6. Compression Buckling of the Web
 
 A stiffener or a pair of stiffeners shall be provided opposite the compression flange when the web depth clear of fillets $d_{c}$ is greater than 
 
 $$
-\frac {4 1 0 0 t _ {w c} ^ {3} \sqrt {F _ {y c}}}{P _ {b f}}\tag{K1-8}
+\frac {4100 t _ {w c} ^ {3} \sqrt {F _ {y c}}}{P _ {b f}}\tag{K1-8}
 $$
 
 where 
@@ -2454,7 +2874,7 @@ $t_{wc} =$ thickness of column web, in.
 
 ## 7. Compression Members with Web Panels Subject to High Shear
 
-Members subject to high shear stress in the web should be checked for conformance with Sect. F4.* 
+Members subject to high shear stress in the web should be checked for conformance with Sect. F4.[^k1-high-shear] 
 
 ## 8. Stiffener Requirements for Concentrated Loads
 
@@ -2465,10 +2885,6 @@ If required by Sects. K1.2, K1.3 or Equation (K1-9), stiffeners need not extend 
 If stiffeners are required by Sects. K1.4 or K1.6, the stiffeners shall be designed as axially compressed members (columns) in accordance with requirements of Sect. E2 with an effective length equal to 0.75h, a cross section composed of two stiffeners and a strip of the web having a width of $25t_{w}$ at interior stiffeners and $12t_{w}$ at the ends of members. 
 
 When the load normal to the flange is tensile, the stiffeners shall be welded to 
-
-$$
-\mathrm{S} [ \text {   1   } ] \text {   V   } \text {   AN   } \text {   AN   } \text {   NDE   } \text {   ONC   } \text {   DATE   } \text {   FORCE   } \text {   83   }
-$$
 
 the loaded flange. When the load normal to the flange is compressive, the stiffeners shall either bear on or be welded to the loaded flange. 
 
@@ -2482,7 +2898,7 @@ where
 
 $F_{yst} =$ stiffener yield stress, ksi 
 
-$k^{y_{0}}$ = distance between outer face of column flange and web toe of its fillet, if column is a rolled shape, or equivalent distance if column is a welded shape, in. 
+$k$ = distance between outer face of column flange and web toe of its fillet, if column is a rolled shape, or equivalent distance if column is a welded shape, in. 
 
 $t_{b}$ = thickness of flange or moment connection plate delivering concentrated force, in. 
 
@@ -2490,7 +2906,7 @@ Stiffeners required by the provisions of Equation (K1-9) and Sects. K1.2 and K1.
 
 1. The width of each stiffener plus $\frac{1}{2}$ the thickness of the column web shall be not less than $\frac{1}{3}$ the width of the flange or moment connection plate delivering the concentrated force. 
 
-2. The thickness of stiffeners shall be not less than one-half the thickness of the flange or plate delivering the concentrated load.* 
+2. The thickness of stiffeners shall be not less than one-half the thickness of the flange or plate delivering the concentrated load.[^k1-stiffener] 
 
 3. The weld joining stiffeners to the column web shall be sized to carry the force in the stiffener caused by unbalanced moments on opposite sides of the column. 
 
@@ -2501,21 +2917,21 @@ The roof system shall be investigated by structural analysis to assure adequate 
 The roof system shall be considered stable and not requiring further investigation if: 
 
 $$
-C _ {p} + 0. 9 C _ {s} \leq 0. 2 5\tag{K2-1}
+C _ {p} + 0.9 C _ {s} \leq 0.25\tag{K2-1}
 $$
 
 $$
-\text { and } I _ {d} \geq 2 5 (S ^ {4}) 1 0 ^ {- 6}\tag{K2-2}
+\text { and } I _ {d} \geq 25 (S ^ {4}) 10 ^ {- 6}\tag{K2-2}
 $$
 
 where 
 
 $$
-C _ {p} = \frac {3 2 L _ {s} L _ {p} ^ {4}}{1 0 ^ {7} I _ {p}}
+C _ {p} = \frac {32 L _ {s} L _ {p} ^ {4}}{10 ^ {7} I _ {p}}
 $$
 
 $$
-C _ {s} = \frac {3 2 S L _ {s} ^ {4}}{1 0 ^ {7} I _ {s}}
+C _ {s} = \frac {32 S L _ {s} ^ {4}}{10 ^ {7} I _ {s}}
 $$
 
 $L_{p} =$ column spacing in direction of girder (length of primary members), ft 
@@ -2612,8 +3028,6 @@ Beam copes and weld access holes shall meet the geometrical requirements of Sect
 
 Planing or finishing of sheared or thermally cut edges of plates or shapes will not be required unless specifically called for in the design documents or included in a stipulated edge preparation for welding. 
 
-<table><tr><td>5-88</td><td>ABF...ION,...CTI...ND</td><td>CITY</td><td>TRO</td><td>[Chap. m]</td></tr></table>
-
 ## 4. Welded Construction
 
 The technique of welding, the workmanship, appearance and quality of welds and the methods used in correcting nonconforming work shall be in accordance with “Sect. 3—Workmanship” and “Sect. 4—Technique” of the AWS Structural Welding Code—Steel, D1.1. 
@@ -2644,7 +3058,7 @@ Dimensional tolerances shall be as permitted in the Code of Standard Practice of
 
 Column bases and base plates shall be finished in accordance with the following requirements: 
 
-a. Rolled steel bearing plates 2 in. or less in thickness are permitted without milling, $^{*}$ provided a satisfactory contact bearing is obtained; rolled steel bearing plates over 2 in. but not over 4 in. in thickness may be straightened by pressing, or if presses are not available, by milling for all bearing surfaces (except as noted in subparagraphs c. and d. of this section), to obtain a satisfactory contact bearing; rolled steel bearing plates over 4 in. thick shall be milled for all bearing surfaces (except as noted in subparagraphs c. and d. of this section). 
+a. Rolled steel bearing plates 2 in. or less in thickness are permitted without milling, [^m2-bearing] provided a satisfactory contact bearing is obtained; rolled steel bearing plates over 2 in. but not over 4 in. in thickness may be straightened by pressing, or if presses are not available, by milling for all bearing surfaces (except as noted in subparagraphs c. and d. of this section), to obtain a satisfactory contact bearing; rolled steel bearing plates over 4 in. thick shall be milled for all bearing surfaces (except as noted in subparagraphs c. and d. of this section). 
 
 b. Column bases other than rolled steel bearing plates shall be milled for all bearing surfaces (except as noted in subparagraphs c. and d. of this section). 
 
@@ -2730,8 +3144,6 @@ When nondestructive testing is required, the process, extent and standards of ac
 
 The inspection of slip-critical, high-strength bolted connections shall be in accordance with the provisions of the RCSC Allowable Stress Design Specification for Structural Joints Using ASTM A325 or A490 Bolts. 
 
-## 5-92 FABRICATION EFECTION AND QUALITY CONTROL [Chen M]
-
 ## 5. Identification of Steel
 
 The fabricator shall be able to demonstrate by a written procedure and by actual practice a method of material application and identification, visible at least through the “fit-up” operation, of the main structural elements of a shipping piece. 
@@ -2748,7 +3160,7 @@ The identification method shall be capable of verifying proper material applicat
 
 ## N1. SCOPE
 
-Subject to the limitations contained herein, simple and continuous beams, braced and unbraced planar rigid frames, and similar parts of structures rigidly constructed so as to be continuous over at least one interior support, $^{*}$ are permitted to be proportioned on the basis of plastic design, i.e., on the basis of their maximum strength. This strength, as determined by rational analysis, shall be not less than that required to support a factored load equal to 1.7 times the given live load and dead load, or 1.3 times these loads acting in conjunction with 1.3 times any specified wind or earthquake forces. 
+Subject to the limitations contained herein, simple and continuous beams, braced and unbraced planar rigid frames, and similar parts of structures rigidly constructed so as to be continuous over at least one interior support, [^n1-interior] are permitted to be proportioned on the basis of plastic design, i.e., on the basis of their maximum strength. This strength, as determined by rational analysis, shall be not less than that required to support a factored load equal to 1.7 times the given live load and dead load, or 1.3 times these loads acting in conjunction with 1.3 times any specified wind or earthquake forces. 
 
 Rigid frames shall satisfy the requirements for Type 1 construction in the plane of the frame, as provided in Sect. A2.2. This does not preclude the use of some simple connections, provided provisions of Sect. N3 are satisfied. Type 2 construction is permitted for members between rigid frames. Connections joining a portion of a structure designed on the basis of plastic behavior with a portion not so designed need be no more rigid than ordinary seat-and-top-angle or ordinary web connections. 
 
@@ -2801,7 +3213,7 @@ In the plane of bending of columns which would develop a plastic hinge at ultima
 The maximum strength of an axially loaded compression member shall be taken as 
 
 $$
-P _ {c r} = 1. 7 F _ {a} A\tag{N4-1}
+P _ {c r} = 1.7 F _ {a} A\tag{N4-1}
 $$
 
 where A is the gross area of the member and $F_{a}$ , as defined by Equation (E2-1), is based upon the applicable slenderness ratio. 
@@ -2811,11 +3223,11 @@ where A is the gross area of the member and $F_{a}$ , as defined by Equation (E2
 Members subject to combined axial load and bending moment shall be proportioned to satisfy the following interaction formulas: 
 
 $$
-\frac {P}{P _ {c r}} + \frac {C _ {m} M}{\left(1 - \frac {P}{P _ {e}}\right) M _ {m}} \leq 1. 0\tag{N4-2}
+\frac {P}{P _ {c r}} + \frac {C _ {m} M}{\left(1 - \frac {P}{P _ {e}}\right) M _ {m}} \leq 1.0\tag{N4-2}
 $$
 
 $$
-\frac {P}{P _ {y}} + \frac {M}{1 . 1 8 M _ {p}} \leq 1. 0; \quad M \leq M _ {p}\tag{N4-3}
+\frac {P}{P _ {y}} + \frac {M}{1.18 M _ {p}} \leq 1.0; \quad M \leq M _ {p}\tag{N4-3}
 $$
 
 in which 
@@ -2849,7 +3261,7 @@ $$
 For columns unbraced in the weak direction: 
 
 $$
-M _ {m} = \left[ 1. 0 7 - \frac {(l / r _ {y}) \sqrt {F _ {y}}}{3 1 6 0} \right] M _ {p x} \leq M _ {p x}\tag{N4-5}
+M _ {m} = \left[ 1.07 - \frac {(l / r _ {y}) \sqrt {F _ {y}}}{3160} \right] M _ {p x} \leq M _ {p x}\tag{N4-5}
 $$
 
 ## N5. SHEAR
@@ -2857,7 +3269,7 @@ $$
 Unless reinforced by diagonal stiffeners or a doubler plate, the webs of columns, beams and girders, including areas within the boundaries of the connections, shall be so proportioned that 
 
 $$
-V \leq 0. 5 5 F _ {y} t _ {w} d\tag{N5-1}
+V \leq 0.55 F _ {y} t _ {w} d\tag{N5-1}
 $$
 
 where 
@@ -2872,13 +3284,19 @@ Web stiffeners are required on a member at a point of load application where a p
 
 At points on a member where the concentrated load delivered by the flanges of a member framing into it would produce web crippling opposite the compression flange or high-tensile stress in the connection of the tension flange, web stiffeners are required in accordance with the provisions of Sect. K1. 
 
-[Ch 
-
 ## N7. MINIMUM THICKNESS (WIDTH-THICKNESS RATIOS)
 
 The width-thickness ratio for flanges of rolled W, M or S shapes and similar built-up, single-web shapes subjected to compression involving hinge rotation under ultimate loading shall not exceed the following values: 
 
-<table><tr><td><eq>F_y</eq></td><td><eq>b_f/2t_f</eq></td></tr><tr><td>36</td><td>8.5</td></tr><tr><td>42</td><td>8.0</td></tr><tr><td>45</td><td>7.4</td></tr><tr><td>50</td><td>7.0</td></tr><tr><td>55</td><td>6.6</td></tr><tr><td>60</td><td>6.3</td></tr><tr><td>65</td><td>6.0</td></tr></table>
+| $F_y$ | $b_f/2t_f$ |
+| --- | --- |
+| 36 | 8.5 |
+| 42 | 8.0 |
+| 45 | 7.4 |
+| 50 | 7.0 |
+| 55 | 6.6 |
+| 60 | 6.3 |
+| 65 | 6.0 |
 
 It is permitted to take the thickness of sloping flanges as their average thickness. 
 
@@ -2887,11 +3305,11 @@ The width-thickness ratio of similarly compressed flange plates in box sections 
 The depth-thickness ratio of webs of members subject to plastic bending shall not exceed the value given by Equation (N7-1) or (N7-2), as applicable. 
 
 $$
-\frac {d}{t} = \frac {4 1 2}{\sqrt {F _ {y}}} \left(1 - 1. 4 \frac {P}{P _ {y}}\right) \quad \text { when } \quad \frac {P}{P _ {y}} \leq 0. 2 7\tag{N7-1}
+\frac {d}{t} = \frac {412}{\sqrt {F _ {y}}} \left(1 - 1.4 \frac {P}{P _ {y}}\right) \quad \text { when } \quad \frac {P}{P _ {y}} \leq 0.27\tag{N7-1}
 $$
 
 $$
-\frac {d}{t} = \frac {2 5 7}{\sqrt {F _ {y}}} \quad \text { when } \quad \frac {P}{P _ {y}} > 0. 2 7\tag{N7-2}
+\frac {d}{t} = \frac {257}{\sqrt {F _ {y}}} \quad \text { when } \quad \frac {P}{P _ {y}} > 0.27\tag{N7-2}
 $$
 
 ## N8. CONNECTIONS
@@ -2911,11 +3329,11 @@ High-strength bolts are permitted in joints having painted contact surfaces when
 Members shall be braced adequately to resist lateral and torsional displacements at the plastic hinge locations associated with the failure mechanism. The laterally unsupported distance $l_{cr}$ from such braced hinge locations to similarly braced adjacent points on the member or frame shall not exceed the value determined from Equation (N9-1) or (N9-2), as applicable. 
 
 $$
-\frac {l _ {c r}}{r _ {y}} = \frac {1 3 7 5}{F _ {y}} + 2 5 \quad \text { when } \quad + 1. 0 > \frac {M}{M _ {p}} > - 0. 5\tag{N9-1}
+\frac {l _ {c r}}{r _ {y}} = \frac {1375}{F _ {y}} + 25 \quad \text { when } \quad + 1.0 > \frac {M}{M _ {p}} > - 0.5\tag{N9-1}
 $$
 
 $$
-\frac {l _ {c r}}{r _ {y}} = \frac {1 3 7 5}{F _ {y}} \quad \text { when } \quad - 0. 5 \geq \frac {M}{M _ {p}} > - 1. 0\tag{N9-2}
+\frac {l _ {c r}}{r _ {y}} = \frac {1375}{F _ {y}} \quad \text { when } \quad - 0.5 \geq \frac {M}{M _ {p}} > - 1.0\tag{N9-2}
 $$
 
 where 
@@ -2955,37 +3373,39 @@ The allowable stress-of unstiffened compression elements whose width-thickness r
 For single angles: 
 
 $$
-\begin{array}{r l} \text { When } 7 6. 0 / \sqrt {F _ {y}} <   b / t <   1 5 5 / \sqrt {F _ {y}}: \\ Q _ {s} = 1. 3 4 0 - 0. 0 0 4 4 7 (b / t) \sqrt {F _ {y}} \end{array}\tag{A-B5-1}
+\begin{array}{r l} \text { When } 76.0 / \sqrt {F _ {y}} <   b / t <   155 / \sqrt {F _ {y}}: \\ Q _ {s} = 1.340 - 0.00447 (b / t) \sqrt {F _ {y}} \end{array}\tag{A-B5-1}
 $$
 
 When $b / t \geq 155 / \sqrt{F_y}$ : 
 
 $$
-Q _ {s} = 1 5, 5 0 0 / \left[ F _ {y} (b / t) ^ {2} \right]\tag{A-B5-2}
+Q _ {s} = 15,500 / \left[ F _ {y} (b / t) ^ {2} \right]\tag{A-B5-2}
 $$
 
 For angles or plates projecting from columns or other compression members, and for projecting elements of compression flanges of beams and girders: 
 
-When $95.0 / \sqrt{F_y / k_c} < b / t < 195 / \sqrt{F_y / k_c}$ 
+When $95.0 / \sqrt{F_y / k_c} < b / t < 195 / \sqrt{F_y / k_c}$:
+
+$$
+Q_s = 1.293 - 0.00309(b/t)\sqrt{F_y/k_c}\tag{A-B5-3}
+$$
 
 When $b / t > 195 / \sqrt{F_y / k_c}$ 
 
 $$
-Q _ {s} = 2 6, 2 0 0 k _ {c} / \left[ F _ {y} (b / t) ^ {2} \right]\tag{A-B5-3}
+Q _ {s} = 26,200 k _ {c} / \left[ F _ {y} (b / t) ^ {2} \right]\tag{A-B5-4}
 $$
 
 For stems of tees: 
 
 $$
-\begin{array}{r l} \text { When } 1 2 7 / \sqrt {F _ {y}} <   b / t <   1 7 6 / \sqrt {F _ {y}}: \\ Q _ {s} = 1. 9 0 8 - 0. 0 0 7 1 5 (b / t) \sqrt {F _ {y}} \end{array}\tag{A-B5-4}
+\begin{array}{r l} \text { When } 127 / \sqrt {F _ {y}} <   b / t <   176 / \sqrt {F _ {y}}: \\ Q _ {s} = 1.908 - 0.00715 (b / t) \sqrt {F _ {y}} \end{array}\tag{A-B5-5}
 $$
 
 When $b / t \geq 176 / \sqrt{F_y}$ : 
 
-(A-B5-5) 
-
 $$
-Q _ {s} = 2 0, 0 0 0 / \left[ F _ {y} (b / t) ^ {2} \right]\tag{A-B5-6}
+Q _ {s} = 20,000 / \left[ F _ {y} (b / t) ^ {2} \right]\tag{A-B5-6}
 $$
 
 AMERICAN INSTITUTE OF STEEL CONSTRUCTION 
@@ -2999,7 +3419,7 @@ $t =$ thickness of unstiffened element, in.
 $F_{y} =$ specified minimum yield stress, ksi 
 
 $$
-k _ {c} = \frac {4 . 0 5}{(h / t) ^ {. 4 6}} \text {   if   } h / t > 7 0, \text {   otherwise   } k _ {c} = 1. 0.
+k _ {c} = \frac {4.05}{(h / t) ^ {.46}} \text {   if   } h / t > 70, \text {   otherwise   } k _ {c} = 1.0.
 $$
 
 Unstiffened elements of tees whose proportions exceed the limits of Sect. B5.1 shall conform to the limits given in Table A-B5.1. 
@@ -3011,13 +3431,13 @@ When the width-thickness ratio of uniformly compressed stiffened elements (excep
 For the flanges of square and rectangular sections of uniform thickness: 
 
 $$
-b _ {e} = \frac {2 5 3 t}{\sqrt {f}} \left[ 1 - \frac {5 0 . 3}{(b / t) \sqrt {f}} \right] \leq b\tag{A-B5-7}
+b _ {e} = \frac {253 t}{\sqrt {f}} \left[ 1 - \frac {50.3}{(b / t) \sqrt {f}} \right] \leq b\tag{A-B5-7}
 $$
 
 For other uniformly compressed elements: 
 
 $$
-b _ {e} = \frac {2 5 3 t}{\sqrt {f}} \left[ 1 - \frac {4 4 . 3}{(b / t) \sqrt {f}} \right] \leq b\tag{A-B5-8}
+b _ {e} = \frac {253 t}{\sqrt {f}} \left[ 1 - \frac {44.3}{(b / t) \sqrt {f}} \right] \leq b\tag{A-B5-8}
 $$
 
 where 
@@ -3034,13 +3454,17 @@ f = computed compressive stress (axial plus bending stresses) in the stiffened e
 Table A-B5.1
 
 
-
 Limiting Proportions for Channels and Tees
 
 
-<table><tr><td>Shape</td><td>Ratio of full flange width to profile depth</td><td>Ratio of flange thickness to web or stem thickness</td></tr><tr><td rowspan="2">Built-up or rolled channels</td><td>≤0.25</td><td>≤3.0</td></tr><tr><td>≤0.50</td><td>≤2.0</td></tr><tr><td>Built-up tees</td><td>≥0.50</td><td>≥1.25</td></tr><tr><td>Rolled tees</td><td>≥0.50</td><td>≥1.10</td></tr></table>
+| Shape | Ratio of full flange width to profile depth | Ratio of flange thickness to web or stem thickness |
+| --- | --- | --- |
+| Built-up or rolled channels | ≤0.25 | ≤3.0 |
+| Built-up or rolled channels | ≤0.50 | ≤2.0 |
+| Built-up tees | ≥0.50 | ≥1.25 |
+| Rolled tees | ≥0.50 | ≥1.10 |
 
-AMERICAN INSTITUTE OF STEEL CONSTRUCTION total cross section, f for the stiffened element must be such that the maximum compressive stress in the unstiffened element does not exceed $F_{a}Q_{s}$ or $F_{b}Q_{s}$ , as applicable. 
+total cross section, f for the stiffened element must be such that the maximum compressive stress in the unstiffened element does not exceed $F_{a}Q_{s}$ or $F_{b}Q_{s}$ , as applicable. 
 
 When the allowable stresses are increased due to wind or seismic loading in accordance with the provisions of Sect. A5.2, the effective width $b_{e}$ shall be determined on the basis of 0.75 times the stress caused by wind or seismic loading acting alone or in combination with the design dead and live loading. 
 
@@ -3049,7 +3473,7 @@ When the allowable stresses are increased due to wind or seismic loading in acco
 Members with diameter-to-thickness ratios D/t greater than $3,300/F_{y}$ , but having a diameter-to-thickness ratio of less than $13,000/F_{y}$ , shall not exceed the smaller value determined by Sect. E2 nor 
 
 $$
-F _ {a} = \frac {6 6 2}{D / t} + 0. 4 0 F _ {y}\tag{A-B5-9}
+F _ {a} = \frac {662}{D / t} + 0.40 F _ {y}\tag{A-B5-9}
 $$
 
 where 
@@ -3095,13 +3519,13 @@ $$
 a. Cross sections composed entirely of unstiffened elements, 
 
 $$
-Q = Q _ {s} \text {   i.e.   } (Q _ {a} = 1. 0)
+Q = Q _ {s} \text {   i.e.   } (Q _ {a} = 1.0)
 $$
 
 b. Cross sections composed entirely of stiffened elements, 
 
 $$
-Q = Q _ {a} \text {   i.e.   } (Q _ {s} = 1. 0)
+Q = Q _ {a} \text {   i.e.   } (Q _ {s} = 1.0)
 $$
 
 c. Cross sections composed of both stiffened and unstiffened elements, 
@@ -3113,7 +3537,7 @@ $$
 When $Kl / r$ exceeds $C_c'$ : 
 
 $$
-F _ {a} = \frac {1 2 \pi^ {2} E}{2 3 (K l / r) ^ {2}}\tag{A-B5-12}
+F _ {a} = \frac {12 \pi^ {2} E}{23 (K l / r) ^ {2}}\tag{A-B5-12}
 $$
 
 ## d. Combined Axial and Flexural Stress
@@ -3163,7 +3587,7 @@ The allowable tensile stress of tapered tension members shall be determined in a
 On the gross section of axially loaded tapered compression members, the allowable compressive stress, in kips per sq. in., shall not exceed the following: When the effective slenderness ratio S is less than $C_{c}$ : 
 
 $$
-F _ {a \gamma} = \frac {\left(1 . 0 - \frac {S ^ {2}}{2 C _ {c} ^ {2}}\right) F _ {y}}{\frac {5}{3} + \frac {3 S}{8 C _ {c}} - \frac {S ^ {3}}{8 C _ {c} ^ {3}}}\tag{A-F7-2}
+F _ {a \gamma} = \frac {\left(1.0 - \frac {S ^ {2}}{2 C _ {c} ^ {2}}\right) F _ {y}}{\frac {5}{3} + \frac {3 S}{8 C _ {c}} - \frac {S ^ {3}}{8 C _ {c} ^ {3}}}\tag{A-F7-2}
 $$
 
 AMERICAN INSTITUTE OF STEEL CONSTRUCTION 
@@ -3171,7 +3595,7 @@ AMERICAN INSTITUTE OF STEEL CONSTRUCTION
 When the effective slenderness ratio S exceeds $C_{c}$ : 
 
 $$
-F _ {a \gamma} = \frac {1 2 \pi^ {2} E}{2 3 S ^ {2}}\tag{A-F7-3}
+F _ {a \gamma} = \frac {12 \pi^ {2} E}{23 S ^ {2}}\tag{A-F7-3}
 $$
 
 where 
@@ -3180,7 +3604,7 @@ $S = Kl / r_{oy}$ for weak axis bending and $K_{\gamma}l / r_{ox}$ for strong ax
 
 $K =$ effective length factor for a prismatic member 
 
-$K_{\gamma} =$ effective length factor for a tapered member as determined by an analysis* 
+$K_{\gamma} =$ effective length factor for a tapered member as determined by an analysis[^af7-analysis] 
 
 l = actual unbraced length of member, in. 
 
@@ -3188,12 +3612,12 @@ $r_{ox}=$ strong axis radius of gyration at the smaller end of a tapered member,
 
 $r_{oy}=$ weak axis radius of gyration at the smaller end of a tapered member, in. 
 
-## 4. Allowable Flexural Stress**
+## 4. Allowable Flexural Stress[^af7-flexural]
 
 Tension and compression stresses on extreme fibers of tapered flexural members, in kips per sq. in., shall not exceed the following values: 
 
 $$
-F _ {b \gamma} = \frac {2}{3} \left[ 1. 0 - \frac {F _ {y}}{6 B \sqrt {F _ {s \gamma} ^ {2} + F _ {w \gamma} ^ {2}}} \right] F _ {y} \leq 0. 6 0 F _ {y}\tag{A-F7-4}
+F _ {b \gamma} = \frac {2}{3} \left[ 1.0 - \frac {F _ {y}}{6 B \sqrt {F _ {s \gamma} ^ {2} + F _ {w \gamma} ^ {2}}} \right] F _ {y} \leq 0.60 F _ {y}\tag{A-F7-4}
 $$
 
 unless $F_{b\gamma} \leq F_y / 3$ , in which case 
@@ -3205,21 +3629,21 @@ $$
 In the above equations, 
 
 $$
-F _ {s \gamma} = \frac {1 2 \times 1 0 ^ {3}}{h _ {s} L d _ {o} / A _ {f}}\tag{A-F7-6}
+F _ {s \gamma} = \frac {12 \times 10 ^ {3}}{h _ {s} L d _ {o} / A _ {f}}\tag{A-F7-6}
 $$
 
 $$
-F _ {w \gamma} = \frac {1 7 0 \times 1 0 ^ {3}}{(h _ {w} L / r _ {T o}) ^ {2}}\tag{A-F7-7}
+F _ {w \gamma} = \frac {170 \times 10 ^ {3}}{(h _ {w} L / r _ {T o}) ^ {2}}\tag{A-F7-7}
 $$
 
 where 
 
 $$
-h _ {s} = \text { factor   equal   to } 1. 0 + 0. 0 2 3 0 \gamma \sqrt {L d _ {o} / A _ {f}}
+h _ {s} = \text { factor   equal   to } 1.0 + 0.0230 \gamma \sqrt {L d _ {o} / A _ {f}}
 $$
 
 $$
-h _ {w} = \text { factor   equal   to } 1. 0 + 0. 0 0 3 8 5 \gamma \sqrt {L / r _ {T o}}
+h _ {w} = \text { factor   equal   to } 1.0 + 0.00385 \gamma \sqrt {L / r _ {T o}}
 $$
 
 $r_{To}=$ radius of gyration of a section at the smaller end, considering only the compression flange plus $\frac{1}{3}$ of the compression web area, taken about an axis in the plane of the web, in. 
@@ -3230,24 +3654,22 @@ and where $B$ is determined as follows:
 
 a. When the maximum moment $M_{2}$ in three adjacent segments of approximately equal unbraced length is located within the central segment and 
 
-[AppF 
-
-$M_{1}$ is the larger moment at one end of the three-segment portion of a member: $^{*}$ 
+$M_{1}$ is the larger moment at one end of the three-segment portion of a member: [^af7-moment] 
 
 $$
-B = 1. 0 + 0. 3 7 \left(1. 0 + \frac {M _ {1}}{M _ {2}}\right) + 0. 5 0 \gamma \left(1. 0 + \frac {M _ {1}}{M _ {2}}\right) \geq 1. 0\tag{A-F7-8}
+B = 1.0 + 0.37 \left(1.0 + \frac {M _ {1}}{M _ {2}}\right) + 0.50 \gamma \left(1.0 + \frac {M _ {1}}{M _ {2}}\right) \geq 1.0\tag{A-F7-8}
 $$
 
-b. When the largest computed bending stress $f_{b2}$ occurs at the larger end of two adjacent segments of approximately equal unbraced lengths and $f_{b1}$ is the computed bending stress at the smaller end of the two-segment portion of a member: $^{*}$ 
+b. When the largest computed bending stress $f_{b2}$ occurs at the larger end of two adjacent segments of approximately equal unbraced lengths and $f_{b1}$ is the computed bending stress at the smaller end of the two-segment portion of a member: [^af7-stress1] 
 
 $$
-B = 1. 0 + 0. 5 8 \left(1. 0 + \frac {f _ {b 1}}{f _ {b 2}}\right) - 0. 7 0 \gamma \left(1. 0 + \frac {f _ {b 1}}{f _ {b 2}}\right) \geq 1. 0\tag{A-F7-9}
+B = 1.0 + 0.58 \left(1.0 + \frac {f _ {b 1}}{f _ {b 2}}\right) - 0.70 \gamma \left(1.0 + \frac {f _ {b 1}}{f _ {b 2}}\right) \geq 1.0\tag{A-F7-9}
 $$
 
-c. When the largest computed bending stress $f_{b2}$ occurs at the smaller end of two adjacent segments of approximately equal unbraced length and $f_{b1}$ is the computed bending stress at the larger end of the two-segment portion of a member:** 
+c. When the largest computed bending stress $f_{b2}$ occurs at the smaller end of two adjacent segments of approximately equal unbraced length and $f_{b1}$ is the computed bending stress at the larger end of the two-segment portion of a member:[^af7-stress2] 
 
 $$
-B = 1. 0 + 0. 5 5 \left(1. 0 + \frac {f _ {b 1}}{f _ {b 2}}\right) + 2. 2 0 \gamma \left(1. 0 + \frac {f _ {b 1}}{f _ {b 2}}\right) \geq 1. 0\tag{A-F7-10}
+B = 1.0 + 0.55 \left(1.0 + \frac {f _ {b 1}}{f _ {b 2}}\right) + 2.20 \gamma \left(1.0 + \frac {f _ {b 1}}{f _ {b 2}}\right) \geq 1.0\tag{A-F7-10}
 $$
 
 In the foregoing, $\gamma = (d_{L} - d_{o})/d_{o}$ is calculated for the unbraced length containing the maximum computed bending stress. 
@@ -3255,7 +3677,7 @@ In the foregoing, $\gamma = (d_{L} - d_{o})/d_{o}$ is calculated for the unbrace
 d. When the computed bending stress at the smaller end of a tapered member or segment thereof is equal to zero: 
 
 $$
-B = \frac {1 . 7 5}{1 . 0 + 0 . 2 5 \sqrt {\gamma}}\tag{A-F7-11}
+B = \frac {1.75}{1.0 + 0.25 \sqrt {\gamma}}\tag{A-F7-11}
 $$
 
 where $\gamma=(d_{L}-d_{o})/d_{o}$ , calculated for the unbraced length adjacent to the point of zero bending stress. 
@@ -3269,19 +3691,19 @@ The allowable shear stress of tapered flexural members shall be in accordance wi
 Tapered members and unbraced segments thereof subjected to both axial compression and bending stresses shall be proportioned to satisfy the following requirement: 
 
 $$
-\left(\frac {f _ {a o}}{F _ {a \gamma}}\right) + \frac {C _ {m} ^ {\prime}}{\left(1 - \frac {f _ {a o}}{F _ {e \gamma} ^ {\prime}}\right)} \left(\frac {f _ {b l}}{F _ {b \gamma}}\right) \leq 1. 0\tag{A-F7-12}
+\left(\frac {f _ {a o}}{F _ {a \gamma}}\right) + \frac {C _ {m} ^ {\prime}}{\left(1 - \frac {f _ {a o}}{F _ {e \gamma} ^ {\prime}}\right)} \left(\frac {f _ {b l}}{F _ {b \gamma}}\right) \leq 1.0\tag{A-F7-12}
 $$
 
 and 
 
 $$
-\frac {f _ {a}}{0 . 6 0 F _ {y}} + \frac {f _ {b}}{F _ {b \gamma}} \leq 1. 0\tag{A-F7-13}
+\frac {f _ {a}}{0.60 F _ {y}} + \frac {f _ {b}}{F _ {b \gamma}} \leq 1.0\tag{A-F7-13}
 $$
 
 When $f_{ao}/F_{a\gamma} \leq 0.15$ , Equation (A-F7-14) is permitted in lieu of Equations (A-F7-12) and (A-F7-13). 
 
 $$
-\left(\frac {f _ {a o}}{F _ {a \gamma}}\right) + \left(\frac {f _ {b l}}{F _ {b \gamma}}\right) \leq 1. 0\tag{A-F7-14}
+\left(\frac {f _ {a o}}{F _ {a \gamma}}\right) + \left(\frac {f _ {b l}}{F _ {b \gamma}}\right) \leq 1.0\tag{A-F7-14}
 $$
 
 where 
@@ -3291,7 +3713,7 @@ $F_{a\gamma}=$ axial compressive stress permitted in the absence of bending mome
 $F_{b\gamma}=$ bending stress permitted in the absence of axial force, ksi $F_{e\gamma}^{\prime}=$ Euler stress divided by factor of safety, ksi, equal to 
 
 $$
-\frac {1 2 \pi^ {2} E}{2 3 (K _ {\gamma} l _ {b} / r _ {b o}) ^ {2}}
+\frac {12 \pi^ {2} E}{23 (K _ {\gamma} l _ {b} / r _ {b o}) ^ {2}}
 $$
 
 where $l_{b}$ is the actual unbraced length in the plane of bending and $r_{bo}$ is the corresponding radius of gyration at its smaller end 
@@ -3303,13 +3725,13 @@ $f_{bl} =$ computed bending stress at the larger end of the member or unbraced s
 $C_m' =$ coefficient applied to bending term in interaction equation 
 
 $$
-= 1. 0 + 0. 1 \left(\frac {f _ {a o}}{F _ {e ^ {\gamma}} ^ {\prime}}\right) + 0. 3 \left(\frac {f _ {a o}}{F _ {e ^ {\gamma}} ^ {\prime}}\right) ^ {2}
+= 1.0 + 0.1 \left(\frac {f _ {a o}}{F_{e\gamma}^{\prime}}\right) + 0.3 \left(\frac {f _ {a o}}{F_{e\gamma}^{\prime}}\right) ^ {2}
 $$
 
 when the member is subjected to end moments which cause single curvature bending and approximately equal computed bending stresses at the ends 
 
 $$
-= 1. 0 - 0. 9 \left(\frac {f _ {a o}}{F _ {e ^ {\prime} \gamma} ^ {\prime}}\right) + 0. 6 \left(\frac {f _ {a o}}{F _ {e ^ {\prime} \gamma} ^ {\prime}}\right) ^ {2}
+= 1.0 - 0.9 \left(\frac {f _ {a o}}{F_{e\gamma}^{\prime}}\right) + 0.6 \left(\frac {f _ {a o}}{F_{e\gamma}^{\prime}}\right) ^ {2}
 $$
 
 when the computed bending stress at the smaller end of the unbraced length is equal to zero. 
@@ -3340,15 +3762,25 @@ The maximum stress shall not exceed the basic allowable stress provided in Chapt
 TABLE A-K4.1
 
 
-
 Number of Loading Cycles
 
 
-<table><tr><td>Loading Condition</td><td>From</td><td>To</td></tr><tr><td>1</td><td>20,000a</td><td>100,000b</td></tr><tr><td>2</td><td>100,000</td><td>500,000c</td></tr><tr><td>3</td><td>500,000</td><td>2,000,000d</td></tr><tr><td>4</td><td>Over 2,000,000</td><td></td></tr><tr><td colspan="3">aApproximately equivalent to two applications every day for 25 years.bApproximately equivalent to 10 applications every day for 25 years.cApproximately equivalent to 50 applications every day for 25 years.dApproximately equivalent to 200 applications every day for 25 years</td></tr></table>
+| Loading Condition | From | To |
+| --- | --- | --- |
+| 1 | 20,000a | 100,000b |
+| 2 | 100,000 | 500,000c |
+| 3 | 500,000 | 2,000,000d |
+| 4 | Over 2,000,000 |  |
+
+aApproximately equivalent to two applications every day for 25 years.bApproximately equivalent to 10 applications every day for 25 years.cApproximately equivalent to 50 applications every day for 25 years.dApproximately equivalent to 200 applications every day for 25 years
 
 When subject to tensile fatigue loading, the tensile stress in A325 or A490 bolts due to the combined applied load and prying forces shall not exceed the following values, and the prying force shall not exceed 60% of the externally applied load. 
 
-<table><tr><td>Number of Cycles</td><td>A325</td><td>A490</td></tr><tr><td>Not more than 20,000</td><td>44</td><td>54</td></tr><tr><td>From 20,000 to 500,000</td><td>40</td><td>49</td></tr><tr><td>More than 500,000</td><td>31</td><td>38</td></tr></table>
+| Number of Cycles | A325 | A490 |
+| --- | --- | --- |
+| Not more than 20,000 | 44 | 54 |
+| From 20,000 to 500,000 | 40 | 49 |
+| More than 500,000 | 31 | 38 |
 
 
 Bolts must be tensioned to the requirements of Table J3.7. 
@@ -3357,37 +3789,108 @@ Bolts must be tensioned to the requirements of Table J3.7.
 The use of other bolts and threaded parts subjected to tensile fatigue loading is not recommended. 
 
 TABLE A-K4.2
-Stress Category Classifications 
 
-<table><tr><td>General Condition</td><td>Situation</td><td>Kind of Stressa</td><td>Stress Category (see Table A-K4.3)</td><td>Illustrative Example Nos. (see Fig. A-K4.1)b</td></tr><tr><td>Plain Material</td><td>Base metal with rolled or cleaned surface. Flame-cut edges with ANSI smoothness of 1,000 or less</td><td>T or Rev.</td><td>A</td><td>1,2</td></tr><tr><td rowspan="5">Built-up Members</td><td>Base metal in members without attachments, built-up plates or shapes connected by continuous full-penetration groove welds or by continuous fillet welds parallel to the direction of applied stress</td><td>T or Rev.</td><td>B</td><td>3,4,5,6</td></tr><tr><td>Base metal in members without attachments, built-up plates, or shapes connected by full-penetration groove welds with backing bars not removed, or by partial-penetration groove welds parallel to the direction of applied stress</td><td>T or Rev.</td><td>B&#x27;</td><td>3,4,5,6</td></tr><tr><td>Base metal at toe welds on girder webs or flanges adjacent to welded transverse stiffeners</td><td>T or Rev.</td><td>C</td><td>7</td></tr><tr><td>Base metal at ends of partial length welded cover plates narrower than the flange having square or tapered ends, with or without welds across the ends or wider than flange with welds across the endsFlange thickness ≤ 0.8 in.Flange thickness &gt; 0.8 in.</td><td>T or Rev.T or Rev.</td><td>EE&#x27;</td><td>55</td></tr><tr><td>Base metal at end of partial length welded cover plates wider than the flange without welds across the ends</td><td></td><td>E&#x27;</td><td>5</td></tr><tr><td colspan="5">a:T&quot; signifies range in tensile stress only; &quot;Rev.&quot; signifies a range involving reversal of tensile or compressive stress; &quot;S&quot; signifies range in shear, including shear stress reversal.bThese examples are provided as guidelines and are not intended to exclude other reasonably similar situations.cAllowable fatigue stress range for transverse partial-penetration and transverse fillet welds is a function of the effective throat, depth of penetration and plate thickness. See Frank and Fisher (1979).</td></tr></table>
+Stress Category Classifications
+
+| General Condition | Situation | Kind of Stress$^{a}$ | Stress Category (see Table A-K4.3) | Illustrative Example Nos. (see Fig. A-K4.1)$^{b}$ |
+| --- | --- | --- | --- | --- |
+| Plain Material | Base metal with rolled or cleaned surface. Flame-cut edges with ANSI smoothness of 1,000 or less | T or Rev. | A | 1,2 |
+| Built-up Members | Base metal in members without attachments, built-up plates or shapes connected by continuous full-penetration groove welds or by continuous fillet welds parallel to the direction of applied stress | T or Rev. | B | 3,4,5,6 |
+| Built-up Members | Base metal in members without attachments, built-up plates, or shapes connected by full-penetration groove welds with backing bars not removed, or by partial-penetration groove welds parallel to the direction of applied stress | T or Rev. | B' | 3,4,5,6 |
+| Built-up Members | Base metal at toe welds on girder webs or flanges adjacent to welded transverse stiffeners | T or Rev. | C | 7 |
+| Built-up Members | Base metal at ends of partial length welded cover plates narrower than the flange having square or tapered ends, with or without welds across the ends or wider than flange with welds across the ends; flange thickness ≤ 0.8 in. | T or Rev. | E | 5 |
+| Built-up Members | Base metal at ends of partial length welded cover plates narrower than the flange having square or tapered ends, with or without welds across the ends or wider than flange with welds across the ends; flange thickness > 0.8 in. | T or Rev. | E' | 5 |
+| Built-up Members | Base metal at end of partial length welded cover plates wider than the flange without welds across the ends |  | E' | 5 |
+
+$^{a}$ "T" signifies range in tensile stress only; "Rev." signifies a range involving reversal of tensile or compressive stress; "S" signifies range in shear, including shear stress reversal.
+
+$^{b}$ These examples are provided as guidelines and are not intended to exclude other reasonably similar situations.
+
+$^{c}$ Allowable fatigue stress range for transverse partial-penetration and transverse fillet welds is a function of the effective throat, depth of penetration and plate thickness. See Frank and Fisher (1979).
 
 TABLE A-K4.2 (cont'd)
-Type and Location of Material 
 
-<table><tr><td>General Condition</td><td>Situation</td><td>Kind of Stressa</td><td>Stress Category (see Table A-K4.3)</td><td>Illustrative Example Nos.(see Fig. A-K4.1)b</td></tr><tr><td rowspan="2">Groove Welds</td><td>Base metal and weld metal at full-penetration groove welded splices of parts of similar cross section ground flush, with grinding in the direction of applied stress and with weld soundness established by radiographic or ultrasonic inspection in accordance with the requirements of 9.25.2 or 9.25.3 of AWS D1.1Base metal and weld metal at full-penetration groove welded splices at transitions in width or thickness, with welds ground to provide slopes no steeper than 1 to 21⁄2 with grinding in the direction of applied stress, and with weld soundness established by radiographic or ultrasonic inspection in accordance with the requirements of 9.25.2 or 9.25.3 of AWS D1.1A514 base metalOther base metals</td><td>T or Rev.T or Rev.</td><td>BB&#x27;</td><td>10,1112,1312,13</td></tr><tr><td>Base metal and weld metal at full-penetration groove welded splices, with or without transitions having slopes no greater than 1 to 21⁄2 when reinforcement is not removed but weld soundness is established by radiographic or ultrasonic inspection in accordance with requirements of 9.25.2 or 9.25.3 of AWS D1.1</td><td>T or Rev.</td><td>C</td><td>10,11,12,13</td></tr><tr><td>Partial-Penetration Groove Welds</td><td>Weld metal of partial-penetration transverse groove welds, based on effective throat area of the weld or welds</td><td>T or Rev.</td><td>Fc</td><td>16</td></tr></table>
-
-TABLE A-K4.2 (cont'd)
-Type and Location of Material 
-
-
-TABLE A-K4.2 (cont'd)
 Type and Location of Material
 
-
-<table><tr><td>General Condition</td><td>Situation</td><td>Kind of Stressa</td><td>Stress Category (see Table A-K4.3)</td><td>Illustrative Example Nos.(see Fig. A-K4.1)b</td></tr><tr><td rowspan="3">Fillet-welded Connections</td><td>Base metal at intermittent fillet welds</td><td>T or Rev.</td><td>E</td><td></td></tr><tr><td>Base metal at junction of axially loaded members with fillet-welded end connections. Welds shall be disposed about the axis of the member so as to balance weld stresses<eq>b \leq 1</eq> in.<eq>b &gt; 1</eq> in.</td><td>T or Rev.T or Rev.</td><td>EE′</td><td>17,1817,18</td></tr><tr><td>Base metal at members connected with transverse fillet welds<eq>b \leq \frac{1}{2}</eq> in.<eq>b &gt; \frac{1}{2}</eq> in.</td><td>T or Rev.</td><td>CSee Note c</td><td>20,21</td></tr><tr><td>Fillet Welds</td><td>Weld metal of continuous or in-termittent longitudinal or transverse fillet welds</td><td>S</td><td>Fc</td><td>15,17,1820,21</td></tr><tr><td rowspan="2">Plug or Slot Welds</td><td>Base metal at plug or slot welds</td><td>T or Rev.</td><td>E</td><td>27</td></tr><tr><td>Shear on plug or slot welds</td><td>S</td><td>F</td><td>27</td></tr><tr><td rowspan="3">Mechanically Fastened Connections</td><td>Base metal at gross section of high-strength bolted slip-critical connections, except axially loaded joints which induce out-of-plane bending in connected material</td><td>T or Rev.</td><td>B</td><td>8</td></tr><tr><td>Base metal at net section of other mechanically fastened joints</td><td>T or Rev.</td><td>D</td><td>8,9</td></tr><tr><td>Base metal at net section of fully tensioned high-strength, bolted-bearing connections</td><td>T or Rev.</td><td>B</td><td>8,9</td></tr></table>
-
-<table><tr><td>General Condition</td><td>Situation</td><td>Kind of Stressa</td><td>Stress Category (see Table A-K4.3)</td><td>Illustrative Example Nos. (see Fig. A-K4.1)b</td><td></td></tr><tr><td>Attachments</td><td>Base metal at details attached by full-penetration groove welds subject to longitudinal and/or transverse loading when the detail embodies a transition radius R with the weld termination ground smooth and for transverse loading, the weld soundness established by radiographic or ultrasonic inspection in accordance with 9.25.2 or 9.25.3 of AWS D1.1Longitudinal loadingR&gt;24 in.24 in. &gt;R&gt;6 in.6 in. &gt;R&gt;2 in.2 in. &gt;RDetail base metal for transverse loading: equal thickness and reinforcement removedR&gt;24 in.24 in. &gt;R&gt;6 in.6 in. &gt;R&gt;2 in.2 in. &gt;RDetail base metal for transverse loading: equal thickness and reinforcement not removedR&gt;24 in.24 in. &gt;R&gt;6 in.6 in. &gt;R&gt;2 in.2 in. &gt;R</td><td>T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.Tor Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or Rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or revT or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.Tor rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T or rev.T orrev.</td><td>BCCDEBCCDEBCDDECDDDECDE</td><td>14141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141</td><td></td></tr></table>
-
-## TABLE A-K4.2 (cont'd) Type and Location of Material
-
-<table><tr><td>General Condition</td><td>Situation</td><td>Kind of <eq>Stress^a</eq></td><td>Stress Category (see Table A-K4.3)</td><td>Illustrative Example Nos. (see Fig. A-K4.1)<eq>^b</eq></td></tr><tr><td rowspan="3">Attachments (cont&#x27;d)</td><td>Detail base metal for transverse loading: unequal thickness and reinforcement removed<eq>R &gt; 2</eq> in.<eq>2</eq> in. <eq>&gt;R</eq>Detail base metal for transverse loading: unequal thickness and reinforcement not removedall <eq>R</eq>Detail base metal for transverse loading<eq>R &gt; 6</eq> in.<eq>6</eq> in. <eq>&gt;R &gt; 2</eq> in.<eq>2</eq> in. <eq>&gt;R</eq></td><td>T or Rev.T or Rev.T or Rev.</td><td>DEE</td><td>1414,1514,15191919</td></tr><tr><td>Base metal at detail attached by full-penetration groove welds subject to longitudinal loading<eq>2 &lt; a &lt; 12b</eq> or 4 in.<eq>a &gt; 12b</eq> or 4 in. when <eq>b \leq 1</eq> in.<eq>a &gt; 12b</eq> or 4 in. when <eq>b &gt; 1</eq> in.</td><td>T or Rev.T or Rev.T or Rev.</td><td>DEE&#x27;</td><td>151515</td></tr><tr><td>Base metal at detail attached by fillet welds or partial-penetration groove welds subject to longitudinal loading<eq>a &lt; 2</eq> in.<eq>2</eq> in. <eq>&lt; a &lt; 12b</eq> or 4 in.<eq>a &gt; 12b</eq> or 4 in. when <eq>b \leq 1</eq> in.<eq>a &gt; 12b</eq> or 4 in. when <eq>b &gt; 1</eq> in.</td><td>T or Rev.T or Rev.T or Rev.T or Rev.</td><td>CDEE&#x27;</td><td>15,23,24,25,2615,23,24,2615,23,24,2615,23,24,26</td></tr></table>
-
+| General Condition | Situation | Kind of Stress$^{a}$ | Stress Category (see Table A-K4.3) | Illustrative Example Nos. (see Fig. A-K4.1)$^{b}$ |
+| --- | --- | --- | --- | --- |
+| Groove Welds | Base metal and weld metal at full-penetration groove welded splices of parts of similar cross section ground flush, with grinding in the direction of applied stress and with weld soundness established by radiographic or ultrasonic inspection in accordance with the requirements of 9.25.2 or 9.25.3 of AWS D1.1 | T or Rev. | B | 10,11 |
+| Groove Welds | Base metal and weld metal at full-penetration groove welded splices at transitions in width or thickness, with welds ground to provide slopes no steeper than 1 to 2½ with grinding in the direction of applied stress, and with weld soundness established by radiographic or ultrasonic inspection in accordance with the requirements of 9.25.2 or 9.25.3 of AWS D1.1; A514 base metal | T or Rev. | B' | 12,13 |
+| Groove Welds | Base metal and weld metal at full-penetration groove welded splices at transitions in width or thickness, with welds ground to provide slopes no steeper than 1 to 2½ with grinding in the direction of applied stress, and with weld soundness established by radiographic or ultrasonic inspection in accordance with the requirements of 9.25.2 or 9.25.3 of AWS D1.1; other base metals | T or Rev. | B | 12,13 |
+| Groove Welds | Base metal and weld metal at full-penetration groove welded splices, with or without transitions having slopes no greater than 1 to 2½ when reinforcement is not removed but weld soundness is established by radiographic or ultrasonic inspection in accordance with requirements of 9.25.2 or 9.25.3 of AWS D1.1 | T or Rev. | C | 10,11,12,13 |
+| Partial-Penetration Groove Welds | Weld metal of partial-penetration transverse groove welds, based on effective throat area of the weld or welds | T or Rev. | F$^{c}$ | 16 |
 
 TABLE A-K4.2 (cont'd)
+
 Type and Location of Material
 
+| General Condition | Situation | Kind of Stress$^{a}$ | Stress Category (see Table A-K4.3) | Illustrative Example Nos. (see Fig. A-K4.1)$^{b}$ |
+| --- | --- | --- | --- | --- |
+| Fillet-welded Connections | Base metal at intermittent fillet welds | T or Rev. | E |  |
+| Fillet-welded Connections | Base metal at junction of axially loaded members with fillet-welded end connections. Welds shall be disposed about the axis of the member so as to balance weld stresses; $b \leq 1$ in. | T or Rev. | E | 17,18 |
+| Fillet-welded Connections | Base metal at junction of axially loaded members with fillet-welded end connections. Welds shall be disposed about the axis of the member so as to balance weld stresses; $b > 1$ in. | T or Rev. | E' | 17,18 |
+| Fillet-welded Connections | Base metal at members connected with transverse fillet welds; $b \leq 1/2$ in. | T or Rev. | C | 20,21 |
+| Fillet-welded Connections | Base metal at members connected with transverse fillet welds; $b > 1/2$ in. |  | See Note c |  |
+| Fillet Welds | Weld metal of continuous or intermittent longitudinal or transverse fillet welds | S | F$^{c}$ | 15,17,18,20,21 |
+| Plug or Slot Welds | Base metal at plug or slot welds | T or Rev. | E | 27 |
+| Plug or Slot Welds | Shear on plug or slot welds | S | F | 27 |
+| Mechanically Fastened Connections | Base metal at gross section of high-strength bolted slip-critical connections, except axially loaded joints which induce out-of-plane bending in connected material | T or Rev. | B | 8 |
+| Mechanically Fastened Connections | Base metal at net section of other mechanically fastened joints | T or Rev. | D | 8,9 |
+| Mechanically Fastened Connections | Base metal at net section of fully tensioned high-strength, bolted-bearing connections | T or Rev. | B | 8,9 |
 
-<table><tr><td>General Condition</td><td>Situation</td><td>Kind of Stressa</td><td>Stress Category (see Table A-K4.3)</td><td>Illus-trative Example Nos.(see Fig. A-K4.1)b</td></tr><tr><td rowspan="4">Attachments (cont&#x27;d)</td><td>Base metal attached by fillet welds or partial-penetration groove welds subjected to longitudinal loading when the weld termination embodies a transition radius with the weld termination ground smooth:R&gt;2 in.R≤2 in.</td><td>T or Rev.T or Rev.</td><td>DE</td><td>1919</td></tr><tr><td>Fillet-welded attachments where the weld termination embodies a transition radius, weld termination ground smooth, and main material subject to longitudinal loading:Detail base metal for trans-verse loading:R&gt;2 in.R&lt;2 in.</td><td>T or Rev.T or Rev.</td><td>DE</td><td>1919</td></tr><tr><td>Base metal at stud-type shear connector attached by fillet weld or automatic end weld</td><td>T or Rev.</td><td>C</td><td>22</td></tr><tr><td>Shear stress on nominal area of stud-type shear connectors</td><td>S</td><td>F</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr></table>
+TABLE A-K4.2 (cont'd)
+
+Attachments
+
+Base metal at details attached by full-penetration groove welds subject to longitudinal and/or transverse loading when the detail embodies a transition radius $R$ with the weld termination ground smooth and for transverse loading, the weld soundness established by radiographic or ultrasonic inspection in accordance with 9.25.2 or 9.25.3 of AWS D1.1.
+
+| Loading / Material Condition | Transition Radius | Kind of Stress$^{a}$ | Stress Category | Illustrative Example Nos.$^{b}$ |
+| --- | --- | --- | --- | --- |
+| Longitudinal loading | $R > 24$ in. | T or Rev. | B | 14 |
+| Longitudinal loading | $24$ in. $> R > 6$ in. | T or Rev. | C | 14 |
+| Longitudinal loading | $6$ in. $> R > 2$ in. | T or Rev. | D | 14 |
+| Longitudinal loading | $2$ in. $> R$ | T or Rev. | E | 14 |
+| Detail base metal for transverse loading: equal thickness and reinforcement removed | $R > 24$ in. | T or Rev. | B | 14 |
+| Detail base metal for transverse loading: equal thickness and reinforcement removed | $24$ in. $> R > 6$ in. | T or Rev. | C | 14 |
+| Detail base metal for transverse loading: equal thickness and reinforcement removed | $6$ in. $> R > 2$ in. | T or Rev. | D | 14 |
+| Detail base metal for transverse loading: equal thickness and reinforcement removed | $2$ in. $> R$ | T or Rev. | E | 14,15 |
+| Detail base metal for transverse loading: equal thickness and reinforcement not removed | $R > 24$ in. | T or Rev. | C | 14 |
+| Detail base metal for transverse loading: equal thickness and reinforcement not removed | $24$ in. $> R > 6$ in. | T or Rev. | C | 14 |
+| Detail base metal for transverse loading: equal thickness and reinforcement not removed | $6$ in. $> R > 2$ in. | T or Rev. | D | 14 |
+| Detail base metal for transverse loading: equal thickness and reinforcement not removed | $2$ in. $> R$ | T or Rev. | E | 14,15 |
+
+TABLE A-K4.2 (cont'd)
+
+Type and Location of Material
+
+| General Condition | Situation | Kind of Stress$^{a}$ | Stress Category (see Table A-K4.3) | Illustrative Example Nos. (see Fig. A-K4.1)$^{b}$ |
+| --- | --- | --- | --- | --- |
+| Attachments (cont'd) | Detail base metal for transverse loading: unequal thickness and reinforcement removed; $R > 2$ in. | T or Rev. | D | 14 |
+| Attachments (cont'd) | Detail base metal for transverse loading: unequal thickness and reinforcement removed; $2$ in. $> R$ | T or Rev. | E | 14,15 |
+| Attachments (cont'd) | Detail base metal for transverse loading: unequal thickness and reinforcement not removed; all $R$ | T or Rev. | E | 14,15 |
+| Attachments (cont'd) | Detail base metal for transverse loading; $R > 6$ in. | T or Rev. | C | 19 |
+| Attachments (cont'd) | Detail base metal for transverse loading; $6$ in. $> R > 2$ in. | T or Rev. | D | 19 |
+| Attachments (cont'd) | Detail base metal for transverse loading; $2$ in. $> R$ | T or Rev. | E | 19 |
+| Attachments (cont'd) | Base metal at detail attached by full-penetration groove welds subject to longitudinal loading; $2 < a < 12b$ or 4 in. | T or Rev. | D | 15 |
+| Attachments (cont'd) | Base metal at detail attached by full-penetration groove welds subject to longitudinal loading; $a > 12b$ or 4 in. when $b \leq 1$ in. | T or Rev. | E | 15 |
+| Attachments (cont'd) | Base metal at detail attached by full-penetration groove welds subject to longitudinal loading; $a > 12b$ or 4 in. when $b > 1$ in. | T or Rev. | E' | 15 |
+| Attachments (cont'd) | Base metal at detail attached by fillet welds or partial-penetration groove welds subject to longitudinal loading; $a < 2$ in. | T or Rev. | C | 15,23,24,25,26 |
+| Attachments (cont'd) | Base metal at detail attached by fillet welds or partial-penetration groove welds subject to longitudinal loading; $2$ in. $< a < 12b$ or 4 in. | T or Rev. | D | 15,23,24,26 |
+| Attachments (cont'd) | Base metal at detail attached by fillet welds or partial-penetration groove welds subject to longitudinal loading; $a > 12b$ or 4 in. when $b \leq 1$ in. | T or Rev. | E | 15,23,24,26 |
+| Attachments (cont'd) | Base metal at detail attached by fillet welds or partial-penetration groove welds subject to longitudinal loading; $a > 12b$ or 4 in. when $b > 1$ in. | T or Rev. | E' | 15,23,24,26 |
+
+TABLE A-K4.2 (cont'd)
+
+Type and Location of Material
+
+| General Condition | Situation | Kind of Stress$^{a}$ | Stress Category (see Table A-K4.3) | Illustrative Example Nos. (see Fig. A-K4.1)$^{b}$ |
+| --- | --- | --- | --- | --- |
+| Attachments (cont'd) | Base metal attached by fillet welds or partial-penetration groove welds subjected to longitudinal loading when the weld termination embodies a transition radius with the weld termination ground smooth; $R > 2$ in. | T or Rev. | D | 19 |
+| Attachments (cont'd) | Base metal attached by fillet welds or partial-penetration groove welds subjected to longitudinal loading when the weld termination embodies a transition radius with the weld termination ground smooth; $R \leq 2$ in. | T or Rev. | E | 19 |
+| Attachments (cont'd) | Fillet-welded attachments where the weld termination embodies a transition radius, weld termination ground smooth, and main material subject to longitudinal loading. Detail base metal for transverse loading; $R > 2$ in. | T or Rev. | D | 19 |
+| Attachments (cont'd) | Fillet-welded attachments where the weld termination embodies a transition radius, weld termination ground smooth, and main material subject to longitudinal loading. Detail base metal for transverse loading; $R < 2$ in. | T or Rev. | E | 19 |
+| Attachments (cont'd) | Base metal at stud-type shear connector attached by fillet weld or automatic end weld | T or Rev. | C | 22 |
+| Attachments (cont'd) | Shear stress on nominal area of stud-type shear connectors | S | F |  |
 
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/391de60d22a60fb405b2968f4d19bd5cc9eff50bc773f2f7802229d3a0933b1d.jpg)
 
@@ -3395,12 +3898,21 @@ Type and Location of Material
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/917d0a4a6f24c7c7b31ed8ebbbb85257fdded4e8c7a3e298c6742e0d10eb1187.jpg)
 
 
-
 TABLE A-K4.3
 Allowable Stress Range, Ksi
 
 
-<table><tr><td>Category (from Table A-K4.2)</td><td>Loading Condition 1</td><td>Loading Condition 2</td><td>Loading Condition 3</td><td>Loading Condition 4</td></tr><tr><td>A</td><td>63</td><td>37</td><td>24</td><td>24</td></tr><tr><td>B</td><td>49</td><td>29</td><td>18</td><td>16</td></tr><tr><td><eq>B&#x27;</eq></td><td>39</td><td>23</td><td>15</td><td>12</td></tr><tr><td>C</td><td>35</td><td>21</td><td>13</td><td><eq>10^a</eq></td></tr><tr><td>D</td><td>28</td><td>16</td><td>10</td><td>7</td></tr><tr><td>E</td><td>22</td><td>13</td><td>8</td><td>5</td></tr><tr><td><eq>E&#x27;</eq></td><td>16</td><td>9</td><td>6</td><td>3</td></tr><tr><td>F</td><td>15</td><td>12</td><td>9</td><td>8</td></tr><tr><td colspan="5">\( ^aFlexural stress range of 12 ksi permitted at toe of stiffener welds on flanges</td></tr></table>
+| Category (from Table A-K4.2) | Loading Condition 1 | Loading Condition 2 | Loading Condition 3 | Loading Condition 4 |
+| --- | --- | --- | --- | --- |
+| A | 63 | 37 | 24 | 24 |
+| B | 49 | 29 | 18 | 16 |
+| $B'$ | 39 | 23 | 15 | 12 |
+| C | 35 | 21 | 13 | $10^a$ |
+| D | 28 | 16 | 10 | 7 |
+| E | 22 | 13 | 8 | 5 |
+| $E'$ | 16 | 9 | 6 | 3 |
+| F | 15 | 12 | 9 | 8 |
+| $^{a}$Flexural stress range of 12 ksi permitted at toe of stiffener welds on flanges |  |  |  |  |
 
 ## NUMERICAL VALUES
 
@@ -3409,13 +3921,73 @@ TABLE 1
 Allowable Stress as a Function of $F_{y}$
 
 
-<table><tr><td rowspan="2"><eq>F_y</eq>(ksi)</td><td colspan="6">Allowable Stress (ksi)</td></tr><tr><td><eq>0.40F_y^{b,e}</eq></td><td><eq>0.45F_y^a</eq></td><td><eq>0.60F_y^{a,c}</eq></td><td><eq>0.66F_y^c</eq></td><td><eq>0.75F_y^c</eq></td><td><eq>0.90F_y^d</eq></td></tr><tr><td>33</td><td>13.2</td><td>14.9</td><td>19.8</td><td>21.8</td><td>24.8</td><td>29.7</td></tr><tr><td>35</td><td>14.0</td><td>15.8</td><td>21.0</td><td>23.1</td><td>26.3</td><td>31.5</td></tr><tr><td>36</td><td>14.5</td><td>16.2</td><td>22.0</td><td>24.0</td><td>27.0</td><td>32.4</td></tr><tr><td>40</td><td>16.0</td><td>18.0</td><td>24.0</td><td>26.4</td><td>30.0</td><td>36.0</td></tr><tr><td>42</td><td>16.8</td><td>18.9</td><td>25.2</td><td>27.7</td><td>31.5</td><td>37.8</td></tr><tr><td>45</td><td>18.0</td><td>20.3</td><td>27.0</td><td>29.7</td><td>33.8</td><td>40.5</td></tr><tr><td>46</td><td>18.4</td><td>20.7</td><td>27.6</td><td>30.4</td><td>34.5</td><td>41.4</td></tr><tr><td>50</td><td>20.0</td><td>22.5</td><td>30.0</td><td>33.0</td><td>37.5</td><td>45.0</td></tr><tr><td>55</td><td>22.0</td><td>24.8</td><td>33.0</td><td>36.3</td><td>41.3</td><td>49.5</td></tr><tr><td>60</td><td>24.0</td><td>27.0</td><td>36.0</td><td>39.6</td><td>45.0</td><td>54.0</td></tr><tr><td>65</td><td>26.0</td><td>29.3</td><td>39.0</td><td>42.9</td><td>48.8</td><td>58.5</td></tr><tr><td>70</td><td>28.0</td><td>31.5</td><td>42.0</td><td></td><td></td><td>63.0</td></tr><tr><td>90</td><td>36.0</td><td>40.5</td><td>54.0</td><td></td><td></td><td>81.0</td></tr><tr><td>100</td><td>40.0</td><td>45.0</td><td>60.0</td><td></td><td></td><td>90.0</td></tr><tr><td colspan="7"><eq>^aSee Sect. D1, D3 Tension</eq><eq>^bSee Sect. D3, F4, K1 Shear</eq><eq>^cSee Sect. F1, F2 Bending</eq><eq>^dSee Sect. J8 Bearing</eq><eq>^eSee Sect. G3 Shear in Plate Girders</eq></td></tr></table>
+| $F_y$(ksi) | Allowable Stress (ksi) |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| $F_y$(ksi) | $0.40F_y^{b,e}$ | $0.45F_y^a$ | $0.60F_y^{a,c}$ | $0.66F_y^c$ | $0.75F_y^c$ | $0.90F_y^d$ |
+| 33 | 13.2 | 14.9 | 19.8 | 21.8 | 24.8 | 29.7 |
+| 35 | 14.0 | 15.8 | 21.0 | 23.1 | 26.3 | 31.5 |
+| 36 | 14.5 | 16.2 | 22.0 | 24.0 | 27.0 | 32.4 |
+| 40 | 16.0 | 18.0 | 24.0 | 26.4 | 30.0 | 36.0 |
+| 42 | 16.8 | 18.9 | 25.2 | 27.7 | 31.5 | 37.8 |
+| 45 | 18.0 | 20.3 | 27.0 | 29.7 | 33.8 | 40.5 |
+| 46 | 18.4 | 20.7 | 27.6 | 30.4 | 34.5 | 41.4 |
+| 50 | 20.0 | 22.5 | 30.0 | 33.0 | 37.5 | 45.0 |
+| 55 | 22.0 | 24.8 | 33.0 | 36.3 | 41.3 | 49.5 |
+| 60 | 24.0 | 27.0 | 36.0 | 39.6 | 45.0 | 54.0 |
+| 65 | 26.0 | 29.3 | 39.0 | 42.9 | 48.8 | 58.5 |
+| 70 | 28.0 | 31.5 | 42.0 |  |  | 63.0 |
+| 90 | 36.0 | 40.5 | 54.0 |  |  | 81.0 |
+| 100 | 40.0 | 45.0 | 60.0 |  |  | 90.0 |
+
+$^{a}$See Sect. D1, D3 Tension$^{b}$See Sect. D3, F4, K1 Shear$^{c}$See Sect. F1, F2 Bending$^{d}$See Sect. J8 Bearing$^{e}$See Sect. G3 Shear in Plate Girders
 
 
 Allowable Stresses as a Function of $F_{u}$
 
 
-<table><tr><td rowspan="3">Item</td><td rowspan="3">ASTM Designation</td><td rowspan="3"><eq>F_y</eq>(ksi)</td><td rowspan="3"><eq>F_u</eq>(ksi)</td><td colspan="5">Allowable Stress (ksi)</td></tr><tr><td colspan="2">Connected Part of Designated Steel</td><td colspan="3">Bolt or Threaded Part of Designated Steel</td></tr><tr><td>Tension 0.5<eq>F_u^a</eq></td><td>Bearing 1.2<eq>F_u^b</eq></td><td>Tension 0.33<eq>F_u^c</eq></td><td>Shear 0.17<eq>F_u^d</eq></td><td>Shear 0.22<eq>F_u^e</eq></td></tr><tr><td rowspan="30">Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts</td><td>A36</td><td>36</td><td>58—80</td><td>29.0</td><td>69.6</td><td>19.1</td><td>9.9</td><td>12.8</td></tr><tr><td>A53</td><td>35</td><td>60</td><td>30.0</td><td>72.0</td><td>—</td><td>—</td><td>—</td></tr><tr><td>[A242]</td><td>50</td><td>70</td><td>35.0</td><td>84.0</td><td>23.1</td><td>11.9</td><td>15.4</td></tr><tr><td>[A441]</td><td>46</td><td>67</td><td>33.5</td><td>80.4</td><td>22.1</td><td>11.4</td><td>14.7</td></tr><tr><td>[A588]</td><td>42</td><td>63</td><td>31.5</td><td>75.6</td><td>20.8</td><td>10.7</td><td>13.9</td></tr><tr><td></td><td><eq>40^f</eq></td><td>60</td><td>30.0</td><td>72.0</td><td>19.8</td><td>10.2</td><td>13.2</td></tr><tr><td>A500</td><td>33/39g</td><td>45</td><td>22.5</td><td>54.0</td><td>—</td><td>—</td><td>—</td></tr><tr><td></td><td>42/46g</td><td>58</td><td>29.0</td><td>69.6</td><td>—</td><td>—</td><td>—</td></tr><tr><td></td><td>46/50g</td><td>62</td><td>31.0</td><td>74.4</td><td>—</td><td>—</td><td>—</td></tr><tr><td>A501</td><td>36</td><td>58</td><td>29.0</td><td>69.6</td><td>—</td><td>—</td><td>—</td></tr><tr><td>A529</td><td>42</td><td>60—85</td><td>30.0</td><td>72.0</td><td>19.8</td><td>10.2</td><td>13.2</td></tr><tr><td>A570</td><td>40</td><td>55</td><td>27.5</td><td>66.0</td><td>—</td><td>—</td><td>—</td></tr><tr><td></td><td>42</td><td>58</td><td>29.0</td><td>69.6</td><td>—</td><td>—</td><td>—</td></tr><tr><td>A572</td><td>42</td><td>60</td><td>30.0</td><td>72.0</td><td>19.8</td><td>10.2</td><td>13.2</td></tr><tr><td></td><td>50</td><td>65</td><td>32.5</td><td>78.0</td><td>21.5</td><td>11.1</td><td>14.3</td></tr><tr><td></td><td>60</td><td>75</td><td>37.5</td><td>90.0</td><td>24.8</td><td>12.8</td><td>16.5</td></tr><tr><td></td><td>65</td><td>80</td><td>40.0</td><td>96.0</td><td>26.4</td><td>13.6</td><td>17.6</td></tr><tr><td>A514</td><td>100</td><td>110—130</td><td>55.0</td><td>132</td><td>36.3</td><td>18.7</td><td>24.2</td></tr><tr><td></td><td>90</td><td>100—130</td><td>50.0</td><td>120</td><td>33.0</td><td>17.0</td><td>22.0</td></tr><tr><td>A606</td><td>45</td><td>65</td><td>32.5</td><td>78.0</td><td>—</td><td>—</td><td>—</td></tr><tr><td></td><td>50</td><td>70</td><td>35.0</td><td>84.0</td><td>—</td><td>—</td><td>—</td></tr><tr><td>A607</td><td>45</td><td>60</td><td>30.0</td><td>72.0</td><td>—</td><td>—</td><td>—</td></tr><tr><td></td><td>50</td><td>65</td><td>32.5</td><td>78.0</td><td>—</td><td>—</td><td>—</td></tr><tr><td></td><td>55</td><td>70</td><td>35.0</td><td>84.0</td><td>—</td><td>—</td><td>—</td></tr><tr><td></td><td>60</td><td>75</td><td>37.5</td><td>90.0</td><td>—</td><td>—</td><td>—</td></tr><tr><td></td><td>65</td><td>80</td><td>40.0</td><td>96.0</td><td>—</td><td>—</td><td>—</td></tr><tr><td></td><td>70</td><td>85</td><td>42.5</td><td>102</td><td>—</td><td>—</td><td>—</td></tr><tr><td>A618</td><td>50</td><td>70</td><td>35.0</td><td>84.0</td><td>—</td><td>—</td><td>—</td></tr><tr><td></td><td>50</td><td>65</td><td>32.5</td><td>78.0</td><td>—</td><td>—</td><td>—</td></tr><tr><td>A852</td><td>70</td><td>90—110</td><td>45.0</td><td>108</td><td>—</td><td>—</td><td>—</td></tr><tr><td rowspan="3">Bolts</td><td>A449</td><td>92</td><td>120</td><td>—</td><td>—</td><td>39.6</td><td>20.4</td><td>26.4</td></tr><tr><td></td><td>81</td><td>105</td><td>—</td><td>—</td><td>34.7</td><td>17.9</td><td>23.1</td></tr><tr><td></td><td>58</td><td>90</td><td>—</td><td>—</td><td>29.7</td><td>15.3</td><td>19.8</td></tr><tr><td colspan="9"><eq>^\text{a}</eq>On effective net area, see Sects. D1, J4.<eq>^\text{b}</eq>Produced by fastener in shear, see Sect. J3.7. Note that smaller maximum design bearing stresses, as a function of hole spacing, may be required by Sects. J3.8 and J3.9.<eq>^\text{c}</eq>On nominal body area, see Table J3.2.<eq>^\text{d}</eq>Threads not excluded from shear plane, see Table J3.2.<eq>^\text{e}</eq>Threads excluded from shear plane, see Table J3.2.<eq>^\text{f}</eq>For A441 material only.<eq>^\text{g}</eq>Smaller value for circular shapes, larger for square or rectangular shapes.Note: For dimensional and size limitations, see the appropriate ASTM Specification.</td></tr></table>
+TABLE 2
+
+Allowable Stresses as a Function of $F_u$
+
+| Item | ASTM Designation | $F_y$ (ksi) | $F_u$ (ksi) | Connected Part: Tension $0.5F_u{}^{a}$ | Connected Part: Bearing $1.2F_u{}^{b}$ | Bolt / Threaded Part: Tension $0.33F_u{}^{c}$ | Bolt / Threaded Part: Shear $0.17F_u{}^{d}$ | Bolt / Threaded Part: Shear $0.22F_u{}^{e}$ |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A36 | 36 | 58—80 | 29.0 | 69.6 | 19.1 | 9.9 | 12.8 |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A53 | 35 | 60 | 30.0 | 72.0 | — | — | — |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A242 / A441 / A588 | 50 | 70 | 35.0 | 84.0 | 23.1 | 11.9 | 15.4 |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A242 / A441 / A588 | 46 | 67 | 33.5 | 80.4 | 22.1 | 11.4 | 14.7 |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A242 / A441 / A588 | 42 | 63 | 31.5 | 75.6 | 20.8 | 10.7 | 13.9 |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A441 | $40^f$ | 60 | 30.0 | 72.0 | 19.8 | 10.2 | 13.2 |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A500 | 33/39$^{g}$ | 45 | 22.5 | 54.0 | — | — | — |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A500 | 42/46$^{g}$ | 58 | 29.0 | 69.6 | — | — | — |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A500 | 46/50$^{g}$ | 62 | 31.0 | 74.4 | — | — | — |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A501 | 36 | 58 | 29.0 | 69.6 | — | — | — |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A529 | 42 | 60—85 | 30.0 | 72.0 | 19.8 | 10.2 | 13.2 |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A570 | 40 | 55 | 27.5 | 66.0 | — | — | — |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A570 | 42 | 58 | 29.0 | 69.6 | — | — | — |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A572 | 42 | 60 | 30.0 | 72.0 | 19.8 | 10.2 | 13.2 |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A572 | 50 | 65 | 32.5 | 78.0 | 21.5 | 11.1 | 14.3 |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A572 | 60 | 75 | 37.5 | 90.0 | 24.8 | 12.8 | 16.5 |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A572 | 65 | 80 | 40.0 | 96.0 | 26.4 | 13.6 | 17.6 |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A514 | 100 | 110—130 | 55.0 | 132 | 36.3 | 18.7 | 24.2 |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A514 | 90 | 100—130 | 50.0 | 120 | 33.0 | 17.0 | 22.0 |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A606 | 45 | 65 | 32.5 | 78.0 | — | — | — |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A606 | 50 | 70 | 35.0 | 84.0 | — | — | — |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A607 | 45 | 60 | 30.0 | 72.0 | — | — | — |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A607 | 50 | 65 | 32.5 | 78.0 | — | — | — |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A607 | 55 | 70 | 35.0 | 84.0 | — | — | — |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A607 | 60 | 75 | 37.5 | 90.0 | — | — | — |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A607 | 65 | 80 | 40.0 | 96.0 | — | — | — |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A607 | 70 | 85 | 42.5 | 102 | — | — | — |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A618 | 50 | 70 | 35.0 | 84.0 | — | — | — |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A618 | 50 | 65 | 32.5 | 78.0 | — | — | — |
+| Shapes, Plates, Bars, Sheet and Tubing, or Threaded Parts | A852 | 70 | 90—110 | 45.0 | 108 | — | — | — |
+| Bolts | A449 | 92 | 120 | — | — | 39.6 | 20.4 | 26.4 |
+| Bolts | A449 | 81 | 105 | — | — | 34.7 | 17.9 | 23.1 |
+| Bolts | A449 | 58 | 90 | — | — | 29.7 | 15.3 | 19.8 |
+
+ $^\text{a}$ On effective net area, see Sects. D1, J4. $^\text{b}$ Produced by fastener in shear, see Sect. J3.7. Note that smaller maximum design bearing stresses, as a function of hole spacing, may be required by Sects. J3.8 and J3.9. $^\text{c}$ On nominal body area, see Table J3.2. $^\text{d}$ Threads not excluded from shear plane, see Table J3.2. $^\text{e}$ Threads excluded from shear plane, see Table J3.2. $^\text{f}$ For A441 material only. $^\text{g}$ Smaller value for circular shapes, larger for square or rectangular shapes.
+
+Note: For dimensional and size limitations, see the appropriate ASTM Specification.
 
 TABLE 3 
 
@@ -3429,43 +4001,179 @@ $$
 F _ {a} = C _ {a} F _ {y}) ^ {a}
 $$
 
-<table><tr><td><eq>\frac{Kl/r}{C_c}</eq></td><td><eq>C_a</eq></td><td><eq>\frac{Kl/r}{C_c}</eq></td><td><eq>C_a</eq></td><td><eq>\frac{Kl/r}{C_c}</eq></td><td><eq>C_a</eq></td><td><eq>\frac{Kl/r}{C_c}</eq></td><td><eq>C_a</eq></td></tr><tr><td>.01</td><td>.599</td><td>.26</td><td>.548</td><td>.51</td><td>.472</td><td>.76</td><td>.375</td></tr><tr><td>.02</td><td>.597</td><td>.27</td><td>.546</td><td>.52</td><td>.469</td><td>.77</td><td>.371</td></tr><tr><td>.03</td><td>.596</td><td>.28</td><td>.543</td><td>.53</td><td>.465</td><td>.78</td><td>.366</td></tr><tr><td>.04</td><td>.594</td><td>.29</td><td>.540</td><td>.54</td><td>.462</td><td>.79</td><td>.362</td></tr><tr><td>.05</td><td>.593</td><td>.30</td><td>.538</td><td>.55</td><td>.458</td><td>.80</td><td>.357</td></tr><tr><td>.06</td><td>.591</td><td>.31</td><td>.535</td><td>.56</td><td>.455</td><td>.81</td><td>.353</td></tr><tr><td>.07</td><td>.589</td><td>.32</td><td>.532</td><td>.57</td><td>.451</td><td>.82</td><td>.348</td></tr><tr><td>.08</td><td>.588</td><td>.33</td><td>.529</td><td>.58</td><td>.447</td><td>.83</td><td>.344</td></tr><tr><td>.09</td><td>.586</td><td>.34</td><td>.527</td><td>.59</td><td>.444</td><td>.84</td><td>.339</td></tr><tr><td>.10</td><td>.584</td><td>.35</td><td>.524</td><td>.60</td><td>.440</td><td>.85</td><td>.335</td></tr><tr><td>.11</td><td>.582</td><td>.36</td><td>.521</td><td>.61</td><td>.436</td><td>.86</td><td>.330</td></tr><tr><td>.12</td><td>.580</td><td>.37</td><td>.518</td><td>.62</td><td>.432</td><td>.87</td><td>.325</td></tr><tr><td>.13</td><td>.578</td><td>.38</td><td>.515</td><td>.63</td><td>.428</td><td>.88</td><td>.321</td></tr><tr><td>.14</td><td>.576</td><td>.39</td><td>.512</td><td>.64</td><td>.424</td><td>.89</td><td>.316</td></tr><tr><td>.15</td><td>.574</td><td>.40</td><td>.509</td><td>.65</td><td>.420</td><td>.90</td><td>.311</td></tr><tr><td>.16</td><td>.572</td><td>.41</td><td>.506</td><td>.66</td><td>.416</td><td>.91</td><td>.306</td></tr><tr><td>.17</td><td>.570</td><td>.42</td><td>.502</td><td>.67</td><td>.412</td><td>.92</td><td>.301</td></tr><tr><td>.18</td><td>.568</td><td>.43</td><td>.499</td><td>.68</td><td>.408</td><td>.93</td><td>.296</td></tr><tr><td>.19</td><td>.565</td><td>.44</td><td>.496</td><td>.69</td><td>.404</td><td>.94</td><td>.291</td></tr><tr><td>.20</td><td>.563</td><td>.45</td><td>.493</td><td>.70</td><td>.400</td><td>.95</td><td>.286</td></tr><tr><td>.21</td><td>.561</td><td>.46</td><td>.489</td><td>.71</td><td>.396</td><td>.96</td><td>.281</td></tr><tr><td>.22</td><td>.558</td><td>.47</td><td>.486</td><td>.72</td><td>.392</td><td>.97</td><td>.276</td></tr><tr><td>.23</td><td>.556</td><td>.48</td><td>.483</td><td>.73</td><td>.388</td><td>.98</td><td>.271</td></tr><tr><td>.24</td><td>.553</td><td>.49</td><td>.479</td><td>.74</td><td>.384</td><td>.99</td><td>.266</td></tr><tr><td>.25</td><td>.551</td><td>.50</td><td>.476</td><td>.75</td><td>.379</td><td>1.00</td><td>.261</td></tr><tr><td colspan="8"><eq>^a</eq>When ratios exceed the noncompact section limits of Sect. B5.1, use <eq>\frac{Kl/r}{C_c&#x27;}</eq> in lieu of <eq>\frac{Kl/r}{C_c}</eq> values and equation <eq>F_a = C_a Q_a Q_s F_y</eq> (Appendix Sect. B5).</td></tr></table>
+| $\frac{Kl/r}{C_c}$ | $C_a$ | $\frac{Kl/r}{C_c}$ | $C_a$ | $\frac{Kl/r}{C_c}$ | $C_a$ | $\frac{Kl/r}{C_c}$ | $C_a$ |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| .01 | .599 | .26 | .548 | .51 | .472 | .76 | .375 |
+| .02 | .597 | .27 | .546 | .52 | .469 | .77 | .371 |
+| .03 | .596 | .28 | .543 | .53 | .465 | .78 | .366 |
+| .04 | .594 | .29 | .540 | .54 | .462 | .79 | .362 |
+| .05 | .593 | .30 | .538 | .55 | .458 | .80 | .357 |
+| .06 | .591 | .31 | .535 | .56 | .455 | .81 | .353 |
+| .07 | .589 | .32 | .532 | .57 | .451 | .82 | .348 |
+| .08 | .588 | .33 | .529 | .58 | .447 | .83 | .344 |
+| .09 | .586 | .34 | .527 | .59 | .444 | .84 | .339 |
+| .10 | .584 | .35 | .524 | .60 | .440 | .85 | .335 |
+| .11 | .582 | .36 | .521 | .61 | .436 | .86 | .330 |
+| .12 | .580 | .37 | .518 | .62 | .432 | .87 | .325 |
+| .13 | .578 | .38 | .515 | .63 | .428 | .88 | .321 |
+| .14 | .576 | .39 | .512 | .64 | .424 | .89 | .316 |
+| .15 | .574 | .40 | .509 | .65 | .420 | .90 | .311 |
+| .16 | .572 | .41 | .506 | .66 | .416 | .91 | .306 |
+| .17 | .570 | .42 | .502 | .67 | .412 | .92 | .301 |
+| .18 | .568 | .43 | .499 | .68 | .408 | .93 | .296 |
+| .19 | .565 | .44 | .496 | .69 | .404 | .94 | .291 |
+| .20 | .563 | .45 | .493 | .70 | .400 | .95 | .286 |
+| .21 | .561 | .46 | .489 | .71 | .396 | .96 | .281 |
+| .22 | .558 | .47 | .486 | .72 | .392 | .97 | .276 |
+| .23 | .556 | .48 | .483 | .73 | .388 | .98 | .271 |
+| .24 | .553 | .49 | .479 | .74 | .384 | .99 | .266 |
+| .25 | .551 | .50 | .476 | .75 | .379 | 1.00 | .261 |
 
+$^a$When ratios exceed the noncompact section limits of Sect. B5.1, use $\frac{Kl/r}{C_c'}$ in lieu of $\frac{Kl/r}{C_c}$ values and equation $F_a = C_a Q_a Q_s F_y$ (Appendix Sect. B5).
+
+
+TABLE 4
+
+Values of $C_c$
 
 For Use with Equations (E2-1) and (E2-2) and in Table 3
 
 
-<table><tr><td><eq>F_y</eq>(ksi)</td><td><eq>C_c</eq></td><td><eq>F_y</eq>(ksi)</td><td><eq>C_c</eq></td></tr><tr><td>33</td><td>131.7</td><td>46</td><td>111.6</td></tr><tr><td>35</td><td>127.9</td><td>50</td><td>107.0</td></tr><tr><td>36</td><td>126.1</td><td>55</td><td>102.0</td></tr><tr><td>39</td><td>121.2</td><td>60</td><td>97.7</td></tr><tr><td>40</td><td>119.6</td><td>65</td><td>93.8</td></tr><tr><td>42</td><td>116.7</td><td>90</td><td>79.8</td></tr><tr><td>45</td><td>112.8</td><td>100</td><td>75.7</td></tr></table>
+| $F_y$(ksi) | $C_c$ | $F_y$(ksi) | $C_c$ |
+| --- | --- | --- | --- |
+| 33 | 131.7 | 46 | 111.6 |
+| 35 | 127.9 | 50 | 107.0 |
+| 36 | 126.1 | 55 | 102.0 |
+| 39 | 121.2 | 60 | 97.7 |
+| 40 | 119.6 | 65 | 93.8 |
+| 42 | 116.7 | 90 | 79.8 |
+| 45 | 112.8 | 100 | 75.7 |
 
 
 TABLE 5
 
 
-
 Slenderness Ratios of Elements as a Function of $F_{y}$
 
 
-<table><tr><td rowspan="2">SpecificationSection and Ratios</td><td colspan="6"><eq>F_y</eq> (ksi)</td></tr><tr><td>36</td><td>42</td><td>46</td><td>50</td><td>60</td><td>65</td></tr><tr><td>Table B5.1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><eq>65/\sqrt{F_y}</eq></td><td>10.8</td><td>10.0</td><td>9.6</td><td>9.2</td><td>8.4</td><td>8.1</td></tr><tr><td><eq>190/\sqrt{F_y}</eq></td><td>31.7</td><td>29.3</td><td>28.0</td><td>26.9</td><td>24.5</td><td>23.6</td></tr><tr><td><eq>640/\sqrt{F_y}</eq></td><td>106.7</td><td>98.8</td><td>94.4</td><td>90.5</td><td>82.6</td><td>79.4</td></tr><tr><td><eq>257/\sqrt{F_y}</eq></td><td>42.8</td><td>39.7</td><td>37.9</td><td>36.3</td><td>33.2</td><td>31.9</td></tr><tr><td>Sect. F1.2<eq>\sqrt{\frac{102 \times 10^3 C_b}{F_y}}</eq></td><td><eq>53\sqrt{C_b}</eq></td><td><eq>49\sqrt{C_b}</eq></td><td><eq>47\sqrt{C_b}</eq></td><td><eq>45\sqrt{C_b}</eq></td><td><eq>41\sqrt{C_b}</eq></td><td><eq>40\sqrt{C_b}</eq></td></tr><tr><td><eq>\sqrt{\frac{510 \times 10^3 C_b}{F_y}}</eq></td><td><eq>119\sqrt{C_b}</eq></td><td><eq>110\sqrt{C_b}</eq></td><td><eq>105\sqrt{C_b}</eq></td><td><eq>101\sqrt{C_b}</eq></td><td><eq>92\sqrt{C_b}</eq></td><td><eq>89\sqrt{C_b}</eq></td></tr><tr><td>Table B5.1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><eq>76/\sqrt{F_y}</eq></td><td>12.7</td><td>11.7</td><td>11.2</td><td>10.7</td><td>9.8</td><td>9.4</td></tr><tr><td><eq>95/\sqrt{F_y}</eq></td><td>15.8</td><td>14.7</td><td>14.0</td><td>13.4</td><td>12.3</td><td>11.8</td></tr><tr><td><eq>127/\sqrt{F_y}</eq></td><td>21.2</td><td>19.6</td><td>18.7</td><td>18.0</td><td>16.4</td><td>15.8</td></tr><tr><td>Table B5.1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><eq>238/\sqrt{F_y}</eq></td><td>39.7</td><td>36.7</td><td>35.1</td><td>33.7</td><td>30.7</td><td>29.5</td></tr><tr><td><eq>317/\sqrt{F_y}</eq></td><td>52.8</td><td>48.9</td><td>46.7</td><td>44.8</td><td>40.9</td><td>39.3</td></tr><tr><td><eq>253/\sqrt{F_y}</eq></td><td>42.2</td><td>39.0</td><td>37.3</td><td>35.8</td><td>32.7</td><td>31.4</td></tr><tr><td>Table B5.1—AppendixB5.2b</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><eq>3300/F_y</eq></td><td>91.7</td><td>78.6</td><td>71.7</td><td>66.0</td><td>55.0</td><td>50.8</td></tr><tr><td><eq>13000/F_y</eq></td><td>361</td><td>310</td><td>283</td><td>260</td><td>217</td><td>200</td></tr><tr><td>Sect. G1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><eq>\frac{14000}{\sqrt{F_y(F_y + 16.5)}}</eq></td><td>322</td><td>282</td><td>261</td><td>243</td><td>207</td><td>192</td></tr><tr><td><eq>2000/\sqrt{F_y}</eq></td><td>333</td><td>309</td><td>295</td><td>283</td><td>258</td><td>248</td></tr></table>
+| SpecificationSection and Ratios | $F_y$ (ksi) |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| SpecificationSection and Ratios | 36 | 42 | 46 | 50 | 60 | 65 |
+| Table B5.1 |  |  |  |  |  |  |
+| $65/\sqrt{F_y}$ | 10.8 | 10.0 | 9.6 | 9.2 | 8.4 | 8.1 |
+| $190/\sqrt{F_y}$ | 31.7 | 29.3 | 28.0 | 26.9 | 24.5 | 23.6 |
+| $640/\sqrt{F_y}$ | 106.7 | 98.8 | 94.4 | 90.5 | 82.6 | 79.4 |
+| $257/\sqrt{F_y}$ | 42.8 | 39.7 | 37.9 | 36.3 | 33.2 | 31.9 |
+| Sect. F1.2$\sqrt{\frac{102 \times 10^3 C_b}{F_y}}$ | $53\sqrt{C_b}$ | $49\sqrt{C_b}$ | $47\sqrt{C_b}$ | $45\sqrt{C_b}$ | $41\sqrt{C_b}$ | $40\sqrt{C_b}$ |
+| $\sqrt{\frac{510 \times 10^3 C_b}{F_y}}$ | $119\sqrt{C_b}$ | $110\sqrt{C_b}$ | $105\sqrt{C_b}$ | $101\sqrt{C_b}$ | $92\sqrt{C_b}$ | $89\sqrt{C_b}$ |
+| Table B5.1 |  |  |  |  |  |  |
+| $76/\sqrt{F_y}$ | 12.7 | 11.7 | 11.2 | 10.7 | 9.8 | 9.4 |
+| $95/\sqrt{F_y}$ | 15.8 | 14.7 | 14.0 | 13.4 | 12.3 | 11.8 |
+| $127/\sqrt{F_y}$ | 21.2 | 19.6 | 18.7 | 18.0 | 16.4 | 15.8 |
+| Table B5.1 |  |  |  |  |  |  |
+| $238/\sqrt{F_y}$ | 39.7 | 36.7 | 35.1 | 33.7 | 30.7 | 29.5 |
+| $317/\sqrt{F_y}$ | 52.8 | 48.9 | 46.7 | 44.8 | 40.9 | 39.3 |
+| $253/\sqrt{F_y}$ | 42.2 | 39.0 | 37.3 | 35.8 | 32.7 | 31.4 |
+| Table B5.1—AppendixB5.2b |  |  |  |  |  |  |
+| $3300/F_y$ | 91.7 | 78.6 | 71.7 | 66.0 | 55.0 | 50.8 |
+| $13000/F_y$ | 361 | 310 | 283 | 260 | 217 | 200 |
+| Sect. G1 |  |  |  |  |  |  |
+| $\frac{14000}{\sqrt{F_y(F_y + 16.5)}}$ | 322 | 282 | 261 | 243 | 207 | 192 |
+| $2000/\sqrt{F_y}$ | 333 | 309 | 295 | 283 | 258 | 248 |
 
 
 AMERICAN INSTITUTE OF STEEL CONSTRUCTION 
 
 
+TABLE 6
+
+Values of $C_b$
 
 For Use in Equations (F1-6), (F1-7) and (F1-8)
 
 
-<table><tr><td><eq>\frac{M_1}{M_2}</eq></td><td><eq>C_b</eq></td><td><eq>\frac{M_1}{M_2}</eq></td><td><eq>C_b</eq></td><td><eq>\frac{M_1}{M_2}</eq></td><td><eq>C_b</eq></td></tr><tr><td>-1.00</td><td>1.00</td><td>-0.45</td><td>1.34</td><td>0.10</td><td>1.86</td></tr><tr><td>-0.95</td><td>1.02</td><td>-0.40</td><td>1.38</td><td>0.15</td><td>1.91</td></tr><tr><td>-0.90</td><td>1.05</td><td>-0.35</td><td>1.42</td><td>0.20</td><td>1.97</td></tr><tr><td>-0.85</td><td>1.07</td><td>-0.30</td><td>1.46</td><td>0.25</td><td>2.03</td></tr><tr><td>-0.80</td><td>1.10</td><td>-0.25</td><td>1.51</td><td>0.30</td><td>2.09</td></tr><tr><td>-0.75</td><td>1.13</td><td>-0.20</td><td>1.55</td><td>0.35</td><td>2.15</td></tr><tr><td>-0.70</td><td>1.16</td><td>-0.15</td><td>1.60</td><td>0.40</td><td>2.22</td></tr><tr><td>-0.65</td><td>1.19</td><td>-0.10</td><td>1.65</td><td>0.45</td><td>2.28</td></tr><tr><td>-0.60</td><td>1.23</td><td>-0.05</td><td>1.70</td><td>≥0.47</td><td>2.30</td></tr><tr><td>-0.55</td><td>1.26</td><td>0</td><td>1.75</td><td></td><td></td></tr><tr><td>-0.50</td><td>1.30</td><td>0.05</td><td>1.80</td><td></td><td></td></tr><tr><td colspan="6">Note 1: <eq>C_b = 1.75 + 1.05(M_1/M_2) + 0.3 (M_1/M_2)^2 \leq 2.3</eq>.Note 2: <eq>M_1/M_2</eq> positive for reverse curvature and negative for single curvature.</td></tr></table>
+| $\frac{M_1}{M_2}$ | $C_b$ | $\frac{M_1}{M_2}$ | $C_b$ | $\frac{M_1}{M_2}$ | $C_b$ |
+| --- | --- | --- | --- | --- | --- |
+| -1.00 | 1.00 | -0.45 | 1.34 | 0.10 | 1.86 |
+| -0.95 | 1.02 | -0.40 | 1.38 | 0.15 | 1.91 |
+| -0.90 | 1.05 | -0.35 | 1.42 | 0.20 | 1.97 |
+| -0.85 | 1.07 | -0.30 | 1.46 | 0.25 | 2.03 |
+| -0.80 | 1.10 | -0.25 | 1.51 | 0.30 | 2.09 |
+| -0.75 | 1.13 | -0.20 | 1.55 | 0.35 | 2.15 |
+| -0.70 | 1.16 | -0.15 | 1.60 | 0.40 | 2.22 |
+| -0.65 | 1.19 | -0.10 | 1.65 | 0.45 | 2.28 |
+| -0.60 | 1.23 | -0.05 | 1.70 | ≥0.47 | 2.30 |
+| -0.55 | 1.26 | 0 | 1.75 |  |  |
+| -0.50 | 1.30 | 0.05 | 1.80 |  |  |
+
+Note 1: $C_b = 1.75 + 1.05(M_1/M_2) + 0.3 (M_1/M_2)^2 \leq 2.3$.Note 2: $M_1/M_2$ positive for reverse curvature and negative for single curvature.
 
 
 TABLE 7 Values of $C_m$
 
 
-
 For Use in Equation (H1-1)
 
 
-<table><tr><td><eq>\frac{M_1}{M_2}</eq></td><td><eq>C_m</eq></td><td><eq>\frac{M_1}{M_2}</eq></td><td><eq>C_m</eq></td><td><eq>\frac{M_1}{M_2}</eq></td><td colspan="7"><eq>C_m</eq></td></tr><tr><td>-1.00</td><td>1.00</td><td>-0.45</td><td>0.78</td><td>0.10</td><td colspan="7">0.56</td></tr><tr><td>-0.95</td><td>0.98</td><td>-0.40</td><td>0.76</td><td>0.15</td><td colspan="7">0.54</td></tr><tr><td>-0.90</td><td>0.96</td><td>-0.35</td><td>0.74</td><td>0.20</td><td colspan="7">0.52</td></tr><tr><td>-0.85</td><td>0.94</td><td>-0.30</td><td>0.72</td><td>0.25</td><td colspan="7">0.50</td></tr><tr><td>-0.80</td><td>0.92</td><td>-0.25</td><td>0.70</td><td>0.30</td><td colspan="7">0.48</td></tr><tr><td>-0.75</td><td>0.90</td><td>-0.20</td><td>0.68</td><td>0.35</td><td colspan="7">0.46</td></tr><tr><td>-0.70</td><td>0.88</td><td>-0.15</td><td>0.66</td><td>0.40</td><td colspan="7">0.44</td></tr><tr><td>-0.65</td><td>0.86</td><td>-0.10</td><td>0.64</td><td>0.45</td><td colspan="7">0.42</td></tr><tr><td>-0.60</td><td>0.84</td><td>-0.05</td><td>0.62</td><td>0.50</td><td colspan="7">0.40</td></tr><tr><td></td><td></td><td></td><td></td><td>0.60</td><td colspan="7">0.36</td></tr><tr><td>-0.55</td><td>0.82</td><td>0</td><td>0.60</td><td>0.80</td><td colspan="7">0.28</td></tr><tr><td>-0.50</td><td>0.80</td><td>0.05</td><td>0.58</td><td>1.00</td><td colspan="7">0.20</td></tr><tr><td colspan="12">Note 1: <eq>C_m = 0.6 - 0.4(M_1/M_2)</eq>Note 2: <eq>M_1/M_2</eq> is positive for reverse curvature and negative for single curvature.</td></tr><tr><td colspan="12">For Use in Equation (H1-1), for Steel of Any Yield Stress</td></tr><tr><td><eq>\frac{Kl_b}{r_b}</eq></td><td><eq>F_e'</eq>(ksi)</td><td><eq>\frac{Kl_b}{r_b}</eq></td><td><eq>F_e'</eq>(ksi)</td><td><eq>\frac{Kl_b}{r_b}</eq></td><td><eq>F_e'</eq>(ksi)</td><td><eq>\frac{Kl_b}{r_b}</eq></td><td><eq>F_e'</eq>(ksi)</td><td><eq>\frac{Kl_b}{r_b}</eq></td><td><eq>F_e'</eq>(ksi)</td><td><eq>\frac{Kl_h}{r_b}</eq></td><td><eq>F_e'</eq>(ksi)</td></tr><tr><td>21</td><td>338.62</td><td>51</td><td>57.41</td><td>81</td><td>22.76</td><td>111</td><td>12.12</td><td>141</td><td>7.51</td><td>171</td><td>5.11</td></tr><tr><td>22</td><td>308.54</td><td>52</td><td>55.23</td><td>82</td><td>22.21</td><td>112</td><td>11.90</td><td>142</td><td>7.41</td><td>172</td><td>5.05</td></tr><tr><td>23</td><td>282.29</td><td>53</td><td>53.16</td><td>83</td><td>21.68</td><td>113</td><td>11.69</td><td>143</td><td>7.30</td><td>173</td><td>4.99</td></tr><tr><td>24</td><td>259.26</td><td>54</td><td>51.21</td><td>84</td><td>21.16</td><td>114</td><td>11.49</td><td>144</td><td>7.20</td><td>174</td><td>4.93</td></tr><tr><td>25</td><td>238.93</td><td>55</td><td>49.37</td><td>85</td><td>20.67</td><td>115</td><td>11.29</td><td>145</td><td>7.10</td><td>175</td><td>4.88</td></tr><tr><td>26</td><td>220.90</td><td>56</td><td>47.62</td><td>86</td><td>20.19</td><td>116</td><td>11.10</td><td>146</td><td>7.01</td><td>176</td><td>4.82</td></tr><tr><td>27</td><td>204.84</td><td>57</td><td>45.96</td><td>87</td><td>19.73</td><td>117</td><td>10.91</td><td>147</td><td>6.91</td><td>177</td><td>4.77</td></tr><tr><td>28</td><td>190.47</td><td>58</td><td>44.39</td><td>88</td><td>19.28</td><td>118</td><td>10.72</td><td>148</td><td>6.82</td><td>178</td><td>4.71</td></tr><tr><td>29</td><td>177.56</td><td>59</td><td>42.90</td><td>89</td><td>18.85</td><td>119</td><td>10.55</td><td>149</td><td>6.73</td><td>179</td><td>4.66</td></tr><tr><td>30</td><td>165.92</td><td>60</td><td>41.48</td><td>90</td><td>18.44</td><td>120</td><td>10.37</td><td>150</td><td>6.64</td><td>180</td><td>4.61</td></tr><tr><td>31</td><td>155.39</td><td>61</td><td>40.13</td><td>91</td><td>18.03</td><td>121</td><td>10.20</td><td>151</td><td>6.55</td><td>181</td><td>4.56</td></tr><tr><td>32</td><td>145.83</td><td>62</td><td>38.85</td><td>92</td><td>17.64</td><td>122</td><td>10.03</td><td>152</td><td>6.46</td><td>182</td><td>4.51</td></tr><tr><td>33</td><td>137.13</td><td>63</td><td>37.62</td><td>93</td><td>17.27</td><td>123</td><td>9.87</td><td>153</td><td>6.38</td><td>183</td><td>4.46</td></tr><tr><td>34</td><td>129.18</td><td>64</td><td>36.46</td><td>94</td><td>16.90</td><td>124</td><td>9.71</td><td>154</td><td>6.30</td><td>184</td><td>4.41</td></tr><tr><td>35</td><td>121.90</td><td>65</td><td>35.34</td><td>95</td><td>16.55</td><td>125</td><td>9.56</td><td>155</td><td>6.22</td><td>185</td><td>4.36</td></tr><tr><td>36</td><td>115.22</td><td>66</td><td>34.28</td><td>96</td><td>16.20</td><td>126</td><td>9.41</td><td>156</td><td>6.14</td><td>186</td><td>4.32</td></tr><tr><td>37</td><td>109.08</td><td>67</td><td>33.27</td><td>97</td><td>15.87</td><td>127</td><td>9.26</td><td>157</td><td>6.06</td><td>187</td><td>4.27</td></tr><tr><td>38</td><td>103.42</td><td>68</td><td>32.29</td><td>98</td><td>15.55</td><td>128</td><td>9.11</td><td>158</td><td>5.98</td><td>188</td><td>4.23</td></tr><tr><td>39</td><td>98.18</td><td>69</td><td>31.37</td><td>99</td><td>15.24</td><td>129</td><td>8.97</td><td>159</td><td>5.91</td><td>189</td><td>4.18</td></tr><tr><td>40</td><td>93.33</td><td>70</td><td>30.48</td><td>100</td><td>14.93</td><td>130</td><td>8.84</td><td>160</td><td>5.83</td><td>190</td><td>4.14</td></tr><tr><td>41</td><td>88.83</td><td>71</td><td>29.62</td><td>101</td><td>14.64</td><td>131</td><td>8.70</td><td>161</td><td>5.76</td><td>191</td><td>4.09</td></tr><tr><td>42</td><td>84.65</td><td>72</td><td>28.81</td><td>102</td><td>14.35</td><td>132</td><td>8.57</td><td>162</td><td>5.69</td><td>192</td><td>4.05</td></tr><tr><td>43</td><td>80.76</td><td>73</td><td>28.02</td><td>103</td><td>14.08</td><td>133</td><td>8.44</td><td>163</td><td>5.62</td><td>193</td><td>4.01</td></tr><tr><td>44</td><td>77.13</td><td>74</td><td>27.27</td><td>104</td><td>13.81</td><td>134</td><td>8.32</td><td>164</td><td>5.55</td><td>194</td><td>3.97</td></tr><tr><td>45</td><td>73.74</td><td>75</td><td>26.55</td><td>105</td><td>13.54</td><td>135</td><td>8.19</td><td>165</td><td>5.49</td><td>195</td><td>3.93</td></tr><tr><td>46</td><td>70.57</td><td>76</td><td>25.85</td><td>106</td><td>13.29</td><td>136</td><td>8.07</td><td>166</td><td>5.42</td><td>196</td><td>3.89</td></tr><tr><td>47</td><td>67.60</td><td>77</td><td>25.19</td><td>107</td><td>13.04</td><td>137</td><td>7.96</td><td>167</td><td>5.35</td><td>197</td><td>3.85</td></tr><tr><td>48</td><td>64.81</td><td>78</td><td>24.54</td><td>108</td><td>12.80</td><td>138</td><td>7.84</td><td>168</td><td>5.29</td><td>198</td><td>3.81</td></tr><tr><td>49</td><td>62.20</td><td>79</td><td>23.93</td><td>109</td><td>12.57</td><td>139</td><td>7.73</td><td>169</td><td>5.23</td><td>199</td><td>3.77</td></tr><tr><td>50</td><td>59.73</td><td>80</td><td>23.33</td><td>110</td><td>12.34</td><td>140</td><td>7.62</td><td>170</td><td>5.17</td><td>200</td><td>3.73</td></tr><tr><td colspan="12">Note: <eq>F_e' = \frac{12\pi^2E}{23(KI_b/r_b)^2}</eq></td></tr></table>
+| $M_1/M_2$ | $C_m$ | $M_1/M_2$ | $C_m$ | $M_1/M_2$ | $C_m$ |
+| --- | --- | --- | --- | --- | --- |
+| -1.00 | 1.00 | -0.45 | 0.78 | 0.10 | 0.56 |
+| -0.95 | 0.98 | -0.40 | 0.76 | 0.15 | 0.54 |
+| -0.90 | 0.96 | -0.35 | 0.74 | 0.20 | 0.52 |
+| -0.85 | 0.94 | -0.30 | 0.72 | 0.25 | 0.50 |
+| -0.80 | 0.92 | -0.25 | 0.70 | 0.30 | 0.48 |
+| -0.75 | 0.90 | -0.20 | 0.68 | 0.35 | 0.46 |
+| -0.70 | 0.88 | -0.15 | 0.66 | 0.40 | 0.44 |
+| -0.65 | 0.86 | -0.10 | 0.64 | 0.45 | 0.42 |
+| -0.60 | 0.84 | -0.05 | 0.62 | 0.50 | 0.40 |
+|  |  |  |  | 0.60 | 0.36 |
+| -0.55 | 0.82 | 0 | 0.60 | 0.80 | 0.28 |
+| -0.50 | 0.80 | 0.05 | 0.58 | 1.00 | 0.20 |
+
+Note 1: $C_m=0.6-0.4(M_1/M_2)$.
+
+Note 2: $M_1/M_2$ is positive for reverse curvature and negative for single curvature.
+
+TABLE 8
+
+Values of $F_e^{\prime}$
+
+For Use in Equation (H1-1), for Steel of Any Yield Stress
+
+| $Kl_b/r_b$ | $F_e^{\prime}$ (ksi) | $Kl_b/r_b$ | $F_e^{\prime}$ (ksi) | $Kl_b/r_b$ | $F_e^{\prime}$ (ksi) | $Kl_b/r_b$ | $F_e^{\prime}$ (ksi) | $Kl_b/r_b$ | $F_e^{\prime}$ (ksi) | $Kl_b/r_b$ | $F_e^{\prime}$ (ksi) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 21 | 338.62 | 51 | 57.41 | 81 | 22.76 | 111 | 12.12 | 141 | 7.51 | 171 | 5.11 |
+| 22 | 308.54 | 52 | 55.23 | 82 | 22.21 | 112 | 11.90 | 142 | 7.41 | 172 | 5.05 |
+| 23 | 282.29 | 53 | 53.16 | 83 | 21.68 | 113 | 11.69 | 143 | 7.30 | 173 | 4.99 |
+| 24 | 259.26 | 54 | 51.21 | 84 | 21.16 | 114 | 11.49 | 144 | 7.20 | 174 | 4.93 |
+| 25 | 238.93 | 55 | 49.37 | 85 | 20.67 | 115 | 11.29 | 145 | 7.10 | 175 | 4.88 |
+| 26 | 220.90 | 56 | 47.62 | 86 | 20.19 | 116 | 11.10 | 146 | 7.01 | 176 | 4.82 |
+| 27 | 204.84 | 57 | 45.96 | 87 | 19.73 | 117 | 10.91 | 147 | 6.91 | 177 | 4.77 |
+| 28 | 190.47 | 58 | 44.39 | 88 | 19.28 | 118 | 10.72 | 148 | 6.82 | 178 | 4.71 |
+| 29 | 177.56 | 59 | 42.90 | 89 | 18.85 | 119 | 10.55 | 149 | 6.73 | 179 | 4.66 |
+| 30 | 165.92 | 60 | 41.48 | 90 | 18.44 | 120 | 10.37 | 150 | 6.64 | 180 | 4.61 |
+| 31 | 155.39 | 61 | 40.13 | 91 | 18.03 | 121 | 10.20 | 151 | 6.55 | 181 | 4.56 |
+| 32 | 145.83 | 62 | 38.85 | 92 | 17.64 | 122 | 10.03 | 152 | 6.46 | 182 | 4.51 |
+| 33 | 137.13 | 63 | 37.62 | 93 | 17.27 | 123 | 9.87 | 153 | 6.38 | 183 | 4.46 |
+| 34 | 129.18 | 64 | 36.46 | 94 | 16.90 | 124 | 9.71 | 154 | 6.30 | 184 | 4.41 |
+| 35 | 121.90 | 65 | 35.34 | 95 | 16.55 | 125 | 9.56 | 155 | 6.22 | 185 | 4.36 |
+| 36 | 115.22 | 66 | 34.28 | 96 | 16.20 | 126 | 9.41 | 156 | 6.14 | 186 | 4.32 |
+| 37 | 109.08 | 67 | 33.27 | 97 | 15.87 | 127 | 9.26 | 157 | 6.06 | 187 | 4.27 |
+| 38 | 103.42 | 68 | 32.29 | 98 | 15.55 | 128 | 9.11 | 158 | 5.98 | 188 | 4.23 |
+| 39 | 98.18 | 69 | 31.37 | 99 | 15.24 | 129 | 8.97 | 159 | 5.91 | 189 | 4.18 |
+| 40 | 93.33 | 70 | 30.48 | 100 | 14.93 | 130 | 8.84 | 160 | 5.83 | 190 | 4.14 |
+| 41 | 88.83 | 71 | 29.62 | 101 | 14.64 | 131 | 8.70 | 161 | 5.76 | 191 | 4.09 |
+| 42 | 84.65 | 72 | 28.81 | 102 | 14.35 | 132 | 8.57 | 162 | 5.69 | 192 | 4.05 |
+| 43 | 80.76 | 73 | 28.02 | 103 | 14.08 | 133 | 8.44 | 163 | 5.62 | 193 | 4.01 |
+| 44 | 77.13 | 74 | 27.27 | 104 | 13.81 | 134 | 8.32 | 164 | 5.55 | 194 | 3.97 |
+| 45 | 73.74 | 75 | 26.55 | 105 | 13.54 | 135 | 8.19 | 165 | 5.49 | 195 | 3.93 |
+| 46 | 70.57 | 76 | 25.85 | 106 | 13.29 | 136 | 8.07 | 166 | 5.42 | 196 | 3.89 |
+| 47 | 67.60 | 77 | 25.19 | 107 | 13.04 | 137 | 7.96 | 167 | 5.35 | 197 | 3.85 |
+| 48 | 64.81 | 78 | 24.54 | 108 | 12.80 | 138 | 7.84 | 168 | 5.29 | 198 | 3.81 |
+| 49 | 62.20 | 79 | 23.93 | 109 | 12.57 | 139 | 7.73 | 169 | 5.23 | 199 | 3.77 |
+| 50 | 59.73 | 80 | 23.33 | 110 | 12.34 | 140 | 7.62 | 170 | 5.17 | 200 | 3.73 |
+
+Note: $F_e^{\prime}=\frac{12\pi^2E}{23(Kl_b/r_b)^2}$.
 
 ## Commentary
 
@@ -3506,7 +4214,6 @@ Provisions of the Specification are based on providing a factor of safety agains
 The web-to-flange intersection and the web center of heavy hot-rolled shapes, as well as the interior portions of heavy plates, may contain a coarser grain structure and/or lower toughness than other areas of these products. This is probably caused by ingot segregation, as well as somewhat less deformation during hot rolling, higher finishing temperature and a slower cooling rate after rolling. This characteristic is not detrimental to suitability for service as compression members or non-welded members. However when heavy sections are fabricated using full-penetration welds, tensile strains induced by weld shrinkage may result in cracking. For critical applications such as primary tension members, material should be produced to provide adequate toughness. Because of differences in the strain rate between the Charpy V-Notch (CVN) impact test and the strain rate experienced in actual structures, the CVN test is conducted at a temperature higher than the anticipated service temperature. 
 
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/64d833925ac7f77940c0c97553cc5d5e0b4aa4542b1d1917230854041fcd82ec.jpg)
-
 
 
 Fig. C-A3.1c Location from which charpy impact specimen shall be taken.
@@ -3565,6 +4272,8 @@ $$
 U = 1 - \bar {x} / l\tag{C-B1-1}
 $$
 
+<!-- OCR audit: C-B1-1 is the equation label printed in the supplied PDF (p. 66, left; 5-128), despite placement in B3. Retained. -->
+
 where: 
 
 $\vec{x} =$ the distance from the centroid of the shape profile to the shear plane of the connection, in. 
@@ -3588,12 +4297,14 @@ When the width-thickness ratio of the compressed elements in a member does not e
 Equations (A-B5-1), (A-B5-2), (A-B5-5) and (A-B5-6) are based upon the following expression for critical buckling stress $\sigma_{c}$ for a plate supported against lateral deflection along one or both edges (Galambos, 1988), with or without torsional restraint along these edges and subject to in-plane compressive force: 
 
 $$
-\sigma_ {c} = k _ {c} \left[ \frac {\pi^ {2} E \sqrt {\eta}}{1 2 (1 - v ^ {2}) (b / t) ^ {2}} \right]\tag{C-B5-1}
+\sigma_ {c} = k _ {c} \left[ \frac {\pi^ {2} E \sqrt {\eta}}{12 (1 - \nu ^ {2}) (b / t) ^ {2}} \right]\tag{C-B5-1}
 $$
 
 where: 
 
-$\eta =$ the ratio of the tangent modulus to the elastic modulus, $E_{t} / E$ $\nu =$ Poisson's ratio 
+$\eta =$ the ratio of the tangent modulus to the elastic modulus, $E_{t} / E$
+
+$\nu =$ Poisson's ratio 
 
 The assumption of nothing more than knife-edge lateral support applied along one edge of the unstiffened element under a uniformly distributed stress (the most critical case) would give a value of $k_{c} = 0.425$ . Some increase in this value is warranted because of the torsional restraint provided by the supporting element and because of the difference between b, as defined in Sect. B5.1, and the theoretical width b. 
 
@@ -3612,7 +4323,6 @@ A better estimate of the compressive strength of stiffened elements, based upon 
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/8a3ea5c5b033e2c275d72e54bb18e7b7e5167757a12d969fbcf182f4963c20e4.jpg)
 
 
-
 Fig. C-B5.1
 AMERICAN INSTITUTE OF STEEL CONSTRUCTION
 
@@ -3620,7 +4330,7 @@ AMERICAN INSTITUTE OF STEEL CONSTRUCTION
 As modified, the ratio of effective width to actual width increases as the level of compressive stress applied to a stiffened element in a member is decreased and takes the form 
 
 $$
-\frac {b _ {e}}{t} = 1. 9 \sqrt {\frac {E}{f}} \left[ 1 - \frac {C}{(b / t)} \sqrt {\frac {E}{f}} \right]\tag{C-B5-2}
+\frac {b _ {e}}{t} = 1.9 \sqrt {\frac {E}{f}} \left[ 1 - \frac {C}{(b / t)} \sqrt {\frac {E}{f}} \right]\tag{C-B5-2}
 $$
 
 where f is the level of uniformly distributed stress to which the element would be subjected based upon the design of the member, and C is an arbitrary constant based on test results (Winter, 1947). 
@@ -3687,10 +4397,13 @@ While in some cases the existence of masonry walls provides enough lateral suppo
 Table C-C2.1
 
 
-<table><tr><td>Buckled shape of column is shown by dashed line</td><td>(a)</td><td>(b)</td><td>(c)</td><td>(d)</td><td>(e)</td><td>(f)</td></tr><tr><td>Theoretical K value</td><td>0.5</td><td>0.7</td><td>1.0</td><td>1.0</td><td>2.0</td><td>2.0</td></tr><tr><td>Recommended design value when ideal conditions are approximated</td><td>0.65</td><td>0.80</td><td>1.2</td><td>1.0</td><td>2.10</td><td>2.0</td></tr><tr><td>End condition code</td><td></td><td colspan="5">Rotation fixed and translation fixedRotation free and translation fixedRotation fixed and translation freeRotation free and translation free</td></tr></table>
+| Buckled shape of column is shown by dashed line | (a) | (b) | (c) | (d) | (e) | (f) |
+| --- | --- | --- | --- | --- | --- | --- |
+| Theoretical K value | 0.5 | 0.7 | 1.0 | 1.0 | 2.0 | 2.0 |
+| Recommended design value when ideal conditions are approximated | 0.65 | 0.80 | 1.2 | 1.0 | 2.10 | 2.0 |
+| End condition code |  | Rotation fixed and translation fixedRotation free and translation fixedRotation fixed and translation freeRotation free and translation free |  |  |  |  |
 
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/21ea0e9e8e34b9cdacdcd10bb2d7699bf860e030d675be445360e6cc70926643.jpg)
-
 
 
 AMERICAN INSTITUTE OF STEEL CONSTRUCTION
@@ -3736,14 +4449,13 @@ The seven frames included in the study were 10 to 40 stories high and in-plane c
 
 partitions, varied from 40 to 100 psf and the dead load from 50 to 75 psf. A uniform wind load of 20 psf was specified throughout. All beams and column sections were compact. The axial load ratios $f_{a} / F_{a}$ and $f_{a} / 0.60F_{y}$ were limited to not more than 0.75. 
 
-The results of the second order analyses showed that adequate strength and stability were assured under combined gravity and lateral loads or gravity load alone, when the rigid frames were designed by either a stress design procedure according to AISC ASD Specification requirements or by a modified stress design procedure. The modified allowable stress design procedure incorporated a stiffness parameter* which assured adequate frame stiffness, while the effective length factor $K$ was assumed to be unity in calculations of $f_a$ and $F_e'$ , and the coefficient $C_m$ was computed as for a braced frame. 
+The results of the second order analyses showed that adequate strength and stability were assured under combined gravity and lateral loads or gravity load alone, when the rigid frames were designed by either a stress design procedure according to AISC ASD Specification requirements or by a modified stress design procedure. The modified allowable stress design procedure incorporated a stiffness parameter[^c2-stiffness] which assured adequate frame stiffness, while the effective length factor $K$ was assumed to be unity in calculations of $f_a$ and $F_e'$ , and the coefficient $C_m$ was computed as for a braced frame. 
 
-Several other references** are available concerning alternatives to effective 
+Several other references[^c2-references] are available concerning alternatives to effective 
 
 The subscripts A and B refer to the joints at the two ends of the column section being considered. G is defined as 
 
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/77fcc317c0d19de8b90192bfefcf49ff2e2a41ecadc1807843073b4065fc9509.jpg)
-
 
 
 Alignment Chart for Effective Length of Columns in Continuous Frames
@@ -3788,7 +4500,7 @@ Somewhat stockier proportions are provided for eyebars and pin-connected members
 
 The Commentary on Sect. C2 regarding frame stability and effective length factors applies here. Further analytical methods, formulas, charts and references for the determination of effective length are provided in the SSRC Guide to Stability Design Criteria for Metal Structures (Galambos, 1988). 
 
-## E2. ALLOWABLE STRESS*
+## E2. ALLOWABLE STRESS[^e2-tapered]
 
 Equations (E2-1) and (E2-2) are founded upon the basic column strength estimate suggested by the Structural Stability Research Council. This estimate assumes that the upper limit of elastic buckling failure is defined by an average column stress equal to $\frac{1}{2}$ of yield stress. The slenderness ratio $C_{c}$ corresponding to this limit, can be expressed in terms of the yield stress of a given grade of structural steel as 
 
@@ -3829,7 +4541,7 @@ The provisions governing the proportioning of perforated cover plates are based 
 The column web shear stresses may be high within the boundaries of the rigid connection of two or more members whose webs lie in a common plane. Such webs should be reinforced when the calculated stress along plane A-A in Fig. C-E6.1 exceeds the allowable shear stress 
 
 $$
-\Sigma F = \frac {M _ {1}}{0 . 9 5 d _ {1}} + \frac {M _ {2}}{0 . 9 5 d _ {2}} - V _ {s}\tag{C-E6-1}
+\Sigma F = \frac {M _ {1}}{0.95 d _ {1}} + \frac {M _ {2}}{0.95 d _ {2}} - V _ {s}\tag{C-E6-1}
 $$
 
 $$
@@ -3845,7 +4557,6 @@ $M_{2} = M_{2L} - M_{2G} =$ difference between the moments due to lateral load $
 Story Shear, $V_{s}$ 
 
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/ddf1f3c11d792da01fda8105fb7274bae527bf29ffe5c7dda9f6ce9af61bf2e8.jpg)
-
 
 
 Fig. C-E6.1
@@ -3876,7 +4587,7 @@ The allowable bending stress for all other flexural members is given as $0.60F_{
 
 ## 3. Members with Compact or Noncompact Sections With Unbraced Length Greater than $L_{c}$
 
-Members bent about their major axis and having an axis of symmetry in the plane of loading may be braced laterally at intervals greater than $76b_{f}/\sqrt{F_{y}}$ or $20,000/(d/A_{f})F_{y}$ if the maximum bending stress is reduced sufficiently to prevent premature buckling of the compression flange. 
+Members bent about their major axis and having an axis of symmetry in the plane of loading may be braced laterally at intervals greater than $76b_{f}/\sqrt{F_{y}}$ or $20,000/[(d/A_{f})F_{y}]$ if the maximum bending stress is reduced sufficiently to prevent premature buckling of the compression flange. 
 
 The combination of Equations (F1-6) or (F1-7) and (F1-8) provides a reasonable design criterion in convenient form. Equations (F1-6) and (F1-7) are based on the assumption that only the bending stiffness of the compression flange will prevent the lateral displacement of that element between bracing points. 
 
@@ -3910,7 +4621,7 @@ Equations (F1-6) and (F1-7) may be refined to include both St. Venant and warpin
 For the case of a doubly-symmetrical I-shape beam, 
 
 $$
-(r _ {T e q u i v}) ^ {2} = \frac {I _ {y}}{2 S _ {x}} \sqrt {d ^ {2} + \frac {0 . 1 5 6 l ^ {2} J}{I _ {y}}}\tag{C-F1-1}
+(r _ {T e q u i v}) ^ {2} = \frac {I _ {y}}{2 S _ {x}} \sqrt {d ^ {2} + \frac {0.156 l ^ {2} J}{I _ {y}}}\tag{C-F1-1}
 $$
 
 where 
@@ -3938,7 +4649,7 @@ Supplement No. 3 (1974) to the 1969 Specification added Equation (F3-2), an unsu
 Box-type members are torsionally very stiff (Galambos, 1988). The critical flexural stress due to lateral-torsional buckling, for the compression flange of a box-type beam loaded in the plane of its minor axis so as to bend about its major axis, can be obtained using Equation (E2-1) with an equivalent slenderness ratio, by the expression 
 
 $$
-\left(\frac {l}{r}\right) _ {\text { equiv }} = \sqrt {\frac {5 . 1 l S _ {x}}{\sqrt {J I _ {y}}}}\tag{C-F3-1}
+\left(\frac {l}{r}\right) _ {\text { equiv }} = \sqrt {\frac {5.1 l S _ {x}}{\sqrt {J I _ {y}}}}\tag{C-F3-1}
 $$
 
 where: 
@@ -3947,7 +4658,7 @@ $l = \text{distance between points of lateral support, in.}$
 
 $S_{x} =$ elastic section modulus about major axis, in.3 
 
-$I_{v} =$ moment of inertia about minor axis, in.4 
+$I_{y} =$ moment of inertia about minor axis, in.4 
 
 $J = \text{torsional constant for a section, in.}^{4}$ 
 
@@ -4048,25 +4759,25 @@ In Equations (H1-1), (H1-2) and (H1-3), $F_{bx}$ includes lateral-torsional buck
 Category a covers columns in frames subject to sidesway, i.e., frames which depend upon the bending stiffness of their several members for overall lateral stability. For determining the value of $F_{a}$ and $F_{e}^{\prime}$ , the effective length of such members, as discussed under C2, is never less than the actual unbraced length in the plane of bending, and may be greater than this length. The actual length is used in computing moments. For this case the value of $C_{m}$ can be taken as 
 
 $$
-C _ {m} = 1 - 0. 1 8 f _ {a} / F _ {e} ^ {\prime}\tag{C-H1-3}
+C _ {m} = 1 - 0.18 f _ {a} / F _ {e} ^ {\prime}\tag{C-H1-3}
 $$
 
-However, under the combination of compression stress and bending stress most affected by the amplification factor, a value of 0.15 can be substituted for $0.18f_{a}/F_{e}^{\prime}$ . Hence, a constant value of 0.85 is recommended for $C_{m}$ here.* 
+However, under the combination of compression stress and bending stress most affected by the amplification factor, a value of 0.15 can be substituted for $0.18f_{a}/F_{e}^{\prime}$ . Hence, a constant value of 0.85 is recommended for $C_{m}$ here.[^h1-frames] 
 
 Category b applies to columns not subject to transverse loading in frames where sidesway is prevented. For determining the value of $F_{a}$ and $F_{e}'$ , the effective length of such members is never greater than the actual unbraced length and may be somewhat less. The actual length is used in computing moments. 
 
-For this category, the greatest eccentricity, and hence the greatest amplification, occurs when the end moments, $M_{1}$ and $-M_{2}^{**}$ are numerically equal and cause single curvature. It is least when they are numerically equal and of a direction to cause reverse curvature. 
+For this category, the greatest eccentricity, and hence the greatest amplification, occurs when the end moments, $M_{1}$ and $-M_2$[^h1-signs] are numerically equal and cause single curvature. It is least when they are numerically equal and of a direction to cause reverse curvature. 
 
 To properly evaluate the relationship between end moment and amplified moment, the concept of an equivalent moment $M_{e}$ to be used in lieu of the numerically smaller end moment, has been suggested. $M_{e}$ can be defined as the value of equal end moments of opposite signs which would cause failure at the same concurrent axial load as would the given unequal end moments. Then, $M_e / M_2$ can be written in terms of $\pm M_1 / M_2$ as (Galambos, 1988): 
 
 $$
-\frac {M _ {e}}{M _ {2}} = C _ {m} = \sqrt {0 . 3 \left(\frac {M _ {1}}{M _ {2}}\right) ^ {2} - 0 . 4 \left(\pm \frac {M _ {1}}{M _ {2}}\right) + 0 . 3}\tag{C-H1-4}
+\frac {M _ {e}}{M _ {2}} = C _ {m} = \sqrt {0.3 \left(\frac {M _ {1}}{M _ {2}}\right) ^ {2} - 0.4 \left(\pm \frac {M _ {1}}{M _ {2}}\right) + 0.3}\tag{C-H1-4}
 $$
 
 It has been noted that the simpler formulation (Austin, 1961): 
 
 $$
-C _ {m} = 0. 6 - 0. 4 \left(\pm \frac {M _ {1}}{M _ {2}}\right) \geq 0. 4\tag{C-H1-5}
+C _ {m} = 0.6 - 0.4 \left(\pm \frac {M _ {1}}{M _ {2}}\right) \geq 0.4\tag{C-H1-5}
 $$
 
 affords a good approximation to this expression. The 0.4 limit on $C_{m}$ corresponding to a $M_{1}/M_{2}$ ratio of 0.5, was included in the 1978 AISC Specification. The limit was intended to apply to lateral-torsional buckling and not to second-order, in-plane bending strength. As in the 1978 AISC Specification and the 1986 AISC LRFD Specification, this AISC ASD Specification uses a modification factor $C_{b}$ as given in Sect. F1.3 for lateral-torsional buckling. $C_{b}$ which is limited to 2.3, is approximately the inverse of $C_{m}$ as presented in Austin (1961) with a 0.4 limit. In Zandonini (1985) it was pointed out this $C_{m}$ equation could be used for in-plane second order moments if the 0.4 limit was eliminated. This adjustment has been made here, as it is in the 1986 AISC LRFD Specification. 
@@ -4100,7 +4811,14 @@ Note that $F_{a}$ is governed by the maximum slenderness ratio, regardless of th
 
 Contrary to the behavior in compression members, axial tension tends to reduce the bending stress because the secondary moment, which is the product of the deflection and the axial tension, is opposite in sense to the applied moment; thus, the secondary moment diminishes, rather than amplifies, the primary moment. 
 
-<table><tr><td>Case</td><td><eq>\psi</eq></td><td><eq>C_m</eq></td></tr><tr><td></td><td>0</td><td>1.0</td></tr><tr><td></td><td>-0.4</td><td><eq>1 - 0.4\frac{f_u}{F&#x27;_c}</eq></td></tr><tr><td></td><td>-0.4</td><td><eq>1 - 0.4\frac{f_n}{F&#x27;_c}</eq></td></tr><tr><td></td><td>-0.2</td><td><eq>1 - 0.2\frac{f_u}{F&#x27;_c}</eq></td></tr><tr><td></td><td>-0.3</td><td><eq>1 - 0.3\frac{f_n}{F&#x27;_c}</eq></td></tr><tr><td></td><td>-0.2</td><td><eq>1 - 0.2\frac{f_n}{F&#x27;_c}</eq></td></tr></table>
+| Case |  $\psi$ | $C_m$ |
+| --- | --- | --- |
+| Both ends simply supported; uniform transverse load | $0$ | $1.0$ |
+| Left end simply supported, right end fixed; uniform transverse load | $-0.4$ | $1 -0.4\frac{f_a}{F_e^{\prime}}$ |
+| Both ends fixed; uniform transverse load | $-0.4$ | $1 -0.4\frac{f_a}{F_e^{\prime}}$ |
+| Both ends simply supported; concentrated transverse load at midspan | $-0.2$ | $1 -0.2\frac{f_a}{F_e^{\prime}}$ |
+| Left end simply supported, right end fixed; concentrated transverse load at $L/2$ from the fixed end | $-0.3$ | $1 -0.3\frac{f_a}{F_e^{\prime}}$ |
+| Both ends fixed; concentrated transverse load at midspan | $-0.2$ | $1 -0.2\frac{f_a}{F_e^{\prime}}$ |
 
 ## CHAPTER I
 
@@ -4114,7 +4832,7 @@ Two cases are recognized: fully encased steel beams, which depend upon natural b
 
 For composite beams with formed steel deck, studies have demonstrated that total slab thickness, including ribs, can be used in determining effective slab width (Grant, Fisher and Slutter, 1977 and Fisher, 1970). 
 
-## 12. DESIGN ASSUMPTIONS
+## I2. DESIGN ASSUMPTIONS
 
 Unless temporary shores are used, beams encased in concrete and interconnected only by a natural bond must be proportioned to support all of the dead load, unassisted by the concrete, plus the superimposed live load in composite action, without exceeding the allowable bending stress for steel provided in Chap. F. 
 
@@ -4132,7 +4850,7 @@ For a given beam and concrete slab, the increase in bending strength intermediat
 
 For the case where total shear $V_{h}^{\prime}$ developed between steel and concrete on each side of the point of maximum moment is less than $V_{h}$ , Equation (I2-1) can be used to derive an effective section modulus $S_{eff}$ having a value less than the section modulus for fully effective composite action $S_{tr}$ , but more than that of the steel beam alone. 
 
-## 14. SHEAR CONNECTORS
+## I4. SHEAR CONNECTORS
 
 Composite beams in which the longitudinal spacing of shear connectors has been varied according to the intensity of shear, and duplicate beams where the required number of connectors were uniformly spaced, have exhibited the same ultimate strength and the same amount of deflection at normal working loads. Only a slight deformation in the concrete and the more heavily stressed shear connectors is needed to redistribute the horizontal shear to the other less heavily stressed connectors. The important consideration is that the total number of connectors be sufficient to develop the shear $V_{h}$ either side of the point of maximum moment. The provisions of the AISC ASD Specification are based upon this concept of composite action. 
 
@@ -4141,7 +4859,7 @@ In computing the section modulus at points of maximum negative bending, reinforc
 Studies have defined stud shear connection strength $Q_{u}$ in terms of normal weight and lightweight aggregate concretes, as a function of both concrete modulus of elasticity and concrete strength (McGarraugh and Baldwin, 1971 and Ollgaard, Slutter and Fisher, 1971): 
 
 $$
-Q _ {u} = 0. 5 A _ {s} \sqrt {f _ {c} ^ {\prime} E _ {c}}\tag{C-I4-1}
+Q _ {u} = 0.5 A _ {s} \sqrt {f _ {c} ^ {\prime} E _ {c}}\tag{C-I4-1}
 $$
 
 where 
@@ -4195,9 +4913,9 @@ With the issuance of Supplement No. 3 to the 1969 AISC Specification, the requir
 
 Stud welds not located directly over the web of a beam tend to tear out of a thin flange before attaining their full shear-resisting capacity. To guard against this contingency, the size of a stud not located over the beam web is limited to $2\frac{1}{2}$ times the flange thickness. 
 
-## 15. COMPOSITE BEAMS OR GIRDERS WITH FORMED STEEL DECK
+## I5. COMPOSITE BEAMS OR GIRDERS WITH FORMED STEEL DECK
 
-The 6-diameter minimum center-to-center spacing of studs in the longitudinal direction is based upon observation of concrete shear failure surfaces in sectioned flat soffit concrete slab composite beams which had been tested to full ultimate strength. The reduction in connection capacity of more closely spaced shear studs within the ribs of formed steel decks oriented perpendicular to beam or girder, is accounted for by the parameter $0.85/\sqrt{N_{r}}$ in Equation (15-1). 
+The 6-diameter minimum center-to-center spacing of studs in the longitudinal direction is based upon observation of concrete shear failure surfaces in sectioned flat soffit concrete slab composite beams which had been tested to full ultimate strength. The reduction in connection capacity of more closely spaced shear studs within the ribs of formed steel decks oriented perpendicular to beam or girder, is accounted for by the parameter $0.85/\sqrt{N_{r}}$ in Equation (I5-1). 
 
 When studs are used on beams with formed steel deck, they may be welded directly through the deck or through prepunched or cut-in-place holes in the deck. The usual procedure is to install studs by welding directly through the deck; however, when the deck thickness is greater than 16 ga. for single thickness, or 18 ga. for each sheet of double thickness, or when the total thickness of galvanized coating is greater than 1.25 ounces per sq. ft., special precautions and procedures recommended by the stud manufacturer should be followed. 
 
@@ -4206,7 +4924,6 @@ Fig. C-I5.1 is a graphic presentation of the terminology used in Sect. I5.1.
 The design rules which have been added for composite construction with formed steel deck are based upon a study of all available test results (Grant, Fisher and Slutter, 1977). The limiting parameters listed in Sect. I5.1 were established to keep composite construction with formed steel deck within the available research data. 
 
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/ef00fa0f3bd13d091a0887d37a98c05ed1609568efc72f15018ef20b566c78a6.jpg)
-
 
 
 Figure C-15.1
@@ -4252,9 +4969,7 @@ When splicing ASTM Group 4 and 5 rolled sections or heavy welded built-up member
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/d328d04f589bcf05ea82ecaf8d4959103e490fd4b33ef5459ed294fc9cce647b.jpg)
 
 
-
 a. Shear plate welded to web
-
 
 
 b. Shear plate welded to flange tips
@@ -4263,9 +4978,7 @@ b. Shear plate welded to flange tips
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/5028a70dd020094fee180f6c14c905be965a69e56dec782724cbb9fd8622fccf.jpg)
 
 
-
 c. Bolted splice plates
-
 
 
 Fig. C-J1.1. Alternative splices that minimize weld resistant tensile stresses
@@ -4285,12 +4998,10 @@ In addition to tension splices of truss chord members and tension flanges of fle
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/0577e2219da1fb2d8589c5a0cd4a754d82edbea4147850db8d7dc97ec19fa483.jpg)
 
 
-
 a. Rolled shape
 
 
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/c24cc93274d656f51beee43a615ea743c83cff9218cbff4f3402daf8f3ce2b9c.jpg)
-
 
 
 b. Built-up shape
@@ -4299,12 +5010,10 @@ b. Built-up shape
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/7daae6cc49cae9c7461212e8a86883df428c6d546da49543992f3d8c3f26d88d.jpg)
 
 
-
 c. Built-up shape
 
 
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/074c93bba275f6ea314a060cf74da2a91312e88051e8c599e65f64786d89fc12.jpg)
-
 
 
 d. Optional access hole
@@ -4313,12 +5022,10 @@ d. Optional access hole
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/d1cb6d9799fff5a54e82a10fa852ebad397ab1263b237e4db40d5c7ace2d2d0b.jpg)
 
 
-
 e. Beam cope detail
 
 
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/ccdd4d410361b451aa3fa674143d03b0427be37044b56d893bbb255c317cba22.jpg)
-
 
 
 f. Optional beam cope
@@ -4376,11 +5083,10 @@ As in the past, the allowable stresses for statically loaded full-penetration we
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/e91aa5f836cc842f8356d6644cb961b98bcd1d1f8235b8baed7a2bff212d5fb9.jpg)
 
 
-
 Fig. C-J2.1 Alternative column splices that minimize weld restraint tensile stresses (From: Fisher, J.W. and Pense, A.W. 1987)
 
 
-On the basis of physical tests, the allowable stress on fillet welds deposited on "matching" base metal, or on steel having mechanical properties higher than those specified for such base metal, has been given in terms of the nominal tensile strength* of the weld metal since the 1969 edition of the Specification (Higgins and Preece, 1968). 
+On the basis of physical tests, the allowable stress on fillet welds deposited on "matching" base metal, or on steel having mechanical properties higher than those specified for such base metal, has been given in terms of the nominal tensile strength[^j2-weld-strength] of the weld metal since the 1969 edition of the Specification (Higgins and Preece, 1968). 
 
 As in the past, the same allowable value is given to a transverse as to a longitudinal weld, even though the force the former can resist is substantially greater than that of the latter. In the case of tension on the throat of partial-penetration groove welds normal to their axis (more nearly analogous to that of transverse than longitudinal fillets), the allowable stress is conservatively taken the same as for fillet welds. 
 
@@ -4430,7 +5136,7 @@ The strength of fasteners subject to combined tension and shear is provided by e
 
 In the case of slip-critical connections subject to combined tension and shear at the contact surface common to a beam connection and the supporting member, where the fastener tension $f_{t}$ is produced by moment in the plane of the beam web, the shear component may be neglected in proportioning the fasteners for tension. This is because the shear component assigned to the fasteners subject to direct tensile stress is picked up by the increase in compressive force on the compression side of the beam axis, resulting in no actual shear force on the fasteners in tension. 
 
-However, when a slip-critical connection must resist an axially applied tensile force, the clamping force is reduced and $F_{\nu}$ must be reduced in proportion to the loss of pretension. 
+However, when a slip-critical connection must resist an axially applied tensile force, the clamping force is reduced and $F_{v}$ must be reduced in proportion to the loss of pretension. 
 
 ## 7. Allowable Bearing at Bolt Holes
 
@@ -4492,13 +5198,10 @@ There may be similar connections, such as thin bolted gusset plates in double sh
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/154f64f771d58c59a6951459b33e2332fab26fb4849f4f6076981c2afa3fe9eb.jpg)
 
 
-
 Fig. C-J4.1
 
 
-
 AMERICAN INSTITUTE OF STEEL CONSTRUCTION
-
 
 
 Fig. C-J4.2
@@ -4515,20 +5218,16 @@ As used throughout the AISC ASD Specification, the terms milled surface, milled,
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/2c35630a238ffdb524791a48cf9d2f87be50d0c84f4ca66afa884fbddfe1ef13.jpg)
 
 
-
 Fig. C-J4.3
 
 
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/2c218a2b7bca9947e1639954675eeb935efc13c81fb923fcfd4193f4d1082560.jpg)
 
 
-
 Fig. C-J4.4
 
 
-
 AMERICAN INSTITUTE OF STEEL CONSTRUCTION
-
 
 
 $-M_{2}$
@@ -4565,7 +5264,6 @@ Equation (K1-9), giving the required area of stiffeners when stiffeners are need
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/4fa0db57d91c642dc0b0e573c39cc45180e0da1f5527be4819e0b90a16c21830.jpg)
 
 
-
 Fig. C-K1.1
 
 
@@ -4588,19 +5286,18 @@ Sidesway web buckling will not occur in the following cases:
 For flanges restrained against rotation: 
 
 $$
-\frac {d _ {c} / t _ {w}}{\ell / b _ {f}} > 2. 3\tag{C-K1-1}
+\frac {d _ {c} / t _ {w}}{\ell / b _ {f}} > 2.3\tag{C-K1-1}
 $$
 
 For flange rotation not restrained: 
 
 $$
-\frac {d _ {c} / t _ {w}}{\ell / b _ {f}} > 1. 7\tag{C-K1-2}
+\frac {d _ {c} / t _ {w}}{\ell / b _ {f}} > 1.7\tag{C-K1-2}
 $$
 
 Sidesway web buckling can also be prevented by the proper design of lateral bracing or stiffeners at the load point. It is suggested that local bracing at both flanges be designed for 1% of the concentrated load applied to that point. Stiffeners must extend from the load point through at least one-half the girder depth. In addition, the pair of stiffeners should be designed to carry the full load. If flange rotation is permitted at the loaded flange, stiffeners will not be effective. 
 
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/bcef755e09a601f198ee29ec880ba957be4fc54b03f50dbdfbf84c367027a717.jpg)
-
 
 
 Fig. C-K1.2 Sidesway web buckling
@@ -4620,7 +5317,7 @@ $$
 for the primary member, and 
 
 $$
-\delta_ {w} = \frac {\alpha_ {s} \delta_ {o} \left[ 1 + \frac {\pi^ {3}}{3 2} \alpha_ {p} + \frac {\pi^ {2}}{8 \rho} (1 + \alpha_ {p}) + 0 . 1 8 5 \alpha_ {s} \alpha_ {p} \right]}{1 - \frac {\pi}{4} \alpha_ {p} \alpha_ {s}}\tag{C-K2-2}
+\delta_ {w} = \frac {\alpha_ {s} \delta_ {o} \left[ 1 + \frac {\pi^ {3}}{32} \alpha_ {p} + \frac {\pi^ {2}}{8 \rho} (1 + \alpha_ {p}) + 0.185 \alpha_ {s} \alpha_ {p} \right]}{1 - \frac {\pi}{4} \alpha_ {p} \alpha_ {s}}\tag{C-K2-2}
 $$
 
 for the secondary member. In these expressions $\Delta_{o}$ and $\delta_{o}$ are, respectively, the primary and secondary beam deflections due to loading present at the initiation of ponding, $\alpha_{p}=C_{p}/(1-C_{p})$ , $\alpha_{s}=C_{s}/(1-C_{s})$ , and $\rho=\delta_{o}/\Delta_{o}=C_{s}/C_{p}$ . 
@@ -4640,11 +5337,11 @@ Noting that elastic deflection is directly proportional to stress, and providing
 Given any combination of primary and secondary framing, the stress index is computed as 
 
 $$
-U _ {p} = \left(\frac {0 . 8 F _ {y} - f _ {o}}{f _ {o}}\right) _ {p} \quad \text { for   the   primary   member }\tag{C-K2-4}
+U _ {p} = \left(\frac {0.8 F _ {y} - f _ {o}}{f _ {o}}\right) _ {p} \quad \text { for   the   primary   member }\tag{C-K2-4}
 $$
 
 $$
-U _ {s} = \left(\frac {0 . 8 F _ {y} - f _ {o}}{f _ {o}}\right) _ {s} \quad \text { for   the   secondary   member }\tag{C-K2-5}
+U _ {s} = \left(\frac {0.8 F _ {y} - f _ {o}}{f _ {o}}\right) _ {s} \quad \text { for   the   secondary   member }\tag{C-K2-5}
 $$
 
 where $f_{o}$ , in each case, is the computed bending stress in the member due to the supported loading, neglecting ponding effect. Depending upon geographic location, this loading should include such amount of snow as might also be present, although ponding failures have occurred more frequently during torrential summer rains, when the rate of precipitation exceeded the rate of drainage runoff and the resulting hydraulic gradient over large roof areas caused substantial accumulation of water some distance from the eaves. 
@@ -4698,7 +5395,6 @@ Tests have uncovered dramatic differences in fatigue life, not completely predic
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/cf2d01a03d0126cb6a29c5f51256427d900859439cbec2f91561eefeb3b779d5.jpg)
 
 
-
 Fig. C-K2.1
 AMERICAN INSTITUTE OF STEEL CONSTRUCTION
 
@@ -4706,7 +5402,6 @@ AMERICAN INSTITUTE OF STEEL CONSTRUCTION
 The use of other types of mechanical fasteners to resist applied cyclic loading in tension is not permitted. Lacking a high degree of assured pretension, the range of stress is generally too great to resist such loading for long. However, all types of mechanical fasteners survive unharmed when subject to cyclic stresses sufficient to fracture the connected parts, which is provided for elsewhere in Appendix K4. 
 
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/e17204226adad8af23be931956b8d477957435fc3acdde8a2bc2615b09998ac5.jpg)
-
 
 
 Fig. C-K2.2
@@ -4773,7 +5468,7 @@ In other cases, A325 and A490 bolts are required to be tightened to 0.7 of their
 
 The surface condition of steel framing disclosed by the demolition of long-standing buildings has been found to be unchanged from the time of its erection except at isolated spots where leakage may have occurred. Where such leakage is not eliminated, the presence or absence of a shop coat is of minor influence (Bigos et al, 1954). 
 
-The Specification does not define the type of paint to be used when a shop coat is required. Conditions of exposure and individual preferences with regard to finish paint are factors which have a bearing on the selection of the proper primer. Hence, a single formulation would not suffice.* 
+The Specification does not define the type of paint to be used when a shop coat is required. Conditions of exposure and individual preferences with regard to finish paint are factors which have a bearing on the selection of the proper primer. Hence, a single formulation would not suffice.[^m3-paint] 
 
 ## M4. ERECTION
 
@@ -4794,7 +5489,7 @@ The Specification recognizes three categories of profiles, classified according 
 Superior bending strength of compact sections is recognized in F1.1 of the Specification by increasing the allowable bending stress to $0.66F_{y}$ and by permitting 10% redistribution of moment. By the same token, the logical load factor for plastically designed beams is given by the equation 
 
 $$
-F = \frac {F _ {y}}{0 . 6 6 F _ {y}} \times (\text { shape   factor })\tag{C-N1-1}
+F = \frac {F _ {y}}{0.66 F _ {y}} \times (\text { shape   factor })\tag{C-N1-1}
 $$
 
 For such shapes listed in the AISC Manual of Steel Construction, the variation of shape factor is from 1.10 to 1.23, with a mode of 1.12 for the most commonly used shapes. Then, the corresponding load factor must vary from 1.67 to 1.86, with a mode of 1.70. Such a load factor is consistent and in better balance with that inherent in the allowable working stresses for tension members and deep plate girders. 
@@ -4802,8 +5497,6 @@ For such shapes listed in the AISC Manual of Steel Construction, the variation o
 Research on the ultimate strength of heavily loaded columns subjected to concurrent bending moments has provided data which justifies a load factor, for such members, that is the same as that provided for members subject to bending only, namely 1.7. Consistent with the 1/3 increase in allowable stress permitted in Sect. A5.2 of the Specification, the load factor to be used in designing for gravity loading combined with wind or seismic loading is 1.3 (Van Kuren and Galambos, 1964). 
 
 Based on research on multi-story framing, application of the Specification provisions includes the complete design of braced and unbraced planar frames in high-rise buildings (Driscoll et al, 1965; Driscoll, 1966). Systematic procedures for application of plastic design in proportioning the members of such frames have been developed (AISI, 1968; Lu, 1967). 
-
-## Se-N2]
 
 ## N2. STRUCTURAL STEEL
 
@@ -4813,7 +5506,7 @@ Research testing has demonstrated the suitability of all of the steels listed in
 
 Although resistance to wind and seismic loading can be provided in moderate height buildings by means of concrete and masonry shear walls, which also provide for overall frame stability at factored gravity loading, taller building frames must provide this resistance acting alone. This can be achieved in one of two ways: either by a system of bracing or by a moment-resisting frame. 
 
-For one- and two-story unbraced frames with Type 1 construction throughout, where the column axial loads are generally modest, the frame instability effect is small and $P\Delta$ effects* may be safely ignored. However, where such frames are designed with a mixture of rigid connections and simple or semi-rigid connections (Type 2 and Type 3 construction), it may be necessary to consider the frame instability effect $P\Delta$ . In this case, stability is dependent upon a reduced number of rigid connections and the effect of frame drift may be a significant consideration in the design. 
+For one- and two-story unbraced frames with Type 1 construction throughout, where the column axial loads are generally modest, the frame instability effect is small and $P\Delta$ effects[^n3-effects] may be safely ignored. However, where such frames are designed with a mixture of rigid connections and simple or semi-rigid connections (Type 2 and Type 3 construction), it may be necessary to consider the frame instability effect $P\Delta$ . In this case, stability is dependent upon a reduced number of rigid connections and the effect of frame drift may be a significant consideration in the design. 
 
 ## 1. Stability of Braced Frames
 
@@ -4842,26 +5535,31 @@ Space frames containing plastically designed planar rigid frames are assumed to 
 Using the von Mises criterion, the average stress at which an unreinforced web would be fully yielded in pure shear can be expressed as $F_{y}/\sqrt{3}$ . It has been observed that the plastic bending strength of an I-shaped beam is not reduced appreciably until shear yielding occurs over the full effective depth, which may be taken as the distance between the centroids of its flanges (approximately 0.95 times its actual depth) (ASCE, 1971). Thus, 
 
 $$
-V _ {u} = \frac {F _ {y}}{\sqrt {3}} \times 0. 9 5 d t = 0. 5 5 F _ {y} d t _ {w}\tag{C-N5-1}
+V _ {u} = \frac {F _ {y}}{\sqrt {3}} \times 0.95 d t = 0.55 F _ {y} d t _ {w}\tag{C-N5-1}
 $$
 
 Shear stresses are generally high within the boundaries of a rigid connection of two or more members whose webs lie in a common plane. Assuming the moment +M, in Fig. C-N5.1, expressed in kip-ft, to be resisted by a force couple acting at the centroid of the beam flanges, the shear, in kips, produced in beam-to-column connections web abcd can be computed as 
 
 $$
-V = \frac {1 2 M}{0 . 9 5 d _ {b}} - V _ {s}\tag{C-N5-2}
+V = \frac {12 M}{0.95 d _ {b}} - V _ {s}\tag{C-N5-2}
 $$
 
 when $V = 0.55F_{y}d_{c}t_{w}$ 
 
 $$
-\mathrm {req^ {\prime} d t_ {w}} = \frac {1}{0 . 5 5 F _ {y} d _ {c}} \left[ \frac {1 2 M}{0 . 9 5 d _ {b}} - V _ {s} \right]\tag{C-N5-3}
+\text{req'd }t_w = \frac {1}{0.55 F _ {y} d _ {c}} \left[ \frac {12 M}{0.95 d _ {b}} - V _ {s} \right]\tag{C-N5-3}
 $$
 
 
 TABLE C-N4.1
 
 
-<table><tr><td></td><td>Braced Planar Frames</td><td>One- and Two-story Unbraced Planar Frames</td></tr><tr><td><eq>P_{cr}</eq></td><td>Use larger ratio, <eq>\frac{l}{r_y}</eq> or <eq>\frac{l}{r_x}</eq></td><td><eq>^1</eq>Use larger ratio, <eq>\frac{l}{r_y}</eq> or <eq>\frac{Kl}{r_x}</eq></td></tr><tr><td><eq>P_e</eq></td><td>Use <eq>l/r_x</eq></td><td><eq>^1</eq>Use <eq>Kl/r_x</eq></td></tr><tr><td><eq>M_m</eq></td><td>Use <eq>l/r_y</eq></td><td>Use <eq>l/r_y</eq></td></tr><tr><td colspan="3"><eq>^1</eq>Webs of columns assumed to be in plane of frame.</td></tr></table>
+|  | Braced Planar Frames | One- and Two-story Unbraced Planar Frames |
+| --- | --- | --- |
+| $P_{cr}$ | Use larger ratio, $\frac{l}{r_y}$ or $\frac{l}{r_x}$ | $^1$Use larger ratio, $\frac{l}{r_y}$ or $\frac{Kl}{r_x}$ |
+| $P_e$ | Use $l/r_x$ | $^1$Use $Kl/r_x$ |
+| $M_m$ | Use $l/r_y$ | Use $l/r_y$ |
+| $^1$Webs of columns assumed to be in plane of frame. |  |  |
 
 5-187 
 
@@ -4876,16 +5574,13 @@ When stiffeners are required, as an alternative to the usual pair of horizontal 
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/4ff363fd627bbea41aecab5268517804847c1d2906d2a3eabb6ca0a885e673d1.jpg)
 
 
-
 Fig. C-N5.1
-
 
 
 AMERICAN INSTITUTE OF STEEL CONSTRUCTION
 
 
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/2a145496e0030f60be4a2b23eb3addacca02048daae695dcd5d9d7a0d912e1cb.jpg)
-
 
 
 Fig. C2.6.1
@@ -4923,7 +5618,7 @@ APPENDIX B
 
 ## B5. LOCAL BUCKLING
 
-2. Slender Compression Elements* 
+2. Slender Compression Elements[^ab5-commentary] 
 
 ## APPENDIX F
 
@@ -4946,7 +5641,7 @@ With modifying assumptions, such a frame can be used as a mathematical model to 
 
 
 $$
-G _ {T} = \frac {b _ {T} I _ {0}}{I I _ {T}}
+G_T = \frac{b_T I_o}{l I_T}
 $$
 
 $$
@@ -4954,11 +5649,11 @@ G _ {T} = \frac {I _ {0}}{l} \sum \frac {b _ {T}}{I _ {T}}
 $$
 
 $$
-G _ {B} = \frac {b _ {B} I _ {0}}{I I _ {B}}
+G_B = \frac{b_B I_o}{l I_B}
 $$
 
 $$
-G _ {B} = \frac {I _ {0}}{I} \sum \frac {b _ {B}}{I _ {B}}
+G_B = \frac{I_o}{l} \sum \frac {b _ {B}}{I _ {B}}
 $$
 
 ## 4. Allowable Flexural Stress
@@ -4999,7 +5694,6 @@ Thus, note that in these charts the values of $K_{\gamma}$ represent the combine
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/848c3338fc8c02fd54b73ac85c51bc7e122b9218119723238d29b9aa5648985e.jpg)
 
 
-
 AMERICAN INSTITUTE OF STEEL CONSTRUCTION
 
 
@@ -5007,7 +5701,6 @@ AMERICAN INSTITUTE OF STEEL CONSTRUCTION
 
 
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/d778f47e9df4a086ba3865bd5e47dd5ab2fdbae5c56931af77fab00d7952a28d.jpg)
-
 
 
 AMERICAN INSTITUTE OF STEEL CONSTRUCTION
@@ -5059,87 +5752,46 @@ Cp Stiffness factor for primary member in a flat roof (K2)
 AMERICAN INSTITUTE OF STEEL CONSTRUCTION 
 
 
-
 $C_s$ Stiffness factor for secondary member in a flat roof (K2) 
 
 
-
-
-
-$C_{\nu}$ Ratio of "critical" web stress, according to the linear buckling theory, to the shear yield stress of web material (F4) 
-
-
-
+$C_{v}$ Ratio of "critical" web stress, according to the linear buckling theory, to the shear yield stress of web material (F4) 
 
 
 $C_{1}$ Increment used in computing minimum spacing of oversized and slotted holes (J3.8) 
 
 
-
-
-
 $C_{2}$ Increment used in computing minimum edge distance for oversized and slotted holes (J3.9) 
-
-
-
 
 
 D Factor depending upon type of transverse stiffeners (G4); outside diameter of tubular member, in. (Appendix B5.2) 
 
 
-
-
-
 E Modulus of elasticity of steel (29,000 ksi) (E2) 
-
-
-
 
 
 $E_{c}$ Modulus of elasticity of concrete, ksi (I2) 
 
 
-
-
-
 $F_{a}$ Axial compressive stress permitted in a prismatic member in the absence of bending moment, ksi (E2) 
-
-
-
 
 
 $F_{a\gamma}$ Axial compressive stress permitted in a tapered member in the absence of bending moment, ksi (Appendix F7.3) 
 
 
-
-
-
 $F_{b}$ Bending stress permitted in a prismatic member in the absence of axial force, ksi (F1.1) 
-
-
-
 
 
 $F_{b}^{\prime}$ Allowable bending stress in compression flange of plate girders as reduced for hybrid girders or because of large web depth-to-thickness ratio, ksi (G2) 
 
 
-
-
-
 $F_{b\gamma}$ Bending stress permitted in a tapered member in the absence of axial force, ksi (Appendix F7.6) 
-
-
-
 
 
 $F_{e}^{\prime}$ Euler stress for a prismatic member divided by factor of safety, ksi (H1) 
 
 
-
-
-
 $F_{e\gamma}^{\prime}$ Euler stress for a tapered member divided by factor of safety, ksi (Appendix F7.6) 
-
 
 
 $$
@@ -5147,39 +5799,22 @@ F _ {p}
 $$
 
 
-
 Allowable bearing stress, ksi (J3.7) 
-
-
-
 
 
 $F_{s\gamma}$ St. Venant torsion resistance bending stress in a tapered member, ksi (Appendix F7.4) 
 
 
-
-
-
 $F_{t}$ Allowable axial tensile stress, ksi (D1) 
-
-
-
 
 
 $F_{u}$ Specified minimum tensile strength of the type of steel or fastener being used, ksi (B10) 
 
 
-
-
-
-$F_{\nu}$ Allowable shear stress, ksi (F4) 
-
-
-
+$F_{v}$ Allowable shear stress, ksi (F4) 
 
 
 $F_{w\gamma}$ Flange warping torsion resistance bending stress in a tapered member, ksi (Appendix F7.4) 
-
 
 
 $$
@@ -5187,213 +5822,109 @@ F _ {y}
 $$
 
 
-
 Specified minimum yield stress of the type of steel being used, ksi (B5.1). As used in this Specification, “yield stress” denotes either the specified minimum yield point (for those steels with a yield point) or specified minimum yield strength (for those steels without a yield point) 
-
-
-
 
 
 $F_{yc}$ Specified minimum column yield stress, ksi (K1.2) 
 
 
-
-
-
 $F_{yf}$ Specified minimum yield stress of flange, ksi (Table B5.1). 
-
-
-
 
 
 $F_{yr}$ Specified minimum yield stress of the longitudinal reinforcing steel, ksi (I4) 
 
 
-
-
-
 $F_{yst}$ Specified minimum stiffener yield stress, ksi (K1.8) 
-
-
-
 
 
 $F_{yw}$ Specified minimum yield stress of beam web, ksi (B5.1) 
 
 
-
-
-
 $H_{s}$ Length of a stud shear connector after welding, in. (I5.2) 
-
-
-
 
 
 $I_{d}$ Moment of inertia of steel deck supported on secondary members, in. $^{4}$ (K2) 
 
 
-
-
-
 $I_{eff}$ Effective moment of inertia of composite sections for deflection computations, in. $^{4}$ (I4) 
-
-
-
 
 
 $I_{p}$ Moment of inertia of primary member in flat roof framing, in. (K2) $I_{s}$ Moment of inertia of secondary member in flat roof framing, in. $^{4}$ (K2); moment of inertia of steel beam in composite construction, in. $^{4}$ (I4) 
 
 
-
-
-
 $I_{tr}$ Moment of inertia of transformed composite section, in.4 (I4) 
-
-
-
 
 
 K Effective length factor for a prismatic member (B7) 
 
 
-
-
-
 $K_{\gamma}$ Effective length factor for a tapered member (Appendix F7.3) 
-
-
-
 
 
 L Unbraced length of tensile members, in. (B7); actual unbraced length of a column, in. (C2); unbraced length of member measured between the centers of gravity of the bracing members, in. (Appendix F7.1) 
 
 
-
-
-
 $L_{c}$ Maximum unbraced length of the compression flange at which the allowable bending stress may be taken at $0.66F_{y}$ or as determined by AISC Specification Equation (F1-3) or Equation (F2-3), when applicable, ft (F1) 
-
-
-
 
 
 $L_{e}$ Distance from free edge to center of the bolt, in. (J3.6) 
 
 
-
-
-
 $L_{p}$ Length of primary member in flat roof framing, ft (K2) 
-
-
-
 
 
 $L_{s}$ Length of secondary member in flat roof framing, ft (K2) 
 
 
-
-
-
 $M$ Moment, kip-ft. (I4); maximum factored bending moment, kip-ft, (N4) 
-
-
-
 
 
 $M_{1}$ Smaller moment at end of unbraced length of beam-column (F3.1); larger moment at one end of three-segment portion of a tapered member (Appendix F7.4) 
 
 
-
-
-
 $M_{2}$ Larger moment at end of unbraced length of beam-column (F3.1); maximum moment in three adjacent segments of a tapered member (Appendix F7.4) 
-
-
-
 
 
 $M_{m}$ Critical moment that can be resisted by a plastically designed member in the absence of axial load, kip-ft (N4) 
 
 
-
-
-
 $M_{p}$ Plastic moment, kip-ft (N4) 
-
-
-
 
 
 N Length of bearing of applied load, in. (K1.3) 
 
 
-
-
-
 N $_{r}$ Number of stud shear connectors on a beam in one transverse rib of a metal deck, not to exceed 3 in calculations (I5.2) 
-
-
-
 
 
 $N_{1}$ Number of shear connectors required between point of maximum moment and point of zero moment (I4) 
 
 
-
-
-
 $N_{2}$ Number of shear connectors required between concentrated load and point of zero moment (I4) 
-
-
-
 
 
 P Force transmitted by a fastener, kips (J3.8); factored axial load, kips (N3); normal force, kips (J10.2); axial load, kips (C1) 
 
 
-
-
-
 $P_{bf}$ Factored beam flange or connection plate force in a restrained connection, kips (K1.2) 
-
-
-
 
 
 $P_{cr}$ Maximum strength of an axially loaded compression member or beam, kips (N3.1) 
 
 
-
-
-
 $P_{e}$ Euler buckling load, kips (N4) 
-
-
-
 
 
 $P_{y}$ Plastic axial load, equal to profile area times specified minimum yield stress, kips (N3.1) 
 
 
-
-
-
 Q Full reduction factor for slender compression elements (Appendix B5.2) 
-
-
-
 
 
 $Q_{a}$ Ratio of effective profile area of an axially loaded member to its total profile area (Appendix B5.2) 
 
 
-
-
-
 $Q_{s}$ Axial stress reduction factor where width-thickness ratio of unstiffened elements exceeds noncompact section limits given in Sect. B5 (Appendix B5.2) 
-
 
 
 5-204 SYMBOLS 
@@ -5466,7 +5997,7 @@ $f_{c}^{\prime}$ Specified compression strength of concrete, ksi (I2)
 
 $f_{t}$ Computed tensile stress, ksi (J3.6) 
 
-$f_{\nu}$ Computed shear stress, ksi (F5) 
+$f_{v}$ Computed shear stress, ksi (F5) 
 
 $f_{vs}$ Shear between girder web and transverse stiffeners, kips per linear in. of single stiffener or pair of stiffeners (G4) 
 
@@ -5515,986 +6046,500 @@ t Thickness of a connected part, in. (J3.9); wall thickness of a tubular member,
 $t_{b}$ Thickness of beam flange or moment connection plate at rigid beam-to-column connection, in. (K1.8) 
 
 
-
 $t_f$ Flange thickness, in. (F1.1) 
-
-
-
 
 
 $t_w$ Web thickness, in. (B5.1) 
 
 
-
-
-
 $t_{wc}$ Column web thickness, in. (K1.6) 
-
-
-
 
 
 w Length of channel shear connectors, in. (I4); plate width (distance between welds), in. (B3) 
 
 
-
-
-
 $w_{r}$ Average width of rib or haunch of concrete slab on formed steel deck, in. (I5.1) 
-
-
-
 
 
 x . Subscript relating symbol to strong axis bending 
 
 
-
-
-
 y Subscript relating symbol to weak axis bending 
-
-
-
 
 
 z Distance from the smaller end of a tapered member, in. (Appendix F7.3) 
 
 
-
-
-
 $\alpha = 0.6F_{yw} / F_b <   1.0$ (G2) 
-
-
-
 
 
 $\beta$ Ratio $S_{tr} / S_s$ or $S_{eff} / S_s$ (I4) 
 
 
-
-
-
-γ Tapering ratio of a tapered member or unbraced segment of a tapered member (Appendix F7.1); subscript relating symbol to tapered members 
-
-
-
+γ $\gamma$ Tapering ratio of a tapered member or unbraced segment of a tapered member (Appendix F7.1); subscript relating symbol to tapered members 
 
 
 $\Delta$ Displacement of the neutral axis of a loaded member from its position when the member is not loaded, in. (C1) 
 
 
-
-
-
 μ Coefficient of friction (J10.2) 
-
-
-
 
 
 Ackroyd, M. (1987) Simplified Frame Design of Type PR Construction AISC Engineering Journal, 4th Quarter, 1987, Chicago, IL. 
 
 
-
-
-
 Adams, P.F., Lay, M.G., and Galambos, T.V. (1965) Experiments on High-strength Steel Members Welding Research Council Bulletin No. 110, November 1965. 
-
-
-
 
 
 American Concrete Institute (1983) Building Code Requirements for Reinforced Concrete ACI 318-83, Detroit MI, 1983. 
 
 
-
-
-
 American Institute of Steel Construction (1973) Commentary on Highly Restrained Welded Connections AISC Engineering Journal, Vol. 10, No. 3, 3rd Quarter, 1973. 
-
-
-
 
 
 American Institute of Steel Construction, Inc. (1983) Torsional Analysis of Steel Members Chicago, IL., 1983. 
 
 
-
-
-
 American Institute of Steel Construction, Inc. (1986) Load and Resistance Factor Design Specification for Structural Steel Buildings Chicago, IL., 1986. 
-
-
-
 
 
 American Iron and Steel Institute (1968) Plastic Design of Braced Multistory Steel Frames New York, NY, 1968. 
 
 
-
-
-
 American Society of Civil Engineers (1971) Plastic Design in Steel ASCE Manual of Engineering Practice No. 41, 2nd Edition, 1971. 
-
-
-
 
 
 Joint ASCE-AASHO Committee on Flexural Members (1968) Design of Hybrid Steel Beams Report of Subcommittee 1, Journal of the Structural Division, ASCE, Vol. 94, No. ST6, June 1968. 
 
 
-
-
-
 Joint ASCE-ACI Committee on Composite Construction (1960) Progress Report ASCE Journal of the Structural Division, December 1960. 
-
-
-
 
 
 Association of Iron and Steel Engineers (1979) Technical Report No. 13 Pittsburgh, PA, 1979. 
 
 
-
-
-
 Austin, W.J. (1961) Strength and Design of Metal Beam-Columns ASCE Journal of the Structural Division, April 1961. 
-
-
-
 
 
 Australian Institute of Steel Construction (1975) Australian Standard A51250-1975. 
 
 
-
-
-
 Basler, K. (1961) New Provisions for Plate Girder Design Appendix C 1961 Proceedings AISC National Engineering Conference. 
-
-
-
 
 
 Basler, K. (1961) Strength of Plate Girders in Shear Journal of the Structural Division, ASCE, Vol.87, No. ST7, October 1961. 
 
 
-
-
-
 Basler, K. (1961a) Strength of Plate Girders Under Combined Bending and Shear Journal of the Structural Division, ASCE, Vol. 87, No. ST7, October 1961. 
 
 
-
-
-
-B. K. Thannmann, D. (1963) Strengin of Plate Girders in Bending Journal of the Structural Division, ASCE, Vol. 89, No. ST4, August 1963. 
-
-
-
+B. K. Thannmann, D. (1963) Strength of Plate Girders in Bending Journal of the Structural Division, ASCE, Vol. 89, No. ST4, August 1963. 
 
 
 Basler, K., Yen, B.T., Mueller, J. A. and Thurlimann, B. (1960) Web-buckling Tests on Welded Plate Girders Welding Research Council Bulletin No. 64, September 1960. 
 
 
-
-
-
 Bendigo, R.A., Hansen, R.M. and Rumpf, J.L. (1963) Long Bolted Joints Journal of the Structural Division, ASCE, Vol. 89, No. ST6, December 1963. 
-
-
-
 
 
 Bergfelt, A. (1971) Studies and Tests on Slender Plate Girders without Stiffeners March 1971. 
 
 
-
-
-
 Bigos, J., Smith, G.W., Ball, E.F. and Foehl, P.J. (1954) Shop Paint and Painting Practice 1954 Proceedings, AISC National Engineering Conference. 
-
-
-
 
 
 Birkemoe, P.C. and Gilmor, M.I. (1978) Behavior of Bearing-critical Double-angle Beam Connections AISC Engineering Journal, 4th Quarter, 1978. 
 
 
-
-
-
 Bleich, F. (1952) Buckling Strength of Metal Structures McGraw-Hill Book Co., New York, 1952. 
-
-
-
 
 
 Brockenbrough, R.L. (1983) Considerations in the Design of Bolted Joints for Weathering Steel AISC Engineering Journal, 1st Quarter, 1983, (p. 40) Chicago, IL. 
 
 
-
-
-
 Chajes, A. and Winter G. (1965) Torsional Flexural Buckling of Thin-walled Members Journal of the Structural Division, ASCE, Vol. 91, No. ST4, August 1965. 
-
-
-
 
 
 Cheong-Siat Moy., F, Ozer, E. and Lu, L.W. (1977) Strength of Steel Frames Under Gravity Loads Journal of the Structural Division, ASCE, Vol. 103, No. ST6, June 1977. 
 
 
-
-
-
 Daniels, J.H. and Lu. L.W. (1972) Plastic Subassemblage Analysis for Unbraced Frames Journal of the Structural Division, ASCE, Vol. 98, No. ST8, August 1972. 
-
-
-
 
 
 Disque, R.O. (1964) Wind Connections with Simple Framing AISC Engineering Journal, Vol. 1, No. 3, July 1964. 
 
 
-
-
-
 Disque, R.O. (1973) Inelastic K-factor in Design AISC Engineering Journal, 2nd Quarter, 1973. 
-
-
-
 
 
 Disque, R.O. (1975) Directional Moment Connections-A Proposed Design Method for Unbraced Steel Frames AISC Engineering Journal, 1st Quarter, 1975, Chicago, IL. 
 
 
-
-
-
 Douty, R.T. and McGuire, W. (1965) High-strength Bolted Moment Connections Journal of the Structural Division, ASCE, Vol. 91, No. ST2, April 1965. 
-
-
-
 
 
 Driscoll, G.C. (1966) Lehigh Conference on Plastic Design of Multi-story Frames—a Summary AISC Engineering Journal, April 1966. 
 
 
-
-
-
 Driscoll, G.C. et al. (1965) Plastic Design of Multi-story Frames—Lecture Notes Fritz Engineering Laboratory Report No. 273.20, Lehigh University, August 1965. 
-
-
-
 
 
 Elgaaly, M. (1983) Web Design under Compressive Edge Loads AISC Engineering Journal, 4th Quarter, 1983. 
 
 
-
-
-
 Fisher, J. W. (1970) Design of Composite Beams with formed metal Deck AISC Engineering Journal, Vol.7, No. 3, July 1970. 
-
-
-
 
 
 Fisher, J.W., Albrecht, P.A., Yen, B.T., Klingerman, D.J. and McNamee, B.M. (1974) Fatigue Strength of Steel Beams With Welded Stiffeners and Attachments National Cooperative Highway Research Program, Report 147, 1974. 
 
 
-
-
-
 Fisher, J.W., Frank, K.H., Hirt, M.A. and McNamee, B.M. (1970) Effect of Weldments on the Fatigue Strength of Beams National Cooperative Highway Research Program, Report 102, 1970. 
-
-
-
 
 
 Fisher, J.W. and Pense, A.W. (1987) Experience with Use of Heavy W-shapes in Tension AISC Engineering Journal, 2nd Quarter, 1987, Chicago, IL. 
 
 
-
-
-
 Frank, K.H. and Fisher, J.W. (1979) Fatigue Strength of Fillet Welded Cruciform Joints Journal of the Structural Division, ASCE, Vol. 105, No. ST9, September, 1979. 
-
-
-
 
 
 Frank, K.H. and J.A. Yura (1981) An Experimental Study of Bolted Shear Connections FHWA/RD-81/148, December 1981. 
 
 
-
-
-
 Galambos, T.V. (1960) Influence of Partial Base Fixity on Frame Stability ASCE Journal of the Structural Division, May 1960. 
-
-
-
 
 
 Galambos, T.V. (1968) Structural Members and Frames Prentice-Hall, Englewood Cliffs, NJ, 1968. 
 
 
-
-
-
 Galambos, T.V. (Ed.) (1988) Structural Stability Research Council Guide to Stability Design Criteria for Metal Structures 4th Edition. John Wiley & Sons, 1988. 
-
-
-
 
 
 Gaylord, E. H. and Gaylord, C.N. (1972) Design of Steel Structures 2nd Edition, McGraw-Hill Book Co., New York, 1972. 
 
 
-
-
-
 Gibson, G.T. and Wake, B.T. (1942) An Investigation of Welded Connections for Angle Tension Members The Welding Journal, American Welding Society, January 1942. 
-
-
-
 
 
 Gjelsvik, A. (1981) The Theory of Thin-walled Bars John Wiley and Sons, New York, 1981. 
 
 
-
-
-
 Graham, J.D., Sherbourne, A.N., Knabbaz, R.N. and Jensen, C.D. (1959) Welded Interior Beam-to-Column Connections American Institute of Steel Construction, 1959. 
-
-
-
 
 
 Grant, J.A., Fisher, J. W. and Slutter, R.O. (1977) Composite Beams with Formed Steel Deck AISC Engineering Journal, Vol.14, No.1, 1st Quarter, 1977. 
 
 
-
-
-
 Hardash, S.G. and Bjorhovde, R. (1985) New Design Criteria for Gusset Plates in Tension AISC Engineering Journal, 2nd Quarter, 1985. 
-
-
-
 
 
 Higgins, T.R. and Preece, F.R. (1968) Proposed Working Stresses for Fillet Welds in Building Construction Welding Journal Research Supplement, Oct., 1968. 
 
 
-
-
-
 Hoglund, T. (1971) Simply-supported Long Thin Plate I-Girders without Web Stiffeners, Subjected to Distributed Transverse Load Dept. of Building Statics and Structural Engineering of the Royal Institute of Technology, Stockholm, Sweden, 1971. 
-
-
-
 
 
 International Association of Bridge and Structural Engineering (1968) Final Report of the Eighth Congress September 1968. 
 
 
-
-
-
 Johnson, D.L. (1985) An Investigation into the Interaction of Flanges and Webs in Wide-flange Shapes 1985 Proceedings SSRC Annual Technical Session. 
-
-
-
 
 
 Johnston, B.G. (1939) Pin-Connected Plate Links 1939 ASCE Transactions. 
 
 
-
-
-
 Jones, J. (1940) Static Tests on Riveted Joints Civil Engineering, May, 1940. 
-
-
-
 
 
 Keating, P.B. and J.W. Fisher (1985) Review of Fatigue Tests and Design Criteria on Welded Details NCHRP Project 12-15(50), October 1985. 
 
 
-
-
-
 Ketter, R.L. (1961) Further Studies of the Strength of Beam Columns ASCE Journal of the Structural Division, Vol. 87, No. ST6, August 1961. 
-
-
-
 
 
 Kloppel, K. and Seeger, T. (1964) Dauerversuche Mit Einsohnittigen Hv-Verbindurgen Aus ST37 Der Stahlbau, Vol. 33, No. 8, August 1964, pp. 225–245 and Vol. 33, No. 11, November 1964. pp. 335-346. 
 
 
-
-
-
 Klyce, David C. (1988) Shear Connector Spacing in Composite Members with Formed Steel Deck Lehigh University, May 1988. 
-
-
-
 
 
 Kotecki, D.S. and Moll, R.A. (1970) A Toughness Study of Steel Weld Metal from Self-shielded, Flux-cored Electrodes, Part 1 Welding Journal Vol. 49, April 1970. 
 
 
-
-
-
 Kotecki, D.S. and Moll, R.A. (1972) A Toughness Study of Steel Weld Metal from Self-shielded, Flux-cored Electrodes, Part 2 Welding Journal, Vol. 51, March 1972. 
-
-
-
 
 
 Krishnamurthy, N. (1978) A Fresh Look at Bolted End-Plate Behavior and Design AISC Engineering Journal, Vol. 15, No. 2, 2nd Quarter, 1978. 
 
 
-
-
-
 Kulak, G.L., Fisher, J.W. and Struik, J.H.A. (1987) Guide to Design Criteria for Bolted and Riveted Joints, 2nd Edition John Wiley & Sons, New York 1987. 
-
-
-
 
 
 Lay, M.G. and Galambos, T.V. (1967) Inelastic Beams Under Moment Gradient Journal of the Structural Division, ASCE, Vol. 93, No. ST1, February 1967. 
 
 
-
-
-
 Lee, G.C., Morrell, M.L. and Ketter, R.L. (1972) Design of Tapered Members WRC Bulletin No. 173, June 1972. 
-
-
-
 
 
 Leigh, J.M. and M.G. Lay (1978) Laterally Unsupported Angles with Equal and Unequal Legs Report MRL 22/2 July 1978, Melbourne Research Laboratories, Clayton. 
 
 
-
-
-
 Leigh, J.M. and M.G. Lay (1984) The Design of Laterally Unsupported Angles, in Steel Design Current Practice, Sect. 2, Bending Members, American Institute of Steel Construction, January 1984. 
-
-
-
 
 
 LeMessurier, W.J. (1976) A Practical Method of Second Order Analysis/Part 1—Pin-jointed Frames AISC Engineering Journal, Vol. 13, No. 4, 4th Quarter, 1976. 
 
 
-
-
-
 LeMessurier, W.J. (1977) A Practical Method of Second Order Analysis/Part 2—Rigid Frames AISC Engineering Journal, Vol. 14, No. 2, 2nd Quarter, 1977. 
 
 
-
-
-
 Liapunov, S. (1974) Ultimate Load Studies of Plane Multi-story Steel Rigid Frames Journal of the Structural Division, ASCE, Vol. 100, No. ST8, Proc. Paper 10750, August 1974. 
-
-
-
 
 
 Lilly, S.B. and Carpenter, S.T. (1940) Effective Moment of Inertia of a Riveted Plate Girder 1940 ASCE Transactions.
 AMERICAN INSTITUTE OF STEEL CONSTRUCTION 
 
 
-
-
-
 Lu, Le-Wu (1967) Design of Braced Multi-story Frames by the Plastic Method AISC Engineering Journal, January 1967. 
-
-
-
 
 
 Madugula, M.K.S. and J.B. Kennedy (1985) Single and Compound Angle Members Elsevier Applied Science, New York, 1985. 
 
 
-
-
-
 Marino, F.J. (1966) Ponding of Two-way Roof Systems AISC Engineering Journal, Vol. 3, No. 3, July 1966. 
-
-
-
 
 
 McGarraugh, J.B. and Baldwin, J.W. (1971) Lightweight Concrete-on-steel Composite Beams AISC Engineering Journal, Vol. 8, No. 3, July 1971. 
 
 
-
-
-
 Morrell, M.L. and Lee, G.C. (1974) Allowable Stress for Web-tapered Members WRC Bulletin 192, February 1974. 
-
-
-
 
 
 Munse, W.H. and Chesson, E. Jr. (1963) Riveted and Bolted Joints: Net Section Design Journal of the Structural Division, ASCE, Vol. 89, No. ST1, February 1963. 
 
 
-
-
-
 Murray, T.M. (1975) Design to Prevent Floor Vibration AISC Engineering Journal, Vol. 12, No. 3, 3rd Quarter, 1975. 
-
-
-
 
 
 Ollgaard, J.G., Slutter, R.G. and Fisher, J.W. (1971) Shear Strength of Stud Shear Connections in Lightweight and Normal Weight Concrete AISC Engineering Journal, Vol. 8, No. 2, April 1971. 
 
 
-
-
-
 Ozer, E., Okten, O.S., Morino, S., Daniels, J.H. and Lu, L.W. (1974) Frame Stability and Design of Columns in Unbraced Multi-story Steel Frames Fritz Engineering Laboratory Report No. 375.2, Lehigh University, November 1974. 
-
-
-
 
 
 Popov, E.P. and Pinkney, R.B. (1968) Behavior of Steel Building Connections Subjected to Inelastic Strain Reversals Bulletin Nos. 13 and 14, American Iron and Steel Institute, November 1968. 
 
 
-
-
-
 Popov, E.P. and Stephen, R.M. (1977) Capacity of Columns with Splice Imperfections AISC Engineering Journal, Vol. 14, No. 1, 1st Quarter, 1977. 
-
-
-
 
 
 Preece, F.R. (1968) AWS-AISC Fillet Weld Study Longitudinal and Transverse Shear Tests Testing Engineers, Inc., Los Angeles, May 31, 1968. 
 
 
-
-
-
 Ravindra, M.K. and Galambos, T.V. (1978) Load and Resistance Factor Design for Steel ASCE Journal of the Structural Division, Vol. 104, No. ST9, September 1978. 
-
-
-
 
 
 Research Council on Structural Connections (1985) Specification for Structural Joints Using ASTM A325 or A490 Bolts 1985. 
 
 
-
-
-
 Ricles, J.M. and Yura, J.A. (1983) Strength of Double-row Bolted Web Connections ASCE Journal of the Structural Division, Vol. 109, No. STI, January 1983. 
-
-
-
 
 
 Roberts, T.M. (1981) Slender Plate Girders Subjected to Edge Loading Proceedings of Institute of Civil Engineers, Part 2, 71, September 1981. 
 
 
-
-
-
 Rolfe, S.T. (1977) Fracture and Fatigue Control in Steel Structures AISC Engineering Journal, Vol. 14, No. 1, 1st Quarter, 1977. 
-
-
-
 
 
 Rolfe, S.T. and J.M. Barsom (1987) Fracture and Fracture Control in Structures, 2nd Edition, Prentice-Hall, Inc., Englewood Cliffs, NJ, 1987. 
 
 
-
-
-
 Sherman, D.R. (1976) Tentative Criteria for Structural Applications of Steel Tubing and Pipe American Iron and Steel Institute, Washington, D.C., August, 1976. AMERICAN INSTITUTE OF STEEL CONSTRUCTION 
-
-
-
 
 
 Slutter, R.G. and Driscoll, G.C. (1965) Flexural Strength of Steel-Concrete Composite Beams Journal of the Structural Division, ASCE, Vol. 91, No. ST2, April 1965. 
 
 
-
-
-
 Springfield, J. and Adams, P.F. (1972) Aspects of Column Design in Tall Steel Buildings Journal of the Structural Division, ASCE, Vol. 98, No. ST5, May 1972. 
-
-
-
 
 
 Stang, A.H. and Jaffe, B.S. (1948) Perforated Cover Plates for Steel Columns Research Paper RP1861, National Bureau of Standards, 1948. 
 
 
-
-
-
 Steel Structures Painting Council (1982) Steel Structures Painting Manual, Vol. 2, Systems and Specifications Pittsburgh, PA., 1982 
-
-
-
 
 
 Terashima, H. and Hart, P.H.M. (1984) Effect of Aluminum on Carbon, Manganese, Niobium Steel Submerged Arc Weld Metal Properties Welding Journal, Vol. 63, June 1984. 
 
 
-
-
-
 Timoshenko, S.P. and J.M. Gere (1952) Theory of Elastic Stability McGraw-Hill Book Company, 1952. 
-
-
-
 
 
 Van Kuren, R.C. and Galambos, T.V. (1964) Beam-Column Experiments Journal of the Structural Division, ASCE, Vol. 90, No. ST2, April 1964. 
 
 
-
-
-
 v. Karman, T., Sechler, E.E. and Donnell, L.H. (1932) The Strength of Thin Plates in Compression 1932 ASME Transactions, Vol. 54, APM-54-5. 
-
-
-
 
 
 Winter, G. (1947) Strength of Steel Compression Flanges. 1947 ASCE Transactions. 
 
 
-
-
-
 Winter, G. (1958) Lateral Bracing of Columns and Beams Journal of the Structural Division, ASCE, Vol. 84, No. ST2, March 1958. 
-
-
-
 
 
 Yura, J.A. (1971) The Effective Length of Columns in Unbraced Frames AISC Engineering Journal, Vol. 8, No. 2, April 1971. 
 
 
-
-
-
 Yura, J.A. (1982) The Behavior of Beams Subjected to Concentrated Loads PMFSEL Report No. 82-5, August 1982, University of Texas-Austin 
 
 
-
-
-
-Yura, J.A. Frank, K.H. and Polzyois, D. (1987) High Strength Bolts for Bridges, PMFSEL Report No. 87-3, May 1987, University of Texas-Austin. 
-
-
-
+Yura, J.A. Frank, K.H. and Polyzois, D. (1987) High Strength Bolts for Bridges, PMFSEL Report No. 87-3, May 1987, University of Texas-Austin. 
 
 
 Zahn, C.J. (1987) Plate Girder Design Using LRFD AISC Engineering Journal, 1st Quarter, 1987. 
 
 
-
-
-
 Zandonini, R. (1985) Stability of Compact Built-up Struts: Experimental Investigation and Numerical Simulation Construction Metalliche, No. 4, 1985. 
-
-
-
 
 
 Alignment chart for columns. A nomograph for determining the effective length factor $K$ for some types of columns 
 
 
-
-
-
 Amplification factor. A multiplier of the value of moment or deflection in the unbraced length of an axially loaded member to reflect the secondary values generated by the eccentricity of the applied axial load within the member 
-
-
-
 
 
 Aspect ratio. In any rectangular configuration, the ratio of the lengths of the sides 
 
 
-
-
-
 Batten plate. A plate element used to join two parallel components of a built-up column, girder or strut rigidly connected to the parallel components and designed to transmit shear between them 
-
-
-
 
 
 Beam. A structural member whose primary function is to carry loads transverse to its longitudinal axis 
 
 
-
-
-
 Beam-column. A structural member whose primary function is to carry loads both transverse and parallel to its longitudinal axis 
-
-
-
 
 
 Bent. A plane framework of beam or truss members which support loads and the columns which support these members 
 
 
-
-
-
 Biaxial bending. Simultaneous bending of a member about two perpendicular axes 
-
-
-
 
 
 Bifurcation. The phenomenon whereby a perfectly straight member under compression may either assume a deflected position or may remain undeflected, or a beam under flexure may either deflect and twist out of plane or remain in its in-plane deflected position. 
 
 
-
-
-
 Braced frame. A frame in which the resistance to lateral load or frame instability is primarily provided by a diagonal, a K-brace or other auxiliary system of bracing 
-
-
-
 
 
 Brittle fracture. Abrupt cleavage with little or no prior ductile deformation 
 
 
-
-
-
 Buckling load. The load at which a perfectly straight member under compression assumes a deflected position 
-
-
-
 
 
 Built-up member. A member made of structural metal elements that are welded, bolted or riveted together 
 
 
-
-
-
 Cladding. The exterior covering of the structural components of a building 
-
-
-
 
 
 Cold-formed members. Structural members formed from steel without the application of heat 
 
 
-
-
-
 Column. A structural member whose primary function is to carry loads parallel to its longitudinal axis 
-
-
-
 
 
 Column curve. A curve expressing the relationship between axial column strength and slenderness ratio 
 
 
-
-
-
 Combined mechanism. A mechanism determined by plastic analysis procedure which combines elementary beam, panel and joint mechanisms 
-
-
-
 
 
 Compact section. Compact sections are capable of developing a fully plastic stress distribution and possess rotation capacity of approximately 3 before the onset of local buckling 
 
 
-
-
-
 Composite beam. A steel beam structurally connected to a concrete slab so that the beam and slab respond to loads as a unit. See also Concrete-encased beam 
-
-
-
 
 
 Composite column. A steel column fabricated from rolled or built-up steel shapes and encased in structural concrete or fabricated from steel pipe or tubing and filled with structural concrete 
 
 
-
-
-
 Concrete-encased beam. A beam totally encased in concrete cast integrally with the slab 
-
-
-
 
 
 Connection. Combination of joints used to transmit forces between two or more members. Categorized by the type and amount of force transferred (moment, shear, end reaction). See also splices 
 
 
-
-
-
 Critical load. The load at which bifurcation occurs as determined by a theoretical stability analysis 
-
-
-
 
 
 Curvature. The rotation per unit length due to bending 
 
 
-
-
-
 Design documents. See structural design documents 
-
-
-
 
 
 Design strength. Resistance (force, moment, stress, as appropriate) provided by element or connection; the product of the nominal strength and the resistance factor 
 
 
-
-
-
 Diagonal bracing. Inclined structural members carrying primarily axial load employed to enable a structural frame to act as a truss to resist horizontal loads 
-
-
-
 
 
 Diaphragm. Floor slab, metal wall or roof panel possessing a large in-plane shear stiffness and strength adequate to transmit horizontal forces to resisting systems 
 
 
-
-
-
 Diaphragm action. The in-plane action of a floor system (also roofs and walls) such that all columns framing into the floor from above and below are maintained in their same position relative to each other 
-
-
-
 
 
 Double curvature. A bending condition in which end moments on a member cause the member to assume an S-shape 
 
 
-
-
-
 Drift. Lateral deflection of a building 
-
-
-
 
 
 Drift index. The ratio of lateral deflection to the height of the building 
 
 
-
-
-
 Ductility factor. The ratio of the total deformation at maximum load to the elastic-limit deformation 
-
-
-
 
 
 Effective length. The equivalent length KL used in compression formulas and determined by a bifurcation analysis 
 
 
-
-
-
 Effective length factor K. The ratio between the effective length and the unbraced length of the member measured between the centers of gravity of the bracing members 
-
-
-
 
 
 Effective moment of inertia. The moment of inertia of the cross section of a member that remains elastic when partial plastification of the cross section takes place, usually under the combination of residual stress and applied stress. Also, the moment of inertia based on effective widths of elements that buckle locally. Also, the moment of inertia used in the design of partially composite members 
 
 
-
 Effective stiffness. The stiffness of a member computed using the effective moment of inertia of its cross section 
-
 
 
 Effective width. The reduced width of a plate or slab which, with an assumed uniform stress distribution, produces the same effect on the behavior of a structural member as the actual plate width with its nonuniform stress distribution 
 
 
-
-
-
 Elastic analysis. Determination of load effects (force, moment, stress as appropriate) on members and connections based on the assumption that material deformation disappears on removal of the force that produced it 
-
-
-
 
 
 Elastic-perfectly plastic. A material which has an idealized stress-strain curve that varies linearly from the point of zero strain and zero stress up to the yield point of the material, and then increases in strain at the value of the yield stress without any further increases in stress 
 
 
-
-
-
 Embedment. A steel component cast in a concrete structure which is used to transmit externally applied loads to the concrete structure by means of bearing, shear, bond, friction or any combination thereof. The embedment may be fabricated of structural-steel plates, shapes, bars, bolts, pipe, studs, concrete reinforcing bars, shear connectors or any combination thereof 
-
-
-
 
 
 Encased steel structure. A steel-framed structure in which all of the individual frame members are completely encased in cast-in-place concrete 
 
 
-
-
-
 Euler formula. The mathematical relationship expressing the value of the Euler load in terms of the modulus of elasticity, the moment of inertia of the cross section and the length of a column 
-
 
 
 Euler load. The critical load of a perfectly straight, centrally loaded, pin-ended column 
 
 
-
 Eyebar. A particular type of pin-connected tension member of uniform thickness with forged or flame cut head of greater width than the body proportioned to provide approximately equal strength in the head and body 
 
 
-
-
-
 Factored load. The product of the nominal load and a load factor 
-
 
 
 Fastener. Generic term for welds, bolts, rivets or other connecting device 
@@ -6502,99 +6547,52 @@ Fastener. Generic term for welds, bolts, rivets or other connecting device
 Fatigue. A fracture phenomenon resulting from a fluctuating stress cycle 
 
 
-
 First-order analysis. Analysis based on first-order deformations in which equilibrium conditions are formulated on the undeformed structure 
-
-
-
 
 
 Flame-cut plate. A plate in which the longitudinal edges have been prepared by oxygen cutting from a large plate 
 
 
-
-
-
 Flat width. For a rectangular tube, the nominal width minus twice the outside corner radius. In absence of knowledge of the corner radius, the flat width may be taken as the total section width minus three times the thickness 
-
-
-
 
 
 Flexible connection. A connection permitting a portion, but not all, of the simple beam rotation of a member end 
 
 
-
-
-
 Floor system. The system of structural components separating the stories of a building 
-
-
-
 
 
 Force. Resultant of distribution of stress over a prescribed area. A reaction that develops in a member as a result of load (formerly called total stress or stress). Generic term signifying axial loads, bending moment, torques and shears 
 
 
-
-
-
 Fracture toughness. Measurement of the ability to absorb energy without fracture. Generally determined by impact loading of specimens containing a notch having a prescribed geometry 
-
-
-
 
 
 Frame buckling. A condition under which bifurcation may occur in a frame 
 
 
-
-
-
 Frame instability. A condition under which a frame deforms with increasing lateral deflection under a system of increasing applied monotonic loads until a maximum value of the load called the stability limit is reached, after which the frame will continue to deflect without further increase in load 
-
-
-
 
 
 Fully composite beam. A composite beam with sufficient shear connectors to develop the full flexural strength of the composite section 
 
 
-
-
-
 High-cycle fatigue. Failure resulting from more than 20,000 applications of cyclic stress 
-
-
-
 
 
 Hybrid beam. A fabricated steel beam composed of flanges with a greater yield strength that that of the web. Whenever the maximum flange stress is less than or equal to the web yield stress the girder is considered homogeneous 
 
 
-
-
-
 Hysteresis loop. A plot of force versus displacement of a structure or member subjected to reversed, repeated load into the inelastic range, in which the path followed during release and removal of load is different from the path for the addition of load over the same range of displacement 
-
-
-
 
 
 Inclusions. Nonmetallic material entrapped in otherwise sound metal 
 
 
-
-
-
 Incomplete fusion. Lack of union by melting of filler and base metal over entire prescribed area 
 
 
-
-
-
 Inelastic action. Material deformation that does not disappear on removal of the force that produced it 
-
 
 
 Instability. A condition reached in the loading of an element or structure in which continued deformation results in a decrease of load-resisting capacity 
@@ -6678,376 +6676,191 @@ Resistance. The capacity of a structure or component to resist the effects of lo
 Resistance factor. A factor that accounts for unavoidable deviations of the actual strength from the nominal value and the manner and consequences of failure 
 
 
-
 Rigid frame. A structure in which connections maintain the angular relationship between beam and column members under load 
-
-
-
 
 
 Root of the flange. Location on the web of the corner radius termination point or the toe of the flange-to-web weld. Measured as the k-distance from the far side of the flange 
 
 
-
-
-
 Rotation capacity. The incremental angular rotation that a given shape can accept prior to local failure defined as $R = (\theta_{u}/\theta_{p}) - 1$ where $\theta_{u}$ is the overall rotation attained at the factored load state and $\theta_{p}$ is the idealized rotation corresponding to elastic theory applied to the case of $M = M_{p}$ . 
-
-
-
 
 
 St. Venant torsion. That portion of the torsion in a member that induces only shear stresses in the member 
 
 
-
-
-
 Second-order analysis. Analysis based on second-order deformations, in which equilibrium conditions are formulated on the deformed structure 
-
-
-
 
 
 Service load. Load expected to be supported by the structure under normal usage; often taken as the nominal load 
 
 
-
-
-
 Serviceability limit state. Limiting condition affecting the ability of a structure to preserve its appearance, maintainability, durability or the comfort of its occupants or function of machinery under normal usage. 
-
-
-
 
 
 Shape factor. The ratio of the plastic moment to the yield moment, or the ratio of the plastic modulus to the section modulus for a cross section 
 
 
-
-
-
 Shear-friction. Friction between the embedment and the concrete that transmits shear loads. The relative displacement in the plane of the shear load is considered to be resisted by shear-friction anchors located perpendicular to the plane of the shear load 
-
-
-
 
 
 Shear lugs. Plates, welded studs, bolts and other steel shapes that are embedded in the concrete and located transverse to the direction of the shear force and that transmit shear loads introduced into the concrete by local bearing at the shear lug-concrete interface 
 
 
-
-
-
 Shear wall. A wall that in its own plane resists shear forces resulting from applied wind, earthquake or other transverse loads or provides frame stability. Also called a structural wall 
-
-
-
 
 
 Sidesway. The lateral movement of a structure under the action of lateral loads, unsymmetrical vertical loads or unsymmetrical properties of the structure 
 
 
-
-
-
 Sidesway buckling. The buckling mode of a multistory frame precipitated by the relative lateral displacements of joints, leading to failure by sidesway of the frame Simple plastic theory. See Plastic design 
-
-
-
 
 
 Single curvature. A deformed shape of a member having one smooth continuous arc, as opposed to double curvature which contains a reversal 
 
 
-
-
-
 Slender section. The cross section of a member which will experience local buckling in the elastic range 
-
-
-
 
 
 Slenderness ratio. The ratio of the effective length of a column to the radius of gyration of the column, both with respect to the same axis of bending 
 
 
-
-
-
 Slip-critical joint. A bolt joint in which the slip resistance of the connection is required 
-
-
-
 
 
 Space frame. A three-dimensional structural framework (as contrasted to a plane frame) 
 
 
-
-
-
 Splice. The connection between two structural elements joined at their ends to form a single, longer element 
-
-
-
 
 
 Stability-limit load. Maximum (theoretical) load a structure can support when second-order instability effects are included 
 
 
-
-
-
 Stepped column. A column with changes from one cross section to another occurring at abrupt points within the length of the column 
-
-
-
 
 
 Stiffener. A member, usually an angle or plate, attached to a plate or web of a beam or girder to distribute load, to transfer shear or to prevent buckling of the member to which it is attached 
 
 
-
-
-
 Stiffness. The resistance to deformation of a member or structure measured by the ratio of the applied force to the corresponding displacement 
-
-
-
 
 
 Story drift. The difference in horizontal deflection at the top and bottom of a story
 Strain hardening. Phenomenon wherein ductile steel, after undergoing considerable 
 
 
-
-
-
 Strain hardening. Phenomenon wherein ductile steel, after undergoing considerable deformation at or just above yield point, exhibits the capacity to resist substantially higher loading than that which caused initial yielding 
-
-
-
 
 
 Strain-hardening strain. For structural steels that have a flat (plastic) region in the stress-strain relationship, the value of the strain at the onset of strain hardening 
 
 
-
-
-
 Strength design. A method of proportioning structural members using load factors and resistance factors such that no applicable limit state is exceeded (also called load and resistance factor design) 
-
-
-
 
 
 Strength limit state. Limiting condition affecting the safety of the structure, in which the ultimate load-carrying capacity is reached 
 
 
-
-
-
 Stress. Force per unit area 
-
-
-
 
 
 Stress concentration. Localized stress considerably higher than average (even in uniformly loaded cross sections of uniform thickness) due to abrupt changes in geometry or localized loading 
 
 
-
-
-
 Strong axis. The major principal axis of a cross section 
-
-
-
 
 
 Structural design documents. Documents prepared by the designer (plans, design details and job specifications) 
 
 
-
-
-
 Structural system. An assemblage of load-carrying components which are joined together to provide regular interaction or interdependence 
-
-
-
 
 
 Stub column. A short compression-test specimen, long enough for use in measuring the stress-strain relationship for the complete cross section, but short enough to avoid buckling as a column in the elastic and plastic ranges 
 
 
-
-
-
 Subassemblage. A truncated portion of a structural frame 
-
-
-
 
 
 Supported frame. A frame which depends upon adjacent braced or unbraced frames for resistance to lateral load or frame instability. (This transfer of load is frequently provided by the floor or roof system through diaphragm action or by horizontal cross bracing in the roof.) 
 
 
-
-
-
 Tangent modulus. At any given stress level, the slope of the stress-strain curve of a material in the inelastic range as determined by the compression test of a small specimen under controlled conditions. 
-
-
-
 
 
 Temporary structure. A general term for anything that is built or constructed (usually to carry construction loads) that will eventually be removed before or after completion of construction and does not become part of the permanent structural system 
 
 
-
-
-
 Tensile strength. The maximum tensile stress that a material is capable of sustaining 
-
-
-
 
 
 Tension field action. The behavior of a plate girder panel under shear force in which diagonal tensile stresses develop in the web and compressive forces develop in the transverse stiffeners in a manner analogous to a Pratt truss 
 
 
-
-
-
 Toe of the fillet. Termination point of fillet weld or of rolled section fillet 
-
-
-
 
 
 Torque-tension relationship Term applied to the wrench torque required to produce specified pre-tension in high-strength bolts 
 
 
-
-
-
 Turn-of-nut method. Procedure whereby the specified pre-tension in high-strength bolts is controlled by rotation of the wrench a predetermined amount after the nut has been tightened to a snug fit 
-
-
-
 
 
 Unbraced frame. A frame in which the resistance to lateral load is provided by the bending resistance of frame members and their connections 
 
 
-
-
-
 Unbraced length. The distance between braced points of a member, measured between the centers of gravity of the bracing members 
-
-
-
 
 
 Undercut. A notch resulting from the melting and removal of base metal at the edge of a weld 
 
 
-
-
-
 Universal-mill plate. A plate in which the longitudinal edges have been formed by a rolling process during manufacture. Often abbreviated as UM plate 
-
-
-
 
 
 Upper bound load. A load computed on the basis of an assumed mechanism which will always be at best equal to or greater than the true ultimate load 
 
 
-
-
-
 Vertical bracing system. A system of shear walls, braced frames or both, extending throughout one or more floors of a building 
-
-
-
 
 
 Von Mises yield criterion. A theory which states that inelastic action at any point in a body under any combination of stresses begins only when the strain energy of distortion per unit volume absorbed at the point is equal to the strain energy of distortion absorbed per unit volume at any point in a simple tensile bar stressed to the elastic limit under a state of uniaxial stress. It is often called the maximum strain-energy-of-distortion theory. Accordingly, shear yield occurs at 0.58 times yield strength 
 
 
-
-
-
 Warping torsion. That portion of the total resistance to torsion that is provided by resistance to warping of the cross section 
-
-
-
 
 
 Weak axis. The minor principal axis of a cross section 
 
 
-
-
-
 Weathering steel. A type of high-strength, low-alloy steel which can be used in normal environments (not marine) and outdoor exposures without protective paint covering. This steel develops a tight adherent rust at a decreasing rate with respect to time 
-
-
-
 
 
 Web buckling. The buckling of a web plate 
 
 
-
-
-
 Web crippling. The local failure of a web plate in the immediate vicinity of a concentrated load or reaction 
-
-
-
 
 
 Working load. Also called service load. The actual load assumed to be acting on the structure. 
 
 
-
-
-
 Yield moment. In a member subjected to bending, the moment at which an outer fiber first attains the yield stress 
-
-
-
 
 
 Yield plateau. The portion of the stress-strain curve for uniaxial tension or compression in which the stress remains essentially constant during a period of substantially increased strain 
 
 
-
-
-
 Yield point. The first stress in a material at which an increase in strain occurs without an increase in stress, the yield point less than the maximum attainable stress 
-
-
-
 
 
 Yield strength. The stress at which a material exhibits a specified limiting deviation from the proportionality of stress to strain. Deviation expressed in terms of strain 
 
 
-
-
-
 Yield stress. Yield point, yield strength or yield-stress level as defined 
 
 
-
-
-
 Yield-stress level. The average stress during yielding in the plastic range, the stress determined in a tension test when the strain reaches 0.005 in. per in. 
-
 
 
 # SPECIFICATION FOR ALLOWABLE STRESS
@@ -7096,7 +6909,7 @@ a. For members connected by bolting, the net area and effective net area shall b
 b. When the load is transmitted by longitudinal or a combination of longitudinal and transverse welds through just one leg of the angle, the effective net area shall be 
 
 $$
-A _ {e} = 0. 8 5 A _ {g}\tag{2-1}
+A _ {e} = 0.85 A _ {g}\tag{2-1}
 $$
 
 c. When load is transmitted by transverse weld through just one leg of the angle, $A_{e}$ is the area of the connected leg. 
@@ -7108,7 +6921,7 @@ For members whose design is based on tensile force, the slenderness ratio L/r pr
 The allowable shear stress due to flexure and torsion shall be: 
 
 $$
-F _ {\nu} = 0. 4 F _ {y}\tag{3-1}
+F_{v} = 0.4 F _ {y}\tag{3-1}
 $$
 
 ## 4. COMPRESSION
@@ -7124,7 +6937,7 @@ $$
 when $Kl / r > C_c'$ 
 
 $$
-F _ {a} = \frac {1 2 \pi^ {2} E}{2 3 (K l / r) ^ {2}}\tag{4-2}
+F _ {a} = \frac {12 \pi^ {2} E}{23 (K l / r) ^ {2}}\tag{4-2}
 $$
 
 AMERICAN INSTITUTE OF STEEL CONSTRUCTION 
@@ -7148,15 +6961,13 @@ $$
 when $76 / \sqrt{F_y} < b / t < 155 / \sqrt{F_y}$ 
 
 $$
-Q = 1. 3 4 0 - 0. 0 0 4 4 7 (b / t) \sqrt {F _ {y}}
+Q = 1.340 - 0.00447(b/t)\sqrt{F_y}\tag{4-3b}
 $$
 
 when $b / t \geq 155 / \sqrt{F_y}$ 
 
-(4-3b) 
-
 $$
-Q = 1 5, 5 0 0 / \left[ F _ {y} (b / t) ^ {2} \right]\tag{4-3c}
+Q = 15,500 / \left[ F _ {y} (b / t) ^ {2} \right]\tag{4-3c}
 $$
 
 where 
@@ -7186,19 +6997,19 @@ The bending stress is limited to the minimum allowable value $F_{b}$ determined 
 5.1.1. To prevent local buckling when the tip of an angle leg is in compression, when $b / t \leq 65 / \sqrt{F_y}$ : 
 
 $$
-F _ {b} = 0. 6 6 F _ {y}\tag{5-1a}
+F _ {b} = 0.66 F _ {y}\tag{5-1a}
 $$
 
 when $65 / \sqrt{F_y} < b / t \leq 76 / \sqrt{F_y}$ : 
 
 $$
-F _ {b} = 0. 6 0 F _ {y}\tag{5-1b}
+F _ {b} = 0.60 F _ {y}\tag{5-1b}
 $$
 
 when $b / t > 76 / \sqrt{F_y}$ : 
 
 $$
-F _ {b} = 0. 6 0 Q F _ {y}\tag{5-1c}
+F _ {b} = 0.60 Q F _ {y}\tag{5-1c}
 $$
 
 AMERICAN INSTITUTE OF STEEL CONSTRUCTION 
@@ -7214,7 +7025,7 @@ An angle leg shall be considered to be in compression if the tip of the angle le
 ## 5.1.2. For the tip of an angle leg in tension
 
 $$
-F _ {b} = 0. 6 6 F _ {y}\tag{5-2}
+F _ {b} = 0.66 F _ {y}\tag{5-2}
 $$
 
 5.1.3. To prevent lateral-torsional buckling, the maximum compression stress shall not exceed: 
@@ -7222,13 +7033,13 @@ $$
 when $F_{ob} \leq F_y$ 
 
 $$
-F _ {b} = \left[ 0. 5 5 - 0. 1 0 F _ {o b} / F _ {y} \right] F _ {o b}\tag{5-3a}
+F _ {b} = \left[ 0.55 - 0.10 F _ {o b} / F _ {y} \right] F _ {o b}\tag{5-3a}
 $$
 
 when $F_{ob} > F_y$ 
 
 $$
-F _ {b} = \left[ 0. 9 5 - 0. 5 0 \sqrt {F _ {y} / F _ {o b}} \right] F _ {y} \leq 0. 6 6 F _ {y}\tag{5-3b}
+F _ {b} = \left[ 0.95 - 0.50 \sqrt {F _ {y} / F _ {o b}} \right] F _ {y} \leq 0.66 F _ {y}\tag{5-3b}
 $$
 
 where 
@@ -7254,7 +7065,7 @@ a. The calculated compressive stress $f_{b}$ , using the geometric axis section 
 b. For the angle leg tips in compression, the allowable bending stress $F_{b}$ is determined according to Sect. 5.1.3, where 
 
 $$
-F _ {o b} = \frac {8 5 , 9 0 0}{(\ell / b) ^ {2}} C _ {b} [ \sqrt {1 + 0 . 7 8 (\ell t / b ^ {2}) ^ {2}} - 1 ]\tag{5-4}
+F _ {o b} = \frac {85,900}{(\ell / b) ^ {2}} C _ {b} [ \sqrt {1 + 0.78 (\ell t / b ^ {2}) ^ {2}} - 1 ]\tag{5-4}
 $$
 
 AMERICAN INSTITUTE OF STEEL CONSTRUCTION 
@@ -7278,7 +7089,7 @@ Angles without lateral-torsional restraint shall be designed considering princip
 The principal bending compression stress $f_{bw}$ shall be limited by $F_{b}$ in Sect. 5.1.3, where 
 
 $$
-F _ {o b} = C _ {b} \frac {2 8 , 2 5 0}{(\ell / t)}\tag{5-5}
+F _ {o b} = C _ {b} \frac {28,250}{(\ell / t)}\tag{5-5}
 $$
 
 and by $b / t$ provisions in Sect. 5.1.1. 
@@ -7294,7 +7105,7 @@ The principal bending stress $f_{bz}$ shall be limited by $F_{b}$ in Sect. 5.1.1
 The principal bending compression stress $f_{bw}$ shall be limited by $F_{b}$ in Sect. 5.1.3, where 
 
 $$
-F _ {o b} = \frac {1 4 3 , 1 0 0 I _ {z}}{S _ {w} \ell^ {2}} C _ {b} \left[ \sqrt {\beta_ {w} ^ {2} + 0 . 0 5 2 (\ell t / r _ {z}) ^ {2}} + \beta_ {w} \right]\tag{5-6}
+F _ {o b} = \frac {143,100 I _ {z}}{S _ {w} \ell^ {2}} C _ {b} \left[ \sqrt {\beta_ {w} ^ {2} + 0.052 (\ell t / r _ {z}) ^ {2}} + \beta_ {w} \right]\tag{5-6}
 $$
 
 and by b/t provisions in Sect. 5.1.1 for the compression leg. 
@@ -7346,7 +7157,7 @@ Shear stresses in a single angle member are the result of the gradient in the be
 The elastic stress due to flexural shear may be computed by 
 
 $$
-f _ {\nu} = 1. 5 V _ {b} / b t\tag{C3-1}
+f_{v} = 1.5 V _ {b} / b t\tag{C3-1}
 $$
 
 where 
@@ -7367,11 +7178,10 @@ If the angle is not laterally braced against twist a torsional moment is produce
 
 
 $$
-f _ {\nu} = M _ {T} t / J = 3 M _ {T} / A t
+f_{v} = M _ {T} t / J = 3 M _ {T} / A t
 $$
 
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/008883c2415992d6a18e2e2d114e9eca6cef10d53afec95e304dda02bc0ef80c.jpg)
-
 
 
 a. Pure torsion
@@ -7386,9 +7196,7 @@ b. In-plane warping
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/92a04618d3d4cb84ec5e4d227ef18de946ff5f4ce679d522fd03df35db76632a.jpg)
 
 
-
 Fig. C3.1. Shear stresses due to torsion
-
 
 
 c. Across-thickness warping
@@ -7470,7 +7278,7 @@ The coordinate axes are defined in Fig. C5.3. For equal leg angles, the flexural
 
 
 $$
-(K \ell / r) _ {m a x} > 5. 4 (b / t) / Q\tag{C4-3}
+(K \ell / r) _ {m a x} > 5.4 (b / t) / Q\tag{C4-3}
 $$
 
 This limit can be derived for equal leg angles with Q = 1 by equating the equation for the elastic flexural-torsional stress to the Euler equation for column flexural buckling. For unequal leg angles, flexural-torsional buckling always controls though for higher slenderness ratios, it will be approximately equal to the minimum flexural buckling stress. Also, when Q < 1, the limit cannot be derived because Q does not appear in the Euler equation. Numerical studies of the inelastic buckling strength of angles with a wide range of proportions indicate for members that exceed the $K\ell/r$ limit, the flexural-torsional buckling stress will be only a few percent less than the column buckling stress except when one leg is more than twice the length of the other. In the latter case, reductions as high as 10% may occur. 
@@ -7484,13 +7292,11 @@ C5.1.1. These provisions follow typical AISC criteria for single angles under un
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/27e72a825ebc455f29bdc75877f3337b69ba927bf07911befd4be925f712a58f.jpg)
 
 
-
 Fig. C5.1. Lateral-torsional buckling of a single-angle beam
 AMERICAN INSTITUTE OF STEEL CONSTRUCTION
 
 
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/3f5967c760e317c03f619d844515c5ac3f269edc73250c0f568760ee64376638.jpg)
-
 
 
 Fig. C5.2. Geometric axis bending of laterally unrestrained equal-leg angles
@@ -7513,7 +7319,7 @@ The horizontal component of deflection being approximately 60% of the vertical d
 The lateral-torsional buckling is limited by $F_{ob}$ (Leigh and Lay, 1984 and 1978) in Eq. 5-4, which is based on 
 
 $$
-\begin{array}{c} M _ {c r} = \frac {2 . 3 3 E b ^ {4} t}{(1 + 3 \cos^ {2} \Theta) (K \ell) ^ {2}} \times \\ \left[ \sqrt {\sin^ {2} \Theta + \frac {0 . 1 6 2 (1 + 3 \cos^ {2} \Theta) (K \ell) ^ {2} t ^ {2}}{b ^ {4}}} + \sin \Theta \right] \end{array}\tag{C5-1}
+\begin{array}{c} M _ {c r} = \frac {2.33 E b ^ {4} t}{(1 + 3 \cos^ {2} \Theta) (K \ell) ^ {2}} \times \\ \left[ \sqrt {\sin^ {2} \Theta + \frac {0.162 (1 + 3 \cos^ {2} \Theta) (K \ell) ^ {2} t ^ {2}}{b ^ {4}}} + \sin \Theta \right] \end{array}\tag{C5-1}
 $$
 
 (the general expression for the critical moment of an equal leg angle) with $\Theta = -45^{\circ}$ which is the most severe condition with the angle heel (shear center) in tension. Flexural loading which produces angle heel compression can be conservatively designed by Eq. (5-4) or more exactly by using the above general $M_{cr}$ . Equation with $\Theta = 45^{\circ}$ (see Fig. C5.3). 
@@ -7521,12 +7327,10 @@ $$
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/458e7e7716b4d607ace3b1e0ba74268fc7c65a76a2a2ff45340579abd84c7b5d.jpg)
 
 
-
 Fig. C5.3. Equal-leg angle with general moment loading AMERICAN INSTITUTE OF STEEL CONSTRUCTION
 
 
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/8ca54a9b4fb03d8cb92b814da093b9e935717437a1f0a95a0b461fd7ee39ad28.jpg)
-
 
 
 Fig. C5.4. Single-angle limits for $F_{b} = .66_{y}$
@@ -7561,56 +7365,52 @@ The stability and strength interaction equations of AISC ASD Specification Chap.
 ![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-30/e62b64ce-aa99-4a39-8f5b-921f3c7e1307/d6b8d1ddf9cded1e1d3810f01eee9831bbe852d1cf6d36ed9a59848f550bd966.jpg)
 
 
-
 Table C5.1 $\beta_{w}$ Values for Angles
 
 
-<table><tr><td>Angle Size (in.)</td><td><eq>\beta_{w}</eq> (in.)</td></tr><tr><td>9 × 4</td><td>6.54</td></tr><tr><td>8 × 6</td><td>3.31</td></tr><tr><td>8 × 4</td><td>5.48</td></tr><tr><td>7 × 4</td><td>4.37</td></tr><tr><td>6 × 4</td><td>3.14</td></tr><tr><td>6 × 3.5</td><td>3.69</td></tr><tr><td>5 × 3.5</td><td>2.40</td></tr><tr><td>5 × 3</td><td>2.99</td></tr><tr><td>4 × 3.5</td><td>0.87</td></tr><tr><td>4 × 3</td><td>1.65</td></tr><tr><td>3.5 × 3</td><td>0.87</td></tr><tr><td>3.5 × 2.5</td><td>1.62</td></tr><tr><td>3 × 2.5</td><td>0.86</td></tr><tr><td>3 × 2</td><td>1.56</td></tr><tr><td>2.5 × 2</td><td>0.85</td></tr><tr><td>Equal legs</td><td>0.00</td></tr></table>
+| Angle Size (in.) | $\beta_{w}$ (in.) |
+| --- | --- |
+| 9 × 4 | 6.54 |
+| 8 × 6 | 3.31 |
+| 8 × 4 | 5.48 |
+| 7 × 4 | 4.37 |
+| 6 × 4 | 3.14 |
+| 6 × 3.5 | 3.69 |
+| 5 × 3.5 | 2.40 |
+| 5 × 3 | 2.99 |
+| 4 × 3.5 | 0.87 |
+| 4 × 3 | 1.65 |
+| 3.5 × 3 | 0.87 |
+| 3.5 × 2.5 | 1.62 |
+| 3 × 2.5 | 0.86 |
+| 3 × 2 | 1.56 |
+| 2.5 × 2 | 0.85 |
+| Equal legs | 0.00 |
 
 C6.1.4. When the total maximum flexural stress is evaluated for a laterally unrestrained length of angle per Sect. 5.2, the bending axis is the inclined axis shown in Fig. C5.2. The radius of gyration modification for the moment amplification about this axis is equal to $\sqrt{1.82}=1.35$ to account for the increased unrestrained bending deflection relative to that about the geometric axis for the laterally unrestrained length. The 1.35 factor is retained for angles braced only at the point of maximum moment to maintain a conservative calculation for this case. If the brace exhibits any flexibility permitting lateral movement of the angle, use of $r_{b}=r_{x}$ would not be conservative. 
 
 ## REFERENCES
 
 
-
 American Institute of Steel Construction, Inc. (1983) Torsional Analysis of Steel Members Chicago, IL. 
-
-
-
 
 
 American Institute of Steel Construction, Inc. (1986) Load and Resistance Factor Design Specification for Structural Steel Buildings Chicago, IL. 
 
 
-
-
-
 Australian Institute of Steel Construction (1975) Australian Standard AS1250 1975. 
-
-
-
 
 
 Gjelsvik, A. (1981) The Theory of Thin-walled Bars John Wiley and Sons, New York. 
 
 
-
-
-
 Leigh, J.M. and M.G. Lay (1978) Laterally Unsupported Angles with Equal and Unequal Legs Report MRL 22/2 July 1978, Melbourne Research Laboratories, Clayton. 
-
-
-
 
 
 Leigh, J.M. and M.G. Lay (1984) "The Design of Laterally Unsupported Angles," in Steel Design Current Practice, Section 2, Bending Members American Institute of Steel Construction, Inc., January, 1984. 
 
 
-
-
-
 Madugula, M.K.S. and J.B. Kennedy (1985) Single and Compound Angle Members Elsevier Applied Science New York. 
-
 
 
 ## SYMBOLS
@@ -7697,7 +7497,7 @@ $$
 Stiffness factor for secondary member in a flat roof 
 
 $$
-C _ {\nu}
+C_{v}
 $$
 
 Ratio of “critical” web stress, according to the linear buckling theory, to the shear yield stress of web material 
@@ -7706,7 +7506,7 @@ $$
 C _ {w}
 $$
 
-Warping constant for a section, in. $^{4}$ 
+Warping constant for a section, in. $^{6}$ 
 
 $$
 C _ {1}
@@ -7747,7 +7547,7 @@ $$
 Axial compressive stress permitted in a prismatic member in the absence of bending moment, ksi 
 
 $$
-F _ {a} \gamma
+F_{a\gamma}
 $$
 
 Axial compressive stress permitted in a tapered member in the absence of bending moment, ksi 
@@ -7759,16 +7559,16 @@ $$
 Bending stress permitted in a prismatic member in the absence of axial force, ksi 
 
 $$
-F _ {b} ^ {i}
+F_b^{\prime}
 $$
 
 Allowable bending stress in compression flange of plate girders as reduced for hybrid girders or because of large web depth-to-thickness ratio, ksi 
 
-$F_{bY}$ Bending stress permitted in a tapered member in the absence of axial force, ksi 
+$F_{b\gamma}$ Bending stress permitted in a tapered member in the absence of axial force, ksi 
 
 $F_{e}^{\prime}$ Euler stress for a prismatic member divided by factor of safety, ksi 
 
-$F_{e}^{\prime\gamma}$ Euler stress for a tapered member divided by factor of safety, ksi 
+$F_{e\gamma}^{\prime}$ Euler stress for a tapered member divided by factor of safety, ksi 
 
 $F_{f}$ Flange force due to moment in end-plate connections, kips 
 
@@ -7778,7 +7578,7 @@ $$
 
 Allowable bearing stress, ksi 
 
-$F_{s}\gamma$ St. Venant torsion resistance bending stress in a tapered member, ksi 
+$F_{s\gamma}$ St. Venant torsion resistance bending stress in a tapered member, ksi 
 
 $$
 F _ {t}
@@ -7788,21 +7588,11 @@ Allowable axial tensile stress, ksi
 
 $F_{u}$ Specified minimum tensile strength of the type of steel or fastener being used, ksi 
 
-$$
-F _ {\nu}
-$$
+$F_v$ Allowable shear stress, ksi
 
-$$
-F _ {w} \gamma
-$$
+$F_{w\gamma}$ Flange warping torsion resistance bending stress in a tapered member, ksi
 
-Allowable shear stress, ksi 
-
-$$
-F _ {y}
-$$
-
-Flange warping torsion resistance bending stress in a tapered member, ksi Specified minimum yield stress of the type of steel being used, ksi. As used in this Manual, “yield stress” denotes either the specified minimum yield point (for those steels that have a yield point) or specified minimum yield strength (for those steels that do not have a yield point) 
+$F_y$ Specified minimum yield stress of the type of steel being used, ksi. As used in this Manual, “yield stress” denotes either the specified minimum yield point (for those steels that have a yield point) or specified minimum yield strength (for those steels that do not have a yield point)
 
 $$
 F _ {y} ^ {\prime}
@@ -7811,7 +7601,7 @@ $$
 The theoretical maximum yield stress (ksi) based on the width-thickness ratio of one-half the unstiffened compression flange, beyond which a particular shape is not “compact.” See AISC Specification Sect. B5.1. 
 
 $$
-= \left[ \frac {6 5}{b _ {f} / 2 t _ {f}} \right] ^ {2}
+= \left[ \frac {65}{b _ {f} / 2 t _ {f}} \right] ^ {2}
 $$
 
 $$
@@ -7821,7 +7611,7 @@ $$
 The theoretical maximum yield stress (ksi) based on the depth-thickness ratio of the web below which a particular shape may be considered "compact" for any condition of combined bending and axial stresses. See AISC Specification Sect. B5.1. 
 
 $$
-= \left[ \frac {2 5 7}{d / t _ {w}} \right] ^ {2}
+= \left[ \frac {257}{d / t _ {w}} \right] ^ {2}
 $$
 
 $F_{yc}$ Specified minimum column yield stress, ksi 
@@ -7888,13 +7678,51 @@ Unbraced length of member measured between centers of gravity of the bracing mem
 
 Plate length, in. 
 
-<table><tr><td rowspan="3"><eq>L_c</eq></td><td rowspan="2">Maximum unbraced length of the compression flange at which the allowable bending stress may be taken at <eq>0.66F_y</eq> or as determined by AISC Specification Eq. (F1-3) or Eq. (F2-3), when applicable, ft</td><td><eq>P_{bf}</eq></td><td>Factored beam flange or connection plate force in a restrained connection, kips</td></tr><tr><td><eq>P_{cr}</eq></td><td>Maximum strength of an axially loaded compression member or beam, kips</td></tr><tr><td>Unsupported length of a column section, ft</td><td><eq>P_e</eq></td><td>Euler buckling load, kips</td></tr><tr><td><eq>L_e</eq></td><td>Distance from free edge to center of the bolt, in.</td><td><eq>P_{ec}</eq></td><td>Effective horizontal bolt distance used in end-plate connection design, in.</td></tr><tr><td><eq>L_g</eq></td><td>Unsupported length of a girder or other restraining member, ft</td><td><eq>P_f</eq></td><td>Distance between top or bottom of top flange to nearest bolt, in.</td></tr><tr><td><eq>L_p</eq></td><td>Length of primary member in flat-roof framing, ft</td><td><eq>P_{fb}</eq></td><td>Force, from a beam flange or moment connection plate, that a column will resist without stiffeners, as determined using Eq. (K1-1), kips</td></tr><tr><td><eq>L_s</eq></td><td>Length of secondary member in flat-roof framing, ft</td><td></td><td></td></tr><tr><td><eq>L_u</eq></td><td>Maximum unbraced length of the compression flange at which the allowable bending stress may be taken at <eq>0.6F_y</eq>, ft</td><td><eq>P_{wb}</eq></td><td>Force, from a beam flange or moment connection plate, that a column will resist without stiffeners, as determined using Eq. (K1-8), kips</td></tr><tr><td><eq>L_v</eq></td><td>Span for maximum allowable web shear of uniformly loaded beam, ft</td><td><eq>P_{wi}</eq></td><td>Force, in addition to <eq>P_{wo}</eq>, that a column will resist without stiffeners, from a beam flange or moment connection plate of one inch thickness, as derived from Eq. (K1-9), kips</td></tr><tr><td rowspan="2">M</td><td>Moment, kip-ft</td><td></td><td></td></tr><tr><td>Maximum factored bending moment, kip-ft</td><td></td><td></td></tr><tr><td rowspan="3"><eq>M_1</eq></td><td>Smaller moment at end of unbraced length of beam-column</td><td><eq>P_{wo}</eq></td><td>Force, from a beam flange or moment connection plate of zero thickness, that a column will resist without stiffeners, as derived from Eq. (K1-9), kips</td></tr><tr><td>Sum of moments due to lateral load and wind load on the leeward side of beam-to-column connections, kip-in.</td><td><eq>P_y</eq></td><td>Plastic axial load, equal to profile area times specified minimum yield stress, kips</td></tr><tr><td>Larger moment at one end of three-segment part of a tapered member</td><td>Q</td><td>Prying force per fastener, kips</td></tr><tr><td rowspan="3"><eq>M_2</eq></td><td>Larger moment at end of unbraced length of beam-column</td><td><eq>Q_a</eq></td><td>Full reduction factor for slender compression elements</td></tr><tr><td>Difference between the moments due to lateral load and gravity load on the windward side of beam-to-column connections, kip-in.</td><td><eq>Q_f</eq></td><td>Ratio of effective profile area of an axially loaded member to its total profile area, Appendix B5.2</td></tr><tr><td>Maximum moment in three adjacent segments of a tapered member</td><td><eq>Q_s</eq></td><td>Statical moment of flange, in.<eq>^3</eq></td></tr><tr><td><eq>M_D</eq></td><td>Moment produced by dead load</td><td><eq>Q_w</eq></td><td>Axial stress reduction factor where width-thickness ratio of unstiffened elements exceeds noncompact section limits given in Specification Sect. B5.1</td></tr><tr><td rowspan="2"><eq>M_L</eq></td><td>Moment produced by live load</td><td><eq>R</eq></td><td>Statical moment of cross section, in.<eq>^3</eq></td></tr><tr><td>Moment produced by loads imposed after the concrete has achieved 75% of its required strength</td><td></td><td></td></tr><tr><td><eq>M_e</eq></td><td>Extreme fiber bending moment in end-plate design, kip-in.</td><td></td><td>Maximum end reaction for 31⁄2 in. of bearing, kips</td></tr><tr><td rowspan="3"><eq>M_m</eq></td><td rowspan="3">Critical moment that can be resisted by a plastically designed member in the absence of axial load, kip-ft</td><td></td><td>Reaction or concentrated load applied to beam or girder, kips</td></tr><tr><td></td><td>Radius, in.</td></tr><tr><td></td><td>Shear force in a single element at any given deformation, kips</td></tr><tr><td><eq>M_p</eq></td><td>Plastic moment, kip-ft</td><td></td><td></td></tr><tr><td rowspan="2">N</td><td>Length of base plate, in.</td><td><eq>R_1</eq></td><td>A constant used in web yielding calculations, from Eq. (K1-3), kips = 0.66 <eq>F_y t_w</eq> (2.5k)</td></tr><tr><td>Length of bearing of applied load, in.</td><td><eq>R_2</eq></td><td>A constant used in web yielding calculations, from Eq. (K1-3), kips/in. = 0.66 <eq>F_y t_w</eq></td></tr><tr><td><eq>N_e</eq></td><td>Length at end bearing to develop maximum web shear, in.</td><td><eq>R_3</eq></td><td>A constant used in web crippling calculations, from Eq. (K1-5), kips = 34 <eq>t_w^2 \sqrt{F_{yw} t_f / t_w}</eq></td></tr><tr><td><eq>N_r</eq></td><td>Number of stud shear connectors on a beam in one transverse rib of a metal deck, not to exceed 3 in calculations</td><td><eq>R_4</eq></td><td>A constant used in web crippling calculations, from Eq. (K1-5), kips/in. = 34 <eq>t_w^2 \left[ 3 \left( \frac{1}{d} \right) \left( \frac{t_w}{t_f} \right)^{1.5} \right] \sqrt{F_{yw} t_f / t_w}</eq></td></tr><tr><td><eq>N_1</eq></td><td>Number of shear connectors required between point of maximum moment and point of zero moment</td><td></td><td></td></tr><tr><td><eq>N_2</eq></td><td>Number of shear connectors required between concentrated load and point of zero moment</td><td></td><td></td></tr><tr><td rowspan="4">P</td><td>Applied load, kips</td><td><eq>R_{BS}</eq></td><td>Resistance to web tear-out (block shear), kips</td></tr><tr><td>Force transmitted by a fastener, kips</td><td><eq>R_{PG}</eq></td><td>Plate girder bending strength reduction factor</td></tr><tr><td>Factored axial load, kips</td><td><eq>R_b</eq></td><td>Bolt group capacity in single-plate shear connections, kips</td></tr><tr><td>Normal force, kips</td><td><eq>R_e</eq></td><td>Hybrid girder factor</td></tr><tr><td rowspan="2"><eq>P_R</eq></td><td rowspan="2">Beam reaction divided by the number of bolts in high-strength bolted connection, kips</td><td><eq>R_i</eq></td><td>Increase in reaction R in kips for each additional inch of bearing</td></tr><tr><td><eq>R_o</eq></td><td>Plate capacity in yielding in single-plate shear connections, kips</td></tr><tr><td><eq>P_b</eq></td><td>Plate bearing capacity in single-plate shear connections, kips</td><td><eq>R_{ult}</eq></td><td>Ultimate shear load of a single element</td></tr></table>
+| $L_c$ | Maximum unbraced length of the compression flange at which the allowable bending stress may be taken at $0.66F_y$ or as determined by AISC Specification Eq. (F1-3) or Eq. (F2-3), when applicable, ft | $P_{bf}$ | Factored beam flange or connection plate force in a restrained connection, kips |
+| --- | --- | --- | --- |
+| $L_c$ | Maximum unbraced length of the compression flange at which the allowable bending stress may be taken at $0.66F_y$ or as determined by AISC Specification Eq. (F1-3) or Eq. (F2-3), when applicable, ft | $P_{cr}$ | Maximum strength of an axially loaded compression member or beam, kips |
+| $L_c$ | Unsupported length of a column section, ft | $P_e$ | Euler buckling load, kips |
+| $L_e$ | Distance from free edge to center of the bolt, in. | $P_{ec}$ | Effective horizontal bolt distance used in end-plate connection design, in. |
+| $L_g$ | Unsupported length of a girder or other restraining member, ft | $P_f$ | Distance between top or bottom of top flange to nearest bolt, in. |
+| $L_p$ | Length of primary member in flat-roof framing, ft | $P_{fb}$ | Force, from a beam flange or moment connection plate, that a column will resist without stiffeners, as determined using Eq. (K1-1), kips |
+| $L_s$ | Length of secondary member in flat-roof framing, ft |  |  |
+| $L_u$ | Maximum unbraced length of the compression flange at which the allowable bending stress may be taken at $0.6F_y$, ft | $P_{wb}$ | Force, from a beam flange or moment connection plate, that a column will resist without stiffeners, as determined using Eq. (K1-8), kips |
+| $L_v$ | Span for maximum allowable web shear of uniformly loaded beam, ft | $P_{wi}$ | Force, in addition to $P_{wo}$, that a column will resist without stiffeners, from a beam flange or moment connection plate of one inch thickness, as derived from Eq. (K1-9), kips |
+| M | Moment, kip-ft |  |  |
+| M | Maximum factored bending moment, kip-ft |  |  |
+| $M_1$ | Smaller moment at end of unbraced length of beam-column | $P_{wo}$ | Force, from a beam flange or moment connection plate of zero thickness, that a column will resist without stiffeners, as derived from Eq. (K1-9), kips |
+| $M_1$ | Sum of moments due to lateral load and wind load on the leeward side of beam-to-column connections, kip-in. | $P_y$ | Plastic axial load, equal to profile area times specified minimum yield stress, kips |
+| $M_1$ | Larger moment at one end of three-segment part of a tapered member | Q | Prying force per fastener, kips |
+| $M_2$ | Larger moment at end of unbraced length of beam-column | $Q_a$ | Full reduction factor for slender compression elements |
+| $M_2$ | Difference between the moments due to lateral load and gravity load on the windward side of beam-to-column connections, kip-in. | $Q_f$ | Ratio of effective profile area of an axially loaded member to its total profile area, Appendix B5.2 |
+| $M_2$ | Maximum moment in three adjacent segments of a tapered member | $Q_s$ | Statical moment of flange, in.$^3$ |
+| $M_D$ | Moment produced by dead load | $Q_w$ | Axial stress reduction factor where width-thickness ratio of unstiffened elements exceeds noncompact section limits given in Specification Sect. B5.1 |
+| $M_L$ | Moment produced by live load | $R$ | Statical moment of cross section, in.$^3$ |
+| $M_L$ | Moment produced by loads imposed after the concrete has achieved 75% of its required strength |  |  |
+| $M_e$ | Extreme fiber bending moment in end-plate design, kip-in. |  | Maximum end reaction for 31⁄2 in. of bearing, kips |
+| $M_m$ | Critical moment that can be resisted by a plastically designed member in the absence of axial load, kip-ft |  | Reaction or concentrated load applied to beam or girder, kips |
+| $M_m$ | Critical moment that can be resisted by a plastically designed member in the absence of axial load, kip-ft |  | Radius, in. |
+| $M_m$ | Critical moment that can be resisted by a plastically designed member in the absence of axial load, kip-ft |  | Shear force in a single element at any given deformation, kips |
+| $M_p$ | Plastic moment, kip-ft |  |  |
+| N | Length of base plate, in. | $R_1$ | A constant used in web yielding calculations, from Eq. (K1-3), kips = 0.66 $F_y t_w$ (2.5k) |
+| N | Length of bearing of applied load, in. | $R_2$ | A constant used in web yielding calculations, from Eq. (K1-3), kips/in. = 0.66 $F_y t_w$ |
+| $N_e$ | Length at end bearing to develop maximum web shear, in. | $R_3$ | A constant used in web crippling calculations, from Eq. (K1-5), kips = 34 $t_w^2 \sqrt{F_{yw} t_f / t_w}$ |
+| $N_r$ | Number of stud shear connectors on a beam in one transverse rib of a metal deck, not to exceed 3 in calculations | $R_4$ | A constant used in web crippling calculations, from Eq. (K1-5), kips/in. = 34 $t_w^2 \left[ 3 \left( \frac{1}{d} \right) \left( \frac{t_w}{t_f} \right)^{1.5} \right] \sqrt{F_{yw} t_f / t_w}$ |
+| $N_1$ | Number of shear connectors required between point of maximum moment and point of zero moment |  |  |
+| $N_2$ | Number of shear connectors required between concentrated load and point of zero moment |  |  |
+| P | Applied load, kips | $R_{BS}$ | Resistance to web tear-out (block shear), kips |
+| P | Force transmitted by a fastener, kips | $R_{PG}$ | Plate girder bending strength reduction factor |
+| P | Factored axial load, kips | $R_b$ | Bolt group capacity in single-plate shear connections, kips |
+| P | Normal force, kips | $R_e$ | Hybrid girder factor |
+| $P_R$ | Beam reaction divided by the number of bolts in high-strength bolted connection, kips | $R_i$ | Increase in reaction R in kips for each additional inch of bearing |
+| $P_R$ | Beam reaction divided by the number of bolts in high-strength bolted connection, kips | $R_o$ | Plate capacity in yielding in single-plate shear connections, kips |
+| $P_b$ | Plate bearing capacity in single-plate shear connections, kips | $R_{ult}$ | Ultimate shear load of a single element |
 
 $R_v$ Shear capacity of the net section of connection angles
 S Elastic section modulus, in.³
 Spacing of secondary members in a flat roof, ft
 Governing slenderness ratio of a tapered member
-S' Additional section modulus corresponding to ½-in. increase in web thickness for welded plate griders, in.³
+S' Additional section modulus corresponding to 1/16-in. increase in web thickness for welded plate girders, in.³
 S_eff Effective section modulus corresponding to partial composite action, in.³
 S_s Section modulus of steel beam used in composite design, referred to the bottom flange, in.³
 S_t Section modulus of transformed composite cross-section, referred to the top of concrete, in.³
@@ -7979,7 +7807,7 @@ $$
 Compression element restraint coefficient 
 
 $$
-k _ {\nu}
+k_{v}
 $$
 
 Shear buckling coefficient for girder webs 
@@ -8109,7 +7937,7 @@ $$
 Constant used in equation for hybrid girder factor $R_{e}$ , Ch. G 
 
 $$
-= 0. 6 F _ {y w} / F _ {b} \leq 1. 0
+= 0.6 F _ {y w} / F _ {b} \leq 1.0
 $$
 
 Moment ratio used in prying action formula for end-plate design 
@@ -8120,9 +7948,9 @@ $\Delta$ Beam deflection, in.
 
 Displacement of the neutral axis of a loaded member from its position when the member is not loaded, in. 
 
-Ratio of net area (at bolt line) to the gross area (at the face of the stem on angle leg) 
+$\delta$ Ratio of net area (at bolt line) to the gross area (at the face of the stem on angle leg) 
 
-Tapering ratio of a tapered member or unbraced segment of a tapered member 
+$\gamma$ Tapering ratio of a tapered member or unbraced segment of a tapered member 
 
 Subscript relating symbol to tapered members 
 
@@ -8584,3 +8412,70 @@ Wide flange shapes; see W shapes
 Wire and sheet metal gages .... 4-137 - 4-139
 Wrenches, impact, clearances
 WT shapes; see Tees 
+
+## Recovered Footnotes
+
+[^a3-weld]: Approval of these welding electrode specifications is given without regard to weld metal notch toughness requirements, which are generally not critical for building construction. See Commentary, Sect. A3.
+
+[^a4-crane]: Live loads on crane support girders shall be taken as the maximum crane wheel loads.
+
+[^a5-loads]: For example, see ANSI A58.1, Sect. 2.3.3.
+
+[^b10-hybrid]: No limit is placed on the web stresses produced by the applied bending moment for which a hybrid girder is designed, except as provided in Sect. K4 and Appendix K4.
+
+[^i-composite]: See Commentary Sect. I2.
+
+[^j1-heavy]: When the individual elements of the cross section are spliced prior to being joined to form the cross section in accordance with AWS D1.1, Article 3.4.6, the applicable provisions of AWS D1.1 apply in lieu of the requirements of this Section.
+
+[^j4-path]: See Sects. B2 and Commentary Figs. C-J4.1, C-J4.2, C-J4.3 and C-J4.4.
+
+[^k1-high-shear]: See Commentary Sect. E6.
+
+[^k1-stiffener]: See Commentary Sect. K1 for comment on width-thickness ratio for stiffeners.
+
+[^m2-bearing]: See Commentary Sect. J8.
+
+[^af7-analysis]: See Commentary Appendix F7.3.
+
+[^af7-flexural]: See Commentary Appendix F7.4.
+
+[^af7-moment]: $M_1/M_2$ is considered as negative when producing single curvature. In the rare case where $M_1/M_2$ is positive, it is recommended it be taken as zero.
+
+[^af7-stress1]: $M_1/M_2$ is considered as negative when producing single curvature. In the rare case where $M_1/M_2$ is positive, it is recommended it be taken as zero.
+
+[^af7-stress2]: $f_{b1}/f_{b2}$ is considered as negative when producing single curvature. If a point of contraflexure occurs in one of two adjacent unbraced segments, $f_{b1}/f_{b2}$ is considered as positive. The ratio $f_{b1}/f_{b2} \ne 0$.
+
+[^f1-cb-1]: It is conservative to take $C_b$ as unity. For values smaller than 2.3, see Table 6 in the Numerical Values Section.
+
+[^f1-cb-2]: For the use of larger $C_b$ values, see Galambos (1988).
+
+[^g3-1]: Equation (G3-1) recognizes the contribution of tension field action.
+
+[^i4-1]: The term $\frac{1}{2}F_{yr}A_s^{\prime}$ shall be added to the right-hand side of Equation (I4-1) if longitudinal reinforcing steel with area $A_s^{\prime}$ located within the effective width of the concrete flange is included in the properties of the composite section.
+
+[^j8-1]: When parts in contact have different yield stresses, $F_y$ shall be the smaller value.
+
+
+[^j3-spacing]: A distance of $3d$ is preferred.
+
+[^n1-interior]: As used here, “interior support” includes a rigid-frame knee formed by the junction of a column and a sloping or horizontal beam or girder.
+
+[^c2-stiffness]: A design procedure based only upon a first order drift index may not assure frame stability.
+
+[^c2-references]: Yura, 1971; Springfield and Adams, 1972; Liapunov, 1974 (pp 1643–1655); Daniels and Lu, 1972; LeMessurier, 1976; and LeMessurier, 1977.
+
+[^e2-tapered]: For tapered members, also see Commentary Appendix F7.
+
+[^h1-frames]: See Commentary Sect. C2 for cases where $C_m$ for unbraced frames 10 to 40 stories high may be computed as for braced frames.
+
+[^h1-signs]: The sign convention for moments here and in Chap. H is that generally used in frame analysis. It should not be confused with the beam sign convention used in many textbooks. Moments are considered positive when acting clockwise about a fixed point, negative when acting counterclockwise.
+
+[^j2-weld-strength]: See Commentary Sect. A3.
+
+[^m3-paint]: For a comprehensive treatment of the subject, see Ref. 54.
+
+[^n3-effects]: See Commentary C2 for discussion of $P\Delta$ effects.
+
+[^ab5-commentary]: See Commentary Chap. B for the discussion of provisions for Slender Compression Elements.
+
+[^k1-factor]: Except where other codes may govern. For example, see Section 4(D) “Recommended Lateral Force Requirements and Commentary,” Structural Engineers Assoc. of California, 1975.
