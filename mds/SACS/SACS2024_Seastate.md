@@ -14,221 +14,160 @@ Copyright © 2024, Bentley Systems, Incorporated. All Rights Reserved.
 
 TABLE OF CONTENTS
 
-1 INTRODUCTION .
-
-## 1.1 OVERVIEW..
-## 1.2 PROGRAM FEATURES.
-## 1.3 MEMBER LOADS CREATED BY SEASTATE. . 9
-
-2 GENERAL SEASTATE DATA... 11
-
-## 2.1 SEASTATE OPTIONS... 11
-
-2.1.1 Physical Parameters .. 11   
-2.1.2 Analysis Function . .11   
-2.1.3 Output Reports . 11   
-2.1.4 Hydrostatic Check .. 12   
-2.1.5 Miscellaneous ..... 12
-
-## 2.2 USING A SEPARATE SEASTATE INPUT FILE.. .. 12
-
-2.2.1 Location of Loading. 12   
-2.2.2 Selecting Load Cases .... 12   
-2.2.3 Factoring Load Cases... 13   
-2.2.4 Allowable Stress/Material Factor.... .. 13   
-2.2.5 Load Combinations ... 14
-
-## 2.3 PROPERTY OVERRIDES .. .. 14
-
-2.3.1 Overriding Beam Element Properties . .14
-
-2.3.1.1 Marine Growth and Reynold’s Number.... .. 15   
-2.3.1.2 Flood Condition.... .. 15   
-2.3.1.3 Weight and Buoyancy .. .. 15   
-2.3.1.4 Dimensions for Force ..... .. 15   
-2.3.1.5 Drag and Mass Coefficients... ... 16
-
-2.3.2 Overriding Plate Element Properties . . 16
-
-2.3.2.1 Weight ..... .. 16
-
-## 2.4 WIND AREAS . .... 16
-## 2.5 WIND SHIELD ZONES.. .. 18
-## 2.6 SUBMERGED BODIES.. .. 18
-## 2.7 NON-STRUCTURAL ELEMENTS .. . 19
-
-2.7.1 Dummy Sub-Structures.. .20   
-2.7.2 Appurtenance Structures.... . 20   
-2.7.3 Alternate Method . .21
-
-## 2.8 ELEMENT LOAD REPORTS . ... 21
-## 2.9 STRUCTURAL LOADING . ... 21
-
-2.9.1 Structural Masses.... . 22
-
-2.9.1.1 Inertial Weight . .. 22   
-2.9.1.2 Weight Vertical Location... . 22   
-2.9.1.3 Surface Weight... .. 22   
-2.9.1.4 Structural Weight Footprint. .. 23   
-2.9.1.5 Joint Weight .. .. 24   
-2.9.1.6 Member Weight... .. 25
-
-2.9.1.7 Non-Structural Weight ... .. 25   
-2.9.1.8 Weight Combinations ... .. 27   
-2.9.1.9 Dynamic Mass Selection . .. 27
-
-2.9.2 Direct Load Determination .... . 27
-
-2.9.2.1 Weight Inclusion in Loading ... .. 27   
-2.9.2.2 Inertia Load Center Location.. .. 28   
-2.9.2.3 Applied Structure Acceleration... .. 28   
-2.9.2.4 Response Amplitude Operators.. .. 28   
-2.9.2.5 Space Forces and Moments ... .. 30   
-2.9.2.6 Moving Load.. .. 30
-
-## 2.10 FLOOR LOADS.... .. 31
-
-2.10.1 Enclosed Zone Definition .... . 31
-
-## 2.10.1.1 Boundary Joints... .. 31
-## 2.10.1.2 Enclosed Zone Options... .. 32
-## 2.10.1.3 Openings .... .. 32
-## 2.10.1.4 Ignored Member Lines... .. 32
-
-## 2.10.1.4.1 Ignored Members.... .. 33
-## 2.10.1.4.2 Ignored Member Groups... .. 33
-
-## 2.10.1.5 Virtual Member Lines... .. 33
-
-## 2.10.1.5.1 Virtual Members.. .. 33
-## 2.10.1.5.2 Virtual Member Groups . .. 33
-
-## 2.10.1.6 Enclosed Zone Example.. .. 33
-
-2.10.2 Zone Load.. . 34   
-## 2.10.2.1 Zone Load Example ... .. 34
-
-3 HYDRO STATIC/DYNAMIC DATA... .. 36
-
-## 3.1 FLOOD CONDITION . .. 36
-
-3.1.1 Default Flood Condition... .. 36   
-3.1.2 Specifying Flood Condition in the Model... .. 36   
-3.1.3 Overriding Flood Condition.. .. 36
-
-## 3.2 MARINE GROWTH.... ... 36
-
-3.2.1 Defining Marine Growth .. .. 36   
-3.2.2 Applying Marine Growth to a Member... . 37
-
-## 3.3 DRAG AND MASS COEFFICIENTS.. .. 37
-
-3.3.1 Defining Default Coefficients ... .. 37   
-3.3.2 Reynold’s Number Dependent Cd . .. 39   
-3.3.3 Overriding Coefficients .... .. 39
-
-## 3.4 HYDRODYNAMIC MODELING. .. 39
-## 3.5 CORROSION.. .. 40
-3.5.1 Defining Corrosion .. .. 40
-
-4 CREATING ENVIRONMENTAL LOADS . .. 42
-
-## 4.1 MEMBER LOAD AXIS . ... 42
-## 4.2 ENVIRONMENTAL LOAD FACTORS.. ... 42
-## 4.3 WAVE LOAD . .. 42
-4.3.1 Wave Theory ... .. 42
-
-4.3.1.1 User Defined Waves... .. 43
-
-4.3.2 Wave Characteristics.. .44   
-4.3.3 Critical Crest Position ..... .. 44   
-4.3.4 Overriding Water Depth and Mudline Elevation .... .. 45   
-4.3.5 Wave Kinematics or Spreading Factor .... .. 45   
-4.3.6 Member Distributed Load Segments .... .. 46   
-4.3.7 Wave Output Print Option ... .. 46
-
-## 4.4 CURRENT LOAD. .... 46
-
-4.4.1 Current Velocity Profile.. .. 47   
-4.4.2 Current Profile Stretching/Compressing. .. 47   
-4.4.3 Current Blockage Factor.... .. 48   
-4.4.4 Apparent Wave Period.. .48   
-4.4.5 Overriding Mudline Elevation ... .. 49   
-4.4.6 Minimum In-line Current . .49
-
-## 4.5 GRAVITY AND BUOYANCY LOAD.. ... 49
-
-4.5.1 Overriding Buoyancy Parameters .. .. 50
-
-## 4.6 WIND LOAD.. .51
-
-4.6.1 Wind Characteristics ... . 51   
-4.6.2 Wind Height Variation... .. 52   
-4.6.3 Overriding Water Depth.. . 53   
-4.6.4 Loading Wind Areas .... .. 53   
-4.6.5 Loading Single – Three – Four Sided Wind Walls (API 4F Specification).. . 54
-
-4.6.5.1 Single sided wall.. .54   
-4.6.5.2 Three sided wall .. .. 55   
-4.6.5.3 Four sided wall . .. 56
-
-## 4.7 Submerged Body Drag Load... .. 58
-
-## 4.8 MUD FLOW LOAD . .. 58
-## 4.9 REPEATING A LOAD CASE.. .. 59
-## 4.10 API RP2A-WSD 20TH EDITION CONSIDERATIONS. .. 59
-## 4.11 API BULLETIN 2INT-MET EDITION SEASTATE PARAMETER GENERATION.. ... 60
-
-4.11.1 API Bulletin 2INT-MET Options Line... .. 60   
-4.11.2 API Bulletin 2INT-MET General Line.. ... 61   
-4.11.3 API Bulletin 2INT-MET Wave Line .. .. 62   
-4.11.4 API Bulletin 2INT-MET Wind Line... .. 62   
-4.11.5 API Bulletin 2INT-MET Dead Line... .. 62
-
-5 GENERATING TRANSFER FUNCTION LOADS.. .. 64
-
-## 5.1 SPECIFYING TRANSFER FUNCTION WAVE DATA.... .... 64
-
-5.1.1 Critical Wave Crest Positions ... .. 64
-
-5.1.1.1 Dynamic Analysis... .. 65   
-5.1.1.2 Static Analysis... .. 65
-
-5.1.2 Creating Global Transfer Function Plots . .. 65
-
-5.1.2.1 Dynamic Analysis... .. 65   
-5.1.2.2 Static Analysis.... .. 66
-
-6 COMMENTARY . .. 67
-
-## 6.1 WAVE GENERATION.. ... 67
-## 6.2 AIRY WAVE THEORY .. ... 68
-## 6.3 STOKES’ WAVE THEORY .. .. 69
-## 6.4 STREAM FUNCTION THEORY.. .. 69
-## 6.5 CNOIDAL AND SOLITARY WAVE THEORIES . .... 70
-## 6.6 MEMBER FORCES FROM WAVES AND CURRENT.. .... 71
-## 6.7 BUOYANCY ... .... 73
-## 6.8 FORCES DUE TO MUD FLOW.. .... 74
-## 6.9 API RP2A-WSD 20TH EDITION WAVE DETERMINATION .. .... 75
-
-6.9.1 Apparent Wave Period.. .. 75   
-6.9.2 Current Blockage... .. 76   
-6.9.3 Current Profile Stretching or Compressing .. .. 76   
-6.9.4 Coefficient of Drag and Mass... .77
-
-## 6.10 SEASTATE GENERATED LOADING DESCRIPTIONS . .... 77
-
-6.10.1 Member Load Descriptions.. . 77   
-6.10.2 Joint Load Descriptions ... .77
-
-7 SAMPLE PROBLEMS.. .. 78
-
-## 7.1 ENVIRONMENTAL LOADING . .... 79
-## 7.2 NON-STRUCTURAL ELEMENTS . .. 89
-## 7.3 TRANSFER FUNCTION GENERATION .. .. 99
-## 7.4 USER-DEFINED WAVE.. . 101
-
-8 INPUT LINES... ..106
+| Section | Title | Page |
+| --- | --- | --- |
+| 1 | INTRODUCTION | 7 |
+| 1.1 | OVERVIEW | 7 |
+| 1.2 | PROGRAM FEATURES | 7 |
+| 1.3 | MEMBER LOADS CREATED BY SEASTATE | 9 |
+| 2 | GENERAL SEASTATE DATA | 11 |
+| 2.1 | SEASTATE OPTIONS | 11 |
+| 2.1.1 | Physical Parameters | 11 |
+| 2.1.2 | Analysis Function | 11 |
+| 2.1.3 | Output Reports | 11 |
+| 2.1.4 | Hydrostatic Check | 12 |
+| 2.1.5 | Miscellaneous | 12 |
+| 2.2 | USING A SEPARATE SEASTATE INPUT FILE | 12 |
+| 2.2.1 | Location of Loading | 12 |
+| 2.2.2 | Selecting Load Cases | 12 |
+| 2.2.3 | Factoring Load Cases | 13 |
+| 2.2.4 | Allowable Stress/Material Factor | 13 |
+| 2.2.5 | Load Combinations | 14 |
+| 2.3 | PROPERTY OVERRIDES | 14 |
+| 2.3.1 | Overriding Beam Element Properties | 14 |
+| 2.3.1.1 | Marine Growth and Reynold’s Number | 15 |
+| 2.3.1.2 | Flood Condition | 15 |
+| 2.3.1.3 | Weight and Buoyancy | 15 |
+| 2.3.1.4 | Dimensions for Force | 15 |
+| 2.3.1.5 | Drag and Mass Coefficients | 16 |
+| 2.3.2 | Overriding Plate Element Properties | 16 |
+| 2.3.2.1 | Weight | 16 |
+| 2.4 | WIND AREAS | 16 |
+| 2.5 | WIND SHIELD ZONES | 18 |
+| 2.6 | SUBMERGED BODIES | 18 |
+| 2.7 | NON-STRUCTURAL ELEMENTS | 19 |
+| 2.7.1 | Dummy Sub-Structures | 20 |
+| 2.7.2 | Appurtenance Structures | 20 |
+| 2.7.3 | Alternate Method | 21 |
+| 2.8 | ELEMENT LOAD REPORTS | 21 |
+| 2.9 | STRUCTURAL LOADING | 21 |
+| 2.9.1 | Structural Masses | 22 |
+| 2.9.1.1 | Inertial Weight | 22 |
+| 2.9.1.2 | Weight Vertical Location | 22 |
+| 2.9.1.3 | Surface Weight | 22 |
+| 2.9.1.4 | Structural Weight Footprint | 23 |
+| 2.9.1.5 | Joint Weight | 24 |
+| 2.9.1.6 | Member Weight | 25 |
+| 2.9.1.7 | Non-Structural Weight | 25 |
+| 2.9.1.8 | Weight Combinations | 27 |
+| 2.9.1.9 | Dynamic Mass Selection | 27 |
+| 2.9.2 | Direct Load Determination | 27 |
+| 2.9.2.1 | Weight Inclusion in Loading | 27 |
+| 2.9.2.2 | Inertia Load Center Location | 28 |
+| 2.9.2.3 | Applied Structure Acceleration | 28 |
+| 2.9.2.4 | Response Amplitude Operators | 28 |
+| 2.9.2.5 | Space Forces and Moments | 30 |
+| 2.9.2.6 | Moving Load | 30 |
+| 2.10 | FLOOR LOADS | 31 |
+| 2.10.1 | Enclosed Zone Definition | 31 |
+| 2.10.1.1 | Boundary Joints | 31 |
+| 2.10.1.2 | Enclosed Zone Options | 32 |
+| 2.10.1.3 | Openings | 32 |
+| 2.10.1.4 | Ignored Member Lines | 32 |
+| 2.10.1.4.1 | Ignored Members | 33 |
+| 2.10.1.4.2 | Ignored Member Groups | 33 |
+| 2.10.1.5 | Virtual Member Lines | 33 |
+| 2.10.1.5.1 | Virtual Members | 33 |
+| 2.10.1.5.2 | Virtual Member Groups | 33 |
+| 2.10.1.6 | Enclosed Zone Example | 33 |
+| 2.10.2 | Zone Load | 34 |
+| 2.10.2.1 | Zone Load Example | 34 |
+| 3 | HYDRO STATIC/DYNAMIC DATA | 36 |
+| 3.1 | FLOOD CONDITION | 36 |
+| 3.1.1 | Default Flood Condition | 36 |
+| 3.1.2 | Specifying Flood Condition in the Model | 36 |
+| 3.1.3 | Overriding Flood Condition | 36 |
+| 3.2 | MARINE GROWTH | 36 |
+| 3.2.1 | Defining Marine Growth | 36 |
+| 3.2.2 | Applying Marine Growth to a Member | 37 |
+| 3.3 | DRAG AND MASS COEFFICIENTS | 37 |
+| 3.3.1 | Defining Default Coefficients | 37 |
+| 3.3.2 | Reynold’s Number Dependent Cd | 39 |
+| 3.3.3 | Overriding Coefficients | 39 |
+| 3.4 | HYDRODYNAMIC MODELING | 39 |
+| 3.5 | CORROSION | 40 |
+| 3.5.1 | Defining Corrosion | 40 |
+| 4 | CREATING ENVIRONMENTAL LOADS | 42 |
+| 4.1 | MEMBER LOAD AXIS | 42 |
+| 4.2 | ENVIRONMENTAL LOAD FACTORS | 42 |
+| 4.3 | WAVE LOAD | 42 |
+| 4.3.1 | Wave Theory | 42 |
+| 4.3.1.1 | User Defined Waves | 43 |
+| 4.3.2 | Wave Characteristics | 44 |
+| 4.3.3 | Critical Crest Position | 44 |
+| 4.3.4 | Overriding Water Depth and Mudline Elevation | 45 |
+| 4.3.5 | Wave Kinematics or Spreading Factor | 45 |
+| 4.3.6 | Member Distributed Load Segments | 46 |
+| 4.3.7 | Wave Output Print Option | 46 |
+| 4.4 | CURRENT LOAD | 46 |
+| 4.4.1 | Current Velocity Profile | 47 |
+| 4.4.2 | Current Profile Stretching/Compressing | 47 |
+| 4.4.3 | Current Blockage Factor | 48 |
+| 4.4.4 | Apparent Wave Period | 48 |
+| 4.4.5 | Overriding Mudline Elevation | 49 |
+| 4.4.6 | Minimum In-line Current | 49 |
+| 4.5 | GRAVITY AND BUOYANCY LOAD | 49 |
+| 4.5.1 | Overriding Buoyancy Parameters | 50 |
+| 4.6 | WIND LOAD | 51 |
+| 4.6.1 | Wind Characteristics | 51 |
+| 4.6.2 | Wind Height Variation | 52 |
+| 4.6.3 | Overriding Water Depth | 53 |
+| 4.6.4 | Loading Wind Areas | 53 |
+| 4.6.5 | Loading Single – Three – Four Sided Wind Walls (API 4F Specification) | 54 |
+| 4.6.5.1 | Single sided wall | 54 |
+| 4.6.5.2 | Three sided wall | 55 |
+| 4.6.5.3 | Four sided wall | 56 |
+| 4.7 | Submerged Body Drag Load | 58 |
+| 4.8 | MUD FLOW LOAD | 58 |
+| 4.9 | REPEATING A LOAD CASE | 59 |
+| 4.10 | API RP2A-WSD 20TH EDITION CONSIDERATIONS | 59 |
+| 4.11 | API BULLETIN 2INT-MET EDITION SEASTATE PARAMETER GENERATION | 60 |
+| 4.11.1 | API Bulletin 2INT-MET Options Line | 60 |
+| 4.11.2 | API Bulletin 2INT-MET General Line | 61 |
+| 4.11.3 | API Bulletin 2INT-MET Wave Line | 62 |
+| 4.11.4 | API Bulletin 2INT-MET Wind Line | 62 |
+| 4.11.5 | API Bulletin 2INT-MET Dead Line | 62 |
+| 5 | GENERATING TRANSFER FUNCTION LOADS | 64 |
+| 5.1 | SPECIFYING TRANSFER FUNCTION WAVE DATA | 64 |
+| 5.1.1 | Critical Wave Crest Positions | 64 |
+| 5.1.1.1 | Dynamic Analysis | 65 |
+| 5.1.1.2 | Static Analysis | 65 |
+| 5.1.2 | Creating Global Transfer Function Plots | 65 |
+| 5.1.2.1 | Dynamic Analysis | 65 |
+| 5.1.2.2 | Static Analysis | 66 |
+| 6 | COMMENTARY | 67 |
+| 6.1 | WAVE GENERATION | 67 |
+| 6.2 | AIRY WAVE THEORY | 68 |
+| 6.3 | STOKES’ WAVE THEORY | 69 |
+| 6.4 | STREAM FUNCTION THEORY | 69 |
+| 6.5 | CNOIDAL AND SOLITARY WAVE THEORIES | 70 |
+| 6.6 | MEMBER FORCES FROM WAVES AND CURRENT | 71 |
+| 6.7 | BUOYANCY | 73 |
+| 6.8 | FORCES DUE TO MUD FLOW | 74 |
+| 6.9 | API RP2A-WSD 20TH EDITION WAVE DETERMINATION | 75 |
+| 6.9.1 | Apparent Wave Period | 75 |
+| 6.9.2 | Current Blockage | 76 |
+| 6.9.3 | Current Profile Stretching or Compressing | 76 |
+| 6.9.4 | Coefficient of Drag and Mass | 77 |
+| 6.10 | SEASTATE GENERATED LOADING DESCRIPTIONS | 77 |
+| 6.10.1 | Member Load Descriptions | 77 |
+| 6.10.2 | Joint Load Descriptions | 77 |
+| 7 | SAMPLE PROBLEMS | 78 |
+| 7.1 | ENVIRONMENTAL LOADING | 79 |
+| 7.2 | NON-STRUCTURAL ELEMENTS | 89 |
+| 7.3 | TRANSFER FUNCTION GENERATION | 99 |
+| 7.4 | USER-DEFINED WAVE | 101 |
+| 8 | INPUT LINES | 106 |
 
 1 INTRODUCTION
 
@@ -277,7 +216,7 @@ d. Current blocking factor determined automatically or user specified.
 
 e. Automatic current profile stretching feature including linear and nonlinear stretching and constant current in crest.   
 f. Minimum incline current can be specified.   
-g. Simplified constant $\mathsf{ C }_{ \mathsf{ d } }$ and $\mathsf{ C }_{ \mathsf{ m } }$ or values calculated by the program based on surface roughness and wake encounter effects.   
+g. Simplified constant $C_d$ and $C_m$ or values calculated by the program based on surface roughness and wake encounter effects.   
 h. User specified shielding factor for conductor arrays.
 
 25. When specifying Seastate data in a Seastate input file, program can use loading specified in the Seastate input file, the model file or in both files.   
@@ -293,7 +232,7 @@ Since the SACS IV program only accepts distributed member loads in the form of l
 a. Velocity and acceleration values are calculated for each end of the member and a linear variation is assumed between the ends.   
 b. The velocity and acceleration values at the member center are calculated and compared to the values predicted by the linear variation from step (a). If either is more than 5.0% different from the linear distribution then the member is segmented to include the center point of the member. The member would now have two linear load segments, one from the left end to the center of the member and one from the center to the right end of the member.   
 c. The program will then check the center points of each new segment to determine if the linear variation represents the true condition within the tolerance of 5%. This procedure will continue to segment the member until the 5% criterion is met or until the maximum number of segments specified by the user is reached (maximum allowed is 10 which is also the default value).   
-d. If the midpoint velocity or acceleration differs from the linear variation values by 0.3, feet per second or feet per sec2 respectively, the member will not be segmented even though the variation might be by more than 5%.   
+d. If the midpoint velocity or acceleration differs from the linear variation values by 0.3, feet per second or feet per $\mathrm{sec}^2$ respectively, the member will not be segmented even though the variation might be by more than 5%.   
 e. All distributed load values less than .0001 kips per feet are discarded as insignificant.
 
 The main advantage of this technique is the program will segment each member according to its load distribution. The load segments are not constrained to be equal in length and each member is segmented differently for each load condition.
@@ -1217,10 +1156,11 @@ The flood condition specified on the LDOPT, MEMBER and/or GRUP input line may be
 
 The following example shows the flood condition for member 101-102 and group PL1 set to flooded using the member and group override lines.
 
-```txt
-1 2 3 4 5 6 7 8 1234567890123456789012345678901234567890123456789012345678901234567890  
-1 GRPOV PL1 F  
-2 MEMOV 101 102 F 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+GRPOV          PL1 F
+MEMOV   101 102    F
 ```
 
 Note: For a particular member, the flood condition input on the MEMOV input line overrides all other flood conditions specified. The flood condition specified on the GRPOV input line overrides all other flood conditions specified except for those specified on MEMOV input lines.
@@ -1245,13 +1185,14 @@ The following specifies linearly varying marine growth from 0 to 2.0 on radius f
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 1234567890 |
-| 1 | MGROV |  |  |  |  |  |  |  |
-| 2 | MGROV | 0.0 |  | 0.0 |  |  |  |  |
-| 3 | MGROV | 100.0 |  | 2.0 |  |  |  |  |
-| 4 | MGROV | 100.0 | 150.0 | 2.0 |  |  |  |  |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+MGROV
+MGROV        0.0             0.0
+MGROV      100.0             2.0
+MGROV      100.0   150.0     2.0
+```
 
 
 
@@ -1265,11 +1206,12 @@ The following designates that marine growth is to be eliminated for member 101-1
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 |
-| 2 | GRPOVPL1NF | GRPOVPL1NF | GRPOVPL1NF | GRPOVPL1NF | GRPOVPL1NF | GRPOVPL1NF | GRPOVPL1NF | GRPOVPL1NF |
-| 2 | MEMOV101102NF | MEMOV101102NF | MEMOV101102NF | MEMOV101102NF | MEMOV101102NF | MEMOV101102NF | MEMOV101102NF | MEMOV101102NF |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+GRPOV          PL1NF
+MEMOV   101 102   NF
+```
 
 
 
@@ -1299,32 +1241,34 @@ Values for other diameters are determined through linear interpolation.
 
 Drag and inertia coefficient information may be input using CDM input lines. The user may set up a table of member diameters vs. coefficient values, select the API default table or select the wake encounter effects option.
 
-Up to 20 CDM input lines may be used when specifying a table of $\mathsf{ C }_{ \mathsf{ d } }$ and $\mathsf{ C }_{ \mathsf{ m } }$ coefficients as a function of diameter. The default table field in columns 5-6 should be blank when specifying a table.
+Up to 20 CDM input lines may be used when specifying a table of $C_d$ and $C_m$ coefficients as a function of diameter. The default table field in columns 5-6 should be blank when specifying a table.
 
 The following designates coefficient of drag of 0.8 and coefficient of mass of 1.2 for all members.
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 |
-| 1 | CDM |  |  |  |  |  |  |  |
-| 2 | CDM | 1.0 | 0.8 | 1.2 | 0.8 | 1.2 |  |  |
-| 3 | CDM | 999.0 | 0.8 | 1.2 | 0.8 | 1.2 |  |  |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+CDM
+CDM      1.0   0.8         1.2         0.8         1.2
+CDM    999.0   0.8         1.2         0.8         1.2
+```
 
 
 
 Note: The tangential drag and inertia coefficients are zero in the above sample.
 
-The API 20th Edition defaults may be used by specifying ‘AP’ in columns 5-6 of the first and only nonheader CDM input line as follows:
+The API 20th Edition defaults may be used by specifying ‘AP’ in columns 5-6 of the first and only non-header CDM input line as follows:
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 1234567890 |
-| 1 | CDM |  |  |  |  |  |  |  |
-| 2 | CDM AP |  |  |  |  |  |  |  |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+CDM
+CDM AP
+```
 
 
 
@@ -1332,14 +1276,11 @@ Drag and inertia coefficients can also be determined automatically by the progra
 
 
 
-| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-
-
-
-```csv
-1 1234567890123456789012345678901234567890123456789012345678901234567890 CDM   
-2 CDM WE
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+CDM
+CDM WE
 ```
 
 3.3.2 Reynold’s Number Dependent Cd
@@ -1358,12 +1299,12 @@ Separate values may be entered for use when generating loading in the local Y an
 
 The following example shows member 101-102 and group PL1 overridden such that the coefficient of mass for both directions of 1.4 while the normal drag coefficient is set to 0.8 for local Y and 1.1 for local Z.
 
-```txt
-1 2 3 4 5 6 7 8  
-1234567890123456789012345678901234567890123456789012345678901234567890  
-GRPOV PL1 F 0.8 1.1 1.4 1.4  
-2 MEMOV 101 102 F 0.8 1.1 1.4  
-## 1.4
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+GRPOV          PL1 F                                 0.8 1.1 1.4 1.4
+MEMOV   101 102    F                                 0.8 1.1 1.4
+1.4
 ```
 
 ## 3.4 HYDRODYNAMIC MODELING
@@ -2105,13 +2046,14 @@ The following specifies a total of twenty Airy waves from the 45 degree directio
 
 
 
-|  | 1 | 1 | 2 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12345678901 | 12 |
-| 1 | LOADCN | LOADCN | LOADCN | LOADCN | LOADCN | LOADCN | LOADCN | LOADCN | LOADCN | LOADCN |
-| 2 | GNTRF | AL | 5 | 0.05 | 12.0 | 1.0 | 45.0 | 18AIRY |  |  |
-| 3 | GNTRF | AL | 6 | 0.05 | 7.5 | 0.5 | 45.0 | 18AIRY |  |  |
-| 4 | GNTRF | AL | 9 | 0.05 | 4.5 | 0.25 | 45.0 | 18AIRY |  |  |
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+LOADCN
+GNTRF   AL  5   0.05  12.0   1.0               45.0 18AIRY
+GNTRF   AL  6   0.05   7.5   0.5               45.0 18AIRY
+GNTRF   AL  9   0.05   4.5  0.25               45.0 18AIRY
+```
 
 
 
@@ -2125,14 +2067,18 @@ The number of load cases created and the critical position is controlled by the 
 
 For example, the following Wave Response input file, indicates that an equivalent static load case is to be created for each wave crest position (‘ALL’ in columns 15-18). Each load case corresponds to one of the eighteen crest position steps designated.
 
-```txt
-1 2 3 4 5 6 7 8 1 234567890123456789012345678901234567890123456789012345678901234567890 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+WROPT  EN     ALL ES
 ```
 
 The following Wave Response input file indicates that eight equivalent static load cases are to be created for each wave. Four load cases corresponding to the four crest positions resulting in the highest base shear and four load cases corresponding to the crest positions resulting in the four lowest base shears (‘MM4S’ in columns 15-18 and ‘ES’ in columns 19-20).
 
-```txt
-1 2 3 4 5 6 7 8 1 1234567890123456789012345678901234567890123456789012345678901234567890 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+WROPT  EN     MM4SES
 ```
 
 5.1.1.2 Static Analysis
@@ -2143,13 +2089,13 @@ By default, a load case will be created for each wave crest position (‘AL’ o
 
 For example, the following indicates that an equivalent static load case is to be created for each wave crest position (‘AL’ in columns 9-10). Each load case corresponds to one of the eighteen crest position steps designated.
 
-```txt
-1 2 3 4 5 6 7 8  
-123456789012345678901234567890123456789012345678901234567890  
-1 LOADCN
-2 GNTRF AL 5 0.05 12.0 1.0 45.0 18AIRY  
-3 GNTRF AL 6 0.05 7.5 0.5 45.0 18AIRY  
-4 GNTRF AL 9 0.05 4.5 0.25 45.0 18AIRY
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+LOADCN
+GNTRF   AL  5   0.05  12.0   1.0               45.0 18AIRY
+GNTRF   AL  6   0.05   7.5   0.5               45.0 18AIRY
+GNTRF   AL  9   0.05   4.5  0.25               45.0 18AIRY
 ```
 
 5.1.2 Creating Global Transfer Function Plots
@@ -2162,8 +2108,12 @@ General transfer function plot parameters are specified in the Wave Response inp
 
 For example the following request overturning moment and base shear global transfer function plots. The plots are generated using wave number 1 through wave number 20.
 
-```txt
-1 2 3 4 5 6 7 8 1 23456789012345678901234567890123456789012345678901234567890 1 WROPT EN MM4SES 2 PLTTF OM BS FQ 
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+WROPT  EN     MM4SES
+PLTTF                   OM BS                      FQ
+TFLCAS   1  20
 ```
 
 5.1.2.2 Static Analysis
@@ -2536,7 +2486,7 @@ The structure shown in Figure 14 is used to illustrate the various capabilities 
 
 ## 7.1 ENVIRONMENTAL LOADING
 
-The following is an example of a Seastate execution for environmental loading. This example illustrates most of the input lines associated with a standard Seastate execution. The structure shown in Figure 14 stands in 261.0 feet of water. The model contains load conditions MISC, EQPT, AREA, and LIVE which represent non-structural gravity loads on the structure. Load conditions P000, P045, and P090 are environmental load conditions for operating conditions with automatic dead load generation and load combinations OPR1, OPR2, and OPR3 combine the environmental load conditions with the nonstructural gravity loading. Similarly, load conditions S000, S045, and S090 are environmental load conditions for storm conditions with automatic dead load generation and load combinations STM1, STM2, and STM3 combine the environmental load conditions with the non-structural gravity loading. Load combinations OPR1, OPR2, OPR3, STM1, STM2, and STM3 are the only load case passed to SACS IV for analysis.
+The following is an example of a Seastate execution for environmental loading. This example illustrates most of the input lines associated with a standard Seastate execution. The structure shown in Figure 14 stands in 261.0 feet of water. The model contains load conditions MISC, EQPT, AREA, and LIVE which represent non-structural gravity loads on the structure. Load conditions P000, P045, and P090 are environmental load conditions for operating conditions with automatic dead load generation and load combinations OPR1, OPR2, and OPR3 combine the environmental load conditions with the non-structural gravity loading. Similarly, load conditions S000, S045, and S090 are environmental load conditions for storm conditions with automatic dead load generation and load combinations STM1, STM2, and STM3 combine the environmental load conditions with the non-structural gravity loading. Load combinations OPR1, OPR2, OPR3, STM1, STM2, and STM3 are the only load case passed to SACS IV for analysis.
 
 Marine growth, coefficient of drag and mass overrides, and member and group overrides, are specified.
 
@@ -2547,108 +2497,104 @@ Figure 14. Sample Jacket Model
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 |
-| 1 | LDOPT | NF+Z64.30001490.0500-261.000 | 261.000 | 261.000 | NPNP | K |  |  |
-| 2 | * SELECTS STATIC ANALYSIS LOAD CASES | * SELECTS STATIC ANALYSIS LOAD CASES | * SELECTS STATIC ANALYSIS LOAD CASES | * SELECTS STATIC ANALYSIS LOAD CASES | * SELECTS STATIC ANALYSIS LOAD CASES | * SELECTS STATIC ANALYSIS LOAD CASES | * SELECTS STATIC ANALYSIS LOAD CASES | * SELECTS STATIC ANALYSIS LOAD CASES |
-| 3 | LCSEL ST | OPR1 | OPR2 | OPR3 | STM1 | STM2 | STM3 |  |
-| 4 | AMOD |  |  |  |  |  |  |  |
-| 5 | AMOD | STM1 | 1.333STM2 | 1.333STM3 | 1.333 |  |  |  |
-| 6 | * USE LOADING IN SEASTATE INPUT AND MODEL FILE | * USE LOADING IN SEASTATE INPUT AND MODEL FILE | * USE LOADING IN SEASTATE INPUT AND MODEL FILE | * USE LOADING IN SEASTATE INPUT AND MODEL FILE | * USE LOADING IN SEASTATE INPUT AND MODEL FILE | * USE LOADING IN SEASTATE INPUT AND MODEL FILE | * USE LOADING IN SEASTATE INPUT AND MODEL FILE | * USE LOADING IN SEASTATE INPUT AND MODEL FILE |
-| 7 | FILE B |  |  |  |  |  |  |  |
-| 8 | CDM |  |  |  |  |  |  |  |
-| 9 | CDM | 1.00 | 0.600 | 1.200 | 0.600 | 1.200 |  |  |
-| 10 | CDM | 100.00 | 0.600 | 1.200 | 0.600 | 1.200 |  |  |
-| 11 | MGROV |  |  |  |  |  |  |  |
-| 12 | MGROV | 0.000 | 200.000 | 1.000 |  |  |  |  |
-| 13 | MGROV | 200.000 | 261.000 | 2.000 |  |  |  |  |
-| 14 | GRPOV |  |  |  |  |  |  |  |
-| 15 | GRPOVAL | LG1 F |  |  |  |  |  |  |
-| 16 | GRPOVAL | LG2 F |  |  |  |  |  |  |
-| 17 | GRPOVAL | LG3 F |  |  |  |  |  |  |
-| 18 | GRPOV | LG4 F |  |  |  |  |  |  |
-| 19 | GRPOV | PL1NF |  |  | 0.001 | 0.001 |  |  |
-| 20 | GRPOV | PL2NF |  |  | 0.001 | 0.001 |  |  |
-| 21 | GRPOV | PL3NF |  |  | 0.001 | 0.001 |  |  |
-| 22 | GRPOV | PL4NF |  |  | 0.001 | 0.001 |  |  |
-| 23 | GRPOV | W.BNF | 0.001 |  | 0.001 | 0.001 |  |  |
-| 24 | LOAD |  |  |  |  |  |  |  |
-| 25 | LOADCNP000 |  |  |  |  |  |  |  |
-| 26 | WIND |  |  |  |  |  |  |  |
-| 27 | WIND | 50.000 |  | 0.00 | AP13 |  |  |  |
-| 28 | WAVE |  |  |  |  |  |  |  |
-| 29 | WAVE | STRE | 20.00 | 13.00 | 0.00 | L-75.00 | 5.00 | 20MS10 1 7 |
-| 30 | CURR |  |  |  |  |  |  |  |
-| 31 | CURR | 0.000 | 1.000 | 0.000 |  | -15.000BC | NL FPS | AWP |
-| 32 | CURR | 261.000 | 2.000 |  |  |  |  |  |
-| 33 | DEAD |  |  |  |  |  |  |  |
-| 34 | DEAD | -Z |  |  | M |  |  |  |
-| 35 | LOADCNP045 |  |  |  |  |  |  |  |
-| 36 | WIND |  |  |  |  |  |  |  |
-| 37 | WIND | 50.000 |  | 45.00 | AP13 |  |  |  |
-| 38 | WAVE |  |  |  |  |  |  |  |
-| 39 | WAVE | STRE | 20.00 | 13.00 | 45.00 | L-75.00 | 5.00 | 20MS10 1 7 |
-| 40 | CURR |  |  |  |  |  |  |  |
-| 41 | CURR | 0.000 | 1.000 | 45.000 |  | -15.000BC | NL FPS | AWP |
-| 42 | CURR | 261.000 | 2.000 | 45.000 |  |  |  |  |
-| 43 | DEAD |  |  |  |  |  |  |  |
-| 44 | DEAD | -Z |  |  | M |  |  |  |
-| 45 | LOADCNP090 |  |  |  |  |  |  |  |
-| 46 | WIND |  |  |  |  |  |  |  |
-| 47 | WIND | 50.000 |  | 90.00 | AP13 |  |  |  |
-| 48 | WAVE |  |  |  |  |  |  |  |
-| 49 | WAVE | STRE | 20.00 | 13.00 | 90.00 | L-75.00 | 5.00 | 20MS10 1 7 |
-| 50 | CURR |  |  |  |  |  |  |  |
-| 51 | CURR | 0.000 | 1.000 | 90.000 |  | -15.000BC | NL FPS | AWP |
-| 52 | CURR | 261.000 | 2.000 | 90.000 |  |  |  |  |
-| 53 | DEAD |  |  |  |  |  |  |  |
-| 54 | DEAD | -Z |  |  | M |  |  |  |
-| 55 | LOADCNS000 |  |  |  |  |  |  |  |
-| 56 | WIND |  |  |  |  |  |  |  |
-| 57 | WIND | 150.000 |  | 0.00 | 266.00AP13 |  |  |  |
-| 58 | WAVE |  |  |  |  |  |  |  |
-| 59 | WAVE | STRE | 40.00266.00 | 13.00 |  | L-75.00 | 5.00 | 20MS10 1 7 |
-| 60 | CURR |  |  |  |  |  |  |  |
-| 61 | CURR | 0.000 | 1.000 | 0.000 |  | -15.000BC | NL FPS | AWP |
-| 62 | CURR | 261.000 | 3.500 |  |  |  |  |  |
-| 63 | DEAD |  |  |  |  |  |  |  |
-| 64 | DEAD | -Z |  | 266.000 |  | M |  |  |
-| 65 | LOADCNS045 |  |  |  |  |  |  |  |
-| 66 | WIND |  |  |  |  |  |  |  |
-| 67 | WIND | 150.000 |  | 45.00 | 266.00AP13 |  |  |  |
-| 68 | WAVE |  |  |  |  |  |  |  |
-
-
-
-```csv
-69 WAVE STRE 40.00266.00 13.00 45.00 L-75.00 5.00 20MS10 1 7  
-70 CURR
-71 CURR 0.000 1.000 45.000 -15.000BC NL FPS AWP  
-72 CURR 261.000 3.500 45.000  
-73 DEAD
-74 DEAD -Z 266.000 M  
-75 LOADCNS090
-76 WIND
-77 WIND 150.000 90.00 266.00AP13  
-78 WAVE
-79 WAVE STRE 40.00266.00 13.00 90.00 L-75.00 5.00 20MS10 1 7  
-80 CURR
-81 CURR 0.000 1.000 90.000 -15.000BC NL FPS AWP  
-82 CURR 261.000 3.500 90.000  
-83 DEAD
-84 DEAD -Z 266.000 M  
-85 LCOMB
-86 * OPERATIONAL COMBINATIONS  
-87 LCOMB OPR1 MISC1.0000EQPT1.0000AREAO.5000LIVE1.000P0001.0000  
-88 LCOMB OPR2 MISC1.0000EQPT1.0000AREAO.5000LIVE1.000P0451.0000  
-89 LCOMB OPR3 MISC1.0000EQPT1.0000AREAO.5000LIVE1.000P0901.0000  
-90 * STORM COMBINATIONS  
-91 LCOMB STM1 MISC1.0000EQPTO.7500LIVEO.750S00O1.0Ooo  
-92 LCOMB STM2 MISC1.0OoOOEQPTO.75OOLIVEO.75OSSO451.OoOo  
-93 LCOMB STM3 MISC1.OOOOEQPTO.75OOLIVEO.75OSSO9O1.OoOo  
-94 END
-95 END
+```text
+             1         2         3         4         5         6         7         8
+    12345678901234567890123456789012345678901234567890123456789012345678901234567890
+  1 LDOPT       NF+Z64.30001490.0500-261.000 261.000GLOBEN                NPNP    K
+  2 * SELECTS STATIC ANALYSIS LOAD CASES
+  3 LCSEL ST        OPR1 OPR2 OPR3 STM1 STM2 STM3
+  4 AMOD
+  5 AMOD   STM1 1.333STM2 1.333STM3 1.333
+  6 * USE LOADING IN SEASTATE INPUT AND MODEL FILE
+  7 FILE B
+  8 CDM
+  9 CDM     1.00 0.600       1.200       0.600       1.200
+ 10 CDM   100.00 0.600       1.200       0.600       1.200
+ 11 MGROV
+ 12 MGROV   0.000    200.000   1.000
+ 13 MGROV   200.000  261.000   2.000
+ 14 GRPOV
+ 15 GRPOVAL        LG1 F
+ 16 GRPOVAL        LG2 F
+ 17 GRPOVAL        LG3 F
+ 18 GRPOV          LG4 F
+ 19 GRPOV          PL1NF                     0.001 0.001
+ 20 GRPOV          PL2NF                     0.001 0.001
+ 21 GRPOV          PL3NF                     0.001 0.001
+ 22 GRPOV          PL4NF                     0.001 0.001
+ 23 GRPOV          W.BNF 0.001               0.001 0.001
+ 24 LOAD
+ 25 LOADCNP000
+ 26 WIND
+ 27 WIND      50.000            0.00        AP13
+ 28 WAVE
+ 29 WAVE    STRE 20.00       13.00          0.00      L -75.00  5.00  20MS10 1   7
+ 30 CURR
+ 31 CURR       0.000   1.000   0.000                 -15.000BC NL FPS     AWP
+ 32 CURR     261.000   2.000
+ 33 DEAD
+ 34 DEAD      -Z                                M
+ 35 LOADCNP045
+ 36 WIND
+ 37 WIND      50.000           45.00        AP13
+ 38 WAVE
+ 39 WAVE    STRE 20.00       13.00         45.00      L -75.00  5.00  20MS10 1   7
+ 40 CURR
+ 41 CURR       0.000   1.000  45.000                 -15.000BC NL FPS     AWP
+ 42 CURR     261.000   2.000  45.000
+ 43 DEAD
+ 44 DEAD      -Z                                M
+ 45 LOADCNP090
+ 46 WIND
+ 47 WIND      50.000           90.00        AP13
+ 48 WAVE
+ 49 WAVE    STRE 20.00       13.00         90.00      L -75.00  5.00  20MS10 1   7
+ 50 CURR
+ 51 CURR       0.000   1.000  90.000                 -15.000BC NL FPS     AWP
+ 52 CURR     261.000   2.000  90.000
+ 53 DEAD
+ 54 DEAD      -Z                                M
+ 55 LOADCNS000
+ 56 WIND
+ 57 WIND     150.000            0.00  266.00AP13
+ 58 WAVE
+ 59 WAVE    STRE 40.00266.00 13.00                    L -75.00  5.00  20MS10 1   7
+ 60 CURR
+ 61 CURR       0.000   1.000   0.000                 -15.000BC NL FPS     AWP
+ 62 CURR     261.000   3.500
+ 63 DEAD
+ 64 DEAD      -Z         266.000                M
+ 65 LOADCNS045
+ 66 WIND
+ 67 WIND     150.000           45.00  266.00AP13
+ 68 WAVE
+ 69 WAVE    STRE 40.00266.00 13.00         45.00      L -75.00  5.00  20MS10 1   7
+ 70 CURR
+ 71 CURR       0.000   1.000  45.000                 -15.000BC NL FPS     AWP
+ 72 CURR     261.000   3.500  45.000
+ 73 DEAD
+ 74 DEAD      -Z         266.000                M
+ 75 LOADCNS090
+ 76 WIND
+ 77 WIND     150.000           90.00  266.00AP13
+ 78 WAVE
+ 79 WAVE    STRE 40.00266.00 13.00         90.00      L -75.00  5.00  20MS10 1   7
+ 80 CURR
+ 81 CURR       0.000   1.000  90.000                 -15.000BC NL FPS     AWP
+ 82 CURR     261.000   3.500  90.000
+ 83 DEAD
+ 84 DEAD      -Z         266.000                M
+ 85 LCOMB
+ 86 * OPERATIONAL COMBINATIONS
+ 87 LCOMB OPR1 MISC1.0000EQPT1.0000AREA0.5000LIVE1.0000P0001.0000
+ 88 LCOMB OPR2 MISC1.0000EQPT1.0000AREA0.5000LIVE1.0000P0451.0000
+ 89 LCOMB OPR3 MISC1.0000EQPT1.0000AREA0.5000LIVE1.0000P0901.0000
+ 90 * STORM COMBINATIONS
+ 91 LCOMB STM1 MISC1.0000EQPT0.7500LIVE0.7500S0001.0000
+ 92 LCOMB STM2 MISC1.0000EQPT0.7500LIVE0.7500S0451.0000
+ 93 LCOMB STM3 MISC1.0000EQPT0.7500LIVE0.7500S0901.0000
+ 94 END
+ 95 END
 ```
 
 The following is a detailed description of the Seastate input for Sample Problem 1.
@@ -2665,7 +2611,7 @@ h. Suppress area warning messages print.
 
 Line 3. The LCSEL input line specifies that only load cases OPR1, OPR2, OPR3, STM1, STM2, and STM3 are to be passed to SACS IV for analysis.
 
-Lines 8-10. The coefficient of drag and inertia are specified on the CDM input lines. The input lines specify diameter, $C_{ \mathsf{ D } }$ and $\mathsf{ C }_{ \mathsf{ M } }$ for clean and fouled members. Linear interpolation is used to determine coefficients for diameters not specified.
+Lines 8-10. The coefficient of drag and inertia are specified on the CDM input lines. The input lines specify diameter, $C_D$ and $C_M$ for clean and fouled members. Linear interpolation is used to determine coefficients for diameters not specified.
 
 Lines 11-13. The marine growth overrides are specified on the MGROV input lines. There is no marine growth above elevation 0.0. From elevation 0.0 to -200.0 there is 1 inch and below elevation -200.0 there is 2 inches of marine growth.
 
@@ -2683,7 +2629,7 @@ Line 27. The WIND input lines specify a 50.0 knot wind approaching at 0.0 degree
 
 Line 29. The WAVE input line specifies the following wave:
 
-## a. 20 foot Stream wave with 13 second period.
+a. 20 foot Stream wave with 13 second period.
 b. Wave approaching from 0 degree direction.   
 c. Investigate 20 wave locations, with an initial crest position of -75 ft using a 5 ft increment.   
 d. Save loading at position of maximum base shear.
@@ -2701,238 +2647,150 @@ Line 87. The LCOMB input line set generates load combination case OPR1 consistin
 
 The following pages contain a portion of the output file created from Sample Problem 1.
 
-SACS CONNECT Edition V(14.3) - CL
 
-Company: Bentley Sytems
+```text
+SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+             *********** SACS IV SEASTATE PROGRAM ***********               DATE 09-SEP-2020  TIME 18:28:32   SEA PAGE     1
+                SAMPLE 02 ENGLISH UNITS MODEL
+                                                                                                    SEA VERSION 14.3.0.25
+                                   ******* SEASTATE OPTIONS *******
+              ANALYSIS OPTIONS         UNITS (ENGLISH OR METRIC)  ............   ENGLISH
+                                       VERTICAL COORDINATE  ..................   +Z
+                                       ALL MEMBERS  ..........................   NON-FLOODED
+                                       DENSITY OF SEAWATER  ..................    64.30  LBS/CU.FT.
+                                       DENSITY OF CONSTRUCTION MATERIAL  .....   490.05  LBS/CU.FT.
+                                       MUDLINE ELEVATION  ....................  -261.00  FT
+                                       WATER DEPTH  ..........................   261.00  FT
+              LOAD OPTIONS             GENERATE LOADS IN STRUCTURAL COORD.  ..   YES
+                                       GENERATE LOADS IN MEMBER COORD.  ......    NO
+                                       GENERATE LOAD COMBINATIONS  ...........    NO
+                                       OUTPUT SELECTED LOAD CASES ONLY  ......   YES
+                                       GENERATE TIME HISTORY LOADS  ..........    NO
+                                       GENERATE BASE TRANSFER FUNCTION .......    NO
+                                       GENERATE WIND GUST LOADS ..............   NO
+              HYDROSTATIC COLLAPSE     PERFORM HYDROSTATIC COLLAPSE CHECK  ...    NO
+              OPTIONS                  HYDROSTATIC COLLAPSE FOR FLOODED GROUPS    NO
+              PRINT OPTIONS            INPUT ECHO  ...........................   NO PRINT
+                                       OUTPUT ECHO  ..........................   NO PRINT
+                                       SACS IV INPUT REPORTS .................   NO PRINT
 
-********* SACS IV SEASTATE PROGRAM *********
+                                       SEASTATE INPUT REPORTS ................   NO PRINT
+                                       MEMBER SUMMARY FOR SEASTATE LOADS .....   NO PRINT
+SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+             *********** SACS IV SEASTATE PROGRAM ***********               DATE 09-SEP-2020  TIME 18:28:32   SEA PAGE    12
+                SAMPLE 02 ENGLISH UNITS MODEL
+                         **** DEAD LOAD DESCRIPTION FOR LOAD CASE P000 ****
+                              GRAVITY IN -Z DIRECTION
+                              WATER DEPTH ***********    261.00 FT
+                              MUDLINE ELEVATION *****   -261.00 FT
+                              WATER DENSITY *********    64.300 LB/CU FT
+                              BUOYANCY BY MARINE METHOD
+                              INCLUDE BUOYANCY BELOW MUDLINE..NO
+ SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+             *********** SACS IV SEASTATE PROGRAM ***********               DATE 09-SEP-2020  TIME 18:28:32   SEA PAGE    13
+                SAMPLE 02 ENGLISH UNITS MODEL
+                         **** WAVE DESCRIPTION FOR LOAD CASE P000 ****
+                              WAVE THEORY ************ STREAM FUNCTION
+                              WAVE HEIGHT ************   20.000 FT
+                              WATER DEPTH ************  261.000 FT
+                              WAVE PERIOD ************   13.346 SECS
+                              WAVE LENGTH ************  875.090 FT
 
-DATE 09-SEP-2020 TIME 18:28:32 SEA PAGE 1
+                              ANGLE FROM X TOWARD Y **    0.000 DEGREES
+                              MUDLINE ELEVATION ****** -261.000 FT
+                              WAVE CELERITY **********   65.569 FT/SEC
+                              MAX. NO. SEG/MEMBER ****       10
+                              MIN. NO. SEG/MEMBER ****        1
+                              UNMODIFIED WAVE PERIOD     13.000 SECS
+                              STREAM FUNCTION ORDER **        7
+                              BREAKING WAVE HEIGHT      134.678 FT
+                              CREST POSITION DETERMINED BY MAXIMUM SHEAR
+                              STARTING CREST POSITION   -75.000 FT
+                              NO. STEPS **************       20
+                              STEP SIZE **************    5.000 FT
+                              CREST WATER DEPTH ******   271.43 FT
+                              TROUGH WATER DEPTH *****   251.44 FT
+ SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+             *********** SACS IV SEASTATE PROGRAM ***********               DATE 09-SEP-2020  TIME 18:28:32   SEA PAGE    14
+                SAMPLE 02 ENGLISH UNITS MODEL
+                              ********** SEASTATE LOADS FOR WAVE PASSING THROUGH STRUCTURE **********
+                                     DEAD +   20.0 FT WAVE AT   0.0 DEG + CURRENT + WIND
+                               LOAD             CREST POSITION                              MUDLINE
+                             CONDITION            FT     DEG               LOAD            ELEVATION
+                           MAXIMUM MOMENT       -65.00  -26.74       13996.196 FT-KIP       -261.00 FT
+                           ABOUT MUDLINE
+                           MAXIMUM SHEAR        -70.00  -28.80          83.770 KIPS         -261.00 FT
+                           AT MUDLINE
 
-SAMPLE 02 ENGLISH UNITS MODEL
+                           MINIMUM MOMENT        25.00   10.28       10777.126 FT-KIP       -261.00 FT
+                           ABOUT MUDLINE
+                           MINIMUM SHEAR         25.00   10.28          62.107 KIPS         -261.00 FT
+                           AT MUDLINE
+                           MAXIMUM FORCE        -75.00  -30.85           4.063 KIPS         -261.00 FT
+                           UPWARD
+                           MAXIMUM FORCE         25.00   10.28          -5.851 KIPS         -261.00 FT
+                           DOWNWARD
+               ****** LOAD CASE GENERATED FOR WAVE CREST POSITION RESULTING IN THE MAXIMUM SHEAR  AT MUDLINE     ******
+ SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+             *********** SACS IV SEASTATE PROGRAM ***********               DATE 09-SEP-2020  TIME 18:28:32   SEA PAGE    15
+                SAMPLE 02 ENGLISH UNITS MODEL
+                                ****** RESULTS FOR LOAD CASE P000 ******
+                                DEAD +   20.0 FT WAVE AT   0.0 DEG + CURRENT + WIND
+                             ****** SUMMARY OF SEASTATE GENERATED DEAD AND BUOYANCY LOADS ******
+                                                       WATER DEPTH =      261.000 FT.
+                                                    ELEMENT WEIGHT =     1555.097 KIPS
+                                              MARINE GROWTH WEIGHT =      165.983 KIPS
+                                                TOTAL DEAD WEIGHT  =     1721.081 KIPS
+                                          CENTER OF GRAVITY  -X-   =        7.213 FT.
+                                                             -Y-   =       -0.032 FT.
+                                                             -Z-   =     -121.946 FT.
+                                                  ELEMENT BUOYANCY =      586.651 KIPS
 
-SEA VERSION 14.3.0.25
+                                            MARINE GROWTH BUOYANCY =      165.983 KIPS
+                                TOTAL BUOYANCY LOAD (DISPLACEMENT) =      752.634 KIPS
+                                         CENTER OF BUOYANCY  -X-   =        8.130 FT.
+                                                             -Y-   =       -0.064 FT.
+                                                             -Z-   =     -151.580 FT.
+                                   *NOTE: BUOYANCE LOAD SHOWN BASED ON MARINE METHOD
+                    ****** SUMMATION OF FORCES AND MOMENTS FOR LOAD CASE P000 ******
+                           (MOMENTS ABOUT MUDLINE AT ELEVATION -261.00 FT. )
+                           SUM FX        SUM FY        SUM FZ        SUM MX        SUM MY        SUM MZ
+                            KIPS          KIPS          KIPS          FT-K          FT-K          FT-K
+          MEMBER WIND          16.150         0.000         0.012         0.000      5194.855         0.000
+           PLATE WIND           0.000         0.000         0.000         0.000         0.000         0.000
+   PLATE HYDRODYNAMIC           0.000         0.000         0.000         0.000         0.000         0.000
+   SEASTATE GENERATED          99.920         0.310      -964.852      -111.723     25481.326         4.378
+           USER INPUT           0.000         0.000         0.000         0.000         0.000         0.000
+                    ****** LOAD CASE FACTORS ******
+ OVERALL LOAD CASE FACTOR           1.000
+ DEAD LOAD FACTOR                   1.000
+ WAVE, WIND, AND CURRENT FACTOR     1.000
+ USER SUPPLIED LOAD FACTOR          1.000
+ BUOYANCY LOAD FACTOR               1.000
+SACS CONNECT Edition V(14.3) - CL                                                        Company: Bentley Sytems
+             *********** SACS IV SEASTATE PROGRAM ***********               DATE 09-SEP-2020  TIME 18:28:32   SEA PAGE    48
+                SAMPLE 02 ENGLISH UNITS MODEL
+                                  ***** SEASTATE COMBINED LOAD CASES *****
+         COMBINED     BASIC    PERCENT  DESCRIPTION
+        LOAD  LABEL   LABEL
+        CASE
+         11   OPR1                      1.0   * MISC + 1.0   * EQPT + 0.5   * AREA + 1.0   * LIVE +
+                      MISC      100.00  USER GENERATED LOADS
+                      EQPT      100.00  USER GENERATED LOADS
+                      AREA       50.00  USER GENERATED LOADS
+                      LIVE      100.00  USER GENERATED LOADS
+                      P000      100.00  DEAD +   20.0 FT WAVE AT   0.0 DEG + CURRENT + WIND
+                                   FX           FY           FZ           MX           MY           MZ
 
-******* SEASTATE OPTIONS *******
+                                 (KIPS)       (KIPS)       (KIPS)     (FT-KIPS)    (FT-KIPS)    (FT-KIPS)
+                       MISC         0.000        0.000      -49.948     -520.004     1048.409        0.000
+                       EQPT         0.000        0.000     -535.000       63.304     1119.961        0.000
+                       AREA         0.000        0.000      -38.216        0.000      218.412        0.000
+                       LIVE         0.000        0.000     -473.496        0.000     2798.404        0.000
+                       P000        99.920        0.310     -964.852     -111.723    25481.326        4.378
+                      TOTAL        99.920        0.310    -2061.511     -568.422    30666.512        4.378
 
-ANALYSIS OPTIONS UNITS (ENGLISH OR METRIC) ENGLISH
-
-VERTICAL COORDINATE +Z
-
-ALL MEMBERS NON-FLOODED
-
-DENSITY OF SEAWATER 64.30 LBS/CU.FT.
-
-DENSITY OF CONSTRUCTION MATERIAL 490.05 LBS/CU.FT.
-
-MUDLINE ELEVATION -261.00 FT
-
-WATER DEPTH 261.00 FT
-
-LOAD OPTIONS GENERATE LOADS IN STRUCTURAL COORD. .. YES
-
-GENERATE LOADS IN MEMBER COORD. NO
-
-GENERATE LOAD COMBINATIONS NO
-
-OUTPUT SELECTED LOAD CASES ONLY YES
-
-GENERATE TIME HISTORY LOADS NO
-
-GENERATE BASE TRANSFER FUNCTION ... NO
-
-GENERATE WIND GUST LOADS NO
-
-HYDROSTATIC COLLAPSE PERFORM HYDROSTATIC COLLAPSE CHECK NO
-
-OPTIONS HYDROSTATIC COLLAPSE FOR FLOODED GROUPS NO
-
-PRINT OPTIONS INPUT ECHO NO PRINT
-
-OUTPUT ECHO NO PRINT
-
-SACS IV INPUT REPORTS NO PRINT
-
-SEASTATE INPUT REPORTS NO PRINT
-
-MEMBER SUMMARY FOR SEASTATE LOADS ... NO PRINT
-
-```txt
-SACS CONNECT Edition V(14.3)-CL Company: Bentley Sytems  
-********** SACS IV SEASTATE PROGRAM **** DATE 09-SEP-2020 TIME 18:28:32 SEA PAGE 12  
-SAMPLE 02 ENGLISH UNITS MODEL  
-** DEAD LOAD DESCRIPTION FOR LOAD CASE P000 **
-GRAVITY IN -Z DIRECTION  
-WATER Depth **** 261.00 FT  
-MUDLINE ELEVATION **** -261.00 FT  
-WATER DENSITY **** 64.300 LB/CU FT  
-BUOYANCY BY MARINE METHOD  
-INCLUDE BUOYANCY BELOW MUDLINE..NO  
-SACS CONNECT Edition V(14.3)-CL Company: Bentley Sytems  
-********** SACS IV SEASTATE PROGRAM **** DATE 09-SEP-2020 TIME 18:28:32 SEA PAGE 13  
-SAMPLE 02 ENGLISH UNITS MODEL  
-** WAVE DESCRIPTION FOR LOAD CASE P000 **
-WAVE THEORY **** STREAM FUNCTION  
-WAVE HEIGHT **** 20.000 FT  
-WATER Depth **** 261.000 FT  
-WAVE PERIOD **** 13.346 SECS  
-WAVE LENGTH **** 875.090 FT 
 ```
-
-
-
-| ANGLE FROM X TOWARD Y ** 0.000 DEGREES | ANGLE FROM X TOWARD Y ** 0.000 DEGREES | ANGLE FROM X TOWARD Y ** 0.000 DEGREES | ANGLE FROM X TOWARD Y ** 0.000 DEGREES |  |
-| --- | --- | --- | --- | --- |
-| MUDLINE ELEVATION **** -261.000 FT | MUDLINE ELEVATION **** -261.000 FT | MUDLINE ELEVATION **** -261.000 FT | MUDLINE ELEVATION **** -261.000 FT |  |
-| WAVE CELERITY **** 65.569 FT/SEC | WAVE CELERITY **** 65.569 FT/SEC | WAVE CELERITY **** 65.569 FT/SEC | WAVE CELERITY **** 65.569 FT/SEC |  |
-| MAX. NO. SEG/MEMBER *** 10 | MAX. NO. SEG/MEMBER *** 10 | MAX. NO. SEG/MEMBER *** 10 | MAX. NO. SEG/MEMBER *** 10 |  |
-| MIN. NO. SEG/MEMBER **** 1 | MIN. NO. SEG/MEMBER **** 1 | MIN. NO. SEG/MEMBER **** 1 | MIN. NO. SEG/MEMBER **** 1 |  |
-| UNMODIFIED WAVE PERIOD 13.000 SECS | UNMODIFIED WAVE PERIOD 13.000 SECS | UNMODIFIED WAVE PERIOD 13.000 SECS | UNMODIFIED WAVE PERIOD 13.000 SECS |  |
-| STREAM FUNCTION ORDER ** 7 | STREAM FUNCTION ORDER ** 7 | STREAM FUNCTION ORDER ** 7 | STREAM FUNCTION ORDER ** 7 |  |
-| BREAKING WAVE HEIGHT 134.678 FT | BREAKING WAVE HEIGHT 134.678 FT | BREAKING WAVE HEIGHT 134.678 FT | BREAKING WAVE HEIGHT 134.678 FT |  |
-| CREST POSITION DETERMINED BY MAXIMUM SHEAR | CREST POSITION DETERMINED BY MAXIMUM SHEAR | CREST POSITION DETERMINED BY MAXIMUM SHEAR | CREST POSITION DETERMINED BY MAXIMUM SHEAR |  |
-| STARTING CREST POSITION -75.000 FT | STARTING CREST POSITION -75.000 FT | STARTING CREST POSITION -75.000 FT | STARTING CREST POSITION -75.000 FT |  |
-| NO. STEPS **** **** 20 | NO. STEPS **** **** 20 | NO. STEPS **** **** 20 | NO. STEPS **** **** 20 |  |
-| STEP SIZE **** **** 5.000 FT | STEP SIZE **** **** 5.000 FT | STEP SIZE **** **** 5.000 FT | STEP SIZE **** **** 5.000 FT |  |
-| CREST WATER Depth **** 271.43 FT | CREST WATER Depth **** 271.43 FT | CREST WATER Depth **** 271.43 FT | CREST WATER Depth **** 271.43 FT |  |
-| TROUGH WATER Depth **** 251.44 FT | TROUGH WATER Depth **** 251.44 FT | TROUGH WATER Depth **** 251.44 FT | TROUGH WATER Depth **** 251.44 FT |  |
-| SACS CONNECT Edition V(14.3) - CL ********** SACS IV SEASTATE PROGRAM **** | SACS CONNECT Edition V(14.3) - CL ********** SACS IV SEASTATE PROGRAM **** | SACS CONNECT Edition V(14.3) - CL ********** SACS IV SEASTATE PROGRAM **** | Company: Bentley Sytems DATE 09-SEP-2020 TIME 18:28:32 SEA PAGE 14 |  |
-| SAMPLE 02 ENGLISH UNITS MODEL | SAMPLE 02 ENGLISH UNITS MODEL | SAMPLE 02 ENGLISH UNITS MODEL | SAMPLE 02 ENGLISH UNITS MODEL |  |
-| ********** SEASTATE LOADS FOR WAVE PASSING THROUGH STRUCTURE********** | ********** SEASTATE LOADS FOR WAVE PASSING THROUGH STRUCTURE********** | ********** SEASTATE LOADS FOR WAVE PASSING THROUGH STRUCTURE********** | ********** SEASTATE LOADS FOR WAVE PASSING THROUGH STRUCTURE********** |  |
-| DEAD + 20.0 FT WAVE AT 0.0 DEG + CURRENT + WIND | DEAD + 20.0 FT WAVE AT 0.0 DEG + CURRENT + WIND | DEAD + 20.0 FT WAVE AT 0.0 DEG + CURRENT + WIND | DEAD + 20.0 FT WAVE AT 0.0 DEG + CURRENT + WIND |  |
-| LOAD CONDITION | CREST POSITION FT | DEG | LOAD | MUDLINE ELEVATION |
-| MAXIMUM MOMENT ABOUT MUDLINE | -65.00 | -26.74 | 13996.196 FT-KIP | -261.00 FT |
-| MAXIMUM SHEAR AT MUDLINE | -70.00 | -28.80 | 83.770 KIPS | -261.00 FT |
-
-
-
-
-
-| MINIMUM MOMENT ABOUT MUDLINE | 25.00 | 10.28 | 10777.126 | FT-KIP | -261.00 | FT |
-| --- | --- | --- | --- | --- | --- | --- |
-| MINIMUM SHEAR AT MUDLINE | 25.00 | 10.28 | 62.107 | KIPS | -261.00 | FT |
-| MAXIMUM FORCE UPWARD | -75.00 | -30.85 | 4.063 | KIPS | -261.00 | FT |
-| MAXIMUM FORCE DOWNWARD | 25.00 | 10.28 | -5.851 | KIPS | -261.00 | FT |
-
-
-
-大* **** LOAD CASE GENERATED FOR WAVE CREST POSITION RESULTING IN THE MAXIMUM SHEAR AT MUDLINE
-
-
-
-| SACS CONNECT Edition V(14.3) - CL ********** SACS IV SEASTATE PROGRAM ******DATE 09-SEP-2020 TIME 18:28:32 SEA PAGE 15 | SACS CONNECT Edition V(14.3) - CL ********** SACS IV SEASTATE PROGRAM ******DATE 09-SEP-2020 TIME 18:28:32 SEA PAGE 15 | SACS CONNECT Edition V(14.3) - CL ********** SACS IV SEASTATE PROGRAM ******DATE 09-SEP-2020 TIME 18:28:32 SEA PAGE 15 |
-| --- | --- | --- |
-| SAMPLE 02 ENGLISH UNITS MODEL | SAMPLE 02 ENGLISH UNITS MODEL | SAMPLE 02 ENGLISH UNITS MODEL |
-| ********** RESULTS FOR LOAD CASE P000 ******DEAD + 20.0 FT WAVE AT 0.0 DEG + CURRENT + WIND********** SUMMARY OF SEASTATE GENERATED DEAD AND BUOYANCY LOADS ****** | ********** RESULTS FOR LOAD CASE P000 ******DEAD + 20.0 FT WAVE AT 0.0 DEG + CURRENT + WIND********** SUMMARY OF SEASTATE GENERATED DEAD AND BUOYANCY LOADS ****** | ********** RESULTS FOR LOAD CASE P000 ******DEAD + 20.0 FT WAVE AT 0.0 DEG + CURRENT + WIND********** SUMMARY OF SEASTATE GENERATED DEAD AND BUOYANCY LOADS ****** |
-| WATER深度 = 261.000 FT. | WATER深度 = 261.000 FT. | WATER深度 = 261.000 FT. |
-| ELEMENT WEIGHT = 1555.097 KIPS | ELEMENT WEIGHT = 1555.097 KIPS | ELEMENT WEIGHT = 1555.097 KIPS |
-| MARINE GROWTH WEIGHT = 165.983 KIPS | MARINE GROWTH WEIGHT = 165.983 KIPS | MARINE GROWTH WEIGHT = 165.983 KIPS |
-| TOTAL DEAD WEIGHT = 1721.081 KIPS | TOTAL DEAD WEIGHT = 1721.081 KIPS | TOTAL DEAD WEIGHT = 1721.081 KIPS |
-| CENTER OF GRAVITY -X- = 7.213 FT. | CENTER OF GRAVITY -X- = 7.213 FT. | CENTER OF GRAVITY -X- = 7.213 FT. |
-| -Y- = -0.032 FT. | -Y- = -0.032 FT. | -Y- = -0.032 FT. |
-| -Z- = -121.946 FT. | -Z- = -121.946 FT. | -Z- = -121.946 FT. |
-| ELEMENT BUOYANCY = 586.651 KIPS | ELEMENT BUOYANCY = 586.651 KIPS | ELEMENT BUOYANCY = 586.651 KIPS |
-
-
-
-MARINE GROWTH BUOYANCY = 165.983 KIPS
-
-TOTAL BUOYANCY LOAD (DISPLACEMENT) = 752.634 KIPS
-
-CENTER OF BUOYANCY -X- = 8.130 FT.
-
--Y- -0.064 FT.
-
--Z- -151.580 FT.
-
-*NOTE: BUOYANCE LOAD SHOWN BASED ON MARINE METHOD
-
-**** SUMMATION OF FORCES AND MOMENTS FOR LOAD CASE P000 ****
-
-(MOMENTS ABOUT MUDLINE AT ELEVATION -261.00 FT. )
-
-
-
-|  | SUM FX KIPS | SUM FY KIPS | SUM FZ KIPS | SUM MX FT-K | SUM MY FT-K | SUM MZ FT-K |
-| --- | --- | --- | --- | --- | --- | --- |
-| MEMBER WIND | 16.150 | 0.000 | 0.012 | 0.000 | 5194.855 | 0.000 |
-| PLATE WIND | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
-| PLATE HYDRODYNAMIC | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
-| SEASTATE GENERATED | 99.920 | 0.310 | -964.852 | -111.723 | 25481.326 | 4.378 |
-| USER INPUT | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
-
-
-
-**** LOAD CASE FACTORS ****
-
-OVERALL LOAD CASE FACTOR 1.000
-
-DEAD LOAD FACTOR 1.000
-
-WAVE, WIND, AND CURRENT FACTOR 1.000
-
-USER SUPPLIED LOAD FACTOR 1.000
-
-BUOYANCY LOAD FACTOR 1.000
-
-SACS CONNECT Edition V(14.3) - CL
-
-********* SACS IV SEASTATE PROGRAM *********
-
-Company: Bentley Sytems
-
-DATE 09-SEP-2020 TIME 18:28:32 SEA PAGE 48
-
-SAMPLE 02 ENGLISH UNITS MODEL
-
-*** SEASTATE COMBINED LOAD CASES ***
-
-COMBINED BASIC
-
-LOAD LABEL LABEL L
-
-CASE
-
-11 OPR1
-
-PERCENT
-
-## 1.0 * MISC + 1.0 *
-
-MISC 100.00 USER GENERATED LOADS
-
-EQPT 100.00 USER GENERATED LOADS
-
-AREA 50.00 USER GENERATED LOADS
-
-LIVE 100.00 USER GENERATED LOADS
-
-P000 100.00 DEAD + 20.0 FT WAVE AT 0.0 DEG + CURRENT + WIND
-
-FX
-
-FY
-
-FZ
-
-MX
-
-MY
-
-MZ
-
-
-
-|  | (KIPS) | (KIPS) | (KIPS) | (FT-KIPS) | (FT-KIPS) | (FT-KIPS) |
-| --- | --- | --- | --- | --- | --- | --- |
-| MISC | 0.000 | 0.000 | -49.948 | -520.004 | 1048.409 | 0.000 |
-| EQPT | 0.000 | 0.000 | -535.000 | 63.304 | 1119.961 | 0.000 |
-| AREA | 0.000 | 0.000 | -38.216 | 0.000 | 218.412 | 0.000 |
-| LIVE | 0.000 | 0.000 | -473.496 | 0.000 | 2798.404 | 0.000 |
-| P000 | 99.920 | 0.310 | -964.852 | -111.723 | 25481.326 | 4.378 |
-| TOTAL | 99.920 | 0.310 | -2061.511 | -568.422 | 30666.512 | 4.378 |
-
-
 
 ## 7.2 NON-STRUCTURAL ELEMENTS
 
@@ -2957,177 +2815,168 @@ The following are the input lines added to the SACS model to account for the ris
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789 |
-| 1 | GRUP RS1 | 10.000 | 0.125 | 29.0011.2036.00 | 1 | 1.001.00 | 0.500 | 490.00 |
-| 2 | GRUP BL1 | 18.000 | 0.250 | 29.0011.2036.00 | 1 | 1.001.00 | 0.500 | 490.00 |
-| 3 |  |  |  |  |  |  |  |  |
-| 4 | MEMBER 10011002 RS1 |  |  |  |  |  |  |  |
-| 5 | MEMBER 10021003 RS1 |  |  |  |  |  |  |  |
-| 6 | MEMBER 10031004 RS1 |  |  |  |  |  |  |  |
-| 7 | MEMBER 10041007 RS1 |  |  |  |  |  |  |  |
-| 8 | MEMBER 403 2000 BL1 |  |  |  |  |  |  |  |
-| 9 | MEMBER 407 2005 BL1 |  |  |  |  |  |  |  |
-| 10 | MEMBER 351 2011 BL1 |  |  |  |  |  |  |  |
-| 11 | MEMBER 350 2006 BL1 |  |  |  |  |  |  |  |
-| 12 | MEMBER 20062000 BL1 |  |  |  |  |  |  |  |
-| 13 | MEMBER 20112005 BL1 |  |  |  |  |  |  |  |
-| 14 | MEMBER 20002001 BL1 |  |  |  |  |  |  |  |
-| 15 | MEMBER 20012002 BL1 |  |  |  |  |  |  |  |
-| 16 | MEMBER 20022003 BL1 |  |  |  |  |  |  |  |
-| 17 | MEMBER 20032004 BL1 |  |  |  |  |  |  |  |
-| 18 | MEMBER 20042005 BL1 |  |  |  |  |  |  |  |
-| 19 | MEMBER 20062007 BL1 |  |  |  |  |  |  |  |
-| 20 | MEMBER 20072008 BL1 |  |  |  |  |  |  |  |
-| 21 | MEMBER 20082009 BL1 |  |  |  |  |  |  |  |
-| 22 | MEMBER 20092010 BL1 |  |  |  |  |  |  |  |
-| 23 | MEMBER 20102011 BL1 |  |  |  |  |  |  |  |
-| 24 | MEMBER 20072001 BL1 |  |  |  |  |  |  |  |
-| 25 | MEMBER 20082002 BL1 |  |  |  |  |  |  |  |
-| 26 | MEMBER 20092003 BL1 |  |  |  |  |  |  |  |
-| 27 | MEMBER 20102004 BL1 |  |  |  |  |  |  |  |
-| 28 |  |  |  |  |  |  |  |  |
-| 29 | JOINT 1001 | 13. | -53. | -261. | 8.400 | -3.000 |  |  |
-| 30 | JOINT 1002 | 8. | -41. | -164. | 10.296 | -1.500 |  |  |
-| 31 | JOINT 1003 | 4. | -29. | -69. | 1.200 | -3.000 |  |  |
-| 32 | JOINT 1004 | 0. | -19. | 6. | 3.900 | -9.756 | 6.000 |  |
-| 33 | JOINT 1007 | 0. | -19. | 50. |  |  |  |  |
-| 34 | JOINT 351 | 25. | 18. | -6. | 11.400 | 5.255 | -6.000 |  |
-| 35 | JOINT 350 | 25. | -18. | -6. | 11.400 | -5.255 | -6.000 |  |
-| 36 | JOINT 2000 | 30. | -16. | 6. |  | -9.756 | 6.000 |  |
-| 37 | JOINT 2005 | 30. | 16. | 6. |  | 9.756 | 6.000 |  |
-| 38 | JOINT 2011 | 30. | 16. | -6. |  | 9.756 | -6.000 |  |
-| 39 | JOINT 2006 | 30. | -16. | -6. |  | -9.756 | -6.000 |  |
-| 40 | JOINT 2001 | 30. | -10. | 6. |  | -1.054 | 6.000 |  |
-| 41 | JOINT 2002 | 30. | -3. | 6. |  | -4.351 | 6.000 |  |
-| 42 | JOINT 2003 | 30. | 3. | 6. |  | 4.351 | 6.000 |  |
-| 43 | JOINT 2004 | 30. | 10. | 6. |  | 1.054 | 6.000 |  |
-| 44 | JOINT 2007 | 30. | -10. | -6. |  | -1.054 | -6.000 |  |
-| 45 | JOINT 2008 | 30. | -3. | -6. |  | -4.351 | -6.000 |  |
-| 46 | JOINT 2009 | 30. | 3. | -6. |  | 4.351 | -6.000 |  |
-| 47 | JOINT 2010 | 30. | 10. | -6. |  | 1.054 | -6.000 |  |
-
-
+```text
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+GRUP RS1         10.000 0.125 29.0011.2036.00 1    1.001.00     0.500 490.00
+GRUP BL1         18.000 0.250 29.0011.2036.00 1    1.001.00     0.500 490.00
+MEMBER 10011002 RS1
+MEMBER 10021003 RS1
+MEMBER 10031004 RS1
+MEMBER 10041007 RS1
+MEMBER 403 2000 BL1
+MEMBER 407 2005 BL1
+MEMBER 351 2011 BL1
+MEMBER 350 2006 BL1
+MEMBER 20062000 BL1
+MEMBER 20112005 BL1
+MEMBER 20002001 BL1
+MEMBER 20012002 BL1
+MEMBER 20022003 BL1
+MEMBER 20032004 BL1
+MEMBER 20042005 BL1
+MEMBER 20062007 BL1
+MEMBER 20072008 BL1
+MEMBER 20082009 BL1
+MEMBER 20092010 BL1
+MEMBER 20102011 BL1
+MEMBER 20072001 BL1
+MEMBER 20082002 BL1
+MEMBER 20092003 BL1
+MEMBER 20102004 BL1
+JOINT 1001     13.   -53.  -261.  8.400 -3.000
+JOINT 1002      8.   -41.  -164. 10.296 -1.500
+JOINT 1003      4.   -29.   -69.  1.200 -3.000
+JOINT 1004      0.   -19.     6.  3.900 -9.756  6.000
+JOINT 1007      0.   -19.    50.
+JOINT 351      25.    18.    -6. 11.400  5.255 -6.000
+JOINT 350      25.   -18.    -6. 11.400 -5.255 -6.000
+JOINT 2000     30.   -16.     6.        -9.756  6.000
+JOINT 2005     30.    16.     6.         9.756  6.000
+JOINT 2011     30.    16.    -6.         9.756 -6.000
+JOINT 2006     30.   -16.    -6.        -9.756 -6.000
+JOINT 2001     30.   -10.     6.        -1.054  6.000
+JOINT 2002     30.    -3.     6.        -4.351  6.000
+JOINT 2003     30.     3.     6.         4.351  6.000
+JOINT 2004     30.    10.     6.         1.054  6.000
+JOINT 2007     30.   -10.    -6.        -1.054 -6.000
+JOINT 2008     30.    -3.    -6.        -4.351 -6.000
+JOINT 2009     30.     3.    -6.         4.351 -6.000
+JOINT 2010     30.    10.    -6.         1.054 -6.000
+```
 
 The following is the Seastate input file. The reader should refer to Sample Problem 1 for discussion of input lines not covered in this section.
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 | 123456789012345678901234567890123456789012345678901234567890 |
-| 1 | LDOPT | NF+Z64.30001490.0500-261.000 | 261.000 | 261.000 | GLOBEN |  | NPNP | K |
-| 2 | * SELECTS STATIC ANALYSIS LOAD CASES | * SELECTS STATIC ANALYSIS LOAD CASES | * SELECTS STATIC ANALYSIS LOAD CASES | * SELECTS STATIC ANALYSIS LOAD CASES | * SELECTS STATIC ANALYSIS LOAD CASES | * SELECTS STATIC ANALYSIS LOAD CASES | * SELECTS STATIC ANALYSIS LOAD CASES | * SELECTS STATIC ANALYSIS LOAD CASES |
-| 3 | LCSEL ST | OPR1 | OPR2 | OPR3 | STM1 | STM2 | STM3 |  |
-| 4 | AMOD | AMOD | AMOD | AMOD | AMOD | AMOD | AMOD | AMOD |
-| 5 | AMOD STM1 1.333STM2 1.333STM3 1.333 | AMOD STM1 1.333STM2 1.333STM3 1.333 | AMOD STM1 1.333STM2 1.333STM3 1.333 | AMOD STM1 1.333STM2 1.333STM3 1.333 | AMOD STM1 1.333STM2 1.333STM3 1.333 | AMOD STM1 1.333STM2 1.333STM3 1.333 | AMOD STM1 1.333STM2 1.333STM3 1.333 | AMOD STM1 1.333STM2 1.333STM3 1.333 |
-| 6 | * USE LOADING IN SEASTATE INPUT AND MODEL FILE | * USE LOADING IN SEASTATE INPUT AND MODEL FILE | * USE LOADING IN SEASTATE INPUT AND MODEL FILE | * USE LOADING IN SEASTATE INPUT AND MODEL FILE | * USE LOADING IN SEASTATE INPUT AND MODEL FILE | * USE LOADING IN SEASTATE INPUT AND MODEL FILE | * USE LOADING IN SEASTATE INPUT AND MODEL FILE | * USE LOADING IN SEASTATE INPUT AND MODEL FILE |
-| 7 | FILE B | FILE B | FILE B | FILE B | FILE B | FILE B | FILE B | FILE B |
-| 8 | CDM | CDM | CDM | CDM | CDM | CDM | CDM | CDM |
-| 9 | CDM 1.00 | 0.600 | 1.200 | 0.600 | 1.200 | 1.200 | 1.200 | 1.200 |
-| 10 | CDM 100.00 | 0.600 | 1.200 | 0.600 | 1.200 | 1.200 | 1.200 | 1.200 |
-| 11 | MGROV | MGROV | MGROV | MGROV | MGROV | MGROV | MGROV | MGROV |
-| 12 | MGROV 0.000 | 200.000 | 1.000 |  |  |  |  |  |
-
-
-
-```txt
-13 MGROV 200.000 261.000 2.000   
-# 14 GRPOV
-15 GRPOVAL LG1 F   
-16 GRPOVAL LG2 F   
-17 GRPOVAL LG3 F   
-18 GRPOV LG4 F   
-19 GRPOV PL1NF 0.001 0.001   
-20 GRPOV PL2NF 0.001 0.001   
-21 GRPOV PL3NF 0.001 0.001   
-22 GRPOV PL4NF 0.001 0.001   
-23 GRPOV W.BNF 0.001 0.001   
-24 DUMMY BOAT BOAT LANDING MODEL   
-25 KEEP 350 351 403 407   
-26 DELETE 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011   
-# 27 DELGRP RS1
-28 DELJNT 1001 101 103 1002 212 203 1003 301 303 1004 401 403   
-29 DELJNT 1007 714 715   
-# 30 REPORT
-31 REPLBL RISER RISER LOADING REPORT   
-# 32 REPGRP RS1
-# 33 REPORT
-34 REPLBL BOAT BOAT LANDING LOADING REPORT   
-# 35 REPGRP BL1
-# 36 LOAD
-# 37 LOADCNP000
-# 38 WIND
-39 WIND 50.000 0.00 AP13   
-# 40 WAVE
-41 WAVE STRE 20.00 13.00 0.00 L-75.005.00 2OMS1O 1 7   
-# 42 CURR
-43 CURR 0.000 1.000 0.000 -15.00OBC NL FPS AWP   
-44 CURR 261.ooo 2.ooo   
-# 45 DEAD
-# 46 DEAD -Z M
-# 47 LOADCNPo45
-# 48 WIND
-49 WIND 5O.ooo 45.oo AP13   
-# 5O WAVE
-51 WAVE STRE 2O.oo 13.oo 45.oo L-75.oo5.oo 2OMS1O 1 7   
-# 52 CURR
-53 CURR 0.ooo 1.ooo 45.ooo -15.ooOBC NL FPS AWP   
-54 CURR 261.ooo 2.ooo 45.ooo   
-# 55 DEAD
-# 56 DEAD -Z M
-# 57 LOADCNPo9O
-# 58 WIND
-59 WIND 5O.ooo 9O.OO AP13   
-# 6O WAVE
-61 WAVE STRE 2O.oo 13.oo 9O.OO L-75.oo5.oo 2OMS1O 1 7   
-# 62 CURR
-63 CURR O.OOO 1.ooo 9O.OO -15.ooOBC NL FPS AWP   
-64 CURR 261.ooo 2.ooo 9O.OO   
-# 65 DEAD
-# 66 DEAD -Z M
-# 67 LOADCNSOOO
-# 68 WIND
-69 WIND 15O.OOO O.OO 266.ooAP13   
-# 7O WAVE
-71 WAVE STRE 4O.OO266.oo 13.oo L-75.oo5.oo 2OMS1O 1 7   
-72 CURR
-73 CURR O.OOO I.OOO -15.ooOBC NL FPS AWP   
-74 CURR 261.ooo 3.5OO   
-75 DEAD
-76 DEAD -Z 266.ooo M   
-77 LOADCNSO45
-78 WIND
-79 WIND I5O.OOO O.OO AP13   
-8O WAVE
-8I WAVE STRE O.OO266.oo I3.oo O.OO L-75.oo5.oo 2OMS1O 1 7
-```
-
-```txt
-83 CURR 0.000 1.000 45.000 -15.000BC NL FPS AWP   
-84 CURR 261.000 3.500 45.000   
-85 DEAD
-86 DEAD -Z 266.000 M   
-87 LOADCNS090
-88 WIND
-89 WIND 150.000 90.00 266.00AP13   
-90 WAVE
-91 WAVE STRE 40.00266.00 13.00 90.00 L-75.00 5.00 20MS10 1 7   
-92 CURR
-93 CURR 0.000 1.000 90.000 -15.000BC NL FPS AWP   
-94 CURR 261.000 3.500 90.000   
-95 DEAD
-96 DEAD -Z 266.000 M   
-97 LCOMB
-98 \* OPERATIONAL COMBINATIONS   
-99 LCOMB OPR1 MISC1.0000EQPT1.0000AREAO.5000LIVE1.000P0001.0000   
-100 LCOMB OPR2 MISC1.0000EQPT1.0000AREAO.500O Live1.00OoP451.ooOO   
-101 LCOMB OPR3 MISC1.00OoEQT1.0OoOoAREAO.5OoOLive1.ooOoP O9O1.ooOO   
-102 \* STORM COMBINATIONS   
-103 LCOMB STM1 MISC1.0OooEQPTo.75OOLIVEo.75OoSooo1.ooOO   
-104 LCOMB STM2 MISC1.ooooEQPTo.75OOLVEo.75OoS451.ooOO   
-105 LCOMB STM3 MISC1.ooooEQPTo.75OOLVEo.75OoS9O1.ooOO   
+```text
+             1         2         3         4         5         6         7         8
+    12345678901234567890123456789012345678901234567890123456789012345678901234567890
+  1 LDOPT       NF+Z64.30001490.0500-261.000 261.000GLOBEN                NPNP    K
+  2 * SELECTS STATIC ANALYSIS LOAD CASES
+  3 LCSEL ST        OPR1 OPR2 OPR3 STM1 STM2 STM3
+  4 AMOD
+  5 AMOD   STM1 1.333STM2 1.333STM3 1.333
+  6 * USE LOADING IN SEASTATE INPUT AND MODEL FILE
+  7 FILE B
+  8 CDM
+  9 CDM     1.00 0.600       1.200       0.600       1.200
+ 10 CDM   100.00 0.600       1.200       0.600       1.200
+ 11 MGROV
+ 12 MGROV   0.000    200.000   1.000
+ 13 MGROV   200.000  261.000   2.000
+ 14 GRPOV
+ 15 GRPOVAL        LG1 F
+ 16 GRPOVAL        LG2 F
+ 17 GRPOVAL        LG3 F
+ 18 GRPOV          LG4 F
+ 19 GRPOV          PL1NF                     0.001 0.001
+ 20 GRPOV          PL2NF                     0.001 0.001
+ 21 GRPOV          PL3NF                     0.001 0.001
+ 22 GRPOV          PL4NF                     0.001 0.001
+ 23 GRPOV          W.BNF 0.001               0.001 0.001
+ 24 DUMMY BOAT    BOAT LANDING MODEL
+ 25 KEEP    350  351  403  407
+ 26 DELETE 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011
+ 27 DELGRP  RS1
+ 28 DELJNT  1001  101  103  1002  212  203  1003  301  303  1004  401  403
+ 29 DELJNT  1007  714  715
+ 30 REPORT
+ 31 REPLBL RISER   RISER LOADING REPORT
+ 32 REPGRP  RS1
+ 33 REPORT
+ 34 REPLBL BOAT    BOAT LANDING LOADING REPORT
+ 35 REPGRP  BL1
+ 36 LOAD
+ 37 LOADCNP000
+ 38 WIND
+ 39 WIND      50.000            0.00        AP13
+ 40 WAVE
+ 41 WAVE    STRE 20.00       13.00          0.00      L -75.00  5.00  20MS10 1   7
+ 42 CURR
+ 43 CURR       0.000   1.000   0.000                 -15.000BC NL FPS     AWP
+ 44 CURR     261.000   2.000
+ 45 DEAD
+ 46 DEAD      -Z                                M
+ 47 LOADCNP045
+ 48 WIND
+ 49 WIND      50.000           45.00        AP13
+ 50 WAVE
+ 51 WAVE    STRE 20.00       13.00         45.00      L -75.00  5.00  20MS10 1   7
+ 52 CURR
+ 53 CURR       0.000   1.000  45.000                 -15.000BC NL FPS     AWP
+ 54 CURR     261.000   2.000  45.000
+ 55 DEAD
+ 56 DEAD      -Z                                M
+ 57 LOADCNP090
+ 58 WIND
+ 59 WIND      50.000           90.00        AP13
+ 60 WAVE
+ 61 WAVE    STRE 20.00       13.00         90.00      L -75.00  5.00  20MS10 1   7
+ 62 CURR
+ 63 CURR       0.000   1.000  90.000                 -15.000BC NL FPS     AWP
+ 64 CURR     261.000   2.000  90.000
+ 65 DEAD
+ 66 DEAD      -Z                                M
+ 67 LOADCNS000
+ 68 WIND
+ 69 WIND     150.000            0.00  266.00AP13
+ 70 WAVE
+ 71 WAVE    STRE 40.00266.00 13.00                    L -75.00  5.00  20MS10 1   7
+ 72 CURR
+ 73 CURR       0.000   1.000   0.000                 -15.000BC NL FPS     AWP
+ 74 CURR     261.000   3.500
+ 75 DEAD
+ 76 DEAD      -Z         266.000                M
+ 77 LOADCNS045
+ 78 WIND
+ 79 WIND     150.000           45.00  266.00AP13
+ 80 WAVE
+ 81 WAVE    STRE 40.00266.00 13.00         45.00      L -75.00  5.00  20MS10 1   7
+ 82 CURR
+ 83 CURR       0.000   1.000  45.000                 -15.000BC NL FPS     AWP
+ 84 CURR     261.000   3.500  45.000
+ 85 DEAD
+ 86 DEAD      -Z         266.000                M
+ 87 LOADCNS090
+ 88 WIND
+ 89 WIND     150.000           90.00  266.00AP13
+ 90 WAVE
+ 91 WAVE    STRE 40.00266.00 13.00         90.00      L -75.00  5.00  20MS10 1   7
+ 92 CURR
+ 93 CURR       0.000   1.000  90.000                 -15.000BC NL FPS     AWP
+ 94 CURR     261.000   3.500  90.000
+ 95 DEAD
+ 96 DEAD      -Z         266.000                M
+ 97 LCOMB
+ 98 * OPERATIONAL COMBINATIONS
+ 99 LCOMB OPR1 MISC1.0000EQPT1.0000AREA0.5000LIVE1.0000P0001.0000
+100 LCOMB OPR2 MISC1.0000EQPT1.0000AREA0.5000LIVE1.0000P0451.0000
+101 LCOMB OPR3 MISC1.0000EQPT1.0000AREA0.5000LIVE1.0000P0901.0000
+102 * STORM COMBINATIONS
+103 LCOMB STM1 MISC1.0000EQPT0.7500LIVE0.7500S0001.0000
+104 LCOMB STM2 MISC1.0000EQPT0.7500LIVE0.7500S0451.0000
+105 LCOMB STM3 MISC1.0000EQPT0.7500LIVE0.7500S0901.0000
 106 END
 107 END
 ```
@@ -3145,184 +2994,150 @@ H. The REPLBL input line is used to label the special report. The first special 
 
 I. The REPGRP input line designates that all members assigned group RS1 be included in loading report number 1.
 
+
+```text
 SEASTATE SAMPLE PROBLEM 2
 
-******* JOINTS DELETED FROM SACS DATA ********
+******** JOINTS DELETED FROM SACS DATA ********
+JOINT       MEMBER LOADED      LOAD POINT
+DELETED       J1   J2          FEET FROM J1
+1101         101-201              0.267
+1201         201-301              0.118
+1301         301-401              0.281
+1401         301-401             22.281
 
-JOINT MEMBER LOADED LOAD POINT DELETED J1 J2 FEET FROM JI
+********** GROUPS DELETED FROM SACS DATA **********
+RS1
 
-1101 101- 201 0.267 1201 201- 301 0.118 1301 301- 401 0.281 1401 301- 401 22.281
+********** MEMBERS DELETED FROM SACS DATA **********
+1101-1201  1201-1301  1301-1401
 
-********** GROUPS DELETED FROM SACS DATA ********** RS1
-
-********** MEMBERS DELETED FROM SACS DATA ********** 1101-1201 1201-1301 1301-1401
-
-*** DUMMY STRUCTURE DESCRIPTIONS ***
-
-DUMMY STRUCTURE1 BOAT LANDING MODEL
-
-************** INTERFACE JOINTS **************
-
-303305
-
-* INTERNAL JOINTS **
-
+***** DUMMY STRUCTURE DESCRIPTIONS *****
+DUMMY STRUCTURE  1     BOAT LANDING MODEL
+**************** INTERFACE JOINTS ****************
+303  305
+**************** INTERNAL JOINTS ****************
 2001 2002 2003 2004
+********************** MEMBERS INCLUDED **********************
+START END     START END     START END     START END     START END
+2001-2002     2002-2004     2004-2003     2003-2001     303-2001
+305-2002      303-2003      305-2004
 
-START END START END START END START END START END 2001-2002 2002-2004 2004-2003 2003-2001 303-2001 305-2002 303-2003 305-2004
+REPORT GROUP  1     RISER LOADING REPORT
+********************** MEMBERS INCLUDED **********************
+START END     START END     START END     START END     START END
+1101-1201     1201-1301     1301-1401
 
-REPORT GROUP 1 RISER LOADING REPORT
+REPORT GROUP  2     BOAT LANDING LOADING REPORT
+********************** MEMBERS INCLUDED **********************
+START END     START END     START END     START END     START END
+2001-2002     2002-2004     2004-2003     2003-2001     303-2001
 
-*★* ****** MEMBERS INCLUDED ****** ★**★
-
-START END START END START END START END START END 1101-1201 1201-1301 1301-1401
-
-REPORT GROUP 2 BOAT LANDING LOADING REPORT
-
-********* *********** MEMBERS INCLUDED *******************
-
-START END START END START END START END START END 2001-2002 2002-2004 2004-2003 2003-2001 303-2001
-
-**WAVE DESCRIPTION FOR LOAD CASE1 **
-
+**** WAVE DESCRIPTION FOR LOAD CASE   1 ****
 WAVE THEORY ************ AIRY
-
 WAVE HEIGHT ************ 18.000 FT
-
 WATER DEPTH ************ 82.020 FT
-
-WAVE PERTOD ************ 8.000 SECS
-
-WAVE LENGTH ************305.921 FT
-
-ANGLE FROM X TOWARD Y ** 0.000 DEGREES
-
-MUDLINE ELEVATION ******-82.020 FT
-
+WAVE PERIOD ************ 8.000 SECS
+WAVE LENGTH ************ 305.921 FT
+ANGLE FROM X TOWARD Y **  0.000 DEGREES
+MUDLINE ELEVATION ****** -82.020 FT
 WAVE CELERITY ********** 38.240 FT/SEC
-
-MAX．NO．SEG/MEMBER****
-
-MIN．NO．SEG/MEMBER****
-
+MAX. NO. SEG/MEMBER **** 10
+MIN. NO. SEG/MEMBER **** 1
 CREST POSITION DETERMINED BY MAXIMUM SHEAR
-
-STARTING CREST POSITION 0.000 FT
-
-NO.STEPS *********
-
+STARTING CREST POSITION   0.000 FT
+NO. STEPS ************** 18
 STEP SIZE ************** 16.996 FT
-
 CONVECTIVE ACCELERATION TERMS EXCLUDED
-
 CREST WATER DEPTH ****** 91.02 FT
-
 TROUGH WATER DEPTH ***** 73.02 FT
 
-**** SEASTATE LOADS FOR WAVE PASSING THROUGH STRUCTURE ****
-
-LOAD CREST MUDLINE ONDITION POSITION LOAD ELEVATION
-
+****** SEASTATE LOADS FOR WAVE PASSING THROUGH STRUCTURE ******
+LOAD CONDITION           CREST POSITION   LOAD                 MUDLINE ELEVATION
 MAXIMUM MOMENT
-
-ABOUT MUDLINE
-
+ABOUT MUDLINE               305.92        43620.000 FT-KIPS      -82.020 FT.
 MAXIMUM SHEAR
-
-AT MUDLINE
-
+AT MUDLINE                  305.92          828.110 KIPS         -82.020 FT.
 MINIMUM MOMENT
-
-ABOUT MUDLINE
-
+ABOUT MUDLINE               152.96         7806.634 FT-KIPS      -82.020 FT.
 MINIMUM SHEAR
-
-AT MUDLINE
-
+AT MUDLINE                  152.96          193.675 KIPS         -82.020 FT.
 MAXIMUM FORCE
-
-UPWARD
-
+UPWARD                      237.94           48.122 KIPS         -82.020 FT.
 MAXIMUM FORCE
+DOWNWARD                     67.98          -53.875 KIPS         -82.020 FT.
 
-DOWNWARD
+***** LOAD CASE GENERATED FOR WAVE CREST POSITION RESULTING IN THE MAXIMUM SHEAR AT MUDLINE *****
 
-## 305.92
+SUMMATION OF LOADS ON REPORT GROUP   1
+RISER LOADING REPORT
+FORCE IN X DIRECTION     34.244 KIPS
+                  Y     11.163 KIPS
+                  Z     -4.572 KIPS
+MOMENT ABOUT X AXIS    -551.589 FT-K
+                  Y   1880.849 FT-K
+                  Z    315.267 FT-K
+DEAD LOAD                5.046 KIPS
+CENTER OF GRAVITY X    -14.698 FT.
+                  Y    -14.698 FT.
+                  Z    -31.383 FT.
+BUOYANCY LOAD            5.207 KIPS
+CENTER OF BUOYANCY X   -15.130 FT.
+                   Y   -15.130 FT.
+                   Z   -36.453 FT.
 
-## 305.92
+SUMMATION OF LOADS ON REPORT GROUP   2
+BOAT LANDING LOADING REPORT
+FORCE IN X DIRECTION     28.166 KIPS
+                  Y      3.832 KIPS
+                  Z      2.229 KIPS
+MOMENT ABOUT X AXIS    -300.508 FT-K
+                  Y   2164.452 FT-K
+                  Z     33.373 FT-K
+DEAD LOAD                3.682 KIPS
+CENTER OF GRAVITY X     12.393 FT.
+                  Y      0.000 FT.
+                  Z     -4.165 FT.
+BUOYANCY LOAD            3.201 KIPS
+CENTER OF BUOYANCY X    12.393 FT.
+                   Y     0.000 FT.
+                   Z    -4.165 FT.
 
-## 152.96
+SUMMATION OF LOADS ON DUMMY STRUCTURE   1
+BOAT LANDING MODEL
+FORCE IN X DIRECTION     28.166 KIPS
+                  Y      3.832 KIPS
+                  Z      2.229 KIPS
+MOMENT ABOUT X AXIS    -300.508 FT-K
+                  Y   2164.452 FT-K
+                  Z     33.373 FT-K
+DEAD LOAD                3.682 KIPS
+CENTER OF GRAVITY X     12.393 FT.
+                  Y      0.000 FT.
+                  Z     -4.165 FT.
+BUOYANCY LOAD            3.201 KIPS
+CENTER OF BUOYANCY X    12.393 FT.
 
-## 152.96
+***** RESULTS FOR LOAD CASE   1 *****
+***** SUMMATION OF FORCES AND MOMENTS FOR LOAD CASE   1 *****
+(MOMENTS ABOUT MUDLINE AT ELEVATION -82.02 FT.)
 
-## 237.94
+                      SUM FX      SUM FY      SUM FZ       SUM MX       SUM MY      SUM MZ
+                       KIPS        KIPS        KIPS         FT-K         FT-K        FT-K
+MEMBER WIND            0.800       0.141       0.000      -13.595       77.100       0.566
+AREA WIND              0.000       2.428       0.000     -261.813        0.000      -4.483
+UNDERWATER DRAG AREA   7.566      15.105       0.000    -1274.093      638.246     144.934
+SEASTATE GENERATED   786.254     264.893    -566.210   -14012.930    41489.140     489.092
+USER INPUT             0.000       0.000       0.000        0.000        0.000       0.000
 
-## 67.98
-
-## 43620.000 FT-KIPS
-
-## 828.110 KIPS
-
-## 7806.634 FT-KIPS
-
-## 193.675 KIPS
-
-## 48.122 KIPS
-
--53.875 KIPS
-
--82.020 FT.
-
--82.020 FT.
-
--82.020 FT.
-
--82.020 FT.
-
--82.020 FT.
-
--82.020 FT.
-
-***** LOAD CASE GENERATED FOR WAVE CREST POSITION RESULTING IN THE MAXIMUM SHEAR AT MUDLINE ★***★*
-
-```txt
-SUMMATION OF LOADS ON REPORT GROUP 1  
-RISER LOADING REPORT FORCE IN X DIRECTION 34.244 KIPS Y 11.163 KIPS Z -4.572 KIPS MOMENT ABOUT X AXIS -551.589 FT-K Y 1880.849 FT-K Z 315.267 FT-K DEAD LOAD 5.046 KIPS CENTER OF GRAVITY X -14.698 FT. Y -14.698 FT. Z -31.383 FT. BUOYANCY LOAD 5.207 KIPS CENTER OF BUOYANCY X -15.130 FT. Y -15.130 FT. Z -36.453 FT. SUMMATION OF LOADS ON REPORT GROUP 2  
-BOAT LANDING LOADING REPORT FORCE IN X DIRECTION 28.166 KIPS Y 3.832 KIPS Z 2.229 KIPS MOMENT ABOUT X AXIS -300.508 FT-K Y 2164.452 FT-K Z 33.373 FT-K DEAD LOAD 3.682 KIPS CENTER OF GRAVITY X 12.393 FT. Y 0.000 FT. Z -4.165 FT. BUOYANCY LOAD 3.201 KIPS CENTER OF BUOYANCY X 12.393 FT. Y 0.000 FT. Z -4.165 FT. SUMMATION OF LOADS ON DUMMY STRUCTURE 1  
-BOAT LANDING MODEL FORCE IN X DIRECTION 28.166 KIPS Y 3.832 KIPS Z 2.229 KIPS MOMENT ABOUT X AXIS -300.508 FT-K Y 2164.452 FT-K Z 33.373 FT-K DEAD LOAD 3.682 KIPS CENTER OF GRAVITY X 12.393 FT. Y 0.0o0 FT. Z -4.165 FT. BUOYANCY LOAD 3.201 KIPS CENTER OF BUOYANCY X 12.393 FT. 
+**************** REPORT GROUP LOAD SUMMATIONS ****************
+REPORT LOAD      FX      FY      FZ       MX       MY       MZ     DESCRIPTIONS
+GROUP  CASE    (KIPS)  (KIPS)  (KIPS)  (FT-KIPS) (FT-KIPS) (FT-KIPS)
+1                                                                  RISER LOADING REPORT
+        1       34.2    11.2    -4.6    -551.6   1880.8    315.3     DEAD + 18.0 FT WAVE AT 0.0 DEG + CURRENT + WIND
+2                                                                  BOAT LANDING LOADING REPORT
+        1       28.2     3.8     2.2    -300.5   2164.5     33.4     DEAD + 18.0 FT WAVE AT 0.0 DEG + CURRENT + WIND
 ```
-
-**** RESULTS FOR LOAD CASE 1****
-
-**** SUMMATION OF FORCES AND MOMENTS FOR LOAD CASE1 ****
-
-(MOMENTS ABOUT MUDLINE AT ELEVATION-82.02 FT．)
-
-
-
-|  | SUM FX KIPS | SUM FY KIPS | SUM FZ KIPS | SUM MX FT-K | SUM MY FT-K | SUM MZ FT-K |
-| --- | --- | --- | --- | --- | --- | --- |
-| MEMBER WIND | 0.800 | 0.141 | 0.000 | -13.595 | 77.100 | 0.566 |
-| AREA WIND | 0.000 | 2.428 | 0.000 | -261.813 | 0.000 | -4.483 |
-| UNDERWATER DRAG AREA | 7.566 | 15.105 | 0.000 | -1274.093 | 638.246 | 144.934 |
-| SEASTATE GENERATED | 786.254 | 264.893 | -566.210 | -14012.930 | 41489.140 | 489.092 |
-| USER INPUT | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
-
-
-
-+++ ********** REPORT GROUP LOAD SUMMATIONS *********
-
-REPORT LOAD FX FY FZ MX MY MZ ********** DESCRIPTIONS ***★**★**★*★*** *******
-
-
-
-| GROUP 1 | CASE 1 | (KIPS) 34.2 | (KIPS) 11.2 | (KIPS) -4.6 | (FT-KIPS) -551.6 | (FT-KIPS) 1880.8 | (FT-KIPS) 315.3 | RISER LOADING REPORT | RISER LOADING REPORT |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| GROUP 1 | CASE 1 | (KIPS) 34.2 | (KIPS) 11.2 | (KIPS) -4.6 | (FT-KIPS) -551.6 | (FT-KIPS) 1880.8 | (FT-KIPS) 315.3 | DEAD + 18.0 FT WAVE AT 0.0 DEG + CURRENT + WIND | DEAD + 18.0 FT WAVE AT 0.0 DEG + CURRENT + WIND |
-| 2 |  |  |  |  |  |  |  | BOAT LANDING LOADING REPORT | BOAT LANDING LOADING REPORT |
-|  | 1 | 28.2 | 3.8 | 2.2 | -300.5 | 2164.5 | 33.4 | DEAD + 18.0 FT WAVE AT 0.0 DEG + CURRENT + WIND | DEAD + 18.0 FT WAVE AT 0.0 DEG + CURRENT + WIND |
-
-
 
 ## 7.3 TRANSFER FUNCTION GENERATION
 
@@ -3332,46 +3147,45 @@ The following is the Seastate input file used to generate the base shear transfe
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 | 1234567890123456789012345678901234567890123456789012345678901234567890 |
-| LDOPT | NF+Z | 64.20 | 490.00 | -82.02 | 82.02 |  | NP | K |
-| SEASTATE | SAMPLE | PROBLEM | 4 |  |  |  |  |  |
-| FILE |  |  |  |  |  |  |  |  |
-| AREA |  |  |  |  |  |  |  |  |
-| AREAS | 516.7 |  | -9.84 | -29.53 | 26.25 | 1.50 | 461 | 463 |
-| AREAS | 193.7 |  | 19.69 | -29.53 | 24.61 | 1.50 | 463 | 464 |
-| AREAE | 290.6 |  | 29.53 | -14.76 | 24.61 | 1.50 | 464 | 465 |
-| AREAE | 387.5 |  | 29.53 | 14.76 | 26.25 | 1.50 | 465 | 466 |
-| AREAB | 43.1 | 86.1 |  | -16.40 | 1.64 | 0.70 | 301 | 303 |
-| AREAB | 10.8 | 21.5 |  | 6.56 | -16.40 | 4.92 | 0.70 | 301 |
-| AREAB | 141.3 | 282.5 |  | -16.40 | 1.64 | 2.00 | 301 | 303 |
-| AREAB | 35.3 | 70.6 |  | 6.56 | -16.40 | 4.92 | 2.00 | 301 |
-| CDM |  |  |  |  |  |  |  |  |
-| CDM | 11.81 | 1.000 |  | 1.400 | 1.200 |  | 1.400 |  |
-| CDM | 23.62 | 1.000 |  | 1.500 | 1.200 |  | 1.500 |  |
-| CDM | 47.24 | 1.000 |  | 1.600 | 1.200 |  | 1.600 |  |
-| CDM | 70.87 | 1.000 |  | 1.700 | 1.200 |  | 1.700 |  |
-| MGROV |  |  |  |  |  |  |  |  |
-| MGROV |  | 26.247 |  |  |  |  |  |  |
-| MGROV | 26.247 | 52.493 | 0.984 |  |  |  |  |  |
-| MGROV | 52.493 | 82.021 | 1.969 |  |  |  |  |  |
-| GRPOV |  |  |  |  |  |  |  |  |
-| GRPOV |  | LG1 F |  |  |  |  |  |  |
-| GRPOV |  | LG1 F |  |  |  |  |  |  |
-| GRPOV |  | LG2 F |  |  |  |  |  |  |
-| GRPOV |  | PL1 F |  |  | 0.001 | 0.001 |  |  |
-| GRPOV |  | PL2 F |  |  | 0.001 | 0.001 |  |  |
-| GRPOV |  | PL3 F |  |  |  |  |  |  |
-| GRPOV |  | DK1 |  |  | 0.001 | 0.001 |  |  |
-| GRPOV |  | DK2 |  |  | 0.001 | 0.001 |  |  |
-| GRPOV |  | WSB F | 0.001 | 0.001 | 0.001 | 0.001 |  |  |
-| LOAD |  |  |  |  |  |  |  |  |
-| LOADCN | 1 | 1.40 | 1.70 |  |  |  |  |  |
-| A | GNTRF | 19 | 0.05 | 10.0 | 0.5 | 0.0 |  |  |
-| END |  |  |  |  |  |  |  |  |
-
-
+```text
+           1         2         3         4         5         6         7         8
+  12345678901234567890123456789012345678901234567890123456789012345678901234567890
+  LDOPT       NF+Z   64.20  490.00  -82.02   82.02                      NP      K
+  SEASTATE SAMPLE PROBLEM 4
+  FILE
+  AREA
+  AREAS        516.7        -9.84 -29.53  26.25 1.50 461 462 463 472 401 403   0
+  AREAS        193.7        19.69 -29.53  24.61 1.50 463 464 465 403   0   0   0
+  AREAE  290.6              29.53 -14.76  24.61 1.50 464 465 466 405 403 463   0
+  AREAE  387.5              29.53  14.76  26.25 1.50 465 466 467 468 405 403   0
+  AREAB   43.1  86.1              -16.40   1.64 0.70 301 303   0   0   0   0   0 D
+  AREAB   10.8  21.5         6.56 -16.40   4.92 0.70 301 303   0   0   0   0   0 D
+  AREAB  141.3 282.5              -16.40   1.64 2.00 301 303   0   0   0   0   0 I
+  AREAB   35.3  70.6         6.56 -16.40   4.92 2.00 301 303   0   0   0   0   0 I
+  CDM
+  CDM    11.81 1.000       1.400       1.200       1.400
+  CDM    23.62 1.000       1.500       1.200       1.500
+  CDM    47.24 1.000       1.600       1.200       1.600
+  CDM    70.87 1.000       1.700       1.200       1.700
+  MGROV
+  MGROV             26.247
+  MGROV     26.247  52.493   0.984
+  MGROV     52.493  82.021   1.969
+  GRPOV
+  GRPOV          LG1 F
+  GRPOV          LG1 F
+  GRPOV          LG2 F
+  GRPOV          PL1 F                     0.001 0.001
+  GRPOV          PL2 F                     0.001 0.001
+  GRPOV          PL3 F
+  GRPOV          DK1                       0.001 0.001
+  GRPOV          DK2                       0.001 0.001
+  GRPOV          WSB F        0.001  0.001 0.001 0.001
+  LOAD
+  LOADCN   1    1.40   1.70
+A GNTRF      19   0.05  10.0   0.5                0.0
+  END
+```
 
 The area, member and group override, coefficient of drag and mass, wind, current and dead input lines are explained in Sample Problems 1 and 2. In this sample the WAVE input line has been replaced with the GNTRF input line.
 
@@ -3396,87 +3210,78 @@ This sample also utilizes separate files for the environmental input lines and t
 
 
 
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 12345678901234567890123456789012345678901234567890123456789012345678901234567890 | 12345678901234567890123456789012345678901234567890123456789012345678901234567890 | 12345678901234567890123456789012345678901234567890123456789012345678901234567890 | 12345678901234567890123456789012345678901234567890123456789012345678901234567890 | 12345678901234567890123456789012345678901234567890123456789012345678901234567890 | 12345678901234567890123456789012345678901234567890123456789012345678901234567890 | 12345678901234567890123456789012345678901234567890123456789012345678901234567890 | 12345678901234567890123456789012345678901234567890123456789012345678901234567890 | 12345678901234567890123456789012345678901234567890123456789012345678901234567890 |  |
-| LDOPT | NF+Z | 64.20 | 490.00 | -82.02 | 82.02 |  | CMB | NP | K |
-| SEASTATE | SAMPLE | PROBLEM | 3 |  |  |  |  |  |  |
-| A | FILE |  |  |  |  |  |  |  |  |
-| CDM |  |  |  |  |  |  |  |  |  |
-| CDM | 12.00 | 1.000 | 1.400 |  | 1.200 | 1.400 |  |  |  |
-| CDM | 70.00 | 1.000 | 1.400 |  | 1.200 | 1.400 |  |  |  |
-| MGROV |  |  |  |  |  |  |  |  |  |
-| MGROV |  | 82.02 | 2.0 |  |  |  |  |  |  |
-| GRPOV |  |  |  |  |  |  |  |  |  |
-| GRPOV |  | PL1 F |  |  | 0.001 | 0.001 |  |  |  |
-| GRPOV |  | PL2 F |  |  | 0.001 | 0.001 |  |  |  |
-| GRPOV |  | PL3 F |  |  |  |  |  |  |  |
-| GRPOV |  | WSB F |  | 0.001 | 0.001 | 0.001 |  |  |  |
-| LOAD |  |  |  |  |  |  |  |  |  |
-| LOADCN | 1 | 1.40 | 1.70 |  |  |  |  |  |  |
-| WAVE |  |  |  |  |  |  |  |  |  |
-| B | WAVE | LINE |  | 0.0 |  | L-70.0 | 10.0 | 9MS10 | 1 1 7 |
-| C | WAVE | V HEADHALF | 10 10 |  |  |  |  |  |  |
-| D | WAVE | XLOC0.0 | 20.0 | 40.0 | 60.0 | 80.0 | 100. | 120. | 160. |
-| E | WAVE | YLOC0.0 | 21.0 | 41.0 | 59.0 | 74.0 | 84.0 | 92.0 | 99.0 |
-| F | WAVE | SURF100. | 99.3 | 97.3 | 94.0 | 87.0 | 77.0 | 70.0 | 66.7 |
-| G | WAVE | DRAG8.0 | 10.0 | 12.0 | 15.0 | 18.0 | 20.5 | 21.8 | 24.0 |
-|  | WAVE | DRAG7.0 | 9.0 | 11.0 | 14.0 | 17.0 | 19.5 | 20.8 | 21.0 |
-|  | WAVE | DRAG2.0 | 3.0 | 6.0 | 9.0 | 11.0 | 14.5 | 15.8 | 17.0 |
-|  | WAVE | DRAG1.0 | 2.0 | 4.0 | 6.0 | 8.0 | 9.5 | 10.8 |  |
-|  | WAVE | DRAG-0.5 | -1.0 | -2.0 | -3.0 | -4.5 | -6.8 |  |  |
-|  | WAVE | DRAG-1.5 | -2.0 | -3.0 | -5.4 | -7.2 |  |  |  |
-|  | WAVE | DRAG-2.5 | -3.7 | -6.0 | -9.4 |  |  |  |  |
-|  | WAVE | DRAG-3.0 | -4.9 | -7.5 | -10.8 |  |  |  |  |
-|  | WAVE | DRAG-4.7 | -6.9 | -9.5 | -13.8 |  |  |  |  |
-|  | WAVE | DRAG-6.7 | -8.9 | -14.5 | -17.8 |  |  |  |  |
-| H | WAVE | INER0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
-|  | WAVE | INER1.5 | 3.0 | 5.0 | 7.0 | 8.0 | 8.6 | 9.1 | 9.4 |
-|  | WAVE | INER3.0 | 5.0 | 8.0 | 10.5 | 12.5 | 14.0 | 15.0 | 15.5 |
-|  | WAVE | INER4.0 | 5.5 | 9.0 | 11.5 | 13.3 | 15.1 | 17.0 |  |
-|  | WAVE | INER5.0 | 7.0 | 10.5 | 12.5 | 15.3 | 18.1 |  |  |
-|  | WAVE | INER4.0 | 5.5 | 9.0 | 11.5 | 14.3 |  |  |  |
-|  | WAVE | INER3.0 | 5.5 | 8.0 | 10.0 |  |  |  |  |
-|  | WAVE | INER1.0 | 3.0 | 5.0 | 7.0 |  |  |  |  |
-|  | WAVE | INER0.5 | 2.0 | 3.5 | 4.5 |  |  |  |  |
-|  | WAVE | INER0.0 | 0.0 | 0.0 | 0.0 |  |  |  |  |
-| I | WAVE | DRAG0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
-|  | WAVE | DRAG0.0 | 1.5 | 2.5 | 3.5 | 4.0 | 4.3 | 4.5 | 4.8 |
-|  | WAVE | DRAG0.0 | 2.0 | 4.0 | 5.2 | 6.2 | 7.0 | 7.5 | 6.8 |
-|  | WAVE | DRAG0.0 | 2.7 | 4.5 | 5.8 | 6.7 | 7.6 | 8.5 |  |
-|  | WAVE | DRAG0.0 | 3.4 | 5.7 | 6.3 | 7.7 | 9.1 |  |  |
-|  | WAVE | DRAG0.0 | 2.8 | 4.5 | 6.8 | 7.2 |  |  |  |
-|  | WAVE | DRAG0.0 | 2.7 | 4.0 | 5.0 |  |  |  |  |
-|  | WAVE | DRAG0.0 | 1.5 | 2.5 | 3.5 |  |  |  |  |
-|  | WAVE | DRAG0.0 | 1.0 | 1.8 | 2.2 |  |  |  |  |
-|  | WAVE | DRAG0.0 | 0.0 | 0.0 | 0.0 |  |  |  |  |
-| J | WAVE | INER 0.0 | -2.5 | -3.0 | -3.6 | -4.5 | -5.2 | -5.5 | -6.0 |
-|  | WAVE | INER 0.0 | -2.3 | -2.7 | -3.5 | -4.2 | -4.9 | -5.2 | -5.5 |
-|  | WAVE | INER 0.0 | -1.5 | -2.0 | -2.7 | -3.0 | -3.3 | -3.5 | -3.6 |
-|  | WAVE | INER 0.0 | -0.5 | -1.0 | -1.3 | -1.8 | -2.0 | -2.1 |  |
-|  | WAVE | INER 0.0 | -0.2 | -0.3 | -0.5 | -0.7 | -1.0 |  |  |
-|  | WAVE | INER 0.0 | 0.8 | 1.0 | 1.3 | 1.8 |  |  |  |
-
-
-
-
-
-|  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 12345678901234567890123456789012345678901234567890123456789012345678901234567890 | 12345678901234567890123456789012345678901234567890123456789012345678901234567890 | 12345678901234567890123456789012345678901234567890123456789012345678901234567890 | 12345678901234567890123456789012345678901234567890123456789012345678901234567890 | 12345678901234567890123456789012345678901234567890123456789012345678901234567890 | 12345678901234567890123456789012345678901234567890123456789012345678901234567890 | 12345678901234567890123456789012345678901234567890123456789012345678901234567890 | 12345678901234567890123456789012345678901234567890123456789012345678901234567890 | 12345678901234567890123456789012345678901234567890123456789012345678901234567890 |
-| WAVE | INER 0.0 | 1.1 | 1.7 | 2.4 |  |  |  |  |
-| WAVE | INER 0.0 | 1.5 | 2.5 | 3.5 |  |  |  |  |
-| WAVE | INER 0.0 | 2.1 | 2.9 | 4.4 |  |  |  |  |
-| WAVE | INER 0.0 | 3.0 | 4.1 | 5.4 |  |  |  |  |
-| CURR |  |  |  |  |  |  |  |  |
-| CURR | 0.0 | 3.0 | 25.0 |  |  |  |  |  |
-| CURR | 10.0 | 4.0 |  |  |  |  |  |  |
-| CURR | 25.0 | 8.0 |  |  |  |  |  |  |
-| DEAD |  |  |  |  |  |  |  |  |
-| DEAD | -Z |  |  |  | R |  |  |  |
-| END |  |  |  |  |  |  |  |  |
-
-
+```text
+           1         2         3         4         5         6         7         8
+  12345678901234567890123456789012345678901234567890123456789012345678901234567890
+  LDOPT       NF+Z   64.20  490.00  -82.02   82.02                CMB   NP      K
+  SEASTATE SAMPLE PROBLEM 3
+A FILE
+  CDM
+  CDM    12.00 1.000       1.400       1.200       1.400
+  CDM    70.00 1.000       1.400       1.200       1.400
+  MGROV
+  MGROV              82.02     2.0
+  GRPOV
+  GRPOV          PL1 F                     0.001 0.001
+  GRPOV          PL2 F                     0.001 0.001
+  GRPOV          PL3 F
+  GRPOV          WSB F        0.001  0.001 0.001 0.001
+  LOAD
+  LOADCN   1    1.40   1.70
+  WAVE
+B WAVE    LINE                             0.0      L  -70.0  10.0   9MS10 1 1 7
+C WAVE    V HEADHALF  10  10
+D WAVE      XLOC   0.0  20.0  40.0  60.0  80.0  100.  120.  140.  160.  180.
+E WAVE      YLOC   0.0  21.0  41.0  59.0  74.0  84.0  92.0  97.0  99.0  100.
+F WAVE      SURF  100.  99.3  97.3  94.0  87.0  77.0  70.0  66.7  64.7  64.0
+G WAVE      DRAG   8.0  10.0  12.0  15.0  18.0  20.5  21.8  23.0  24.0  24.5
+  WAVE      DRAG   7.0   9.0  11.0  14.0  17.0  19.5  20.8  21.0  22.0
+  WAVE      DRAG   2.0   3.0   6.0   9.0  11.0  14.5  15.8  17.0
+  WAVE      DRAG   1.0   2.0   4.0   6.0   8.0   9.5  10.8
+  WAVE      DRAG  -0.5  -1.0  -2.0  -3.0  -4.5  -6.8
+  WAVE      DRAG  -1.5  -2.0  -3.0  -5.4  -7.2
+  WAVE      DRAG  -2.5  -3.7  -6.0  -9.4
+  WAVE      DRAG  -3.0  -4.9  -7.5 -10.8
+  WAVE      DRAG  -4.7  -6.9  -9.5 -13.8
+  WAVE      DRAG  -6.7  -8.9 -14.5 -17.8
+H WAVE      INER   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0
+  WAVE      INER   1.5   3.0   5.0   7.0   8.0   8.6   9.1   9.4   9.7
+  WAVE      INER   3.0   5.0   8.0  10.5  12.5  14.0  15.0  15.5
+  WAVE      INER   4.0   5.5   9.0  11.5  13.3  15.1  17.0
+  WAVE      INER   5.0   7.0  10.5  12.5  15.3  18.1
+  WAVE      INER   4.0   5.5   9.0  11.5  14.3
+  WAVE      INER   3.0   5.5   8.0  10.0
+  WAVE      INER   1.0   3.0   5.0   7.0
+  WAVE      INER   0.5   2.0   3.5   4.5
+  WAVE      INER   0.0   0.0   0.0   0.0
+I WAVE      DRAG   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0
+  WAVE      DRAG   0.0   1.5   2.5   3.5   4.0   4.3   4.5   4.7   4.8
+  WAVE      DRAG   0.0   2.0   4.0   5.2   6.2   7.0   7.5   6.8
+  WAVE      DRAG   0.0   2.7   4.5   5.8   6.7   7.6   8.5
+  WAVE      DRAG   0.0   3.4   5.7   6.3   7.7   9.1
+  WAVE      DRAG   0.0   2.8   4.5   6.8   7.2
+  WAVE      DRAG   0.0   2.7   4.0   5.0
+  WAVE      DRAG   0.0   1.5   2.5   3.5
+  WAVE      DRAG   0.0   1.0   1.8   2.2
+  WAVE      DRAG   0.0   0.0   0.0   0.0
+J WAVE      INER   0.0  -2.5  -3.0  -3.6  -4.5  -5.2  -5.5  -5.7  -6.0  -6.2
+  WAVE      INER   0.0  -2.3  -2.7  -3.5  -4.2  -4.9  -5.2  -5.5  -5.7
+  WAVE      INER   0.0  -1.5  -2.0  -2.7  -3.0  -3.3  -3.5  -3.6
+  WAVE      INER   0.0  -0.5  -1.0  -1.3  -1.8  -2.0  -2.1
+  WAVE      INER   0.0  -0.2  -0.3  -0.5  -0.7  -1.0
+  WAVE      INER   0.0   0.8   1.0   1.3   1.8
+  WAVE      INER   0.0   1.1   1.7   2.4
+  WAVE      INER   0.0   1.5   2.5   3.5
+  WAVE      INER   0.0   2.1   2.9   4.4
+  WAVE      INER   0.0   3.0   4.1   5.4
+  CURR
+  CURR         0.0     3.0    25.0
+  CURR        10.0     4.0
+  CURR        25.0     8.0
+  DEAD
+  DEAD      -Z                                R
+  END
+```
 
 The following is a detailed discussion of the input lines specific to this sample problem. For a detailed discussion on the other input lines used in this example, refer to Sample Problem 1.
 
@@ -3494,7 +3299,7 @@ C. The WAVE input line labeled HEAD specifies the following:
 
 a. Vertical components of velocity and acceleration are included, V in col 9.   
 b. Half of one wave period is to be input, HALF in cols 15-18.   
-## c. 10 vertical levels and 10 horizontal grid stations will be specified, cols 19-22 & 23-26 respectively.
+c. 10 vertical levels and 10 horizontal grid stations will be specified, cols 19-22 & 23-26 respectively.
 
 D. The WAVE input line labeled XLOC specifies the grid station locations. This example specifies grid locations at 0, 20, 40, 60, 80, 100, 120, 140, 160 and 180 feet.   
 E. The WAVE input line labeled YLOC specifies the vertical levels of the grid points. This example specifies levels at 0, 21, 41, 59, 74, 84, 92, 97, 99, and 100 feet.   
@@ -3508,97 +3313,86 @@ J. The second set of WAVE INER input lines specify the fluid particle vertical a
 
 The following is selected output generated from this sample problem.
 
+
+```text
 SEASTATE SAMPLE PROBLEM 3
 
-```txt
-WAVE DESCRIPTION FOR LOAD CASE 1****  
-WAVE THEORY CARD INPUT  
-WAVE HEIGHT 36.000 FT  
-WATER DEPTH 82.020 FT  
-WAVE PERIOD 0.000 SECS  
-WAVE LENGTH 360.000 FT  
-ANGLE FROM X TOWARD Y ** 0.000 DEGREE  
-MUDLINE ELEVATION -82.020 FT  
-WAVE CELERITY 0.000 FT/SE  
-MAX.NO.SEG/MEMBER 10  
-MIN.NO.SEG/MEMBER 1  
-CREST POSITION DETERMINED BY MAXIMUM SH  
-STARTING CREST POSITION -70.000 FT  
-NO.STEPS 9  
-STEP SIZE 10.000 FT  
-CREST WATER DEPTH 100.00 FT  
-TROUGH WATER DEPTH 64.00 FT
-```
+**** WAVE DESCRIPTION FOR LOAD CASE   1 ****
+WAVE THEORY ************ CARD INPUT
+WAVE HEIGHT ************ 36.000 FT
+WATER DEPTH ************ 82.020 FT
+WAVE PERIOD ************ 0.000 SECS
+WAVE LENGTH ************ 360.000 FT
+ANGLE FROM X TOWARD Y **  0.000 DEGREES
+MUDLINE ELEVATION ****** -82.020 FT
+WAVE CELERITY ********** 0.000 FT/SEC
+MAX. NO. SEG/MEMBER **** 10
+MIN. NO. SEG/MEMBER **** 1
+CREST POSITION DETERMINED BY MAXIMUM SHEAR
+STARTING CREST POSITION -70.000 FT
+NO. STEPS ************** 9
+STEP SIZE ************** 10.000 FT
+CREST WATER DEPTH ****** 100.00 FT
+TROUGH WATER DEPTH ***** 64.00 FT
 
 SEASTATE SAMPLE PROBLEM 3
+***** SHEAR AND MOMENT AT MUDLINE VERSUS WAVE POSITION *****
+DEAD + 36.0 FT WAVE AT 0.0 DEG + CURRENT
 
-**** SHEAR AND MOMENT AT MUDLINE VERSUS WAVE POSITION *****DEAD+ 36.0 FT WAVE AT 0.0 DEG + CURRENT
+STEP   CREST       SHEAR      SHEAR       MOMENT       MOMENT
+ NO.  POSITION     KIPS      DIRECTION    FT-KIPS     DIRECTION
+  1    -70.00      717.898     17.565      35371.820     106.980
+  2    -60.00      912.101     16.040      47221.070     105.328
+  3    -50.00     1167.769     14.355      62172.360     103.630
+  4    -40.00     1404.216     13.172      74550.700     102.574
+  5    -30.00     1630.914     12.389      87525.070     101.757
+  6    -20.00     1813.717     11.888      97170.040     101.320
+  7    -10.00     1962.478     11.573     105029.400     101.007
+  8      0.00     1987.502     11.576     105171.800     101.097
+  9     10.00     1896.969     11.979     101491.600     101.396
+ 10     20.00     1691.905     12.757      90718.010     102.137
 
+****** SEASTATE LOADS FOR WAVE PASSING THROUGH STRUCTURE ******
+DEAD + 36.0 FT WAVE AT 0.0 DEG + CURRENT
 
-
-| STEP NO. | CREST POSITION | SHEAR KIPS | SHEAR DIRECTION | MOMENT FT-KIPS | MOMENT DIRECTION |
-| --- | --- | --- | --- | --- | --- |
-| 1 | -70.00 | 717.898 | 17.565 | 35371.820 | 106.980 |
-| 2 | -60.00 | 912.101 | 16.040 | 47221.070 | 105.328 |
-| 3 | -50.00 | 1167.769 | 14.355 | 62172.360 | 103.630 |
-| 4 | -40.00 | 1404.216 | 13.172 | 74550.700 | 102.574 |
-| 5 | -30.00 | 1630.914 | 12.389 | 87525.070 | 101.757 |
-| 6 | -20.00 | 1813.717 | 11.888 | 97170.040 | 101.320 |
-| 7 | -10.00 | 1962.478 | 11.573 | 105029.400 | 101.007 |
-| 8 | 0.00 | 1987.502 | 11.576 | 105171.800 | 101.097 |
-| 9 | 10.00 | 1896.969 | 11.979 | 101491.600 | 101.396 |
-| 10 | 20.00 | 1691.905 | 12.757 | 90718.010 | 102.137 |
-
-
-
-**** SEASTATE LOADS FOR WAVE PASSING THROUGH STRUCTURE ****
-
-DEAD+36.0FT WAVEAT0.0DEG+CURRENT
-
-LOAD
-
-CONDITION
-
-CREST
-
-POSITION
-
-LOAD
-
+LOAD CONDITION           CREST POSITION   LOAD                 MUDLINE ELEVATION
 MAXIMUM MOMENT
+ABOUT MUDLINE                 0.00       105171.800 FT-KIPS      -82.020 FT.
+MAXIMUM SHEAR
+ABOUT MUDLINE                 0.00         1987.502 KIPS         -82.020 FT.
+MINIMUM MOMENT
+ABOUT MUDLINE               -70.00        35371.820 FT-KIPS      -82.020 FT.
+MINIMUM SHEAR
+AT MUDLINE                  -70.00          717.898 KIPS         -82.020 FT.
+MAXIMUM FORCE
+UPWARD                      -50.00           81.824 KIPS         -82.020 FT.
+MAXIMUM FORCE
+DOWNWARD                     20.00          -52.819 KIPS         -82.020 FT.
 
-ABOUT MUDLINE
+***** LOAD CASE GENERATED FOR WAVE CREST POSITION RESULTING IN THE MAXIMUM SHEAR AT MUDLINE *****
 
-## 105171.800 FT-KIPS
+*********** EDI/SACS IV SEASTATE PROGRAM ***********     DATE 14-APR-1992  TIME 14:13:32  SEA PAGE 13
+SEASTATE SAMPLE PROBLEM 3
+***** RESULTS FOR LOAD CASE   1 *****
+DEAD + 36.0 FT WAVE AT 0.0 DEG + CURRENT
 
-MUDLINE
+****** SUMMARY OF SEASTATE GENERATED DEAD AND BUOYANCY LOADS ******
+WATER DEPTH                    =  82.020 FT.
+DEAD WEIGHT (WEIGHT IN AIR)     = 719.588 KIPS
+BUOYANCY LOAD (DISPLACEMENT)    = 265.134 KIPS
 
-ELEVATION
+***** SUMMATION OF FORCES AND MOMENTS FOR LOAD CASE   1 *****
+(MOMENTS ABOUT MUDLINE AT ELEVATION -82.02 FT.)
 
--82.020 FT.
+                      SUM FX      SUM FY      SUM FZ       SUM MX       SUM MY      SUM MZ
+                       KIPS        KIPS        KIPS         FT-K         FT-K        FT-K
+SEASTATE GENERATED  1936.820     397.108    -474.893   -20247.390   103226.500       0.003
+USER INPUT             0.000       0.000       0.000        0.000        0.000       0.000
 
-
-
-| MAXIMUM SHEAR ABOUT MUDLINE | 0.00 | 1987.502 KIPS | -82.020 FT. |  |  |
-| --- | --- | --- | --- | --- | --- |
-| MINIMUM MOMENT ABOUT MUDLINE | -70.00 | 35371.820 FT-KIPS | -82.020 FT. |  |  |
-| MINIMUM SHEAR AT MUDLINE | -70.00 | 717.898 KIPS | -82.020 FT. |  |  |
-| MAXIMUM FORCE UPWARD | -50.00 | 81.824 KIPS | -82.020 FT. |  |  |
-| MAXIMUM FORCE DOWNWARD | 20.00 | -52.819 KIPS | -82.020 FT. |  |  |
-| ***** LOAD CASE GENERATED FOR WAVE CREST POSITION RESULTING IN THE MAXIMUM SHEAR AT MUDLINE***** | ***** LOAD CASE GENERATED FOR WAVE CREST POSITION RESULTING IN THE MAXIMUM SHEAR AT MUDLINE***** | ***** LOAD CASE GENERATED FOR WAVE CREST POSITION RESULTING IN THE MAXIMUM SHEAR AT MUDLINE***** | ***** LOAD CASE GENERATED FOR WAVE CREST POSITION RESULTING IN THE MAXIMUM SHEAR AT MUDLINE***** | ***** LOAD CASE GENERATED FOR WAVE CREST POSITION RESULTING IN THE MAXIMUM SHEAR AT MUDLINE***** | ***** LOAD CASE GENERATED FOR WAVE CREST POSITION RESULTING IN THE MAXIMUM SHEAR AT MUDLINE***** |
-| ********** EDI/SACS IV SEASTATE PROGRAM*****DATE 14-APR-1992 TIME 14:13:32 SEA PAGE 13 | ********** EDI/SACS IV SEASTATE PROGRAM*****DATE 14-APR-1992 TIME 14:13:32 SEA PAGE 13 | ********** EDI/SACS IV SEASTATE PROGRAM*****DATE 14-APR-1992 TIME 14:13:32 SEA PAGE 13 | ********** EDI/SACS IV SEASTATE PROGRAM*****DATE 14-APR-1992 TIME 14:13:32 SEA PAGE 13 | ********** EDI/SACS IV SEASTATE PROGRAM*****DATE 14-APR-1992 TIME 14:13:32 SEA PAGE 13 | ********** EDI/SACS IV SEASTATE PROGRAM*****DATE 14-APR-1992 TIME 14:13:32 SEA PAGE 13 |
-| SEASTATE SAMPLE PROBLEM 3 ***** RESULTS FOR LOAD CASE 1***** | SEASTATE SAMPLE PROBLEM 3 ***** RESULTS FOR LOAD CASE 1***** | SEASTATE SAMPLE PROBLEM 3 ***** RESULTS FOR LOAD CASE 1***** | SEASTATE SAMPLE PROBLEM 3 ***** RESULTS FOR LOAD CASE 1***** | SEASTATE SAMPLE PROBLEM 3 ***** RESULTS FOR LOAD CASE 1***** | SEASTATE SAMPLE PROBLEM 3 ***** RESULTS FOR LOAD CASE 1***** |
-| DEAD + 36.0 FT WAVE AT 0.0 DEG + CURRENT | DEAD + 36.0 FT WAVE AT 0.0 DEG + CURRENT | DEAD + 36.0 FT WAVE AT 0.0 DEG + CURRENT | DEAD + 36.0 FT WAVE AT 0.0 DEG + CURRENT | DEAD + 36.0 FT WAVE AT 0.0 DEG + CURRENT | DEAD + 36.0 FT WAVE AT 0.0 DEG + CURRENT |
-| ***** SUMMARY OF SEASTATE GENERATED DEAD AND BUOYANCY LOADS***** | ***** SUMMARY OF SEASTATE GENERATED DEAD AND BUOYANCY LOADS***** | ***** SUMMARY OF SEASTATE GENERATED DEAD AND BUOYANCY LOADS***** | ***** SUMMARY OF SEASTATE GENERATED DEAD AND BUOYANCY LOADS***** | ***** SUMMARY OF SEASTATE GENERATED DEAD AND BUOYANCY LOADS***** | ***** SUMMARY OF SEASTATE GENERATED DEAD AND BUOYANCY LOADS***** |
-| WATER Depth = 82.020 FT. DEAD WEIGHT (WEIGHT IN AIR) = 719.588 KIPS BUOYANCY LOAD (DISPLACEMENT) = 265.134 KIPS | WATER Depth = 82.020 FT. DEAD WEIGHT (WEIGHT IN AIR) = 719.588 KIPS BUOYANCY LOAD (DISPLACEMENT) = 265.134 KIPS | WATER Depth = 82.020 FT. DEAD WEIGHT (WEIGHT IN AIR) = 719.588 KIPS BUOYANCY LOAD (DISPLACEMENT) = 265.134 KIPS | WATER Depth = 82.020 FT. DEAD WEIGHT (WEIGHT IN AIR) = 719.588 KIPS BUOYANCY LOAD (DISPLACEMENT) = 265.134 KIPS | WATER Depth = 82.020 FT. DEAD WEIGHT (WEIGHT IN AIR) = 719.588 KIPS BUOYANCY LOAD (DISPLACEMENT) = 265.134 KIPS | WATER Depth = 82.020 FT. DEAD WEIGHT (WEIGHT IN AIR) = 719.588 KIPS BUOYANCY LOAD (DISPLACEMENT) = 265.134 KIPS |
-| ***** SUMMATION OF FORCES AND MOMENTS FOR LOAD CASE 1***** | ***** SUMMATION OF FORCES AND MOMENTS FOR LOAD CASE 1***** | ***** SUMMATION OF FORCES AND MOMENTS FOR LOAD CASE 1***** | ***** SUMMATION OF FORCES AND MOMENTS FOR LOAD CASE 1***** | ***** SUMMATION OF FORCES AND MOMENTS FOR LOAD CASE 1***** | ***** SUMMATION OF FORCES AND MOMENTS FOR LOAD CASE 1***** |
-| (MOMENTS ABOUT MUDLINE AT ELEVATION -82.02 FT.) | (MOMENTS ABOUT MUDLINE AT ELEVATION -82.02 FT.) | (MOMENTS ABOUT MUDLINE AT ELEVATION -82.02 FT.) | (MOMENTS ABOUT MUDLINE AT ELEVATION -82.02 FT.) | (MOMENTS ABOUT MUDLINE AT ELEVATION -82.02 FT.) | (MOMENTS ABOUT MUDLINE AT ELEVATION -82.02 FT.) |
-| SUM FX KIPS | SUM FY KIPS | SUM FZ KIPS | SUM MX FT-K | SUM MY FT-K | SUM MZ FT-K |
-| SEASTATE GENERATED USER INPUT | 1936.820 0.000 | 397.108 0.000 | -474.893 0.000 | -20247.390 0.000 | 103226.500 0.000 |
-| ***** SEASTATE BASIC LOAD CASE SUMMARY***** | ***** SEASTATE BASIC LOAD CASE SUMMARY***** | ***** SEASTATE BASIC LOAD CASE SUMMARY***** | ***** SEASTATE BASIC LOAD CASE SUMMARY***** | ***** SEASTATE BASIC LOAD CASE SUMMARY***** | ***** SEASTATE BASIC LOAD CASE SUMMARY***** |
-| LOAD CASE | FX (KIPS) | FY (KIPS) | FZ (KIPS) | MX (FT-KIPS) | MY (FT-KIPS) |
-
-
+****** SEASTATE BASIC LOAD CASE SUMMARY ******
+LOAD CASE     FX       FY       FZ       MX        MY        MZ       DEAD LOAD    BUOYANCY
+            (KIPS)   (KIPS)   (KIPS)  (FT-KIPS) (FT-KIPS) (FT-KIPS)     (KIPS)       (KIPS)
+```
 
 8 INPUT LINES
 
