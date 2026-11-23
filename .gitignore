@@ -1,1 +1,9 @@
 /.obsidian/
+.idea/
+.DS_Store
+.env.local
+tmp/
+research/
+output/
+__pycache__/
+.agents/
