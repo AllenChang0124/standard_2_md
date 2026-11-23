@@ -86,7 +86,7 @@ FIGURE 1 Illustration of Stresses on the Throat Section of a Fillet Weld....15
 
 APPENDIX 1 References....17
 
-# S E C T I O N 1 Introduction
+# SECTION 1 Introduction
 
 ## 1 General
 
@@ -102,9 +102,9 @@ Note that Installation, Ship-type installation or Unit, as used in these Guidanc
 
 The topside structure fatigue assessment involves the evaluation of the following areas:
 
-Environment wave conditions
+• Environment wave conditions
 
-Metocean data, sea state scatter diagram
+• Metocean data, sea state scatter diagram
 
 • Design load conditions
 
@@ -140,7 +140,7 @@ These Guidance Notes describe procedures to perform fatigue assessments of topsi
 
 These Guidance Notes should be used in association with ABS Rules and Guides for fatigue assessment, such as the ABS Guide for the Fatigue Assessment of Offshore Structures and the ABS Rules for Building and Classing Floating Production Installations (FPI Rules).
 
-## SECTION 2 Topside Structures
+# SECTION 2 Topside Structures
 
 ## 1 General
 
@@ -152,25 +152,25 @@ A detailed fatigue assessment may be performed for topside structures combined w
 
 ## 3 Topside Design Principles
 
-## 3.1 Hull Interface Structures
+### 3.1 Hull Interface Structures
 
 The various functions of the topside modules give rise to many disciplines in the topside design. The hull interface structures, which transmit loads between the main hull structure and topside structure, have impact on fatigue capacities of topside structures. Based on various deck stool design types, three typical designs of hull interface structures are illustrated.
 
-## 3.1.1 Plated Support Structure
+### 3.1.1 Plated Support Structure
 
 The connection between the deck and the stool or gusset is assumed to be welded. The actual connection design to the deck is typically comprised of welding along transverse frames and longitudinal stiffeners. Section 2, Figure 1 shows the typical hull welded connection in the longitudinal direction and shear plates in the transverse direction. The plated support structure, shear panels, decks including the hull backup structures and the reinforcements for the hull due to the transferred acceleration loads are to be designed in accordance with the FPI Rules. Fatigue calculations are to be performed for all vital components.
 
 FIGURE 1 Plated Support Structure  
 ![](ABS-Guidance_Notes_on_Topside_Structure_Fatigue_Assessment_for_Ship-Type_Floating_Production_Installations/images/414cc368e835d85e8157ed63515a765775b9ab7627df6fe99a9efbdeccc6f673.jpg)
 
-## 3.1.2 Portal Frame Support Structure
+### 3.1.2 Portal Frame Support Structure
 
 In a portal frame design, the main girder/column joints are assumed to be welded on the longitudinal bulkheads or large longitudinal deck stringer underneath the girder/column in addition to a web frame. An example of a portal frame structure is shown in Section 2, Figure 2. The deck plating inserts and under deck reinforcement may be required for the frame bending moment.
 
 FIGURE 2 Portal Frame Structure  
 ![](ABS-Guidance_Notes_on_Topside_Structure_Fatigue_Assessment_for_Ship-Type_Floating_Production_Installations/images/37f00178ce6eae0c4fb95b5020e32bd9dd1a89371300da5c9ec781f7dbca9689.jpg)
 
-## 3.1.3 Sliding or Elastomeric Bearing Support Structure
+### 3.1.3 Sliding or Elastomeric Bearing Support Structure
 
 The sliding connection design provides the bearing supports for the topside structure except the locations that are fixed to the deck. This reduces the effect of the topside module supporting structure on the hull girder by allowing movement when the connection friction is overcome by the horizontal force. The uplift forces and friction forces on the bearings thus create the complication in the design and fabrication. Including the friction forces in the fatigue analysis may be difficult due to the non-linear behavior. The sliding connections evaluated with an all fixed analysis model might be conservative for the main deck longitudinals. If an all fixed connection analysis produces unrealistic stresses in the main deck longitudinals, an advanced iterative analysis procedure should be employed to evaluate of the sliding connections. [6]
 
@@ -181,7 +181,7 @@ The sliding or elastomeric bearing support structure and decks including the hul
 FIGURE 3 Sliding Support Structure  
 ![](ABS-Guidance_Notes_on_Topside_Structure_Fatigue_Assessment_for_Ship-Type_Floating_Production_Installations/images/05aa252b0fd9114c94d8a14a4542dbee254909546d0d59af859601b03f4977cb.jpg)
 
-## 3.3 Fatigue Assessment Procedures
+### 3.3 Fatigue Assessment Procedures
 
 The procedure for topside support structure fatigue assessment in these Guidance Notes includes the following components:
 
@@ -195,7 +195,7 @@ The procedure for topside support structure fatigue assessment in these Guidance
 
 • Calculate SCFs with a local model or refined mesh in the global model if nominal stress method applied.
 
-Calculate fatigue damage for each load case.
+• Calculate fatigue damage for each load case.
 
 • Calculate combined fatigue damage and determine the fatigue strength.
 
@@ -347,13 +347,13 @@ Fatigue assessment denotes a process where the fatigue demand on a structural el
 
 • Time domain analysis method
 
-## 3.1 Simplified Fatigue Method
+### 3.1 Simplified Fatigue Method
 
 The simplified fatigue method is based on the assumption that the long term distribution of stresses can be described by the maximum dynamic stress amplitude and a Weibull shape parameter. The method is described in ABS Guide for the Fatigue Assessment of Offshore Structures. For FPSO vessels, one way to determine the loads and long term statistics (Weibull parameter and number of load cycles) may be by means of direct load calculations based on the site specific scatter diagram, refer to the ABS Guide for ‘Dynamic Loading Approach’ for Floating Production, Storage and Offloading (FPSO) Installations. Another alternate method to obtain the fatigue inducing loads and determine the total stress ranges is the FPI Rules defined loads and calculation of fatigue damage for the Ship-Type Installations. Detailed loads definition and calculations refer to Appendix 5A-3-A2 of the FPI Rules.
 
 Where the information about the load cycles and their coincidence is not available, fatigue calculation may be based on the “worst case” by combination of maximum stress for each component.
 
-## 3.3 Spectral-Based Fatigue Method
+### 3.3 Spectral-Based Fatigue Method
 
 Spectral-based fatigue analysis is a complex and numerically intensive technique where all loads from global and local loads are included by use of finite element models and direct transfer of loads from the hydrodynamic analysis to the structural model in equilibrium. All stress components are combined using the correct phasing and without simplifications or omission of any stress components. However, there are basic minimum assumptions that are to be the basis of the method employed and some of the key details that are to be incorporated in the method to produce results that will be acceptable to ABS.
 
@@ -371,7 +371,7 @@ Also, it is assumed that the short-term stress variation in a given sea-state is
 
 Detailed implementation of the spectral-based fatigue method refers to the ABS Guide for the Fatigue Assessment of Offshore Structures and the ABS Guide for Spectral-Based Fatigue Analysis for Floating Production, Storage and Offloading (FPSO) Installations
 
-## 3.5 Time Domain Analysis Method
+### 3.5 Time Domain Analysis Method
 
 Due to the limitations of the spectral method (e.g., linear and hard to predict low-frequency fatigue stresses), the Time-Domain Method along with its associated rainflow counting technique can be employed in the fatigue assessment of topside structures on the ship-type installations. In the time-domain approach, the long-term wave condition is discretized into representative sea-states of short duration and constant intensity. A time history of the wave kinematics for the short duration is generated from the wave spectrum. Hydrodynamic loads are then calculated based on the wave kinematics and applied to the structural model. In addition, wind loads with a suitable wind spectrum can also be applied to the structural model. Nonlinear effects can be included in the analysis. Structural analyses are performed to estimate stress responses. Rain flow counting technique is applied to estimate the number of stress cycles based on the stress time-history.
 
@@ -387,7 +387,7 @@ In cases where the nominal stress approach can be used, the selected nominal S-N
 
 Stress concentration factor (SCF) is defined as the ratio of the Hot Spot Stress at a location to the nomina stress computed for that location. The SCF may be obtained by direct measurement of an appropriate physical model, by the use of parametric equations, or through the performance of Finite Element Analysis (FEA). The use of parametric equations, which have been suitably derived from physical or mathematical models, has a long history in offshore engineering practice for welded tubular joints. Reference should be made to ABS Guide for the Fatigue Assessment of Offshore Structures and API RP 2A concerning parametric equation based SCFs used for various types of unstiffened tubular joints with validity limitations.
 
-## Hot Spot Stress Determination
+## 9 Hot Spot Stress Determination
 
 The differences between a Nominal Stress Approach and a Hot-Spot Stress Approach and the selection of S-N curves in the respective approaches are described in Section 2 of the ABS Guide for the Fatigue Assessment of Offshore Structures.
 
@@ -417,7 +417,7 @@ For existing installations, the remaining fatigue life of the installation shoul
 
 Any areas determined to be critical to the structure are to be free of cracks, and the effects of stress riser should be determined and minimized. All areas determined to be critical to the structure are to be included in the In-Service Inspection Plan (ISIP) as required by Section 7-2-3 of the FPI Rules.
 
-## AP PE N D I X 1 References
+# APPENDIX 1 References
 
 1. ABS Rules for Building and Classing Floating Production Installations
 
