@@ -1,0 +1,4 @@
+interface:
+  display_name: "MinerU 官网文档转写"
+  short_description: "调用 MinerU 官网将指定 PDF 转成含图片的 Markdown 和 ZIP，支持全文分段合并"
+  default_prompt: "使用 $mineru-api 将我指定的 raw/ PDF 完整转换成 Markdown、图片和 ZIP，并检查结果完整性。"
