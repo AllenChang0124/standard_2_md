@@ -156,21 +156,21 @@ A detailed fatigue assessment may be performed for topside structures combined w
 
 The various functions of the topside modules give rise to many disciplines in the topside design. The hull interface structures, which transmit loads between the main hull structure and topside structure, have impact on fatigue capacities of topside structures. Based on various deck stool design types, three typical designs of hull interface structures are illustrated.
 
-### 3.1.1 Plated Support Structure
+#### 3.1.1 Plated Support Structure
 
 The connection between the deck and the stool or gusset is assumed to be welded. The actual connection design to the deck is typically comprised of welding along transverse frames and longitudinal stiffeners. Section 2, Figure 1 shows the typical hull welded connection in the longitudinal direction and shear plates in the transverse direction. The plated support structure, shear panels, decks including the hull backup structures and the reinforcements for the hull due to the transferred acceleration loads are to be designed in accordance with the FPI Rules. Fatigue calculations are to be performed for all vital components.
 
 FIGURE 1 Plated Support Structure  
 ![](ABS-Guidance_Notes_on_Topside_Structure_Fatigue_Assessment_for_Ship-Type_Floating_Production_Installations/images/414cc368e835d85e8157ed63515a765775b9ab7627df6fe99a9efbdeccc6f673.jpg)
 
-### 3.1.2 Portal Frame Support Structure
+#### 3.1.2 Portal Frame Support Structure
 
 In a portal frame design, the main girder/column joints are assumed to be welded on the longitudinal bulkheads or large longitudinal deck stringer underneath the girder/column in addition to a web frame. An example of a portal frame structure is shown in Section 2, Figure 2. The deck plating inserts and under deck reinforcement may be required for the frame bending moment.
 
 FIGURE 2 Portal Frame Structure  
 ![](ABS-Guidance_Notes_on_Topside_Structure_Fatigue_Assessment_for_Ship-Type_Floating_Production_Installations/images/37f00178ce6eae0c4fb95b5020e32bd9dd1a89371300da5c9ec781f7dbca9689.jpg)
 
-### 3.1.3 Sliding or Elastomeric Bearing Support Structure
+#### 3.1.3 Sliding or Elastomeric Bearing Support Structure
 
 The sliding connection design provides the bearing supports for the topside structure except the locations that are fixed to the deck. This reduces the effect of the topside module supporting structure on the hull girder by allowing movement when the connection friction is overcome by the horizontal force. The uplift forces and friction forces on the bearings thus create the complication in the design and fabrication. Including the friction forces in the fatigue analysis may be difficult due to the non-linear behavior. The sliding connections evaluated with an all fixed analysis model might be conservative for the main deck longitudinals. If an all fixed connection analysis produces unrealistic stresses in the main deck longitudinals, an advanced iterative analysis procedure should be employed to evaluate of the sliding connections. [6]
 
